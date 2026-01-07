@@ -1,0 +1,26 @@
+# AI Insight Tracker - Conda Environment
+# 
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate ai-insight-tracker
+#
+# Update environment:
+#   conda env update -f environment.yml --prune
+
+name: ai-insight-tracker
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.12
+  
+  # Core tools
+  - pip
+  
+  # Install remaining dependencies via pip
+  - pip:
+    - -r requirements.txt
+

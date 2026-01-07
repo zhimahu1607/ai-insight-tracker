@@ -1,0 +1,101 @@
+{
+  "_comment": "飞书每日报告卡片参考模板（实际卡片在代码中动态构建）",
+  "header": {
+    "title": {
+      "tag": "plain_text",
+      "content": "📊 AI Insight Tracker 日报 - 2025-01-15"
+    },
+    "template": "blue"
+  },
+  "elements": [
+    {
+      "_comment": "总结区域",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "今日共收录 52 篇论文，98 条热点资讯。热门领域：大语言模型、多模态、Agent 系统..."
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "_comment": "精选论文标题",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "📚 **精选论文** (10)"
+      }
+    },
+    {
+      "_comment": "论文条目示例",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**[2501.12345] A Novel Approach to LLM Agents**\n提出了一种新的 LLM Agent 架构..."
+      }
+    },
+    {
+      "_comment": "论文操作按钮",
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "📄 查看详情"
+          },
+          "type": "default",
+          "url": "https://arxiv.org/abs/2501.12345"
+        },
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "🔬 请求深度分析"
+          },
+          "type": "default",
+          "url": "https://github.com/owner/repo/issues/new?title=..."
+        }
+      ]
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "_comment": "热点资讯标题",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "🔥 **热点资讯** (5)"
+      }
+    },
+    {
+      "_comment": "热点条目示例",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "• [OpenAI 发布 GPT-5](https://example.com) - 发布了最新的 GPT-5 模型... - Hacker News"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "_comment": "底部按钮",
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "🌐 访问完整网站"
+          },
+          "type": "primary",
+          "url": "https://owner.github.io/repo"
+        }
+      ]
+    }
+  ]
+}
+

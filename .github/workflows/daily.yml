@@ -1,0 +1,313 @@
+# 每日定时工作流
+#
+# 定时获取 arXiv 论文和 RSS 热点，执行浅度分析，生成日报，发送通知，部署前端。
+#
+# 触发条件:
+#   - 定时: 每天 UTC 01:30 (北京时间 09:30)
+#   - 手动: workflow_dispatch
+
+name: Daily Crawl & Deploy
+
+on:
+  schedule:
+    - cron: "30 1 * * *"  # UTC 01:30 (北京时间 09:30)
+  workflow_dispatch:       # 支持手动触发
+    inputs:
+      skip_notify:
+        description: '跳过飞书通知'
+        required: false
+        default: 'false'
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+env:
+  # LLM 配置（从 Variables 获取）
+  LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+  LLM_MODEL: ${{ vars.LLM_MODEL }}
+  
+  # arXiv 分类（可选，有默认值）
+  CATEGORIES: ${{ vars.CATEGORIES }}
+  
+  # 语言配置（可选）
+  LANGUAGE: ${{ vars.LANGUAGE }}
+
+jobs:
+  # ============================================================
+  # Job 1: 数据获取与分析
+  # ============================================================
+  fetch-and-analyze:
+    name: Fetch & Analyze
+    runs-on: ubuntu-latest
+    
+    outputs:
+      has_new_content: ${{ steps.arxiv.outputs.has_new_content }}
+    
+    steps:
+      # 1. 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史，用于 push
+
+      # 2. 设置 Conda 环境
+      - name: Setup Micromamba
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          environment-name: ai-insight-tracker
+          cache-environment: true
+          cache-downloads: true
+
+      # 3. 安装额外依赖（如果有）
+      - name: Install dependencies
+        shell: bash -el {0}
+        run: |
+          # 确保所有依赖都已安装
+          pip install -q tqdm aiofiles
+
+      # 4. 验证配置
+      - name: Validate configuration
+        shell: bash -el {0}
+        env:
+          # API Key（从 Secrets 获取）
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          python scripts/validate_config.py
+
+      # 5. 获取 arXiv 论文
+      - name: Fetch arXiv papers
+        id: arxiv
+        shell: bash -el {0}
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          python scripts/daily_crawl.py --task arxiv --skip-config-check
+          exit_code=$?
+          
+          if [ $exit_code -eq 0 ]; then
+            echo "has_new_content=true" >> $GITHUB_OUTPUT
+            echo "✅ 发现新论文"
+          elif [ $exit_code -eq 2 ]; then
+            echo "has_new_content=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 无新论文，将跳过后续分析步骤"
+          else
+            echo "❌ arXiv 获取出错"
+            exit $exit_code
+          fi
+
+      # 6. 获取 RSS 热点（仅当有新论文时）
+      - name: Fetch RSS news
+        if: steps.arxiv.outputs.has_new_content == 'true'
+        shell: bash -el {0}
+        run: |
+          python scripts/daily_crawl.py --task rss --skip-config-check
+
+      # 7. 浅度分析（仅当有新论文时）
+      - name: Light analysis
+        if: steps.arxiv.outputs.has_new_content == 'true'
+        shell: bash -el {0}
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          python scripts/daily_crawl.py --task analyze --skip-config-check
+
+      # 8. 生成日报（仅当有新论文时）
+      - name: Generate daily report
+        if: steps.arxiv.outputs.has_new_content == 'true'
+        shell: bash -el {0}
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          python scripts/daily_crawl.py --task summary --skip-config-check
+
+      # 9. 更新文件索引
+      - name: Update file list
+        if: steps.arxiv.outputs.has_new_content == 'true'
+        shell: bash -el {0}
+        run: |
+          python scripts/daily_crawl.py --task update-file-list --skip-config-check
+
+      # 10. 发送飞书通知（仅当有新论文且未跳过）
+      - name: Send Feishu notification
+        if: |
+          steps.arxiv.outputs.has_new_content == 'true' && 
+          github.event.inputs.skip_notify != 'true'
+        shell: bash -el {0}
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python scripts/notify.py --type daily || echo "通知发送失败或未配置，继续执行"
+
+      # 11. 提交并推送更改
+      - name: Commit and push changes
+        if: steps.arxiv.outputs.has_new_content == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 添加数据文件
+          git add data/
+          
+          # 检查是否有更改
+          if git diff --staged --quiet; then
+            echo "没有新的更改需要提交"
+          else
+            git commit -m "📊 Daily update: $(date +%Y-%m-%d)"
+            git push
+          fi
+
+  # ============================================================
+  # Job 2: 构建前端并部署
+  # ============================================================
+  build-frontend:
+    name: Build & Deploy Frontend
+    runs-on: ubuntu-latest
+    needs: fetch-and-analyze
+    # 即使无新内容也部署（可能有其他更新）
+    if: always() && needs.fetch-and-analyze.result != 'failure'
+    
+    steps:
+      # 1. 检出代码（包括最新提交）
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      # 2. 拉取最新更改（fetch-and-analyze 可能推送了新数据）
+      - name: Pull latest changes
+        run: |
+          git pull origin ${{ github.ref_name }} || true
+
+      # 3. 设置 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'app/frontend/package-lock.json'
+
+      # 4. 安装前端依赖
+      - name: Install frontend dependencies
+        working-directory: app/frontend
+        run: npm ci
+
+      # 5. 构建前端
+      - name: Build frontend
+        working-directory: app/frontend
+        run: npm run build
+
+      # 6. 复制数据文件到 dist
+      - name: Copy data files to dist
+        run: |
+          # 创建数据目录
+          mkdir -p app/frontend/dist/data
+          
+          # 复制数据文件（使用条件判断，避免目录不存在时报错）
+          if [ -d "data/papers" ]; then
+            cp -r data/papers app/frontend/dist/data/
+          else
+            echo "Warning: data/papers not found, creating empty directory"
+            mkdir -p app/frontend/dist/data/papers
+          fi
+          
+          if [ -d "data/news" ]; then
+            cp -r data/news app/frontend/dist/data/
+          else
+            echo "Warning: data/news not found, creating empty directory"
+            mkdir -p app/frontend/dist/data/news
+          fi
+          
+          if [ -d "data/reports" ]; then
+            cp -r data/reports app/frontend/dist/data/
+          else
+            echo "Warning: data/reports not found, creating empty directory"
+            mkdir -p app/frontend/dist/data/reports
+          fi
+          
+          # file-list.json 是必需的，如果不存在则创建空的
+          if [ -f "data/file-list.json" ]; then
+            cp data/file-list.json app/frontend/dist/data/
+          else
+            echo "Warning: file-list.json not found, creating empty one"
+            echo '{"papers":[],"news":[],"reports":[]}' > app/frontend/dist/data/file-list.json
+          fi
+          
+          # 如果有深度分析结果也复制
+          if [ -d "data/analysis" ]; then
+            cp -r data/analysis app/frontend/dist/data/
+          fi
+          
+          echo "✅ 数据文件复制完成"
+          ls -la app/frontend/dist/data/
+
+      # 7. 部署到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./app/frontend/dist
+          publish_branch: gh-pages
+          commit_message: '🚀 Deploy: ${{ github.sha }}'
+
+  # ============================================================
+  # Job 3: 失败通知（可选）
+  # ============================================================
+  notify-failure:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [fetch-and-analyze, build-frontend]
+    if: failure()
+    
+    steps:
+      - name: Send failure notification
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+        run: |
+          if [ -n "$FEISHU_WEBHOOK_URL" ]; then
+            curl -X POST "$FEISHU_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d '{
+                "msg_type": "interactive",
+                "card": {
+                  "header": {
+                    "title": {
+                      "tag": "plain_text",
+                      "content": "⚠️ AI Insight Tracker 工作流失败"
+                    },
+                    "template": "red"
+                  },
+                  "elements": [
+                    {
+                      "tag": "div",
+                      "text": {
+                        "tag": "lark_md",
+                        "content": "每日工作流执行失败，请检查 GitHub Actions 日志。\n\n**仓库**: '"${{ github.repository }}"'\n**运行 ID**: '"${{ github.run_id }}"'"
+                      }
+                    },
+                    {
+                      "tag": "action",
+                      "actions": [
+                        {
+                          "tag": "button",
+                          "text": {
+                            "tag": "plain_text",
+                            "content": "查看日志"
+                          },
+                          "type": "primary",
+                          "url": "https://github.com/'"${{ github.repository }}"'/actions/runs/'"${{ github.run_id }}"'"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }'
+          else
+            echo "飞书 Webhook 未配置，跳过失败通知"
+          fi
+

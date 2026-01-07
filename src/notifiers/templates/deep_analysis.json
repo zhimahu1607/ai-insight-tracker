@@ -1,0 +1,59 @@
+{
+  "_comment": "飞书深度分析结果卡片参考模板（实际卡片在代码中动态构建）",
+  "header": {
+    "title": {
+      "tag": "plain_text",
+      "content": "🔬 深度分析完成 - 2501.12345"
+    },
+    "template": "green"
+  },
+  "elements": [
+    {
+      "_comment": "论文标题",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**论文标题**: A Novel Approach to LLM Agents"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "_comment": "分析摘要",
+      "tag": "div",
+      "text": {
+        "tag": "lark_md",
+        "content": "**分析摘要**:\n\n本文提出了一种创新的 LLM Agent 架构，主要贡献包括：\n1. 引入了分层规划机制...\n2. 设计了高效的工具调用策略...\n3. 在多个基准测试上取得 SOTA...\n\n(分析结果截取前 500 字)"
+      }
+    },
+    {
+      "tag": "hr"
+    },
+    {
+      "_comment": "操作按钮",
+      "tag": "action",
+      "actions": [
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "📖 查看完整分析"
+          },
+          "type": "primary",
+          "url": "https://github.com/owner/repo/issues/123"
+        },
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "📄 arXiv 原文"
+          },
+          "type": "default",
+          "url": "https://arxiv.org/abs/2501.12345"
+        }
+      ]
+    }
+  ]
+}
+

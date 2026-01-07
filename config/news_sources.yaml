@@ -1,0 +1,109 @@
+# AI 头部公司新闻源配置
+#
+# 获取类型 (fetch_type):
+#   - rss: 通过 RSS Feed 获取
+#   - crawler: 通过网页爬取获取
+#
+# 权重说明 (weight):
+#   - 1.0: 最高优先级（如 OpenAI、Anthropic）
+#   - 0.9: 高优先级（如 Google Research、DeepMind）
+#   - 0.8: 一般优先级（如区域性公司博客）
+#
+# 验证日期: 2026-01-05
+
+sources:
+  # ============================================================
+  # 支持 RSS 的源 (已验证有效)
+  # ============================================================
+  
+  - name: "OpenAI"
+    company: "openai"
+    blog_url: "https://openai.com/blog/"
+    fetch_type: "rss"
+    rss_url: "https://openai.com/blog/rss.xml"
+    language: "en"
+    weight: 1.0
+    enabled: true
+
+  - name: "Microsoft Research"
+    company: "microsoft"
+    blog_url: "https://www.microsoft.com/en-us/research/blog/"
+    fetch_type: "rss"
+    rss_url: "https://www.microsoft.com/en-us/research/feed/"
+    language: "en"
+    weight: 0.9
+    enabled: true
+
+  - name: "Amazon AWS ML"
+    company: "amazon"
+    blog_url: "https://aws.amazon.com/blogs/machine-learning/"
+    fetch_type: "rss"
+    rss_url: "https://aws.amazon.com/blogs/machine-learning/feed/"
+    language: "en"
+    weight: 0.85
+    enabled: true
+
+  # ============================================================
+  # 需要爬取的源 (无 RSS 或 RSS 不可用)
+  # ============================================================
+  
+  - name: "Anthropic"
+    company: "anthropic"
+    blog_url: "https://www.anthropic.com/research"
+    fetch_type: "crawler"
+    extractor: "anthropic"
+    js_render: true
+    language: "en"
+    weight: 1.0
+    enabled: true
+
+  - name: "DeepSeek"
+    company: "deepseek"
+    blog_url: "https://api-docs.deepseek.com/zh-cn/news/"
+    fetch_type: "crawler"
+    extractor: "deepseek"
+    js_render: false
+    language: "zh"
+    weight: 0.95
+    enabled: true
+
+  - name: "Google Research"
+    company: "google_research"
+    blog_url: "https://research.google/blog/"
+    fetch_type: "crawler"
+    extractor: "google_research"
+    js_render: true
+    language: "en"
+    weight: 0.95
+    enabled: true
+
+  - name: "DeepMind"
+    company: "deepmind"
+    blog_url: "https://deepmind.google/discover/blog/"
+    fetch_type: "crawler"
+    extractor: "deepmind"
+    js_render: true
+    language: "en"
+    weight: 0.95
+    enabled: true
+
+  - name: "Gemini"
+    company: "gemini"
+    blog_url: "https://blog.google/products/gemini/"
+    fetch_type: "crawler"
+    extractor: "gemini"
+    js_render: true
+    language: "en"
+    weight: 0.9
+    enabled: true
+
+  - name: "Qwen (通义千问)"
+    company: "qwen"
+    blog_url: "https://qwen.ai/research"
+    fetch_type: "crawler"
+    extractor: "qwen"
+    js_render: true
+    language: "zh"
+    weight: 0.9
+    enabled: true
+

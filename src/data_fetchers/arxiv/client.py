@@ -1,0 +1,307 @@
+"""
+arXiv 异步客户端
+
+使用 aiohttp + feedparser 异步获取 arXiv 论文数据。
+采用 Semaphore 控制并发，遵守 arXiv API 限流规则。
+"""
+
+import asyncio
+import logging
+import time
+from datetime import datetime, timezone, timedelta
+from typing import Any
+
+import aiohttp
+import feedparser
+
+from src.models import Paper
+from .query import build_single_category_query, build_id_query
+
+logger = logging.getLogger(__name__)
+
+
+class AsyncArxivClient:
+    """
+    异步 arXiv API 客户端
+
+    Features:
+        - 使用 aiohttp 异步获取数据
+        - Semaphore 控制并发，遵守限流规则
+        - 指数退避重试
+        - feedparser 解析 Atom XML
+    """
+
+    def __init__(
+        self,
+        timeout: float = 60.0,
+        max_results_per_category: int = 100,
+        delay_between_requests: float = 3.0,
+        max_retries: int = 3,
+    ):
+        """
+        初始化客户端
+
+        Args:
+            timeout: HTTP 请求超时（秒）
+            max_results_per_category: 每个分类最大获取数
+            delay_between_requests: 请求间隔（秒），遵守 arXiv 限流
+            max_retries: 最大重试次数
+        """
+        self._timeout = aiohttp.ClientTimeout(total=timeout)
+        self._max_results = max_results_per_category
+        self._delay = delay_between_requests
+        self._max_retries = max_retries
+        self._last_request_time = 0.0
+        self._semaphore = asyncio.Semaphore(1)  # 受控并发：每次只允许 1 个请求
+
+    async def fetch_recent_papers(
+        self,
+        categories: list[str],
+        hours: int = 25,
+    ) -> list[Paper]:
+        """
+        获取指定分类的最近论文
+
+        Args:
+            categories: 分类列表，如 ["cs.AI", "cs.CL"]
+            hours: 获取最近多少小时的论文，默认25小时
+
+        Returns:
+            去重后的论文列表（只保留主分类匹配的论文）
+        """
+        # 并发获取所有分类（Semaphore 自动控制并发数）
+        tasks = [self._rate_limited_request(cat) for cat in categories]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        # 合并结果
+        all_papers: list[Paper] = []
+        for i, result in enumerate(results):
+            if isinstance(result, Exception):
+                logger.warning(f"获取分类 {categories[i]} 失败: {result}")
+            else:
+                all_papers.extend(result)
+
+        # 按论文 ID 去重（同一篇论文可能在多个分类中出现）
+        seen_ids: set[str] = set()
+        unique_papers: list[Paper] = []
+        for paper in all_papers:
+            if paper.id not in seen_ids:
+                seen_ids.add(paper.id)
+                unique_papers.append(paper)
+
+        # 只保留主分类在目标列表中的论文
+        target_categories = set(categories)
+        filtered_papers = [
+            p for p in unique_papers if p.primary_category in target_categories
+        ]
+
+        # 客户端日期过滤（使用小时）
+        filtered_papers = self._filter_by_hours(filtered_papers, hours)
+
+        logger.info(
+            f"[arXiv] 获取完成: {len(all_papers)} 篇论文, "
+            f"去重后: {len(unique_papers)} 篇, "
+            f"日期过滤后: {len(filtered_papers)} 篇"
+        )
+
+        return filtered_papers
+
+    async def fetch_by_ids(self, paper_ids: list[str]) -> list[Paper]:
+        """
+        按论文 ID 批量获取
+
+        Args:
+            paper_ids: 论文 ID 列表，如 ["2501.12345", "2501.12346"]
+
+        Returns:
+            论文列表
+        """
+        if not paper_ids:
+            return []
+
+        url = build_id_query(paper_ids)
+        return await self._fetch_and_parse(url)
+
+    async def _rate_limited_request(self, category: str) -> list[Paper]:
+        """
+        受控并发请求：Semaphore 确保同一时刻只有一个请求
+        """
+        async with self._semaphore:
+            # 等待请求间隔
+            now = time.time()
+            elapsed = now - self._last_request_time
+            if elapsed < self._delay:
+                await asyncio.sleep(self._delay - elapsed)
+
+            # 执行请求
+            result = await self._fetch_category(category)
+            self._last_request_time = time.time()
+            return result
+
+    async def _fetch_category(self, category: str) -> list[Paper]:
+        """获取单个分类的论文"""
+        url = build_single_category_query(
+            category=category,
+            max_results=self._max_results,
+        )
+        return await self._fetch_and_parse(url)
+
+    async def _fetch_and_parse(self, url: str) -> list[Paper]:
+        """
+        获取并解析 arXiv API 响应
+
+        使用指数退避重试策略
+        """
+        last_exception: Exception | None = None
+
+        for attempt in range(self._max_retries):
+            try:
+                async with aiohttp.ClientSession(timeout=self._timeout) as session:
+                    # 设置 User-Agent
+                    headers = {
+                        "User-Agent": "AI-Insight-Tracker/1.0 (https://github.com/)"
+                    }
+                    async with session.get(url, headers=headers) as response:
+                        # 处理限流
+                        if response.status == 429:
+                            wait_time = 30
+                            logger.warning(
+                                f"arXiv API 限流 (429)，等待 {wait_time} 秒后重试"
+                            )
+                            await asyncio.sleep(wait_time)
+                            continue
+
+                        # 处理服务器错误
+                        if response.status >= 500:
+                            wait_time = 2**attempt  # 指数退避: 1, 2, 4 秒
+                            logger.warning(
+                                f"arXiv API 错误 ({response.status})，"
+                                f"等待 {wait_time} 秒后重试"
+                            )
+                            await asyncio.sleep(wait_time)
+                            continue
+
+                        response.raise_for_status()
+                        content = await response.text()
+
+                # 在线程池中执行同步解析，避免阻塞事件循环
+                papers = await asyncio.to_thread(self._parse_response, content)
+                return papers
+
+            except asyncio.TimeoutError as e:
+                last_exception = e
+                wait_time = 2**attempt
+                logger.warning(f"请求超时，等待 {wait_time} 秒后重试 ({attempt + 1}/{self._max_retries})")
+                await asyncio.sleep(wait_time)
+
+            except aiohttp.ClientError as e:
+                last_exception = e
+                wait_time = 2**attempt
+                logger.warning(f"网络错误: {e}，等待 {wait_time} 秒后重试 ({attempt + 1}/{self._max_retries})")
+                await asyncio.sleep(wait_time)
+
+        # 所有重试都失败
+        raise last_exception or RuntimeError("未知错误")
+
+    def _parse_response(self, content: str) -> list[Paper]:
+        """
+        解析 arXiv Atom XML 响应
+
+        此方法是同步的，由 asyncio.to_thread() 在线程池中执行
+        """
+        feed = feedparser.parse(content)
+        papers: list[Paper] = []
+
+        for entry in feed.entries:
+            try:
+                paper = self._entry_to_paper(entry)
+                papers.append(paper)
+            except Exception as e:
+                logger.warning(f"解析论文条目失败: {e}")
+                continue
+
+        return papers
+
+    def _entry_to_paper(self, entry: Any) -> Paper:
+        """
+        将 feedparser entry 转换为 Paper 对象
+        """
+        # 提取 arXiv ID（从 URL 中提取）
+        arxiv_id = self._extract_arxiv_id(entry.id)
+
+        # 解析作者列表
+        authors = [author.name for author in entry.get("authors", [])]
+
+        # 解析分类
+        categories = [tag.term for tag in entry.get("tags", [])]
+        primary_category = getattr(
+            entry, "arxiv_primary_category", {}
+        ).get("term", categories[0] if categories else "")
+
+        # 解析时间
+        published = self._parse_datetime(entry.get("published", ""))
+        updated = self._parse_datetime(entry.get("updated", ""))
+
+        # 构建 URL
+        abs_url = f"https://arxiv.org/abs/{arxiv_id}"
+        pdf_url = f"https://arxiv.org/pdf/{arxiv_id}.pdf"
+
+        # 获取作者备注（可能不存在）
+        comment = getattr(entry, "arxiv_comment", None)
+
+        return Paper(
+            id=arxiv_id,
+            title=entry.title.replace("\n", " ").strip(),
+            authors=authors,
+            abstract=entry.summary.replace("\n", " ").strip(),
+            categories=categories,
+            primary_category=primary_category,
+            pdf_url=pdf_url,
+            abs_url=abs_url,
+            published=published,
+            updated=updated if updated else None,
+            comment=comment,
+        )
+
+    def _extract_arxiv_id(self, entry_id: str) -> str:
+        """
+        从 entry.id URL 提取论文 ID
+
+        entry.id 格式: http://arxiv.org/abs/2501.12345v1
+        需要提取: 2501.12345
+        """
+        # 移除 URL 前缀和版本号
+        arxiv_id = entry_id.split("/")[-1]  # 2501.12345v1
+        # 移除版本号
+        if "v" in arxiv_id:
+            arxiv_id = arxiv_id.split("v")[0]  # 2501.12345
+        return arxiv_id
+
+    def _parse_datetime(self, date_str: str) -> datetime:
+        """解析 ISO 8601 格式日期"""
+        if not date_str:
+            return datetime.now(timezone.utc)
+        try:
+            # feedparser 返回的时间元组
+            from dateutil import parser
+            return parser.parse(date_str)
+        except Exception:
+            return datetime.now(timezone.utc)
+
+    def _filter_by_hours(self, papers: list[Paper], hours: int = 25) -> list[Paper]:
+        """
+        过滤指定小时数内的论文
+
+        Args:
+            papers: 论文列表
+            hours: 时间窗口（小时），默认25小时
+
+        Returns:
+            时间窗口内的论文列表
+        """
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+        return [
+            p for p in papers
+            if p.published.replace(tzinfo=timezone.utc) >= cutoff
+        ]
+

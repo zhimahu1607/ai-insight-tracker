@@ -1,0 +1,87 @@
+# AI Insight Tracker - Python Dependencies
+#
+# Install: pip install -r requirements.txt
+# Dev install: pip install -r requirements.txt -r requirements-dev.txt
+
+# ============================================================
+# Core Dependencies
+# ============================================================
+
+# Pydantic for data validation and settings management
+pydantic>=2.0.0,<3.0.0
+
+# YAML parsing for configuration files
+PyYAML>=6.0.0,<7.0.0
+
+# ============================================================
+# HTTP & Async
+# ============================================================
+
+# Async HTTP client for API calls
+aiohttp>=3.9.0,<4.0.0
+
+# RSS feed parsing
+feedparser>=6.0.0,<7.0.0
+
+# ============================================================
+# LLM & AI (LangChain Unified)
+# ============================================================
+
+# LangChain Core - 使用 init_chat_model 统一多提供商访问
+langchain>=0.3.0,<0.4.0
+langchain-core>=0.3.0,<0.4.0
+
+# LangChain Provider Integrations (init_chat_model 自动选择)
+# - openai -> ChatOpenAI
+# - anthropic -> ChatAnthropic
+# - gemini/google -> ChatGoogleGenerativeAI
+# - 其他 OpenAI 兼容 -> ChatOpenAI + base_url
+langchain-openai>=0.2.0,<0.4.0
+langchain-anthropic>=0.2.0,<0.4.0
+langchain-google-genai>=1.0.0,<3.0.0
+
+# LangGraph for multi-agent workflows
+langgraph>=0.2.0,<0.3.0
+
+# Tavily search (for deep analysis, primary choice)
+tavily-python>=0.5.0,<1.0.0
+
+# DuckDuckGo search (for deep analysis, fallback option)
+duckduckgo-search>=6.0.0,<7.0.0
+
+# ============================================================
+# Web Crawling (for official sources without RSS)
+# ============================================================
+
+# crawl4ai for async web crawling with JS rendering
+crawl4ai>=0.4.0,<1.0.0
+
+# Playwright is required by crawl4ai for browser automation
+# After installing, run: playwright install chromium
+playwright>=1.40.0,<2.0.0
+
+# ============================================================
+# PDF Processing (for full-text analysis)
+# ============================================================
+
+# PyMuPDF for PDF text extraction and layout analysis
+PyMuPDF>=1.24.0,<2.0.0
+
+# pdfplumber for table extraction
+pdfplumber>=0.10.0,<1.0.0
+
+# ============================================================
+# Utilities
+# ============================================================
+
+# HTTP library (used by openai internally)
+httpx>=0.27.0,<1.0.0
+
+# Timezone handling
+python-dateutil>=2.8.0,<3.0.0
+
+# Rich console output (optional, for CLI)
+rich>=13.0.0,<14.0.0
+
+# Progress bar for async operations
+tqdm>=4.66.0,<5.0.0
