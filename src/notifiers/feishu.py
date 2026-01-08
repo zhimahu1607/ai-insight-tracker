@@ -12,7 +12,7 @@ from urllib.parse import quote, urlencode
 
 import aiohttp
 
-from src.config import get_settings
+from src.config import load_settings_without_validation
 from src.models import DailyReport, AnalyzedPaper, AnalyzedNews
 from .base import BaseNotifier
 
@@ -84,7 +84,8 @@ class FeishuNotifier(BaseNotifier):
             max_papers: 卡片中显示的论文数量，默认从配置获取
             max_news: 卡片中显示的热点数量，默认从配置获取
         """
-        settings = get_settings()
+        # 通知器只需要通知相关配置，不需要验证 LLM 等其他必填项
+        settings = load_settings_without_validation()
 
         self._webhook_url = webhook_url or settings.notification.feishu_webhook_url
         self._timeout = timeout or settings.notification.timeout
@@ -529,7 +530,8 @@ def get_notifier() -> BaseNotifier:
     """
     from .base import DummyNotifier
 
-    settings = get_settings()
+    # 通知器只需要飞书配置，不需要验证 LLM 等其他必填项
+    settings = load_settings_without_validation()
 
     if settings.notification.feishu_webhook_url:
         return FeishuNotifier()
