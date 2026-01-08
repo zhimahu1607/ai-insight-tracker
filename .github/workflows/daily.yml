@@ -75,6 +75,9 @@ jobs:
         env:
           # API Key（从 Secrets 获取）
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # 可选项（从 Secrets 获取）：用于避免“已配置但验证步骤看不到”的误报
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
         run: |
           python scripts/validate_config.py
 

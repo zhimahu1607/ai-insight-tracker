@@ -134,6 +134,29 @@ PROVIDER_CONFIGS: dict[str, ProviderConfig] = {
 }
 
 
+# 处理 GitHub Actions / 环境变量里常见的“不可见字符”问题：
+# - 末尾空格/换行
+# - 全角空格
+# - 零宽字符 (ZWSP/ZWNJ/ZWJ) 与 BOM
+_INVISIBLE_CHARS_RE = re.compile(r"[\s\u3000\u200b\u200c\u200d\ufeff]+")
+
+
+def normalize_provider_name(provider: str) -> str:
+    """
+    规范化 provider 名称，用于字典 key 匹配。
+
+    说明：
+    - GitHub Variables 有时会被误复制进尾部换行或不可见空格，导致看起来是 "deepseek"
+      但实际是 "deepseek\\n" / "deepseek "，从而匹配失败。
+    """
+    if provider is None:
+        return ""
+    # 去除空白与常见不可见字符，再做大小写归一
+    cleaned = _INVISIBLE_CHARS_RE.sub("", str(provider))
+    return cleaned.strip().casefold()
+
+
+
 # 不支持 function_calling 的模型模式列表
 # 这些模型只能使用 json_mode
 _NO_FUNCTION_CALLING_PATTERNS: list[re.Pattern] = [
@@ -168,7 +191,7 @@ def get_provider_config(provider: str) -> ProviderConfig:
     Raises:
         ValueError: 提供商不支持时
     """
-    provider_lower = provider.lower()
+    provider_lower = normalize_provider_name(provider)
     if provider_lower not in PROVIDER_CONFIGS:
         supported = ", ".join(PROVIDER_CONFIGS.keys())
         raise ValueError(

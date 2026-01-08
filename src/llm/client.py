@@ -18,7 +18,11 @@ from langchain_core.exceptions import OutputParserException
 from pydantic import BaseModel
 
 from src.config import get_settings
-from .providers import get_provider_config, get_structured_output_method
+from .providers import (
+    get_provider_config,
+    get_structured_output_method,
+    normalize_provider_name,
+)
 from .exceptions import (
     LLMError,
     LLMRateLimitError,
@@ -122,7 +126,7 @@ class LLMClient:
         - gemini/google -> ChatGoogleGenerativeAI
         - 其他 OpenAI 兼容 -> ChatOpenAI with base_url
         """
-        provider_lower = self._provider.lower()
+        provider_lower = normalize_provider_name(self._provider)
 
         # 提供商到 LangChain model_provider 的映射
         provider_mapping = {
