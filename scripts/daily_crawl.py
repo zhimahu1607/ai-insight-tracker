@@ -14,9 +14,9 @@ Usage:
     python scripts/daily_crawl.py --task all       # 全部执行
 
 Exit codes:
-    0: 成功
+    0: 成功（包括无新论文但其他任务正常完成）
     1: 配置错误
-    2: 无新内容（arXiv 去重后无新论文）
+    2: 仅 arxiv 单任务模式下无新论文
     3: 执行错误
 """
 
@@ -296,8 +296,10 @@ async def task_arxiv() -> tuple[list[Paper], int]:
     )
 
     if not new_papers:
-        logger.info("无新论文，跳过后续步骤")
-        return [], DedupStatus.NO_NEW_CONTENT
+        logger.info("无新论文")
+        # 仍然返回空列表和 HAS_NEW_CONTENT 状态，允许后续任务继续执行
+        # （新闻获取、分析、日报生成等不应因无新论文而跳过）
+        return [], DedupStatus.HAS_NEW_CONTENT
 
     # 保存新论文
     today = get_today_date()
@@ -531,7 +533,7 @@ async def run_all() -> int:
     执行全部任务
 
     按顺序执行：arxiv → rss → analyze → summary → update_file_list → notify
-    arXiv 无新内容时提前退出。
+    即使无新论文，也会继续执行后续任务（新闻获取、分析、日报等）。
 
     Returns:
         退出码
@@ -540,15 +542,14 @@ async def run_all() -> int:
     logger.info("开始执行全部任务")
     logger.info("=" * 60)
 
-    # 1. arXiv 获取
+    # 1. arXiv 获取（即使无新论文也继续后续任务）
     papers, status = await task_arxiv()
-    if status == DedupStatus.NO_NEW_CONTENT:
-        logger.info("无新论文，任务提前结束")
-        return 2  # 无新内容
-
     if status == DedupStatus.PROCESS_ERROR:
         logger.error("arXiv 获取出错")
         return 3
+    
+    if not papers:
+        logger.info("今日无新增论文，继续执行其他任务")
 
     # 2. RSS 获取
     await task_rss()
