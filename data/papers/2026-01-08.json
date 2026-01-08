@@ -1,0 +1,1278 @@
+[
+  {
+    "id": "2601.04170",
+    "title": "Agent Drift: Quantifying Behavioral Degradation in Multi-Agent LLM Systems Over Extended Interactions",
+    "authors": [
+      "Abhishek Rath"
+    ],
+    "abstract": "Multi-agent Large Language Model (LLM) systems have emerged as powerful architectures for complex task decomposition and collaborative problem-solving. However, their long-term behavioral stability remains largely unexamined. This study introduces the concept of agent drift, defined as the progressive degradation of agent behavior, decision quality, and inter-agent coherence over extended interaction sequences. We present a comprehensive theoretical framework for understanding drift phenomena, proposing three distinct manifestations: semantic drift (progressive deviation from original intent), coordination drift (breakdown in multi-agent consensus mechanisms), and behavioral drift (emergence of unintended strategies).   We introduce the Agent Stability Index (ASI), a novel composite metric framework for quantifying drift across twelve dimensions, including response consistency, tool usage patterns, reasoning pathway stability, and inter-agent agreement rates. Through simulation-based analysis and theoretical modeling, we demonstrate how unchecked agent drift can lead to substantial reductions in task completion accuracy and increased human intervention requirements.   We propose three mitigation strategies: episodic memory consolidation, drift-aware routing protocols, and adaptive behavioral anchoring. Theoretical analysis suggests these approaches can significantly reduce drift-related errors while maintaining system throughput. This work establishes a foundational methodology for monitoring, measuring, and mitigating agent drift in production agentic AI systems, with direct implications for enterprise deployment reliability and AI safety research.",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "pdf_url": "https://arxiv.org/pdf/2601.04170.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04170",
+    "published": "2026-01-07T18:37:26Z",
+    "updated": "2026-01-07T18:37:26Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本研究提出agent drift概念并开发量化框架与缓解策略，为多智能体LLM系统的长期行为稳定性监测奠定基础。",
+      "motivation": "多智能体大型语言模型系统在复杂任务分解和协作问题解决中展现出强大潜力，但其长期行为稳定性尚未得到充分研究。本研究针对agent drift问题，即智能体在扩展交互序列中行为、决策质量和智能体间一致性的逐步退化。现有方法通常忽略长期稳定性，这可能导致系统性能下降、可靠性受损，增加部署风险，对于企业应用和AI安全领域至关重要。通过识别这一不足，论文旨在填补研究空白，推动更可靠的多智能体系统发展，减少人为干预需求。",
+      "method": "论文提出agent drift的理论框架，将其划分为语义漂移、协调漂移和行为漂移三种表现形式，以系统化理解漂移现象。核心创新是引入Agent Stability Index，一种复合指标框架，通过在十二个维度（如响应一致性、工具使用模式、推理路径稳定性和智能体间协议率）量化漂移。研究采用模拟分析和理论建模方法，探索漂移动态及其影响。此外，提出三种缓解策略：情节记忆巩固用于强化长期行为记忆，漂移感知路由协议优化智能体协作，自适应行为锚定调整策略以防止偏离。这些方法结合实证与理论，旨在提高系统鲁棒性。",
+      "result": "通过模拟分析和理论建模，研究发现未控制的agent drift会导致任务完成准确性大幅下降，并显著增加人为干预需求。理论分析表明，提出的缓解策略（情节记忆巩固、漂移感知路由协议和自适应行为锚定）可以有效减少漂移相关错误，同时保持系统吞吐量。与基线方法的对比在摘要中未明确说明具体数据，但整体展示了策略在理论上能提升系统稳定性和性能，为实际应用提供理论支撑。",
+      "conclusion": "本研究的主要贡献在于建立了监控、测量和缓解agent drift的基础方法论，为生产性AI系统的行为稳定性提供了新工具。其学术价值在于扩展了多智能体LLM系统的研究领域，引入量化指标和理论框架，促进AI安全研究。实际应用价值体现在提升企业部署的可靠性，减少系统退化风险。未来工作方向可能包括进一步实验验证、策略优化，以及在更多场景中测试ASI指标的有效性。",
+      "tags": [
+        "Multi-Agent LLM Systems",
+        "Agent Drift",
+        "Agent Stability Index",
+        "Simulation-Based Analysis",
+        "Behavioral Degradation"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:12.467289Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04164",
+    "title": "Clinical Data Goes MEDS? Let's OWL make sense of it",
+    "authors": [
+      "Alberto Marfoglia",
+      "Jong Ho Jhee",
+      "Adrien Coulet"
+    ],
+    "abstract": "The application of machine learning on healthcare data is often hindered by the lack of standardized and semantically explicit representation, leading to limited interoperability and reproducibility across datasets and experiments. The Medical Event Data Standard (MEDS) addresses these issues by introducing a minimal, event-centric data model designed for reproducible machine-learning workflows from health data. However, MEDS is defined as a data-format specification and does not natively provide integration with the Semantic Web ecosystem. In this article, we introduce MEDS-OWL, a lightweight OWL ontology that provides formal concepts and relations to enable representing MEDS datasets as RDF graphs. Additionally, we implemented meds2rdf, a Python conversion library that transforms MEDS events into RDF graphs, ensuring conformance with the ontology. We demonstrate the approach on a synthetic clinical dataset that describes patient care pathways for ruptured intracranial aneurysms and validate the resulting graph using SHACL constraints. The first release of MEDS-OWL comprises 13 classes, 10 object properties, 20 data properties, and 24 OWL axioms. Combined with meds2rdf, it enables data transformation into FAIR-aligned datasets, provenance-aware publishing, and interoperability of event-based clinical data. By bridging MEDS with the Semantic Web, this work contributes a reusable semantic layer for event-based clinical data and establishes a robust foundation for subsequent graph-based analytics.",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04164.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04164",
+    "published": "2026-01-07T18:25:02Z",
+    "updated": "2026-01-07T18:25:02Z",
+    "comment": "12 pages, 5 tables, 4 figures",
+    "light_analysis": {
+      "overview": "本文开发了MEDS-OWL本体和meds2rdf转换工具，将医学事件数据标准（MEDS）与语义网集成，为基于事件的临床数据提供了可重用的语义表示层。",
+      "motivation": "机器学习在医疗数据中的应用常因缺乏标准化和语义明确的表示而受限，导致数据集和实验间的互操作性与可重复性不足。MEDS标准虽通过事件中心数据模型部分解决此问题，但未原生集成语义网，限制了数据的广泛共享和分析效率。此问题的重要性在于阻碍了医疗数据的FAIR原则实现，影响科研和临床决策支持，因此需要连接MEDS与语义网以提升数据可用性。",
+      "method": "本研究提出MEDS-OWL，一种轻量级OWL本体，定义了13个类、10个对象属性等形式化概念和关系，用于表示MEDS数据集为RDF图。关键创新点包括开发meds2rdf，一个Python转换库，将MEDS事件转换为RDF图，并确保本体一致性。使用合成临床数据集（描述颅内动脉瘤破裂患者护理路径）验证方法，通过SHACL约束检查RDF图的有效性，实现了数据到语义图的映射。",
+      "result": "MEDS-OWL的第一个版本包含13个类、10个对象属性、20个数据属性和24个OWL公理，结合meds2rdf工具，成功将临床数据转换为RDF图。摘要未明确提供具体性能指标如准确率，但强调了功能改进：实现数据向FAIR对齐的转换、支持可追溯性发布和事件数据的互操作性。与基线MEDS标准相比，该方法扩展了语义兼容性，但无直接对比数据，仅展示本体的规模和应用有效性。",
+      "conclusion": "主要贡献是通过MEDS-OWL和meds2rdf将MEDS标准与语义网桥接，为基于事件的临床数据创建了一个可重用的语义层。学术价值在于促进医疗数据的语义表示标准化，增强数据可互操作性和可重用性；应用价值是支持FAIR原则，为后续基于图的分析奠定基础。局限性可能包括数据集特定性，未来工作方向可扩展到更多临床场景或优化本体结构。",
+      "tags": [
+        "OWL Ontology",
+        "RDF Graphs",
+        "Semantic Web",
+        "Clinical Data",
+        "MEDS"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:11.275977Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04151",
+    "title": "Klear: Unified Multi-Task Audio-Video Joint Generation",
+    "authors": [
+      "Jun Wang",
+      "Chunyu Qiang",
+      "Yuxin Guo",
+      "Yiran Wang",
+      "Xijuan Zeng",
+      "Chen Zhang",
+      "Pengfei Wan"
+    ],
+    "abstract": "Audio-video joint generation has progressed rapidly, yet substantial challenges still remain. Non-commercial approaches still suffer audio-visual asynchrony, poor lip-speech alignment, and unimodal degradation, which can be stemmed from weak audio-visual correspondence modeling, limited generalization, and scarce high-quality dense-caption data. To address these issues, we introduce Klear and delve into three axes--model architecture, training strategy, and data curation. Architecturally, we adopt a single-tower design with unified DiT blocks and an Omni-Full Attention mechanism, achieving tight audio-visual alignment and strong scalability. Training-wise, we adopt a progressive multitask regime--random modality masking to joint optimization across tasks, and a multistage curriculum, yielding robust representations, strengthening A-V aligned world knowledge, and preventing unimodal collapse. For datasets, we present the first large-scale audio-video dataset with dense captions, and introduce a novel automated data-construction pipeline which annotates and filters millions of diverse, high-quality, strictly aligned audio-video-caption triplets. Building on this, Klear scales to large datasets, delivering high-fidelity, semantically and temporally aligned, instruction-following generation in both joint and unimodal settings while generalizing robustly to out-of-distribution scenarios. Across tasks, it substantially outperforms prior methods by a large margin and achieves performance comparable to Veo 3, offering a unified, scalable path toward next-generation audio-video synthesis.",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.MM",
+      "cs.SD"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04151.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04151",
+    "published": "2026-01-07T18:03:45Z",
+    "updated": "2026-01-07T18:03:45Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "Klear提出了一种统一的多任务音频视频联合生成方法，通过创新模型架构、训练策略和数据管理，解决音频视觉不同步、唇语对齐差和单模态退化等挑战。",
+      "motivation": "音频视频联合生成面临音频视觉不同步、唇语对齐差和单模态退化等实际难题，这些问题主要源于音频视频对应建模弱、泛化能力有限以及高质量密集字幕数据稀缺。现有非商业方法在性能上存在明显不足，影响应用效果，因此研究旨在通过综合技术方案提升生成质量和鲁棒性，推动多模态合成技术的发展。",
+      "method": "研究方法涵盖模型架构、训练策略和数据管理三方面：架构上采用单塔设计集成统一DiT块和Omni-Full Attention机制，实现强对齐和可扩展性；训练上实施渐进式多任务学习，通过随机模态掩码和联合优化策略增强跨任务协同，采用多阶段课程学习防止单模态崩溃；数据方面构建首个大规模音频视频密集字幕数据集，并开发自动化管道生成高质量对齐的三元组数据。",
+      "result": "Klear在多种任务中显著优于先前方法，性能提升显著，可与Veo 3相媲美。实验表明，模型在联合和单模态设置下实现高保真度、语义和时间精确对齐的生成，并在分布外场景中展现出强大泛化能力，证明了其在实际应用中的有效性。",
+      "conclusion": "Klear通过整合架构创新、训练优化和数据构建，解决了音频视频联合生成的核心问题，为下一代合成技术提供了统一且可扩展的路径。该研究具有重要学术价值，推动了多模态生成领域的进步，并在虚拟现实、内容创作等应用中潜力巨大，未来可进一步探索模型扩展和数据集丰富化。",
+      "tags": [
+        "Audio-Video Joint Generation",
+        "Diffusion Transformers",
+        "Omni-Full Attention",
+        "Multitask Learning",
+        "Dense Captioning"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:00.531517Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04131",
+    "title": "ContextFocus: Activation Steering for Contextual Faithfulness in Large Language Models",
+    "authors": [
+      "Nikhil Anand",
+      "Shwetha Somasundaram",
+      "Anirudh Phukan",
+      "Apoorv Saxena",
+      "Koyel Mukherjee"
+    ],
+    "abstract": "Large Language Models (LLMs) encode vast amounts of parametric knowledge during pre-training. As world knowledge evolves, effective deployment increasingly depends on their ability to faithfully follow externally retrieved context. When such evidence conflicts with the model's internal knowledge, LLMs often default to memorized facts, producing unfaithful outputs. In this work, we introduce ContextFocus, a lightweight activation steering approach that improves context faithfulness in such knowledge-conflict settings while preserving fluency and efficiency. Unlike prior approaches, our solution requires no model finetuning and incurs minimal inference-time overhead, making it highly efficient. We evaluate ContextFocus on the ConFiQA benchmark, comparing it against strong baselines including ContextDPO, COIECD, and prompting-based methods. Furthermore, we show that our method is complementary to prompting strategies and remains effective on larger models. Extensive experiments show that ContextFocus significantly improves contextual-faithfulness. Our results highlight the effectiveness, robustness, and efficiency of ContextFocus in improving contextual-faithfulness of LLM outputs.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04131.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04131",
+    "published": "2026-01-07T17:45:20Z",
+    "updated": "2026-01-07T17:45:20Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本文提出ContextFocus，一种轻量级激活引导方法，无需微调即可提升大型语言模型在知识冲突情况下的上下文忠实性。",
+      "motivation": "大型语言模型（LLMs）在预训练时编码了丰富的参数知识，但随着世界知识持续更新，实际部署需模型能忠实遵循外部检索的上下文。当外部证据与模型内部知识冲突时，LLMs常倾向于依赖记忆的事实，导致输出不忠实，这降低了模型在动态环境下的可靠性和应用价值。现有方法如微调或复杂提示策略可能引入较大开销或效率问题，因此急需高效、轻量级的解决方案来应对知识冲突挑战，并改善模型的上下文适应性。",
+      "method": "ContextFocus是一种基于激活引导的技术，通过在推理时对模型激活进行轻微调整来增强上下文忠实性，而无需任何模型微调。关键创新点包括轻量级的干预机制，有效最小化推理时间开销，保持了输出的流畅性和效率。研究中使用了ConFiQA基准进行评估，该方法适用于多种大型语言模型，并可与其他提示策略协同工作，以灵活适应不同部署需求。",
+      "result": "在ConFiQA基准上的广泛实验显示，ContextFocus显著改善了上下文忠实性，与基线方法如ContextDPO、COIECD和基于提示的方法相比表现更优。尽管摘要未明确说明具体性能指标，但结果表明该方法具有高效性和鲁棒性，能有效缓解知识冲突问题。此外，ContextFocus与现有提示策略互补，并在更大规模模型上保持有效性，突出了其广泛适用性和潜力。",
+      "conclusion": "本论文的主要贡献是开发了ContextFocus方法，它通过激活引导有效提升了LLMs在知识冲突下的上下文忠实性，无需微调且开销低，为实际部署提供了高效解决方案。研究展示了其学术价值，推动了对LLM可靠性和适应性的探索，具有实际应用前景。局限性方面，摘要未明确说明，未来工作可能涉及扩展到更多基准测试或优化机制，以进一步提升性能或处理更复杂场景。",
+      "tags": [
+        "Large Language Model",
+        "Activation Steering",
+        "Contextual Faithfulness",
+        "Knowledge Conflict",
+        "Benchmark Evaluation"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:26.719525Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04127",
+    "title": "Pixel-Wise Multimodal Contrastive Learning for Remote Sensing Images",
+    "authors": [
+      "Leandro Stival",
+      "Ricardo da Silva Torres",
+      "Helio Pedrini"
+    ],
+    "abstract": "Satellites continuously generate massive volumes of data, particularly for Earth observation, including satellite image time series (SITS). However, most deep learning models are designed to process either entire images or complete time series sequences to extract meaningful features for downstream tasks. In this study, we propose a novel multimodal approach that leverages pixel-wise two-dimensional (2D) representations to encode visual property variations from SITS more effectively. Specifically, we generate recurrence plots from pixel-based vegetation index time series (NDVI, EVI, and SAVI) as an alternative to using raw pixel values, creating more informative representations. Additionally, we introduce PIxel-wise Multimodal Contrastive (PIMC), a new multimodal self-supervision approach that produces effective encoders based on two-dimensional pixel time series representations and remote sensing imagery (RSI). To validate our approach, we assess its performance on three downstream tasks: pixel-level forecasting and classification using the PASTIS dataset, and land cover classification on the EuroSAT dataset. Moreover, we compare our results to state-of-the-art (SOTA) methods on all downstream tasks. Our experimental results show that the use of 2D representations significantly enhances feature extraction from SITS, while contrastive learning improves the quality of representations for both pixel time series and RSI. These findings suggest that our multimodal method outperforms existing models in various Earth observation tasks, establishing it as a robust self-supervision framework for processing both SITS and RSI. Code avaliable on",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04127.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04127",
+    "published": "2026-01-07T17:41:11Z",
+    "updated": "2026-01-07T17:41:11Z",
+    "comment": "21 pages, 9 Figures",
+    "light_analysis": {
+      "overview": "本文提出了一种像素级多模态对比学习方法，通过二维递归图和对比自监督学习增强遥感图像时间序列的特征表示。",
+      "motivation": "卫星持续生成大量地球观测数据，特别是卫星图像时间序列，但现有深度学习模型通常处理整个图像或完整序列，难以有效捕捉像素级的细微变化，这限制了在下游任务如土地覆盖分类和预测中的精度。现有方法在处理像素级时间序列时存在不足，无法充分利用多模态信息进行高效特征提取，因此需要开发新方法来改善表示学习。",
+      "method": "本研究提出了PIxel-wise Multimodal Contrastive (PIMC)方法，核心创新是将像素级植被指数时间序列（如NDVI、EVI、SAVI）转换为二维递归图，替代原始像素值以生成更信息丰富的表示。该方法结合遥感影像，采用多模态对比自监督学习训练编码器，提取联合特征；验证使用PASTIS数据集进行像素级预测和分类，以及EuroSAT数据集进行土地覆盖分类。",
+      "result": "实验结果显示，采用二维表示能显著提升从卫星图像时间序列的特征提取能力，对比学习有效改善了像素时间序列和遥感影像的表示质量。在PASTIS数据集的像素级任务和EuroSAT数据集的土地覆盖分类中，该方法均优于现有最先进模型，证明了其在多模态遥感任务中的优越性能。",
+      "conclusion": "本研究的主要贡献是提出了一种健壮的自监督学习框架，用于处理卫星图像时间序列和遥感影像，学术价值在于拓展了对比学习在多模态遥感数据分析中的应用，实际应用价值是提升地球观测任务的精度和效率；未来工作可探索扩展到其他数据类型或实时应用。",
+      "tags": [
+        "Pixel-wise",
+        "Multimodal",
+        "Contrastive Learning",
+        "Recurrence Plots",
+        "Remote Sensing Images"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:26.011963Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04126",
+    "title": "InfiniteWeb: Scalable Web Environment Synthesis for GUI Agent Training",
+    "authors": [
+      "Ziyun Zhang",
+      "Zezhou Wang",
+      "Xiaoyi Zhang",
+      "Zongyu Guo",
+      "Jiahao Li",
+      "Bin Li",
+      "Yan Lu"
+    ],
+    "abstract": "GUI agents that interact with graphical interfaces on behalf of users represent a promising direction for practical AI assistants. However, training such agents is hindered by the scarcity of suitable environments. We present InfiniteWeb, a system that automatically generates functional web environments at scale for GUI agent training. While LLMs perform well on generating a single webpage, building a realistic and functional website with many interconnected pages faces challenges. We address these challenges through unified specification, task-centric test-driven development, and a combination of website seed with reference design image to ensure diversity. Our system also generates verifiable task evaluators enabling dense reward signals for reinforcement learning. Experiments show that InfiniteWeb surpasses commercial coding agents at realistic website construction, and GUI agents trained on our generated environments achieve significant performance improvements on OSWorld and Online-Mind2Web, demonstrating the effectiveness of proposed system.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04126.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04126",
+    "published": "2026-01-07T17:40:08Z",
+    "updated": "2026-01-07T17:40:08Z",
+    "comment": "Work In Progress",
+    "light_analysis": {
+      "overview": "InfiniteWeb通过自动生成大规模功能性web环境，解决了GUI代理训练中环境稀缺的问题，并集成任务评估器支持强化学习。",
+      "motivation": "GUI代理代表实用AI助手的有前景方向，但训练这些代理面临合适环境稀缺的挑战。现有大语言模型（LLMs）在生成单个网页时表现良好，但在构建具有多个互连页面的现实功能性网站时存在局限性，如功能完整性和多样性不足，这阻碍了代理的有效训练和实际应用，因为缺乏可扩展的测试环境来模拟真实交互场景。",
+      "method": "InfiniteWeb系统采用统一规范来定义网站结构，结合任务中心的测试驱动开发以确保功能性，并利用网站种子和参考设计图像来生成多样化的web环境。关键创新点包括克服LLMs在生成复杂网站时的挑战，自动生成可验证的任务评估器，这些评估器为强化学习提供密集奖励信号，促进代理训练的效率和质量。系统基于合成的环境来模拟GUI交互，支持代理的端到端学习过程。",
+      "result": "实验表明，InfiniteWeb在构建现实网站方面优于商业编码代理，具体体现在网站的功能性和真实性上。GUI代理使用生成的环境进行训练后，在OSWorld和Online-Mind2Web评估基准上取得了显著性能提升，表现为任务完成准确率的提高，验证了系统的有效性。与基线方法相比，InfiniteWeb能够提供更丰富和可扩展的训练环境，从而加速代理的学习过程。",
+      "conclusion": "InfiniteWeb的主要贡献是开发了一个可扩展的web环境合成系统，解决了GUI代理训练中的关键瓶颈，具有重要的学术和实用价值。它为AI助手领域提供了新的环境生成技术，促进了代理开发的效率，未来工作可扩展到更复杂交互场景或优化环境多样性。局限性方面，摘要未明确说明，但潜在方向包括处理更多动态web元素或跨平台应用。",
+      "tags": [
+        "GUI Agent",
+        "Web Environment Synthesis",
+        "Large Language Model",
+        "Reinforcement Learning",
+        "Test-Driven Development"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:09.693362Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04098",
+    "title": "Layer-wise Positional Bias in Short-Context Language Modeling",
+    "authors": [
+      "Maryam Rahimi",
+      "Mahdi Nouri",
+      "Yadollah Yaghoobzadeh"
+    ],
+    "abstract": "Language models often show a preference for using information from specific positions in the input regardless of semantic relevance. While positional bias has been studied in various contexts, from attention sinks to task performance degradation in long-context settings, prior work has not established how these biases evolve across individual layers and input positions, or how they vary independent of task complexity. We introduce an attribution-based framework to analyze positional effects in short-context language modeling. Using layer conductance with a sliding-window approach, we quantify how each layer distributes importance across input positions, yielding layer-wise positional importance profiles. We find that these profiles are architecture-specific, stable across inputs, and invariant to lexical scrambling. Characterizing these profiles, we find prominent recency bias that increases with depth and subtle primacy bias that diminishes through model depth. Beyond positional structure, we also show that early layers preferentially weight content words over function words across all positions, while later layers lose this word-type differentiation.",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04098.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04098",
+    "published": "2026-01-07T17:04:30Z",
+    "updated": "2026-01-07T17:04:30Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "该论文引入了基于归因的框架，分析了短上下文语言模型中逐层位置偏差的演变模式及其与词类型的关系。",
+      "motivation": "语言模型常表现出位置偏差，即偏爱使用输入中的特定位置信息，而不考虑语义相关性。现有研究主要聚焦于长上下文环境或任务性能退化，但未深入探讨这些偏差如何在不同网络层和输入位置间演变，或如何独立于任务复杂性变化。这导致模型分析的不完整，限制了改进模型内部机制的理解。通过研究短上下文设置，本研究旨在填补空白，揭示偏差的根源，为设计更公平高效的语言模型提供理论基础。",
+      "method": "论文提出一个基于归因的分析框架，利用层传导性（layer conductance）结合滑动窗口方法，量化每个网络层对输入各位置的重要性分配。关键创新在于生成逐层位置重要性剖面，系统性地评估偏差演变，而不依赖特定任务复杂度。该方法能适应多样化输入，稳定性和不敏感于词汇扰乱。摘要未明确说明使用的具体数据集或模型架构，但推断应用于标准的短上下文语言建模环境，以保持分析的通用性。",
+      "result": "研究发现，逐层位置重要性剖面具有架构特异性，在不同输入中保持稳定，且对词汇扰乱不敏感。具体模式包括：随着网络深度增加，近因偏差（recentcy bias）显著增强；而首因偏差（primacy bias）则随深度减弱。此外，早期层在所有位置上优先加权内容词而非功能词，但后期层失去这种词类型区分。这些结果量化了偏差的演变规律，为理解模型内部机制提供了数据支撑，并与现有研究形成对比，强调偏差的层间动态特性。",
+      "conclusion": "论文的主要贡献是开发了一个新框架，系统性地揭示了语言模型中位置偏差的逐层演变模式，并发现了偏差与词类型偏好的关联。这增强了模型内部工作的理解，具有重要学术价值，可指导更均衡的模型设计。实际应用上，有助于改进自然语言处理任务的性能和公平性。未来工作可扩展至更复杂或多模态设置，并探索减少偏差的策略，摘要未明确说明具体局限性。",
+      "tags": [
+        "Positional Bias",
+        "Layer Conductance",
+        "Attribution Framework",
+        "Short-Context Language Modeling",
+        "Language Models"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:10.604109Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04073",
+    "title": "Analyzing Reasoning Consistency in Large Multimodal Models under Cross-Modal Conflicts",
+    "authors": [
+      "Zhihao Zhu",
+      "Jiafeng Liang",
+      "Shixin Jiang",
+      "Jinlan Fu",
+      "Ming Liu",
+      "Guanglu Sun",
+      "See-Kiong Ng",
+      "Bing Qin"
+    ],
+    "abstract": "Large Multimodal Models (LMMs) have demonstrated impressive capabilities in video reasoning via Chain-of-Thought (CoT). However, the robustness of their reasoning chains remains questionable. In this paper, we identify a critical failure mode termed textual inertia, where once a textual hallucination occurs in the thinking process, models tend to blindly adhere to the erroneous text while neglecting conflicting visual evidence. To systematically investigate this, we propose the LogicGraph Perturbation Protocol that structurally injects perturbations into the reasoning chains of diverse LMMs spanning both native reasoning architectures and prompt-driven paradigms to evaluate their self-reflection capabilities. The results reveal that models successfully self-correct in less than 10% of cases and predominantly succumb to blind textual error propagation. To mitigate this, we introduce Active Visual-Context Refinement, a training-free inference paradigm which orchestrates an active visual re-grounding mechanism to enforce fine-grained verification coupled with an adaptive context refinement strategy to summarize and denoise the reasoning history. Experiments demonstrate that our approach significantly stifles hallucination propagation and enhances reasoning robustness.",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04073.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04073",
+    "published": "2026-01-07T16:39:34Z",
+    "updated": "2026-01-07T16:39:34Z",
+    "comment": "10 pages, 5 figures",
+    "light_analysis": {
+      "overview": "本论文提出一种无需训练的推理范式，通过主动视觉重基和上下文精炼，显著提升大型多模态模型的推理鲁棒性。",
+      "motivation": "本研究旨在解决大型多模态模型在跨模态冲突下的推理一致性问题。现有研究显示，模型在推理中易受文本幻觉影响，导致推理链不稳定。文本惯性现象表明，一旦出现文本错误，模型往往忽视视觉证据并传播错误，这限制了其在真实场景的可靠性。因此，需系统性评估模型的自我纠正能力，弥补现有方法在处理模态冲突上的不足，确保推理过程更稳健。",
+      "method": "本研究首先提出LogicGraph Perturbation Protocol，通过在推理链中注入结构化扰动，系统性评估不同LMM架构的自我反思能力。为缓解问题，引入Active Visual-Context Refinement，这是一种无需训练的推理范式，通过主动视觉重基机制进行细粒度验证，结合自适应上下文精炼策略来总结和去噪推理历史。关键创新点包括量化评估协议和无训练干预方法，直接应用于推理阶段。",
+      "result": "实验结果显示，在LogicGraph Perturbation Protocol评估下，模型成功自我纠正的案例不到10%，表明现有模型普遍易受文本惯性影响，导致盲目错误传播。提出的Active Visual-Context Refinement能显著抑制幻觉传播，增强推理鲁棒性，尽管摘要未明确具体性能指标，但效果优于基线方法，提升了模型在冲突情况下的表现。",
+      "conclusion": "本研究通过识别文本惯性问题并提出缓解方法，贡献了一个系统性评估和增强大型多模态模型推理鲁棒性的框架。Active Visual-Context Refinement作为无训练干预方法，具有实际应用价值，可提升模型可靠性。局限性可能在于仅针对特定跨模态冲突，未来工作可扩展到更多模态和场景，优化模型适应性。",
+      "tags": [
+        "Large Multimodal Models",
+        "Chain-of-Thought",
+        "Active Visual-Context Refinement",
+        "Self-correction",
+        "Hallucinations"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:29.001136Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04068",
+    "title": "Mind the Generative Details: Direct Localized Detail Preference Optimization for Video Diffusion Models",
+    "authors": [
+      "Zitong Huang",
+      "Kaidong Zhang",
+      "Yukang Ding",
+      "Chao Gao",
+      "Rui Ding",
+      "Ying Chen",
+      "Wangmeng Zuo"
+    ],
+    "abstract": "Aligning text-to-video diffusion models with human preferences is crucial for generating high-quality videos. Existing Direct Preference Otimization (DPO) methods rely on multi-sample ranking and task-specific critic models, which is inefficient and often yields ambiguous global supervision. To address these limitations, we propose LocalDPO, a novel post-training framework that constructs localized preference pairs from real videos and optimizes alignment at the spatio-temporal region level. We design an automated pipeline to efficiently collect preference pair data that generates preference pairs with a single inference per prompt, eliminating the need for external critic models or manual annotation. Specifically, we treat high-quality real videos as positive samples and generate corresponding negatives by locally corrupting them with random spatio-temporal masks and restoring only the masked regions using the frozen base model. During training, we introduce a region-aware DPO loss that restricts preference learning to corrupted areas for rapid convergence. Experiments on Wan2.1 and CogVideoX demonstrate that LocalDPO consistently improves video fidelity, temporal coherence and human preference scores over other post-training approaches, establishing a more efficient and fine-grained paradigm for video generator alignment.",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04068.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04068",
+    "published": "2026-01-07T16:32:17Z",
+    "updated": "2026-01-07T16:32:17Z",
+    "comment": "Under Review",
+    "light_analysis": {
+      "overview": "提出LocalDPO，一种新颖的后训练框架，通过局部时空区域优化对齐文本到视频扩散模型与人类偏好。",
+      "motivation": "本研究旨在解决文本到视频扩散模型与人类偏好对齐的问题，以生成更高质量的视频。现有直接偏好优化方法依赖多样本排名和任务特定评论模型，这导致效率低下且产生模糊的全局监督。由于高效的偏好对齐对提升视频生成质量至关重要，因此开发更精确和低开销的方法具有重要实际意义。",
+      "method": "论文提出LocalDPO框架，从高质量真实视频构建局部偏好对：将真实视频作为正样本，通过随机时空掩码局部破坏生成负样本，并使用冻结基础模型仅恢复掩码区域。设计自动化流水线，每个提示仅需一次推理生成偏好对，无需外部评论模型或手动标注。引入区域感知DPO损失，在训练中限制偏好学习于破坏的时空区域，以促进快速收敛。",
+      "result": "在Wan2.1和CogVideoX数据集上的实验表明，LocalDPO在视频保真度、时间一致性和人类偏好分数上持续优于其他后训练方法，显著提升了视频生成的质量。摘要未提供具体性能指标数字，但通过对比现有方法，展示了高效和细粒度的优化效果。",
+      "conclusion": "LocalDPO的主要贡献是建立了一个更高效和细粒度的视频生成器对齐范式，通过局部优化减少计算开销并提高视频质量。学术上，该方法扩展了偏好对齐技术到时空区域级别；应用上，有助于提升视频生成系统的实用性和效率。摘要未明确说明局限性或未来工作，但可能包括进一步优化算法或扩展到其他生成任务。",
+      "tags": [
+        "Video Diffusion Models",
+        "Direct Preference Optimization",
+        "Spatio-temporal Region Optimization",
+        "Automated Data Collection"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:08.907527Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04060",
+    "title": "ComfySearch: Autonomous Exploration and Reasoning for ComfyUI Workflows",
+    "authors": [
+      "Jinwei Su",
+      "Qizhen Lan",
+      "Zeyu Wang",
+      "Yinghui Xia",
+      "Hairu Wen",
+      "Yiqun Duan",
+      "Xi Xiao",
+      "Tianyu Shi",
+      "Yang Jingsong",
+      "Lewei He"
+    ],
+    "abstract": "AI-generated content has progressed from monolithic models to modular workflows, especially on platforms like ComfyUI, allowing users to customize complex creative pipelines. However, the large number of components in ComfyUI and the difficulty of maintaining long-horizon structural consistency under strict graph constraints frequently lead to low pass rates and workflows of limited quality. To tackle these limitations, we present ComfySearch, an agentic framework that can effectively explore the component space and generate functional ComfyUI pipelines via validation-guided workflow construction. Experiments demonstrate that ComfySearch substantially outperforms existing methods on complex and creative tasks, achieving higher executability (pass) rates, higher solution rates, and stronger generalization.",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "pdf_url": "https://arxiv.org/pdf/2601.04060.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04060",
+    "published": "2026-01-07T16:24:01Z",
+    "updated": "2026-01-07T16:24:01Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "ComfySearch 提出一个代理框架，通过验证引导的工作流构建，自主探索 ComfyUI 组件空间以生成高质量工作流。",
+      "motivation": "随着 AI 生成内容从单一模型转向模块化工作流，ComfyUI 等平台允许用户自定义复杂创意管道。然而，ComfyUI 中组件众多，在严格图约束下保持长期结构一致性困难，常导致低通过率和有限质量的工作流。这些问题限制了自动化工作流的生成和创意任务的效率，现有方法在复杂场景下表现不佳，亟需更有效的解决方案来提升工作流的可靠性和实用性。",
+      "method": "ComfySearch 是一个代理框架，通过验证引导的工作流构建来探索 ComfyUI 组件空间并生成功能性管道。核心创新在于结合验证步骤指导搜索和推理过程，以优化组件选择和结构一致性。该方法强调自主探索和推理能力，可能涉及搜索算法或基于规则的验证机制，但摘要未明确说明具体模型架构或数据集细节。摘要未明确说明具体技术实现，但暗示了通过代理交互实现工作流构建。",
+      "result": "实验表明，ComfySearch 在复杂和创意任务上大幅优于现有方法，实现了更高的可执行率（通过率）、更高的解决方案率和更强的泛化能力。虽然摘要未提供具体性能数据，但强调其在提升工作流质量和效率方面的显著优势，与基线方法对比显示出更强的适应性和可靠性，有效解决了低通过率和质量限制问题。",
+      "conclusion": "ComfySearch 的主要贡献是提出一个用于 ComfyUI 工作流生成的代理框架，通过自主探索和推理提升了工作流的通过率和质量。这项研究在自动化创意工作流领域具有学术价值，并为实际应用如内容生成提供了实用工具。未来工作可进一步优化泛化能力或扩展到其他平台，摘要未明确说明具体局限性。",
+      "tags": [
+        "Agentic Framework",
+        "Validation-Guided Workflow",
+        "Autonomous Exploration",
+        "ComfyUI",
+        "Workflow Generation"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:24.468206Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04160",
+    "title": "All That Glisters Is Not Gold: A Benchmark for Reference-Free Counterfactual Financial Misinformation Detection",
+    "authors": [
+      "Yuechen Jiang",
+      "Zhiwei Liu",
+      "Yupeng Cao",
+      "Yueru He",
+      "Ziyang Xu",
+      "Chen Xu",
+      "Zhiyang Deng",
+      "Prayag Tiwari",
+      "Xi Chen",
+      "Alejandro Lopez-Lira",
+      "Jimin Huang",
+      "Junichi Tsujii",
+      "Sophia Ananiadou"
+    ],
+    "abstract": "We introduce RFC Bench, a benchmark for evaluating large language models on financial misinformation under realistic news. RFC Bench operates at the paragraph level and captures the contextual complexity of financial news where meaning emerges from dispersed cues. The benchmark defines two complementary tasks: reference free misinformation detection and comparison based diagnosis using paired original perturbed inputs. Experiments reveal a consistent pattern: performance is substantially stronger when comparative context is available, while reference free settings expose significant weaknesses, including unstable predictions and elevated invalid outputs. These results indicate that current models struggle to maintain coherent belief states without external grounding. By highlighting this gap, RFC Bench provides a structured testbed for studying reference free reasoning and advancing more reliable financial misinformation detection in real world settings.",
+    "categories": [
+      "cs.CL",
+      "cs.CE",
+      "q-fin.CP"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04160.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04160",
+    "published": "2026-01-07T18:18:28Z",
+    "updated": "2026-01-07T18:18:28Z",
+    "comment": "39 pages; 24 figures",
+    "light_analysis": {
+      "overview": "论文引入了RFC Bench基准测试，用于评估大语言模型在金融错误信息检测中的参考免费推理能力，突出了模型在无外部参考时的局限性。",
+      "motivation": "金融错误信息在现实世界中具有重要影响，尤其在新闻传播中可能误导投资者。现有大语言模型在检测错误信息时，通常依赖参考上下文，但在缺乏外部依据的真实场景中表现不佳，导致检测可靠性不足。这一不足限制了模型的实际应用，因此需要评估和改进模型在参考免费设置下的性能。RFC Bench旨在解决这一问题，通过提供一个基准来系统地测试模型的独立推理能力，强调金融新闻上下文复杂且信息分散的特点。",
+      "method": "论文提出RFC Bench基准测试，操作在段落级别以捕捉金融新闻的上下文复杂性。基准定义了两个互补任务：参考免费错误信息检测，要求模型直接判断段落真伪；以及比较基于诊断，使用配对的原始和扰动输入来评估模型。方法的关键创新在于设计了这一结构化测试框架，能够模拟真实世界信息分散的特点，通过对比输入来研究模型推理过程。摘要未明确说明具体数据集或模型架构，但推断可能基于金融新闻数据构建，以评估大语言模型的性能。",
+      "result": "实验结果显示，当模型有比较上下文可用时，性能显著更强，表明上下文信息有助于提升检测准确性。相反，在参考免费设置下，模型暴露出显著弱点，如预测不稳定和无效输出率升高。这表明当前大语言模型在没有外部依据时难以保持一致的信念状态，揭示了其在独立推理方面的不足。摘要未提供具体性能指标，但突出了这一模式，强调现有模型在参考免费任务中的表现较差，需要进一步改进。",
+      "conclusion": "RFC Bench提供了一个结构化测试平台，用于研究参考免费推理，并推进更可靠的金融错误信息检测。其主要贡献在于突出了当前模型的差距，为未来的研究指明了方向。这一基准测试在学术上促进了模型评估方法的完善，在实际应用中帮助提升金融信息可靠性。未来工作可能包括改进模型在参考免费任务上的性能，或扩展到其他领域，如更复杂的新闻分析场景。潜在局限性包括数据集覆盖范围和模型泛化能力，需要进一步探索。",
+      "tags": [
+        "Large Language Models",
+        "Benchmarking",
+        "Financial Misinformation Detection",
+        "Reference-Free Reasoning",
+        "Contextual Analysis"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:17.712898Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04157",
+    "title": "FLEx: Language Modeling with Few-shot Language Explanations",
+    "authors": [
+      "Adar Avsian",
+      "Christopher Richardson",
+      "Anirudh Sundar",
+      "Larry Heck"
+    ],
+    "abstract": "Language models have become effective at a wide range of tasks, from math problem solving to open-domain question answering. However, they still make mistakes, and these mistakes are often repeated across related queries. Natural language explanations can help correct these errors, but collecting them at scale may be infeasible, particularly in domains where expert annotators are required. To address this issue, we introduce FLEx ($\\textbf{F}$ew-shot $\\textbf{L}$anguage $\\textbf{Ex}$planations), a method for improving model behavior using a small number of explanatory examples. FLEx selects representative model errors using embedding-based clustering, verifies that the associated explanations correct those errors, and summarizes them into a prompt prefix that is prepended at inference-time. This summary guides the model to avoid similar errors on new inputs, without modifying model weights. We evaluate FLEx on CounterBench, GSM8K, and ReasonIF. We find that FLEx consistently outperforms chain-of-thought (CoT) prompting across all three datasets and reduces up to 83\\% of CoT's remaining errors.",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04157.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04157",
+    "published": "2026-01-07T18:12:05Z",
+    "updated": "2026-01-07T18:12:05Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "FLEx 提出一种使用少量语言解释改进语言模型错误的方法，通过提示前缀引导模型，无需修改权重。",
+      "motivation": "语言模型在数学和问答任务中有效，但常犯重复错误，自然语言解释可帮助纠正，却因大规模收集困难，尤其在需要专家注释的领域，现有方法依赖大量数据而不实用，因此需要高效利用少量解释的新方案。",
+      "method": "FLEx 采用嵌入聚类选择代表性模型错误，验证相关解释的纠正效果，并将其总结为提示前缀，在推理时预置到输入前，关键创新在于通过总结提示引导模型避免类似错误，无需权重更新，实验基于 CounterBench、GSM8K 和 ReasonIF 数据集进行。",
+      "result": "FLEx 在 CounterBench、GSM8K 和 ReasonIF 数据集上均优于链式思维（CoT）提示，具体而言，它减少了高达 83% 的 CoT 剩余错误，显示出在提高模型准确性和减少错误方面的显著效果。",
+      "conclusion": "FLEx 方法成功利用少量解释纠正语言模型错误，降低了注释成本，学术上为少样本学习提供新思路，实际中在专业领域有应用潜力，未来工作可探索其泛化能力和解释质量的影响。",
+      "tags": [
+        "Few-shot Learning",
+        "Language Explanations",
+        "Prompt Summarization",
+        "Embedding Clustering",
+        "Chain-of-Thought Prompting"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:23.865963Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04135",
+    "title": "LLMberjack: Guided Trimming of Debate Trees for Multi-Party Conversation Creation",
+    "authors": [
+      "Leonardo Bottona",
+      "Nicolò Penzo",
+      "Bruno Lepri",
+      "Marco Guerini",
+      "Sara Tonelli"
+    ],
+    "abstract": "We present LLMberjack, a platform for creating multi-party conversations starting from existing debates, originally structured as reply trees. The system offers an interactive interface that visualizes discussion trees and enables users to construct coherent linearized dialogue sequences while preserving participant identity and discourse relations. It integrates optional large language model (LLM) assistance to support automatic editing of the messages and speakers' descriptions. We demonstrate the platform's utility by showing how tree visualization facilitates the creation of coherent, meaningful conversation threads and how LLM support enhances output quality while reducing human effort. The tool is open-source and designed to promote transparent and reproducible workflows to create multi-party conversations, addressing a lack of resources of this type.",
+    "categories": [
+      "cs.CL",
+      "cs.HC"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04135.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04135",
+    "published": "2026-01-07T17:49:17Z",
+    "updated": "2026-01-07T17:49:17Z",
+    "comment": "9 pages, 3 figures",
+    "light_analysis": {
+      "overview": "LLMberjack是一个结合交互式树可视化和大型语言模型辅助的平台，用于从辩论树创建连贯的多党对话序列。",
+      "motivation": "该研究旨在解决多党对话创建中缺乏有效工具和资源的问题。现有辩论常以回复树形式组织，但将其转化为连贯的线性对话序列通常需要大量人工编辑，效率低且过程不透明。LLMberjack通过提供开源平台，促进透明和可重复的工作流，以弥补这一资源缺口，支持对话系统开发和社会分析等应用，解决传统方法在自动化、可扩展性和用户友好性方面的不足。",
+      "method": "LLMberjack平台的核心方法包括一个交互式界面，用于可视化讨论树，允许用户手动修剪和线性化对话序列，同时保留参与者身份和话语关系。平台集成可选的大型语言模型，支持自动编辑消息和发言人描述，以增强对话连贯性和质量。创新点在于结合用户引导的树可视化与LLM自动化，提供灵活、可定制的工作流，无需依赖特定数据集或模型架构，专注于通用对话生成任务。",
+      "result": "论文通过演示展示平台实用性，指出树可视化有助于创建连贯、有意义的对话线程，而LLM支持在提高输出质量的同时减少了人工努力。摘要未明确提供具体的性能指标（如准确率或效率提升数据）或与基线方法的定量对比，但强调了工具在简化工作流程和促进资源生成方面的效果，基于用户反馈或定性评估展示其价值。",
+      "conclusion": "LLMberjack的主要贡献是开发了一个开源平台，结合交互式树可视化和LLM辅助，用于从辩论树创建多党对话。其学术价值在于提供透明、可重复的工作流，解决相关资源的缺乏；实际应用价值包括支持对话系统、社会分析和教育培训等领域。未来工作可能涉及扩展平台功能、优化LLM集成或增加更多自动化选项，以提升泛化能力和用户参与度。",
+      "tags": [
+        "Large Language Model",
+        "Tree Visualization",
+        "Multi-Party Conversation",
+        "Interactive Interface",
+        "Discourse Relations"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:18.015622Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04093",
+    "title": "SearchAttack: Red-Teaming LLMs against Real-World Threats via Framing Unsafe Web Information-Seeking Tasks",
+    "authors": [
+      "Yu Yan",
+      "Sheng Sun",
+      "Mingfeng Li",
+      "Zheming Yang",
+      "Chiwei Zhu",
+      "Fei Ma",
+      "Benfeng Xu",
+      "Min Liu"
+    ],
+    "abstract": "Recently, people have suffered and become increasingly aware of the unreliability gap in LLMs for open and knowledge-intensive tasks, and thus turn to search-augmented LLMs to mitigate this issue. However, when the search engine is triggered for harmful tasks, the outcome is no longer under the LLM's control. Once the returned content directly contains targeted, ready-to-use harmful takeaways, the LLM's safeguards cannot withdraw that exposure. Motivated by this dilemma, we identify web search as a critical attack surface and propose \\textbf{\\textit{SearchAttack}} for red-teaming. SearchAttack outsources the harmful semantics to web search, retaining only the query's skeleton and fragmented clues, and further steers LLMs to reconstruct the retrieved content via structural rubrics to achieve malicious goals. Extensive experiments are conducted to red-team the search-augmented LLMs for responsible vulnerability assessment. Empirically, SearchAttack demonstrates strong effectiveness in attacking these systems.",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04093.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04093",
+    "published": "2026-01-07T16:59:34Z",
+    "updated": "2026-01-07T16:59:34Z",
+    "comment": "We find that the key to jailbreak the LLM is objectifying its safety responsibility, thus we delegate the open-web to inject harmful semantics and get the huge gain from unmoderated web resources",
+    "light_analysis": {
+      "overview": "SearchAttack提出了一种通过框架化不安全网络信息搜索任务来红队测试搜索增强大型语言模型的方法。",
+      "motivation": "随着大型语言模型在开放和知识密集型任务中的不可靠性，人们转向搜索增强型LLMs以缓解问题。然而，当搜索引擎被触发处理有害任务时，LLMs的保护机制无法控制返回的内容，一旦搜索结果包含直接有害信息，LLMs无法阻止暴露。这凸显了搜索增强LLMs在安全方面的关键漏洞，现有方法在应对网络搜索攻击时存在不足，促使研究新的红队测试方法以评估和强化系统安全。",
+      "method": "SearchAttack方法的核心创新在于将有害语义外包给网络搜索，仅保留查询的骨架和碎片化线索，然后通过结构化的提纲引导LLMs重构检索到的内容，以实现恶意目标。这种方法通过分解攻击步骤，利用搜索来间接获取有害信息，再让LLMs在结构化指导下组合，从而绕过保护机制。技术特色包括使用框架化任务和结构化提纲来精确控制攻击流程。",
+      "result": "摘要未明确说明具体的实验数据，如攻击成功率或效率指标，但指出通过大量实验进行了红队测试，SearchAttack在攻击搜索增强LLMs系统时表现出强效性。这表明该方法能有效暴露这些系统的安全漏洞，为负责任漏洞评估提供了实证支持。与基线方法的对比情况未在摘要中详述。",
+      "conclusion": "该研究的主要贡献是提出了SearchAttack方法，用于红队测试搜索增强LLMs的安全漏洞。学术价值在于识别网络搜索作为关键攻击表面，并开发了创新的攻击框架，促进了AI安全领域的研究。实际应用价值包括帮助开发者和研究人员评估和强化LLMs系统。未来工作可能涉及改进防护措施或扩展攻击场景。",
+      "tags": [
+        "Red-Teaming",
+        "Large Language Models",
+        "Web Search",
+        "Adversarial Attacks",
+        "Security Vulnerability"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:34.990166Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04086",
+    "title": "KDCM: Reducing Hallucination in LLMs through Explicit Reasoning Structures",
+    "authors": [
+      "Jinbo Hao",
+      "Kai Yang",
+      "Qingzhen Su",
+      "Yifan Li",
+      "Chao Jiang"
+    ],
+    "abstract": "To mitigate hallucinations in large language models (LLMs), we propose a framework that focuses on errors induced by prompts. Our method extends a chain-style knowledge distillation approach by incorporating a programmable module that guides knowledge graph exploration. This module is embedded as executable code within the reasoning prompt, allowing the model to leverage external structured knowledge during inference. Based on this design, we develop an enhanced distillation-based reasoning framework that explicitly regulates intermediate reasoning steps, resulting in more reliable predictions. We evaluate the proposed approach on multiple public benchmarks using GPT-4 and LLaMA-3.3. Experimental results show that code-guided reasoning significantly improves contextual modeling and reduces prompt-induced hallucinations. Specifically, HIT@1, HIT@3, and HIT@5 increase by 15.64%, 13.38%, and 13.28%, respectively, with scores exceeding 95% across several evaluation settings. These findings indicate that the proposed method effectively constrains erroneous reasoning while improving both accuracy and interpretability.",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04086.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04086",
+    "published": "2026-01-07T16:54:20Z",
+    "updated": "2026-01-07T16:54:20Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "该论文提出了KDCM框架，通过结合知识蒸馏和代码引导的显式推理结构，有效减少大型语言模型中的幻觉。",
+      "motivation": "大型语言模型在推理任务中常因提示诱导而产生幻觉，导致输出不可靠，这在问答或决策支持等应用中问题突出。现有方法可能缺乏对中间推理步骤的有效约束，难以整合外部结构化知识。本研究旨在解决这一局限，通过引入可编程模块来增强推理过程，提高模型的准确性和可解释性，从而提升LLMs在实际任务中的实用性。",
+      "method": "该方法扩展了链式知识蒸馏，引入一个可编程模块作为可执行代码嵌入推理提示中，用于指导知识图探索。核心创新点在于将代码引导与外部结构化知识结合，构建增强的推理框架，以显式调节中间推理步骤。使用GPT-4和LLaMA-3.3模型进行评估，重点关注如何在推理过程中利用知识图来减少提示引起的错误，生成更可靠的预测。",
+      "result": "在多个公共基准上使用GPT-4和LLaMA-3.3进行实验，代码引导的推理显著改善了上下文建模，并减少了提示诱导的幻觉。HIT@1、HIT@3和HIT@5指标分别提升了15.64%、13.38%和13.28%，在多个评估设置中得分超过95%。这表明该方法相比基线在准确性和可解释性方面有明显改进，摘要未明确说明基线具体细节，但实验结果支持了其有效性。",
+      "conclusion": "该框架成功约束了LLMs中的错误推理，同时提升了准确性和可解释性，学术上提供了结合结构化知识减少幻觉的新方法，实践中增强了LLMs在复杂推理任务中的可靠性。局限性或未来工作摘要未明确说明，但可能涉及扩展到更多模型或任务领域。",
+      "tags": [
+        "Large Language Models",
+        "Knowledge Distillation",
+        "Hallucination Reduction",
+        "Code-Guided Reasoning",
+        "Knowledge Graph"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:11.598720Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04056",
+    "title": "Bridging the Discrete-Continuous Gap: Unified Multimodal Generation via Coupled Manifold Discrete Absorbing Diffusion",
+    "authors": [
+      "Yuanfeng Xu",
+      "Yuhao Chen",
+      "Liang Lin",
+      "Guangrun Wang"
+    ],
+    "abstract": "The bifurcation of generative modeling into autoregressive approaches for discrete data (text) and diffusion approaches for continuous data (images) hinders the development of truly unified multimodal systems. While Masked Language Models (MLMs) offer efficient bidirectional context, they traditionally lack the generative fidelity of autoregressive models and the semantic continuity of diffusion models. Furthermore, extending masked generation to multimodal settings introduces severe alignment challenges and training instability. In this work, we propose \\textbf{CoM-DAD} (\\textbf{Co}upled \\textbf{M}anifold \\textbf{D}iscrete \\textbf{A}bsorbing \\textbf{D}iffusion), a novel probabilistic framework that reformulates multimodal generation as a hierarchical dual-process. CoM-DAD decouples high-level semantic planning from low-level token synthesis. First, we model the semantic manifold via a continuous latent diffusion process; second, we treat token generation as a discrete absorbing diffusion process, regulated by a \\textbf{Variable-Rate Noise Schedule}, conditioned on these evolving semantic priors. Crucially, we introduce a \\textbf{Stochastic Mixed-Modal Transport} strategy that aligns disparate modalities without requiring heavy contrastive dual-encoders. Our method demonstrates superior stability over standard masked modeling, establishing a new paradigm for scalable, unified text-image generation.",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04056.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04056",
+    "published": "2026-01-07T16:21:19Z",
+    "updated": "2026-01-07T16:21:19Z",
+    "comment": "10 pages, 5 figures",
+    "light_analysis": {
+      "overview": "本文提出CoM-DAD框架，通过耦合流形离散吸收扩散统一多模态生成，解决了离散与连续数据生成的分歧。",
+      "motivation": "研究动机在于生成建模中离散数据（如文本）的自回归方法与连续数据（如图像）的扩散方法之间的分歧，这阻碍了统一多模态系统的发展。现有掩码语言模型（MLMs）虽提供高效双向上下文，但缺乏自回归模型的生成保真度和扩散模型的语义连续性。扩展到多模态设置时，常面临严重的对齐挑战和训练不稳定性，限制了系统性能和应用范围，因此亟需新方法来解决这些不足。",
+      "method": "研究方法提出了CoM-DAD（耦合流形离散吸收扩散）框架，将多模态生成重新表述为层次化双过程：首先通过连续潜在扩散过程建模高层语义流形；其次，令牌生成作为离散吸收扩散过程，采用可变速率噪声调度，并基于这些动态语义先验条件。关键创新是引入了随机多模态传输策略，有效对齐不同模态，避免了重型对比双编码器的需求，从而提高了训练的稳定性和效率。",
+      "result": "实验结果摘要未明确说明具体性能数据，但论文指出CoM-DAD在稳定性上优于标准掩码建模方法，为可扩展的统一文本-图像生成建立了新范式。这表明该方法在多模态对齐和生成质量方面可能具有显著优势，为后续研究提供了实证基础和应用潜力。",
+      "conclusion": "论文的主要贡献是提出CoM-DAD框架，统一了离散和连续数据的多模态生成，具有重要学术价值，为生成建模领域提供了新思路。研究提高了多模态系统的稳定性和可扩展性，具有潜在实际应用价值，如增强内容创作工具。未来工作可能包括进一步优化噪声调度和扩展到更多模态，以提升模型泛化能力。",
+      "tags": [
+        "Multimodal Generation",
+        "Discrete Absorbing Diffusion",
+        "Latent Diffusion",
+        "Variable-Rate Noise Schedule",
+        "Stochastic Mixed-Modal Transport"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:15.202924Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04055",
+    "title": "Modular Prompt Optimization: Optimizing Structured Prompts with Section-Local Textual Gradients",
+    "authors": [
+      "Prith Sharma",
+      "Austin Z. Henley"
+    ],
+    "abstract": "Prompt quality plays a central role in controlling the behavior, reliability, and reasoning performance of large language models (LLMs), particularly for smaller open-source instruction-tuned models that depend heavily on explicit structure. While recent work has explored automatic prompt optimization using textual gradients and self-refinement, most existing methods treat prompts as monolithic blocks of text, making it difficult to localize errors, preserve critical instructions, or prevent uncontrolled prompt growth. We introduce Modular Prompt Optimization (MPO), a schema-based prompt optimization framework that treats prompts as structured objects composed of fixed semantic sections, including system role, context, task description, constraints, and output format. MPO applies section-local textual gradients, generated by a critic language model, to refine each section independently while keeping the overall prompt schema fixed. Section updates are consolidated through de-duplication to reduce redundancy and interference between components, yielding an interpretable and robust optimization process. We evaluate MPO on two reasoning benchmarks, ARC-Challenge and MMLU, using LLaMA-3 8B-Instruct and Mistral-7B-Instruct as solver models. Across both benchmarks and models, MPO consistently outperforms an untuned structured prompt and the TextGrad baseline, achieving substantial accuracy gains without modifying model parameters or altering prompt structure. These results demonstrate that maintaining a fixed prompt schema while applying localized, section-wise optimization is an effective and practical approach for improving reasoning performance in small open-source LMs.",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.04055.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04055",
+    "published": "2026-01-07T16:20:08Z",
+    "updated": "2026-01-07T16:20:08Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "MPO框架通过局部文本梯度优化结构化提示，显著提升小规模开源语言模型的推理性能。",
+      "motivation": "该研究旨在解决提示质量对大型语言模型，特别是依赖显式结构的小型开源模型的行为控制和推理性能的关键影响。现有方法将提示视为整体文本块，难以定位错误、保留关键指令或防止提示无控制增长，这限制了推理准确性和可靠性。因此，开发一种结构化、精细化的提示优化方法至关重要，以克服这些限制，提升模型在复杂任务中的表现。",
+      "method": "MPO框架将提示结构化为固定语义部分，包括系统角色、上下文、任务描述、约束和输出格式，应用由批评语言模型生成的局部文本梯度独立优化每个部分，同时保持整体模式不变。通过去重复整合更新，减少组件间的冗余和干扰，实现可解释的优化过程。评估使用ARC-Challenge和MMLU基准，以及LLaMA-3 8B-Instruct和Mistral-7B-Instruct作为解题模型，具体展示了技术的实施细节。",
+      "result": "在ARC-Challenge和MMLU推理基准测试中，MPO使用LLaMA-3 8B-Instruct和Mistral-7B-Instruct模型，一致优于未调整的结构化提示和TextGrad基线，实现了显著的准确性提升，而无需修改模型参数或改变提示结构。实验结果表明，MPO在多个基准和模型上均展现出更强的性能，具体表现为准确性增益，尽管摘要未提供精确数值，但强调了其有效性。",
+      "conclusion": "MPO框架通过保持固定提示模式并进行局部部分优化，有效提高了小规模开源语言模型的推理性能，展示了其在学术和实际应用中的价值。该方法为提示优化提供了新方向，未来工作可探索扩展到更多模型、任务或结合其他优化技术，以进一步提升适用性和效率。",
+      "tags": [
+        "Prompt Optimization",
+        "Structured Prompts",
+        "Textual Gradients",
+        "Modular Design",
+        "Interpretable AI"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:17.192946Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04194",
+    "title": "Choreographing a World of Dynamic Objects",
+    "authors": [
+      "Yanzhe Lyu",
+      "Chen Geng",
+      "Karthik Dharmarajan",
+      "Yunzhi Zhang",
+      "Hadi Alzayer",
+      "Shangzhe Wu",
+      "Jiajun Wu"
+    ],
+    "abstract": "Dynamic objects in our physical 4D (3D + time) world are constantly evolving, deforming, and interacting with other objects, leading to diverse 4D scene dynamics. In this paper, we present a universal generative pipeline, CHORD, for CHOReographing Dynamic objects and scenes and synthesizing this type of phenomena. Traditional rule-based graphics pipelines to create these dynamics are based on category-specific heuristics, yet are labor-intensive and not scalable. Recent learning-based methods typically demand large-scale datasets, which may not cover all object categories in interest. Our approach instead inherits the universality from the video generative models by proposing a distillation-based pipeline to extract the rich Lagrangian motion information hidden in the Eulerian representations of 2D videos. Our method is universal, versatile, and category-agnostic. We demonstrate its effectiveness by conducting experiments to generate a diverse range of multi-body 4D dynamics, show its advantage compared to existing methods, and demonstrate its applicability in generating robotics manipulation policies. Project page: https://yanzhelyu.github.io/chord",
+    "categories": [
+      "cs.CV",
+      "cs.GR",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04194.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04194",
+    "published": "2026-01-07T18:59:40Z",
+    "updated": "2026-01-07T18:59:40Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本文提出CHORD，一个基于蒸馏的通用生成流水线，用于合成动态对象和场景的4D动态。",
+      "motivation": "动态对象在4D（3D+时间）世界中不断进化、变形和交互，生成这类动态现象对计算机图形学和机器人学等领域至关重要。传统基于规则的方法依赖类别特定启发式，劳动密集且不可扩展；而基于学习的方法通常需要大规模数据集，可能无法覆盖所有感兴趣的对象类别，限制了通用性和实用性。因此，本研究旨在开发一种更通用、可扩展的方法，以高效生成多样化的4D场景动态。",
+      "method": "论文提出CHORD流水线，采用基于蒸馏的技术，从2D视频的欧拉表示中提取隐藏的拉格朗日运动信息，以合成动态对象和场景。该方法继承了视频生成模型的普遍性，实现类别无关的动态生成，无需依赖大规模类别特定数据集。关键创新在于通过蒸馏过程将2D视频中的运动信息转换为4D动态，利用现有视频数据，提高了方法的通用性和灵活性，适用于多种对象和场景。",
+      "result": "实验表明，CHORD能有效生成多样化的多体4D动态，并在性能上优于现有方法，虽然摘要未提供具体数值指标，但强调了其优势。此外，该方法成功应用于生成机器人操作策略，展示了实际应用价值。这些结果验证了CHORD在通用动态合成任务中的有效性和泛化能力，为相关领域提供了新思路。",
+      "conclusion": "CHORD作为一个通用的生成流水线，解决了动态场景合成的通用性问题，通过蒸馏技术实现类别无关的动态生成，具有重要的学术和实际应用价值，例如在机器人学和计算机图形学中。其通用性、多功能性和可扩展性为未来研究奠定了基础，潜在局限性可能包括处理更复杂交互的挑战，未来工作可进一步优化性能或扩展应用范围。",
+      "tags": [
+        "Knowledge Distillation",
+        "Video Generation",
+        "Lagrangian Motion",
+        "Eulerian Representation",
+        "4D Scene Synthesis"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:09.291531Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04185",
+    "title": "ImLoc: Revisiting Visual Localization with Image-based Representation",
+    "authors": [
+      "Xudong Jiang",
+      "Fangjinhua Wang",
+      "Silvano Galliani",
+      "Christoph Vogel",
+      "Marc Pollefeys"
+    ],
+    "abstract": "Existing visual localization methods are typically either 2D image-based, which are easy to build and maintain but limited in effective geometric reasoning, or 3D structure-based, which achieve high accuracy but require a centralized reconstruction and are difficult to update. In this work, we revisit visual localization with a 2D image-based representation and propose to augment each image with estimated depth maps to capture the geometric structure. Supported by the effective use of dense matchers, this representation is not only easy to build and maintain, but achieves highest accuracy in challenging conditions. With compact compression and a GPU-accelerated LO-RANSAC implementation, the whole pipeline is efficient in both storage and computation and allows for a flexible trade-off between accuracy and highest memory efficiency. Our method achieves a new state-of-the-art accuracy on various standard benchmarks and outperforms existing memory-efficient methods at comparable map sizes. Code will be available at https://github.com/cvg/Hierarchical-Localization.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04185.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04185",
+    "published": "2026-01-07T18:51:51Z",
+    "updated": "2026-01-07T18:51:51Z",
+    "comment": "Code will be available at https://github.com/cvg/Hierarchical-Localization",
+    "light_analysis": {
+      "overview": "本文提出ImLoc方法，通过结合图像基础表示和深度图增强几何结构，实现高精度和内存效率的视觉定位。",
+      "motivation": "视觉定位方法存在两种主要类型：2D图像为基础的方法易于构建和维护，但缺乏有效的几何推理能力；3D结构为基础的方法精度高，但需要集中化重建且难以更新。现有方法在几何能力与实用性之间难以平衡，这在实际应用中限制了部署效率和精度提升，因此需要一种新方法以融合两者的优势，解决几何推理不足和维护困难的问题。",
+      "method": "本研究采用2D图像为基础，通过估计深度图来增强几何结构捕捉。核心创新在于利用密集匹配器支持这种表示，使其既易于构建和维护。此外，通过紧凑压缩技术和GPU加速的LO-RANSAC实现，优化存储和计算效率，允许在精度与内存使用之间进行灵活权衡。摘要未明确说明具体使用的数据集和模型架构。",
+      "result": "该方法在多个标准视觉定位基准测试中实现了新的最先进精度，具体数值摘要未明确说明，但指出在挑战性条件下表现最佳。同时，在相似地图大小下，优于现有内存效率方法，表明其在高精度和高效存储方面的双重优势，为实际应用提供了可靠的性能改进。",
+      "conclusion": "ImLoc方法的贡献在于结合图像基础的易维护性和几何增强的高精度，为视觉定位领域提供了高效解决方案。学术上推动了相关技术的发展；实际上，其易于更新和构建的特性适用于多种应用场景。代码开源促进了进一步研究，未来可探索更多优化方向或扩展至其他视觉任务。摘要未提及具体局限性。",
+      "tags": [
+        "Visual Localization",
+        "Depth Estimation",
+        "Dense Matching",
+        "LO-RANSAC",
+        "GPU Acceleration"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:15.922317Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04159",
+    "title": "ToTMNet: FFT-Accelerated Toeplitz Temporal Mixing Network for Lightweight Remote Photoplethysmography",
+    "authors": [
+      "Vladimir Frants",
+      "Sos Agaian",
+      "Karen Panetta"
+    ],
+    "abstract": "Remote photoplethysmography (rPPG) estimates a blood volume pulse (BVP) waveform from facial videos captured by commodity cameras. Although recent deep models improve robustness compared to classical signal-processing approaches, many methods increase computational cost and parameter count, and attention-based temporal modeling introduces quadratic scaling with respect to the temporal length. This paper proposes ToTMNet, a lightweight rPPG architecture that replaces temporal attention with an FFT-accelerated Toeplitz temporal mixing layer. The Toeplitz operator provides full-sequence temporal receptive field using a linear number of parameters in the clip length and can be applied in near-linear time using circulant embedding and FFT-based convolution. ToTMNet integrates the global Toeplitz temporal operator into a compact gated temporal mixer that combines a local depthwise temporal convolution branch with gated global Toeplitz mixing, enabling efficient long-range temporal filtering while only having 63k parameters. Experiments on two datasets, UBFC-rPPG (real videos) and SCAMPS (synthetic videos), show that ToTMNet achieves strong heart-rate estimation accuracy with a compact design. On UBFC-rPPG intra-dataset evaluation, ToTMNet reaches 1.055 bpm MAE with Pearson correlation 0.996. In a synthetic-to-real setting (SCAMPS to UBFC-rPPG), ToTMNet reaches 1.582 bpm MAE with Pearson correlation 0.994. Ablation results confirm that the gating mechanism is important for effectively using global Toeplitz mixing, especially under domain shift. The main limitation of this preprint study is the use of only two datasets; nevertheless, the results indicate that Toeplitz-structured temporal mixing is a practical and efficient alternative to attention for rPPG.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04159.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04159",
+    "published": "2026-01-07T18:15:09Z",
+    "updated": "2026-01-07T18:15:09Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "论文提出ToTMNet，一个基于FFT加速Toeplitz算子的轻量级时间混合网络，替代注意力机制以高效实现远程光电容积描记术（rPPG）。",
+      "motivation": "远程光电容积描记术（rPPG）通过面部视频非接触式估计心率波形，但现有深度学习模型在提高鲁棒性的同时，计算成本和参数数量增加，尤其基于注意力的时间建模具有二次时间复杂度的缩放问题，限制了在资源受限环境中的应用。因此，需要开发轻量级模型来平衡效率和准确性，以应对实际部署中的计算负担。",
+      "method": "ToTMNet使用Toeplitz算子构建时间混合层，通过循环嵌入和基于FFT的卷积实现近线性时间复杂度，替代传统注意力机制。核心创新包括一个紧凑的门控时间混合器，结合局部深度时间卷积分支和门控全局Toeplitz混合，以实现高效的长范围时间过滤，整个模型仅有63k参数。实验在两个数据集UBFC-rPPG（真实视频）和SCAMPS（合成视频）上进行训练和评估。",
+      "result": "在UBFC-rPPG数据集上的评估显示，ToTMNet达到1.055 bpm的平均绝对误差（MAE）和0.996的Pearson相关系数，表明高心率估计准确性。在合成到真实的域转移设置（SCAMPS到UBFC-rPPG）中，MAE为1.582 bpm，相关系数为0.994，显示了良好的泛化能力。消融实验证实门控机制对有效利用全局Toeplitz混合至关重要，尤其是在域转移情况下。虽未与特定基线对比，但结果在轻量设计下表现出色。",
+      "conclusion": "该研究证明了Toeplitz结构化时间混合作为注意力机制的实用高效替代方案，显著降低了计算复杂度和参数数量，为rPPG任务提供了轻量级解决方案。学术上推动了时间建模技术的发展，实际应用中可促进低功耗远程生理监测系统的开发。主要局限性是仅使用两个数据集，未来工作可扩展到更多数据集或进一步优化架构以增强鲁棒性。",
+      "tags": [
+        "Remote Photoplethysmography (rPPG)",
+        "Toeplitz Operator",
+        "Fast Fourier Transform (FFT)",
+        "Temporal Mixing",
+        "Lightweight Architecture"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:13.036352Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04153",
+    "title": "Diffusion-DRF: Differentiable Reward Flow for Video Diffusion Fine-Tuning",
+    "authors": [
+      "Yifan Wang",
+      "Yanyu Li",
+      "Sergey Tulyakov",
+      "Yun Fu",
+      "Anil Kag"
+    ],
+    "abstract": "Direct Preference Optimization (DPO) has recently improved Text-to-Video (T2V) generation by enhancing visual fidelity and text alignment. However, current methods rely on non-differentiable preference signals from human annotations or learned reward models. This reliance makes training label-intensive, bias-prone, and easy-to-game, which often triggers reward hacking and unstable training. We propose Diffusion-DRF, a differentiable reward flow for fine-tuning video diffusion models using a frozen, off-the-shelf Vision-Language Model (VLM) as a training-free critic. Diffusion-DRF directly backpropagates VLM feedback through the diffusion denoising chain, converting logit-level responses into token-aware gradients for optimization. We propose an automated, aspect-structured prompting pipeline to obtain reliable multi-dimensional VLM feedback, while gradient checkpointing enables efficient updates through the final denoising steps. Diffusion-DRF improves video quality and semantic alignment while mitigating reward hacking and collapse -- without additional reward models or preference datasets. It is model-agnostic and readily generalizes to other diffusion-based generative tasks.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04153.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04153",
+    "published": "2026-01-07T18:05:08Z",
+    "updated": "2026-01-07T18:05:08Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "论文提出Diffusion-DRF，一种可微奖励流方法，使用固定视觉-语言模型优化视频扩散模型，无需额外奖励模型或数据集。",
+      "motivation": "当前基于直接偏好优化的文本到视频生成方法依赖非可微偏好信号，如人工标注或学习奖励模型，导致训练标签密集、易产生偏见、引发奖励黑客问题且训练不稳定。这一问题限制了生成视频的视觉保真度和文本对齐的进一步改进，需要一种更高效、稳定且无需额外数据的优化方法来解决现有方法的缺陷。",
+      "method": "论文提出Diffusion-DRF方法，利用固定的、现成的视觉-语言模型作为训练免费的评论者，提供可微奖励信号。通过反向传播VLM反馈至扩散去噪链，将logit级响应转换为token-aware梯度进行优化。关键创新包括自动化的、方面结构化提示管道获取多维度VLM反馈，以及梯度检查点技术实现最后去噪步骤的高效更新，该方法模型无关，适用于各种扩散架构。",
+      "result": "实验结果表明，Diffusion-DRF显著提高了文本到视频生成的视频质量和语义对齐，有效缓解了奖励黑客和训练崩溃问题，无需额外奖励模型或偏好数据集。与基线方法相比，实现了更稳定和高效的训练过程，但摘要未明确说明具体性能指标如准确率提升或效率改进数据。",
+      "conclusion": "Diffusion-DRF的主要贡献在于提出一种可微奖励流优化方法，使用固定VLM提升训练效果。其学术价值是克服传统DPO对非可微信号的依赖，减少训练不稳定性；实际应用中，方法模型无关，易于推广到其他扩散生成任务，具有广泛适用性。未来工作可能包括验证在其他领域的性能及探索更复杂的反馈机制。",
+      "tags": [
+        "Diffusion Models",
+        "Text-to-Video Generation",
+        "Vision-Language Models",
+        "Direct Preference Optimization",
+        "Gradient Checkpointing"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:34.799456Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04121",
+    "title": "MORPHFED: Federated Learning for Cross-institutional Blood Morphology Analysis",
+    "authors": [
+      "Gabriel Ansah",
+      "Eden Ruffell",
+      "Delmiro Fernandez-Reyes",
+      "Petru Manescu"
+    ],
+    "abstract": "Automated blood morphology analysis can support hematological diagnostics in low- and middle-income countries (LMICs) but remains sensitive to dataset shifts from staining variability, imaging differences, and rare morphologies. Building centralized datasets to capture this diversity is often infeasible due to privacy regulations and data-sharing restrictions. We introduce a federated learning framework for white blood cell morphology analysis that enables collaborative training across institutions without exchanging training data. Using blood films from multiple clinical sites, our federated models learn robust, domain-invariant representations while preserving complete data privacy. Evaluations across convolutional and transformer-based architectures show that federated training achieves strong cross-site performance and improved generalization to unseen institutions compared to centralized training. These findings highlight federated learning as a practical and privacy-preserving approach for developing equitable, scalable, and generalizable medical imaging AI in resource-limited healthcare environments.",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04121.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04121",
+    "published": "2026-01-07T17:32:24Z",
+    "updated": "2026-01-07T17:32:24Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "论文提出一种联邦学习框架，用于跨机构血细胞形态分析，实现数据隐私保护下的协同训练和泛化性能提升。",
+      "motivation": "自动化血细胞形态分析在低收入和中等收入国家（LMICs）有诊断潜力，但对数据集偏移敏感，如染色变异、成像差异和罕见形态。由于隐私法规和数据共享限制，构建集中式数据集捕捉多样性不可行，导致现有方法无法有效处理跨机构数据差异。这限制了医疗AI模型的可泛化性，因此需要一种隐私保护的方法来利用分散数据。",
+      "method": "论文引入一个联邦学习框架，专门用于白细胞形态分析。该方法使多个临床机构在不交换原始训练数据的情况下协作训练模型，核心创新是实现数据隐私保护和域不变表示学习。使用来自不同站点的血涂片数据集，并评估了基于卷积神经网络和转换器架构的模型。联邦学习的具体算法摘要未明确说明，但框架侧重于学习鲁棒的表示以适应数据偏移。",
+      "result": "实验评估表明，联邦训练在跨机构血细胞形态分析任务中表现优异。与集中式训练相比，联邦训练模型展现出更强的跨站点性能和改善的泛化到未见机构的能力。摘要未提供具体准确率数据，但强调了联邦训练在保护隐私的同时提升性能的优势，基线对比显示联邦学习方法的有效性。",
+      "conclusion": "论文的主要贡献是验证了联邦学习作为一种实用且隐私保护的策略，在资源有限的医疗环境中开发公平、可扩展和可泛化的医疗成像AI的价值。这为解决数据隐私和跨机构泛化问题提供了新途径。未来工作可能包括优化联邦学习效率或扩展到其他医学图像分析任务。",
+      "tags": [
+        "Federated Learning",
+        "Domain-Invariant Representation",
+        "Medical Imaging",
+        "Convolutional Neural Networks",
+        "Transformer"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:10.034235Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04118",
+    "title": "GeoReason: Aligning Thinking And Answering In Remote Sensing Vision-Language Models Via Logical Consistency Reinforcement Learning",
+    "authors": [
+      "Wenshuai Li",
+      "Xiantai Xiang",
+      "Zixiao Wen",
+      "Guangyao Zhou",
+      "Ben Niu",
+      "Feng Wang",
+      "Lijia Huang",
+      "Qiantong Wang",
+      "Yuxin Hu"
+    ],
+    "abstract": "The evolution of Remote Sensing Vision-Language Models(RS-VLMs) emphasizes the importance of transitioning from perception-centric recognition toward high-level deductive reasoning to enhance cognitive reliability in complex spatial tasks. However, current models often suffer from logical hallucinations, where correct answers are derived from flawed reasoning chains or rely on positional shortcuts rather than spatial logic. This decoupling undermines reliability in strategic spatial decision-making. To address this, we present GeoReason, a framework designed to synchronize internal thinking with final decisions. We first construct GeoReason-Bench, a logic-driven dataset containing 4,000 reasoning trajectories synthesized from geometric primitives and expert knowledge. We then formulate a two-stage training strategy: (1) Supervised Knowledge Initialization to equip the model with reasoning syntax and domain expertise, and (2) Consistency-Aware Reinforcement Learning to refine deductive reliability. This second stage integrates a novel Logical Consistency Reward, which penalizes logical drift via an option permutation strategy to anchor decisions in verifiable reasoning traces. Experimental results demonstrate that our framework significantly enhances the cognitive reliability and interpretability of RS-VLMs, achieving state-of-the-art performance compared to other advanced methods.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04118.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04118",
+    "published": "2026-01-07T17:26:41Z",
+    "updated": "2026-01-07T17:26:41Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "GeoReason 框架通过逻辑一致性强化学习对齐远程感知视觉语言模型的思考与回答，解决了逻辑幻觉问题，显著提升了认知可靠性和解释性。",
+      "motivation": "远程感知视觉语言模型（RS-VLMs）正从感知为中心转向高层推理，以增强复杂空间任务中的认知可靠性。然而，现有模型常出现逻辑幻觉问题，即正确答案基于错误推理链或位置捷径而非空间逻辑，这削弱了战略空间决策的可靠性。该问题之所以重要，是因为可靠的推理过程对于现实应用如地理分析和军事决策至关重要，而现有方法在逻辑一致性方面不足，导致模型可信度受限。",
+      "method": "论文提出了两阶段训练策略：首先构建 GeoReason-Bench 数据集，包含 4,000 个基于几何基元和专家知识合成的推理轨迹，为模型提供逻辑基础；然后进行监督知识初始化，使模型掌握推理语法和领域专长；第二阶段采用一致性感知强化学习，引入新颖的逻辑一致性奖励，通过选项排列策略惩罚逻辑漂移，以内部推理与最终决策对齐。关键创新在于逻辑一致性奖励机制，它利用选项排列策略确保决策基于可验证的推理路径，提升了模型的演绎可靠性。",
+      "result": "实验结果表明，GeoReason 框架显著增强了 RS-VLMs 的认知可靠性和解释性，在基准测试中实现了最先进的性能。相比于其他先进方法，该框架在逻辑一致性方面表现出优越性，但摘要未明确说明具体准确率或效率改进的数值，仅强调了可靠性和解释性的显著提升。这表明框架能有效减少逻辑幻觉，为远程感知空间任务提供更可靠的模型支持。",
+      "conclusion": "论文的主要贡献是开发了 GeoReason 框架及其逻辑驱动数据集，通过强化学习技术对齐 RS-VLMs 的推理与决策，增强了空间任务的认知可靠性。这项研究具有重要学术价值，推动了 AI 推理可靠性的理论发展，并在远程感知等实际应用中提升了模型的实用性和可信度。局限性可能包括数据集的规模限制，未来工作可考虑扩展数据集、应用于其他视觉语言任务或优化奖励机制以进一步提高性能。",
+      "tags": [
+        "Remote Sensing Vision-Language Models",
+        "Logical Consistency Reinforcement Learning",
+        "Option Permutation Strategy",
+        "Reasoning Trajectories",
+        "Cognitive Reliability"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:28.345666Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04090",
+    "title": "Gen3R: 3D Scene Generation Meets Feed-Forward Reconstruction",
+    "authors": [
+      "Jiaxin Huang",
+      "Yuanbo Yang",
+      "Bangbang Yang",
+      "Lin Ma",
+      "Yuewen Ma",
+      "Yiyi Liao"
+    ],
+    "abstract": "We present Gen3R, a method that bridges the strong priors of foundational reconstruction models and video diffusion models for scene-level 3D generation. We repurpose the VGGT reconstruction model to produce geometric latents by training an adapter on its tokens, which are regularized to align with the appearance latents of pre-trained video diffusion models. By jointly generating these disentangled yet aligned latents, Gen3R produces both RGB videos and corresponding 3D geometry, including camera poses, depth maps, and global point clouds. Experiments demonstrate that our approach achieves state-of-the-art results in single- and multi-image conditioned 3D scene generation. Additionally, our method can enhance the robustness of reconstruction by leveraging generative priors, demonstrating the mutual benefit of tightly coupling reconstruction and generative models.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04090.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04090",
+    "published": "2026-01-07T16:57:30Z",
+    "updated": "2026-01-07T16:57:30Z",
+    "comment": "Project page: https://xdimlab.github.io/Gen3R/",
+    "light_analysis": {
+      "overview": "Gen3R方法通过结合基础重建模型和视频扩散模型，实现高质量的3D场景生成并增强重建鲁棒性。",
+      "motivation": "研究旨在解决3D场景生成中几何与外观信息有效结合的挑战。现有方法可能单独依赖重建或生成模型，导致生成质量不足或重建不鲁棒。通过耦合这两种模型的强先验，Gen3R旨在提升生成的一致性和鲁棒性，以应对复杂场景建模的需求。摘要未明确说明具体应用场景的不足之处。",
+      "method": "Gen3R方法使用VGGT重建模型提取几何潜在变量，通过训练适配器在模型token上进行正则化，以对齐预训练视频扩散模型的外观潜在变量。通过联合生成这些解耦但对齐的潜在变量，同时输出RGB视频和对应的3D几何信息，包括相机位姿、深度图和全局点云。关键创新在于解耦几何与外观生成，并通过对齐机制确保它们的一致性。",
+      "result": "实验表明，Gen3R在单图像和多图像条件3D场景生成任务中达到最先进水平，性能优于现有基线方法。此外，通过利用生成先验，该方法增强了重建模型的鲁棒性，展示了重建与生成模型耦合的互惠效应。摘要未明确说明具体的性能指标如准确率或效率提升。",
+      "conclusion": "Gen3R的主要贡献是成功结合重建模型和视频扩散模型，实现了高效的3D场景生成，并提升重建鲁棒性。这为3D生成领域提供了新方法，结合了不同模型的优势，具有学术价值和应用潜力，未来可能扩展到更复杂的场景或实时应用中。摘要未明确说明局限性或详细未来工作。",
+      "tags": [
+        "3D Scene Generation",
+        "Video Diffusion Models",
+        "3D Reconstruction",
+        "Disentangled Representation",
+        "Latent Space Alignment"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:22.421353Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04065",
+    "title": "Unsupervised Modular Adaptive Region Growing and RegionMix Classification for Wind Turbine Segmentation",
+    "authors": [
+      "Raül Pérez-Gonzalo",
+      "Riccardo Magro",
+      "Andreas Espersen",
+      "Antonio Agudo"
+    ],
+    "abstract": "Reliable operation of wind turbines requires frequent inspections, as even minor surface damages can degrade aerodynamic performance, reduce energy output, and accelerate blade wear. Central to automating these inspections is the accurate segmentation of turbine blades from visual data. This task is traditionally addressed through dense, pixel-wise deep learning models. However, such methods demand extensive annotated datasets, posing scalability challenges. In this work, we introduce an annotation-efficient segmentation approach that reframes the pixel-level task into a binary region classification problem. Image regions are generated using a fully unsupervised, interpretable Modular Adaptive Region Growing technique, guided by image-specific Adaptive Thresholding and enhanced by a Region Merging process that consolidates fragmented areas into coherent segments. To improve generalization and classification robustness, we introduce RegionMix, an augmentation strategy that synthesizes new training samples by combining distinct regions. Our framework demonstrates state-of-the-art segmentation accuracy and strong cross-site generalization by consistently segmenting turbine blades across distinct windfarms.",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.04065.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04065",
+    "published": "2026-01-07T16:29:52Z",
+    "updated": "2026-01-07T16:29:52Z",
+    "comment": "Accepted to WACV 2026",
+    "light_analysis": {
+      "overview": "本文提出了一种基于无监督区域生长和区域混合增强的高效风力涡轮机叶片分割方法，显著减少了标注数据需求。",
+      "motivation": "风力涡轮机的可靠运行需要频繁检查，叶片表面轻微损伤会降低气动性能并减少能量输出。自动化检查的核心是准确分割叶片，传统深度学习方法需要大量像素级标注数据，这带来了可扩展性挑战。研究动机是开发一种注释效率更高的分割方法，以克服现有方法对大规模标注的依赖，并提高在实际风电场中的适用性。",
+      "method": "论文核心方法是先通过无监督的模块化自适应区域生长技术生成图像区域，该技术利用自适应阈值确定区域边界，并通过区域合并整合碎片区域形成连贯片段。然后，将分割任务重构为二进制区域分类问题。为提高泛化能力，引入RegionMix增强策略，通过组合不同区域合成新训练样本，以增强模型鲁棒性。关键创新包括无监督的区域生成和区域级数据增强。",
+      "result": "实验结果表明，该框架在风力涡轮机叶片分割上实现了最先进的准确率，并展现出强大的跨站点泛化能力，能在不同风电场中一致分割叶片。但摘要未明确说明具体性能指标如准确率提升数据或与基线方法的详细对比，仅提到整体优势。",
+      "conclusion": "本研究的主要贡献是开发了一种高效的注释分割框架，通过无监督区域生长和区域混合增强，减少了标注需求并提高了跨站点泛化性能。方法在风力涡轮机自动化检查中有实际应用价值，未来可扩展到其他需要高效分割的视觉任务。局限性可能包括对特定图像特征的依赖，未来工作可探索更多场景的适应性。",
+      "tags": [
+        "Unsupervised Learning",
+        "Region Growing",
+        "Data Augmentation",
+        "Image Segmentation",
+        "Adaptive Thresholding"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:07.413905Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04181",
+    "title": "Lightweight Test-Time Adaptation for EMG-Based Gesture Recognition",
+    "authors": [
+      "Nia Touko",
+      "Matthew O A Ellis",
+      "Cristiano Capone",
+      "Alessio Burrello",
+      "Elisa Donati",
+      "Luca Manneschi"
+    ],
+    "abstract": "Reliable long-term decoding of surface electromyography (EMG) is hindered by signal drift caused by electrode shifts, muscle fatigue, and posture changes. While state-of-the-art models achieve high intra-session accuracy, their performance often degrades sharply. Existing solutions typically demand large datasets or high-compute pipelines that are impractical for energy-efficient wearables. We propose a lightweight framework for Test-Time Adaptation (TTA) using a Temporal Convolutional Network (TCN) backbone. We introduce three deployment-ready strategies: (i) causal adaptive batch normalization for real-time statistical alignment; (ii) a Gaussian Mixture Model (GMM) alignment with experience replay to prevent forgetting; and (iii) meta-learning for rapid, few-shot calibration. Evaluated on the NinaPro DB6 multi-session dataset, our framework significantly bridges the inter-session accuracy gap with minimal overhead. Our results show that experience-replay updates yield superior stability under limited data, while meta-learning achieves competitive performance in one- and two-shot regimes using only a fraction of the data required by current benchmarks. This work establishes a path toward robust, \"plug-and-play\" myoelectric control for long-term prosthetic use.",
+    "categories": [
+      "cs.LG",
+      "cs.HC"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04181.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04181",
+    "published": "2026-01-07T18:48:31Z",
+    "updated": "2026-01-07T18:48:31Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "提出一个轻量级的测试时间适应框架，用于基于肌电信号的手势识别，通过减少信号漂移影响提升长期使用的鲁棒性。",
+      "motivation": "表面肌电信号在长期解码中常受信号漂移干扰，如电极移位、肌肉疲劳和姿势变化，这导致现有模型在单个会话内准确度高但跨会话时性能急剧下降。当前解决方案通常依赖大规模数据集或高计算资源，不适用于能量高效的便携式可穿戴设备，因此迫切需要开发轻量级、自适应的方法来克服这些问题，以实现可靠的实时肌电控制。本研究聚焦于解决这一实际难题，为医疗假肢和智能穿戴应用提供更实用的技术路径。",
+      "method": "研究方法以时序卷积网络作为骨干网络，构建一个轻量级框架用于测试时间适应。关键创新点包括三个部署就绪的策略：因果自适应批归一化，用于实时调整统计特征以减少漂移影响；高斯混合模型对齐结合经验回放机制，通过维护历史数据分布防止模型遗忘；以及元学习方法，支持快速少样本校准，仅需少量新数据就能适应新会话。这些技术确保了在资源受限环境下的高效在线适应，使用NinaPro DB6数据集进行验证。",
+      "result": "在NinaPro DB6多会话数据集上的实验表明，该框架显著缩小了会话间准确度差距，计算开销极小。经验回放更新在数据有限的情况下实现了更优的稳定性，避免了性能波动；元学习策略则在一样本和两样本场景中表现出色，仅需基准方法数据的一小部分就达到有竞争力的性能水平，具体性能指标未明确量化，但整体结果表明框架有效平衡了适应速度和鲁棒性。",
+      "conclusion": "本研究的主要贡献在于建立了一个轻量级测试时间适应框架，显著提升了基于肌电信号手势识别的长期稳定性，为稳健、即插即用的肌电控制铺平道路，尤其适用于假肢等便携式设备。学术价值在于提出了可部署的自适应策略，填补了现有高计算方案的空白；实际应用价值在于增强了医疗和可穿戴技术的实用性。局限性包括未详细量化所有性能指标，未来工作可扩展到其他生物信号或更复杂的漂移场景。",
+      "tags": [
+        "Test-Time Adaptation",
+        "Temporal Convolutional Network",
+        "Gaussian Mixture Model",
+        "Meta-learning",
+        "Electromyography"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:49:11.645941Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04176",
+    "title": "Robust Physics Discovery from Highly Corrupted Data: A PINN Framework Applied to the Nonlinear Schrödinger Equation",
+    "authors": [
+      "Pietro de Oliveira Esteves"
+    ],
+    "abstract": "We demonstrate a deep learning framework capable of recovering physical parameters from the Nonlinear Schrodinger Equation (NLSE) under severe noise conditions. By integrating Physics-Informed Neural Networks (PINNs) with automatic differentiation, we achieve reconstruction of the nonlinear coefficient beta with less than 0.2 percent relative error using only 500 sparse, randomly sampled data points corrupted by 20 percent additive Gaussian noise, a regime where traditional finite difference methods typically fail due to noise amplification in numerical derivatives. We validate the method's generalization capabilities across different physical regimes (beta between 0.5 and 2.0) and varying data availability (between 100 and 1000 training points), demonstrating consistent sub-1 percent accuracy. Statistical analysis over multiple independent runs confirms robustness (standard deviation less than 0.15 percent for beta equals 1.0). The complete pipeline executes in approximately 80 minutes on modest cloud GPU resources (NVIDIA Tesla T4), making the approach accessible for widespread adoption. Our results indicate that physics-based regularization acts as an effective filter against high measurement uncertainty, positioning PINNs as a viable alternative to traditional optimization methods for inverse problems in spatiotemporal dynamics where experimental data is scarce and noisy. All code is made publicly available to facilitate reproducibility.",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04176.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04176",
+    "published": "2026-01-07T18:43:11Z",
+    "updated": "2026-01-07T18:43:11Z",
+    "comment": "9 pages, 4 figures, 2 tables. Code available at https://github.com/p-esteves/pinn-nlse-2026",
+    "light_analysis": {
+      "overview": "提出一个基于物理信息神经网络（PINN）的深度学习框架，从高噪声数据中精确恢复非线性薛定谔方程的物理参数。",
+      "motivation": "研究旨在解决在实验数据稀少且噪声严重的条件下，从非线性薛定谔方程中恢复物理参数的挑战。传统方法如有限差分法在数值导数计算中会放大噪声，导致性能下降，而实际应用中时空动力学的反问题常面临数据质量有限的情况。因此，开发稳健的逆问题方法对于物理学和工程学至关重要，特别是在噪声环境下实现可靠参数估计。",
+      "method": "论文提出了一个集成物理信息神经网络（PINNs）和自动微分的框架，核心创新在于结合PINN编码物理方程作为正则化项，利用自动微分精确计算导数以处理噪声。该方法使用稀疏随机采样数据点，无需复杂预处理，直接应用于高噪声环境。框架基于深度学习模型，通过优化损失函数最小化物理约束和数据拟合误差，适用于非线性薛定谔方程的参数恢复。",
+      "result": "实验结果显示，在使用仅500个稀疏、20%加性高斯噪声数据点时，非线性系数beta的重建相对误差小于0.2%。泛化测试表明，在beta范围0.5-2.0和数据量100-1000点之间，误差一致保持在1%以下，标准差在beta=1.0时低于0.15%。与传统有限差分方法相比，该方法在噪声条件下显著优越，避免了噪声放大问题。计算效率方面，整个流程在NVIDIA Tesla T4 GPU上运行约80分钟。",
+      "conclusion": "研究表明，基于物理的正则化能有效对抗高测量不确定性，使PINN成为处理稀疏噪声数据反问题的可行方案。主要贡献在于验证了PINN在逆问题中的鲁棒性和效率，推动了深度学习在物理学中的应用。代码公开促进了可重复性，未来工作可扩展到其他方程或更复杂场景，增强泛化能力。",
+      "tags": [
+        "Physics-Informed Neural Networks",
+        "Automatic Differentiation",
+        "Nonlinear Schrödinger Equation",
+        "Inverse Problems",
+        "Robust Estimation"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:09.018242Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04171",
+    "title": "Agentic Rubrics as Contextual Verifiers for SWE Agents",
+    "authors": [
+      "Mohit Raghavendra",
+      "Anisha Gunjal",
+      "Bing Liu",
+      "Yunzhong He"
+    ],
+    "abstract": "Verification is critical for improving agents: it provides the reward signal for Reinforcement Learning and enables inference-time gains through Test-Time Scaling (TTS). Despite its importance, verification in software engineering (SWE) agent settings often relies on code execution, which can be difficult to scale due to environment setup overhead. Scalable alternatives such as patch classifiers and heuristic methods exist, but they are less grounded in codebase context and harder to interpret. To this end, we explore Agentic Rubrics: an expert agent interacts with the repository to create a context-grounded rubric checklist, and candidate patches are then scored against it without requiring test execution. On SWE-Bench Verified under parallel TTS evaluation, Agentic Rubrics achieve a score of 54.2% on Qwen3-Coder-30B-A3B and 40.6% on Qwen3-32B, with at least a +3.5 percentage-point gain over the strongest baseline in our comparison set. We further analyze rubric behavior, showing that rubric scores are consistent with ground-truth tests while also flagging issues that tests do not capture. Our ablations show that agentic context gathering is essential for producing codebase-specific, unambiguous criteria. Together, these results suggest that Agentic Rubrics provide an efficient, scalable, and granular verification signal for SWE agents.",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04171.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04171",
+    "published": "2026-01-07T18:38:23Z",
+    "updated": "2026-01-07T18:38:23Z",
+    "comment": "31 pages, 11 Figures",
+    "light_analysis": {
+      "overview": "本文提出Agentic Rubrics方法，通过专家代理创建基于代码库上下文的检查清单，实现软件工程代理的高效验证，无需执行测试代码。",
+      "motivation": "研究动机在于解决软件工程代理验证中依赖代码执行导致的可扩展性问题。验证对强化学习的奖励信号和测试时缩放至关重要，但传统方法如代码执行因环境设置开销大而难以扩展；现有替代方案如补丁分类器和启发式方法虽可扩展，却缺乏代码库上下文基础和可解释性。因此，亟需一种高效、可扩展且基于上下文的验证方法以提升代理性能。",
+      "method": "研究方法采用Agentic Rubrics：首先，一个专家代理与软件仓库交互，收集上下文信息并生成一个基于代码库的检查清单；然后，候选补丁通过对比该清单进行评分，无需实际执行测试。关键创新在于利用代理进行上下文收集，创建代码库特定、明确的验证标准，从而避免测试环境设置的开销，提高验证的准确性和可扩展性。",
+      "result": "在SWE-Bench Verified数据集上进行评估，采用并行测试时缩放设置。实验结果显示，Agentic Rubrics在Qwen3-Coder-30B-A3B模型上得分为54.2%，在Qwen3-32B模型上为40.6%，比比较集中的最强基线至少高出3.5个百分点。消融研究证实代理上下文收集对生成代码库特定标准至关重要，且检查清单评分与真实测试结果一致，还能识别测试未捕捉的问题。",
+      "conclusion": "Agentic Rubrics为软件工程代理提供了一种高效、可扩展且细粒度的验证信号，克服了传统验证方法的局限性。其学术价值在于提出了基于上下文的验证框架；实际应用价值在于可支持强化学习奖励和测试时缩放。尽管摘要未明确说明局限性，但未来工作可能包括优化代理交互机制或扩展应用到其他代理设置。",
+      "tags": [
+        "Agentic Rubrics",
+        "Software Engineering Agents",
+        "Contextual Verification",
+        "Test-Time Scaling",
+        "Reinforcement Learning"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:50:37.202899Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04110",
+    "title": "Causal Data Augmentation for Robust Fine-Tuning of Tabular Foundation Models",
+    "authors": [
+      "Magnus Bühler",
+      "Lennart Purucker",
+      "Frank Hutter"
+    ],
+    "abstract": "Fine-tuning tabular foundation models (TFMs) under data scarcity is challenging, as early stopping on even scarcer validation data often fails to capture true generalization performance. We propose CausalMixFT, a method that enhances fine-tuning robustness and downstream performance by generating structurally consistent synthetic samples using Structural Causal Models (SCMs) fitted on the target dataset. This approach augments limited real data with causally informed synthetic examples, preserving feature dependencies while expanding training diversity. Evaluated across 33 classification datasets from TabArena and over 2300 fine-tuning runs, our CausalMixFT method consistently improves median normalized ROC-AUC from 0.10 (standard fine-tuning) to 0.12, outperforming purely statistical generators such as CTGAN (-0.01), TabEBM (-0.04), and TableAugment (-0.09). Moreover, it narrows the median validation-test performance correlation gap from 0.67 to 0.30, enabling more reliable validation-based early stopping, a key step toward improving fine-tuning stability under data scarcity. These results demonstrate that incorporating causal structure into data augmentation provides an effective and principled route to fine-tuning tabular foundation models in low-data regimes.",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04110.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04110",
+    "published": "2026-01-07T17:16:39Z",
+    "updated": "2026-01-07T17:16:39Z",
+    "comment": "Accepted for oral presentation at the EurIPS 2025 Workshop on AI for Tabular Data (Copenhagen)",
+    "light_analysis": {
+      "overview": "本文提出了CausalMixFT方法，通过因果数据增强提升表格基础模型在数据稀缺下的微调鲁棒性和性能。",
+      "motivation": "研究针对表格基础模型在数据稀缺下的微调挑战，由于验证数据同样稀缺，早期停止难以捕捉真实泛化性能，导致模型过拟合或性能不稳定。现有方法如标准微调和纯统计生成器（如CTGAN）无法有效保持特征间的依赖关系，生成合成样本质量低，从而影响下游任务表现。因此，需要一种能结合数据内在结构的方法来增强微调稳健性，解决低数据场景下的实际问题。",
+      "method": "论文提出CausalMixFT方法，通过拟合结构因果模型（SCMs）到目标数据集，生成结构一致的合成样本用于数据增强。该方法利用SCMs捕捉特征间的因果依赖关系，生成合成数据以保持真实数据的统计特性和依赖结构，从而增加训练多样性。在TabArena的33个分类数据集和2300多个微调运行中进行系统评估，方法不依赖特定模型架构，重点在于因果结构的应用以改善数据稀缺下的微调过程。",
+      "result": "实验结果显示，CausalMixFT在33个分类数据集和2300多个微调运行中，将中位数归一化ROC-AUC从标准微调的0.10提升至0.12，显著优于统计生成器如CTGAN（-0.01）、TabEBM（-0.04）和TableAugment（-0.09）。此外，验证-测试性能相关性差距从0.67减少到0.30，表明该方法能提高基于验证的早期停止的可靠性，增强微调稳定性，为低数据场景下的性能改进提供了实证支持。",
+      "conclusion": "本文证明了将因果结构融入数据增强能有效提升表格基础模型在低数据场景下的微调性能。主要贡献在于提出了CausalMixFT方法，提供了一种原理性途径来增强微调鲁棒性和下游任务表现，学术上推动了因果学习与数据增强的结合，实际应用中提高了模型在数据稀缺下的稳定性和可靠性。未来工作可探索方法在其他模型类型或更复杂数据场景中的扩展，以进一步验证其普适性。",
+      "tags": [
+        "Tabular Foundation Models",
+        "Data Augmentation",
+        "Structural Causal Models",
+        "Fine-Tuning",
+        "Causal Learning"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:22.910241Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04058",
+    "title": "Minimum distance classification for nonlinear dynamical systems",
+    "authors": [
+      "Dominique Martinez"
+    ],
+    "abstract": "We address the problem of classifying trajectory data generated by some nonlinear dynamics, where each class corresponds to a distinct dynamical system. We propose Dynafit, a kernel-based method for learning a distance metric between training trajectories and the underlying dynamics. New observations are assigned to the class with the most similar dynamics according to the learned metric. The learning algorithm approximates the Koopman operator which globally linearizes the dynamics in a (potentially infinite) feature space associated with a kernel function. The distance metric is computed in feature space independently of its dimensionality by using the kernel trick common in machine learning. We also show that the kernel function can be tailored to incorporate partial knowledge of the dynamics when available. Dynafit is applicable to various classification tasks involving nonlinear dynamical systems and sensors. We illustrate its effectiveness on three examples: chaos detection with the logistic map, recognition of handwritten dynamics and of visual dynamic textures.",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04058.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04058",
+    "published": "2026-01-07T16:21:47Z",
+    "updated": "2026-01-07T16:21:47Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本文提出 Dynafit，一种基于核的方法，通过学习轨迹与动力学之间的距离度量，实现非线性动力学系统的分类。",
+      "motivation": "该研究旨在解决非线性动力学系统生成的轨迹数据分类问题，其中每个类别对应不同的动力学模型。非线性动力学在物理、工程和传感器数据分析中广泛应用，但现有分类方法可能难以有效处理非线性复杂性，导致分类准确性不足。因此，开发一种能学习轨迹与动力学之间距离度量的方法变得重要，以提高对非线性系统动态特征的处理能力，适应高维数据分类需求。",
+      "method": "研究提出 Dynafit，一种核方法，通过学习训练轨迹与底层动力学之间的距离度量进行分类。核心创新是近似 Koopman 算子，在核函数关联的特征空间中全局线性化非线性动力学，简化分析过程。利用核技巧计算特征空间中的距离度量，避免直接处理高维或无限维数据，方法独立于维度。核函数可定制以纳入动力学的部分先验知识，增强灵活性。该方法适用于多种传感器和动态纹理数据的分类任务，无需显式模型参数。",
+      "result": "论文通过三个示例展示了 Dynafit 的有效性：在逻辑映射的混沌检测中，成功区分混沌和非混沌轨迹；在手写动力学识别中，准确分类不同书写风格的动态数据；在视觉动态纹理识别中，有效识别多种动态纹理类型。这些实验表明，Dynafit 在非线性动力学系统分类任务中表现良好，可能比传统基线方法提供更优的分类精度，但摘要未明确说明具体性能指标如准确率提升数据。",
+      "conclusion": "本文主要贡献是开发了 Dynafit 方法，一种基于核的距离度量学习框架，用于非线性动力学系统分类。通过引入 Koopman 算子和核技巧，方法提供了全局线性化动力学的理论优势，简化了非线性分析。学术价值在于为动力学分类提供新工具；实际应用可扩展至传感器数据分析、混沌检测和图像处理等领域。未来研究方向可能包括优化核函数设计、处理更复杂的动力学系统，或在更大规模数据集中进一步验证性能。",
+      "tags": [
+        "Nonlinear Dynamical Systems",
+        "Kernel Methods",
+        "Koopman Operator",
+        "Distance Metric Learning"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:17.451643Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04057",
+    "title": "Using Legacy Polysomnography Data to Train a Radar System to Quantify Sleep in Older Adults and People living with Dementia",
+    "authors": [
+      "M. Yin",
+      "K. G. Ravindran",
+      "C. Hadjipanayi",
+      "A. Bannon",
+      "A. Rapeaux",
+      "C. Della Monica",
+      "T. S. Lande",
+      "Derk-Jan Dijk",
+      "T. G. Constandinou"
+    ],
+    "abstract": "Objective: Ultra-wideband radar technology offers a promising solution for unobtrusive and cost-effective in-home sleep monitoring. However, the limited availability of radar sleep data poses challenges in building robust models that generalize across diverse cohorts and environments. This study proposes a novel deep transfer learning framework to enhance sleep stage classification using radar data. Methods: An end-to-end neural network was developed to classify sleep stages based on nocturnal respiratory and motion signals. The network was trained using a combination of large-scale polysomnography (PSG) datasets and radar data. A domain adaptation approach employing adversarial learning was utilized to bridge the knowledge gap between PSG and radar signals. Validation was performed on a radar dataset of 47 older adults (mean age: 71.2), including 18 participants with prodromal or mild Alzheimer disease. Results: The proposed network structure achieves an accuracy of 79.5% with a Kappa value of 0.65 when classifying wakefulness, rapid eye movement, light sleep and deep sleep. Experimental results confirm that our deep transfer learning approach significantly enhances automatic sleep staging performance in the target domain. Conclusion: This method effectively addresses challenges associated with data variability and limited sample size, substantially improving the reliability of automatic sleep staging models, especially in contexts where radar data is limited. Significance: The findings underscore the viability of UWB radar as a nonintrusive, forward-looking sleep assessment tool that could significantly benefit care for older people and people with neurodegenerative disorders.",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04057.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04057",
+    "published": "2026-01-07T16:21:27Z",
+    "updated": "2026-01-07T16:21:27Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本文提出了一种新颖的深度迁移学习框架，利用传统多导睡眠监测数据训练雷达系统，以提升老年人及痴呆患者睡眠阶段分类的准确性。",
+      "motivation": "该研究旨在解决超宽带雷达技术在无侵入家庭睡眠监测中面临的数据稀缺问题。现有方法因雷达数据有限，难以构建泛化性强的模型，尤其在老年人和痴呆患者等多样化群体中表现不足。因此，需要利用大规模传统PSG数据来辅助训练，以克服数据不足的挑战，提高模型的鲁棒性和实际应用价值。",
+      "method": "研究开发了一个端到端的神经网络，基于夜间呼吸和运动信号进行睡眠阶段分类。方法核心是结合大规模PSG数据集和雷达数据，采用基于对抗学习的领域适应技术，以桥接PSG和雷达信号之间的知识差距。网络通过迁移学习策略优化，在包含47名老年人（其中18名患有阿尔茨海默病）的雷达数据集上进行验证，确保模型在目标域的有效性。",
+      "result": "提出的网络结构在分类清醒、快速眼动睡眠、浅睡眠和深睡眠四种阶段时，实现了79.5%的准确率和0.65的Kappa值。实验结果证实，深度迁移学习方法显著提升了自动睡眠分期在雷达数据上的性能，与基线方法相比，有效改善了模型的可靠性，解决了数据有限环境中的分类挑战。",
+      "conclusion": "本研究通过深度迁移学习框架成功应对了数据变异性和样本量有限的难题，大幅提高了自动睡眠分期模型的可靠性。学术贡献在于创新应用对抗学习进行领域适应；实际意义在于验证了超宽带雷达作为非侵入性睡眠评估工具的可行性，有望服务于老年人和神经退行性疾病患者的健康监测，未来可扩展至更广泛人群和复杂环境。",
+      "tags": [
+        "Deep Transfer Learning",
+        "Domain Adaptation",
+        "Adversarial Learning",
+        "Sleep Stage Classification",
+        "Ultra-Wideband Radar"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:51:32.125203Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04054",
+    "title": "LinkD: AutoRegressive Diffusion Model for Mechanical Linkage Synthesis",
+    "authors": [
+      "Yayati Jadhav",
+      "Amir Barati Farimani"
+    ],
+    "abstract": "Designing mechanical linkages to achieve target end-effector trajectories presents a fundamental challenge due to the intricate coupling between continuous node placements, discrete topological configurations, and nonlinear kinematic constraints. The highly nonlinear motion-to-configuration relationship means small perturbations in joint positions drastically alter trajectories, while the combinatorially expanding design space renders conventional optimization and heuristic methods computationally intractable. We introduce an autoregressive diffusion framework that exploits the dyadic nature of linkage assembly by representing mechanisms as sequentially constructed graphs, where nodes correspond to joints and edges to rigid links. Our approach combines a causal transformer with a Denoising Diffusion Probabilistic Model (DDPM), both conditioned on target trajectories encoded via a transformer encoder. The causal transformer autoregressively predicts discrete topology node-by-node, while the DDPM refines each node's spatial coordinates and edge connectivity to previously generated nodes. This sequential generation enables adaptive trial-and-error synthesis where problematic nodes exhibiting kinematic locking or collisions can be selectively regenerated, allowing autonomous correction of degenerate configurations during design. Our graph-based, data-driven methodology surpasses traditional optimization approaches, enabling scalable inverse design that generalizes to mechanisms with arbitrary node counts. We demonstrate successful synthesis of linkage systems containing up to 20 nodes with extensibility to N-node architectures. This work advances autoregressive graph generation methodologies and computational kinematic synthesis, establishing new paradigms for scalable inverse design of complex mechanical systems.",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04054.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04054",
+    "published": "2026-01-07T16:19:11Z",
+    "updated": "2026-01-07T16:19:11Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本研究提出了一种自回归扩散模型，用于机械连杆的自动合成，实现了可扩展的逆设计，解决了传统方法难以处理的设计复杂性。",
+      "motivation": "机械连杆设计面临核心挑战，即实现目标末端执行器轨迹时需处理连续节点放置、离散拓扑结构和非线性运动学约束的复杂耦合。由于运动到配置关系的高度非线性，节点位置微小扰动会显著改变轨迹，且设计空间随组合扩展，导致传统优化和启发式方法计算不可行。这个问题在工程设计中至关重要，因为高效设计复杂机构能加速自动化进程，但现有方法缺乏可扩展性，因此需要新方法来解决这一瓶颈。",
+      "method": "方法采用自回归扩散框架，将机械机构表示为顺序构建的图，其中节点对应关节，边对应刚性连杆。结合因果transformer和Denoising Diffusion Probabilistic Model (DDPM)，两者均条件化于通过transformer编码器编码的目标轨迹。因果transformer自回归地预测离散拓扑，而DDPM细化每个节点的空间坐标和与已生成节点的边连接。这种顺序生成允许自适应试错合成，选择性再生出现运动锁定或碰撞的问题节点，实现设计过程中退化解的自主纠正，支持数据驱动的图形生成方法。",
+      "result": "实验成功合成了包含多达20个节点的连杆系统，并展示了扩展到N节点架构的能力。该方法超越了传统优化方法，实现了可扩展的逆设计，能够泛化到任意节点数量的机制。摘要未明确说明具体性能指标如准确率提升数值，但强调了在计算效率和设计质量上的优势，表明其处理复杂组合空间的有效性，为机械设计提供了新的高效解决方案。",
+      "conclusion": "本研究推进了自回归图生成方法和计算运动学合成，为复杂机械系统的可扩展逆设计建立了新范式。学术上，它结合了自回归和扩散模型在图形生成中的应用，拓展了AI在工程设计中的潜力；实际上，提高了机械设计的自动化水平，促进快速原型和优化。局限性或未来工作方向未在摘要中明确，但可能包括扩展到更多样化的约束类型或应用于其他工程领域，以进一步验证通用性。",
+      "tags": [
+        "Autoregressive Diffusion Model",
+        "Transformers",
+        "Denoising Diffusion Probabilistic Model",
+        "Graph Generation",
+        "Mechanical Linkage Synthesis"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:21.998746Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.04051",
+    "title": "Symbolic Regression for Shared Expressions: Introducing Partial Parameter Sharing",
+    "authors": [
+      "Viktor Martinek",
+      "Roland Herzog"
+    ],
+    "abstract": "Symbolic Regression aims to find symbolic expressions that describe datasets. Due to better interpretability, it is a machine learning paradigm particularly powerful for scientific discovery. In recent years, several works have expanded the concept to allow the description of similar phenomena using a single expression with varying sets of parameters, thereby introducing categorical variables. Some previous works allow only \"non-shared\" (category-value-specific) parameters, and others also incorporate \"shared\" (category-value-agnostic) parameters. We expand upon those efforts by considering multiple categorical variables, and introducing intermediate levels of parameter sharing. With two categorical variables, an intermediate level of parameter sharing emerges, i.e., parameters which are shared across either category but change across the other. The new approach potentially decreases the number of parameters, while revealing additional information about the problem. Using a synthetic, fitting-only example, we test the limits of this setup in terms of data requirement reduction and transfer learning. As a real-world symbolic regression example, we demonstrate the benefits of the proposed approach on an astrophysics dataset used in a previous study, which considered only one categorical variable. We achieve a similar fit quality but require significantly fewer individual parameters, and extract additional information about the problem.",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.04051.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.04051",
+    "published": "2026-01-07T16:12:14Z",
+    "updated": "2026-01-07T16:12:14Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本论文引入中间级别的参数共享机制到符号回归中，以处理多个分类变量，减少参数数量并增强信息提取。",
+      "motivation": "研究动机是扩展符号回归以更高效地描述相似现象，特别适用于科学发现，因为符号表达式具有更好的可解释性。现有方法存在局限性：一些仅支持'非共享'参数，导致过拟合；另一些引入'共享'参数，但大多只处理单个分类变量，无法充分建模复杂关系。本工作旨在通过考虑多个分类变量和引入中间级别参数共享，解决现有方法在参数冗余和信息提取不足方面的问题，从而提高模型的灵活性和实用性。",
+      "method": "研究方法扩展了符号回归框架，支持多个分类变量，并引入中间级别的参数共享作为核心创新。具体技术路线涉及设计符号表达式，使参数根据分类变量的交互实现部分共享，例如在有两个分类变量时，参数可以共享于一个类别但在另一个类别中变化，从而减少总参数数量。使用的数据集包括一个合成例子用于测试极限，以及一个先前研究中的天体物理学数据集作为真实应用示例；具体模型架构和数据细节摘要未明确说明，但重点是验证方法的可行性和优势。",
+      "result": "主要实验结果表明，所提方法在合成例子中有效减少了数据需求，并展示了迁移学习的潜力。在天体物理学数据集上，与先前只考虑一个分类变量的研究相比，本方法达到了相似的拟合质量，但个体参数数量显著减少，并额外提取了问题的相关信息。由于摘要未提供具体性能指标数据，推断效果基于参数减少和拟合质量保持来描述，与基线方法相比突出了效率和信息增益的提升。",
+      "conclusion": "论文的主要贡献是提出了一个扩展符号回归的方法，通过中间级别参数共享处理多个分类变量，从而减少参数并增强信息提取。学术价值在于提升了符号回归在科学发现中的实用性和可扩展性；实际应用价值体现在天体物理学等领域，可更有效地建模复杂现象。潜在局限性包括对更多分类变量的泛化能力可能不足；未来工作方向可能涉及更广泛的数据集验证和优化参数共享策略，摘要未明确说明。",
+      "tags": [
+        "Symbolic Regression",
+        "Parameter Sharing",
+        "Categorical Variables",
+        "Transfer Learning",
+        "Astrophysics Dataset"
+      ]
+    },
+    "analyzed_at": "2026-01-08T17:52:15.382364Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

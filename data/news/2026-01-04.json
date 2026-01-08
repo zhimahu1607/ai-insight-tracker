@@ -1,0 +1,604 @@
+[
+  {
+    "id": "22f7036f48df2933",
+    "title": "Societal Impacts",
+    "url": "https://www.anthropic.com/research/team/societal-impacts",
+    "source_name": "Anthropic",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:14.977301Z",
+    "summary": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Anthropic探讨了人工智能技术对社会的影响。",
+      "category": "行业",
+      "relevance_score": 0.8,
+      "sentiment": "neutral",
+      "keywords": [
+        "Anthropic",
+        "AI",
+        "社会影响"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:27.762574Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "f4e50fb6aa4cb490",
+    "title": "Interpretability",
+    "url": "https://www.anthropic.com/research/team/interpretability",
+    "source_name": "Anthropic",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:14.977266Z",
+    "summary": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "AI公司Anthropic在其官方频道发布了关于模型“可解释性”（Interpretability）的信息，这指向其在提高AI系统透明度与安全性方面的研究进展。",
+      "category": "AI",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "Anthropic",
+        "Interpretability",
+        "可解释性",
+        "AI Safety",
+        "Mechanistic Interpretability"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:33.162052Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "c7fcc37fb9bd8bf6",
+    "title": "Economic Research",
+    "url": "https://www.anthropic.com/research/team/economic-research",
+    "source_name": "Anthropic",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:14.977107Z",
+    "summary": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Anthropic 发布经济研究报告，探讨 AI 相关经济议题或影响。",
+      "category": "行业",
+      "relevance_score": 0.6,
+      "sentiment": "neutral",
+      "keywords": [
+        "Anthropic",
+        "Economic Research"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:12.569597Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "9711313329c962b2",
+    "title": "Alignment",
+    "url": "https://www.anthropic.com/research/team/alignment",
+    "source_name": "Anthropic",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:14.976872Z",
+    "summary": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Anthropic 公司发布了关于 AI 对齐（Alignment）的资讯，涉及确保 AI 系统目标与人类价值观一致，可能对 AI 安全领域产生影响。",
+      "category": "AI",
+      "relevance_score": 0.9,
+      "sentiment": "neutral",
+      "keywords": [
+        "Anthropic",
+        "Alignment",
+        "AI对齐",
+        "AI安全",
+        "大语言模型"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:25.743585Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "d3941dee22b6e8fd",
+    "title": "Announcing OpenAI Grove Cohort 2",
+    "url": "https://openai.com/index/openai-grove",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-02T10:00:00Z",
+    "summary": "Applications are now open for OpenAI Grove Cohort 2, a 5-week founder program designed for individuals at any stage, from pre-idea to product. Participants receive $50K in API credits, early access to AI tools, and hands-on mentorship from the OpenAI team.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 宣布开放 Grove Cohort 2 创始人计划的申请，这是一个为期五周的项目，为从无想法到产品阶段的个人提供支持。参与者将获得5万美元 API 积分、AI 工具早期访问权和 OpenAI 团队指导，旨在促进 AI 创业。",
+      "category": "产品",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Grove Cohort 2",
+        "创始人计划",
+        "API 积分",
+        "AI 工具"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:45.072433Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "c900c3048407aceb",
+    "title": "Mapping, modeling, and understanding nature with AI",
+    "url": "https://deepmind.google/blog/mapping-modeling-and-understanding-nature-with-ai/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180712Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 利用人工智能技术进行自然界的映射、建模和理解，旨在通过 AI 推动科学探索和环境应用。",
+      "category": "AI",
+      "relevance_score": 0.9,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "AI",
+        "mapping",
+        "modeling",
+        "nature"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:34.080904Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "39bf3b3ae97bfd6f",
+    "title": "Teaching AI to see the world more like we do",
+    "url": "https://deepmind.google/blog/teaching-ai-to-see-the-world-more-like-we-do/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180687Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind正在研究如何让AI以更接近人类的方式看世界，旨在提升其视觉感知和理解能力。",
+      "category": "AI",
+      "relevance_score": 0.9,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "人工智能",
+        "视觉感知",
+        "机器学习",
+        "认知"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:58.914510Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "fa899c9aac544025",
+    "title": "SIMA 2: An Agent that Plays, Reasons, and Learns With You in Virtual 3D Worlds",
+    "url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180663Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind发布了SIMA 2，这是一个能够在虚拟3D世界中与用户一起玩耍、推理和学习的通用AI智能体。它标志着AI在理解和执行复杂、开放式游戏指令方面取得了重要进展。",
+      "category": "AI",
+      "relevance_score": 0.9,
+      "sentiment": "positive",
+      "keywords": [
+        "SIMA 2",
+        "DeepMind",
+        "AI智能体",
+        "3D世界",
+        "游戏AI"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:15.044871Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "c25ebe3bba4c9bf4",
+    "title": "Introducing Google Antigravity",
+    "url": "https://antigravity.google/blog/introducing-google-antigravity?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180636Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 介绍了名为 Google Antigravity 的新产品或技术，具体细节未提供，但可能涉及人工智能领域，预示潜在的技术进展。",
+      "category": "产品",
+      "relevance_score": 0.9,
+      "sentiment": "neutral",
+      "keywords": [
+        "Google",
+        "Antigravity",
+        "DeepMind"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:45.761275Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "92b50cb950aff648",
+    "title": "We’re expanding our presence in Singapore to advance AI in the Asia-Pacific region",
+    "url": "https://deepmind.google/blog/were-expanding-our-presence-in-singapore-to-advance-ai-in-the-asia-pacific-region/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180611Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind宣布扩大在新加坡的业务布局，旨在推动亚太地区人工智能的发展。",
+      "category": "行业",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "Singapore",
+        "AI",
+        "Asia-Pacific",
+        "expansion"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:42.673746Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "6b3e8d95a2d01348",
+    "title": "Breeding healthier and stronger honeybees",
+    "url": "https://deepmind.google/blog/breeding-healthier-and-stronger-honeybees/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180583Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 正在应用人工智能技术培育更健康和更强壮的蜜蜂，旨在改善蜜蜂种群健康，对农业和生态系统产生积极影响。",
+      "category": "AI",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "蜜蜂",
+        "育种",
+        "人工智能",
+        "健康"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:15.434281Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "7e47fc65e0e4dac4",
+    "title": "Revealing a key protein behind heart disease",
+    "url": "https://deepmind.google/blog/revealing-a-key-protein-behind-heart-disease/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180559Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 揭示了导致心脏病的关键蛋白，这一发现可能推动心脏病机制研究和相关疗法开发。",
+      "category": "AI",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "心脏病",
+        "蛋白",
+        "AI",
+        "生物医学研究"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:36.166276Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "db588066dea63f2a",
+    "title": "AlphaFold: Five years of impact",
+    "url": "https://deepmind.google/blog/alphafold-five-years-of-impact/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180534Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind的AlphaFold蛋白质结构预测工具发布五周年，回顾其对生物学和医学研究的重大影响，推动了科学进步。",
+      "category": "AI",
+      "relevance_score": 0.9,
+      "sentiment": "positive",
+      "keywords": [
+        "AlphaFold",
+        "DeepMind",
+        "蛋白质结构预测",
+        "人工智能",
+        "生物学"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:12.658546Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "cbc2323e33550583",
+    "title": "Engineering more resilient crops for a warming climate",
+    "url": "https://deepmind.google/blog/engineering-more-resilient-crops-for-a-warming-climate/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180509Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 正在利用人工智能技术工程化更具气候韧性的作物，以应对全球变暖对农业的威胁，旨在提升粮食安全和可持续性。",
+      "category": "AI",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "作物韧性",
+        "气候变暖",
+        "人工智能",
+        "农业工程"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:34.051942Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "1427b65d35f3f286",
+    "title": "FACTS Benchmark Suite: Systematically evaluating the factuality of large language models",
+    "url": "https://deepmind.google/blog/facts-benchmark-suite-systematically-evaluating-the-factuality-of-large-language-models/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180483Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 发布了 FACTS Benchmark Suite，这是一个用于系统性评估大语言模型事实性的基准套件，旨在帮助改进模型的准确性和可靠性。",
+      "category": "LLM",
+      "relevance_score": 0.9,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "FACTS Benchmark Suite",
+        "large language models",
+        "factuality",
+        "evaluation"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:37.387691Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2495d6b6cceb566a",
+    "title": "Strengthening our partnership with the UK government to support prosperity and security in the AI era",
+    "url": "https://deepmind.google/blog/strengthening-our-partnership-with-the-uk-government-to-support-prosperity-and-security-in-the-ai-era/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180456Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 宣布加强与英国政府的伙伴关系，旨在支持人工智能时代的繁荣与安全。",
+      "category": "行业",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "UK government",
+        "AI",
+        "partnership",
+        "security"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:37.612220Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "e8fffd4259945a6c",
+    "title": "Deepening our partnership with the UK AI Security Institute",
+    "url": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180427Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind宣布深化与英国AI安全研究所的合作，以加强AI安全领域的协作与研究。",
+      "category": "行业",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "UK AI Security Institute",
+        "AI安全",
+        "合作",
+        "深化"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:42.170770Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "bb1f33084e524e40",
+    "title": "Google DeepMind supports U.S. Department of Energy on Genesis: a national mission to accelerate innovation and scientific discovery",
+    "url": "https://deepmind.google/blog/google-deepmind-supports-us-department-of-energy-on-genesis/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180390Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "Google DeepMind 宣布支持美国能源部的 Genesis 国家任务，旨在通过合作加速科学创新与发现进程。",
+      "category": "AI",
+      "relevance_score": 0.9,
+      "sentiment": "positive",
+      "keywords": [
+        "Google DeepMind",
+        "美国能源部",
+        "Genesis",
+        "国家任务",
+        "科学发现"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:13.652007Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "b2a0347cfdf023fd",
+    "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+    "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior/",
+    "source_name": "DeepMind",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-03T23:19:20.180248Z",
+    "summary": null,
+    "weight": 0.95,
+    "fetch_type": "crawler",
+    "company": "deepmind",
+    "light_analysis": {
+      "summary": "DeepMind 发布 Gemma Scope 2 工具，帮助 AI 安全社区更深入地理解和分析复杂语言模型的行为，以提升 AI 系统安全性。",
+      "category": "LLM",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "DeepMind",
+        "Gemma Scope 2",
+        "AI safety",
+        "language model",
+        "behavior"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:47.795310Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "50131281c9d171f1",
+    "title": "Migrate MLflow tracking servers to Amazon SageMaker AI with serverless MLflow",
+    "url": "https://aws.amazon.com/blogs/machine-learning/migrate-mlflow-tracking-servers-to-amazon-sagemaker-ai-with-serverless-mlflow/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2025-12-29T17:29:27Z",
+    "summary": "This post shows you how to migrate your self-managed MLflow tracking server to a MLflow App – a serverless tracking server on SageMaker AI that automatically scales resources based on demand while removing server patching and storage management tasks at no cost. Learn how to use the MLflow Export Import tool to transfer your experiments, runs, models, and other MLflow resources, including instructions to validate your migration's success.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "亚马逊 AWS 推出方案，指导用户将自管理的 MLflow 跟踪服务器迁移至 SageMaker AI 上的无服务器 MLflow App，实现自动扩展资源、免管理成本，并提供工具迁移实验数据。",
+      "category": "产品",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "MLflow",
+        "Amazon SageMaker AI",
+        "serverless",
+        "MLflow App",
+        "MLflow Export Import"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:04:36.869963Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "db1e54a3f72a5e04",
+    "title": "Build an AI-powered website assistant with Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-website-assistant-with-amazon-bedrock/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2025-12-29T16:42:50Z",
+    "summary": "This post demonstrates how to solve this challenge by building an AI-powered website assistant using Amazon Bedrock and Amazon Bedrock Knowledge Bases.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "亚马逊 AWS 演示了如何使用 Amazon Bedrock 和 Bedrock Knowledge Bases 构建 AI 驱动的网站助手，以解决实际应用挑战。",
+      "category": "产品",
+      "relevance_score": 0.8,
+      "sentiment": "positive",
+      "keywords": [
+        "Amazon Bedrock",
+        "Bedrock Knowledge Bases",
+        "AI",
+        "website assistant",
+        "AWS"
+      ]
+    },
+    "analyzed_at": "2026-01-04T09:05:21.986432Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
