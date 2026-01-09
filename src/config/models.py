@@ -48,7 +48,7 @@ class SearchConfig(BaseModel):
 class AnalysisConfig(BaseModel):
     """分析模块配置"""
 
-    max_concurrent: int = Field(default=10, description="浅度分析最大并发数")
+    max_concurrent: int = Field(default=20, description="浅度分析最大并发数")
     timeout: int = Field(default=60, description="单次分析超时（秒）")
     max_research_iterations: int = Field(
         default=5, description="深度分析：最大研究迭代次数"

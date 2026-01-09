@@ -7,6 +7,7 @@
 
 import asyncio
 import logging
+import time
 from abc import ABC, abstractmethod
 from datetime import datetime, timezone
 from typing import Generic, TypeVar, Optional
@@ -217,10 +218,13 @@ class BaseLightAnalyzer(ABC, Generic[TInput, TOutput, TAnalysis]):
 
         try:
             async with self._semaphore:
+                start_time = time.perf_counter()
                 analysis = await self._llm_client.chat_structured(
                     messages=self._build_prompt(item),
                     schema=self._get_analysis_schema(),
                 )
+                elapsed = time.perf_counter() - start_time
+                logger.info(f"[LLM] {item_id} 耗时: {elapsed:.2f}s")
 
             self._set_analysis_result(output, analysis)
             output.analysis_status = "success"
