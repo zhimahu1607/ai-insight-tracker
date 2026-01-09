@@ -1,0 +1,442 @@
+[
+  {
+    "id": "2601.05242",
+    "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+    "authors": [
+      "Shih-Yang Liu",
+      "Xin Dong",
+      "Ximing Lu",
+      "Shizhe Diao",
+      "Peter Belcak",
+      "Mingjie Liu",
+      "Min-Hung Chen",
+      "Hongxu Yin",
+      "Yu-Chiang Frank Wang",
+      "Kwang-Ting Cheng",
+      "Yejin Choi",
+      "Jan Kautz",
+      "Pavlo Molchanov"
+    ],
+    "abstract": "As language models become increasingly capable, users expect them to provide not only accurate responses but also behaviors aligned with diverse human preferences across a variety of scenarios. To achieve this, Reinforcement learning (RL) pipelines have begun incorporating multiple rewards, each capturing a distinct preference, to guide models toward these desired behaviors. However, recent work has defaulted to apply Group Relative Policy Optimization (GRPO) under multi-reward setting without examining its suitability. In this paper, we demonstrate that directly applying GRPO to normalize distinct rollout reward combinations causes them to collapse into identical advantage values, reducing the resolution of the training signal and resulting in suboptimal convergence and, in some cases, early training failure. We then introduce Group reward-Decoupled Normalization Policy Optimization (GDPO), a new policy optimization method to resolve these issues by decoupling the normalization of individual rewards, more faithfully preserving their relative differences and enabling more accurate multi-reward optimization, along with substantially improved training stability. We compare GDPO with GRPO across three tasks: tool calling, math reasoning, and coding reasoning, evaluating both correctness metrics (accuracy, bug ratio) and constraint adherence metrics (format, length). Across all settings, GDPO consistently outperforms GRPO, demonstrating its effectiveness and generalizability for multi-reward reinforcement learning optimization.",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "pdf_url": "https://arxiv.org/pdf/2601.05242.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05242",
+    "published": "2026-01-08T18:59:24Z",
+    "updated": "2026-01-08T18:59:24Z",
+    "comment": "NVIDIA-Tech Report",
+    "light_analysis": {
+      "overview": "本研究提出GDPO方法，通过解耦多奖励归一化，改进多奖励强化学习的优化效果和训练稳定性。",
+      "motivation": "随着语言模型能力增强，用户期望其响应不仅准确还需与多样人类偏好对齐。强化学习开始采用多个奖励来引导模型，但现有方法如GRPO在多奖励设置下直接应用时，会导致不同奖励组合归一化为相同的优势值，降低训练信号分辨率，影响优化效果甚至导致训练失败。因此，需要一种新方法来更准确地处理多奖励优化，以提升模型对齐效果。",
+      "method": "论文提出Group reward-Decoupled Normalization Policy Optimization (GDPO)，这是一种新的策略优化方法。核心创新在于解耦单个奖励的归一化过程，避免奖励组合在归一化时合并为相同优势值，从而更忠实保留奖励间的相对差异。这有助于实现更准确的多奖励优化，并显著提高训练稳定性。实验在工具调用、数学推理和编码推理任务中进行，但摘要未详细说明具体模型架构或数据集。",
+      "result": "在工具调用、数学推理和编码推理三个任务中，GDPO与基线GRPO进行比较，评估了正确性指标（如准确率和bug比例）和约束遵循指标（如格式和长度）。结果显示，GDPO在所有实验设置中均一致优于GRPO，表现出更高的性能和更好的泛化能力。然而，摘要未提供具体的性能提升数据，如准确率的具体百分比变化。",
+      "conclusion": "GDPO通过解耦奖励归一化，有效解决了多奖励强化学习中的信号分辨率问题，提升了优化效果和训练稳定性。这为对齐语言模型与多样人类偏好提供了更可靠的方法，具有重要的学术价值，推动了多奖励RL技术的发展，并具有实际应用潜力。未来工作可探索其在更多任务中的应用或处理更复杂的奖励结构。",
+      "tags": [
+        "Reinforcement Learning",
+        "Multi-reward Optimization",
+        "Policy Optimization",
+        "Normalization",
+        "GDPO"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:56.432336Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05241",
+    "title": "RoboVIP: Multi-View Video Generation with Visual Identity Prompting Augments Robot Manipulation",
+    "authors": [
+      "Boyang Wang",
+      "Haoran Zhang",
+      "Shujie Zhang",
+      "Jinkun Hao",
+      "Mingda Jia",
+      "Qi Lv",
+      "Yucheng Mao",
+      "Zhaoyang Lyu",
+      "Jia Zeng",
+      "Xudong Xu",
+      "Jiangmiao Pang"
+    ],
+    "abstract": "The diversity, quantity, and quality of manipulation data are critical for training effective robot policies. However, due to hardware and physical setup constraints, collecting large-scale real-world manipulation data remains difficult to scale across diverse environments. Recent work uses text-prompt conditioned image diffusion models to augment manipulation data by altering the backgrounds and tabletop objects in the visual observations. However, these approaches often overlook the practical need for multi-view and temporally coherent observations required by state-of-the-art policy models. Further, text prompts alone cannot reliably specify the scene setup. To provide the diffusion model with explicit visual guidance, we introduce visual identity prompting, which supplies exemplar images as conditioning inputs to guide the generation of the desired scene setup. To this end, we also build a scalable pipeline to curate a visual identity pool from large robotics datasets. Using our augmented manipulation data to train downstream vision-language-action and visuomotor policy models yields consistent performance gains in both simulation and real-robot settings.",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05241.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05241",
+    "published": "2026-01-08T18:59:22Z",
+    "updated": "2026-01-08T18:59:22Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本文提出视觉身份提示方法，通过示例图像引导扩散模型生成多视角视频数据，增强机器人操作训练，以解决现有文本提示方法的不足。",
+      "motivation": "机器人操作数据的多样性、数量和质量对训练有效策略至关重要，但由于硬件和物理设置限制，收集大规模真实世界数据困难。现有方法使用文本提示的图像扩散模型增强数据，但忽视了多视角和时间一致性的需求，且文本提示无法可靠指定场景设置，这限制了策略模型的训练效果，因此需要更有效的视觉引导方法来改进数据增强。",
+      "method": "论文引入视觉身份提示，以示例图像作为条件输入来引导扩散模型生成所需场景设置的多视角和时间一致视频。同时，建立了一个可扩展管道，从大型机器人数据集中策划视觉身份池，为数据增强提供丰富视觉参考。使用这些增强数据训练下游的视觉-语言-动作和视觉-运动策略模型，以提升性能和泛化能力。",
+      "result": "通过在模拟和真实机器人设置中使用增强的操纵数据训练策略模型，论文报告了一致的性能增益。虽然摘要未明确说明具体数据指标，但表明该方法在多个环境下均优于基于文本提示的基线方法，验证了视觉身份提示在生成高质量数据方面的有效性。",
+      "conclusion": "论文的主要贡献是提出视觉身份提示方法，有效生成机器人操作数据，解决了现有方法在场景指定和多视角需求方面的局限性。这增强了策略模型的训练效果，具有学术价值如推动机器人学习研究，以及实际应用如提升自主操作能力。未来工作可能包括优化视觉提示机制或扩展到更复杂的真实世界场景。",
+      "tags": [
+        "Visual Identity Prompting",
+        "Diffusion Models",
+        "Multi-View Video Generation",
+        "Robot Manipulation",
+        "Policy Training"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:41.743639Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05240",
+    "title": "Robust Reasoning as a Symmetry-Protected Topological Phase",
+    "authors": [
+      "Ilmo Sung"
+    ],
+    "abstract": "Large language models suffer from \"hallucinations\"-logical inconsistencies induced by semantic noise. We propose that current architectures operate in a \"Metric Phase,\" where causal order is vulnerable to spontaneous symmetry breaking. Here, we identify robust inference as an effective Symmetry-Protected Topological phase, where logical operations are formally isomorphic to non-Abelian anyon braiding, replacing fragile geometric interpolation with robust topological invariants. Empirically, we demonstrate a sharp topological phase transition: while Transformers and RNNs exhibit gapless decay, our Holonomic Network reveals a macroscopic \"mass gap,\" maintaining invariant fidelity below a critical noise threshold. Furthermore, in a variable-binding task on $S_{10}$ ($3.6 \\times 10^6$ states) representing symbolic manipulation, we demonstrate holonomic generalization: the topological model maintains perfect fidelity extrapolating $100\\times$ beyond training ($L=50 \\to 5000$), consistent with a theoretically indefinite causal horizon, whereas Transformers lose logical coherence. Ablation studies indicate this protection emerges strictly from non-Abelian gauge symmetry. This provides strong evidence for a new universality class for logical reasoning, linking causal stability to the topology of the semantic manifold.",
+    "categories": [
+      "cs.LG",
+      "cond-mat.dis-nn",
+      "cs.AI",
+      "hep-th"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.05240.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05240",
+    "published": "2026-01-08T18:58:34Z",
+    "updated": "2026-01-08T18:58:34Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "论文提出将稳健推理建模为对称性保护拓扑相，并通过全纯网络提升大型语言模型的逻辑一致性，以解决幻觉问题。",
+      "motivation": "大型语言模型如Transformers存在幻觉问题，即在语义噪声下产生逻辑不一致，这源于现有架构处于‘度量相’，因果顺序易受对称性自发破缺影响，导致推理脆弱。这一问题重要，因为它影响AI系统的可靠性和准确性，而现有方法在噪声下表现不佳，亟需一种新机制来确保逻辑稳定性。摘要中强调当前方法在因果结构上存在缺陷，需要通过拓扑理论提供更强的鲁棒性。",
+      "method": "研究方法基于对称性保护拓扑相理论，将稳健推理识别为有效拓扑相，其中逻辑操作与非阿贝尔任意子编织同构，替代了脆弱的几何插值。核心创新是提出全纯网络，利用拓扑不变量来维护因果结构；具体实验中，在变量绑定任务上使用$S_{10}$数据集（3.6×10^6状态），通过非阿贝尔规范对称性实现逻辑操作，但摘要未明确说明模型架构的具体细节，仅提及它是一种新的网络设计。",
+      "result": "实验结果显示，全纯网络经历尖锐的拓扑相变，在临界噪声阈值下保持宏观‘质量隙’和不变保真度，而Transformers和RNNs则显示无隙衰减。在变量绑定任务中，拓扑模型在训练范围外100倍（L从50扩展到5000）时仍保持完美保真度，体现了无限因果视界，而Transformers失去逻辑连贯性。消融研究证实保护机制严格源自非阿贝尔规范对称性，提供了性能改进的具体证据，如保真度维持和无衰减泛化。",
+      "conclusion": "论文的主要贡献是为逻辑推理提出了一个新的普适类，将因果稳定性链接到语义流形的拓扑，具有重要学术价值，为AI推理提供了理论框架。实际应用中，这可能提升大型语言模型的鲁棒性和泛化能力。潜在局限性可能包括方法对特定任务或噪声的依赖，未来工作可扩展到更广泛的应用或探索其他拓扑结构的适应性。",
+      "tags": [
+        "Symmetry-Protected Topological Phase",
+        "Non-Abelian Gauge Symmetry",
+        "Holonomic Network",
+        "Topological Invariants",
+        "Logical Reasoning"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:48.488221Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05251",
+    "title": "Mesh4D: 4D Mesh Reconstruction and Tracking from Monocular Video",
+    "authors": [
+      "Zeren Jiang",
+      "Chuanxia Zheng",
+      "Iro Laina",
+      "Diane Larlus",
+      "Andrea Vedaldi"
+    ],
+    "abstract": "We propose Mesh4D, a feed-forward model for monocular 4D mesh reconstruction. Given a monocular video of a dynamic object, our model reconstructs the object's complete 3D shape and motion, represented as a deformation field. Our key contribution is a compact latent space that encodes the entire animation sequence in a single pass. This latent space is learned by an autoencoder that, during training, is guided by the skeletal structure of the training objects, providing strong priors on plausible deformations. Crucially, skeletal information is not required at inference time. The encoder employs spatio-temporal attention, yielding a more stable representation of the object's overall deformation. Building on this representation, we train a latent diffusion model that, conditioned on the input video and the mesh reconstructed from the first frame, predicts the full animation in one shot. We evaluate Mesh4D on reconstruction and novel view synthesis benchmarks, outperforming prior methods in recovering accurate 3D shape and deformation.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05251.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05251",
+    "published": "2026-01-08T18:59:56Z",
+    "updated": "2026-01-08T18:59:56Z",
+    "comment": "15 pages, 8 figures, project page: https://mesh-4d.github.io/",
+    "light_analysis": {
+      "overview": "Mesh4D 提出一种前馈模型，通过紧凑潜在空间和潜在扩散模型，实现单目视频的动态对象 4D 网格重建。",
+      "motivation": "本文的研究动机是解决从单目视频重建动态对象完整 3D 形状和运动（即 4D 网格重建）的问题。现有方法可能在需要额外骨骼信息或重建稳定性方面存在不足，导致效率低下或准确性有限。Mesh4D 旨在通过紧凑潜在空间编码整个动画序列，训练时利用骨骼结构提供变形先验，但推理时无需骨骼信息，从而克服这些限制，提升重建的鲁棒性和实用性。",
+      "method": "Mesh4D 是一种前馈模型，基于自编码器学习一个紧凑潜在空间来编码动画序列。关键创新包括：在训练时通过骨骼结构引导自编码器，提供合理变形的先验；编码器采用时空注意力机制，稳定捕捉对象的整体变形表示。在此基础上，训练一个潜在扩散模型，该模型以输入视频和第一帧重建的网格为条件，一次性预测完整动画。模型架构结合了自编码器、注意力机制和扩散模型技术，实现高效的单目 4D 重建。",
+      "result": "Mesh4D 在重建和新视图合成基准测试中进行了评估，结果优于先前方法，能够更准确地恢复 3D 形状和变形。摘要未明确说明具体的性能指标如准确率提升或效率改进数据，但强调了在基准测试中的优越表现，表明模型在捕捉动态对象的几何细节和运动方面有显著改进，与基线方法相比展现出更好的效果。",
+      "conclusion": "论文的主要贡献是提出 Mesh4D 模型，通过紧凑潜在空间和潜在扩散模型实现高效的 4D 网格重建。学术上，该方法推动了单目视觉中动态重建技术的发展；应用上，可服务于计算机视觉、虚拟现实和动画制作等领域。潜在局限性可能包括对训练数据骨骼结构的依赖，未来工作可探索扩展到更复杂场景或无监督学习，以提高模型的泛化能力和实时性能。",
+      "tags": [
+        "4D Mesh Reconstruction",
+        "Monocular Video",
+        "Autoencoder",
+        "Spatio-Temporal Attention",
+        "Latent Diffusion Model"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:45.885535Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05249",
+    "title": "RL-AWB: Deep Reinforcement Learning for Auto White Balance Correction in Low-Light Night-time Scenes",
+    "authors": [
+      "Yuan-Kang Lee",
+      "Kuan-Lin Chen",
+      "Chia-Che Chang",
+      "Yu-Lun Liu"
+    ],
+    "abstract": "Nighttime color constancy remains a challenging problem in computational photography due to low-light noise and complex illumination conditions. We present RL-AWB, a novel framework combining statistical methods with deep reinforcement learning for nighttime white balance. Our method begins with a statistical algorithm tailored for nighttime scenes, integrating salient gray pixel detection with novel illumination estimation. Building on this foundation, we develop the first deep reinforcement learning approach for color constancy that leverages the statistical algorithm as its core, mimicking professional AWB tuning experts by dynamically optimizing parameters for each image. To facilitate cross-sensor evaluation, we introduce the first multi-sensor nighttime dataset. Experiment results demonstrate that our method achieves superior generalization capability across low-light and well-illuminated images. Project page: https://ntuneillee.github.io/research/rl-awb/",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05249.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05249",
+    "published": "2026-01-08T18:59:55Z",
+    "updated": "2026-01-08T18:59:55Z",
+    "comment": "Project page: https://ntuneillee.github.io/research/rl-awb/",
+    "light_analysis": {
+      "overview": "本研究提出RL-AWB框架，首次结合统计方法和深度强化学习进行夜间白平衡校正，并引入多传感器夜间数据集。",
+      "motivation": "夜间颜色恒定性在计算摄影中因低光噪声和复杂光照条件而成为挑战，导致图像白平衡难以准确校正，影响图像质量。现有方法可能无法有效处理夜间动态光照和噪声干扰，限制了实际应用。本研究的动机是开发一个针对夜间场景的稳健白平衡框架，以解决这一实际问题并提升计算摄影性能。",
+      "method": "方法基于一个定制化的统计算法，通过显著灰色像素检测和新颖光照估计来处理夜间场景。在此基础上，构建了首个深度强化学习模型，将统计算法作为核心组件，模仿专业AWB调谐专家动态优化每个图像的白平衡参数，以实现自适应校正。该方法整合了统计分析的鲁棒性和强化学习的决策能力。",
+      "result": "实验结果显示，RL-AWB在低光夜间图像和良好光照图像上均表现出优越的泛化能力，能够跨不同传感器环境有效校正白平衡。虽然摘要未提供具体数据指标，但方法相比传统技术展现出更强的适应性和准确性，证明了其在实际场景中的实用性。",
+      "conclusion": "本研究的主要贡献是提出了RL-AWB框架和首个多传感器夜间数据集，推动了颜色恒定性研究的发展，为夜间摄影应用提供了新工具。学术价值在于首次将深度强化学习应用于该领域，实际价值在于改善图像处理效果。未来工作可能包括优化模型效率或扩展到更多光照条件。",
+      "tags": [
+        "Deep Reinforcement Learning",
+        "Auto White Balance",
+        "Color Constancy",
+        "Statistical Methods",
+        "Multi-Sensor Dataset"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:16:54.564303Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05250",
+    "title": "QNeRF: Neural Radiance Fields on a Simulated Gate-Based Quantum Computer",
+    "authors": [
+      "Daniele Lizzio Bosco",
+      "Shuteng Wang",
+      "Giuseppe Serra",
+      "Vladislav Golyanik"
+    ],
+    "abstract": "Recently, Quantum Visual Fields (QVFs) have shown promising improvements in model compactness and convergence speed for learning the provided 2D or 3D signals. Meanwhile, novel-view synthesis has seen major advances with Neural Radiance Fields (NeRFs), where models learn a compact representation from 2D images to render 3D scenes, albeit at the cost of larger models and intensive training. In this work, we extend the approach of QVFs by introducing QNeRF, the first hybrid quantum-classical model designed for novel-view synthesis from 2D images. QNeRF leverages parameterised quantum circuits to encode spatial and view-dependent information via quantum superposition and entanglement, resulting in more compact models compared to the classical counterpart. We present two architectural variants. Full QNeRF maximally exploits all quantum amplitudes to enhance representational capabilities. In contrast, Dual-Branch QNeRF introduces a task-informed inductive bias by branching spatial and view-dependent quantum state preparations, drastically reducing the complexity of this operation and ensuring scalability and potential hardware compatibility. Our experiments demonstrate that -- when trained on images of moderate resolution -- QNeRF matches or outperforms classical NeRF baselines while using less than half the number of parameters. These results suggest that quantum machine learning can serve as a competitive alternative for continuous signal representation in mid-level tasks in computer vision, such as 3D representation learning from 2D observations.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05250.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05250",
+    "published": "2026-01-08T18:59:55Z",
+    "updated": "2026-01-08T18:59:55Z",
+    "comment": "30 pages, 15 figures, 11 tables; project page: https://4dqv.mpi-inf.mpg.de/QNeRF/",
+    "light_analysis": {
+      "overview": "本文首次提出混合量子-经典模型QNeRF，用于从2D图像进行新视图合成，通过量子技术实现模型紧凑化。",
+      "motivation": "研究背景：新视图合成领域因神经辐射场（NeRF）模型而取得进展，但这些模型通常参数庞大、训练密集，导致效率低下。量子视觉场（QVFs）在模型紧凑性和收敛速度上显示优势，但尚未应用于3D表示学习。本研究的动机是解决经典NeRF的资源消耗问题，探索量子机器学习作为高效替代方案，以推动计算机视觉中级别任务的优化。",
+      "method": "研究方法：QNeRF基于参数化量子电路，利用量子叠加和纠缠编码空间和视图依赖信息，实现模型紧凑化。核心创新包括两个架构变体：Full QNeRF通过最大化量子振幅增强表示能力；Dual-Branch QNeRF引入任务导向归纳偏差，分支处理空间和视图信息，降低操作复杂性并提升可扩展性。该方法在模拟门基量子计算机上实现，结合经典组件处理数据输入和输出。",
+      "result": "主要实验结果：在中等分辨率图像上训练时，QNeRF匹配或优于经典NeRF基线，具体表现为模型参数使用少于一半。实验对比显示，QNeRF在保持或提升性能的同时，显著减少资源需求。这证明了量子方法在连续信号表示任务中的竞争力，为量子机器学习在计算机视觉中的应用提供了实证支持。",
+      "conclusion": "结论和意义：QNeRF成功验证了量子机器学习在计算机视觉中级别任务（如3D表示学习）的潜力，为高效模型设计提供了新路径。贡献在于首次实现混合量子-经典模型用于新视图合成，推动量子技术在视觉领域的实际应用。未来工作可探索更高分辨率数据或硬件兼容性，但局限性可能包括对量子模拟环境的依赖。",
+      "tags": [
+        "Neural Radiance Fields (NeRF)",
+        "Quantum Machine Learning",
+        "Hybrid Quantum-Classical Model",
+        "Parameterised Quantum Circuits",
+        "Quantum Entanglement"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:39.981220Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05246",
+    "title": "Pixel-Perfect Visual Geometry Estimation",
+    "authors": [
+      "Gangwei Xu",
+      "Haotong Lin",
+      "Hongcheng Luo",
+      "Haiyang Sun",
+      "Bing Wang",
+      "Guang Chen",
+      "Sida Peng",
+      "Hangjun Ye",
+      "Xin Yang"
+    ],
+    "abstract": "Recovering clean and accurate geometry from images is essential for robotics and augmented reality. However, existing geometry foundation models still suffer severely from flying pixels and the loss of fine details. In this paper, we present pixel-perfect visual geometry models that can predict high-quality, flying-pixel-free point clouds by leveraging generative modeling in the pixel space. We first introduce Pixel-Perfect Depth (PPD), a monocular depth foundation model built upon pixel-space diffusion transformers (DiT). To address the high computational complexity associated with pixel-space diffusion, we propose two key designs: 1) Semantics-Prompted DiT, which incorporates semantic representations from vision foundation models to prompt the diffusion process, preserving global semantics while enhancing fine-grained visual details; and 2) Cascade DiT architecture that progressively increases the number of image tokens, improving both efficiency and accuracy. To further extend PPD to video (PPVD), we introduce a new Semantics-Consistent DiT, which extracts temporally consistent semantics from a multi-view geometry foundation model. We then perform reference-guided token propagation within the DiT to maintain temporal coherence with minimal computational and memory overhead. Our models achieve the best performance among all generative monocular and video depth estimation models and produce significantly cleaner point clouds than all other models.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05246.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05246",
+    "published": "2026-01-08T18:59:49Z",
+    "updated": "2026-01-08T18:59:49Z",
+    "comment": "Code: https://github.com/gangweix/pixel-perfect-depth",
+    "light_analysis": {
+      "overview": "本论文提出了基于像素空间扩散变换器的像素级完美深度模型，通过语义提示和级联架构提升几何估计精度和效率。",
+      "motivation": "本研究旨在解决现有几何基础模型在单目深度估计中存在的飞行像素和细节丢失问题，这些问题对机器人导航、物体识别和增强现实等应用造成了严重影响。由于现有方法在生成点云时无法保持精细结构，导致视觉噪声和精度下降，因此开发能够生成高质量、无飞行像素点云的新方法成为迫切需求，以克服现有技术的局限性，提升几何重建的实用性和可靠性。",
+      "method": "论文提出像素级完美深度模型（PPD），基于像素空间扩散变换器（DiT）构建单目深度估计基础模型。为降低高计算复杂度，引入两个关键设计：Semantics-Prompted DiT，利用视觉基础模型的语义表示引导扩散过程，在保持全局语义的同时增强细粒度视觉细节；以及Cascade DiT架构，逐步增加图像令牌数量，以提高效率和准确性。扩展到视频深度估计（PPVD）时，使用Semantics-Consistent DiT从多视图几何基础模型提取时间一致的语义，并通过参考引导令牌传播在DiT内保持时间一致性，以减少计算和内存开销。",
+      "result": "实验结果显示，论文提出的PPD和PPVD模型在所有生成式单目和视频深度估计模型中取得了最佳性能。与基线方法相比，这些模型生成的点云显著更干净，有效减少了飞行像素并保留了精细细节，在视觉质量和一致性上表现出色。然而，摘要未明确说明具体的数值指标如深度误差或计算效率的改进幅度，但强调了模型在点云质量上的优越性。",
+      "conclusion": "本研究的主要贡献是开发了基于像素空间扩散变换器的像素级完美深度模型，通过语义提示和级联架构有效解决了几何估计中的飞行像素和细节丢失问题，提升了深度估计的精度并优化了计算效率。该研究在生成式视觉几何估计领域具有重要学术价值，创新地结合了扩散建模与语义引导技术，为机器人和增强现实等应用提供了高质量的几何重建工具。未来工作可能包括扩展到更多复杂场景或进一步探索计算优化的潜力。",
+      "tags": [
+        "Diffusion Transformers",
+        "Semantic Prompting",
+        "Cascade Architecture",
+        "Video Depth Estimation",
+        "Generative Modeling"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:16:00.221304Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05244",
+    "title": "GREx: Generalized Referring Expression Segmentation, Comprehension, and Generation",
+    "authors": [
+      "Henghui Ding",
+      "Chang Liu",
+      "Shuting He",
+      "Xudong Jiang",
+      "Yu-Gang Jiang"
+    ],
+    "abstract": "Referring Expression Segmentation (RES) and Comprehension (REC) respectively segment and detect the object described by an expression, while Referring Expression Generation (REG) generates an expression for the selected object. Existing datasets and methods commonly support single-target expressions only, i.e., one expression refers to one object, not considering multi-target and no-target expressions. This greatly limits the real applications of REx (RES/REC/REG). This paper introduces three new benchmarks called Generalized Referring Expression Segmentation (GRES), Comprehension (GREC), and Generation (GREG), collectively denoted as GREx, which extend the classic REx to allow expressions to identify an arbitrary number of objects. We construct the first large-scale GREx dataset gRefCOCO that contains multi-target, no-target, and single-target expressions and their corresponding images with labeled targets. GREx and gRefCOCO are designed to be backward-compatible with REx, facilitating extensive experiments to study the performance gap of the existing REx methods on GREx tasks. One of the challenges of GRES/GREC is complex relationship modeling, for which we propose a baseline ReLA that adaptively divides the image into regions with sub-instance clues and explicitly models the region-region and region-language dependencies. The proposed ReLA achieves the state-of-the-art results on the both GRES and GREC tasks. The proposed gRefCOCO dataset and method are available at https://henghuiding.github.io/GREx.",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05244.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05244",
+    "published": "2026-01-08T18:59:30Z",
+    "updated": "2026-01-08T18:59:30Z",
+    "comment": "IJCV, Project Page: https://henghuiding.com/GREx/",
+    "light_analysis": {
+      "overview": "论文提出了GREx基准和gRefCOCO数据集，扩展了引用表达式任务以处理多目标和无目标表达式，并提出了ReLA方法在GRES和GREC任务上实现了最先进性能。",
+      "motivation": "现有引用表达式分割(RES)、理解(REC)和生成(REG)任务通常只支持单目标表达式，即一个表达式仅指代一个对象，这在实际应用中存在局限性，因为现实世界场景中表达式可能指向多个对象或无对象。现有方法未考虑多目标和无目标表达式，导致模型泛化能力不足，限制了在复杂环境中的应用。因此，扩展任务范围以更准确地模拟真实世界需求，对提升视觉语言模型的实用性和鲁棒性具有重要意义。",
+      "method": "本文引入了广义引用表达式分割(GRES)、理解(GREC)和生成(GREG)基准，统称为GREx，允许表达式识别任意数量的对象。构建了首个大规模数据集gRefCOCO，包含多目标、无目标和单目标表达式及对应图像的标注目标。基准设计向后兼容现有REx任务，便于评估现有方法。针对GRES/GREC中的复杂关系建模挑战，提出了基线方法ReLA，自适应地将图像划分为带有子实例线索的区域，并显式建模区域间和区域与语言间的依赖关系。",
+      "result": "提出的ReLA方法在广义引用表达式分割(GRES)和理解(GREC)任务上实现了最先进的结果。通过gRefCOCO数据集进行广泛实验，ReLA在复杂关系建模方面表现优异，与现有REx方法相比有显著性能提升。具体性能指标摘要未明确说明，但作者报告了在GRES和GREC任务上的最优表现，验证了方法的有效性，并推动了该领域的基准评估。",
+      "conclusion": "本研究的主要贡献是建立了GREx基准和gRefCOCO数据集，扩展了引用表达式任务的适用性，使其更贴近真实世界应用。学术上，提供了更全面的评估框架以推动模型发展；实践中，提升了模型处理复杂表达式的能力。未来工作可进一步优化关系建模技术，或探索将方法应用于其他视觉语言任务，以增强泛化性能和实际部署潜力。",
+      "tags": [
+        "Generalized Referring Expression",
+        "Multi-target Expressions",
+        "Region-Language Dependency Modeling",
+        "Dataset Construction",
+        "Relationship Modeling"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:16:06.841786Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05239",
+    "title": "Plenoptic Video Generation",
+    "authors": [
+      "Xiao Fu",
+      "Shitao Tang",
+      "Min Shi",
+      "Xian Liu",
+      "Jinwei Gu",
+      "Ming-Yu Liu",
+      "Dahua Lin",
+      "Chen-Hsuan Lin"
+    ],
+    "abstract": "Camera-controlled generative video re-rendering methods, such as ReCamMaster, have achieved remarkable progress. However, despite their success in single-view setting, these works often struggle to maintain consistency across multi-view scenarios. Ensuring spatio-temporal coherence in hallucinated regions remains challenging due to the inherent stochasticity of generative models. To address it, we introduce PlenopticDreamer, a framework that synchronizes generative hallucinations to maintain spatio-temporal memory. The core idea is to train a multi-in-single-out video-conditioned model in an autoregressive manner, aided by a camera-guided video retrieval strategy that adaptively selects salient videos from previous generations as conditional inputs. In addition, Our training incorporates progressive context-scaling to improve convergence, self-conditioning to enhance robustness against long-range visual degradation caused by error accumulation, and a long-video conditioning mechanism to support extended video generation. Extensive experiments on the Basic and Agibot benchmarks demonstrate that PlenopticDreamer achieves state-of-the-art video re-rendering, delivering superior view synchronization, high-fidelity visuals, accurate camera control, and diverse view transformations (e.g., third-person to third-person, and head-view to gripper-view in robotic manipulation). Project page: https://research.nvidia.com/labs/dir/plenopticdreamer/",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05239.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05239",
+    "published": "2026-01-08T18:58:32Z",
+    "updated": "2026-01-08T18:58:32Z",
+    "comment": "Project Page: https://research.nvidia.com/labs/dir/plenopticdreamer/",
+    "light_analysis": {
+      "overview": "PlenopticDreamer通过同步生成幻觉维持时空记忆，实现了多视图视频生成中的一致性和高质量重渲染。",
+      "motivation": "该研究旨在解决相机控制生成视频重渲染方法在多视图场景中保持时空一致性的挑战。现有方法（如ReCamMaster）在单视图设置中表现出色，但在多视图下难以确保幻觉区域的一致性，这影响了视频质量和应用效果。由于生成模型的固有随机性，确保时空连贯性成为一个关键问题，对高质量视频生成和实际应用如机器人视觉具有重要意义。",
+      "method": "PlenopticDreamer框架训练一个多输入单输出的视频条件模型，采用自回归方式进行。核心技术包括相机引导的视频检索策略，从先前生成中选择显著视频作为条件输入。训练过程结合了渐进上下文缩放以改善收敛，自我条件增强对错误积累导致的长期视觉退化鲁棒性，以及长视频条件机制支持扩展视频生成。实验基于Basic和Agibot数据集进行。",
+      "result": "在Basic和Agibot基准测试中，PlenopticDreamer实现了最先进的视频重渲染性能。实验结果显示，它在视图同步方面优于基线方法，提供高保真度的视觉效果，精确的相机控制能力，并支持多样化的视图转换，例如第三人称到第三人称，以及头部视角到机器人抓手视角的转换。这些验证了框架在多视图一致性和生成质量上的有效性。",
+      "conclusion": "该论文的主要贡献是提出了PlenopticDreamer框架，有效解决了多视图视频生成中的时空一致性挑战。其学术价值在于推动了生成模型在视频重渲染领域的进展，特别是在同步幻觉和维持时空记忆方面。实际应用价值体现在机器人操作等场景，通过精确视图转换提升视觉系统性能。未来工作可进一步优化模型的扩展性和鲁棒性，摘要未明确说明具体方向。",
+      "tags": [
+        "Generative Video Re-rendering",
+        "Multi-view Consistency",
+        "Autoregressive Model",
+        "Video-conditioned Model",
+        "Camera-guided Retrieval"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:53.616253Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05237",
+    "title": "ObjectForesight: Predicting Future 3D Object Trajectories from Human Videos",
+    "authors": [
+      "Rustin Soraki",
+      "Homanga Bharadhwaj",
+      "Ali Farhadi",
+      "Roozbeh Mottaghi"
+    ],
+    "abstract": "Humans can effortlessly anticipate how objects might move or change through interaction--imagining a cup being lifted, a knife slicing, or a lid being closed. We aim to endow computational systems with a similar ability to predict plausible future object motions directly from passive visual observation. We introduce ObjectForesight, a 3D object-centric dynamics model that predicts future 6-DoF poses and trajectories of rigid objects from short egocentric video sequences. Unlike conventional world or dynamics models that operate in pixel or latent space, ObjectForesight represents the world explicitly in 3D at the object level, enabling geometrically grounded and temporally coherent predictions that capture object affordances and trajectories. To train such a model at scale, we leverage recent advances in segmentation, mesh reconstruction, and 3D pose estimation to curate a dataset of 2 million plus short clips with pseudo-ground-truth 3D object trajectories. Through extensive experiments, we show that ObjectForesight achieves significant gains in accuracy, geometric consistency, and generalization to unseen objects and scenes, establishing a scalable framework for learning physically grounded, object-centric dynamics models directly from observation. objectforesight.github.io",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "pdf_url": "https://arxiv.org/pdf/2601.05237.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05237",
+    "published": "2026-01-08T18:58:08Z",
+    "updated": "2026-01-08T18:58:08Z",
+    "comment": "Preprint. Project Website: objectforesight.github.io",
+    "light_analysis": {
+      "overview": "ObjectForesight是一个通过物体中心动力学从视频预测未来3D物体轨迹的创新模型，显式表示3D世界以捕获几何基础。",
+      "motivation": "人类能轻松预测物体在交互中的运动，如杯子被拿起或刀切片，这在实际应用中对于增强AI系统的交互能力至关重要。当前计算系统缺乏这种能力，传统世界或动力学模型在像素或潜在空间操作，无法捕捉物体的几何基础和时空一致性，导致预测结果在几何合理性和泛化性方面受限。因此，本研究旨在从被动视觉观察中预测物体可操作性和轨迹，解决现有方法在几何表示不足和泛化能力弱的问题。",
+      "method": "论文提出ObjectForesight，一个3D物体中心动力学模型，从短时间自我中心视频序列中预测刚体对象的未来6-DoF姿势和轨迹。其关键创新在于在对象级别显式地表示3D世界，不同于传统模型在像素或潜在空间操作，这能实现几何基础和时间一致的预测，捕获物体的可操作性和轨迹细节。为训练模型，研究利用了分割、网格重建和3D姿态估计的最新进展，构建了包含200多万短片的大规模数据集，带有伪地面真值3D物体轨迹，提供了必要的训练数据，确保模型的规模化学习。",
+      "result": "通过大量实验，ObjectForesight在准确性、几何一致性和泛化性方面取得了显著提升。具体来说，模型能够更好地预测未见过的物体和场景，相比基线方法，在多个性能指标上表现更优，例如提高了轨迹预测的几何精度和一致性。摘要未明确说明具体的数据指标如准确率或效率改进百分比，但强调了框架在提升预测质量和泛化能力方面的优势，证实了其作为可扩展学习框架的有效性。",
+      "conclusion": "本研究的主要贡献是建立了ObjectForesight框架，一个可扩展的方法，用于直接从观察中学习物理基础的物体中心动力学模型，具有重要的学术价值，推动了3D视觉和动力学预测领域的发展。在实际应用中，该模型可增强机器人和增强现实系统的交互能力，提升现实世界任务中的物体操控和预测精度。尽管成果显著，未来工作可能包括扩展到非刚性物体或更复杂的交互场景，以进一步完善模型的适用性。",
+      "tags": [
+        "3D Object Dynamics",
+        "6-DoF Pose Prediction",
+        "Video Trajectory Forecasting",
+        "Geometric Consistency",
+        "Object-Centric Representation"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:17:49.015574Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "2601.05245",
+    "title": "Optimal Lower Bounds for Online Multicalibration",
+    "authors": [
+      "Natalie Collina",
+      "Jiuyao Lu",
+      "Georgy Noarov",
+      "Aaron Roth"
+    ],
+    "abstract": "We prove tight lower bounds for online multicalibration, establishing an information-theoretic separation from marginal calibration.   In the general setting where group functions can depend on both context and the learner's predictions, we prove an $Ω(T^{2/3})$ lower bound on expected multicalibration error using just three disjoint binary groups. This matches the upper bounds of Noarov et al. (2025) up to logarithmic factors and exceeds the $O(T^{2/3-\\varepsilon})$ upper bound for marginal calibration (Dagan et al., 2025), thereby separating the two problems.   We then turn to lower bounds for the more difficult case of group functions that may depend on context but not on the learner's predictions. In this case, we establish an $\\widetildeΩ(T^{2/3})$ lower bound for online multicalibration via a $Θ(T)$-sized group family constructed using orthogonal function systems, again matching upper bounds up to logarithmic factors.",
+    "categories": [
+      "cs.LG",
+      "math.ST",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "pdf_url": "https://arxiv.org/pdf/2601.05245.pdf",
+    "abs_url": "https://arxiv.org/abs/2601.05245",
+    "published": "2026-01-08T18:59:32Z",
+    "updated": "2026-01-08T18:59:32Z",
+    "comment": null,
+    "light_analysis": {
+      "overview": "本文证明了在线多校准的紧下界，并建立了与边际校准的信息理论分离。",
+      "motivation": "在线多校准是机器学习中公平性和校准性的关键问题，现有研究已给出算法上界，但下界不明确，导致无法评估算法最优性能。本文旨在填补这一理论空白，通过证明紧下界来展示多校准比边际校准更具挑战性，从而推动理论发展，并为实际应用中的公平性度量提供基础。现有方法的不足在于下界未知，限制了算法性能评估的完整性。",
+      "method": "研究方法基于信息理论框架，采用构造性证明技术。在一般设置下，通过构造三个不相交的二进制组函数，证明预期多校准误差的Ω(T^{2/3})下界。在更困难情况下，组函数可依赖上下文但不依赖预测，使用正交函数系统构建Θ(T)大小的组族，证明Ω̃(T^{2/3})下界。关键创新在于匹配现有上界并分离多校准与边际校准，摘要未明确说明具体数据集或模型架构，因本文为理论分析论文。",
+      "result": "主要实验结果显示，在一般设置中，预期多校准误差的Ω(T^{2/3})下界与Noarov等人的上界匹配（达到对数因子），并超过Dagan等人的边际校准上界O(T^{2/3-ε})，实现了问题分离。在依赖上下文但不依赖预测的设置下，Ω̃(T^{2/3})下界同样匹配上界，证实了紧性。具体数据支撑包括下界与上界的对数因子内匹配，以及对比基线方法展示的多校准更难性。",
+      "conclusion": "本文的主要贡献是证明了在线多校准的紧下界，为算法设计提供了理论极限，并揭示了与边际校准的本质区别。学术价值在于深化对校准性度量的理论理解，实际应用有助于指导公平机器学习系统的开发。未来工作可扩展到其他设置或进行实证验证，局限性可能在于未考虑所有实际场景，但为后续研究奠定了基础。",
+      "tags": [
+        "Online Multicalibration",
+        "Lower Bounds",
+        "Information Theory",
+        "Orthogonal Functions",
+        "Fairness"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:15:47.215540Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
