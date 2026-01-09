@@ -281,37 +281,64 @@ class FeishuNotifier(BaseNotifier):
 
         elements.append({"tag": "hr"})
 
-        # === 精选论文 ===
-        highlight_papers = report.get_highlight_papers(self._max_papers)
-        if highlight_papers:
+        # === Papers Overview (分类总结) ===
+        if report.category_summaries:
             elements.append({
                 "tag": "div",
                 "text": {
                     "tag": "lark_md",
-                    "content": f"📚 **精选论文** ({len(highlight_papers)})",
+                    "content": f"📚 **Papers Overview** ({len(report.category_summaries)} categories)",
                 },
             })
 
-            for paper in highlight_papers:
-                elements.extend(self._build_paper_elements(paper))
+            for category, summary in report.category_summaries.items():
+                elements.append({
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": f"**{category}**\n{summary}",
+                    },
+                })
 
             elements.append({"tag": "hr"})
 
-        # === 热点资讯 ===
-        highlight_news = report.get_highlight_news(self._max_news)
-        if highlight_news:
+        # === News Overview (热点总结) ===
+        if report.news_summary:
             elements.append({
                 "tag": "div",
                 "text": {
                     "tag": "lark_md",
-                    "content": f"🔥 **热点资讯** ({len(highlight_news)})",
+                    "content": "🔥 **News Overview**",
                 },
             })
 
-            for item in highlight_news:
-                elements.append(self._build_news_element(item))
+            elements.append({
+                "tag": "div",
+                "text": {
+                    "tag": "lark_md",
+                    "content": report.news_summary,
+                },
+            })
 
             elements.append({"tag": "hr"})
+
+        # === 统计信息 ===
+        stats_content = f"**统计信息**\n\n"
+        stats_content += f"• 论文总数: {report.stats.total_papers}\n"
+        stats_content += f"• 热点总数: {report.stats.total_news}\n"
+
+        if report.stats.top_keywords:
+            stats_content += f"• 热门关键词: {', '.join(report.stats.top_keywords[:5])}"
+
+        elements.append({
+            "tag": "div",
+            "text": {
+                "tag": "lark_md",
+                "content": stats_content,
+            },
+        })
+
+        elements.append({"tag": "hr"})
 
         # === 底部按钮 ===
         bottom_actions: list[dict[str, Any]] = []
