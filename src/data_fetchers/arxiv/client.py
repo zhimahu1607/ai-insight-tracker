@@ -292,6 +292,11 @@ class AsyncArxivClient:
         """
         过滤指定小时数内的论文
 
+        使用 published 和 updated 中较新的日期进行过滤。
+        这样可以同时保留：
+        - 新发布的论文（published 在时间窗口内）
+        - 最近更新的论文（updated 在时间窗口内）
+
         Args:
             papers: 论文列表
             hours: 时间窗口（小时），默认25小时
@@ -300,8 +305,17 @@ class AsyncArxivClient:
             时间窗口内的论文列表
         """
         cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
-        return [
-            p for p in papers
-            if p.published.replace(tzinfo=timezone.utc) >= cutoff
-        ]
+        filtered = []
+        for p in papers:
+            # 获取 published 时间（确保有时区信息）
+            pub_time = p.published.replace(tzinfo=timezone.utc) if p.published.tzinfo is None else p.published
+            # 获取 updated 时间（如果存在）
+            upd_time = None
+            if p.updated:
+                upd_time = p.updated.replace(tzinfo=timezone.utc) if p.updated.tzinfo is None else p.updated
+            # 使用较新的时间进行过滤
+            latest_time = max(pub_time, upd_time) if upd_time else pub_time
+            if latest_time >= cutoff:
+                filtered.append(p)
+        return filtered
 
