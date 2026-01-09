@@ -1,0 +1,86 @@
+[
+  {
+    "id": "52ec0eca2ce43c11",
+    "title": "Netomi’s lessons for scaling agentic systems into the enterprise",
+    "url": "https://openai.com/index/netomi",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-08T13:00:00Z",
+    "summary": "How Netomi scales enterprise AI agents using GPT-4.1 and GPT-5.2—combining concurrency, governance, and multi-step reasoning for reliable production workflows.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Netomi分享了如何利用GPT-4.1和GPT-5.2技术规模化企业级AI代理系统的经验教训。该公司通过结合并发处理、治理机制和多步骤推理，确保了生产工作流程的可靠性和效率。这一方法不仅优化了AI代理的性能，还解决了企业在部署复杂AI系统时面临的挑战，如资源管理和错误控制，从而推动了AI代理在商业环境中的广泛应用和成熟发展。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "Netomi",
+        "GPT-4.1",
+        "GPT-5.2",
+        "AI agents",
+        "agentic systems"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:07:46.989553Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "359738e7b0d6b66d",
+    "title": "OpenAI for Healthcare",
+    "url": "https://openai.com/index/openai-for-healthcare",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-08T12:00:00Z",
+    "summary": "OpenAI for Healthcare enables secure, enterprise-grade AI that supports HIPAA compliance—reducing administrative burden and supporting clinical workflows.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI公司推出了专门针对医疗健康行业的新产品'OpenAI for Healthcare'，该解决方案提供安全的企业级人工智能能力，并支持HIPAA合规标准，旨在保护患者数据隐私。其重要性在于，医疗行业对数据安全和法规遵从性要求极高，此产品通过确保合规性，降低了医疗机构的风险。通过减少行政负担和优化临床工作流程，例如自动化文档处理和辅助诊断决策，有望提高医疗服务效率和准确性，让医护人员更专注于患者护理，从而提升整体医疗质量。这一发布标志着AI在关键行业的进一步应用，为医疗领域带来了创新的可能性。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "OpenAI for Healthcare",
+        "HIPAA",
+        "enterprise-grade AI",
+        "healthcare"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:07:59.043091Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ffb3f03b2ba5c23f",
+    "title": "Scaling medical content review at Flo Health using Amazon Bedrock (Part 1)",
+    "url": "https://aws.amazon.com/blogs/machine-learning/scaling-medical-content-review-at-flo-health-using-amazon-bedrock-part-1/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-08T18:25:01Z",
+    "summary": "This two-part series explores Flo Health's journey with generative AI for medical content verification. Part 1 examines our proof of concept (PoC), including the initial solution, capabilities, and early results. Part 2 covers focusing on scaling challenges and real-world implementation. Each article stands alone while collectively showing how AI transforms medical content management at scale.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "Flo Health 与 Amazon AWS 合作，使用 Amazon Bedrock 平台的生成式人工智能技术来扩展医疗内容审查。第一篇文章详述了概念验证（PoC）阶段，包括初始解决方案的设计、关键功能以及早期取得的成果，展示了 AI 在自动化医疗内容验证方面的应用。第二部分将聚焦于规模化实施所面临的挑战和实际应用场景。整个系列文章突出了 AI 如何大规模改进医疗内容管理流程，从实验阶段到生产部署，旨在提高审核效率和可靠性，这对于医疗健康领域的数字化和质量控制具有重要影响。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "Flo Health",
+        "Amazon Bedrock",
+        "generative AI",
+        "medical content verification",
+        "proof of concept"
+      ]
+    },
+    "analyzed_at": "2026-01-09T03:07:48.519059Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
