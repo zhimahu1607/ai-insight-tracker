@@ -353,6 +353,9 @@ async def task_analyze() -> tuple[list[AnalyzedPaper], list[AnalyzedNews]]:
     """
     任务：浅度分析（论文 + 热点并行）
 
+    支持增量分析：只分析未成功的数据，已成功的数据直接复用。
+    这样可以避免重复调用 LLM API，节省费用，支持断点续传。
+
     Returns:
         (分析后的论文列表, 分析后的热点列表)
     """
@@ -364,49 +367,102 @@ async def task_analyze() -> tuple[list[AnalyzedPaper], list[AnalyzedNews]]:
     papers_file = PAPERS_DIR / f"{today}.json"
     news_file = NEWS_DIR / f"{today}.json"
 
-    # 加载今日数据
-    papers = load_papers_json(papers_file)
-    news = load_news_json(news_file)
+    # 加载今日数据（优先加载 AnalyzedPaper/AnalyzedNews 格式，保留分析状态）
+    # 如果文件包含分析结果，使用 load_analyzed_xxx；否则回退到 load_xxx
+    existing_papers = load_analyzed_papers_json(papers_file)
+    existing_news = load_analyzed_news_json(news_file)
 
-    logger.info(f"加载数据: {len(papers)} 篇论文, {len(news)} 条热点")
+    # 如果加载失败或为空，尝试加载原始格式（兼容首次分析场景）
+    if not existing_papers:
+        raw_papers = load_papers_json(papers_file)
+        # 将 Paper 转换为 AnalyzedPaper（analysis_status 默认为 pending）
+        existing_papers = [
+            AnalyzedPaper(**p.model_dump(), analysis_status="pending")
+            for p in raw_papers
+        ]
+    if not existing_news:
+        raw_news = load_news_json(news_file)
+        # 将 NewsItem 转换为 AnalyzedNews（analysis_status 默认为 pending）
+        existing_news = [
+            AnalyzedNews(**n.model_dump(), analysis_status="pending")
+            for n in raw_news
+        ]
 
-    if not papers and not news:
+    # 分离已成功和待分析的数据
+    papers_done = [p for p in existing_papers if p.analysis_status == "success"]
+    papers_to_analyze = [p for p in existing_papers if p.analysis_status != "success"]
+    news_done = [n for n in existing_news if n.analysis_status == "success"]
+    news_to_analyze = [n for n in existing_news if n.analysis_status != "success"]
+
+    logger.info(
+        f"加载数据: {len(existing_papers)} 篇论文 "
+        f"(已完成 {len(papers_done)}, 待分析 {len(papers_to_analyze)}), "
+        f"{len(existing_news)} 条热点 "
+        f"(已完成 {len(news_done)}, 待分析 {len(news_to_analyze)})"
+    )
+
+    if not existing_papers and not existing_news:
         logger.warning("无数据需要分析")
         return [], []
 
-    # 使用 LLM 客户端进行分析
-    async with LLMClient() as llm_client:
-        analyzed_papers: list[AnalyzedPaper] = []
-        analyzed_news: list[AnalyzedNews] = []
+    # 如果全部已完成，直接返回
+    if not papers_to_analyze and not news_to_analyze:
+        logger.info("所有数据已分析完成，无需重复分析")
+        return existing_papers, existing_news
 
-        # 论文分析
-        if papers:
+    # 使用 LLM 客户端进行分析（仅分析未成功的数据）
+    async with LLMClient() as llm_client:
+        newly_analyzed_papers: list[AnalyzedPaper] = []
+        newly_analyzed_news: list[AnalyzedNews] = []
+
+        # 论文分析（仅分析未成功的）
+        if papers_to_analyze:
             paper_analyzer = PaperLightAnalyzer(llm_client)
-            analyzed_papers = await paper_analyzer.analyze_batch(papers)
-            stats = PaperLightAnalyzer.get_analysis_stats(analyzed_papers)
+            # 将 AnalyzedPaper 转换回 Paper 进行分析
+            papers_input = [
+                Paper(**{k: v for k, v in p.model_dump().items() if k in Paper.model_fields})
+                for p in papers_to_analyze
+            ]
+            newly_analyzed_papers = await paper_analyzer.analyze_batch(papers_input)
+            stats = PaperLightAnalyzer.get_analysis_stats(newly_analyzed_papers)
             logger.info(
                 f"论文分析完成: 成功 {stats['success']}/{stats['total']}, "
                 f"成功率 {stats['success_rate']:.1%}"
             )
 
-        # 热点分析
-        if news:
+        # 热点分析（仅分析未成功的）
+        if news_to_analyze:
             news_analyzer = NewsLightAnalyzer(llm_client)
-            analyzed_news = await news_analyzer.analyze_batch(news)
-            stats = NewsLightAnalyzer.get_analysis_stats(analyzed_news)
+            # 将 AnalyzedNews 转换回 NewsItem 进行分析
+            news_input = [
+                NewsItem(**{k: v for k, v in n.model_dump().items() if k in NewsItem.model_fields})
+                for n in news_to_analyze
+            ]
+            newly_analyzed_news = await news_analyzer.analyze_batch(news_input)
+            stats = NewsLightAnalyzer.get_analysis_stats(newly_analyzed_news)
             logger.info(
                 f"热点分析完成: 成功 {stats['success']}/{stats['total']}, "
                 f"成功率 {stats['success_rate']:.1%}"
             )
 
-    # 保存分析结果（覆盖原文件）
-    if analyzed_papers:
-        save_analyzed_papers_json(analyzed_papers, papers_file)
-    if analyzed_news:
-        save_analyzed_news_json(analyzed_news, news_file)
+    # 合并结果：已完成 + 新分析
+    final_papers = papers_done + newly_analyzed_papers
+    final_news = news_done + newly_analyzed_news
 
-    logger.info("浅度分析任务完成")
-    return analyzed_papers, analyzed_news
+    # 保存分析结果（覆盖原文件）
+    if final_papers:
+        save_analyzed_papers_json(final_papers, papers_file)
+    if final_news:
+        save_analyzed_news_json(final_news, news_file)
+
+    # 输出最终统计
+    total_papers_success = len([p for p in final_papers if p.analysis_status == "success"])
+    total_news_success = len([n for n in final_news if n.analysis_status == "success"])
+    logger.info(
+        f"浅度分析任务完成: 论文 {total_papers_success}/{len(final_papers)} 成功, "
+        f"热点 {total_news_success}/{len(final_news)} 成功"
+    )
+    return final_papers, final_news
 
 
 async def task_summary() -> Optional[Path]:
