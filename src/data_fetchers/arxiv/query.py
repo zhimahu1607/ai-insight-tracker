@@ -16,7 +16,7 @@ def build_category_query(
     categories: list[str],
     max_results: int = 100,
     start: int = 0,
-    sort_by: str = "submittedDate",
+    sort_by: str = "lastUpdatedDate",
     sort_order: str = "descending",
 ) -> str:
     """
@@ -58,7 +58,7 @@ def build_single_category_query(
     category: str,
     max_results: int = 100,
     start: int = 0,
-    sort_by: str = "submittedDate",
+    sort_by: str = "lastUpdatedDate",
     sort_order: str = "descending",
 ) -> str:
     """

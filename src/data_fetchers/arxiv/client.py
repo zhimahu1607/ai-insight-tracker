@@ -304,18 +304,59 @@ class AsyncArxivClient:
         Returns:
             时间窗口内的论文列表
         """
-        cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+        now = datetime.now(timezone.utc)
+        cutoff = now - timedelta(hours=hours)
+        
+        # 调试日志：输出前3篇论文的时间信息
+        if papers:
+            logger.debug(f"[arXiv] 当前 UTC 时间: {now.isoformat()}")
+            logger.debug(f"[arXiv] 截止时间 (cutoff): {cutoff.isoformat()}")
+            for i, p in enumerate(papers[:3]):
+                pub_info = f"published={p.published.isoformat() if p.published else 'None'}"
+                upd_info = f"updated={p.updated.isoformat() if p.updated else 'None'}"
+                logger.debug(f"[arXiv] 论文[{i}] {p.id}: {pub_info}, {upd_info}")
+        
         filtered = []
         for p in papers:
             # 获取 published 时间（确保有时区信息）
-            pub_time = p.published.replace(tzinfo=timezone.utc) if p.published.tzinfo is None else p.published
+            pub_time = p.published
+            if pub_time.tzinfo is None:
+                pub_time = pub_time.replace(tzinfo=timezone.utc)
+            
             # 获取 updated 时间（如果存在）
             upd_time = None
             if p.updated:
-                upd_time = p.updated.replace(tzinfo=timezone.utc) if p.updated.tzinfo is None else p.updated
+                upd_time = p.updated
+                if upd_time.tzinfo is None:
+                    upd_time = upd_time.replace(tzinfo=timezone.utc)
+            
             # 使用较新的时间进行过滤
             latest_time = max(pub_time, upd_time) if upd_time else pub_time
             if latest_time >= cutoff:
                 filtered.append(p)
+        
+        # 如果过滤后为空，输出更多调试信息
+        if not filtered and papers:
+            # 找出最近的论文时间
+            latest_paper_times = []
+            for p in papers[:10]:
+                pub_time = p.published
+                if pub_time.tzinfo is None:
+                    pub_time = pub_time.replace(tzinfo=timezone.utc)
+                upd_time = None
+                if p.updated:
+                    upd_time = p.updated
+                    if upd_time.tzinfo is None:
+                        upd_time = upd_time.replace(tzinfo=timezone.utc)
+                latest = max(pub_time, upd_time) if upd_time else pub_time
+                latest_paper_times.append((p.id, latest))
+            
+            latest_paper_times.sort(key=lambda x: x[1], reverse=True)
+            logger.warning(
+                f"[arXiv] 日期过滤后无论文！前5篇最新论文时间: "
+                f"{[(pid, t.isoformat()) for pid, t in latest_paper_times[:5]]}"
+            )
+            logger.warning(f"[arXiv] 时间窗口: {cutoff.isoformat()} ~ {now.isoformat()}")
+        
         return filtered
 
