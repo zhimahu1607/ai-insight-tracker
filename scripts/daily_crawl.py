@@ -249,7 +249,7 @@ async def task_arxiv() -> tuple[list[Paper], int]:
     """
     任务：获取 arXiv 论文并去重
 
-    使用 ProcessedTracker 进行历史去重，支持7天自动清理。
+    使用 ProcessedTracker 进行历史去重，支持30天自动清理。
     默认获取过去25小时内发布的论文。
 
     Returns:

@@ -20,6 +20,7 @@ from .client import AsyncArxivClient
 from .query import build_category_query, build_id_query
 from .dedup import load_all_historical_ids, dedup_papers
 from typing import Optional
+from pathlib import Path
 
 __all__ = [
     "AsyncArxivClient",
@@ -42,16 +43,14 @@ async def fetch_arxiv_papers(
     Args:
         categories: 分类列表，None 时从配置读取
         days: 获取最近几天的论文
-        dedup: 是否进行历史去重
+        dedup: 是否使用 ProcessedTracker 进行历史去重
 
     Returns:
         去重后的论文列表
     """
-    from pathlib import Path
-    from typing import Optional
-
     from src.config import get_settings
     from src.models import Paper
+    from src.data_fetchers.processed_tracker import get_processed_tracker
 
     settings = get_settings()
 
@@ -69,12 +68,11 @@ async def fetch_arxiv_papers(
     # 获取论文
     papers = await client.fetch_recent_papers(categories=categories, days=days)
 
-    # 历史去重
+    # 使用 ProcessedTracker 进行历史去重（保留30天记录）
     if dedup:
-        data_dir = Path("data/papers")
-        if data_dir.exists():
-            historical_ids = load_all_historical_ids(data_dir)
-            papers, _ = dedup_papers(papers, historical_ids)
+        tracker = get_processed_tracker(Path("data/processed_ids.json"))
+        processed_ids = tracker.get_processed_paper_ids()
+        papers = [p for p in papers if p.id not in processed_ids]
 
     return papers
 

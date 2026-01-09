@@ -35,6 +35,8 @@ function serveDataPlugin() {
 
 // https://vite.dev/config/
 export default defineConfig({
+  // 使用相对路径，确保 GitHub Pages 部署时资源路径正确
+  base: './',
   plugins: [react(), serveDataPlugin()],
   resolve: {
     alias: {

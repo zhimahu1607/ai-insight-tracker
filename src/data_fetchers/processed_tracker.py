@@ -27,7 +27,7 @@ class ProcessedTracker:
     """
 
     DEFAULT_FILE = "data/processed_ids.json"
-    RETENTION_DAYS = 7
+    RETENTION_DAYS = 30  # 保留30天记录
 
     def __init__(
         self,
