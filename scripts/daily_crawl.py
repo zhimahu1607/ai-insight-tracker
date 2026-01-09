@@ -263,9 +263,11 @@ async def task_arxiv() -> tuple[list[Paper], int]:
     settings = get_settings()
     categories = settings.arxiv.categories
     max_results = settings.arxiv.max_results
+    max_pages = getattr(settings.arxiv, "max_pages", 20)
 
     logger.info(f"目标分类: {categories}")
-    logger.info(f"每分类最大结果数: {max_results}")
+    logger.info(f"每页最大结果数: {max_results}")
+    logger.info(f"每分类最多分页次数: {max_pages}")
 
     # 初始化 ProcessedTracker 并清理过期记录
     tracker = get_processed_tracker(DATA_DIR / "processed_ids.json")
@@ -274,7 +276,12 @@ async def task_arxiv() -> tuple[list[Paper], int]:
         logger.info(f"清理过期记录: {cleaned} 条")
 
     # 获取论文（默认25小时，可通过环境变量 ARXIV_HOURS 调整）
-    client = AsyncArxivClient(max_results_per_category=max_results)
+    client = AsyncArxivClient(
+        max_results_per_category=max_results,
+        max_pages_per_category=max_pages,
+        delay_between_requests=settings.arxiv.request_delay,
+        timeout=settings.arxiv.timeout,
+    )
     import os
     hours = int(os.environ.get("ARXIV_HOURS", "25"))
     papers = await client.fetch_recent_papers(categories, hours=hours)
@@ -282,7 +289,7 @@ async def task_arxiv() -> tuple[list[Paper], int]:
 
     if not papers:
         logger.warning("未获取到任何论文")
-        return [], DedupStatus.NO_NEW_CONTENT
+        return DedupStatus.NO_NEW_CONTENT
 
     # 使用 ProcessedTracker 去重
     processed_ids = tracker.get_processed_paper_ids()
@@ -299,7 +306,7 @@ async def task_arxiv() -> tuple[list[Paper], int]:
         logger.info("无新论文")
         # 仍然返回空列表和 HAS_NEW_CONTENT 状态，允许后续任务继续执行
         # （新闻获取、分析、日报生成等不应因无新论文而跳过）
-        return [], DedupStatus.HAS_NEW_CONTENT
+        return DedupStatus.HAS_NEW_CONTENT
 
     # 保存新论文
     today = get_today_date()
@@ -310,7 +317,7 @@ async def task_arxiv() -> tuple[list[Paper], int]:
     tracker.mark_papers_processed([p.id for p in new_papers])
 
     logger.info(f"arXiv 任务完成: {len(new_papers)} 篇新论文")
-    return new_papers, DedupStatus.HAS_NEW_CONTENT
+    return DedupStatus.HAS_NEW_CONTENT
 
 
 async def task_rss() -> list[NewsItem]:
@@ -599,13 +606,10 @@ async def run_all() -> int:
     logger.info("=" * 60)
 
     # 1. arXiv 获取（即使无新论文也继续后续任务）
-    papers, status = await task_arxiv()
+    status = await task_arxiv()
     if status == DedupStatus.PROCESS_ERROR:
         logger.error("arXiv 获取出错")
         return 3
-    
-    if not papers:
-        logger.info("今日无新增论文，继续执行其他任务")
 
     # 2. RSS 获取
     await task_rss()
@@ -666,7 +670,7 @@ async def main() -> int:
     # 执行任务
     try:
         if args.task == "arxiv":
-            _, status = await task_arxiv()
+            status = await task_arxiv()
             return 0 if status == DedupStatus.HAS_NEW_CONTENT else 2
 
         elif args.task == "rss":

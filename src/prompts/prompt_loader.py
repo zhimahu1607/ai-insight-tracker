@@ -121,3 +121,4 @@ class PromptLoader:
         system_prompt = cls.load(module, category, "system", default_system)
         user_prompt = cls.load(module, category, "user", default_user)
         return system_prompt, user_prompt
+

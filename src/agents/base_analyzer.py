@@ -18,7 +18,7 @@ from tqdm.asyncio import tqdm_asyncio
 from src.config import get_settings
 from src.llm import LLMClient, LLMParseError, LLMRateLimitError
 from src.agents.shared import get_llm_semaphore
-from src.agents.prompt_loader import PromptLoader
+from src.prompts.prompt_loader import PromptLoader
 
 
 logger = logging.getLogger(__name__)

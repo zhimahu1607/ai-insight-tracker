@@ -9,7 +9,7 @@ import logging
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from src.llm import LLMClient
-from src.agents.prompt_loader import PromptLoader
+from src.prompts.prompt_loader import PromptLoader
 from ..state import DeepAnalysisState
 
 

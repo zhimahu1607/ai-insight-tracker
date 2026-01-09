@@ -11,7 +11,7 @@ import logging
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from src.llm import LLMClient
-from src.agents.prompt_loader import PromptLoader
+from src.prompts.prompt_loader import PromptLoader
 from ..state import DeepAnalysisState
 from ..tools import get_search_tool, get_paper_reader_tool
 from ..tools.arxiv_loader import get_arxiv_tool

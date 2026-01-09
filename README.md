@@ -105,6 +105,8 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 | `LLM_MODEL` | LLM 模型 | `deepseek-chat` |
 | `CATEGORIES` | arXiv 分类 | `cs.AI,cs.CL,cs.CV,cs.LG` |
 | `LANGUAGE` | 输出语言 | `zh` |
+| `ARXIV_MAX_RESULTS` | arXiv 每页最大返回数（分页时为 page size） | `100` |
+| `ARXIV_MAX_PAGES` | arXiv 每分类最多分页次数（安全上限） | `20` |
 
 #### 4. 启用 GitHub Pages
 
@@ -207,13 +209,13 @@ ai-insight-tracker/
 │   │           ├── google_research.py
 │   │           └── qwen.py
 │   ├── prompts/                  # 统一 Prompt 模板目录
+│   │   ├── prompt_loader.py      # 统一 Prompt 加载器
 │   │   ├── paper.py              # 论文分析 Prompt
 │   │   ├── news.py               # 热点分析 Prompt
 │   │   └── report.py             # 日报生成 Prompt
 │   ├── agents/                   # 分析模块
 │   │   ├── shared.py             # 全局共享资源 (LLM Semaphore)
 │   │   ├── base_analyzer.py      # 浅度分析器泛型基类
-│   │   ├── prompt_loader.py      # 统一 Prompt 加载器
 │   │   ├── paper/                # 论文分析
 │   │   │   ├── light_analyzer.py # 浅度分析器
 │   │   │   └── deep_analyzer/    # 深度分析 (LangGraph Multi-Agent)

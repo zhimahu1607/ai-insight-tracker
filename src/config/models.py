@@ -27,7 +27,8 @@ class ArxivConfig(BaseModel):
         default=["cs.AI", "cs.CL", "cs.CV", "cs.LG"],
         description="要获取的 arXiv 分类列表",
     )
-    max_results: int = Field(default=100, description="每个分类最大获取数")
+    max_results: int = Field(default=100, description="单次请求最大返回数（分页时为每页大小）")
+    max_pages: int = Field(default=20, description="每个分类最多分页次数（安全上限）")
     request_delay: float = Field(
         default=3.0, description="请求间隔（秒），遵守 arXiv 限流规则"
     )

@@ -34,7 +34,7 @@ __all__ = [
 
 async def fetch_arxiv_papers(
     categories: Optional[list[str]] = None,
-    days: int = 1,
+    hours: int = 25,
     dedup: bool = True,
 ) -> list:
     """
@@ -42,7 +42,7 @@ async def fetch_arxiv_papers(
 
     Args:
         categories: 分类列表，None 时从配置读取
-        days: 获取最近几天的论文
+        hours: 获取最近多少小时的论文
         dedup: 是否使用 ProcessedTracker 进行历史去重
 
     Returns:
@@ -62,11 +62,12 @@ async def fetch_arxiv_papers(
     client = AsyncArxivClient(
         timeout=settings.arxiv.timeout,
         max_results_per_category=settings.arxiv.max_results,
+        max_pages_per_category=getattr(settings.arxiv, "max_pages", 20),
         delay_between_requests=settings.arxiv.request_delay,
     )
 
     # 获取论文
-    papers = await client.fetch_recent_papers(categories=categories, days=days)
+    papers = await client.fetch_recent_papers(categories=categories, hours=hours)
 
     # 使用 ProcessedTracker 进行历史去重（保留30天记录）
     if dedup:

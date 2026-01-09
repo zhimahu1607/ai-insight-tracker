@@ -14,7 +14,7 @@ from langgraph.prebuilt import ToolNode
 from pydantic import BaseModel, Field
 
 from src.llm import LLMClient
-from src.agents.prompt_loader import PromptLoader
+from src.prompts.prompt_loader import PromptLoader
 from ..state import DeepAnalysisState
 
 

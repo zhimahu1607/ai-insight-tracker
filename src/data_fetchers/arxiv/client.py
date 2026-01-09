@@ -35,6 +35,7 @@ class AsyncArxivClient:
         self,
         timeout: float = 60.0,
         max_results_per_category: int = 100,
+        max_pages_per_category: int = 20,
         delay_between_requests: float = 3.0,
         max_retries: int = 3,
     ):
@@ -43,12 +44,14 @@ class AsyncArxivClient:
 
         Args:
             timeout: HTTP 请求超时（秒）
-            max_results_per_category: 每个分类最大获取数
+            max_results_per_category: 单次请求最大返回数（分页时为“每页大小”）
+            max_pages_per_category: 每个分类最多分页次数（用于安全兜底，避免无限拉取）
             delay_between_requests: 请求间隔（秒），遵守 arXiv 限流
             max_retries: 最大重试次数
         """
         self._timeout = aiohttp.ClientTimeout(total=timeout)
-        self._max_results = max_results_per_category
+        self._page_size = max_results_per_category
+        self._max_pages_per_category = max(1, int(max_pages_per_category))
         self._delay = delay_between_requests
         self._max_retries = max_retries
         self._last_request_time = 0.0
@@ -70,7 +73,7 @@ class AsyncArxivClient:
             去重后的论文列表（只保留主分类匹配的论文）
         """
         # 并发获取所有分类（Semaphore 自动控制并发数）
-        tasks = [self._rate_limited_request(cat) for cat in categories]
+        tasks = [self._rate_limited_request(cat, hours=hours) for cat in categories]
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
         # 合并结果
@@ -122,7 +125,7 @@ class AsyncArxivClient:
         url = build_id_query(paper_ids)
         return await self._fetch_and_parse(url)
 
-    async def _rate_limited_request(self, category: str) -> list[Paper]:
+    async def _rate_limited_request(self, category: str, hours: int = 25) -> list[Paper]:
         """
         受控并发请求：Semaphore 确保同一时刻只有一个请求
         """
@@ -134,17 +137,82 @@ class AsyncArxivClient:
                 await asyncio.sleep(self._delay - elapsed)
 
             # 执行请求
-            result = await self._fetch_category(category)
+            result = await self._fetch_category_paginated(category, hours=hours)
             self._last_request_time = time.time()
             return result
 
-    async def _fetch_category(self, category: str) -> list[Paper]:
-        """获取单个分类的论文"""
-        url = build_single_category_query(
-            category=category,
-            max_results=self._max_results,
-        )
-        return await self._fetch_and_parse(url)
+    def _latest_time(self, paper: Paper) -> datetime:
+        """
+        获取论文的“最新时间”
+
+        使用 published 和 updated 中较新的日期，用于：
+        - 和 hours 时间窗口对齐
+        - 分页时判断是否可以提前停止
+        """
+        pub_time = paper.published
+        if pub_time.tzinfo is None:
+            pub_time = pub_time.replace(tzinfo=timezone.utc)
+
+        upd_time = None
+        if paper.updated:
+            upd_time = paper.updated
+            if upd_time.tzinfo is None:
+                upd_time = upd_time.replace(tzinfo=timezone.utc)
+
+        return max(pub_time, upd_time) if upd_time else pub_time
+
+    async def _fetch_category_paginated(self, category: str, hours: int = 25) -> list[Paper]:
+        """
+        获取单个分类的论文（支持分页）
+
+        规则：
+        - 每页大小 = self._page_size（通常 100）
+        - start = 0, 100, 200... 递增
+        - 如果某一页返回数量 < page_size，表示已无更多结果 → 停止
+        - 如果某一页“最旧”的论文已经早于 cutoff，后续页只会更旧 → 提前停止
+        - 额外使用 max_pages_per_category 作为安全上限
+        """
+        collected: list[Paper] = []
+
+        now = datetime.now(timezone.utc)
+        cutoff = now - timedelta(hours=hours)
+
+        start = 0
+        for page_idx in range(self._max_pages_per_category):
+            url = build_single_category_query(
+                category=category,
+                max_results=self._page_size,
+                start=start,
+            )
+
+            page_papers = await self._fetch_and_parse(url)
+            if not page_papers:
+                break
+
+            collected.extend(page_papers)
+
+            # 如果这一页不足 page_size，说明后面没有更多
+            if len(page_papers) < self._page_size:
+                break
+
+            # 基于时间窗口提前停止：这一页最旧的论文都早于 cutoff，则下一页只会更旧
+            try:
+                oldest_in_page = self._latest_time(page_papers[-1])
+                if oldest_in_page < cutoff:
+                    break
+            except Exception:
+                # 解析异常不影响整体流程，继续分页（由 max_pages 兜底）
+                pass
+
+            start += self._page_size
+
+        if collected and len(collected) >= self._page_size:
+            logger.info(
+                f"[arXiv] 分类 {category} 分页获取: 共 {len(collected)} 篇 "
+                f"(page_size={self._page_size}, max_pages={self._max_pages_per_category})"
+            )
+
+        return collected
 
     async def _fetch_and_parse(self, url: str) -> list[Paper]:
         """

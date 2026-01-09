@@ -23,6 +23,7 @@ ENV_MAPPING: dict[str, str] = {
     # arXiv 配置
     "CATEGORIES": "arxiv.categories",
     "ARXIV_MAX_RESULTS": "arxiv.max_results",
+    "ARXIV_MAX_PAGES": "arxiv.max_pages",
     "ARXIV_REQUEST_DELAY": "arxiv.request_delay",
     # 搜索配置
     "SEARCH_API": "search.api",
@@ -99,28 +100,6 @@ def _set_nested_value(
         current[final_key] = value
 
 
-def _get_nested_value(data: dict[str, Any], path: str) -> Any:
-    """
-    获取嵌套字典的值
-
-    Args:
-        data: 源字典
-        path: 点分隔的路径
-
-    Returns:
-        找到的值，未找到返回 None
-    """
-    keys = path.split(".")
-    current = data
-
-    for key in keys:
-        if not isinstance(current, dict) or key not in current:
-            return None
-        current = current[key]
-
-    return current
-
-
 def _parse_categories(value: str) -> list[str]:
     """
     解析 CATEGORIES 环境变量
@@ -151,6 +130,7 @@ def _convert_env_value(path: str, value: str) -> Any:
     # 整数类型
     int_paths = {
         "arxiv.max_results",
+        "arxiv.max_pages",
         "search.max_results",
         "search.timeout",
         "analysis.max_concurrent",
