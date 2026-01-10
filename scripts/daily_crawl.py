@@ -16,7 +16,6 @@ Usage:
 Exit codes:
     0: 成功（包括无新论文但其他任务正常完成）
     1: 配置错误
-    2: 仅 arxiv 单任务模式下无新论文
     3: 执行错误
 """
 
@@ -35,6 +34,7 @@ sys.path.insert(0, str(project_root))
 
 from src.config import get_settings, check_first_run, check_required_config
 from src.data_fetchers.arxiv import AsyncArxivClient
+from src.data_fetchers.status import DedupStatus
 from src.data_fetchers.processed_tracker import get_processed_tracker
 from src.data_fetchers.news import NewsFetcher
 from src.agents.paper import PaperLightAnalyzer
@@ -43,14 +43,6 @@ from src.generators import DailyReportGenerator
 from src.llm import LLMClient
 from src.models import Paper, NewsItem, AnalyzedPaper, AnalyzedNews
 from src.notifiers.feishu import get_notifier
-
-
-# 去重状态码（保持向后兼容）
-class DedupStatus:
-    """去重返回状态码"""
-    HAS_NEW_CONTENT = 0  # 有新内容，继续处理
-    NO_NEW_CONTENT = 1   # 无新内容，跳过后续步骤
-    PROCESS_ERROR = 2    # 处理错误
 
 
 # 配置日志
@@ -671,7 +663,8 @@ async def main() -> int:
     try:
         if args.task == "arxiv":
             status = await task_arxiv()
-            return 0 if status == DedupStatus.HAS_NEW_CONTENT else 2
+            # 单任务模式下，无新论文/无论文也视为成功（不应被 CI 判定为失败）
+            return 3 if status == DedupStatus.PROCESS_ERROR else 0
 
         elif args.task == "rss":
             await task_rss()

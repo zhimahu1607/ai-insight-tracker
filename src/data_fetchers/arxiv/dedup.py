@@ -14,14 +14,7 @@ if TYPE_CHECKING:
 
 logger = logging.getLogger(__name__)
 
-
-# 去重状态码
-class DedupStatus:
-    """去重返回状态码"""
-
-    HAS_NEW_CONTENT = 0  # 有新内容，继续处理
-    NO_NEW_CONTENT = 1  # 无新内容，跳过后续步骤
-    PROCESS_ERROR = 2  # 处理错误
+from src.data_fetchers.status import DedupStatus
 
 
 def load_all_historical_ids(data_dir: Path) -> set[str]:
