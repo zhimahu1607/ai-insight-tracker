@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, Users, FileText, Lightbulb, Zap, Target, Flag } from "lucide-react";
+import { DeepAnalysisButton } from "./DeepAnalysisButton";
 
 interface PaperCardProps {
   paper: AnalyzedPaper;
@@ -19,6 +20,9 @@ export function PaperCard({ paper }: PaperCardProps) {
               <Badge variant="secondary" className="font-mono text-xs">
                 {paper.primary_category}
               </Badge>
+              <div onClick={(e) => e.stopPropagation()}>
+                <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} size="icon" className="h-6 w-6" />
+              </div>
             </div>
             <CardTitle className="text-lg leading-tight line-clamp-2">
               {paper.title}
@@ -40,6 +44,9 @@ export function PaperCard({ paper }: PaperCardProps) {
                 <Calendar className="w-3 h-3 mr-1" />
                 {paper.published.split('T')[0]}
              </span>
+             <div className="ml-auto">
+                <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} />
+             </div>
           </div>
           <DialogTitle className="text-xl sm:text-2xl leading-tight">{paper.title}</DialogTitle>
           <DialogDescription className="text-base mt-2">

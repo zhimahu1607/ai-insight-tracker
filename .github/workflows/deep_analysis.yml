@@ -66,6 +66,34 @@ jobs:
               body: '🔬 **深度分析已启动**\n\n正在使用 Multi-Agent 系统进行论文深度分析，请稍候...\n\n预计耗时：3-5 分钟'
             });
 
+      # 4.5 标记为分析中并提交
+      - name: Mark as processing
+        shell: bash -el {0}
+        run: |
+          # 提取 Paper ID
+          PAPER_ID=$(echo "${{ github.event.issue.title }}" | grep -oP '\d+\.\d+' | head -1)
+          if [ -z "$PAPER_ID" ]; then
+            echo "无法提取 Paper ID"
+            exit 1
+          fi
+          echo "PAPER_ID=$PAPER_ID" >> $GITHUB_ENV
+          
+          # 更新状态文件
+          python scripts/update_analysis_status.py add "$PAPER_ID"
+          
+          # 提交更改
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/analysis/deep_analysis_status.json
+          
+          if git diff --staged --quiet; then
+            echo "Status file unchanged"
+          else
+            git commit -m "🚧 Start analysis: $PAPER_ID"
+            # 尝试 push，如果失败则 pull rebase 再 push
+            git push || (git pull --rebase && git push)
+          fi
+
       # 5. 执行深度分析
       - name: Run deep analysis
         id: analysis
@@ -149,18 +177,27 @@ jobs:
 
       # 9. 提交分析结果
       - name: Commit analysis result
-        if: steps.result.outputs.result_exists == 'true'
+        if: steps.result.outputs.result_exists == 'true' || always() # 确保即使分析失败也尝试清理状态
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          git add data/analysis/
+          # 移除处理状态（如果存在）
+          if [ ! -z "$PAPER_ID" ]; then
+             python scripts/update_analysis_status.py remove "$PAPER_ID"
+             git add data/analysis/deep_analysis_status.json
+          fi
+          
+          # 添加分析结果（如果存在）
+          if [ -d "data/analysis/" ]; then
+             git add data/analysis/
+          fi
           
           if git diff --staged --quiet; then
             echo "没有新的分析结果需要提交"
           else
-            git commit -m "🔬 Deep analysis: ${{ steps.result.outputs.paper_id }}"
-            git push
+            git commit -m "🔬 Deep analysis update: $PAPER_ID"
+            git push || (git pull --rebase && git push)
           fi
 
       # 10. 发送飞书通知
