@@ -12,7 +12,6 @@ from typing import Optional
 
 from src.models import NewsItem, NewsSource, FetchType
 from ..base import BaseExtractor
-from src.data_fetchers.text_utils import clean_html_to_text
 
 
 class AnthropicExtractor(BaseExtractor):
@@ -60,32 +59,6 @@ class AnthropicExtractor(BaseExtractor):
                 {"name": "content", "selector": "main, article", "type": "text"},
             ],
         }
-
-    def parse_detail_result(
-        self,
-        extracted_content: str,
-        source: NewsSource,
-    ) -> Optional[str]:
-        _ = source
-        if not extracted_content:
-            return None
-        try:
-            data = json.loads(extracted_content)
-        except json.JSONDecodeError:
-            return None
-
-        # crawl4ai JsonCssExtractionStrategy 通常返回 list[dict]
-        if isinstance(data, list) and data:
-            content = data[0].get("content")
-            text = clean_html_to_text(str(content)) if content else None
-            return text
-
-        if isinstance(data, dict):
-            content = data.get("content")
-            text = clean_html_to_text(str(content)) if content else None
-            return text
-
-        return None
 
     def parse_result(
         self,

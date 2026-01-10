@@ -200,10 +200,12 @@ class AsyncNewsCrawler:
         source: NewsSource,
         extractor,
         items: list[NewsItem],
-        max_items: int = 10,
+        max_items: int = 30,
     ) -> list[NewsItem]:
         """
-        对列表页抓到的 NewsItem 逐篇抓取详情页正文，写入 item.content
+        对列表页抓到的 NewsItem 逐篇抓取详情页信息：
+        - 写入 item.content（正文）
+        - 用详情页 <h1> 覆盖 item.title（确保前端展示原文标题）
         """
         if max_items <= 0:
             return items
@@ -214,29 +216,32 @@ class AsyncNewsCrawler:
         async def _fetch_one(item: NewsItem) -> None:
             async with self._detail_semaphore:
                 try:
-                    content = await self._fetch_detail_content(
+                    detail = await self._fetch_detail_fields(
                         crawler=crawler,
                         source=source,
                         extractor=extractor,
                         url=str(item.url),
                     )
-                    if content:
-                        item.content = content
+                    if detail:
+                        if detail.title:
+                            item.title = detail.title
+                        if detail.content:
+                            item.content = detail.content
                 except Exception as e:
                     logger.debug(f"抓取详情页失败: {item.url} - {e}")
 
         await asyncio.gather(*[_fetch_one(it) for it in target_items])
         return items
 
-    async def _fetch_detail_content(
+    async def _fetch_detail_fields(
         self,
         crawler,  # AsyncWebCrawler
         source: NewsSource,
         extractor,
         url: str,
-    ) -> Optional[str]:
+    ):
         """
-        抓取单个详情页并返回正文文本
+        抓取单个详情页并返回解析后的字段（title/content/date）
         """
         from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
         from crawl4ai import CrawlerRunConfig
@@ -262,8 +267,17 @@ class AsyncNewsCrawler:
             return None
 
         extracted = result.extracted_content or ""
+        # 优先使用结构化解析（title/content/date）
+        if hasattr(extractor, "parse_detail_fields"):
+            fields = extractor.parse_detail_fields(extracted, source)
+            return fields
+
+        # 兼容旧实现：只有 parse_detail_result() 的情况
         content = extractor.parse_detail_result(extracted, source)
-        return clean_html_to_text(content) if content else None
+        if not content:
+            return None
+        from .base import DetailPageFields
+        return DetailPageFields(title=None, content=clean_html_to_text(content), date=None)
 
 
 async def fetch_with_crawler(

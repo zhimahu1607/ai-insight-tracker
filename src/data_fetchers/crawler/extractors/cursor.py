@@ -16,7 +16,6 @@ from datetime import datetime, timezone
 from typing import Optional
 
 from src.models import NewsItem, NewsSource, FetchType
-from src.data_fetchers.text_utils import clean_html_to_text
 from ..base import BaseExtractor
 
 
@@ -48,27 +47,6 @@ class CursorExtractor(BaseExtractor):
                 {"name": "content", "selector": "main, article", "type": "text"},
             ],
         }
-
-    def parse_detail_result(
-        self,
-        extracted_content: str,
-        source: NewsSource,
-    ) -> Optional[str]:
-        _ = source
-        if not extracted_content:
-            return None
-        try:
-            data = json.loads(extracted_content)
-        except json.JSONDecodeError:
-            return None
-
-        if isinstance(data, list) and data:
-            content = data[0].get("content")
-            return clean_html_to_text(str(content)) if content else None
-        if isinstance(data, dict):
-            content = data.get("content")
-            return clean_html_to_text(str(content)) if content else None
-        return None
 
     def parse_result(
         self,

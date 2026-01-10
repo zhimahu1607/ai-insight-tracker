@@ -5,9 +5,27 @@
 """
 
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
+import json
 from typing import Optional, Any
 
 from src.models import NewsItem, NewsSource
+from src.data_fetchers.text_utils import clean_html_to_text
+
+
+@dataclass(frozen=True)
+class DetailPageFields:
+    """
+    详情页提取结果（结构化）
+
+    - title: 通常来自详情页 <h1>
+    - content: 正文纯文本（尽量完整）
+    - date: 可选的日期文本（不同站点格式各异，这里不强制解析）
+    """
+
+    title: Optional[str] = None
+    content: Optional[str] = None
+    date: Optional[str] = None
 
 
 class BaseExtractor(ABC):
@@ -77,8 +95,50 @@ class BaseExtractor(ABC):
         Returns:
             正文文本，None 表示未提取到。
         """
-        _ = (extracted_content, source)
-        return None
+        fields = self.parse_detail_fields(extracted_content, source)
+        return fields.content if fields else None
+
+    def parse_detail_fields(
+        self,
+        extracted_content: str,
+        source: NewsSource,
+    ) -> Optional[DetailPageFields]:
+        """
+        将详情页提取结果解析为结构化字段（默认实现）。
+
+        默认假设 crawl4ai JsonCssExtractionStrategy 返回 JSON：
+        - list[dict]：常见，取第 0 个元素
+        - dict：少数情况
+        """
+        _ = source
+        if not extracted_content:
+            return None
+        try:
+            data = json.loads(extracted_content)
+        except json.JSONDecodeError:
+            return None
+
+        record: Optional[dict[str, Any]] = None
+        if isinstance(data, list) and data and isinstance(data[0], dict):
+            record = data[0]
+        elif isinstance(data, dict):
+            record = data
+
+        if not record:
+            return None
+
+        raw_title = record.get("title")
+        raw_content = record.get("content")
+        raw_date = record.get("date")
+
+        title = clean_html_to_text(str(raw_title)).strip() if raw_title else None
+        content = clean_html_to_text(str(raw_content)) if raw_content else None
+        date = clean_html_to_text(str(raw_date)).strip() if raw_date else None
+
+        if not title and not content and not date:
+            return None
+
+        return DetailPageFields(title=title or None, content=content or None, date=date or None)
 
     def get_detail_js_code(self) -> Optional[str]:
         """详情页需要执行的 JS（可选），默认复用不执行。"""
