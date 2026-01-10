@@ -1,0 +1,725 @@
+[
+  {
+    "id": "c0107b7e16772f5f",
+    "title": "Read more",
+    "url": "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "该科技资讯标题为'Read more'，来源为Claude Blog，但正文内容缺失，无法提供具体事件或详细分析。Claude Blog通常发布关于人工智能模型Claude的相关信息，涉及技术更新或行业动态，但本次资讯未包含实质性内容，可能是一个链接提示或资讯不完整。因此，无法评估其核心贡献、潜在应用或行业影响，读者需要参考其他来源获取完整信息。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:02.604017Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "cb68f8012abdc988",
+    "title": "Read more",
+    "url": "https://claude.com/blog/building-skills-for-claude-code",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "此科技资讯标题为 'Read more'，来源自 Claude Blog，但正文内容显示为 '无内容'，表明没有提供具体的新闻信息。由于缺乏实质性内容，无法提取关于技术事件、产品发布或研究成果的详细描述，无法确定谁做了什么、为什么重要或有什么影响。Claude Blog 通常与人工智能领域相关，但此条目仅作为占位符或错误链接，没有核心信息点或技术细节可供分析。读者需要查阅其他来源以获取实际资讯。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude Blog"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:27.944377Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "42bfc0352255435d",
+    "title": "Read more",
+    "url": "https://claude.com/blog/improving-frontend-design-through-skills",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "新闻标题为'Read more'，来源于Claude Blog，但正文内容缺失，无法提供具体的科技资讯分析。由于缺乏详细信息，无法判断事件主体、重要性和影响。建议查阅完整文章以获取相关内容。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "AI",
+        "LLM"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:51:39.098409Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "025c809f2dc55197",
+    "title": "Read more",
+    "url": "https://claude.com/blog/building-ai-agents-in-financial-services",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": "Guide: Building AI agents for financial servicesLearn how teams at NBIM, Brex, and more build reliable AI agents with Claude on AWS Bedrock.Read moreRead moreRead more",
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude Blog 发布了一份题为‘Building AI agents for financial services’的指南，该指南介绍了 NBIM、Brex 等公司的团队如何利用 Claude AI 模型在 AWS Bedrock 平台上构建可靠的 AI 代理。这一内容对于金融服务行业具有重要意义，因为它展示了 AI 技术在提高自动化、增强决策可靠性和优化客户服务方面的实际应用。指南通过分享成功案例，帮助其他金融机构学习和采用类似方法，加速 AI 在金融领域的部署，推动行业创新和效率提升。关键点包括使用 Claude on AWS Bedrock 来确保代理的可靠性，以及跨团队合作的经验分享。",
+      "category": "AI",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "AWS Bedrock",
+        "NBIM",
+        "Brex",
+        "AI agents"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:51:56.027479Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "40bee1741df14152",
+    "title": "Read more",
+    "url": "https://claude.com/blog/claude-code-on-the-web",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "新闻来自Claude Blog，标题为\"Read more\"，但正文内容为空，因此无法提供具体的科技资讯分析。由于缺乏实质内容，无法确定新闻的核心事件、技术细节或行业影响。这可能表明数据获取问题或更新中的错误，重要性未知，影响不明确。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:45.126373Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "e126a52ed9833e37",
+    "title": "Read more",
+    "url": "https://claude.com/blog/claude-and-slack",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "新闻标题为'Read more'，来源于Claude Blog，但正文无具体内容，因此无法提取核心科技信息或进行详细分析。该标题可能指示需进一步阅读更多内容，但由于缺乏实际报道、技术细节或行业动态，无法识别谁做了什么、为什么重要或有什么影响。这种情况下，只能基于现有信息描述新闻结构，强调无法提供实质性见解。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:27.019174Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "fdf5df5bef502dc4",
+    "title": "Read more",
+    "url": "https://claude.com/blog/claude-for-chrome",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "该资讯标题为'Read more'，发布在Claude Blog上，这是一家专注于人工智能领域的博客。然而，正文内容缺失，未提供任何具体科技新闻细节。因此，无法分析事件主体、行为动机、技术突破或行业影响。基于标题和来源推断，可能与Claude AI模型相关，但缺乏信息支持进一步解读。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:47.679449Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "0bf14bafc9480500",
+    "title": "Read more",
+    "url": "https://claude.com/blog/how-anthropic-teams-use-claude-code",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "本资讯标题为‘Read more’，来源于Claude博客，但正文内容未提供，因此无法提取具体新闻要点。Claude是Anthropic公司开发的大型语言模型，其博客通常分享人工智能领域的技术进展、产品更新或行业动态。由于信息缺失，无法分析此次发布的具体内容、重要性或潜在影响，可能涉及模型改进、功能发布或相关讨论。读者需查阅原博客以获取详细信息，这反映了资讯传递中的不完整性，但Claude作为AI领域的重要参与者，其动态常受关注。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "博客",
+        "人工智能"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:54.482675Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "5c68ad537d878866",
+    "title": "Read more",
+    "url": "https://claude.com/blog/integrations",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "该科技资讯标题为“阅读更多”，来源于Claude博客，但正文显示无内容。Claude博客是Anthropic公司用于发布人工智能和大语言模型相关新闻的平台。由于信息缺失，无法确定具体行动、技术更新或行业影响，可能是一个占位符或链接，暗示有更多信息但未在本资讯中提供。这提醒读者需要访问原始来源以获取完整资讯，但基于现有内容，无法分析关键功能、研究成果或动态背景。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude博客",
+        "阅读更多"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:51:25.140416Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "eed3cd118461a9e6",
+    "title": "Read more",
+    "url": "https://claude.com/blog/max-plan",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "该资讯来源于Claude Blog，标题为'Read more'，但正文无内容，因此无法获取详细新闻要点。Claude Blog通常发布与Anthropic开发的Claude大语言模型相关的信息，可能涉及产品更新、技术突破或行业动态。由于缺乏具体内容，无法分析谁做了什么、为什么重要或有什么影响。读者应访问原来源以获取完整资讯。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "Blog"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:38.330161Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ba8377c644dbf23c",
+    "title": "Extending Claude’s capabilities with skills and MCP servers",
+    "url": "https://claude.com/blog/extending-claude-capabilities-with-skills-mcp-servers",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "根据Claude博客的标题《Extending Claude’s capabilities with skills and MCP servers》，该资讯涉及扩展Claude大语言模型的能力，通过引入skills（技能）和MCP（可能指Model Context Protocol）服务器。推测Anthropic公司或Claude团队发布了新功能，允许开发者创建自定义技能或集成外部工具，以提升Claude的灵活性和可扩展性。这一更新对于开发者社区和用户来说具有重要意义，因为它可能简化AI模型的应用集成，促进第三方开发，从而增强Claude在多样化场景中的实用性。但由于正文无具体内容，技术细节和应用范围尚不明确，分析基于标题和常见科技动态推断。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "Claude",
+        "skills",
+        "MCP servers",
+        "Anthropic",
+        "Model Context Protocol"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:52.583767Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "6eda6a632e2933dd",
+    "title": "Skills for organizations, partners, the ecosystem",
+    "url": "https://claude.com/blog/organization-skills-and-directory",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude AI博客发布了一篇标题为'Skills for organizations, partners, the ecosystem'的新闻。Claude是Anthropic开发的大语言模型，本次更新聚焦于为组织、合作伙伴和生态系统提供特定技能，可能涉及新功能发布或合作倡议。重要性在于增强各方在商业和协作中利用人工智能的能力，影响可能包括推动AI技术更广泛的应用、促进企业运营优化、加强合作伙伴关系以及支持生态系统创新。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "技能",
+        "组织",
+        "合作伙伴",
+        "生态系统"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:08.892696Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "fa79f2dfaee1184e",
+    "title": "Making Claude a better electrical engineer",
+    "url": "https://claude.com/blog/making-claude-a-better-electrical-engineer",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "该新闻标题‘Making Claude a better electrical engineer’来自Claude官方博客，表明Anthropic公司正致力于改进其AI模型Claude，以提升其在电气工程领域的专业能力。这一改进可能涉及模型训练数据的增强、算法优化或新增针对电气工程任务的功能，使Claude能够更好地理解和执行相关技术操作。其重要性在于展示了AI技术在特定专业领域的深入应用，有助于提高电气工程师的工作效率和设计精度。潜在影响包括推动AI辅助工程工具的发展、促进跨领域AI模型的专业化探索，以及为其他工程行业提供技术参考。由于正文内容缺失，具体改进细节和发布时间尚未明确。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Claude",
+        "电气工程师",
+        "AI模型",
+        "功能改进",
+        "专业应用"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:53.422685Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "98d7396996017881",
+    "title": "Claude Code power user customization: How to configure hooks",
+    "url": "https://claude.com/blog/how-to-configure-hooks",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude博客发布了一篇指南，介绍如何为Claude Code的高级用户定制配置hooks。这允许开发者通过hooks机制自定义Claude Code的工作流程，提升工具的灵活性和控制力。针对power users，该功能可能支持代码生成、自动化处理等场景的深度定制，增强用户体验和生产力。尽管新闻正文未提供具体细节，但标题强调了定制化的重要性，有助于开发者更有效地利用Claude Code的潜力。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude Code",
+        "hooks",
+        "customization",
+        "configure",
+        "power user"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:55.752134Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "7f88b448300910e7",
+    "title": "How Anthropic's legal team cut review times from days to hours with Claude",
+    "url": "https://claude.com/blog/how-anthropic-uses-claude-legal",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Anthropic 的法律团队通过使用其开发的大语言模型 Claude，将法律文件审查时间从几天显著缩短到几小时。这一应用展示了 AI 工具在企业内部工作流程中的实际效果，突出了 Claude 在处理复杂文本分析任务上的能力，如自动审核和法律合规检查。此举不仅提高了 Anthropic 内部的工作效率，节省了时间和资源，还可能为法律行业及其他领域提供 AI 集成范例，推动更多组织采用类似技术以优化运营。关键点在于 Claude 的自动化功能加速了审查过程，实现了生产力的飞跃提升。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "Anthropic",
+        "Claude",
+        "legal review",
+        "time efficiency",
+        "AI application"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:50.108959Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "3583ffde0526b1f9",
+    "title": "Claude Code and Slack",
+    "url": "https://claude.com/blog/claude-code-and-slack",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "根据资讯标题“Claude Code and Slack”和来源“Claude Blog”，推测可能与Claude AI的代码相关功能与Slack协作平台的集成或合作有关。Claude是Anthropic开发的大语言模型，以其在代码生成和自然语言处理方面的能力而知名；Slack则是广泛使用的企业通信工具，常用于团队协作。这种潜在的集成可能旨在将AI助手引入工作流程，提升开发效率、代码审查或自动化任务，从而优化团队生产力。但由于正文无详细内容，具体功能、技术实现、发布时间及商业影响尚不明确。整体来看，这可能是AI技术在应用层面的一次探索，将LLM能力整合到日常办公工具中。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "Slack",
+        "Code",
+        "AI",
+        "Anthropic"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:10.212091Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "12e0dc58a3c7d4fb",
+    "title": "What are the key benefits of transitioning to agentic coding for software development?",
+    "url": "https://claude.com/blog/key-benefits-transitioning-agentic-coding",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "在Claude Blog上，一篇文章探讨了转向代理编码（agentic coding）的关键好处。代理编码指的是利用AI代理，如Claude等大语言模型，来辅助或自动化软件开发过程。这种转变的重要性在于能够显著提升编码效率、减少人为错误，并加速软件开发生命周期，从而帮助开发团队优化工作流程。具体影响包括促进AI在编程领域的更广泛应用，推动软件开发向智能化、自动化方向发展，可能改变传统编码模式，并为行业带来更高的生产力和创新潜力。文章重点强调了代理编码如何通过AI代理理解和生成代码，实现与开发人员的无缝协作。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "Claude",
+        "agentic coding",
+        "software development",
+        "AI coding",
+        "Anthropic"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:36.546859Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "dee09fbc2a065f5f",
+    "title": "Using CLAUDE.md files: Customizing Claude Code for your codebase",
+    "url": "https://claude.com/blog/using-claude-md-files",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Anthropic公司通过Claude Blog发布资讯，介绍了使用CLAUDE.md文件定制Claude代码以适配特定代码库的方法。该功能允许开发者根据项目需求自定义Claude模型的代码生成和交互行为，从而提升AI辅助编程工具的实用性和集成效率。这对于推动大语言模型在软件开发中的定制化应用具有重要意义，可能帮助开发者更高效地利用Claude进行代码编写和优化，促进LLM技术在行业中的进一步普及。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "CLAUDE.md",
+        "代码库",
+        "定制",
+        "Anthropic"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:57.260322Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "908d4ea8e70fdfc1",
+    "title": "What’s new in Claude: Turning Claude into your thinking partner",
+    "url": "https://claude.com/blog/your-thinking-partner",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude AI模型通过最新更新被转变为用户的思考伙伴，这一新功能由Anthropic在其官方博客中宣布。它旨在增强Claude的对话和协作能力，使其能更有效地辅助用户进行头脑风暴、问题解决和决策制定，标志着AI从单纯工具向智能合作伙伴的演进。这一更新对提升用户体验和工作效率有潜在积极影响，尽管具体技术细节未在资讯中提供，但它反映了AI行业向更人性化、交互式发展的趋势，可能推动在教育、创意产业和专业领域的广泛应用。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Claude",
+        "thinking partner",
+        "AI assistant",
+        "product update",
+        "Anthropic"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:56.115259Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "735b02a1d1e428df",
+    "title": "How to create Skills: Key steps, limitations, and examples",
+    "url": "https://claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude Blog发布了一篇标题为‘How to create Skills: Key steps, limitations, and examples’的文章，但正文内容未提供。该标题表明这可能是一份关于创建AI技能的指南，涵盖关键步骤、限制和实际例子。Claude是Anthropic开发的大语言模型，因此指南可能针对其生态系统中的技能开发，帮助用户和开发者理解和应用AI技术。技能创建通常涉及设计、实现和测试等环节，这对于推动AI工具的实用化和创新具有参考意义，尤其在大语言模型日益普及的背景下。然而，由于缺乏具体内容，详细信息无法确认，但这篇指南的发布反映了AI领域对技能开发教育的重视。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "Skills",
+        "AI技能",
+        "指南",
+        "步骤"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:46.845841Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "77a94ab9408ac3fd",
+    "title": "How three YC startups built their companies with Claude Code",
+    "url": "https://claude.com/blog/building-companies-with-claude-code",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude博客报道了三家Y Combinator支持的初创公司如何利用Claude Code成功建立和运营他们的企业。Claude Code是基于Claude AI的编程辅助工具，这些公司分享了它在提高开发效率、优化代码质量和加速产品迭代方面的实际应用经验。这一案例展示了AI辅助编程工具在创业环境中的实用性和商业价值，强调了Claude Code作为技术杠杆的重要性，可能激励更多创业者采用类似AI工具，推动软件开发领域的创新和市场采用。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Claude Code",
+        "Y Combinator",
+        "初创公司",
+        "AI",
+        "编程辅助"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:08.191829Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "bd64c94d11d6dab3",
+    "title": "Structured outputs on the Claude Developer Platform",
+    "url": "https://claude.com/blog/structured-outputs-on-the-claude-developer-platform",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "Claude 开发者平台推出了结构化输出功能，该功能允许开发者在调用 AI 模型时以预定义格式接收响应。这一技术改进提高了数据处理效率和集成便捷性，对于构建稳定、可扩展的 AI 应用至关重要。结构化输出减少了手动解析的复杂性，有助于加速开发流程并促进 Claude 模型的商业化应用，展示了 AI 技术向更实用和开发者友好的方向发展。作为 Anthropic 开发的大语言模型平台，这一更新可能影响开发者社区，推动更多创新项目的实施。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "Anthropic",
+        "Structured outputs",
+        "Developer Platform"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:10.686187Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "d051211fc97fd906",
+    "title": "Skills explained: How Skills compares to prompts, Projects, MCP, and subagents",
+    "url": "https://claude.com/blog/skills-explained",
+    "source_name": "Claude Blog",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-10T06:34:40.311506Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "crawler",
+    "company": "anthropic",
+    "light_analysis": {
+      "summary": "本资讯来自Claude Blog，标题为“Skills explained: How Skills compares to prompts, Projects, MCP, and subagents”。文章可能解释了Claude AI中Skills功能的核心机制，并通过与prompts、Projects、MCP和subagents的比较，阐述其技术差异和应用场景。这种比较有助于用户理解不同AI工具的功能区别，优化Claude系统的使用方式，可能影响开发者设计和集成AI应用。然而，由于正文内容缺失，具体技术细节和影响范围未详述。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "Claude",
+        "Skills",
+        "prompts",
+        "MCP",
+        "subagents"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:42.220775Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "202deb863988abc0",
+    "title": "下一步 →",
+    "url": "https://cursor.com/blog/page/2",
+    "source_name": "Cursor Blog (CN)",
+    "source_category": "ai",
+    "language": "zh",
+    "published": "2026-01-10T06:34:38.636433Z",
+    "summary": null,
+    "content": null,
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "cursor",
+    "light_analysis": {
+      "summary": "本次资讯来自 Cursor 中文博客，标题为‘下一步 →’，但正文未提供任何具体内容，因此无法提取详细的新闻核心要点。资讯可能暗示 Cursor 作为 AI 驱动的代码编辑器，即将发布新功能或产品更新，例如代码生成、调试辅助等 AI 技术的改进。由于缺乏具体信息，无法确定技术细节或实际影响，但这种情况常见于产品预告或博客更新，提醒读者关注后续发布。Cursor 的潜在更新可能对开发者社区和编程工具市场产生影响，但目前仅能基于标题推测其方向性。",
+      "category": "其他",
+      "sentiment": "neutral",
+      "keywords": [
+        "Cursor",
+        "AI 代码编辑器",
+        "博客",
+        "预告",
+        "产品更新"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:50:27.447426Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "9fb4717bc8ef201d",
+    "title": "产品 ·",
+    "url": "https://cursor.com/cn/blog/agent-best-practices",
+    "source_name": "Cursor Blog (CN)",
+    "source_category": "ai",
+    "language": "zh",
+    "published": "2026-01-09T00:00:00Z",
+    "summary": "使用 Agent 编码的最佳实践",
+    "content": "博客/产品使用 Agent 编码的最佳实践Jan 9, 2026由Cursor Team在产品目录↓编码 Agent 正在改变构建软件的方式。模型现在可以连续运行数小时，完成大规模的多文件重构，并持续迭代直到测试通过。但要充分发挥 Agent 的能力，你需要理解它们的工作原理，并形成新的使用范式。本指南重点介绍如何使用 Cursor Agent 的各种技巧。无论你是刚开始尝试基于 Agent 的编码，还是想了解我们团队是如何使用 Cursor 的，我们都会系统性地讲解使用 Agent 编码的最佳实践。#了解 agent harness一个 agent harness 建立在三个组件之上：Instructions：用于引导 agent 行为的 system prompt 和规则Tools：文件编辑、代码库搜索、终端执行等工具User messages：你用来指挥工作的提示词和后续交互Cursor 的 agent harness 会为我们支持的每个模型编排这些组件。我们会基于内部评估和外部基准测试，为每个前沿模型专门调整 instructions和工具。harness 之所以重要，是因为不同模型对相同提示词的响应方式不同。一个在 shell 型工作流上大量训练过的模型，可能更偏好使用grep而不是专门的搜索工具；另一个模型可能需要明确的指令，在编辑后调用 linter 工具。Cursor 的 agent 会帮你处理这些细节，因此当新模型发布时，你可以把精力放在构建软件本身上。#从规划开始你能做出的最大改变，就是在编写代码之前先进行规划。来自芝加哥大学的一项研究发现，有经验的开发者更倾向于在生成代码之前先进行规划。规划会促使你更清晰地思考自己要构建的内容，并为 Agent 提供明确的目标去实现。#使用 Plan 模式在 agent 输入框中按下Shift+Tab以切换 Plan 模式。agent 不会立即编写代码，而是会：分析你的代码库以查找相关文件就你的需求提出澄清问题创建包含文件路径和代码引用的详细实现计划在开始构建前等待你的确认Plan 模式实战：agent 会提出澄清问题并创建可审查的计划。计划会以 Markdown 文件的形式打开，你可以直接编辑它们，以删除不必要的步骤、调整实现方式，或补充 agent 遗漏的上下文。提示：点击 “Save to workspace” 将计划存储到.cursor/plans/。这样可以为你的团队创建文档，方便在中断后继续工作，并为未来在同一特性上工作的 agent 提供上下文。并不是每个任务都需要详细的计划。对于一些简单的小改动，或是你已经做过很多次的任务，直接交给 agent 处理就可以。#从计划重新开始有时 agent 生成的内容并不符合你的预期。与其试图通过后续提示来修修补补，不如回到计划本身。先回滚这些改动，重新细化计划，把你的需求描述得更具体，然后再运行一次。这样通常比修一个进行中的 agent 更快，生成的结果也更干净利落。#管理上下文随着你越来越习惯由 agent 编写代码，你的主要工作就变成：为每个 agent 提供完成其任务所需的上下文。#让 agent 自行获取上下文你不需要在提示里手动标记每一个文件。Cursor 的 agent 具备强大的搜索工具，并且可以按需获取上下文。比如，当你询问 “the authentication flow”（身份验证流程）时，agent 会通过grep和语义搜索找到相关文件，即使你的提示里没有包含这些完全相同的词语。即时 grep 让 agent 能在毫秒级搜索你的代码库。保持简单：如果你知道确切的文件，就在提示中引用它；如果不知道，就交给 agent 去查找。包含不相关的文件可能会让 agent 弄不清哪些内容才是重要的。Cursor 的 agent 还提供了许多实用工具，比如@Branch，可以让你为 agent 提供你当前工作的上下文。诸如 “Review the changes on this branch” 或 “What am I working on?” 之类的请求，会成为引导 agent 了解你当前任务的自然方式。#什么时候开始一个新对话许多人都会问：我应该继续这个对话，还是重新开始一个新的？在以下情况下开始新对话：你要切换到一个不同的任务或功能Agent 看起来很困惑，或者总是在犯同样的错误你已经完成了一个逻辑完整的工作单元在以下情况下继续当前对话：你还在对同一个功能进行迭代Agent 需要用到先前讨论中的上下文你正在调试它刚刚构建出来的内容过长的对话可能会让 Agent 失去焦点。经过多轮对话和多次总结后，上下文里会积累噪音，Agent 容易被分散注意力或切换到不相关的任务。如果你发现 Agent 的效果在下降，就是该开始一个新对话的时候了。#引用以往的工作成果当你开始一段新对话时，可以使用@Past Chats引用之前的工作成果，而不是把整段对话原封不动地复制粘贴过来。Agent 可以有选择地读取聊天记录，只提取它所需要的上下文。这样比重复整个对话要高效得多。#扩展 AgentCursor 提供两种主要方式来自定义 Agent 的行为：Rules提供适用于每次对话的静态上下文，Skills则提供 Agent 在需要时可以调用的动态能力。#Rules：为你的项目提供静态上下文Rules 提供持续生效的指令，用来塑造 agent 如何处理你的代码。可以把它们看作始终生效的上下文，agent 在每次对话开始时都会先看到这些内容。在.cursor/rules/中以文件夹形式创建规则，每个文件夹包含一个RULE.md文件：# Commands-`npm run build`: Build the project-`npm run typecheck`: Run the typechecker-`npm run test`: Run tests (prefer single test files for speed)# 代码风格-使用 ES 模块(import/export),而非 CommonJS(require)-尽可能使用解构导入:`import { foo } from 'bar'`-参考`components/Button.tsx`了解标准组件结构# Workflow-Always typecheck after making a series of code changes-API routes go in`app/api/`following existing patterns让规则聚焦在要点上：需要运行的命令、应遵循的模式，以及指向你代码库中规范示例的引用。引用文件而不是复制其内容；这样可以让规则保持简洁，并避免在代码变更后迅速过时。在规则中应避免：复制整份风格指南（改用 linter）记录所有可能的命令（agent 已经了解常用工具）为极少适用的边缘情况添加指令提示：从简单开始。只有当你发现 agent 反复犯同样的错误时，再新增规则。在真正理解自己的模式之前，不要过度优化。将规则提交到 Git，让整个团队都能受益。当你看到 agent 犯错时，更新对应的规则。你甚至可以在 GitHub issue 或 PR 中标记@cursor，让 agent 帮你更新规则。#Skills：动态能力与工作流Agent Skills扩展了 agent 的能力范围。Skills 封装了特定领域的知识、工作流和脚本，agent 在需要时可以调用。Skills 定义在SKILL.md文件中，并且可以包括：Custom commands：通过在 agent 输入中使用/触发的可复用工作流Hooks：在 agent 动作之前或之后运行的脚本Domain knowledge：agent 可按需调用的针对特定任务的指令与始终包含的 Rules 不同，Skills 会在 agent 认为相关时动态加载。这样既能保持你的上下文窗口简洁，又能为 agent 提供访问专业能力的途径。#示例：长时间运行的 agent 循环一个常用且强大的模式是使用 Skills 来创建长时间运行的 agent，让它不断迭代直到实现某个目标。下面是一个示例，展示如何构建一个 hook，让 agent 一直工作，直到所有测试都通过。首先，在.cursor/hooks.json中配置该 hook：{\"version\":1,\"hooks\": {\"stop\": [{\"command\":\"bun run .cursor/hooks/grind.ts\"}]}}hook 脚本（.cursor/hooks/grind.ts）从标准输入（stdin）接收上下文，并返回一个followup_message，用于继续循环：import{ readFileSync, existsSync }from\"fs\";interfaceStopHookInput{conversation_id:string;status:\"completed\"|\"aborted\"|\"error\";loop_count:number;}constinput:StopHookInput=awaitBun.stdin.json();constMAX_ITERATIONS=5;if(input.status!==\"completed\"||input.loop_count>=MAX_ITERATIONS) {console.log(JSON.stringify({}));process.exit(0);}constscratchpad=existsSync(\".cursor/scratchpad.md\")?readFileSync(\".cursor/scratchpad.md\",\"utf-8\"):\"\";if(scratchpad.includes(\"DONE\")) {console.log(JSON.stringify({}));}else{console.log(JSON.stringify({followup_message:`[迭代 ${input.loop_count+1}/${MAX_ITERATIONS}] 继续工作。完成后在 .cursor/scratchpad.md 中更新为 DONE。`}));}这种模式适用于：一直运行（并修复问题），直到所有测试通过反复迭代 UI，直到与设计稿一致任何目标导向且成功结果可验证的任务提示：结合 hooks 的 Skills 可以集成安全工具、机密信息管理工具以及可观测性平台。有关合作伙伴集成，请参阅hooks 文档。Agent Skills 目前仅在 nightly 发布通道中可用。打开 Cursor 设置，选择 Beta，将更新通道设置为 Nightly，然后重启。除了编写代码之外，你还可以把 agent 连接到你日常使用的其他工具。MCP (Model Context Protocol)允许 agent 读取 Slack 消息、分析 Datadog 日志、调试来自 Sentry 的错误、查询数据库等。#包含图片Agent 可以直接处理你在提示中提供的图片。你可以粘贴截图、拖入设计文件，或引用图片路径。#从设计到代码粘贴设计稿并让 Agent 帮你实现。Agent 能识别图片，并匹配布局、颜色和间距。你也可以使用Figma MCP 服务器。#可视化调试对错误状态或异常 UI 截图，然后让 Agent 帮你排查问题。这样通常比用文字描述要更高效。Agent 还可以控制浏览器自行截屏、测试应用，并验证界面变化。详情请参阅Browser 文档。浏览器侧边栏让你可以一边设计一边编码。#常见工作流以下是几种在不同类型任务中都非常有效的 Agent 使用模式。#测试驱动开发智能体可以自动编写代码、运行测试并进行迭代：让智能体根据预期的输入/输出对编写测试。要明确说明你在做 TDD，这样它就会避免为尚不存在的功能编写模拟实现。让智能体运行测试并确认测试确实失败。明确说明在这个阶段不要编写实现代码。在你对测试满意后提交这些测试。让智能体编写能通过测试的代码，并指示它不要修改测试。告诉它持续迭代，直到所有测试通过。在你对改动满意后提交实现代码。当智能体有清晰的迭代目标时，它的表现最好。测试可以让智能体在不断修改的同时评估结果，并逐步改进直到全部通过。#理解代码库在接手一个新代码库时，可以使用 Agent 来进行学习和探索。像向队友请教一样提问：“这个项目里的日志是如何运作的？”“我该如何添加一个新的 API endpoint？”“`CustomerOnboardingFlow` 处理了哪些边界情况？”“为什么我们在第 1738 行调用的是 `setUser()` 而不是 `createUser()`？”Agent 会同时使用 `grep` 和语义搜索在整个代码库中查找答案。这是快速上手陌生代码库的最高效方式之一。#Git 工作流Agent 智能体可以查找 Git 历史记录、解决合并冲突，并自动化你的 Git 工作流。例如，一个/pr命令可以提交、推送代码并打开一个 pull request：为当前更改创建 Pull Request。1.使用`git diff`查看已暂存和未暂存的更改2.根据更改内容编写清晰的提交信息3.提交并推送到当前分支4.使用`gh pr create`创建 Pull Request,并提供标题和描述5.完成后返回 PR URL命令非常适合你每天会多次运行的工作流。将它们保存为 Markdown 文件放在.cursor/commands/中，并提交到 git，这样整个团队都可以使用。我们使用的其他命令示例：/fix-issue [number]：使用gh issue view获取 issue 详情，查找相关代码，进行修复并打开一个 PR/review：运行 linter 工具，检查常见问题，并总结可能需要关注的内容/update-deps：检查过时依赖项并逐个更新，每次更新后运行测试Agent 智能体可以自动使用这些命令，这样你就可以只通过一次/调用来委托多步工作流。#代码审查AI 生成的代码同样需要代码审查，Cursor 提供了多种方式。#生成过程中实时查看 agent 的工作过程。Diff 视图会在更改发生时即时显示。如果你发现 agent 的修改方向不对，可以按下Escape中断并重新引导。#Agent ReviewAgent 完成后，点击Review→Find Issues来运行一次专门的审查流程。Agent 会逐行分析建议的修改，并标记潜在问题。对于所有本地更改，打开 Source Control 选项卡并运行 Agent Review，与主分支进行对比。AI 代码审查可在 Cursor 中直接发现并修复 bug。#用于 Pull Request 的 Bugbot推送到代码仓库后，即可为 Pull Request 获取自动化代码审查。Bugbot会进行高级分析，以尽早发现问题，并为每个 PR 提出改进建议。#架构图对于重大变更，可以让 agent 帮你生成架构图。可以这样提示它：\"Create a Mermaid diagram showing the data flow for our authentication system, including OAuth providers, session management, and token refresh.\" 这些图对编写文档非常有帮助，并且可以在代码评审之前提前发现架构问题。#并行运行 AgentCursor 让你可以轻松并行运行多个 Agent，而且它们之间不会互相干扰。我们发现，让多个模型同时尝试解决同一个问题，再从中选出最优结果，可以显著提升最终输出质量，尤其适用于更棘手的任务。#原生 worktree 支持Cursor 会为并行运行的 agent 自动创建和管理git worktrees。每个 agent 都在自己的 worktree 中运行，文件和更改彼此隔离，因此各个 agent 可以编辑、构建和测试代码，而不会相互干扰。要在 worktree 中运行 agent，请在 agent 的下拉菜单中选择 worktree 选项。agent 完成后，点击Apply，将其更改合并回你当前的工作分支。#同时运行多个模型一种非常强大的使用方式是：让同一个提示词同时在多个模型上运行。从下拉菜单中选择多个模型，提交你的提示词，然后将结果并排比较。Cursor 还会提示它认为最优的解决方案。这在以下场景中特别有用：棘手的问题，不同模型可能会采用不同的方法比较不同模型家族之间的代码质量发现某个模型可能遗漏的边缘情况在并行运行大量 Agent 时，配置通知和声音提醒，以便在它们完成时获知进度。#将任务委托给云端 Agent对于那些原本会被你丢进待办列表的任务，云端 Agent 非常适合处理：在处理其他工作时顺带发现的 bug 修复最近代码改动的重构为现有代码生成测试文档更新你可以根据任务在本地 Agent 和云端 Agent 之间切换。可以从cursor.com/agents、Cursor 编辑器或手机启动云端 Agent。离开工位时，可以通过网页或手机查看会话进度。云端 Agent 在远程沙箱中运行，因此你可以合上电脑，稍后再回来查看结果。在 cursor.com/agents 管理多个云端 Agent云端 Agent 在幕后是这样工作的：描述任务以及相关上下文Agent 克隆你的仓库并创建一个分支它会自主工作，并在完成后打开一个 pull request任务完成后你会收到通知（通过 Slack、电子邮件或 Web 界面）审查改动并在准备好后合并提示：你可以在 Slack 中通过“@Cursor”来触发 Agent。了解更多。#针对棘手 bug 的 Debug Mode当标准 agent 交互难以解决某个 bug 时，Debug Mode 提供了一种不同的调试思路。与其凭感觉猜测修复方案，Debug Mode 会：生成多个关于可能出错原因的假设使用日志语句对你的代码进行埋点要求你在收集运行时数据的同时复现该 bug分析实际行为来精准定位根本原因基于证据进行有针对性的修复它最适合用于：你能复现但搞不清原因的 bug竞争条件和时序问题性能问题和内存泄漏之前能正常工作、但现在出现回归的问题关键是提供如何复现问题的详细上下文信息。你描述得越具体，agent 添加的埋点就越有价值。#打造你的工作流程那些能最大化利用 agent 的开发者通常有一些共同特点：他们会写具体的提示。指令越具体，agent 的成功率就越高。对比一下“add tests for auth.ts”和“Write a test case for auth.ts covering the logout edge case, using the patterns in__tests__/and avoiding mocks.”。他们会不断迭代自己的配置。从简单开始。只有当你发现 agent 一再犯同样的错误时，才添加规则。只有当你摸索出一个想要重复使用的工作流程时，才添加命令。在真正理解自己的模式之前，不要过度优化。他们会认真 review。AI 生成的代码看起来可能是对的，但实际上可能存在细微错误。阅读 diff，并认真进行 review。agent 工作得越快，你的 review 流程就越重要。他们会提供可验证的目标。agent 无法修复它“看不见”的问题。使用强类型语言，配置 linters，并编写测试。给 agent 明确的信号，以判断更改是否正确。他们把 agent 当作有能力的协作者。让它给出计划，要求它解释，对你不认可的方案要敢于提出质疑。Agent 正在快速进化。即使模式会随着新模型而变化，我们也希望这些经验能帮助你在使用编程 agent 时更高效地完成工作。开始使用Cursor 的 agent来尝试这些技巧吧。归档于：产品作者: Cursor Team",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "cursor",
+    "light_analysis": {
+      "summary": "Cursor Team 发布了一份关于使用 Cursor Agent 进行编码的最佳实践指南。指南介绍了 Agent harness 的构成，包括 Instructions、Tools 和 User messages，并强调了规划的重要性，如使用 Plan 模式进行代码预分析。关键功能包括通过 Rules 提供静态上下文、Skills 扩展动态能力、并行运行 Agent 以提高代码质量，以及云端 Agent 处理后台任务。这些最佳实践帮助开发者充分利用 AI 编码 Agent 的能力，适应新的软件开发范式，提高编码效率和软件质量，推动自动化编码工具的普及。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Cursor",
+        "Agent",
+        "编码",
+        "最佳实践",
+        "Plan 模式"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:38.593792Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "26d6cafefbda2f6e",
+    "title": "研究 ·",
+    "url": "https://cursor.com/cn/blog/dynamic-context-discovery",
+    "source_name": "Cursor Blog (CN)",
+    "source_category": "ai",
+    "language": "zh",
+    "published": "2026-01-06T00:00:00Z",
+    "summary": "动态上下文发现",
+    "content": "博客/研究动态上下文发现Jan 6, 2026由Jediah Katz在研究目录↑用于动态上下文发现的文件1. 将较长的工具响应转换为文件2. 在摘要过程中引用对话历史3. 支持 Agent Skills 开放标准4. 高效地仅加载所需的 MCP 工具5. 将所有集成终端会话视为文件简单抽象代码 Agent 正在迅速改变软件的开发方式。它们的快速进步既来自更强的 Agent 模型，也来自更好的上下文工程，用于引导其行为。Cursor 的 agent harness（我们为模型提供的指令和工具）会针对我们支持的每一个新的前沿模型进行单独优化。不过，我们还可以在一些对所有模型都适用的上下文工程方面做改进，比如我们如何收集上下文，以及如何在长时间交互过程中优化 token 使用。随着模型在充当 Agent 方面的能力不断提升，我们发现，预先提供更少的细节，反而能让 Agent 更容易自主地按需提取相关上下文。我们将这一模式称为动态上下文发现（dynamic context discovery），与始终被包含的静态上下文（static context）相对。#用于动态上下文发现的文件动态上下文发现的 token 使用效率要高得多，因为只会将必要的数据引入上下文窗口。同时，它还能通过减少上下文窗口中可能造成混淆或互相矛盾的信息量来提升 agent 的回复质量。以下是我们在 Cursor 中使用动态上下文发现的做法：将较长的工具响应转化为文件在总结时引用聊天记录支持 Agent Skills 开放标准高效地仅加载所需的 MCP 工具将所有集成终端会话视为文件#1. 将较长的工具响应转换为文件工具调用可能会因为返回体积巨大的 JSON 响应而显著增加上下文窗口的大小。对于 Cursor 中的自研工具，比如编辑文件和搜索代码库，我们可以通过合理的工具定义和精简的响应格式来避免上下文膨胀，但第三方工具（如 shell 命令或 MCP 调用）并不能天然享受同样的优化。常见的做法是，代码 Agent 会截断较长的 shell 命令输出或 MCP 结果。这可能导致数据丢失，其中可能包括你希望保留在上下文中的重要信息。在 Cursor 中，我们则是把输出写入文件，并赋予 Agent 读取该文件的能力。Agent 会调用tail来检查末尾内容，如有需要再继续向后读取更多内容。这样在接近上下文上限时，就能减少不必要的额外总结。#2. 在摘要过程中引用对话历史当模型的上下文窗口被填满时，Cursor 会触发一次摘要步骤，为 Agent 提供一个全新的上下文窗口，其中包含它迄今为止工作的摘要。但由于这是对上下文的有损压缩，Agent 的掌握情况在摘要之后可能会变差，可能会忘记任务中的关键细节。在 Cursor 中，我们将对话历史作为文件提供，以提升摘要的质量。在达到上下文窗口上限后，或者用户决定手动进行摘要时，我们会给 Agent 一个指向历史文件的引用。如果 Agent 发现自己需要的更多细节没有包含在摘要中，它可以在历史中搜索以找回这些信息。#3. 支持 Agent Skills 开放标准Cursor 支持Agent Skills，这是一种用于为编码 Agent 扩展专用能力的开放标准。与其他类型的Rules类似，Skills 由文件定义，这些文件会告诉 Agent 如何执行特定领域的任务。Skills 还包括名称和描述，可以作为“静态上下文”包含在系统提示词中。随后，Agent 可以进行动态上下文发现，使用诸如 grep 和 Cursor 的语义搜索等工具自动引入相关的 Skills。Skills 还可以打包与任务相关的可执行文件或脚本。由于它们本质上只是文件，Agent 可以轻松找到与某个特定 Skill 相关的内容。#4. 高效地仅加载所需的 MCP 工具MCP 有助于访问受 OAuth 保护的资源，比如生产环境日志、外部设计文件，或企业内部的上下文和文档。有些 MCP 服务器包含很多工具，且往往带有很长的描述，这会显著膨胀上下文窗口。即使这些工具始终被包含在提示中，其中大部分实际上并不会被使用。如果你使用多个 MCP 服务器，这个问题会被进一步放大。指望每个 MCP 服务器都为此进行优化并不现实。我们认为，降低上下文占用是编码 Agent 的责任。在 Cursor 中，我们通过将工具描述同步到一个文件夹，为 MCP 提供了动态上下文发现能力。1Agent 现在只会收到一小段静态上下文（包括工具名称），并在任务需要时再去查找具体工具。在一次 A/B 测试中，我们发现：在会调用 MCP 工具的运行中，这一策略将 Agent 的总 token 消耗减少了 46.9%（这一结果在统计上显著，但会随已安装 MCP 的数量产生较大波动）。这种基于文件的方案还带来了一个好处：可以向 Agent 传达 MCP 工具的状态。比如，以前如果某个 MCP 服务器需要重新认证，Agent 会完全“遗忘”这些工具，让用户摸不着头脑。现在，它可以主动提示用户进行重新认证。#5. 将所有集成终端会话视为文件过去你需要把终端会话的输出复制粘贴到 Agent 的输入中，Cursor 现在会自动将集成终端的输出同步到本地文件系统。这样你就可以轻松询问“为什么我的命令失败了？”，并让 Agent 理解你具体在引用什么。由于终端历史可能很长，Agent 可以只对相关输出进行 grep，这对于像服务器这类长时间运行的进程所产生的日志尤其有用。这与基于 CLI 的编码 Agent 所看到的情况相似：它们同样可以在上下文中访问先前的 shell 输出，但这里是动态发现的，而不是静态注入的。#简单抽象目前还不清楚，文件是否会成为基于 LLM 的工具的最终接口形式。不过，随着编码 Agent 的快速发展，文件一直是一种简单而强大的原语，相比再造出一种无法充分兼顾未来的抽象层，也是更安全的选择。请持续关注，我们将在这个方向分享更多令人兴奋的进展。这些改进会在未来几周内向所有用户陆续上线。这篇博文中介绍的技术成果来自许多 Cursor 员工的共同努力，包括 Lukas Moller、Yash Gaitonde、Wilson Lin、Jason Ma、Devang Jhabakh 和 Jediah Katz。如果你有兴趣用 AI 解决最具挑战性和雄心的编码任务，我们非常期待与你交流。欢迎通过hiring@cursor.com与我们联系。我们曾考虑过采用工具搜索的方式，但那会把工具散落在一个扁平索引中。相反，我们为每个服务器创建一个文件夹，使每个服务器的工具在逻辑上保持分组。当模型列出某个文件夹时，它会一次性看到该服务器的所有工具，并可以将它们理解为一个整体单元。文件还支持更强大的搜索能力——Agent 可以使用完整的rg参数，甚至利用jq来过滤工具描述。↩归档于：研究作者: Jediah Katz",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "cursor",
+    "light_analysis": {
+      "summary": "Cursor 公司发布动态上下文发现技术，用于优化编码 Agent 的上下文管理，以提高 token 使用效率和回复质量。该技术通过将较长的工具响应转换为文件进行动态加载、在摘要过程中引用对话历史以避免信息丢失、支持 Agent Skills 开放标准以扩展能力、高效仅加载所需的 MCP 工具以减少上下文膨胀，并将集成终端会话视为文件以方便动态访问。这些改进使 token 消耗减少了 46.9%，避免了数据混淆，提升了 Agent 在处理复杂编码任务时的自主性。该技术将于未来几周内向所有用户推出，有助于推动编码 Agent 的进一步发展。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Cursor",
+        "动态上下文发现",
+        "Agent Skills",
+        "MCP",
+        "编码 Agent"
+      ]
+    },
+    "analyzed_at": "2026-01-10T06:49:40.651715Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
