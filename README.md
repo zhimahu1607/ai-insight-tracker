@@ -84,6 +84,13 @@ python scripts/daily_crawl.py --task summary   # 生成日报
 python scripts/daily_crawl.py --task notify    # 发送通知
 ```
 
+#### 同日多次运行的数据合并策略（重要）
+
+- `data/papers/YYYY-MM-DD.json` 与 `data/news/YYYY-MM-DD.json` **同一天可重复运行**。
+- 保存策略为 **按 `id` 合并追加**：不会整文件覆盖。
+- 若当天文件里已有条目且 `analysis_status=="success"`，则该条目会被**完全保留**（不覆盖任何字段）；否则会用新抓取的基础字段更新，同时保留分析相关字段。
+- 兼容历史 `.jsonl` 数据：读取时会自动兼容 `.json` / `.jsonl` 两种后缀。
+
 ### GitHub Actions 部署
 
 #### 1. Fork 本仓库
@@ -192,7 +199,8 @@ ai-insight-tracker/
 │   │   │   ├── client.py         # 异步客户端
 │   │   │   ├── query.py          # 查询构建器
 │   │   │   └── dedup.py          # 去重逻辑（已废弃）
-│   │   ├── processed_tracker.py  # 已处理内容追踪器（统一去重，7天自动清理）
+│   │   ├── ids_tracker.py        # ID 追踪器（fetched/analyzed 两套文件，默认保留30天）
+│   │   ├── processed_tracker.py  # 兼容层（历史名称：ProcessedTracker，等价于 fetched_ids）
 │   │   ├── pdf/                  # PDF 处理模块 (论文全文分析)
 │   │   │   ├── downloader.py     # PDF 异步下载器
 │   │   │   ├── parser.py         # PDF 解析器 (PyMuPDF + pdfplumber)
@@ -235,7 +243,7 @@ ai-insight-tracker/
 │   │   └── news/                 # 热点分析
 │   │       └── light_analyzer.py # 浅度分析器
 │   ├── generators/               # 内容生成
-│   │   └── daily.py              # 日报生成器
+│   │   └── daily_report_generator.py              # 日报生成器
 │   ├── notifiers/                # 通知模块
 │   │   ├── base.py               # 通知器基类
 │   │   ├── feishu.py             # 飞书异步通知器

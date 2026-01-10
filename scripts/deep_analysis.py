@@ -22,7 +22,6 @@ import asyncio
 import logging
 import re
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -30,12 +29,10 @@ from typing import Optional
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-from src.config import get_settings, check_required_config
-from src.data_fetchers.arxiv import AsyncArxivClient
-from src.agents.paper.deep_analyzer import get_compiled_graph
-from src.agents.paper.deep_analyzer.state import DeepAnalysisState
+from src.config import check_required_config
+from src.data_fetchers.arxiv import fetch_arxiv_paper_by_id
+from src.agents.paper.deep_analyzer import run_deep_analysis
 from src.notifiers.feishu import get_notifier
-from src.models import Paper
 
 
 # 配置日志
@@ -79,73 +76,6 @@ def parse_issue_title(title: str) -> tuple[Optional[str], Optional[str]]:
         return paper_id, paper_title
 
     return None, None
-
-
-async def fetch_paper_by_id(paper_id: str) -> Optional[Paper]:
-    """
-    通过 arXiv API 获取论文详情
-
-    Args:
-        paper_id: 论文 ID，如 "2501.12345"
-
-    Returns:
-        Paper 对象，未找到返回 None
-    """
-    client = AsyncArxivClient()
-    papers = await client.fetch_by_ids([paper_id])
-
-    if papers:
-        return papers[0]
-    return None
-
-
-async def run_deep_analysis(
-    paper: Paper,
-    user_requirements: Optional[str] = None,
-) -> str:
-    """
-    执行 Multi-Agent 深度分析
-
-    Args:
-        paper: 论文对象
-        user_requirements: 用户指定的分析需求（可选）
-
-    Returns:
-        分析结果（Markdown 格式）
-    """
-    logger.info(f"开始深度分析: {paper.id} - {paper.title}")
-
-    # 构建初始状态
-    initial_state: DeepAnalysisState = {
-        "paper_id": paper.id,
-        "paper_title": paper.title,
-        "paper_abstract": paper.abstract,
-        "paper_url": str(paper.abs_url),
-        "user_requirements": user_requirements or "",
-        "messages": [],
-        "research_notes": [],
-        "draft": "",
-        "final_report": "",
-        "research_iterations": 0,
-        "max_iterations": 5,
-        "review_iterations": 0,
-        "max_review_iterations": 3,
-        "analysis_started_at": datetime.now(timezone.utc),
-    }
-
-    # 获取编译后的工作流图
-    graph = get_compiled_graph()
-
-    # 执行工作流
-    final_state = await graph.ainvoke(initial_state)
-
-    # 提取最终报告
-    report = final_state.get("final_report", "")
-    if not report:
-        report = final_state.get("draft", "分析未能生成有效结果")
-
-    logger.info(f"深度分析完成: {paper.id}")
-    return report
 
 
 def save_analysis_result(paper_id: str, report: str) -> Path:
@@ -288,17 +218,25 @@ async def main() -> int:
 
     # 获取论文详情
     logger.info(f"获取论文详情: {paper_id}")
-    paper = await fetch_paper_by_id(paper_id)
+    paper = await fetch_arxiv_paper_by_id(paper_id)
     if not paper:
         logger.error(f"论文不存在: {paper_id}")
         return 2
 
     # 执行深度分析
     try:
-        report = await run_deep_analysis(
-            paper=paper,
-            user_requirements=args.issue_body,
+        logger.info(f"开始深度分析(全文): {paper.id} - {paper.title}")
+        result = await run_deep_analysis(
+            paper_id=paper.id,
+            paper_title=paper.title,
+            paper_abstract=paper.abstract,
+            paper_pdf_url=str(paper.pdf_url),
+            requirements=args.issue_body or "",
         )
+        logger.info(
+            f"深度分析完成: {paper.id} (pdf_parse_status={result.pdf_parse_status}, pages={result.paper_total_pages})"
+        )
+        report = result.report
     except Exception as e:
         logger.exception(f"深度分析失败: {e}")
         return 3

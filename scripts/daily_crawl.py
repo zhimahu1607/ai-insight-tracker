@@ -21,21 +21,24 @@ Exit codes:
 
 import argparse
 import asyncio
+import os
 import json
 import logging
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Optional
+from typing import Optional, TypeVar
 
 # 将项目根目录添加到 Python 路径
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
+from pydantic import BaseModel
+
 from src.config import get_settings, check_first_run, check_required_config
 from src.data_fetchers.arxiv import AsyncArxivClient
 from src.data_fetchers.status import DedupStatus
-from src.data_fetchers.processed_tracker import get_processed_tracker
+from src.data_fetchers.ids_tracker import get_analyzed_tracker, get_fetched_tracker
 from src.data_fetchers.news import NewsFetcher
 from src.agents.paper import PaperLightAnalyzer
 from src.agents.news import NewsLightAnalyzer
@@ -65,188 +68,133 @@ def get_today_date() -> str:
     """获取今天的日期字符串 YYYY-MM-DD"""
     return datetime.now().strftime("%Y-%m-%d")
 
+TModel = TypeVar("TModel", bound=BaseModel)
 
-def save_papers_json(papers: list[Paper], file_path: Path) -> None:
-    """保存论文列表到 JSON 文件"""
-    file_path.parent.mkdir(parents=True, exist_ok=True)
-    # 确保后缀为 .json
-    if file_path.suffix == '.jsonl':
-        file_path = file_path.with_suffix('.json')
-    
-    with open(file_path, "w", encoding="utf-8") as f:
-        # 转换为字典列表
-        data = [json.loads(p.model_dump_json()) for p in papers]
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    logger.info(f"保存 {len(papers)} 篇论文到 {file_path}")
-
-
-def save_analyzed_papers_json(papers: list[AnalyzedPaper], file_path: Path) -> None:
-    """保存分析后的论文到 JSON 文件（覆盖原文件）"""
-    file_path.parent.mkdir(parents=True, exist_ok=True)
-    # 确保后缀为 .json
-    if file_path.suffix == '.jsonl':
-        file_path = file_path.with_suffix('.json')
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        # 转换为字典列表
-        data = [json.loads(p.model_dump_json()) for p in papers]
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    logger.info(f"保存 {len(papers)} 篇已分析论文到 {file_path}")
+def _resolve_compat_json_path(file_path: Path) -> Path:
+    """
+    兼容 .json / .jsonl：
+    - 若目标文件不存在，尝试寻找另一种后缀
+    - 若 suffix 为 .jsonl，保存时统一写入 .json
+    """
+    if file_path.exists():
+        return file_path
+    if file_path.suffix == ".json":
+        alt_path = file_path.with_suffix(".jsonl")
+    else:
+        alt_path = file_path.with_suffix(".json")
+    return alt_path if alt_path.exists() else file_path
 
 
-def load_papers_json(file_path: Path) -> list[Paper]:
-    """从 JSON 文件加载论文列表"""
-    # 兼容 .jsonl 和 .json
+def load_models_json(file_path: Path, model: type[TModel]) -> list[TModel]:
+    """从 JSON/JSONL 文件加载模型列表；文件不存在则返回空列表。"""
+    file_path = _resolve_compat_json_path(file_path)
     if not file_path.exists():
-        # 尝试查找另一种后缀
-        alt_path = file_path.with_suffix('.jsonl') if file_path.suffix == '.json' else file_path.with_suffix('.json')
-        if alt_path.exists():
-            file_path = alt_path
-        else:
-            return []
+        return []
 
-    papers = []
-    with open(file_path, "r", encoding="utf-8") as f:
-        if file_path.suffix == '.jsonl':
-            for line in f:
-                line = line.strip()
-                if line:
-                    papers.append(Paper.model_validate_json(line))
-        else:
-            try:
+    items: list[TModel] = []
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            if file_path.suffix == ".jsonl":
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    items.append(model.model_validate_json(line))
+            else:
                 data = json.load(f)
-                for item in data:
-                    papers.append(Paper.model_validate(item))
-            except json.JSONDecodeError:
-                logger.warning(f"JSON 解析失败: {file_path}")
-                return []
-    return papers
+                if not isinstance(data, list):
+                    logger.warning(f"JSON 结构不是 list，跳过: {file_path}")
+                    return []
+                for obj in data:
+                    items.append(model.model_validate(obj))
+    except (OSError, json.JSONDecodeError) as e:
+        logger.warning(f"读取/解析失败: {file_path}: {e}")
+        return []
+
+    return items
 
 
-def load_analyzed_papers_json(file_path: Path) -> list[AnalyzedPaper]:
-    """从 JSON 文件加载已分析的论文列表"""
-    # 兼容 .jsonl 和 .json
-    if not file_path.exists():
-        # 尝试查找另一种后缀
-        alt_path = file_path.with_suffix('.jsonl') if file_path.suffix == '.json' else file_path.with_suffix('.json')
-        if alt_path.exists():
-            file_path = alt_path
-        else:
-            return []
-
-    papers = []
-    with open(file_path, "r", encoding="utf-8") as f:
-        if file_path.suffix == '.jsonl':
-            for line in f:
-                line = line.strip()
-                if line:
-                    papers.append(AnalyzedPaper.model_validate_json(line))
-        else:
-            try:
-                data = json.load(f)
-                for item in data:
-                    papers.append(AnalyzedPaper.model_validate(item))
-            except json.JSONDecodeError:
-                logger.warning(f"JSON 解析失败: {file_path}")
-                return []
-    return papers
-
-
-def save_news_json(news: list[NewsItem], file_path: Path) -> None:
-    """保存热点列表到 JSON 文件"""
+def save_models_json(models: list[BaseModel], file_path: Path, *, log_label: str) -> None:
+    """保存模型列表到 JSON 文件（统一写入 .json）。"""
     file_path.parent.mkdir(parents=True, exist_ok=True)
-    # 确保后缀为 .json
-    if file_path.suffix == '.jsonl':
-        file_path = file_path.with_suffix('.json')
+    if file_path.suffix == ".jsonl":
+        file_path = file_path.with_suffix(".json")
 
     with open(file_path, "w", encoding="utf-8") as f:
-        # 转换为字典列表
-        data = [json.loads(item.model_dump_json()) for item in news]
+        data = [json.loads(m.model_dump_json()) for m in models]
         json.dump(data, f, indent=2, ensure_ascii=False)
-    logger.info(f"保存 {len(news)} 条热点到 {file_path}")
+    logger.info(f"保存 {len(models)} 条{log_label}到 {file_path}")
 
 
-def save_analyzed_news_json(news: list[AnalyzedNews], file_path: Path) -> None:
-    """保存分析后的热点到 JSON 文件（覆盖原文件）"""
-    file_path.parent.mkdir(parents=True, exist_ok=True)
-    # 确保后缀为 .json
-    if file_path.suffix == '.jsonl':
-        file_path = file_path.with_suffix('.json')
+def merge_papers_by_id_keep_success(
+    existing: list[AnalyzedPaper],
+    incoming: list[Paper],
+    ) -> list[AnalyzedPaper]:
+    """按论文 id 合并：已 success 的旧记录完全保留；否则用新抓取基础字段更新，保留分析字段。"""
+    by_id: dict[str, AnalyzedPaper] = {p.id: p for p in existing}
 
-    with open(file_path, "w", encoding="utf-8") as f:
-        # 转换为字典列表
-        data = [json.loads(item.model_dump_json()) for item in news]
-        json.dump(data, f, indent=2, ensure_ascii=False)
-    logger.info(f"保存 {len(news)} 条已分析热点到 {file_path}")
+    for p in incoming:
+        old = by_id.get(p.id)
+        if old and old.analysis_status == "success":
+            continue
 
-
-def load_news_json(file_path: Path) -> list[NewsItem]:
-    """从 JSON 文件加载热点列表"""
-    # 兼容 .jsonl 和 .json
-    if not file_path.exists():
-        # 尝试查找另一种后缀
-        alt_path = file_path.with_suffix('.jsonl') if file_path.suffix == '.json' else file_path.with_suffix('.json')
-        if alt_path.exists():
-            file_path = alt_path
+        if old:
+            by_id[p.id] = AnalyzedPaper(
+                **p.model_dump(),
+                light_analysis=old.light_analysis,
+                analyzed_at=old.analyzed_at,
+                analysis_status=old.analysis_status,
+                analysis_error=old.analysis_error,
+            )
         else:
-            return []
+            by_id[p.id] = AnalyzedPaper(**p.model_dump(), analysis_status="pending")
 
-    news = []
-    with open(file_path, "r", encoding="utf-8") as f:
-        if file_path.suffix == '.jsonl':
-            for line in f:
-                line = line.strip()
-                if line:
-                    news.append(NewsItem.model_validate_json(line))
+    # 稳定排序：发布时间降序（无 published 的放最后）
+    return sorted(
+        by_id.values(),
+        key=lambda x: x.published.timestamp() if x.published else 0,
+        reverse=True,
+    )
+
+
+def merge_news_by_id_keep_success(
+    existing: list[AnalyzedNews],
+    incoming: list[NewsItem],
+    ) -> list[AnalyzedNews]:
+    """按新闻 id 合并：已 success 的旧记录完全保留；否则用新抓取基础字段更新，保留分析字段。"""
+    by_id: dict[str, AnalyzedNews] = {n.id: n for n in existing}
+
+    for item in incoming:
+        old = by_id.get(item.id)
+        if old and old.analysis_status == "success":
+            continue
+
+        if old:
+            by_id[item.id] = AnalyzedNews(
+                **item.model_dump(),
+                light_analysis=old.light_analysis,
+                analyzed_at=old.analyzed_at,
+                analysis_status=old.analysis_status,
+                analysis_error=old.analysis_error,
+            )
         else:
-            try:
-                data = json.load(f)
-                for item in data:
-                    news.append(NewsItem.model_validate(item))
-            except json.JSONDecodeError:
-                logger.warning(f"JSON 解析失败: {file_path}")
-                return []
-    return news
+            by_id[item.id] = AnalyzedNews(**item.model_dump(), analysis_status="pending")
+
+    return sorted(
+        by_id.values(),
+        key=lambda x: x.published.timestamp() if x.published else 0,
+        reverse=True,
+    )
 
 
-def load_analyzed_news_json(file_path: Path) -> list[AnalyzedNews]:
-    """从 JSON 文件加载已分析的热点列表"""
-    # 兼容 .jsonl 和 .json
-    if not file_path.exists():
-        # 尝试查找另一种后缀
-        alt_path = file_path.with_suffix('.jsonl') if file_path.suffix == '.json' else file_path.with_suffix('.json')
-        if alt_path.exists():
-            file_path = alt_path
-        else:
-            return []
-
-    news = []
-    with open(file_path, "r", encoding="utf-8") as f:
-        if file_path.suffix == '.jsonl':
-            for line in f:
-                line = line.strip()
-                if line:
-                    news.append(AnalyzedNews.model_validate_json(line))
-        else:
-            try:
-                data = json.load(f)
-                for item in data:
-                    news.append(AnalyzedNews.model_validate(item))
-            except json.JSONDecodeError:
-                logger.warning(f"JSON 解析失败: {file_path}")
-                return []
-    return news
-
-
-async def task_arxiv() -> tuple[list[Paper], int]:
+async def task_arxiv() -> int:
     """
     任务：获取 arXiv 论文并去重
 
-    使用 ProcessedTracker 进行历史去重，支持30天自动清理。
+    使用 fetched_ids.json 进行历史去重，支持30天自动清理。
     默认获取过去25小时内发布的论文。
 
     Returns:
-        (新论文列表, 状态码)
         状态码: 0=有新内容, 1=无新内容, 2=错误
     """
     logger.info("=" * 50)
@@ -263,7 +211,7 @@ async def task_arxiv() -> tuple[list[Paper], int]:
     logger.info(f"每分类最多分页次数: {max_pages}")
 
     # 初始化 ProcessedTracker 并清理过期记录
-    tracker = get_processed_tracker(DATA_DIR / "processed_ids.json")
+    tracker = get_fetched_tracker(DATA_DIR / "fetched_ids.json")
     cleaned = tracker.cleanup()
     if cleaned > 0:
         logger.info(f"清理过期记录: {cleaned} 条")
@@ -275,18 +223,13 @@ async def task_arxiv() -> tuple[list[Paper], int]:
         delay_between_requests=settings.arxiv.request_delay,
         timeout=settings.arxiv.timeout,
     )
-    import os
     hours = int(os.environ.get("ARXIV_HOURS", "25"))
     papers = await client.fetch_recent_papers(categories, hours=hours)
     logger.info(f"获取到 {len(papers)} 篇论文（过去 {hours} 小时）")
 
-    if not papers:
-        logger.warning("未获取到任何论文")
-        return DedupStatus.NO_NEW_CONTENT
-
-    # 使用 ProcessedTracker 去重
-    processed_ids = tracker.get_processed_paper_ids()
-    new_papers = [p for p in papers if p.id not in processed_ids]
+    # 使用 fetched_ids.json 去重
+    fetched_ids = tracker.get_paper_ids()
+    new_papers = [p for p in papers if p.id not in fetched_ids]
     duplicates_count = len(papers) - len(new_papers)
 
     logger.info(
@@ -296,18 +239,17 @@ async def task_arxiv() -> tuple[list[Paper], int]:
     )
 
     if not new_papers:
-        logger.info("无新论文")
-        # 仍然返回空列表和 HAS_NEW_CONTENT 状态，允许后续任务继续执行
-        # （新闻获取、分析、日报生成等不应因无新论文而跳过）
-        return DedupStatus.HAS_NEW_CONTENT
+        return DedupStatus.NO_NEW_CONTENT
 
-    # 保存新论文
+    # 保存新论文（同日多次运行：按 id 合并追加，避免覆盖旧数据/已分析结果）
     today = get_today_date()
     file_path = PAPERS_DIR / f"{today}.json"
-    save_papers_json(new_papers, file_path)
+    existing = load_models_json(file_path, AnalyzedPaper)
+    merged = merge_papers_by_id_keep_success(existing, new_papers)
+    save_models_json(merged, file_path, log_label="论文")
 
     # 标记为已处理
-    tracker.mark_papers_processed([p.id for p in new_papers])
+    tracker.mark_papers([p.id for p in new_papers])
 
     logger.info(f"arXiv 任务完成: {len(new_papers)} 篇新论文")
     return DedupStatus.HAS_NEW_CONTENT
@@ -336,14 +278,16 @@ async def task_rss() -> list[NewsItem]:
         logger.warning("未获取到任何新闻")
         return []
 
-    # 保存热点
+    # 保存热点（同日多次运行：按 id 合并追加，避免覆盖旧数据/已分析结果）
     today = get_today_date()
     file_path = NEWS_DIR / f"{today}.json"
-    save_news_json(news, file_path)
+    existing = load_models_json(file_path, AnalyzedNews)
+    merged = merge_news_by_id_keep_success(existing, news)
+    save_models_json(merged, file_path, log_label="热点")
 
     # 标记为已处理
-    tracker = get_processed_tracker(DATA_DIR / "processed_ids.json")
-    tracker.mark_news_processed([item.id for item in news])
+    tracker = get_fetched_tracker(DATA_DIR / "fetched_ids.json")
+    tracker.mark_news([item.id for item in news])
 
     logger.info(f"新闻任务完成: {len(news)} 条热点")
     return news
@@ -367,47 +311,39 @@ async def task_analyze() -> tuple[list[AnalyzedPaper], list[AnalyzedNews]]:
     papers_file = PAPERS_DIR / f"{today}.json"
     news_file = NEWS_DIR / f"{today}.json"
 
-    # 加载今日数据（优先加载 AnalyzedPaper/AnalyzedNews 格式，保留分析状态）
-    # 如果文件包含分析结果，使用 load_analyzed_xxx；否则回退到 load_xxx
-    existing_papers = load_analyzed_papers_json(papers_file)
-    existing_news = load_analyzed_news_json(news_file)
+    # 加载今日数据（统一以 Analyzed schema 读取：可兼容 raw Paper/NewsItem，且能保留分析状态）
+    existing_papers = load_models_json(papers_file, AnalyzedPaper)
+    existing_news = load_models_json(news_file, AnalyzedNews)
 
-    # 如果加载失败或为空，尝试加载原始格式（兼容首次分析场景）
-    if not existing_papers:
-        raw_papers = load_papers_json(papers_file)
-        # 将 Paper 转换为 AnalyzedPaper（analysis_status 默认为 pending）
-        existing_papers = [
-            AnalyzedPaper(**p.model_dump(), analysis_status="pending")
-            for p in raw_papers
-        ]
-    if not existing_news:
-        raw_news = load_news_json(news_file)
-        # 将 NewsItem 转换为 AnalyzedNews（analysis_status 默认为 pending）
-        existing_news = [
-            AnalyzedNews(**n.model_dump(), analysis_status="pending")
-            for n in raw_news
-        ]
+    # 仅以 analyzed_ids.json 为准进行分析去重
+    analyzed_tracker = get_analyzed_tracker(DATA_DIR / "analyzed_ids.json")
+    cleaned = analyzed_tracker.cleanup()
+    if cleaned > 0:
+        logger.info(f"清理 analyzed_ids 过期记录: {cleaned} 条")
 
-    # 分离已成功和待分析的数据
-    papers_done = [p for p in existing_papers if p.analysis_status == "success"]
-    papers_to_analyze = [p for p in existing_papers if p.analysis_status != "success"]
-    news_done = [n for n in existing_news if n.analysis_status == "success"]
-    news_to_analyze = [n for n in existing_news if n.analysis_status != "success"]
+    analyzed_paper_ids = analyzed_tracker.get_paper_ids()
+    analyzed_news_ids = analyzed_tracker.get_news_ids()
+
+    papers_to_analyze = [p for p in existing_papers if p.id not in analyzed_paper_ids]
+    news_to_analyze = [n for n in existing_news if n.id not in analyzed_news_ids]
+
+    papers_skipped = len(existing_papers) - len(papers_to_analyze)
+    news_skipped = len(existing_news) - len(news_to_analyze)
 
     logger.info(
         f"加载数据: {len(existing_papers)} 篇论文 "
-        f"(已完成 {len(papers_done)}, 待分析 {len(papers_to_analyze)}), "
+        f"(analyzed_ids 已去重 {papers_skipped}, 待分析 {len(papers_to_analyze)}), "
         f"{len(existing_news)} 条热点 "
-        f"(已完成 {len(news_done)}, 待分析 {len(news_to_analyze)})"
+        f"(analyzed_ids 已去重 {news_skipped}, 待分析 {len(news_to_analyze)})"
     )
 
     if not existing_papers and not existing_news:
         logger.warning("无数据需要分析")
         return [], []
 
-    # 如果全部已完成，直接返回
+    # 如果全部已被 analyzed_ids 去重，直接返回
     if not papers_to_analyze and not news_to_analyze:
-        logger.info("所有数据已分析完成，无需重复分析")
+        logger.info("所有数据均已在 analyzed_ids 中，无需重复分析")
         return existing_papers, existing_news
 
     # 使用 LLM 客户端进行分析（仅分析未成功的数据）
@@ -445,15 +381,30 @@ async def task_analyze() -> tuple[list[AnalyzedPaper], list[AnalyzedNews]]:
                 f"成功率 {stats['success_rate']:.1%}"
             )
 
-    # 合并结果：已完成 + 新分析
-    final_papers = papers_done + newly_analyzed_papers
-    final_news = news_done + newly_analyzed_news
+    # 合并结果：保留原列表，并用新分析结果覆盖对应 ID
+    paper_by_id: dict[str, AnalyzedPaper] = {p.id: p for p in existing_papers}
+    for p in newly_analyzed_papers:
+        paper_by_id[p.id] = p
+    final_papers = list(paper_by_id.values())
+
+    news_by_id: dict[str, AnalyzedNews] = {n.id: n for n in existing_news}
+    for n in newly_analyzed_news:
+        news_by_id[n.id] = n
+    final_news = list(news_by_id.values())
 
     # 保存分析结果（覆盖原文件）
     if final_papers:
-        save_analyzed_papers_json(final_papers, papers_file)
+        save_models_json(final_papers, papers_file, log_label="已分析论文")
     if final_news:
-        save_analyzed_news_json(final_news, news_file)
+        save_models_json(final_news, news_file, log_label="已分析热点")
+
+    # 分析成功后写回 analyzed_ids（只记录 success）
+    analyzed_success_paper_ids = [p.id for p in newly_analyzed_papers if p.analysis_status == "success"]
+    analyzed_success_news_ids = [n.id for n in newly_analyzed_news if n.analysis_status == "success"]
+    if analyzed_success_paper_ids:
+        analyzed_tracker.mark_papers(analyzed_success_paper_ids)
+    if analyzed_success_news_ids:
+        analyzed_tracker.mark_news(analyzed_success_news_ids)
 
     # 输出最终统计
     total_papers_success = len([p for p in final_papers if p.analysis_status == "success"])
@@ -480,9 +431,9 @@ async def task_summary() -> Optional[Path]:
     papers_file = PAPERS_DIR / f"{today}.json"
     news_file = NEWS_DIR / f"{today}.json"
 
-    # 加载分析后的数据
-    papers = load_analyzed_papers_json(papers_file)
-    news = load_analyzed_news_json(news_file)
+    # 加载分析后的数据（统一按 Analyzed schema 读取）
+    papers = load_models_json(papers_file, AnalyzedPaper)
+    news = load_models_json(news_file, AnalyzedNews)
 
     logger.info(f"加载分析数据: {len(papers)} 篇论文, {len(news)} 条热点")
 

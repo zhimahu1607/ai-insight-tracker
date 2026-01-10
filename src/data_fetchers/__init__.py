@@ -7,7 +7,7 @@
     - 全异步设计，统一使用 aiohttp + asyncio
     - arXiv 数据通过 arXiv API 获取
     - 新闻源通过 NewsFetcher 统一 RSS 和 Crawler
-    - ProcessedTracker 管理已处理 ID，支持7天自动清理
+    - IdsTracker 将 “抓取去重(fetched)” 与 “分析去重(analyzed)” 分离，默认保留30天记录
 
 Usage:
     from src.data_fetchers import fetch_arxiv_papers, fetch_news

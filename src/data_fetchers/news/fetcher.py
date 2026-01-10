@@ -13,7 +13,7 @@ from typing import Optional
 from src.models import NewsItem, NewsSource, FetchType, RSSSource
 from .rss_fetcher import AsyncRSSFetcher
 from src.data_fetchers.crawler import AsyncNewsCrawler
-from src.data_fetchers.processed_tracker import get_processed_tracker
+from src.data_fetchers.ids_tracker import get_fetched_tracker
 from .sources import load_news_sources
 
 logger = logging.getLogger(__name__)
@@ -135,9 +135,9 @@ class NewsFetcher:
         # URL 去重（同批次内）
         unique_items = self._dedup_by_url(filtered_items)
 
-        # 历史去重（排除已处理的新闻）
-        tracker = get_processed_tracker()
-        processed_ids = tracker.get_processed_news_ids()
+        # 历史去重（抓取去重：排除已抓取的新闻）
+        tracker = get_fetched_tracker()
+        processed_ids = tracker.get_news_ids()
         new_items = [
             item for item in unique_items
             if item.id not in processed_ids

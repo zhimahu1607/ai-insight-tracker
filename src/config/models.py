@@ -93,9 +93,6 @@ class PDFConfig(BaseModel):
     max_tokens_per_chunk: int = Field(
         default=4000, description="每个分块的最大 token 数"
     )
-    enable_full_text: bool = Field(
-        default=True, description="是否默认启用论文全文分析"
-    )
 
 
 class AdvancedConfig(BaseModel):
