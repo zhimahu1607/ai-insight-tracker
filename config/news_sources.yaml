@@ -57,6 +57,26 @@ sources:
     weight: 1.0
     enabled: true
 
+  - name: "Claude Blog"
+    company: "anthropic"
+    blog_url: "https://claude.com/blog"
+    fetch_type: "crawler"
+    extractor: "claude"
+    js_render: true
+    language: "en"
+    weight: 1.0
+    enabled: true
+
+  - name: "Cursor Blog (CN)"
+    company: "cursor"
+    blog_url: "https://cursor.com/cn/blog"
+    fetch_type: "crawler"
+    extractor: "cursor"
+    js_render: true
+    language: "zh"
+    weight: 0.9
+    enabled: true
+
   - name: "DeepSeek"
     company: "deepseek"
     blog_url: "https://api-docs.deepseek.com/zh-cn/news/"

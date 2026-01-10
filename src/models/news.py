@@ -78,6 +78,10 @@ class NewsItem(BaseModel):
     language: str = Field(description="语言")
     published: datetime = Field(description="发布时间")
     summary: Optional[str] = Field(default=None, description="原始摘要 (RSS 提供)")
+    content: Optional[str] = Field(
+        default=None,
+        description="正文全文（清洗后的纯文本），crawler/RSS 可选提供",
+    )
     weight: float = Field(
         default=1.0,
         ge=0.0,

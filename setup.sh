@@ -78,6 +78,9 @@ conda activate "$ENV_NAME"
 # 确保 pip 依赖是最新的
 pip install -r requirements.txt --quiet
 
+# 安装 Playwright 浏览器（Crawler 需要）
+playwright install chromium --with-deps
+
 echo -e "${GREEN}✓ 依赖安装完成${NC}"
 
 # ============================================================

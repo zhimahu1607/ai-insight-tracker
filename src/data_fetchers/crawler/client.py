@@ -9,6 +9,7 @@ import logging
 from typing import Optional
 
 from src.models import NewsItem, NewsSource, FetchType
+from src.data_fetchers.text_utils import clean_html_to_text
 
 logger = logging.getLogger(__name__)
 
@@ -54,6 +55,8 @@ class AsyncNewsCrawler:
         self._timeout = timeout
         self._headless = headless
         self._semaphore = asyncio.Semaphore(max_concurrent)
+        # 详情页抓取使用独立 semaphore，避免与 source 级别 semaphore 嵌套死锁
+        self._detail_semaphore = asyncio.Semaphore(max_concurrent)
 
     async def fetch_all(
         self,
@@ -147,7 +150,8 @@ class AsyncNewsCrawler:
         # 配置爬取参数
         run_config = CrawlerRunConfig(
             extraction_strategy=extraction_strategy,
-            wait_until="networkidle",
+            # 部分站点会持续有网络活动（analytics/stream），使用 networkidle 容易超时
+            wait_until="domcontentloaded",
             page_timeout=int(self._timeout * 1000),
         )
 
@@ -176,8 +180,90 @@ class AsyncNewsCrawler:
         extracted_content = result.extracted_content or ""
         items = extractor.parse_result(extracted_content, source)
 
+        # 逐篇抓取详情页正文（如果提取器支持）
+        detail_schema = extractor.get_detail_extraction_schema()
+        if detail_schema and items:
+            items = await self._enrich_items_with_content(
+                crawler=crawler,
+                source=source,
+                extractor=extractor,
+                items=items,
+                max_items=10,  # 默认每个源只抓最新 10 条，控制成本
+            )
+
         logger.debug(f"从 {source.name} 获取 {len(items)} 条新闻")
         return items
+
+    async def _enrich_items_with_content(
+        self,
+        crawler,  # AsyncWebCrawler
+        source: NewsSource,
+        extractor,
+        items: list[NewsItem],
+        max_items: int = 10,
+    ) -> list[NewsItem]:
+        """
+        对列表页抓到的 NewsItem 逐篇抓取详情页正文，写入 item.content
+        """
+        if max_items <= 0:
+            return items
+
+        # 只对前 max_items 条做详情抓取
+        target_items = items[:max_items]
+
+        async def _fetch_one(item: NewsItem) -> None:
+            async with self._detail_semaphore:
+                try:
+                    content = await self._fetch_detail_content(
+                        crawler=crawler,
+                        source=source,
+                        extractor=extractor,
+                        url=str(item.url),
+                    )
+                    if content:
+                        item.content = content
+                except Exception as e:
+                    logger.debug(f"抓取详情页失败: {item.url} - {e}")
+
+        await asyncio.gather(*[_fetch_one(it) for it in target_items])
+        return items
+
+    async def _fetch_detail_content(
+        self,
+        crawler,  # AsyncWebCrawler
+        source: NewsSource,
+        extractor,
+        url: str,
+    ) -> Optional[str]:
+        """
+        抓取单个详情页并返回正文文本
+        """
+        from crawl4ai.extraction_strategy import JsonCssExtractionStrategy
+        from crawl4ai import CrawlerRunConfig
+
+        schema = extractor.get_detail_extraction_schema()
+        if not schema:
+            return None
+
+        extraction_strategy = JsonCssExtractionStrategy(schema=schema)
+        run_config = CrawlerRunConfig(
+            extraction_strategy=extraction_strategy,
+            # 详情页同样避免 networkidle 超时
+            wait_until="domcontentloaded",
+            page_timeout=int(self._timeout * 1000),
+        )
+
+        js_code = extractor.get_detail_js_code() if source.js_render else None
+        if js_code:
+            run_config.js_code = js_code
+
+        result = await crawler.arun(url=url, config=run_config)
+        if not result.success:
+            return None
+
+        extracted = result.extracted_content or ""
+        content = extractor.parse_detail_result(extracted, source)
+        return clean_html_to_text(content) if content else None
 
 
 async def fetch_with_crawler(

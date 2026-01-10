@@ -14,6 +14,7 @@ import feedparser
 from dateutil import parser as date_parser
 
 from src.models import RSSSource, NewsItem
+from src.data_fetchers.text_utils import clean_html_to_text, truncate_text
 
 logger = logging.getLogger(__name__)
 
@@ -74,6 +75,7 @@ def _entry_to_news_item(entry: Any, source: RSSSource) -> NewsItem:
 
     # 获取摘要
     summary = _extract_summary(entry)
+    content = _extract_content(entry)
 
     return NewsItem(
         id=item_id,
@@ -84,6 +86,7 @@ def _entry_to_news_item(entry: Any, source: RSSSource) -> NewsItem:
         language=source.language,
         published=published,
         summary=summary,
+        content=content,
         weight=source.weight,
     )
 
@@ -160,21 +163,36 @@ def _extract_summary(entry: Any) -> Optional[str]:
     Returns:
         摘要文本或 None
     """
-    # 尝试获取摘要
+    # 尝试获取摘要（保持短内容，用于展示/快速浏览）
     summary = entry.get("summary") or entry.get("description")
 
     if not summary:
         return None
 
-    # 清理 HTML 标签（简单处理）
-    import re
-    clean_summary = re.sub(r"<[^>]+>", "", summary)
-    clean_summary = clean_summary.strip()
+    clean_summary = clean_html_to_text(str(summary))
+    return truncate_text(clean_summary, max_length=500)
 
-    # 限制长度
-    max_length = 500
-    if len(clean_summary) > max_length:
-        clean_summary = clean_summary[:max_length] + "..."
 
-    return clean_summary if clean_summary else None
+def _extract_content(entry: Any) -> Optional[str]:
+    """
+    提取 RSS 条目的正文全文（尽量完整，写入 NewsItem.content）
+
+    feedparser 常见字段：
+    - entry.content: list[{"value": "<p>...</p>", "type": "text/html"}]
+    - entry.summary / entry.description: 摘要（可能是正文的截断）
+    """
+    # 1) 优先使用 entry.content
+    content_list = entry.get("content")
+    if isinstance(content_list, list) and content_list:
+        first = content_list[0]
+        if isinstance(first, dict):
+            value = first.get("value") or ""
+            text = clean_html_to_text(str(value))
+            if text:
+                return text
+
+    # 2) 退化：尝试 summary/description
+    summary = entry.get("summary") or entry.get("description")
+    text = clean_html_to_text(str(summary)) if summary else None
+    return text
 

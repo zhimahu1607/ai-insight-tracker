@@ -41,10 +41,11 @@ class NewsLightAnalyzer(BaseLightAnalyzer[NewsItem, AnalyzedNews, NewsLightAnaly
         return "news"
 
     def _build_user_content(self, item: NewsItem) -> str:
+        content = item.content or item.summary or "无内容"
         return self._user_prompt.format(
             title=item.title,
             source_name=item.source_name,
-            summary=item.summary or "无摘要",
+            content=content,
         )
 
     def _create_output(self, item: NewsItem) -> AnalyzedNews:

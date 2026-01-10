@@ -6,6 +6,8 @@
 
 from ..base import BaseExtractor
 from .anthropic import AnthropicExtractor
+from .claude import ClaudeExtractor
+from .cursor import CursorExtractor
 from .deepseek import DeepSeekExtractor
 from .deepmind import DeepMindExtractor
 from .gemini import GeminiExtractor
@@ -16,6 +18,8 @@ from .qwen import QwenExtractor
 # 提取器注册表
 _EXTRACTORS: dict[str, type[BaseExtractor]] = {
     "anthropic": AnthropicExtractor,
+    "claude": ClaudeExtractor,
+    "cursor": CursorExtractor,
     "deepseek": DeepSeekExtractor,
     "deepmind": DeepMindExtractor,
     "gemini": GeminiExtractor,

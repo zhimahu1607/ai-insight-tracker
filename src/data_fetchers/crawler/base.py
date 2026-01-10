@@ -55,6 +55,35 @@ class BaseExtractor(ABC):
         """
         pass
 
+    # ------------------------------
+    # 详情页（全文）抓取：可选实现
+    # ------------------------------
+    def get_detail_extraction_schema(self) -> Optional[dict]:
+        """
+        返回详情页正文提取 Schema（可选）。
+
+        如果返回 None，则 crawler 只抓列表页，不会逐篇抓正文。
+        """
+        return None
+
+    def parse_detail_result(
+        self,
+        extracted_content: str,
+        source: NewsSource,
+    ) -> Optional[str]:
+        """
+        将详情页提取结果解析为正文纯文本（可选）。
+
+        Returns:
+            正文文本，None 表示未提取到。
+        """
+        _ = (extracted_content, source)
+        return None
+
+    def get_detail_js_code(self) -> Optional[str]:
+        """详情页需要执行的 JS（可选），默认复用不执行。"""
+        return None
+
     def get_js_code(self) -> Optional[str]:
         """
         返回需要执行的 JavaScript 代码

@@ -57,8 +57,8 @@ news_light_user_prompt = """请分析以下科技资讯：
 
 来源：{source_name}
 
-摘要：
-{summary}
+正文：
+{content}
 </News>
 
 请按照 JSON Schema 输出结构化分析结果。"""

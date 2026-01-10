@@ -1,9 +1,11 @@
 """
-Anthropic 研究页面提取器
+Claude 博客提取器
 
-目标页面: https://www.anthropic.com/research
-页面特点: React SPA，需要 JavaScript 渲染
+目标页面: https://claude.com/blog
+页面特点: 可能需要 JavaScript 渲染
 """
+
+from __future__ import annotations
 
 import hashlib
 import json
@@ -11,48 +13,30 @@ from datetime import datetime, timezone
 from typing import Optional
 
 from src.models import NewsItem, NewsSource, FetchType
-from ..base import BaseExtractor
 from src.data_fetchers.text_utils import clean_html_to_text
+from ..base import BaseExtractor
 
 
-class AnthropicExtractor(BaseExtractor):
-    """Anthropic 研究页面提取器"""
+class ClaudeExtractor(BaseExtractor):
+    """Claude 博客提取器（同 Anthropic 公司聚合）"""
 
-    BASE_URL = "https://www.anthropic.com"
+    BASE_URL = "https://claude.com"
 
     def get_extraction_schema(self) -> dict:
-        """返回 CSS 提取 Schema"""
         return {
-            "name": "Anthropic Research Articles",
-            "baseSelector": "a[href*='/research/']",
+            "name": "Claude Blog Posts",
+            "baseSelector": "a[href^='/blog/'], article, .post, .post-card",
             "fields": [
-                {
-                    "name": "title",
-                    "selector": "h3, h2, .title, span",
-                    "type": "text",
-                },
-                {
-                    "name": "url",
-                    "type": "attribute",
-                    "attribute": "href",
-                },
-                {
-                    "name": "date",
-                    "selector": "time, .date, span[class*='date']",
-                    "type": "text",
-                },
-                {
-                    "name": "summary",
-                    "selector": "p, .description, .excerpt",
-                    "type": "text",
-                },
+                {"name": "title", "selector": "h2, h3, .title, span", "type": "text"},
+                {"name": "url", "type": "attribute", "attribute": "href"},
+                {"name": "date", "selector": "time, .date, span[class*='date']", "type": "text"},
+                {"name": "summary", "selector": "p, .description, .excerpt", "type": "text"},
             ],
         }
 
     def get_detail_extraction_schema(self) -> Optional[dict]:
-        # Anthropic/Claude 站点通常有 main/article 结构；尽量提取正文文本
         return {
-            "name": "Anthropic Research Detail",
+            "name": "Claude Blog Detail",
             "baseSelector": "main, article",
             "fields": [
                 {"name": "title", "selector": "h1", "type": "text"},
@@ -74,17 +58,12 @@ class AnthropicExtractor(BaseExtractor):
         except json.JSONDecodeError:
             return None
 
-        # crawl4ai JsonCssExtractionStrategy 通常返回 list[dict]
         if isinstance(data, list) and data:
             content = data[0].get("content")
-            text = clean_html_to_text(str(content)) if content else None
-            return text
-
+            return clean_html_to_text(str(content)) if content else None
         if isinstance(data, dict):
             content = data.get("content")
-            text = clean_html_to_text(str(content)) if content else None
-            return text
-
+            return clean_html_to_text(str(content)) if content else None
         return None
 
     def parse_result(
@@ -92,9 +71,7 @@ class AnthropicExtractor(BaseExtractor):
         extracted_content: str,
         source: NewsSource,
     ) -> list[NewsItem]:
-        """解析爬取结果"""
         items: list[NewsItem] = []
-
         if not extracted_content:
             return items
 
@@ -106,86 +83,77 @@ class AnthropicExtractor(BaseExtractor):
         seen_urls: set[str] = set()
 
         for article in articles:
-            title = article.get("title", "").strip()
-            url = article.get("url", "").strip()
-
+            title = (article.get("title") or "").strip()
+            url = (article.get("url") or "").strip()
             if not title or not url:
                 continue
 
-            # 补全相对 URL
             if url.startswith("/"):
                 url = f"{self.BASE_URL}{url}"
 
-            # 去重
+            if "/blog/" not in url:
+                continue
+
             if url in seen_urls:
                 continue
             seen_urls.add(url)
 
-            # 过滤非研究文章链接
-            if "/research/" not in url:
-                continue
-
-            # 解析日期
-            date_str = article.get("date", "")
+            date_str = (article.get("date") or "").strip()
             published = self._parse_date(date_str)
 
-            # 生成 ID
             item_id = hashlib.md5(url.encode()).hexdigest()[:16]
-
-            items.append(NewsItem(
-                id=item_id,
-                title=title,
-                url=url,
-                source_name=source.name,
-                source_category="ai",
-                language=source.language,
-                published=published,
-                summary=article.get("summary"),
-                content=None,  # 详情页抓取后再补全
-                weight=source.weight,
-                fetch_type=FetchType.CRAWLER,
-                company=source.company,
-            ))
+            items.append(
+                NewsItem(
+                    id=item_id,
+                    title=title,
+                    url=url,
+                    source_name=source.name,
+                    source_category="ai",
+                    language=source.language,
+                    published=published,
+                    summary=(article.get("summary") or None),
+                    content=None,  # 详情页补全
+                    weight=source.weight,
+                    fetch_type=FetchType.CRAWLER,
+                    company=source.company,
+                )
+            )
 
         return items
 
     def get_js_code(self) -> Optional[str]:
-        """返回 JavaScript 代码，用于等待内容加载"""
         return """
         // 等待页面内容加载
         await new Promise(resolve => setTimeout(resolve, 2000));
-
-        // 滚动以触发懒加载
         window.scrollTo(0, document.body.scrollHeight / 2);
         await new Promise(resolve => setTimeout(resolve, 1000));
         window.scrollTo(0, document.body.scrollHeight);
         await new Promise(resolve => setTimeout(resolve, 1000));
         """
 
+    def get_detail_js_code(self) -> Optional[str]:
+        # 详情页同样等待渲染
+        return self.get_js_code()
+
     def get_base_url(self) -> str:
         return self.BASE_URL
 
     def _parse_date(self, date_str: str) -> datetime:
-        """解析日期字符串"""
         if not date_str:
             return datetime.now(timezone.utc)
-
-        # 尝试多种日期格式
         formats = [
             "%Y-%m-%d",
             "%B %d, %Y",
             "%b %d, %Y",
             "%d %B %Y",
-            "%b %Y",
-            "%B %Y",
+            "%d %b %Y",
         ]
-
         for fmt in formats:
             try:
                 dt = datetime.strptime(date_str.strip(), fmt)
                 return dt.replace(tzinfo=timezone.utc)
             except ValueError:
                 continue
-
         return datetime.now(timezone.utc)
+
 

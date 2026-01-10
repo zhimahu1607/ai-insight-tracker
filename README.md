@@ -54,6 +54,7 @@ cd ai-insight-tracker
 脚本会自动：
 - 创建 Conda 环境 (`ai-insight-tracker`)
 - 安装所有依赖
+- 安装 Crawler 运行所需的 Playwright 浏览器（Chromium）
 - 创建配置文件
 - 交互式配置 LLM 提供商
 
@@ -156,12 +157,16 @@ config/settings.yaml (最高) > 环境变量 > 默认值 (最低)
 | OpenAI | RSS | ✅ |
 | Microsoft Research | RSS | ✅ |
 | Amazon AWS ML | RSS | ✅ |
-| Anthropic | Crawler | ✅ |
+| Anthropic Research | Crawler（含正文抓取） | ✅ |
+| Claude Blog（归属 Anthropic） | Crawler（含正文抓取） | ✅ |
+| Cursor Blog (CN) | Crawler（含正文抓取） | ✅ |
 | DeepSeek | Crawler | ✅ |
 | Google Research | Crawler | ✅ |
 | DeepMind | Crawler | ✅ |
 | Gemini | Crawler | ✅ |
 | Qwen (通义千问) | Crawler | ✅ |
+
+> 说明：新闻条目新增 `content` 字段用于存储正文全文（清洗后的纯文本）。RSS 源优先从 `entry.content` 提取全文；Crawler 源会对每个源最新 10 条逐篇抓取详情页补全 `content`。
 
 ## 📁 项目结构
 
