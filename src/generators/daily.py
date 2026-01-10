@@ -29,6 +29,7 @@ from src.prompts import (
     NEWS_SUMMARY_USER_PROMPT,
     DAILY_SUMMARY_USER_PROMPT,
 )
+from src.file_index import write_file_list
 
 
 logger = logging.getLogger(__name__)
@@ -400,47 +401,9 @@ class DailyReportGenerator:
 
         logger.info(f"日报已保存: {file_path}")
 
-        # 更新文件索引
-        await self._update_file_list(report.date)
+        # 更新文件索引（统一由 file_index 生成，避免索引漂移）
+        write_file_list(self.DATA_DIR)
 
         return file_path
 
-    async def _update_file_list(self, date: str) -> None:
-        """更新 file-list.json 索引"""
-        # 确保数据目录存在
-        self.DATA_DIR.mkdir(parents=True, exist_ok=True)
-
-        # 加载或创建索引
-        if self.FILE_LIST_PATH.exists():
-            try:
-                file_list = json.loads(self.FILE_LIST_PATH.read_text(encoding="utf-8"))
-            except json.JSONDecodeError:
-                file_list = {"papers": [], "news": [], "reports": []}
-        else:
-            file_list = {"papers": [], "news": [], "reports": []}
-
-        # 添加新的日报文件（如果不存在）
-        report_file = f"{date}.json"
-        if report_file not in file_list.get("reports", []):
-            file_list.setdefault("reports", []).insert(0, report_file)
-
-        # 检查并添加对应日期的论文和热点文件
-        papers_file = f"{date}.json"
-        if papers_file not in file_list.get("papers", []):
-            papers_path = self.DATA_DIR / "papers" / papers_file
-            if papers_path.exists():
-                file_list.setdefault("papers", []).insert(0, papers_file)
-
-        news_file = f"{date}.json"
-        if news_file not in file_list.get("news", []):
-            news_path = self.DATA_DIR / "news" / news_file
-            if news_path.exists():
-                file_list.setdefault("news", []).insert(0, news_file)
-
-        # 保存索引
-        self.FILE_LIST_PATH.write_text(
-            json.dumps(file_list, indent=2, ensure_ascii=False),
-            encoding="utf-8",
-        )
-
-        logger.debug(f"文件索引已更新: {self.FILE_LIST_PATH}")
+    # NOTE: 原先的 _update_file_list(date) 已移除，统一使用 src.file_index.write_file_list()

@@ -43,6 +43,7 @@ from src.generators import DailyReportGenerator
 from src.llm import LLMClient
 from src.models import Paper, NewsItem, AnalyzedPaper, AnalyzedNews
 from src.notifiers.feishu import get_notifier
+from src.file_index import write_file_list
 
 
 # 配置日志
@@ -510,41 +511,8 @@ async def task_update_file_list() -> None:
     logger.info("开始执行任务: 更新文件索引")
     logger.info("=" * 50)
 
-    file_list_path = DATA_DIR / "file-list.json"
-
-    # 扫描各目录
-    papers_files = sorted(
-        [f.name for f in PAPERS_DIR.glob("*.json")],
-        reverse=True,
-    ) if PAPERS_DIR.exists() else []
-
-    news_files = sorted(
-        [f.name for f in NEWS_DIR.glob("*.json")],
-        reverse=True,
-    ) if NEWS_DIR.exists() else []
-
-    reports_files = sorted(
-        [f.name for f in REPORTS_DIR.glob("*.json")],
-        reverse=True,
-    ) if REPORTS_DIR.exists() else []
-
-    file_list = {
-        "papers": papers_files,
-        "news": news_files,
-        "reports": reports_files,
-    }
-
-    # 保存索引
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    with open(file_list_path, "w", encoding="utf-8") as f:
-        json.dump(file_list, f, indent=2, ensure_ascii=False)
-
-    logger.info(
-        f"文件索引更新完成: "
-        f"论文 {len(papers_files)} 个, "
-        f"热点 {len(news_files)} 个, "
-        f"日报 {len(reports_files)} 个"
-    )
+    out_path = write_file_list(DATA_DIR)
+    logger.info(f"文件索引更新完成: {out_path}")
 
 
 async def task_notify() -> bool:

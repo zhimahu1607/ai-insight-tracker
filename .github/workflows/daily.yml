@@ -16,7 +16,7 @@ on:
       skip_notify:
         description: '跳过飞书通知'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 permissions:
@@ -43,8 +43,8 @@ jobs:
     name: Fetch & Analyze
     runs-on: ubuntu-latest
     
-    outputs:
-      has_new_content: ${{ steps.arxiv.outputs.has_new_content }}
+    # 注意：无论当天是否有新论文，也要继续抓取 RSS/生成日报/更新索引并提交部署
+    # 因此不再使用 has_new_content 作为后续步骤的条件开关。
     
     steps:
       # 1. 检出代码
@@ -90,54 +90,43 @@ jobs:
         run: |
           python scripts/daily_crawl.py --task arxiv --skip-config-check
           exit_code=$?
-          
-          if [ $exit_code -eq 0 ]; then
-            echo "has_new_content=true" >> $GITHUB_OUTPUT
-            echo "✅ 发现新论文"
-          elif [ $exit_code -eq 2 ]; then
-            echo "has_new_content=false" >> $GITHUB_OUTPUT
-            echo "ℹ️ 无新论文，将跳过后续分析步骤"
-          else
+          if [ $exit_code -ne 0 ]; then
             echo "❌ arXiv 获取出错"
             exit $exit_code
           fi
+          echo "✅ arXiv 任务完成（无论是否有新论文，后续步骤都会继续执行）"
 
-      # 6. 获取 RSS 热点（仅当有新论文时）
+      # 6. 获取 RSS 热点（无论是否有新论文）
       - name: Fetch RSS news
-        if: steps.arxiv.outputs.has_new_content == 'true'
         shell: bash -el {0}
         run: |
           python scripts/daily_crawl.py --task rss --skip-config-check
 
-      # 7. 浅度分析（仅当有新论文时）
+      # 7. 浅度分析（无论是否有新论文）
       - name: Light analysis
-        if: steps.arxiv.outputs.has_new_content == 'true'
         shell: bash -el {0}
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: |
           python scripts/daily_crawl.py --task analyze --skip-config-check
 
-      # 8. 生成日报（仅当有新论文时）
+      # 8. 生成日报（无论是否有新论文；若无数据脚本会自处理）
       - name: Generate daily report
-        if: steps.arxiv.outputs.has_new_content == 'true'
         shell: bash -el {0}
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: |
           python scripts/daily_crawl.py --task summary --skip-config-check
 
-      # 9. 更新文件索引
+      # 9. 更新文件索引（无论是否有新论文）
       - name: Update file list
-        if: steps.arxiv.outputs.has_new_content == 'true'
         shell: bash -el {0}
         run: |
           python scripts/daily_crawl.py --task update-file-list --skip-config-check
 
-      # 10. 发送飞书通知（仅当有新论文且未跳过）
+      # 10. 发送飞书通知（无论是否有新论文；允许通过输入跳过）
       - name: Send Feishu notification
         if: |
-          steps.arxiv.outputs.has_new_content == 'true' && 
           github.event.inputs.skip_notify != 'true'
         shell: bash -el {0}
         env:
@@ -148,7 +137,6 @@ jobs:
 
       # 11. 提交并推送更改
       - name: Commit and push changes
-        if: steps.arxiv.outputs.has_new_content == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -182,10 +170,13 @@ jobs:
           ref: ${{ github.ref }}
           fetch-depth: 0
 
-      # 2. 拉取最新更改（fetch-and-analyze 可能推送了新数据）
-      - name: Pull latest changes
+      # 2. 强制同步到远端最新提交（fetch-and-analyze 可能刚 push 了新数据）
+      # 重要：如果拉取失败就直接失败，避免部署旧数据却显示“成功”。
+      - name: Sync to latest remote commit
         run: |
-          git pull origin ${{ github.ref_name }} || true
+          git fetch --prune origin
+          git reset --hard origin/${{ github.ref_name }}
+          git clean -fd
 
       # 3. 设置 Node.js
       - name: Setup Node.js
