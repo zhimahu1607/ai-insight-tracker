@@ -2,10 +2,10 @@
 论文深度分析模块
 
 使用 LangGraph 实现 Multi-Agent 系统，对指定论文进行深入研究分析。
-支持论文全文分析（通过 PDF 下载和解析）。
+支持论文全文分析（通过 arXiv 官方 HTML 获取和解析）。
 
 Architecture:
-    [PDF 预处理] → Supervisor → Researcher ↔ Supervisor → Writer → Reviewer → [Writer | END]
+    [arXiv HTML 全文预处理] → Supervisor → Researcher ↔ Supervisor → Writer → Reviewer → [Writer | END]
 
 Usage:
     from src.agents.paper.deep_analyzer import run_deep_analysis, DeepAnalysisResult
@@ -14,7 +14,6 @@ Usage:
         paper_id="2501.12345",
         paper_title="...",
         paper_abstract="...",
-        paper_pdf_url="...",
         requirements="请重点分析方法创新点",
     )
     print(result.report)
@@ -22,6 +21,7 @@ Usage:
 
 import logging
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Optional
 
 from pydantic import BaseModel, Field
@@ -59,18 +59,18 @@ class DeepAnalysisResult(BaseModel):
     llm_provider: str = Field(default="", description="使用的 LLM 提供商")
     llm_model: str = Field(default="", description="使用的 LLM 模型")
 
-    # 全文分析信息 (新增)
-    pdf_parse_status: str = Field(default="pending", description="PDF 解析状态")
-    paper_total_pages: int = Field(default=0, description="论文总页数")
+    # 全文分析信息
+    fulltext_parse_status: str = Field(default="pending", description="全文解析状态")
+    paper_total_sections: int = Field(default=0, description="论文章节总数（含子章节）")
+    paper_html_url: str = Field(default="", description="arXiv 官方 HTML 全文链接")
 
 
 async def run_deep_analysis(
     paper_id: str,
     paper_title: str,
     paper_abstract: str,
-    paper_pdf_url: str,
     requirements: Optional[str] = None,
-) -> DeepAnalysisResult:
+    ) -> DeepAnalysisResult:
     """
     执行深度分析
 
@@ -78,7 +78,6 @@ async def run_deep_analysis(
         paper_id: arXiv 论文 ID
         paper_title: 论文标题
         paper_abstract: 论文摘要
-        paper_pdf_url: PDF 下载链接
         requirements: 用户指定的分析需求（可选）
 
     Returns:
@@ -97,52 +96,53 @@ async def run_deep_analysis(
     # 记录开始时间
     start_time = datetime.now(timezone.utc)
 
-    # === PDF 预处理阶段 (新增) ===
+    # === arXiv HTML 全文预处理阶段 ===
     paper_full_content: Optional[str] = None
     paper_tables_content: Optional[str] = None
     paper_figures_content: Optional[str] = None
     paper_sections_available = False
-    paper_total_pages = 0
+    paper_total_sections = 0
     paper_references_count = 0
-    pdf_parse_status = "pending"
+    fulltext_parse_status = "pending"
+    paper_html_url = ""
 
-    # 深度分析必须基于论文全文：下载 / 解析失败直接报错，不做降级
-    logger.info(f"开始下载和解析 PDF: {paper_id}")
-    from src.data_fetchers.pdf import load_paper_pdf, PaperChunker
-
-    parsed_paper = await load_paper_pdf(
-        paper_id=paper_id,
-        paper_title=paper_title,
-        pdf_url=paper_pdf_url,
-        download_timeout=settings.pdf.download_timeout if hasattr(settings, "pdf") else 120.0,
+    # 获取论文全文（严格使用官方 arXiv HTML）
+    logger.info(f"开始获取和解析 arXiv HTML 全文: {paper_id}")
+    from src.data_fetchers.arxiv.html_fulltext import (
+        build_fulltext_summary_context,
+        count_sections,
+        fetch_arxiv_html_fulltext,
     )
-    if parsed_paper.parse_status != "success":
-        raise RuntimeError(
-            f"PDF 获取/解析失败: {paper_id} - {parsed_paper.parse_error or '未知错误'}"
-        )
+
+    fulltext = await fetch_arxiv_html_fulltext(paper_id=paper_id)
+
+    # 保存结构化全文（用于调试/复用）
+    try:
+        project_root = Path(__file__).resolve().parents[4]  # ai-insight-tracker/
+        data_dir = project_root / "data"
+        out_path = data_dir / f"arxiv_html_fulltext_{paper_id}.json"
+        out_path.write_text(fulltext.model_dump_json(indent=2, ensure_ascii=False), encoding="utf-8")
+    except Exception as e:
+        logger.warning(f"保存 arXiv HTML 全文结构化结果失败（不影响分析继续）: {e}")
 
     # 设置全局论文内容（供 paper_reader 工具使用）
-    set_current_paper(parsed_paper)
+    set_current_paper(fulltext)
     try:
-        pdf_parse_status = "success"
+        fulltext_parse_status = "success"
+        paper_html_url = str(fulltext.source.url)
 
-        # 获取概要上下文
-        chunker = PaperChunker(
-            max_tokens_per_chunk=settings.pdf.max_tokens_per_chunk
-            if hasattr(settings, "pdf")
-            else 4000,
-        )
-        paper_full_content = chunker.get_summary_context(parsed_paper)
-        paper_tables_content = chunker.get_tables_context(parsed_paper)
-        paper_figures_content = chunker.get_figures_context(parsed_paper)
-        paper_sections_available = len(parsed_paper.sections) > 0
-        paper_total_pages = parsed_paper.total_pages
-        paper_references_count = len(parsed_paper.references)
+        # 生成给 Writer 的“全文概要上下文”
+        paper_full_content = build_fulltext_summary_context(fulltext)
+        paper_tables_content = None
+        paper_figures_content = None
+        paper_sections_available = len(fulltext.sections) > 0
+        paper_total_sections = count_sections(fulltext.sections)
+        paper_references_count = 0  # 官方 HTML 暂不做引用结构化统计
 
         logger.info(
-            f"PDF 解析成功: {paper_id}, "
-            f"页数={paper_total_pages}, 章节={len(parsed_paper.sections)}, "
-            f"表格={len(parsed_paper.tables)}, 图表={len(parsed_paper.figures)}"
+            f"arXiv HTML 解析成功: {paper_id}, "
+            f"章节总数={paper_total_sections}, "
+            f"html_chars={fulltext.stats.html_chars}, blocks={fulltext.stats.blocks}"
         )
 
         # 创建初始状态
@@ -150,7 +150,7 @@ async def run_deep_analysis(
             paper_id=paper_id,
             paper_title=paper_title,
             paper_abstract=paper_abstract,
-            paper_pdf_url=paper_pdf_url,
+            paper_html_url=paper_html_url,
             requirements=requirements,
             max_iterations=max_iterations,
             max_write_iterations=max_write_iterations,
@@ -159,9 +159,9 @@ async def run_deep_analysis(
             paper_tables_content=paper_tables_content,
             paper_figures_content=paper_figures_content,
             paper_sections_available=paper_sections_available,
-            paper_total_pages=paper_total_pages,
+            paper_total_sections=paper_total_sections,
             paper_references_count=paper_references_count,
-            pdf_parse_status=pdf_parse_status,
+            fulltext_parse_status=fulltext_parse_status,
         )
         initial_state["analysis_started_at"] = start_time
 
@@ -199,15 +199,16 @@ async def run_deep_analysis(
             llm_provider=settings.llm.provider,
             llm_model=settings.llm.model,
             # 全文分析信息
-            pdf_parse_status=pdf_parse_status,
-            paper_total_pages=paper_total_pages,
+            fulltext_parse_status=fulltext_parse_status,
+            paper_total_sections=paper_total_sections,
+            paper_html_url=paper_html_url,
         )
 
         logger.info(
             f"深度分析完成: {paper_id}, "
             f"研究迭代: {result.research_iterations}, "
             f"写作迭代: {result.write_iterations}, "
-            f"全文分析: {pdf_parse_status}, "
+            f"全文分析: {fulltext_parse_status}, "
             f"耗时: {duration:.1f}s"
         )
 

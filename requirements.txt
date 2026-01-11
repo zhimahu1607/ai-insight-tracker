@@ -61,14 +61,11 @@ crawl4ai>=0.4.0,<1.0.0
 playwright>=1.40.0,<2.0.0
 
 # ============================================================
-# PDF Processing (for full-text analysis)
+# HTML Processing (for arXiv full-text analysis)
 # ============================================================
 
-# PyMuPDF for PDF text extraction and layout analysis
-PyMuPDF>=1.24.0,<2.0.0
-
-# pdfplumber for table extraction
-pdfplumber>=0.10.0,<1.0.0
+# HTML parser
+beautifulsoup4>=4.12.0,<5.0.0
 
 # ============================================================
 # Utilities

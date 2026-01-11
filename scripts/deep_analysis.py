@@ -230,11 +230,10 @@ async def main() -> int:
             paper_id=paper.id,
             paper_title=paper.title,
             paper_abstract=paper.abstract,
-            paper_pdf_url=str(paper.pdf_url),
             requirements=args.issue_body or "",
         )
         logger.info(
-            f"深度分析完成: {paper.id} (pdf_parse_status={result.pdf_parse_status}, pages={result.paper_total_pages})"
+            f"深度分析完成: {paper.id} (fulltext_parse_status={result.fulltext_parse_status}, sections={result.paper_total_sections})"
         )
         report = result.report
     except Exception as e:

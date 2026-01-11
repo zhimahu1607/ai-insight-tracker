@@ -12,7 +12,7 @@ AI Insight Tracker 是一个自动化的学术论文和 AI 技术热点追踪系
 | 🔥 **AI 新闻** | 从 AI 头部公司博客获取第一手资讯（OpenAI、Anthropic、DeepSeek、Google Research、DeepMind、Qwen 等） |
 | 🤖 **浅度分析** | LLM 自动生成结构化论文/新闻摘要 |
 | 🔬 **深度分析** | Multi-Agent 系统对指定论文深入研究，支持论文全文分析 |
-| 📄 **全文分析** | 自动下载 PDF、解析章节结构、提取表格和图表，基于全文内容进行深度分析 |
+| 📄 **全文分析** | 基于 arXiv 官方 HTML 全文获取与结构化解析，支持按章节/关键词查询并进行深度分析 |
 | 📊 **每日报告** | 生成学术日报，推送到飞书 |
 | 🌐 **Web 展示** | GitHub Pages 静态站浏览 |
 
@@ -198,14 +198,12 @@ ai-insight-tracker/
 │   │   ├── arxiv/                # arXiv API 客户端
 │   │   │   ├── client.py         # 异步客户端
 │   │   │   ├── query.py          # 查询构建器
-│   │   │   └── dedup.py          # 去重逻辑（已废弃）
+│   │   │   ├── dedup.py          # 去重逻辑（已废弃）
+│   │   ├── models/               # Pydantic 数据模型
+│   │   │   └── arxiv_html_fulltext.py # arXiv 官方 HTML 全文结构化数据模型
+│   │   │   └── html_fulltext.py  # arXiv 官方 HTML 全文获取与结构化解析
 │   │   ├── ids_tracker.py        # ID 追踪器（fetched/analyzed 两套文件，默认保留30天）
 │   │   ├── processed_tracker.py  # 兼容层（历史名称：ProcessedTracker，等价于 fetched_ids）
-│   │   ├── pdf/                  # PDF 处理模块 (论文全文分析)
-│   │   │   ├── downloader.py     # PDF 异步下载器
-│   │   │   ├── parser.py         # PDF 解析器 (PyMuPDF + pdfplumber)
-│   │   │   ├── chunker.py        # 智能分块器
-│   │   │   └── models.py         # 数据模型
 │   │   ├── news/                 # 新闻源统一入口
 │   │   │   ├── fetcher.py        # 混合获取器 (RSS + Crawler)
 │   │   │   ├── rss_fetcher.py    # RSS 异步获取器
@@ -296,7 +294,7 @@ ai-insight-tracker/
 | 运行时 | Python 3.12+ |
 | 架构 | 全异步设计 (asyncio + aiohttp) |
 | 数据采集 | arXiv 官方 API、crawl4ai + Playwright |
-| PDF 处理 | PyMuPDF (文本提取) + pdfplumber (表格提取) |
+| 论文全文 | arXiv 官方 HTML (`arxiv.org/html/...`) |
 | LLM 调用 | LangChain 统一接口 (`init_chat_model`) |
 | Multi-Agent | LangGraph 工作流 |
 | 数据验证 | Pydantic v2 |

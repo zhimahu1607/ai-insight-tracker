@@ -3,7 +3,7 @@ Researcher Agent 节点
 
 负责执行具体的信息搜索和论文分析任务。
 使用自定义 ReAct 执行器，支持 DeepSeek reasoner 的 reasoning_content 字段。
-支持论文全文内容查询（当 PDF 解析成功时）。
+支持论文全文内容查询（当 arXiv HTML 全文解析成功时）。
 """
 
 import logging
@@ -68,7 +68,7 @@ async def researcher_node(state: DeepAnalysisState) -> dict:
     if state.get("paper_sections_available"):
         task_parts.extend([
             f"",
-            f"**注意**: 论文全文已加载（共 {state.get('paper_total_pages', 0)} 页）。",
+            f"**注意**: 论文全文已加载（共 {state.get('paper_total_sections', 0)} 个章节）。",
             f"你可以使用 paper_reader 工具查询论文的具体章节内容或搜索关键词。",
         ])
 

@@ -19,7 +19,6 @@ from .models import (
     ArxivConfig,
     LLMConfig,
     NotificationConfig,
-    PDFConfig,
     SearchConfig,
     Settings,
 )
@@ -44,7 +43,6 @@ __all__ = [
     "SearchConfig",
     "AnalysisConfig",
     "NotificationConfig",
-    "PDFConfig",
     "AdvancedConfig",
     # 配置加载
     "get_settings",

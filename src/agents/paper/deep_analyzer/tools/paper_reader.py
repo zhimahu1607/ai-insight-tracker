@@ -10,21 +10,21 @@ from typing import Optional
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 
-from src.data_fetchers.pdf.models import ParsedPaper, SectionType
+from src.models.arxiv_html_fulltext import ArxivHtmlFulltext, ArxivHtmlSection
 
 logger = logging.getLogger(__name__)
 
 # 全局存储当前论文（在深度分析开始时设置）
-_current_paper: Optional[ParsedPaper] = None
+_current_paper: Optional[ArxivHtmlFulltext] = None
 
 
-def set_current_paper(paper: Optional[ParsedPaper]) -> None:
+def set_current_paper(paper: Optional[ArxivHtmlFulltext]) -> None:
     """设置当前分析的论文"""
     global _current_paper
     _current_paper = paper
 
 
-def get_current_paper() -> Optional[ParsedPaper]:
+def get_current_paper() -> Optional[ArxivHtmlFulltext]:
     """获取当前分析的论文"""
     return _current_paper
 
@@ -53,32 +53,50 @@ class PaperReaderInput(BaseModel):
     )
 
 
-def _parse_section_type(section_name: str) -> SectionType:
-    """解析章节类型字符串"""
-    mapping = {
-        "abstract": SectionType.ABSTRACT,
-        "introduction": SectionType.INTRODUCTION,
-        "intro": SectionType.INTRODUCTION,
-        "related": SectionType.RELATED_WORK,
-        "related_work": SectionType.RELATED_WORK,
-        "background": SectionType.RELATED_WORK,
-        "method": SectionType.METHOD,
-        "methods": SectionType.METHOD,
-        "methodology": SectionType.METHOD,
-        "approach": SectionType.METHOD,
-        "experiment": SectionType.EXPERIMENT,
-        "experiments": SectionType.EXPERIMENT,
-        "evaluation": SectionType.EXPERIMENT,
-        "results": SectionType.RESULTS,
-        "result": SectionType.RESULTS,
-        "findings": SectionType.RESULTS,
-        "discussion": SectionType.DISCUSSION,
-        "analysis": SectionType.DISCUSSION,
-        "conclusion": SectionType.CONCLUSION,
-        "conclusions": SectionType.CONCLUSION,
-        "summary": SectionType.CONCLUSION,
+def _normalize(s: str) -> str:
+    return " ".join((s or "").lower().split())
+
+
+def _walk_sections(sections: list[ArxivHtmlSection]) -> list[ArxivHtmlSection]:
+    out: list[ArxivHtmlSection] = []
+    stack = list(sections)
+    while stack:
+        s = stack.pop(0)
+        out.append(s)
+        if s.children:
+            stack[0:0] = s.children
+    return out
+
+
+def _match_section_by_key(
+    sections: list[ArxivHtmlSection], key: str
+) -> list[ArxivHtmlSection]:
+    """
+    将用户 section key 映射到可能的章节标题关键词（粗匹配）
+    """
+    key = _normalize(key)
+    candidates: list[str]
+    mapping: dict[str, list[str]] = {
+        "abstract": ["abstract"],
+        "introduction": ["introduction", "intro"],
+        "intro": ["introduction", "intro"],
+        "related": ["related", "background", "prior work"],
+        "related_work": ["related", "background", "prior work"],
+        "method": ["method", "methods", "methodology", "approach"],
+        "experiment": ["experiment", "experiments", "evaluation", "setup"],
+        "results": ["results", "result", "findings"],
+        "discussion": ["discussion", "analysis"],
+        "conclusion": ["conclusion", "conclusions", "summary"],
     }
-    return mapping.get(section_name.lower().strip(), SectionType.OTHER)
+    candidates = mapping.get(key, [key])
+
+    matched: list[ArxivHtmlSection] = []
+    for s in _walk_sections(sections):
+        title = _normalize(s.title)
+        heading = _normalize(s.heading)
+        if any(c in title for c in candidates) or any(c in heading for c in candidates):
+            matched.append(s)
+    return matched
 
 
 def _extract_keyword_context(text: str, keyword: str, context_chars: int = 500) -> str:
@@ -148,39 +166,34 @@ def get_paper_reader_tool():
         if paper is None:
             return "论文全文内容尚未加载。请使用其他工具获取论文信息。"
 
-        if paper.parse_status != "success":
-            return f"论文 PDF 解析失败: {paper.parse_error or '未知错误'}"
-
         results: list[str] = []
 
         # 按章节查询
         if section:
-            section_type = _parse_section_type(section)
-            found = False
-            for sec in paper.sections:
-                if sec.section_type == section_type:
-                    found = True
-                    content = sec.content[:4000]  # 限制长度
-                    results.append(f"## {sec.title}\n\n{content}")
-                    if len(sec.content) > 4000:
-                        results.append(
-                            "\n... (内容已截断，如需更多请指定关键词搜索)"
-                        )
-            if not found:
-                results.append(f"未找到 '{section}' 章节。可用章节: {', '.join(s.title for s in paper.sections)}")
+            matched = _match_section_by_key(paper.sections, section)
+            if not matched:
+                all_titles = [s.heading for s in _walk_sections(paper.sections)]
+                results.append(
+                    f"未找到 '{section}' 章节。可用章节: {', '.join(all_titles[:30])}"
+                )
+            else:
+                for sec in matched[:3]:
+                    content = "\n\n".join(sec.paragraphs)
+                    content = content[:4000]
+                    results.append(f"## {sec.heading}\n\n{content}")
+                    if len("\n\n".join(sec.paragraphs)) > 4000:
+                        results.append("\n... (内容已截断，如需更多请指定关键词搜索)")
 
         # 按关键词搜索
         if keyword:
             keyword_results: list[str] = []
             keyword_lower = keyword.lower()
-            for sec in paper.sections:
-                if keyword_lower in sec.content.lower():
-                    # 提取包含关键词的上下文
-                    context = _extract_keyword_context(sec.content, keyword)
+            for sec in _walk_sections(paper.sections):
+                joined = "\n\n".join(sec.paragraphs)
+                if keyword_lower in joined.lower():
+                    context = _extract_keyword_context(joined, keyword)
                     if context:
-                        keyword_results.append(
-                            f"### 在 {sec.title} 中找到:\n{context}"
-                        )
+                        keyword_results.append(f"### 在 {sec.heading} 中找到:\n{context}")
 
             if keyword_results:
                 results.extend(keyword_results[:5])  # 最多 5 个匹配
@@ -188,40 +201,23 @@ def get_paper_reader_tool():
                 results.append(f"未在论文中找到关键词 '{keyword}'")
 
         # 包含表格
-        if include_tables and paper.tables:
-            table_texts: list[str] = []
-            for table in paper.tables[:3]:  # 最多 3 个表格
-                header = f"### {table.table_id}"
-                if table.caption:
-                    header += f": {table.caption}"
-                table_texts.append(f"{header}\n\n{table.raw_text[:1000]}")
-            if table_texts:
-                results.append("\n## 表格内容\n\n" + "\n\n".join(table_texts))
+        if include_tables:
+            results.append("HTML 版本暂不支持表格结构化提取（已忽略 include_tables）。")
 
         # 包含图表说明
-        if include_figures and paper.figures:
-            figure_texts: list[str] = []
-            for fig in paper.figures[:10]:  # 最多 10 个图表
-                figure_texts.append(
-                    f"- **{fig.figure_id}** (Page {fig.page}): {fig.caption}"
-                )
-            if figure_texts:
-                results.append("\n## 图表说明\n\n" + "\n".join(figure_texts))
+        if include_figures:
+            results.append("HTML 版本暂不支持图表说明结构化提取（已忽略 include_figures）。")
 
         if not results:
             # 没有指定任何查询参数，返回概览
             overview_parts = [
                 f"论文: {paper.title}",
-                f"总页数: {paper.total_pages}",
-                f"章节数: {len(paper.sections)}",
-                f"表格数: {len(paper.tables)}",
-                f"图表数: {len(paper.figures)}",
-                f"参考文献数: {len(paper.references)}",
+                f"章节数: {len(_walk_sections(paper.sections))}",
                 "",
                 "可用章节:",
             ]
-            for sec in paper.sections:
-                overview_parts.append(f"  - {sec.title} ({sec.token_count} tokens)")
+            for sec in _walk_sections(paper.sections)[:60]:
+                overview_parts.append(f"  - {sec.heading}")
 
             return "\n".join(overview_parts) + "\n\n请指定 section 或 keyword 参数查询具体内容。"
 

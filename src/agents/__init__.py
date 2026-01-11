@@ -22,7 +22,6 @@ Usage:
         paper_id="2501.12345",
         paper_title="...",
         paper_abstract="...",
-        paper_pdf_url="...",
     )
 
     # 热点分析

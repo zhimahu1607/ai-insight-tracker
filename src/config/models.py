@@ -84,17 +84,6 @@ class NewsFetcherConfig(BaseModel):
     headless: bool = Field(default=True, description="是否使用无头浏览器")
 
 
-class PDFConfig(BaseModel):
-    """PDF 处理配置"""
-
-    download_timeout: float = Field(
-        default=120.0, description="PDF 下载超时（秒）"
-    )
-    max_tokens_per_chunk: int = Field(
-        default=4000, description="每个分块的最大 token 数"
-    )
-
-
 class AdvancedConfig(BaseModel):
     """高级配置"""
 
@@ -114,7 +103,6 @@ class Settings(BaseModel):
     analysis: AnalysisConfig = Field(default_factory=AnalysisConfig)
     notification: NotificationConfig = Field(default_factory=NotificationConfig)
     news: NewsFetcherConfig = Field(default_factory=NewsFetcherConfig)
-    pdf: PDFConfig = Field(default_factory=PDFConfig)
     advanced: AdvancedConfig = Field(default_factory=AdvancedConfig)
 
     def validate_required(self) -> None:

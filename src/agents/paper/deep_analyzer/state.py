@@ -21,7 +21,7 @@ class DeepAnalysisState(TypedDict, total=False):
 
     状态字段分为五类：
     1. 输入字段：论文基本信息
-    2. 论文全文字段：PDF 解析后的内容
+    2. 论文全文字段：arXiv 官方 HTML 全文解析后的内容
     3. Supervisor 状态：消息历史和研究计划
     4. 研究与写作状态：研究笔记、草稿、反馈
     5. 流程控制：迭代次数和时间戳
@@ -31,7 +31,7 @@ class DeepAnalysisState(TypedDict, total=False):
     paper_id: str  # arXiv 论文 ID
     paper_title: str  # 论文标题
     paper_abstract: str  # 论文摘要
-    paper_pdf_url: str  # PDF 下载链接
+    paper_html_url: str  # arXiv 官方 HTML 全文链接
     requirements: Optional[str]  # 用户指定的分析需求 (来自 Issue Body)
 
     # === 论文全文字段 (新增) ===
@@ -39,9 +39,9 @@ class DeepAnalysisState(TypedDict, total=False):
     paper_tables_content: Optional[str]  # 表格内容概要
     paper_figures_content: Optional[str]  # 图表说明概要
     paper_sections_available: bool  # 是否有章节内容可查询
-    paper_total_pages: int  # 论文总页数
+    paper_total_sections: int  # 论文章节总数（含子章节）
     paper_references_count: int  # 参考文献数量
-    pdf_parse_status: str  # PDF 解析状态: success / failed / pending
+    fulltext_parse_status: str  # 全文解析状态: success / failed / pending
 
     # === Supervisor 状态 ===
     supervisor_messages: Annotated[list[BaseMessage], add_messages]  # Supervisor 消息历史
@@ -68,7 +68,7 @@ def create_initial_state(
     paper_id: str,
     paper_title: str,
     paper_abstract: str,
-    paper_pdf_url: str,
+    paper_html_url: str,
     requirements: Optional[str] = None,
     max_iterations: int = 5,
     max_write_iterations: int = 3,
@@ -77,9 +77,9 @@ def create_initial_state(
     paper_tables_content: Optional[str] = None,
     paper_figures_content: Optional[str] = None,
     paper_sections_available: bool = False,
-    paper_total_pages: int = 0,
+    paper_total_sections: int = 0,
     paper_references_count: int = 0,
-    pdf_parse_status: str = "pending",
+    fulltext_parse_status: str = "pending",
 ) -> DeepAnalysisState:
     """
     创建初始状态
@@ -88,7 +88,7 @@ def create_initial_state(
         paper_id: arXiv 论文 ID
         paper_title: 论文标题
         paper_abstract: 论文摘要
-        paper_pdf_url: PDF 下载链接
+        paper_html_url: arXiv 官方 HTML 全文链接
         requirements: 用户指定的分析需求
         max_iterations: 最大研究迭代次数
         max_write_iterations: 最大写作修改次数
@@ -96,9 +96,9 @@ def create_initial_state(
         paper_tables_content: 表格内容概要
         paper_figures_content: 图表说明概要
         paper_sections_available: 是否有章节内容可查询
-        paper_total_pages: 论文总页数
+        paper_total_sections: 论文章节总数（含子章节）
         paper_references_count: 参考文献数量
-        pdf_parse_status: PDF 解析状态
+        fulltext_parse_status: 全文解析状态
 
     Returns:
         初始化的 DeepAnalysisState
@@ -108,16 +108,16 @@ def create_initial_state(
         paper_id=paper_id,
         paper_title=paper_title,
         paper_abstract=paper_abstract,
-        paper_pdf_url=paper_pdf_url,
+        paper_html_url=paper_html_url,
         requirements=requirements,
         # 论文全文字段
         paper_full_content=paper_full_content,
         paper_tables_content=paper_tables_content,
         paper_figures_content=paper_figures_content,
         paper_sections_available=paper_sections_available,
-        paper_total_pages=paper_total_pages,
+        paper_total_sections=paper_total_sections,
         paper_references_count=paper_references_count,
-        pdf_parse_status=pdf_parse_status,
+        fulltext_parse_status=fulltext_parse_status,
         # Supervisor 状态
         supervisor_messages=[],
         research_plan=None,
