@@ -26,11 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     
     # 条件验证：
-    # 1. Issue 有 'agent-task' 标签
-    # 2. Issue 标题以 '[Analysis]' 开头
-    # 3. Issue 创建者是仓库所有者
+    # 1. Issue 标题以 '[Analysis]' 开头
+    # 2. Issue 创建者是仓库所有者
     if: |
-      contains(github.event.issue.labels.*.name, 'agent-task') &&
       startsWith(github.event.issue.title, '[Analysis]') &&
       github.event.issue.user.login == github.repository_owner
     
@@ -38,6 +36,23 @@ jobs:
       # 1. 检出代码
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # 1.5 自动添加 agent-task 标签
+      - name: Ensure agent-task label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['agent-task']
+              });
+            } catch (e) {
+              console.log('添加标签失败 (可能标签不存在):', e);
+              // 不阻断流程，继续执行
+            }
 
       # 2. 设置 Conda 环境
       - name: Setup Micromamba
