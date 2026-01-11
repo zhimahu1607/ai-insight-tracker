@@ -21,7 +21,7 @@ export function PaperCard({ paper }: PaperCardProps) {
                 {paper.primary_category}
               </Badge>
               <div onClick={(e) => e.stopPropagation()}>
-                <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} size="icon" className="h-6 w-6" />
+                <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} size="sm" className="h-7 text-xs px-2" />
               </div>
             </div>
             <CardTitle className="text-lg leading-tight line-clamp-2">
