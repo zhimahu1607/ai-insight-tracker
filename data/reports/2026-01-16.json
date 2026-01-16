@@ -1,0 +1,32 @@
+{
+  "date": "2026-01-16",
+  "summary": "今日共收录 307 篇论文，7 条热点资讯。热门领域：cs.CV、cs.LG、cs.CL、cs.AI。热门关键词：Large Language Model、Large Language Models、Reinforcement Learning、Diffusion Models、Fine-tuning。",
+  "category_summaries": {},
+  "news_summary": "",
+  "stats": {
+    "total_papers": 307,
+    "papers_by_category": {
+      "cs.LG": 87,
+      "cs.CL": 78,
+      "cs.CV": 91,
+      "cs.AI": 51
+    },
+    "total_news": 7,
+    "news_by_category": {
+      "ai": 7
+    },
+    "top_keywords": [
+      "Large Language Model",
+      "Large Language Models",
+      "Reinforcement Learning",
+      "Diffusion Models",
+      "Fine-tuning",
+      "Benchmark Evaluation",
+      "Deep Learning",
+      "Transformers",
+      "Retrieval-Augmented Generation",
+      "Vision-Language Models"
+    ]
+  },
+  "generated_at": "2026-01-16T03:31:03.336434"
+}
