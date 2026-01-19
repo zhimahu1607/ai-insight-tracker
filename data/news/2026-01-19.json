@@ -1,0 +1,60 @@
+[
+  {
+    "id": "7946fccc4ebbf1db",
+    "title": "AI for self empowerment",
+    "url": "https://openai.com/index/ai-for-human-agency",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-18T12:00:00Z",
+    "summary": "How AI can expand human agency by closing the capability overhang—helping people, businesses, and countries unlock real productivity, growth, and opportunity.",
+    "content": "How AI can expand human agency by closing the capability overhang—helping people, businesses, and countries unlock real productivity, growth, and opportunity.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 发布了一篇名为“AI for self empowerment”的文章，探讨人工智能如何通过缩小能力与需求之间的差距来增强人类能动性。文章指出，AI 技术能够帮助个人实现自我赋能，企业提高生产效率，国家推动经济增长，从而解锁真正的生产力、增长和机会。这一观点强调了 AI 在提升社会和经济效率方面的潜力，可能促进更广泛的创新和应用，并影响全球范围内的技术采纳和政策制定，以实现可持续的发展进步。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "人工智能",
+        "人类能动性",
+        "能力差距",
+        "生产力"
+      ]
+    },
+    "analyzed_at": "2026-01-19T03:24:25.788121Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "a6589fb957eb8bb3",
+    "title": "A business that scales with the value of intelligence",
+    "url": "https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-18T10:00:00Z",
+    "summary": "OpenAI’s business model scales with intelligence—spanning subscriptions, API, ads, commerce, and compute—driven by deepening ChatGPT adoption.",
+    "content": "OpenAI’s business model scales with intelligence—spanning subscriptions, API, ads, commerce, and compute—driven by deepening ChatGPT adoption.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 的业务模式正与智力的价值紧密关联，通过订阅、API、广告、商业和计算等多种渠道进行扩展，这主要由 ChatGPT 采用率的加深所驱动。这一策略展示了 OpenAI 如何成功地将 AI 技术商业化，特别是基于其大语言模型产品 ChatGPT，这不仅推动了公司收入的多元化和增长，还巩固了其在 AI 领域的领导地位。其重要性在于表明 AI 技术正在快速融入商业应用，影响行业趋势，如激发类似业务模式和创新，促进技术应用的深化和普及。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "business model",
+        "API",
+        "compute"
+      ]
+    },
+    "analyzed_at": "2026-01-19T03:23:08.688666Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
