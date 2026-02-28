@@ -1,0 +1,147 @@
+[
+  {
+    "id": "a96360bc72994e22",
+    "title": "Joint Statement from OpenAI and Microsoft",
+    "url": "https://openai.com/index/continuing-microsoft-partnership",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-27T05:30:00Z",
+    "summary": "Microsoft and OpenAI continue to work closely across research, engineering, and product development, building on years of deep collaboration and shared success.",
+    "content": "Microsoft and OpenAI continue to work closely across research, engineering, and product development, building on years of deep collaboration and shared success.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "微软和OpenAI发布联合声明，宣布双方将继续在研究、工程和产品开发方面保持紧密合作，建立在多年深度协作和共享成功的基础上。此声明重申了合作伙伴关系的持续性，对人工智能领域具有重要战略意义。作为行业领先者，双方的合作预计将进一步推动AI技术的研发和创新产品的商业化，加速技术进步，并对全球科技生态系统产生积极影响。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Microsoft",
+        "合作",
+        "研究",
+        "产品开发"
+      ]
+    },
+    "analyzed_at": "2026-02-28T03:27:41.151868Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "562988ce82c25338",
+    "title": "Introducing the Stateful Runtime Environment for Agents in Amazon Bedrock",
+    "url": "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-27T05:30:00Z",
+    "summary": "Stateful Runtime for Agents in Amazon Bedrock brings persistent orchestration, memory, and secure execution to multi-step AI workflows powered by OpenAI.",
+    "content": "Stateful Runtime for Agents in Amazon Bedrock brings persistent orchestration, memory, and secure execution to multi-step AI workflows powered by OpenAI.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Amazon Bedrock 引入了 Stateful Runtime Environment for Agents，为基于 OpenAI 技术的多步 AI 工作流提供持久编排、内存和安全执行功能。这一更新使 AI 代理能保持状态和记忆，支持连续、复杂的任务处理，如客户服务或数据分析。其重要性在于解决了 AI 工作流中的状态管理问题，通过提升编排效率和安全性，增强了应用的可靠性和可扩展性。这推动了 AI 代理在自动化场景中的进步，并可能优化用户体验和业务效率。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Amazon Bedrock",
+        "OpenAI",
+        "Stateful Runtime Environment",
+        "Agents",
+        "multi-step AI workflows"
+      ]
+    },
+    "analyzed_at": "2026-02-28T03:28:43.229206Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "438717494fbc3e91",
+    "title": "Scaling AI for everyone",
+    "url": "https://openai.com/index/scaling-ai-for-everyone",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-27T05:30:00Z",
+    "summary": "Today we’re announcing $110B in new investment at a $730B pre money valuation. This includes $30B from SoftBank, $30B from NVIDIA, and $50B from Amazon.",
+    "content": "Today we’re announcing $110B in new investment at a $730B pre money valuation. This includes $30B from SoftBank, $30B from NVIDIA, and $50B from Amazon.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布获得1100亿美元的新投资，估值为7300亿美元。投资方包括软银、英伟达和亚马逊，分别贡献了300亿、300亿和500亿美元。这一重大融资事件旨在支持OpenAI扩展AI技术，使其更普及到每个人，反映了AI行业的强劲增长和资本市场的信心。投资有助于加速AI研发，推动技术创新和产品商业化，可能对整个科技生态系统产生深远影响，包括促进更多AI应用和服务的推出。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "SoftBank",
+        "NVIDIA",
+        "Amazon",
+        "AI"
+      ]
+    },
+    "analyzed_at": "2026-02-28T03:27:31.238484Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "5c157a0f1b15a2e5",
+    "title": "OpenAI and Amazon announce strategic partnership",
+    "url": "https://openai.com/index/amazon-partnership",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-27T05:30:00Z",
+    "summary": "OpenAI and Amazon announce a strategic partnership bringing OpenAI’s Frontier platform to AWS, expanding AI infrastructure, custom models, and enterprise AI agents.",
+    "content": "OpenAI and Amazon announce a strategic partnership bringing OpenAI’s Frontier platform to AWS, expanding AI infrastructure, custom models, and enterprise AI agents.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 和 Amazon 宣布战略合作伙伴关系，旨在将 OpenAI 的 Frontier 平台引入 AWS，以扩展 AI 基础设施、提供定制模型和强化企业 AI 代理服务。这一合作结合了 OpenAI 的先进 AI 技术与 AWS 的云服务平台，有望提升 AI 技术的可访问性和应用范围，加速企业在人工智能领域的采纳。通过资源共享和技术整合，合作可能推动更灵活、可扩展的 AI 解决方案，促进云服务和 AI 领域的融合，增强行业竞争力和创新能力。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Amazon",
+        "AWS",
+        "Frontier platform",
+        "AI infrastructure"
+      ]
+    },
+    "analyzed_at": "2026-02-28T03:28:03.168613Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "70a6acae2a82fb61",
+    "title": "An update on our mental health-related work",
+    "url": "https://openai.com/index/update-on-mental-health-related-work",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-27T00:00:00Z",
+    "summary": "OpenAI shares updates on its mental health safety work, including parental controls, trusted contacts, improved distress detection, and recent litigation developments.",
+    "content": "OpenAI shares updates on its mental health safety work, including parental controls, trusted contacts, improved distress detection, and recent litigation developments.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了其心理健康安全工作的最新更新，内容包括引入父母控制功能、可信联系人机制、改进的心理困扰检测技术以及近期诉讼进展的说明。这些更新旨在增强平台的安全性，预防用户心理健康危机，并回应法律挑战。改进的检测技术可能基于AI算法，以更准确地识别用户困扰信号，从而提高干预效果。这一举措对保护用户特别是年轻群体的心理健康至关重要，展示了AI技术在安全领域的应用进展，并可能推动行业在心理健康防护方面的标准提升。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "心理健康安全",
+        "parental controls",
+        "trusted contacts",
+        "distress detection"
+      ]
+    },
+    "analyzed_at": "2026-02-28T03:27:37.139158Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
