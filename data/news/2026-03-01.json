@@ -1,0 +1,31 @@
+[
+  {
+    "id": "70dadf2e6ec3ef5f",
+    "title": "Our agreement with the Department of War",
+    "url": "https://openai.com/index/our-agreement-with-the-department-of-war",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-28T12:30:00Z",
+    "summary": "Details on OpenAI’s contract with the Department of War, outlining safety red lines, legal protections, and how AI systems will be deployed in classified environments.",
+    "content": "Details on OpenAI’s contract with the Department of War, outlining safety red lines, legal protections, and how AI systems will be deployed in classified environments.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 与战争部门签订合同，详细阐述了 AI 系统在军事应用中的安全红线、法律保护措施以及在分类环境中的部署方式。这一协议标志着 AI 技术在国防和政府领域的重要进展，强调了安全标准和法律框架的关键性，以确保 AI 在敏感环境中的负责任使用。合同内容可能涉及风险管理、合规性要求和操作策略，对国家安全和 AI 行业的发展产生广泛影响，促进相关技术和政策的讨论与制定。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "战争部门",
+        "AI 系统",
+        "安全红线",
+        "分类环境"
+      ]
+    },
+    "analyzed_at": "2026-03-01T04:03:30.081225Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
