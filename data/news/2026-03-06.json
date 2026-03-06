@@ -1,0 +1,261 @@
+[
+  {
+    "id": "d337aa27886ace51",
+    "title": "Drive organizational growth with Amazon Lex multi-developer CI/CD pipeline",
+    "url": "https://aws.amazon.com/blogs/machine-learning/drive-organizational-growth-with-amazon-lex-multi-developer-ci-cd-pipeline/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T16:20:13Z",
+    "summary": "In this post, we walk through a multi-developer CI/CD pipeline for Amazon Lex that enables isolated development environments, automated testing, and streamlined deployments. We show you how to set up the solution and share real-world results from teams using this approach.",
+    "content": "As your conversational AI initiatives evolve, developing Amazon Lex assistants becomes increasingly complex. Multiple developers working on the same shared Lex instance leads to configuration conflicts, overwritten changes, and slower iteration cycles. Scaling Amazon Lex development requires isolated environments, version control, and automated deployment pipelines. By adopting well-structured continuous integration and continuous delivery (CI/CD) practices, organizations can reduce development bottlenecks, accelerate innovation, and deliver smoother intelligent conversational experiences powered by Amazon Lex.\nIn this post, we walk through a multi-developer CI/CD pipeline for Amazon Lex that enables isolated development environments, automated testing, and streamlined deployments. We show you how to set up the solution and share real-world results from teams using this approach.\nTransforming development through scalable CI/CD practices\nTraditional approaches to Amazon Lex development often rely on single-instance setups and manual workflows. While these methods work for small, single-developer projects, they can introduce friction when multiple developers need to work in parallel, leading to slower iteration cycles and higher operational overhead. A modern multi-developer CI/CD pipeline changes this dynamic by enabling automated validation, streamlined deployment, and intelligent version control. The pipeline minimizes configuration conflicts, improves resource utilization, and empowers teams to deliver new features faster and more reliably. With continuous integration and delivery, Amazon Lex developers can focus less on managing processes and more on creating engaging, high-quality conversational AI experiences for customers. Let’s explore how this solution works.\nSolution architecture\nThe multi-developer CI/CD pipeline transforms Amazon Lex from a limited, single-user development tool into an enterprise-grade conversational AI platform. This approach addresses the fundamental collaboration challenges that slow down conversational AI development. The following diagram illustrates the multi-developer CI/CD pipeline architecture:\n\nUsing infrastructure as code (IaC) with AWS Cloud Development Kit (AWS CDK), each developer runs cdk deploy to provision their own dedicated Lex assistant and AWS Lambda instances in a shared Amazon Web Services (AWS) account. This approach eliminates the overwriting issues common in traditional Amazon Lex development and enables true parallel work streams with full version control capabilities.\nDevelopers use lexcli , a custom AWS Command Line Interface (AWS CLI) tool, to export Lex assistant configurations from the shared AWS account to their local workstations for editing. Developers then test and debug locally using lex_emulator , a custom tool providing integrated testing for both assistant configurations and AWS Lambda functions with real-time validation to catch issues before they reach cloud environments. This local capability transforms the development experience by providing immediate feedback and reducing the need for time-consuming cloud deployments during iterations.\nWhen developers push changes to version control, this pipeline automatically deploys ephemeral test environments for each merge request through GitLab CI/CD. The pipeline runs in Docker containers, providing a consistent build environment that ensures reliable Lambda function packaging and reproducible deployments. Automated tests run against these temporary stacks, and merges are only enabled if all tests are successful. Ephemeral environments are automatically destroyed after merge, ensuring cost efficiency while maintaining quality gates. Failed tests block merges and notify developers, preventing broken code from reaching shared environments.\nChanges that pass testing in ephemeral environments are promoted to shared environments (Development, QA, and Production) with manual approval gates between stages. This structured approach maintains high-quality standards while accelerating the delivery process, enabling teams to deploy new features and improvements with confidence.\nThe following graphic illustrates the developer workflow organized by phases: local development, version control, and automated deployment. Developers work in isolated environments before changes flow through the CI/CD pipeline to shared environments.\n\nBusiness Impact\nBy enabling parallel development workflows, this solution delivers substantial time and efficiency improvements for conversational AI teams. Internal evaluations show teams can parallelize much of their development work, driving measurable productivity gains. Results vary based on team size, project scope, and implementation approach, but some teams have reduced development cycles significantly. The acceleration has enabled teams to deliver features in weeks rather than months, improving time-to-market. The time savings allow teams to handle larger workloads within existing development cycles, freeing capacity for innovation and quality improvement.\nReal-world success stories\nThis multi-developer CI/CD pipeline for Amazon Lex has supported enterprise teams in improving their development efficiency. One organization used it to migrate their platform to Amazon Lex, enabling multiple developers to collaborate concurrently without conflicts. Isolated environments and automated merge capabilities helped maintain consistent progress during complex development efforts.\nA large enterprise adopted the pipeline as part of its broader AI strategy. By using validation and collaboration features within the CI/CD process, their teams enhanced coordination and accountability across environments. These examples illustrate how structured workflows can contribute to improved efficiency, smoother migrations, and reduced rework.\nOverall, these experiences demonstrate how the multi-developer CI/CD pipeline helps organizations of varying scales strengthen their conversational AI initiatives while maintaining consistent quality and development velocity.\nSee the solution in action\nTo better understand how the multi-developer CI/CD pipeline works in practice, watch this demonstration video that walks through the key workflows. It shows how developers work in parallel on the same Amazon Lex assistant, resolve conflicts automatically, and deploy changes through the pipeline.\n\nGetting started with the solution\nThe multi-developer CI/CD pipeline for Amazon Lex is available as an open source solution through our GitHub repository . Standard AWS service charges apply for the resources you deploy.\nPrerequisites and environment setup\nTo follow along with this walkthrough, you need:\n\nNodeJS 22.9.0 or later\nAWS Cloud Development Kit 2.176.0 or later (AWS CDK)\nPython 3.12.8 or later\nDocker (required for AWS CDK to bundle Python Lambda functions)\nAn AWS account with permissions to create Amazon Lex assistants, Lambda functions, and AWS Identity and Access Management (IAM) roles\n\nCore components and architecture\nThe framework consists of several key components that work together to enable collaborative development: infrastructure-as-code with AWS CDK, the Amazon Lex CLI tool called lexcli , and the GitLab CI/CD pipeline configuration.\nThe solution uses AWS CDK to define infrastructure components as code, including:\n\nIndividual Amazon Lex instances for each developer\nLambda functions for fulfillment logic\nAmazon CloudWatch logging and monitoring\nAmazon Simple Storage Service (Amazon S3) buckets for configuration storage\n\nDeploy each developer’s environment using:\n\ncdk deploy -c environment=your-username --outputs-file ./cdk-outputs.json\n\nThis creates a complete, isolated environment that mirrors the shared configuration but allows for independent modifications.\nThe lexcli tool exports Amazon Lex assistant configuration from the console into version-controlled JSON files. When invoking lexcli export <environment> , it will:\n\nConnect to your deployed assistant using the Amazon Lex API\nDownload the complete assistant configuration as a .zip file\nExtract and standardize identifiers to make configurations environment-agnostic\nFormat JSON files for review during merge requests\nProvide interactive prompts to selectively export only changed intents and slots\n\nThis tool transforms the manual, error-prone process of copying assistant configurations into an automated, reliable workflow that maintains configuration integrity across environments.\nThe .gitlab-ci.yml file orchestrates the entire development workflow:\n\nEphemeral environment creation – Automatically creates and destroys a temporary dynamic environment for each merge request.\nAutomated testing – Runs comprehensive tests including intent validation, slot verification, and performance benchmarks\nQuality gates – Enforces code linting and automated testing with 40% minimum coverage; requires manual approval for all environment deployments\nEnvironment promotion – Enables controlled deployment progression through dev, staging, production with manual approval at each stage\n\nThe pipeline ensures only validated, tested changes progress through deployment stages, maintaining quality while enabling rapid iteration.\nStep-by-step implementation guide\nTo create a multi-developer CI/CD pipeline for Amazon Lex, complete the steps in the following sections. Implementation follows five phases:\n\nRepository and GitLab setup\nAWS authentication setup\nLocal development environment\nDevelopment workflow\nCI/CD pipeline execution\n\nRepository and GitLab setup\nTo set up your repository and configure GitLab variables, follow these steps:\n\nClone the sample repository and create your own project:\n\n# Clone the sample repository\ngit clone https://gitlab.aws.dev/lex/sample-lex-multi-developer-cicd.git\n\n# Navigate to the project directory\ncd sample-lex-multi-developer-cicd\n\n# Remove the original remote and add your own\ngit remote remove origin\ngit remote add origin\n\n# Push to your new repository\ngit push -u origin main\n\nTo configure GitLab CI/CD variables, navigate to your GitLab project and choose Settings . Then choose CI/CD and Variables . Add the following variables:\n\nFor AWS_REGION , enter us-east-1\nFor AWS_DEFAULT_REGION , enter us-east-1\nAdd the other environment-specific secrets your application requires\n\nSet up branch protection rules to protect your main branch. Proper workflow enforcement prevents direct commits to the production code.\n\nAWS authentication setup\nThe pipeline requires appropriate permissions to deploy AWS CDK changes within your environment. This can be achieved through various methods, such as assuming a specific IAM role within the pipeline, using a hosted runner with an attached IAM role, or enabling another approved form of access. The exact setup depends on your organization’s security and access management practices. The detailed configuration of these permissions is outside the scope of this post, but it’s essential to properly authorize your runners and roles to perform CDK deployments.\nLocal development environment\nTo set up your local development environment, complete the following steps:\n\nInstall dependencies\n\npip install -r requirements.txt\n\nDeploy your personal assistant environment:\n\ncdk deploy -c environment=your-username --outputs-file ./cdk-outputs.json\n\nThis creates your isolated assistant instance for independent modifications.\nDevelopment workflow\nTo create the development workflow, complete the following steps:\n\nCreate a feature branch:\n\ngit checkout -b feature/your-feature-name\n\nTo make assistant modifications, follow these steps:\n\nAccess your personal assistant in the Amazon Lex console\nModify intents, slots, or assistant configurations as needed\nTest your changes directly in the console\n\nExport changes to code:\n\npython lexcli.py export your-username\n\nThe tool will interactively prompt you to select which changes to export so you only commit the modifications you intended.\n\nReview and commit changes:\n\ngit add .\ngit commit -m \"feat: add new intent for booking flow\"\ngit push origin feature/your-feature-name\n\nCI/CD pipeline execution\nTo execute the CI/CD pipeline, complete the following steps:\n\nCreate merge request – The pipeline automatically creates an ephemeral environment for your branch\nAutomated testing – The pipeline runs comprehensive tests against your changes\nCode review – Team members can review both the code changes and test results\nMerge to main – After the changes are approved, they’re merged and automatically deployed to development\nEnvironment promotion – Manual approval gates control promotion to QA and production\n\nWhat’s next?\nAfter implementing this multi-developer pipeline, consider these next steps:\n\nScale your testing – Add more comprehensive test suites for intent validation\nEnhance monitoring – Integrate Amazon CloudWatch dashboards for assistant performance\nExplore hybrid AI – Combine Amazon Lex with Amazon Bedrock for generative AI capabilities\n\nFor more information about Amazon Lex, refer to the Amazon Lex Developer Guide .\nConclusion\nIn this post, we showed how implementing multi-developer CI/CD pipelines for Amazon Lex addresses critical operational challenges in conversational AI development. By enabling isolated development environments, local testing capabilities, and automated validation workflows, teams can work in parallel without sacrificing quality, helping to accelerate time-to-market for complex conversational AI solutions.\nYou can start implementing this approach today using the AWS CDK prototype and Amazon Lex CLI tool available in our GitHub repository . For organizations looking to enhance their conversational AI capabilities further, consider exploring the Amazon Lex integration with Amazon Bedrock for hybrid solutions using both structured dialog management and large language models (LLMs).\nWe’d love to hear about your experience implementing this solution. Share your feedback in the comments or reach out to AWS Professional Services for implementation guidance.\n\nAbout the authors\n\nGrazia Russo Lassner\nGrazia Russo Lassner is a Senior Delivery Consultant with AWS Professional Services. She specializes in designing and developing conversational AI solutions using AWS technologies for customers in various industries. Grazia is passionate about leveraging generative AI, agentic systems, and multi-agent orchestration to build intelligent customer experiences that modernize how businesses engage with their customers.\n\nKen Erwin\nKen Erwin  is a Senior Delivery Consultant with AWS Professional Services. He specializes in the architecture and operationalization of frontier-scale AI infrastructure, focusing on the design and management of the world’s largest HPC clusters. Ken is passionate about leveraging gigawatt-scale compute and immutable infrastructure to build the high-performance environments required to train the world’s most powerful AI models.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "AWS在其ML博客上发布了一个开源的多开发者CI/CD管道解决方案，专为Amazon Lex对话AI助手设计。该方案通过AWS Cloud Development Kit（AWS CDK）实现基础设施即代码，为每个开发者创建隔离的Amazon Lex实例和AWS Lambda环境。使用lexcli工具导出配置到本地进行编辑，结合lex_emulator进行实时测试，并通过GitLab CI/CD自动化部署到临时和共享环境。这解决了多开发者协作中的配置冲突、覆盖变更和迭代缓慢问题，使团队能并行工作，加速开发周期。重要性在于它提升了对话AI开发的效率和质量，支持企业级项目；影响包括显著减少开发时间、提升生产力，并释放团队容量以专注于创新和高质量体验交付。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Amazon Lex",
+        "AWS CDK",
+        "CI/CD",
+        "lexcli",
+        "GitLab"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:14:55.718376Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "b0e8f46083bc9cd1",
+    "title": "Building custom model provider for Strands Agents with LLMs hosted on SageMaker AI endpoints",
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-custom-model-provider-for-strands-agents-with-llms-hosted-on-sagemaker-ai-endpoints/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T16:15:41Z",
+    "summary": "This post demonstrates how to build custom model parsers for Strands agents when working with LLMs hosted on SageMaker that don't natively support the Bedrock Messages API format. We'll walk through deploying Llama 3.1 with SGLang on SageMaker using awslabs/ml-container-creator, then implementing a custom parser to integrate it with Strands agents.",
+    "content": "Organizations increasingly deploy custom large language models (LLMs) on Amazon SageMaker AI real-time endpoints using their preferred serving frameworks—such as SGLang, vLLM, or TorchServe—to help gain greater control over their deployments, optimize costs, and align with compliance requirements. However, this flexibility introduces a critical technical challenge: response format incompatibility with Strands agents. While these custom serving frameworks typically return responses in OpenAI-compatible formats to facilitate broad environment support, Strands agents expect model responses aligned with the Bedrock Messages API format.\nThe challenge is particularly significant because support for the Messages API is not guaranteed for the models hosted on SageMaker AI real-time endpoints. While Amazon Bedrock Mantle distributed inference engine has supported OpenAI messaging formats since December 2025, flexibility of SageMaker AI allows customers to host various foundation models—some requiring esoteric prompt and response formats that don’t conform to standard APIs. This creates a gap between the serving framework’s output structure and what Strands expects, preventing seamless integration despite both systems being technically functional. The solution lies in implementing custom model parsers that extend SageMakerAIModel and translate the model server’s response format into what Strands expects, enabling organizations to leverage their preferred serving frameworks without sacrificing compatibility with the Strands Agents SDK.\nThis post demonstrates how to build custom model parsers for Strands agents when working with LLMs hosted on SageMaker that don’t natively support the Bedrock Messages API format. We’ll walk through deploying Llama 3.1 with SGLang on SageMaker using awslabs/ml-container-creator , then implementing a custom parser to integrate it with Strands agents.\nStrands Custom Parsers\nStrands agents expect model responses in a specific format aligned with the Bedrock Messages API. When you deploy models using custom serving frameworks like SGLang, vLLM, or TorchServe, they typically return responses in their own formats—often OpenAI-compatible for broad environment support. Without a custom parser, you’ll encounter errors like:\nTypeError: 'NoneType' object is not subscriptable\nThis happens because the Strands Agents default SageMakerAIModel class attempts to parse responses assuming a specific structure that your custom endpoint doesn’t provide. In this post and the companion code base, we illustrate how to extend the SageMakerAIModel class with custom parsing logic that translates your model server’s response format into what Strands expects.\nImplementation Overview\nOur implementation consists of three layers:\n\nModel Deployment Layer : Llama 3.1 served by SGLang on SageMaker, returning OpenAI-compatible responses\nParser Layer : Custom LlamaModelProvider class that extends SageMakerAIModel to handle Llama 3.1’s response format\nAgent Layer : Strands agent that uses the custom provider for conversational AI, appropriately parsing the model’s response\n\nWe start by using awslabs/ml-container-creator , an AWS Labs open-source Yeoman generator that automates the creation of SageMaker BYOC (Bring Your Own Container) deployment projects. It generates the artifacts needed to build LLM serving containers, including Dockerfiles, CodeBuild configurations, and deployment scripts.\nInstall ml-container-creator\nThe first step we need to take is to build the serving container for our model. We use an open-source project to build the container and generate deployment scripts for that container. The following commands illustrate how to install awslabs/ml-container-creator and its dependencies, which include npm and Yeoman . For more information, review the project’s README and Wiki to get started.\n\n# Install Yeoman globally\nnpm install -g yo\n\n# Clone and install ml-container-creator\ngit clone https://github.com/awslabs/ml-container-creator\ncd ml-container-creator\nnpm install && npm link\n\n# Verify installation\nyo --generators # Should show ml-container-creator\n\nGenerate Deployment Project\nOnce installed and linked, the yo command allows you to run installed generators, yo ml-container-creator allows you to run the generator we need for this exercise.\n\n# Run the generator\nyo ml-container-creator\n\n# Configuration options:\n# - Framework: transformers\n# - Model Server: sglang\n# - Model: meta-llama/Llama-3.1-8B-Instruct\n# - Deploy Target: codebuild\n# - Instance Type: ml.g6.12xlarge (GPU)\n# - Region: us-east-1\n\nThe generator creates a complete project structure:\n\n<project-directory>/\n├── Dockerfile # Container with SGLang and dependencies\n├── buildspec.yml # CodeBuild configuration\n├── code/\n│ └── serve # SGLang server startup script\n├── deploy/\n│ ├── submit_build.sh # Triggers CodeBuild\n│ └── deploy.sh # Deploys to SageMaker\n└── test/\n└── test_endpoint.sh # Endpoint testing script\n\nBuild and Deploy\nProjects built by awslabs/ml-container-creator include templatized build and deployment scripts. The ./deploy/submit_build.sh and ./deploy/deploy.sh scripts are used to build the image, push the image to Amazon Elastic Container Registry (ECR), and deploy to an Amazon SageMaker AI real-time endpoint.\n\ncd llama-31-deployment\n\n# Build container with CodeBuild (no local Docker required)\n./deploy/submit_build.sh\n\n# Deploy to SageMaker\n./deploy/deploy.sh arn:aws:iam::ACCOUNT:role/SageMakerExecutionRole\n\nThe deployment process:\n\nCodeBuild builds the Docker image with SGLang and Llama 3.1\nImage is pushed to Amazon ECR\nSageMaker creates a real-time endpoint\nSGLang downloads the model from HuggingFace and loads it into GPU memory\nEndpoint reaches InService status (approximately 10-15 minutes)\n\nWe can test the endpoint by using ./test/test_endpoint.sh , or with a direct invocation:\n\nimport boto3\nimport json\n\nruntime_client = boto3.client('sagemaker-runtime', region_name='us-east-1')\n\npayload = {\n\"messages\": [\n{\"user\", \"content\": \"Hello, how are you?\"}\n],\n\"max_tokens\": 100,\n\"temperature\": 0.7\n}\n\nresponse = runtime_client.invoke_endpoint(\nEndpointName='llama-31-deployment-endpoint',\nContentType='application/json',\nBody=json.dumps(payload)\n)\n\nresult = json.loads(response['Body'].read().decode('utf-8'))\nprint(result['choices'][0]['message']['content'])\n\nUnderstanding the Response Format\nLlama 3.1 returns OpenAI-compatible responses. Strands expects model responses to adhere to the Bedrock Messages API format. Until late last year, this was a standard compatibility mismatch. Since December 2025, the Amazon Bedrock Mantle distributed inference engine supports OpenAI messaging formats :\n\n{\n\"id\": \"cmpl-abc123\",\n\"object\": \"chat.completion\",\n\"created\": 1704067200,\n\"model\": \"meta-llama/Llama-3.1-8B-Instruct\",\n\"choices\": [{\n\"index\": 0,\n\"message\": {\"role\": \"assistant\", \"content\": \"I'm doing well, thank you for asking!\"},\n\"finish_reason\": \"stop\"\n}],\n\"usage\": {\n\"prompt_tokens\": 23,\n\"completion_tokens\": 12,\n\"total_tokens\": 35\n}\n}\n\nHowever, support for the Messages API is not guaranteed for the models hosted on SageMaker AI real-time endpoints. SageMaker AI allows customers to host many kinds of foundation models on managed GPU-accelerated infrastructure, some of which may require esoteric prompt/response formats. For example, the default SageMakerAIModel uses the legacy Bedrock Messages API format and attempts to access fields that don’t exist in the standard OpenAI Messages format, causing TypeError style failures.\nImplementing a Custom Model Parser\nCustom model parsers are a feature of the Strands Agents SDK that provides strong compatibility and flexibility for customers building agents powered by LLMs hosted on SageMaker AI. Here, we describe how to create a custom provider that extends SageMakerAIModel :\n\ndef stream(self, messages: List[Dict[str, Any]], tool_specs: list, system_prompt: Optional[str], **kwargs):\n# Build payload messages\npayload_messages = []\nif system_prompt:\npayload_messages.append({\"role\": \"system\", \"content\": system_prompt})\n# Extract message content from Strands format\nfor msg in messages:\npayload_messages.append({\"role\": \"user\", \"content\": msg['content'][0]['text']})\n\n# Build complete payload with streaming enabled\n  payload = {\n\"messages\": payload_messages,\n\"max_tokens\": kwargs.get('max_tokens', self.max_tokens),\n\"temperature\": kwargs.get('temperature', self.temperature),\n\"top_p\": kwargs.get('top_p', self.top_p),\n\"stream\": True\n}\n\ntry:\n# Invoke SageMaker endpoint with streaming\nresponse = self.runtime_client.invoke_endpoint_with_response_stream(\nEndpointName=self.endpoint_name,\nContentType='application/json',\nAccept='application/json',\nBody=json.dumps(payload)\n)\n\n# Process streaming response\naccumulated_content = \"\"\nfor event in response['Body']:\nchunk = event['PayloadPart']['Bytes'].decode('utf-8')\nif not chunk.strip():\ncontinue\n\n# Parse SSE format: \"data: {json}\\n\"\nfor line in chunk.split('\\n'):\nif line.startswith('data: '):\ntry:\njson_str = line.replace('data: ', '').strip()\nif not json_str:\ncontinue\n\nchunk_data = json.loads(json_str)\nif 'choices' in chunk_data and chunk_data['choices']:\ndelta = chunk_data['choices'][0].get('delta', {})\n\n# Yield content delta in Strands format\nif 'content' in delta:\ncontent_chunk = delta['content']\naccumulated_content += content_chunk\nyield {\n\"type\": \"contentBlockDelta\",\n\"delta\": {\"text\": content_chunk},\n\"contentBlockIndex\": 0\n}\n\n# Check for completion\nfinish_reason = chunk_data['choices'][0].get('finish_reason')\nif finish_reason:\nyield {\n\"type\": \"messageStop\",\n\"stopReason\": finish_reason\n}\n\n# Yield usage metadata\nif 'usage' in chunk_data:\nyield {\n\"type\": \"metadata\",\n\"usage\": chunk_data['usage']\n}\n\nexcept json.JSONDecodeError:\ncontinue\n\nexcept Exception as e:\nyield {\n\"type\": \"error\",\n\"error\": {\n\"message\": f\"Endpoint invocation failed: {str(e)}\",\n\"type\": \"EndpointInvocationError\"\n}\n}\n\nThe stream method overrides the behavior of the SageMakerAIModel and allows the agent to parse responses based on the requirements of the underlying model. While the vast majority of models do support OpenAI’s Message API protocol, this capability enables power-users to leverage highly specified LLMs on SageMaker AI to power agent workloads using Strands Agents SDK. Once the custom model response logic is built, Strands Agents SDK makes it simple to initialize agents with custom model providers:\n\nfrom strands.agent import Agent\n\n# Initialize custom provider\nprovider = LlamaModelProvider(\nendpoint_name=\"llama-31-deployment-endpoint\",\nregion_name=\"us-east-1\",\nmax_tokens=1000,\ntemperature=0.7\n)\n\n# Create agent with custom provider\nagent = Agent(\nname=\"llama-assistant\",\nmodel=provider,\nsystem_prompt=(\n\"You are a helpful AI assistant powered by Llama 3.1, \"\n\"deployed on Amazon SageMaker. You provide clear, accurate, \"\n\"and friendly responses to user questions.\"\n)\n)\n\n# Test the agent\nresponse = agent(\"What are the key benefits of deploying LLMs on SageMaker?\")\nprint(response.content)\n\nThe complete implementation for this custom parser, including the Jupyter notebook with detailed explanations and the ml-container-creator deployment project, is available in the companion GitHub repository .\nConclusion\nBuilding custom model parsers for Strands agents helps users to leverage different LLM deployments on SageMaker, regardless of its response format. By extending SageMakerAIModel and implementing the stream() method, you can integrate custom-hosted models while maintaining the clean agent interface of Strands.\nKey takeaways :\n\nawslabs/ml-container-creator simplifies SageMaker BYOC deployments with production-ready infrastructure code\nCustom parsers bridge the gap between model server response formats and Strands expectations\nThe stream() method is the critical integration point for custom providers\n\nAbout the authors\nDan Ferguson  is a Sr. Solutions Architect at AWS, based in New York, USA. As a machine learning services expert, Dan works to support customers on their journey to integrating ML workflows efficiently, effectively, and sustainably.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "Amazon AWS 发布技术解决方案，帮助组织构建自定义模型提供者，以在 SageMaker AI 实时端点上托管大型语言模型（LLMs），并与 Strands Agents 集成。由于自定义服务框架（如 SGLang、vLLM 或 TorchServe）通常返回 OpenAI 兼容格式的响应，而 Strands Agents 期望 Bedrock Messages API 格式，导致响应格式不兼容问题。解决方案涉及扩展 SageMakerAIModel 类，实现自定义解析器来转换响应格式。文章演示了使用 awslabs/ml-container-creator 开源工具部署 Llama 3.1 模型（基于 SGLang），并创建自定义解析器以无缝集成到 Strands Agents SDK。这使组织能灵活选择 LLM 部署框架，同时保持与 Strands Agents 的兼容性，优化成本控制、部署灵活性和合规性。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Amazon",
+        "SageMaker",
+        "Strands Agents",
+        "awslabs/ml-container-creator",
+        "Llama 3.1"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:14:56.979791Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "11c2367d72764d1b",
+    "title": "Introducing GPT-5.4",
+    "url": "https://openai.com/index/introducing-gpt-5-4",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T10:00:00Z",
+    "summary": "Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-art coding, computer use, tool search, and 1M-token context.",
+    "content": "Introducing GPT-5.4, OpenAI’s most most capable and efficient frontier model for professional work, with state-of-the-art coding, computer use, tool search, and 1M-token context.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了GPT-5.4，这是该公司为专业工作设计的最强大且最高效的前沿模型。该模型在编码、计算机使用和工具搜索方面具备最先进的能力，并拥有1M-token的上下文窗口，这意味着它可以处理更长的输入序列，提高任务理解和生成的准确性。这一发布可能对编程、自动化任务和AI辅助工作产生重大影响，推动行业技术标准向前发展，并加速AI在专业领域的商业化应用。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "GPT-5.4",
+        "编码",
+        "计算机使用",
+        "1M-token上下文"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:15:51.062354Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "a12b30c470dc987f",
+    "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+    "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T10:00:00Z",
+    "summary": "OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monitorability as an AI safety safeguard.",
+    "content": "OpenAI introduces CoT-Control and finds reasoning models struggle to control their chains of thought, reinforcing monitorability as an AI safety safeguard.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 最近引入了 CoT-Control 并发现推理模型在控制其思维链方面存在困难，这强化了可监控性作为人工智能安全的重要保障措施。该发现表明，尽管模型难以控制思维链，但这一现象有助于增强AI系统的透明度和安全监控能力，被视为积极进展。CoT-Control 可能是一种新的工具或方法，旨在帮助研究人员更好地理解和监控AI的推理过程，从而提升安全性。这项研究对AI安全领域有显著影响，因为它突出了在复杂推理任务中监控AI行为的关键性，并可能推动相关技术的发展和实际应用。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "CoT-Control",
+        "reasoning models",
+        "chains of thought",
+        "AI safety"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:15:06.102851Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "7535c2f2ce51ae00",
+    "title": "GPT-5.4 Thinking System Card",
+    "url": "https://openai.com/index/gpt-5-4-thinking-system-card",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T10:00:00Z",
+    "summary": null,
+    "content": null,
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了GPT-5.4的Thinking System Card，这是一个技术文档，用于描述GPT-5.4模型的思考系统或内部处理机制。这种卡片旨在提高模型的透明度、安全性和可解释性，帮助开发者和研究人员理解AI模型的行为和潜在风险。作为GPT系列的一部分，这可能标志着OpenAI在模型安全研究方面的进展，对AI社区和应用有重要影响，促进更安全的AI部署和使用。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "GPT-5.4",
+        "Thinking System Card"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:14:48.301585Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "51c5e121f9637633",
+    "title": "Ensuring AI use in education leads to opportunity",
+    "url": "https://openai.com/index/ai-education-opportunity",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T09:00:00Z",
+    "summary": "OpenAI shares new tools, certifications, and measurement resources to help schools and universities close AI capability gaps and expand opportunity.",
+    "content": "OpenAI shares new tools, certifications, and measurement resources to help schools and universities close AI capability gaps and expand opportunity.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI近日发布了一系列新工具、认证和测量资源，旨在帮助学校和大学弥补人工智能（AI）能力差距，并借此扩大教育机会。这些资源包括专业认证项目、实用工具套件以及性能测量框架，使教育机构能够更有效地整合AI技术，提升教学效率和学习体验。此举不仅有助于推动AI在教育领域的普及和创新，还可能促进教育公平，为更多学生提供发展机遇。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "AI",
+        "教育",
+        "工具",
+        "认证"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:14:51.831934Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "d70be7f157f5a117",
+    "title": "Introducing ChatGPT for Excel and new financial data integrations",
+    "url": "https://openai.com/index/chatgpt-for-excel",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T00:00:00Z",
+    "summary": "OpenAI introduces ChatGPT for Excel and new financial app integrations, powered by GPT-5.4 to accelerate modeling, research, and analysis in regulated environments.",
+    "content": "OpenAI introduces ChatGPT for Excel and new financial app integrations, powered by GPT-5.4 to accelerate modeling, research, and analysis in regulated environments.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 宣布推出 ChatGPT for Excel 和新的金融应用集成功能，这些功能由 GPT-5.4 驱动，旨在加速在受监管环境中的建模、研究和分析。这一举措使金融分析师和专业人士能够更高效地利用 AI 技术处理数据、生成洞察并做出决策。ChatGPT for Excel 将大语言模型的智能直接集成到 Excel 中，简化了复杂的数据分析和报告过程，同时新的金融集成支持与现有系统的无缝连接，提升合规框架下的工作效率。这标志着 AI 工具在金融行业的深度应用，可能推动金融科技创新，并促进 AI 在企业环境中的普及。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT for Excel",
+        "GPT-5.4",
+        "financial app integrations",
+        "regulated environments"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:14:57.086646Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "24645d86cb6e6bae",
+    "title": "Introducing the Adoption news channel",
+    "url": "https://openai.com/index/introducing-the-adoption-news-channel",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T00:00:00Z",
+    "summary": "Practical insights and frameworks to turn AI progress into business advantage",
+    "content": "Practical insights and frameworks to turn AI progress into business advantage",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 推出名为 Adoption 的新闻频道，旨在提供实用见解和框架，帮助企业和组织将人工智能的进步转化为商业优势。这一频道聚焦于 AI 的商业应用，为企业提供指导和资源，以更好地理解 AI 技术并实施有效策略，从而加速 AI 在各行各业的采纳进程。作为 OpenAI 商业化努力的一部分，这一举措可能促进企业 AI 应用的普及，推动技术实用化，并增强 AI 生态系统的商业影响力。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Adoption news channel",
+        "AI",
+        "business frameworks",
+        "practical insights"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:14:58.509682Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "e7c3d13ae6e2907b",
+    "title": "The five AI value models driving business reinvention",
+    "url": "https://openai.com/index/the-five-ai-value-models-driving-business-reinvention",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-05T00:00:00Z",
+    "summary": "Five AI value models show how leaders can sequence AI from workforce fluency to process reinvention and build durable business advantage.",
+    "content": "Five AI value models show how leaders can sequence AI from workforce fluency to process reinvention and build durable business advantage.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了五个AI价值模型，旨在指导企业领导者如何序列化AI的应用，从提升员工对AI工具的流利性开始，逐步推进到重构核心业务流程，从而构建持久的业务优势。这一模型强调系统化的AI集成策略，帮助企业优化工作流程、提高生产力和竞争力，适应AI驱动的商业环境变化。它为企业在数字化转型中提供了结构化框架，可能影响行业最佳实践和AI采用路径，促进业务创新和效率提升。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "AI价值模型",
+        "业务重构",
+        "流程重构",
+        "员工流利性"
+      ]
+    },
+    "analyzed_at": "2026-03-06T04:15:00.615550Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
