@@ -1,0 +1,147 @@
+[
+  {
+    "id": "eb6e5bcdab44437f",
+    "title": "Operationalizing Agentic AI Part 1: A Stakeholder’s Guide",
+    "url": "https://aws.amazon.com/blogs/machine-learning/operationalizing-agentic-ai-part-1-a-stakeholders-guide/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-11T20:52:23Z",
+    "summary": "The AWS Generative AI Innovation Center has helped 1,000+ customers move AI into production, delivering millions in documented productivity gains. In this post, we share guidance for leaders across the C-suite: CTOs, CISOs, CDOs, and Chief Data Science/AI officers, as well as business owners and compliance leads.",
+    "content": "Agentic AI isn’t a feature you turn on. It’s a shift in how work is defined, who does it, and how decisions get made.\nMost enterprises learn this the hard way. They launch pilots that stall the moment they hit real processes, systems, and governance. The pattern repeats: vague use cases, prototypes that can’t survive messy data, autonomy outpacing controls, compliance blocking launch dates, datasets too weak for autonomous decisions. Underneath all of it, the same root problem—no one agreed on what success looks like.\nThe AWS Generative AI Innovation Center has helped 1,000+ customers move AI into production, delivering millions in documented productivity gains. Our cross-functional teams—scientists, strategists, and machine learning experts—work side-by-side with customers from ideation through deployment. Increasingly, that work involves agents.\nIn this post, we share guidance for leaders across the C-suite: CTOs, CISOs, CDOs, and Chief Data Science/AI officers, as well as business owners and compliance leads. Our core observation: when agentic AI works, it looks less like magic software and more like a well-run team—each agent with a clear job, a supervisor, a playbook, and a way to improve over time.\n\nIf you sit in an executive meeting and ask, “Are we investing enough in AI?”, the answer is almost always yes. If you then ask, “Which specific workflows are materially better today because of AI agents, and how do we know?”, the room gets quiet.\n\nThis is Part I of a two-part series. Here we establish the foundation: why the value gap is mostly an execution problem, and what makes work truly agent-shaped. Part II will speak directly to each C-suite persona, in the language of their responsibilities.\nThe shared problem as an enterprise\nThe value gap is mostly about how you work\nIf you sit in an executive meeting and ask, “Are we investing enough in AI?”, the answer is almost always yes. If you then ask, “Which specific workflows are materially better today because of AI agents, and how do we know?”, the room gets quiet.\nWhat sits between those two answers isn’t a missing foundation model or a missing vendor. It’s a missing operating model. In organizations where agents create visible value, three things tend to be true:\n\nThe work is defined in painful detail. People can describe, step by step, what arrives, what happens, and what “done” means. They can also describe what happens when things go wrong.\nAutonomy is bounded. Agents are given clear authority limits, explicit escalation rules, and surfaces where humans can see and override decisions.\nImprovement is a habit, not a project. There’s a regular cadence where teams look at how agents behaved last week, where they helped, where they caused friction, and what to change next.\n\nWhere those things are missing, the same symptoms appear: impressive proofs of concept that do not leave the lab, pilots that quietly die after a few months, and leaders who stop asking, “What can we do next?” and start asking, “Why are we spending so much on this?”\nWhat makes work agent-shaped\nMost organizations start with the question, “Where can we use an agent?” A better starting point is, “Where is the work already structured like a job an agent could do?” In practice, that means four things.\nFirst, the work has a clear start, end, and purpose. A claim arrives. An invoice appears. A support ticket is opened. The agent can recognize when it has enough information to begin, what goal it’s working toward, and when the task is complete or needs to be handed off. This is more than just a trigger and a finish line. The agent needs to understand the intent behind the work well enough to handle reasonable variations without being explicitly told what to do for each one. If your team can’t articulate what done well looks like for a given task, including how to handle exceptions and edge cases, the work isn’t yet ready for an agent.\n\nSecond, the work requires judgment across tools. The agent doesn’t follow a fixed script. It reasons about what information it needs, decides which systems to query, interprets what it finds, and determines the right action based on context. The difference from traditional automation is that the path isn’t hard-coded: the agent adapts its approach, handles variations, and knows when a situation falls outside its competence. But agents act through tools, and those tools must exist before the agent does. Your systems need well-defined, secure, and reliable interfaces that an agent can call to read data, write updates, trigger transactions, or send communications. If the process today is humans reasoning in email and spreadsheets, you have both process design and tooling work to do before you have a viable agent use case.\nThird, success is observable and measurable. Someone who doesn’t work in the team can look at the output and say, “This is correct,” or “This needs fixing” without reading minds. That might mean checking whether a ticket was resolved on time, whether a form is complete and consistent, whether a transaction balances, or whether a customer got the response they needed. But observability goes beyond spot-checking outputs. You need to see how the agent arrived at its answer: what data it used, what tools it called, what options it considered, and why it chose one over another. If you can’t evaluate the reasoning, you can’t improve the agent, and you can’t defend its decisions when something goes wrong.\n\nStart with work where actions are reversible or where the agent’s output is a recommendation that a human acts on. As trust, controls, and evaluation mature, you earn the right to move into higher-stakes work where the agent closes the loop on its own.\n\nFourth, the work has a safe mode when things go wrong. The best early agent candidates are tasks where mistakes are caught quickly, corrected cheaply, and don’t create irreversible harm. If an agent misclassifies a support ticket, it can be rerouted. If it drafts an incorrect response, a human can edit before it’s sent. But if an agent approves a payment, executes a trade, or sends a legally binding communication, the cost of being wrong is fundamentally different. Start with work where actions are reversible or where the agent’s output is a recommendation that a human acts on. As trust, controls, and evaluation mature, you earn the right to move into higher-stakes work where the agent closes the loop on its own.\nWhen these four ingredients are present, you have something that can become a job for an agent. When they’re missing, the conversation drifts back into vague labels like assistant , copilot , or automation that mean different things to every person in the room.\nCall to Action\nReady to Close the Execution Gap?\nThe patterns described in Part I aren’t theoretical. They show up in organizations of every size, across every industry. The good news: the gap between where you are and where you want to be is not a technology gap. It is an execution gap, and execution gaps are solvable.\nHere are three things you can do this week:\n\nName the work, not the wish . Pick one workflow in your organization that has a clear start, a clear end, and a measurable definition of “done.” That’s your first candidate for an agent.\nAsk the hard question in the room. In your next leadership meeting, don’t ask, “Are we investing enough in AI?” Ask, “Which specific workflows are materially better today because of AI agents, and how do we know?” The silence that follows is your roadmap.\nStart the job description. Before any technology decision, write down what the agent would do, what tools it would need, what success looks like, and what happens when it fails. If you can’t fill in that page, you’re not ready to build, and that’s valuable information.\n\nComing up in Part II: Guidance by Persona\nKnowing that agentic AI is an execution problem is one thing. Knowing your role in solving it is another. In Part II, we speak directly to the leaders who need to make this work in practice: the line-of-business owner who needs agents tied to KPIs, the CTO deciding between ten one-off agents or a platform for one hundred, the CISO who must treat agents like colleagues rather than code, the CDO who needs to make data boring in the best possible way, the Chief AI Officer for whom evaluation is the product, and the compliance leader who must design for audits before they happen.\nEach persona. Each responsibility. Each concrete move.\nPartner with the Generative AI Innovation Center\nYou don’t have to navigate this journey alone. Whether you are planning your first agentic pilot or scaling to an enterprise-wide capability, reach out to the Generative AI Innovation Center team to start a conversation grounded in your workflows, your data, and your business outcomes.\n\nAbout the authors\n\nNav Bhasin\nNav Bhasin is a Senior Data Science Manager at the AWS Generative AI Innovation Center, where he accelerates enterprise customers’ journey from Agentic AI concept to production deployment. With over a decade of experience building AI products across industrial, energy, and healthcare domains, Nav has spent six years at AWS leading worldwide teams of GenAI architects and scientists, playing a central role in bringing products like Amazon Bedrock, Amazon SageMaker, and AgentCore to production adoption. Before the Innovation Center, he led go-to-market architecture and data science teams for AWS’s core GenAI product portfolio. Prior to AWS, Nav served as Head of Data Science and Engineering at Utopus Insights and led Engineering and Architecture at Honeywell. Nav holds an MBA and a graduate degree in Electronics Engineering.\n\nSri Elaprolu\nSri Elaprolu is Director of the AWS Generative AI Innovation Center, where he leads a global team implementing cutting-edge AI solutions for enterprise and government organizations. During his 13-year tenure at AWS, he has led ML science teams partnering with global enterprises and public sector organizations. Prior to AWS, he spent 14 years at Northrop Grumman in product development and software engineering leadership roles. Sri holds a Master’s in Engineering Science and an MBA.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "AWS 生成式 AI 创新中心发布了两部分系列文章的第一部分，主题为‘操作化代理性 AI’，旨在帮助企业领导层（如 CTO、CISO 等）解决 AI 代理实施的执行问题。文章指出，许多企业在 AI 投资中存在价值差距，主要原因是缺乏明确的执行模型，导致试点项目停滞，如模糊的使用案例、数据不完善、自主权失控等。AWS 基于帮助 1000 多家客户的经验，强调成功实施需要工作具有清晰定义、有限自主权、可观察的成功标准和安全模式。这有助于企业从概念转向生产，实现实际生产力提升，并提供了本周可行动的建议，如明确工作流程和测量改进。第二部分将针对不同领导角色提供进一步指导。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "AWS",
+        "Agentic AI",
+        "Generative AI Innovation Center",
+        "AI agents",
+        "执行模型"
+      ]
+    },
+    "analyzed_at": "2026-03-12T04:10:02.003708Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "7edc0652ac986968",
+    "title": "Rakuten fixes issues twice as fast with Codex",
+    "url": "https://openai.com/index/rakuten",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-11T13:00:00Z",
+    "summary": "Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews, and delivering full-stack builds in weeks.",
+    "content": "Rakuten uses Codex, the coding agent from OpenAI, to ship software faster and safer, reducing MTTR 50%, automating CI/CD reviews, and delivering full-stack builds in weeks.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Rakuten通过使用OpenAI开发的Codex编码代理，显著提升了其软件开发流程的效率和安全性。具体改进包括将平均修复时间（MTTR）减少50%，自动化了持续集成和持续交付（CI/CD）的审查过程，并实现了全栈构建在数周内完成。这一应用展示了Codex作为AI工具在加速软件交付、降低风险和增强团队生产力方面的实际价值，有助于企业更快地响应市场变化和创新需求。核心信息突出了Codex的关键功能如代码生成和自动化，以及对Rakuten业务运营的积极影响。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Rakuten",
+        "OpenAI",
+        "Codex",
+        "MTTR",
+        "CI/CD"
+      ]
+    },
+    "analyzed_at": "2026-03-12T04:10:02.918429Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "8a41e8fe17bddb95",
+    "title": "Designing AI agents to resist prompt injection",
+    "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-11T11:30:00Z",
+    "summary": "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.",
+    "content": "How ChatGPT defends against prompt injection and social engineering by constraining risky actions and protecting sensitive data in agent workflows.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了关于其ChatGPT模型如何设计AI代理以抵抗提示注入和社会工程学攻击的技术细节。该机制通过在代理工作流中约束风险操作和保护敏感数据，增强了AI系统的安全性。提示注入是一种攻击技术，攻击者通过精心设计的输入操控AI模型行为；社会工程学则利用人类弱点获取敏感信息。ChatGPT通过实施访问控制和行为监控等改进，限制对敏感数据的访问并阻止高风险动作，从而抵御这些威胁。这对于AI代理在安全敏感环境（如金融、医疗）中的应用至关重要，展示了OpenAI在AI安全方面的持续努力，并推动了整个行业对防御机制的关注和改进。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "提示注入",
+        "社会工程学",
+        "AI代理"
+      ]
+    },
+    "analyzed_at": "2026-03-12T04:10:22.907654Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "03ca9f5d14ce7f82",
+    "title": "From model to agent: Equipping the Responses API with a computer environment",
+    "url": "https://openai.com/index/equip-responses-api-computer-environment",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-11T11:00:00Z",
+    "summary": "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state.",
+    "content": "How OpenAI built an agent runtime using the Responses API, shell tool, and hosted containers to run secure, scalable agents with files, tools, and state.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 开发了一个代理运行时，通过整合 Responses API、shell 工具和托管容器，为 AI 系统提供计算机环境。这一创新使得 AI 代理能够安全、可扩展地运行，支持文件处理、工具调用和状态管理，从而将语言模型升级为功能更全面的代理。这扩展了 AI 在自动化任务中的应用，提高了复杂任务处理的效率，并推动了 AI 技术向实用化方向发展。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Responses API",
+        "代理运行时",
+        "shell 工具",
+        "托管容器"
+      ]
+    },
+    "analyzed_at": "2026-03-12T04:10:29.480985Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "cb77334e669030ce",
+    "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
+    "url": "https://openai.com/index/wayfair",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-11T11:00:00Z",
+    "summary": "Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy, automating ticket triage and enhancing millions of product attributes at scale.",
+    "content": "Wayfair uses OpenAI models to improve ecommerce support and product catalog accuracy, automating ticket triage and enhancing millions of product attributes at scale.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Wayfair（家居电商公司）利用OpenAI的人工智能模型来提升其电子商务支持服务和产品目录的准确性。具体措施包括自动化客户服务工单的分流处理，以及大规模优化数百万产品属性。这一应用的重要性在于，它展示了AI技术在实际商业运营中的集成，能够显著提高响应速度、降低运营成本并提升数据质量。影响方面，这不仅改善了Wayfair的客户体验和业务效率，还可能为电商行业树立自动化改进的标杆，推动其他企业探索类似AI应用。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "Wayfair",
+        "OpenAI",
+        "AI models",
+        "ecommerce support",
+        "product catalog"
+      ]
+    },
+    "analyzed_at": "2026-03-12T04:09:58.603123Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
