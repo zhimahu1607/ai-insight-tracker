@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1ba739b09513fe5a",
+    "title": "Our principles",
+    "url": "https://openai.com/index/our-principles",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-04-26T16:00:00Z",
+    "summary": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
+    "content": "Our mission is to ensure that AGI benefits all of humanity. Sam Altman shares five principles that guide our work.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": null,
+    "analyzed_at": null,
+    "analysis_status": "failed",
+    "analysis_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+  }
+]
