@@ -1,0 +1,41 @@
+{
+  "date": "2026-05-14",
+  "summary": "好的，这是今日的 AI 领域日报 Daily Summary。\n\n### 今日 AI 领域 Daily Summary\n\n今日AI领域的整体风向呈现出**学术界与工业界在“安全与可扩展性”这一核心议题上的深度共振**。学术界侧重于揭示理论基础上的脆弱性，工业界则积极构建防御与治理体系，共同指向了AI系统从“能用”到“可信”的迫切需求。\n\n最值得关注的核心亮点在于 **“安全对齐”从理论探讨走向系统性工程实践**。一方面，多项研究揭示了当前模型在安全上的深层漏洞，如逻辑劝说可绕过护栏、微调会强化“否定忽视”等，为工业界敲响警钟。另一方面，OpenAI针对供应链攻击的响应、AWS与Cisco联合推出的代理安全方案，以及Codex沙箱设计，构成了从基础设施到部署流程的防御闭环。这标志着安全已从单点漏洞修复，演变为贯穿模型开发与部署全生命周期的体系化问题。\n\n第二个关键趋势是 **“效率提升”与“新式推理”的紧密结合**。学术界在3D视觉（3D高斯泼溅）、大语言模型推理（结构化剪枝、并行搜索）和量化模型等领域不断突破效率瓶颈，这为工业界实现更低成本、更快速的规模化部署提供了直接技术支撑。同时，多个研究开始将物理模型、脑科学启发等先验知识融入AI，预示着AI正从纯粹的数据驱动，转向与领域知识深度融合的更高效、更可解释的路径。",
+  "category_summaries": {
+    "cs.AI": "### cs.AI 领域每日深度报告\n\n今日研究热点主要集中于**AI安全与对齐**、**智能体系统能力提升**以及**推理与优化新范式**三大方向。\n\n安全方面，多篇工作深入探讨了智能体的潜在风险，如[History Anchors](2605.13825)揭示模型易延续历史有害行为，[Position: Assistive Agents Need Accessibility Alignment](2605.13579)则提出将可访问性作为辅助代理的默认设计目标。此外，[Automated alignment is harder than you think](2605.06390)警告自动化对齐研究可能产生误导性安全评估。\n\n在智能体领域，核心挑战在于增强其长期规划、记忆管理和工具使用能力。[Harnessing Agentic Evolution](2605.13821)和[Cognifold](2605.13438)分别通过元编辑和脑启发的主动记忆系统来提升智能体的自主性与持续性。同时，[ACT*ONOMY](2605.13625)和[FORTIS](2605.09163)等研究则聚焦于智能体行为的可解释性与安全性诊断。\n\n推理与优化方面，[Achieving Gold-Medal-Level Olympiad Reasoning](2605.13301)证实了统一缩放策略在复杂推理上的潜力，而[Scaling Retrieval-Augmented Reasoning](2605.13534)与[PyRAG](2605.12975)则通过并行搜索和代码合成来增强检索增强生成的信噪比和可检查性。这些工作共同推动了AI在专业领域的应用边界。",
+    "cs.CL": "好的，以下是基于所提供论文的每日AI领域深度报告。\n\n### cs.CL 领域每日深度报告：2025年6月2日\n\n今日cs.CL领域的研究集中在**提升大型语言模型的安全性、鲁棒性与可解释性，并探索其在不同应用场景下的深度优化**。核心趋势包括对模型训练与推理中内在缺陷的剖析，以及通过更精细化的框架设计来解决实际问题。\n\n首先，**安全与可靠性**成为焦点。研究揭示了微调中的“否定忽视”现象（[Negation Neglect](2605.13829)）以及可通过劝说攻击绕过护栏的风险（[LLM-Based Persuasion Enables Guardrail Override](2605.13334)）。为此，有工作提出了步骤级幻觉检测的几何方法（[Where Does Reasoning Break?](2605.13772)）和针对扩散模型的推理时防御框架（[Adaptive Steering and Remasking](2605.13043)）。\n\n其次，**智能体与推理系统**的优化取得进展。多智能体系统领域提出了高效的低秩权重通信框架TFlow（[Good Agentic Friends Do Not Just Give Verbal Advice](2605.13839)）和对比式信用分配方法CANTANTE（[CANTANTE](2605.13295)）。在推理方面，STOP算法（[STOP](2605.13165)）实现了对长链推理的结构化剪枝，而RTLC提示范式（[RTLC](2605.13695)）则基于费曼技巧提升了LLM作为评判者的准确性。\n\n此外，**多语言与低资源应用**持续深化。WARDEN系统（[WARDEN](2605.13846)）仅用6小时数据即可实现濒危语言的转录与翻译，展示了低资源场景的潜力。研究还涵盖多语言金融推理基准FIND（[FIND](2605.13330)）和基于无监督学习的多语言笑声分割（[MultiLinguahah](2605.06309)）。\n\n最后，**效率与可解释性**方面，EchoKV（[EchoKV](2603.22910)）和OmniSIFT（[OmniSIFT](2602.04804)）分别从KV缓存和多模态token压缩角度提升了效率。同时，有工作通过对激活词化方法的控制实验，质疑了其可解释性的有效性（[Do Activation Verbalization Methods Convey Privileged Information?](2509.13316)）。这些工作共同推动了LLM向更可靠、高效和深入理解的方向发展。",
+    "cs.CV": "今日 cs.CV 领域研究呈现三大核心趋势：**3D视觉与场景表示的高效化、多模态大模型（MLLM）的细粒度对齐、以及生成式模型向物理与语义驱动演进**。\n\n首先，**3D高斯泼溅（3DGS）** 继续成为热点，重点转向鲁棒性与泛化性。代表性工作如 **Ro-Splat** 和 **PairDropGS** 分别从渲染质量和稀疏视图重建入手提升性能，而 **CoWorld-VLA** 则探索将3D世界观与世界模型结合应用于自动驾驶。\n\n其次，**MLLM研究** 聚焦于解决视觉-语言对齐的深层次问题，如幻觉与长上下文。**PanoWorld** 通过球面注意力提升全景空间推理，**Dual-Pathway Circuits** 首次机制性地揭示了物体幻觉的神经回路。为提高效率，**LiteLVLM** 提出了免训练的文本引导 token 剪枝。\n\n最后，**生成模型** 正从简单的数据生成转向物理一致性和精确控制。**Kiwi-Edit** 统一了指令与参考引导的视频编辑，**Phy-CoSF** 结合物理模型与深度展开网络实现连续光谱超分，体现了领域对物理先验和可控性的重视。此外，医学影像生成（如 3D-UIR）、扩散模型蒸馏（AnyFlow）等方向亦有重要进展。",
+    "cs.LG": "### cs.LG 领域研究热点与趋势总结\n\n本日 cs.LG 领域的研究呈现高度活跃与深度交叉态势。核心趋势可归纳为三大方向：**一是对模型架构与训练效率的极致追求**；**二是物理与科学机器学习（SciML）的深化应用**；**三是学习理论与泛化机制的深入剖析**。\n\n在模型架构方面，研究热点包括利用量子叠加性质增强状态空间模型（[QLAM: A Quantum Long-Attention Memory Approach...](2605.13833)），以及通过串行注意力路由协调模块化专家实现多任务微调（[LoRA-Mixer: Coordinate Modular LoRA Experts...](2507.00029)）。同时，在线缩放Delta网络（[OSDN: Improving Delta Rule...](2605.13473)）和Key-Value Means（[Key-Value Means: Transformers with Expandable Block-Recurrent...](2605.09877)）分别从线性注意力和长上下文建模角度提升了Transformer效率。\n\n在物理与科学机器学习领域，代表性工作包括：借助Hodge分解实现保结构算子学习（[Topology-Preserving Neural Operator Learning via Hodge Decomposition](2605.13834)），提出条件潜在动力网络作为浅水方程的替代模型用于城市洪水数字孪生（[Toward AI-Driven Digital Twins for Metropolitan Floods:...](2605.13761)），以及通过记忆引导的潜空间漂移校正实现长时程降水预报（[McCast: Memory-Guided Latent Drift Correction...](2605.13197)）。此外，[MPINeuralODE](2605.13305) 通过多初始条件与多重打靶课程提升了神经ODE对动态系统的全局一致性学习能力。\n\n在理论与泛化方面，研究揭示了超图神经网络的严格表达性层次结构（[The WidthWall: A Strict Expressivity Hierarchy...](2605.13690)），将层次特征学习解释为迭代谱过程（[Deep Learning as Neural Low-Degree Filtering:...](2605.13612)），并重新审视了图神经网络的泛化机制（[Rethinking Generalization in Graph Neural Networks:...](2605.13597)）。这些工作共同推动了领域基础理论的深化。"
+  },
+  "news_summary": "好的，这是今日份 AI 领域深度报告。\n\n### 今日 AI 领域深度报告\n\n今日 AI 领域的核心动态聚焦于**企业级应用的规模化、安全性与效率优化**，主要围绕**安全治理、基础设施优化和行业应用落地**三个方向展开。\n\n**安全与治理**成为焦点。**OpenAI** 为应对 TanStack 供应链攻击，强化了证书管理与防御机制；同时，其分享了 Codex 在 Windows 上的沙箱设计，旨在确保编码代理的安全执行。**AWS** 联合 **Cisco** 推出 AI 代理安全方案，通过集成 MCP 和 A2A 协议，解决了大规模部署下的安全扫描、合规审计与资产管理难题。\n\n**基础设施与模型创新**持续加速。**微软**发布了两项开源成果：高性能内存分配器 `mimalloc`，已用于 Bing 等服务并显著提升响应速度；以及轻量级电网基础模型 **GridSFM**，可毫秒级求解交流最优潮流问题，为能源系统提供实时决策支持。\n\n**应用落地**方面，**AWS** 动作频频。其与 **Pulse AI** 合作构建基于 Bedrock 的金融文档处理方案，利用微调后的视觉语言模型将复杂文档处理时间从数天缩短至 3 小时。同时，AWS 发布了基于 Nova Sonic 的实时语音流方案，并推出了整合 **Databricks Unity Catalog** 与 SageMaker AI 的 LLM 微调指南，强化了跨服务数据治理与合规能力。",
+  "stats": {
+    "total_papers": 483,
+    "papers_by_category": {
+      "cs.CL": 82,
+      "cs.CV": 133,
+      "cs.LG": 188,
+      "cs.AI": 80
+    },
+    "total_news": 8,
+    "news_by_category": {
+      "产品": 4,
+      "行业": 1,
+      "开源": 1,
+      "AI": 1,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "Large Language Model",
+      "Reinforcement Learning",
+      "Diffusion Model",
+      "Benchmark",
+      "Transformer",
+      "Contrastive Learning",
+      "Multimodal Large Language Model",
+      "Vision-Language Model",
+      "Variational Autoencoder",
+      "Mixture-of-Experts"
+    ]
+  },
+  "generated_at": "2026-05-14T05:08:38.909933"
+}
