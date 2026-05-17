@@ -1,0 +1,118 @@
+[
+  {
+    "id": "b9939c2fea2643f2",
+    "title": "OpenAI and Malta partner to bring ChatGPT Plus to all citizens",
+    "url": "https://openai.com/index/malta-chatgpt-plus-partnership",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-05-16T00:00:00Z",
+    "summary": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
+    "content": "OpenAI and Malta partner to expand AI access, offering ChatGPT Plus and training to help citizens build practical AI skills and use AI responsibly.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI与马耳他政府合作，为所有公民提供ChatGPT Plus订阅和AI技能培训。该合作旨在扩大AI技术的普及，帮助公民掌握实用AI技能并负责任地使用AI。这一举措将提升马耳他的数字素养，并为其他国家提供公私合作的范例。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "马耳他",
+        "ChatGPT Plus",
+        "AI培训",
+        "合作"
+      ]
+    },
+    "analyzed_at": "2026-05-17T05:06:50.666144Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "d93b94d20e7fe073",
+    "title": "How business operations teams use Codex",
+    "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-05-15T00:00:00Z",
+    "summary": "See how business operations teams can use Codex to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs.",
+    "content": "See how business operations teams can use Codex to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布文章介绍业务运营团队如何利用Codex工具，从实际工作输入中创建倡议简报、战略更新、领导决策包、进度更新等文档。Codex作为AI辅助工具，旨在提升运营效率，通过自动化文档生成简化流程。该文章展示了Codex在企业场景中的实际应用价值。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "Codex",
+        "业务运营",
+        "文档生成",
+        "AI辅助"
+      ]
+    },
+    "analyzed_at": "2026-05-17T05:06:50.514787Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "afc8cde3e2c86608",
+    "title": "How data science teams use Codex",
+    "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-05-15T00:00:00Z",
+    "summary": "See how data science teams can use Codex to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+    "content": "See how data science teams can use Codex to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI介绍了数据科学团队如何利用Codex从实际工作输入中构建根本原因简报、影响报告、KPI备忘录、范围分析和仪表盘规范，展示了Codex在自动化数据分析报告生成方面的应用，有助于提升数据科学工作效率。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "Codex",
+        "OpenAI",
+        "data science",
+        "root-cause briefs",
+        "KPI memos"
+      ]
+    },
+    "analyzed_at": "2026-05-17T05:06:50.921333Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ca8d7bccf4afaa2a",
+    "title": "How sales teams use Codex",
+    "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-05-15T00:00:00Z",
+    "summary": "See how sales teams can use Codex to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
+    "content": "See how sales teams can use Codex to create pipeline briefs, meeting prep packets, forecast reviews, account plans, and stalled-deal diagnoses from real work inputs.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 介绍了销售团队如何利用 Codex（AI 代码生成模型）自动创建管道简报、会议准备材料、预测审查报告、客户账户计划和停滞交易诊断等销售文档。该应用展示了 AI 在销售流程自动化中的潜力，通过从实际工作输入中生成结构化内容，帮助销售团队提升效率和准确性。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Codex",
+        "销售团队",
+        "销售自动化",
+        "管道简报",
+        "预测审查"
+      ]
+    },
+    "analyzed_at": "2026-05-17T05:06:51.441524Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
