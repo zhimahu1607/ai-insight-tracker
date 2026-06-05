@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ee9a637fb085a8d6",
+    "title": "NVIDIA Nemotron 3 Ultra now available on Amazon SageMaker JumpStart",
+    "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-jumpstart/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-06-04T16:59:08Z",
+    "summary": "Deploy NVIDIA Nemotron 3 Ultra on Amazon SageMaker JumpStart. Get 5x faster inference and 30% lower cost for agentic AI workloads with this frontier reasoning model.",
+    "content": "Today, we are excited to announce the day-zero availability of NVIDIA Nemotron 3 Ultra on Amazon SageMaker JumpStart.\nWith this launch, you can now deploy the Nemotron 3 Ultra model using a one-click deployment experience. Nemotron 3 Ultra is an open model built for frontier reasoning and orchestration in long-running autonomous agents, delivering 5x faster inference and up to 30% lower cost for agentic workloads. Nemotron 3 Ultra is optimized for the NVFP4 format, which makes the model much faster and cost effective to host.\nOverview of NVIDIA Nemotron 3 Ultra\nNVIDIA Nemotron 3 Ultra is an open large language model with 550 billion total parameters and 55 billion active parameters. It is built on a hybrid Transformer-Mamba Mixture-of-Experts (MoE) architecture, designed to deliver frontier intelligence at a fraction of the compute cost of dense models of equivalent quality.\n\nSpecification\nDetails\n\nArchitecture\nHybrid Transformer-Mamba MoE\n\nParameters\n550B total / 55B active\n\nContext length\nUp to 1M tokens\n\nInput / Output\nText in, text out\n\nPrecision\nNVFP4\n\nInference speed\n5x faster for long-running agent workflows\n\nCost\nUp to 30% lower for complex agentic tasks\n\nWhy agentic AI needs purpose-built models\nAgents don’t just answer once. They plan, call tools, delegate work to sub-agents, check results, and keep going across hundreds of turns. Every step adds tokens and compute, so the metrics that matter are task completion at useful accuracy, time-to-finish, and cost-per-task.\nNemotron 3 Ultra addresses this directly. Its MoE architecture activates only 55B of its 550B parameters per forward pass, keeping throughput high even at million-token context lengths. This means agents can sustain planning, tool calling, and self-correction loops that span hundreds of turns while helping maintain coherence and manage cost.\nEnterprise use cases\nNemotron 3 Ultra excels in workloads that require sustained multi-step reasoning:\n\nAgent orchestrators – coordinate multiple sub-agents, manage state across long tool-calling chains\nCoding agents – generate, test, debug, and iterate on code across large repositories\nDeep research – synthesize information from multiple sources, maintain coherent reasoning over extended context\nComplex enterprise workflows – automate multi-step business processes with decision branching and error recovery\n\nGetting started with SageMaker JumpStart\nYou can deploy Nemotron 3 Ultra through Amazon SageMaker JumpStart with one-click deployment, removing the need to manage infrastructure or configure serving frameworks.\nPrerequisites\nBefore you begin, make sure you have:\n\nAn AWS account\nAppropriately scoped permissions for SageMaker JumpStart\nSufficient service quota for GPU instances (for example, ml.p5en.48xlarge, ml.p5.48xlarge, or ml.g7e.48xlarge)\n\nImportant: Deploying this model creates a SageMaker endpoint that incurs charges while running. GPU instances like ml.p5en.48xlarge can cost several dollars per hour. See Amazon SageMaker AI pricing for details. Remember to delete your endpoint when finished to avoid ongoing charges.\nDeploy using SageMaker Studio\n\nOpen Amazon SageMaker Studio\nIn the left navigation pane, choose SageMaker JumpStart\nSearch for Nemotron 3 Ultra\nSelect the model card\nChoose Deploy\nSelect your instance type (supported instance types are ml.p5en.48xlarge, ml.p5.48xlarge, or ml.g7e.48xlarge)\nReview deployment settings (defaults are sufficient for most use cases)\nChoose Deploy to create the endpoint\nWait for the endpoint status to show InService before proceeding to inference\n\nDeploy using the SageMaker Python SDK\n\nimport sagemaker\nfrom sagemaker.jumpstart.model import JumpStartModel\nmodel = JumpStartModel(\nmodel_id=\"huggingface-reasoning-nvidia-nemotron-3-ultra-550b-a55b-nvfp4\", # Verify in SageMaker JumpStart model card\nrole=sagemaker.get_execution_role(), # Your SageMaker execution role ARN\n)\npredictor = model.deploy(accept_eula=True)\n\nRun inference\n\npayload = {\n\"messages\": [{\n\"role\": \"user\",\n\"content\": \"Break this task into subtasks, identify which tools are needed, and run them in sequence.\"\n}],\n\"max_tokens\": 20480,\n\"temperature\": 0.6,\n\"top_p\": 0.95,\n}\nresponse = predictor.predict(payload)\nprint(response[\"choices\"][0][\"message\"][\"content\"])\n\nClean up\nTo avoid incurring unnecessary charges, delete the SageMaker endpoint when you are done: predictor.delete_endpoint()\nConclusion\nNVIDIA Nemotron 3 Ultra brings frontier-class reasoning to Amazon SageMaker JumpStart with 5x faster inference and up to 30% lower cost for agentic workloads. Its hybrid Transformer-Mamba MoE architecture and million-token context window make it purpose-built for the sustained, multi-step reasoning that production agents demand.\nWhether you are building agent orchestrators, coding agents, deep research systems, or complex enterprise automation, Nemotron 3 Ultra is ready to deploy today from SageMaker JumpStart.\nGet started now by searching for Nemotron 3 Ultra in Amazon SageMaker JumpStart.\n\nAbout the authors\nDan Ferguson is a Solutions Architect at AWS, based in New York, USA. As a machine learning services expert, Dan works to support customers on their journey to integrating ML workflows efficiently, effectively, and sustainably.\nMalav Shastri is a Software Development Engineer at AWS, where he works on the Amazon SageMaker JumpStart and Amazon Bedrock teams. His role focuses on enabling customers to take advantage of state-of-the-art open source and proprietary foundation models. Malav holds a Master’s degree in Computer Science.\nVivek Gangasani is a Worldwide Leader for Solutions Architecture, SageMaker Inference. He leads Solution Architecture, Technical Go-to-Market (GTM) and Outbound Product strategy for SageMaker Inference. He also helps enterprises and startups deploy and optimize a GenAI models and build AI workflows with SageMaker and GPUs. Currently, he is focused on developing strategies and content for optimizing inference performance and use-cases such as Agentic workflows, RAG etc. In his free time, Vivek enjoys hiking, watching movies, and trying different cuisines.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "NVIDIA 与 AWS 合作，将 Nemotron 3 Ultra 大语言模型上线 Amazon SageMaker JumpStart，提供一键部署。该模型采用混合 Transformer-Mamba MoE 架构，总参数 5500 亿，激活参数 55 亿，支持百万 token 上下文，针对代理型 AI 工作负载优化，实现 5 倍推理加速和最高 30% 成本降低。企业可用于代理编排、编码、深度研究等复杂多步推理场景。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "NVIDIA Nemotron 3 Ultra",
+        "Amazon SageMaker JumpStart",
+        "MoE架构",
+        "代理AI",
+        "推理加速"
+      ]
+    },
+    "analyzed_at": "2026-06-05T06:03:46.787914Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ae995b9c3e757be2",
+    "title": "How Endava is redesigning software delivery around AI agents",
+    "url": "https://openai.com/index/endava-frontiers",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-06-04T12:00:00Z",
+    "summary": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
+    "content": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Endava 正在利用 AI agents、ChatGPT Enterprise 和 Codex 重新设计软件交付流程，加速开发、自动化工作流，并在整个企业构建 AI 原生文化。这标志着 AI 在软件开发领域的深度整合，有望提升效率并推动行业变革。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "Endava",
+        "AI agents",
+        "ChatGPT Enterprise",
+        "Codex",
+        "软件交付"
+      ]
+    },
+    "analyzed_at": "2026-06-05T06:03:45.443456Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "785dbaa6ae56b042",
+    "title": "Dreaming: Better memory for a more helpful ChatGPT",
+    "url": "https://openai.com/index/chatgpt-memory-dreaming",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-06-04T09:00:00Z",
+    "summary": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+    "content": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI为ChatGPT引入全新记忆系统，能够更好地记住用户偏好，并在跨对话中保持上下文连贯性和相关性。这一改进提升了AI助手的个性化体验，使对话更自然、更高效，有助于增强用户粘性和实用性。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "ChatGPT",
+        "OpenAI",
+        "记忆系统",
+        "用户偏好",
+        "上下文保持"
+      ]
+    },
+    "analyzed_at": "2026-06-05T06:03:46.011575Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "5be6c3392056eeba",
+    "title": "Biodefense in the Intelligence Age",
+    "url": "https://openai.com/index/biodefense-in-the-intelligence-age",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-06-04T00:00:00Z",
+    "summary": "An action plan for AI-powered biological resilience",
+    "content": "An action plan for AI-powered biological resilience",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了一项关于在智能时代利用AI技术增强生物防御的行动计划。该计划旨在通过AI驱动的工具提升生物弹性，应对潜在的生物威胁。这标志着AI在公共安全和国防领域的重要应用，可能影响生物防御策略和技术发展。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "Biodefense",
+        "AI",
+        "Biological Resilience",
+        "行动计划"
+      ]
+    },
+    "analyzed_at": "2026-06-05T06:03:46.121140Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
