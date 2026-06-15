@@ -1,0 +1,31 @@
+[
+  {
+    "id": "9b41ef631f1ccd6e",
+    "title": "Introducing the OpenAI Partner Network",
+    "url": "https://openai.com/index/introducing-openai-partner-network",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-06-14T17:00:00Z",
+    "summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+    "content": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI推出了合作伙伴网络（OpenAI Partner Network），并投资1.5亿美元，旨在帮助全球合作伙伴加速企业AI的采用、部署和转型。该网络将提供资源、工具和支持，以推动企业级AI解决方案的落地，进一步扩大OpenAI在商业领域的影响力。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "合作伙伴网络",
+        "企业AI",
+        "1.5亿美元",
+        "AI部署"
+      ]
+    },
+    "analyzed_at": "2026-06-15T06:44:04.446560Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
