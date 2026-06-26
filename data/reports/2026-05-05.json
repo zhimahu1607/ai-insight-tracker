@@ -1,0 +1,38 @@
+{
+  "date": "2026-05-05",
+  "summary": "今日AI领域聚焦于从能力突破向可靠性与效率的转向，学术界与工业界共同呈现出产学研深度共振的态势。最值得关注的核心亮点有三：一是**企业级智能体（Agent）的落地应用成为主轴**，OpenAI与普华永道合作推动财务CFO职能的AI代理化，直接呼应了学术界对多智能体协作与可信赖性的研究（如CAAF、EngiAgent），同时亚马逊AWS发布的Agent Quality Loop工具也直指智能体在实际部署中的性能优化痛点。二是**模型效率与安全对齐的并行推进**，SlimDiffSR实现200倍超分辨率加速、Statistically-Lossless Quantization在低于4比特下保持性能，与Gradient-Gated DPO、LLM-VA等安全对齐工作形成互补，共同回应了大模型实用化中“强能力与高风险”的核心矛盾。三是**从“能完成”到“能保证”的评估范式升级**，HeavySkill将“重思考”视为可学习技能、Measuring AI Reasoning强调基于过程的评估，与工业界降低BI使用门槛的尝试一脉相承，都在标准化AI行为的可解释性与可验证性。整体来看，今日工作标志着一个关键转型：研究重心正从单一任务突破转向系统性工程化，跨领域的智能体可靠性与训练效率优化正在被统一到一个更务实的框架下，为AI从技术演示迈向负责任的大规模部署铺平道路。",
+  "category_summaries": {
+    "cs.AI": "今日 cs.AI 领域的研究呈现出两大核心趋势：**深化智能体（Agent）的能力与可靠性**，以及**探索模型训练与推理的效率边界**。\n\n在智能体方向，工作重心从单一任务执行转向多智能体协作与可信赖性。例如，[EngiAgent](2605.02289) 通过全连接协调器解决工程问题的可行性；[CAAF](2604.17025) 提出“Harness as an Asset”理念，将领域约束形式化为可执行资产以实现确定性。同时，[PhysicianBench](2605.02240) 和 [AcademiClaw](2605.02661) 分别从医疗和学术场景出发，构建了真实、长时程的智能体评估基准。\n\n在模型优化方面，研究者致力于同步解决压缩与调优的矛盾。 [JACTUS](2605.02829) 创新性地将参数高效微调与低秩压缩统一，通过子空间联合实现“术中”优化。安全与对齐研究也从被动防御转向主动干预，[隐式特质引导](2605.02751) 和 [合规陷阱](2605.02398) 分别从行为纠偏和元认知稳定角度，揭示了对抗压力下模型行为的新机理。\n\n此外，长程推理与评估也是热点。[HeavySkill](2605.02396) 将“重思考”本身视为一种可学习的技能，[Measuring AI Reasoning](2605.02442) 则强调基于过程的推理评估，而非仅关注结果。这些研究共同推动AI从“能做”向“能做对且可信”的方向演进。",
+    "cs.CL": "好的，以下是基于今日 cs.CL 领域论文的每日总结：\n\n### 今日CS.CL领域研究热点与趋势总结\n\n今日的研究热点主要围绕**大型语言模型（LLM）的安全性、对齐与效率**，同时**多语言与低资源语言处理**仍是核心关注点。\n\n在**安全性**方面，研究揭示了LLM的脆弱性： [ContextualJailbreak](2605.02647) 提出了一种基于对话启动的进化式黑盒越狱方法，显著提升了攻击成功率，并发现模型对齐存在鲁棒性不对称。此外，[MultiWikiQHalluA](2605.02504) 等多篇工作系统性地研究了幻觉问题，揭示了低资源语言中幻觉率更高的现象。\n\n在**方法与新基准**上，[InfoLaw](2605.02364) 提出了信息缩放定律，为数据质量与重复训练提供了理论基础。[Toward Culturally Grounded Natural Language Processing](2603.26013) 则倡导从基础设计阶段融入文化维度，以解决现有NLP系统的文化偏见问题。此外，[Efficient Reasoning with Hidden Thinking](2501.19201) 等论文探索了压缩推理过程（如CoT）以实现高效推理。\n\n这些研究共同指向了LLM在实际部署中的核心矛盾：**强大能力与安全风险并存，高性能与资源消耗冲突**。为解决这些问题，研究者们引入了多种新范式，包括基于信息论（如互信息）的去噪框架、基于过程奖励模型（PRM）的解码时控制、以及通过认知推理压缩来提升效率等。",
+    "cs.CV": "### cs.CV 领域每日深度报告 (2025-05-20)\n\n今日计算机视觉领域呈现三大核心趋势：**扩散模型的应用深化与轻量化**、**视觉-语言模型(VLM)的缺陷诊断与能力增强**，以及**医学影像分析的智能化与多模态融合**。\n\n在图像生成与重建方面，扩散模型持续占据主导。例如，[ActDiff-VC](2605.02849) 将其应用于超低比特率视频压缩，通过自适应采样实现高效生成式重建；[ExpoCM](2605.02464) 实现了单步生成式高动态范围(HDR)重建；[SlimDiffSR](2605.02198) 则通过知识蒸馏与剪枝实现了遥感图像超分辨率的200倍加速。同时，[DirectEdit](2605.02417) 提出了基于流模型的免训练图像编辑方法，而 [FEAT](2605.02393) 则将扩散模型用于解耦的服装编辑与虚拟试穿。这些工作共同指向了如何在保持高质量的同时提升效率与可控性。\n\nVLM的局限性受到广泛关注。研究揭示了其在少样本领域特定动作识别 ([VideoNet](2605.02834))、文本引导类无关计数中的语义对齐缺陷 ([Does it Really Count](2605.02752))，以及在视觉推理中的语言偏差与幻觉问题 ([PFlowNet](2605.02730))，并提出了相应的改进框架。此外，也有工作旨在增强VLM的核心能力，如通过归纳-演绎推理提升多模态上下文学习 ([Inductive-Deductive Reasoning](2605.02378))。这表明领域正从简单应用转向对其内部机制的深度反思与系统性优化。\n\n医学影像分析方面，多模态融合与生成式方法成为热点。研究者利用生成对抗网络(GAN)从CT合成PET数据以提升肺癌分类 ([Virtual Scanning](2605.02746))，或仅凭少量高质量模板实现全头MRI分割 ([SIAM](2605.02737))。眼科领域尤为活跃，涌现了专门的数据集 ([PubMed-Ophtha](2605.02720))、基础模型 ([OphMAE](2605.02714)) 以及融合解剖先验的可解释性框架 ([SAIL](2605.02707))。此外，轻量级、高效架构的探索广泛渗透于分割、图像恢复等子领域，例如利用状态空间模型(SSM)处理长程依赖 ([DGM-Net](2604.23399)) 或实现医学图像恢复 ([Edge-Efficient Image Restoration](2605.02794))。",
+    "cs.LG": "今日 cs.LG 领域的论文呈现出多个并行的研究热点，主要聚焦于**大语言模型（LLM）的高效推理与安全对齐**、**强化学习的新范式及其在复杂环境中的应用**、以及**时间序列与表示学习的理论突破**。\n\n在**LLM高效推理**方面，[SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](2605.02888) 提出自适应投机解码加速推理；[Statistically-Lossless Quantization of Large Language Models](2605.02404) 首次实现统计无损量化，在低于4比特/参数下保持任务性能。安全对齐方面，[Gradient-Gated DPO: Stabilizing Preference Optimization in Language Models](2605.02626) 通过门控机制缓解DPO的概率坍缩，[LLM-VA: Resolving the Jailbreak-Overrefusal Trade-off via Vector Alignment](2601.19487) 解决了越狱与过度拒绝的权衡。\n\n**强化学习**方面，[A decoupled diffusion planner that adapts to changing cost limits](2605.02777) 提出解耦成本条件与奖励梯度的安全轨迹规划；[Efficient Preference Poisoning Attack on Offline RLHF](2605.02495) 揭示了RLHF的脆弱性；[Enhancing RL Generalizability in Robotics through SHAP Analysis](2605.02867) 利用XAI工具提升机器人泛化能力。此外，[RAST-MoE-RL](2512.13727) 在网约车领域使用状态感知MoE降低延迟。\n\n**时间序列与表示学习**方面，[MSMixer: Learned Multi-Scale Temporal Mixing](2605.02689) 提出轻量级多尺度MLP架构用于长时预测；[HELIX: Hybrid Encoding with Learnable Identity](2605.02278) 在时间序列插补上取得SOTA；[Deep Time Series Models: A Comprehensive Survey and Benchmark](2407.13278) 提供了系统基准。\n\n其他重要进展包括：基于持久同调的闭式分类器[PLACE](2605.02836)、多模态分子推理模型[Bolek](2605.02745)、以及图联邦遗忘[Graph Federated Unlearning](2605.02297)等。整体上，今日工作强调模型的**效率-精度权衡、安全鲁棒性以及跨模态/跨任务泛化能力**。"
+  },
+  "news_summary": "### 每日AI领域深度报告 (2025-04-11)\n\n今日AI行业的焦点集中在企业级AI应用落地与开发基础设施的优化上。**OpenAI** 与普华永道达成合作，旨在通过AI代理技术推动财务CFO职能的现代化，标志着其技术向专业服务领域的深度渗透。同时，OpenAI通过重构WebRTC技术栈，实现了低延迟的实时语音AI服务，为大规模交互式应用奠定基础。\n\n**亚马逊AWS** 发布一系列产品，主要围绕两大方向。其一，**Amazon Quick** 推出了多项基于自然语言的数据分析功能，包括“Dataset Q&A”和“Generate Analysis”，允许用户无需编写SQL或构建仪表板即可获得洞察，显著降低BI使用门槛。其二，**Amazon SageMaker** 和 **Bedrock AgentCore** 则聚焦于AI开发体验的优化，分别推出了基于代理的模型定制工作流和名为“Agent Quality Loop”的优化工具，旨在通过自动化手段解决模型微调与Agent性能提升中的效率瓶颈，将数周甚至数月的工作缩短至数天或分钟。",
+  "stats": {
+    "total_papers": 300,
+    "papers_by_category": {
+      "cs.CV": 102,
+      "cs.LG": 82,
+      "cs.AI": 65,
+      "cs.CL": 51
+    },
+    "total_news": 9,
+    "news_by_category": {
+      "产品": 8,
+      "AI": 1
+    },
+    "top_keywords": [
+      "Large Language Model",
+      "Reinforcement Learning",
+      "Transformer",
+      "Diffusion Model",
+      "Vision-Language Model",
+      "Benchmark",
+      "Attention Mechanism",
+      "Unsupervised Learning",
+      "Knowledge Distillation",
+      "Foundation Model"
+    ]
+  },
+  "generated_at": "2026-05-05T04:41:52.851601"
+}

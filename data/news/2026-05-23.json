@@ -1,0 +1,60 @@
+[
+  {
+    "id": "f2261073b77c07ad",
+    "title": "OpenAI named a Leader in enterprise coding agents by Gartner",
+    "url": "https://openai.com/index/gartner-2026-agentic-coding-leader",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-05-22T00:00:00Z",
+    "summary": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
+    "content": "OpenAI is named a leader in the 2026 Gartner Magic Quadrant for Enterprise AI Coding Agents, with Codex recognized for innovation and enterprise-scale deployment.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI被Gartner在2026年企业AI编码代理魔力象限中评为领导者，其Codex模型因创新能力和企业级部署能力获得认可。这一荣誉突显了OpenAI在AI编码领域的领先地位，表明其技术能够满足大型企业的开发效率和安全需求，对行业竞争格局具有重要影响。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Gartner",
+        "Codex",
+        "企业编码代理",
+        "Magic Quadrant"
+      ]
+    },
+    "analyzed_at": "2026-05-23T04:59:54.891564Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "740545d72e85eb63",
+    "title": "How Virgin Atlantic ships faster with Codex",
+    "url": "https://openai.com/index/virgin-atlantic",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-05-22T00:00:00Z",
+    "summary": "How Virgin Atlantic used Codex to ship its revamped mobile app on a fixed holiday travel deadline, reaching near-total unit test coverage and zero P1 defects.",
+    "content": "How Virgin Atlantic used Codex to ship its revamped mobile app on a fixed holiday travel deadline, reaching near-total unit test coverage and zero P1 defects.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "维珍大西洋航空利用OpenAI的Codex模型加速其移动应用的改版研发，在固定的假期旅行截止日期前成功交付，实现了接近100%的单元测试覆盖率，并且没有出现任何P1级（最高优先级）缺陷。这表明AI辅助编码在提升开发效率和代码质量方面具有显著价值。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "Virgin Atlantic",
+        "Codex",
+        "移动应用",
+        "单元测试",
+        "零缺陷"
+      ]
+    },
+    "analyzed_at": "2026-05-23T04:59:55.313227Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

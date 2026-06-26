@@ -1,0 +1,20 @@
+[
+  {
+    "id": "7543ce1b7448b7d1",
+    "title": "STADLER reshapes knowledge work at a 230-year-old company",
+    "url": "https://openai.com/index/stadler",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-27T22:00:00Z",
+    "summary": "Learn how STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees.",
+    "content": "Learn how STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": null,
+    "analyzed_at": null,
+    "analysis_status": "failed",
+    "analysis_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+  }
+]

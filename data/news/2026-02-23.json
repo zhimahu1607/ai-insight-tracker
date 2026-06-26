@@ -1,0 +1,20 @@
+[
+  {
+    "id": "7850ae10d710f5dd",
+    "title": "Introducing EVMbench",
+    "url": "https://openai.com/index/introducing-evmbench",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-02-18T00:00:00Z",
+    "summary": "OpenAI and Paradigm introduce EVMbench, a benchmark evaluating AI agents’ ability to detect, patch, and exploit high-severity smart contract vulnerabilities.",
+    "content": "OpenAI and Paradigm introduce EVMbench, a benchmark evaluating AI agents’ ability to detect, patch, and exploit high-severity smart contract vulnerabilities.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": null,
+    "analyzed_at": null,
+    "analysis_status": "failed",
+    "analysis_error": "Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+  }
+]

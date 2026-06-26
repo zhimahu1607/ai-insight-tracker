@@ -1,0 +1,118 @@
+[
+  {
+    "id": "462ba1286b384b35",
+    "title": "Scaling content review operations with multi-agent workflow",
+    "url": "https://aws.amazon.com/blogs/machine-learning/scaling-content-review-operations-with-multi-agent-workflow/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-29T23:32:14Z",
+    "summary": "The agent-based approach we present is applicable to any type of enterprise content, from product documentation and knowledge bases to marketing materials and technical specifications. To demonstrate these concepts in action, we walk through a practical example of reviewing blog content for technical accuracy. These patterns and techniques can be directly adapted to various content review needs by adjusting the agent configurations, tools, and verification sources.",
+    "content": "Enterprises are managing ever-growing volumes of content, ranging from product catalogs and support articles to knowledge bases and technical documentation. Ensuring this information remains accurate, relevant, and aligned with the latest business facts is a formidable challenge. Manual content review processes are often slow, costly, and unable to keep pace with dynamic business needs. According to a McKinsey study , organizations that use generative AI for knowledge work, including content review and quality assurance can boost productivity by up to 30–50% and dramatically reduce time spent on repetitive verification tasks. Similarly, research from Deloitte highlights that AI-driven content operations not only increase efficiency but also help organizations maintain higher content accuracy and reduce operational risk.\nAmazon Bedrock AgentCore , a purpose-built infrastructure for deploying and operating AI agents at scale, combined with Strands Agents , an open source SDK for building AI agents, empowers organizations to automate comprehensive content review workflows. This agent-based approach enables businesses to evaluate content for accuracy, verify information against authoritative sources, and generate actionable recommendations for improvement. By using specialized agents that work together autonomously, human experts can focus on strategic review tasks while the AI agent system handles large-scale content validation.\nThe agent-based approach we present is applicable to any type of enterprise content, from product documentation and knowledge bases to marketing materials and technical specifications. To demonstrate these concepts in action, we walk through a practical example of reviewing blog content for technical accuracy. These patterns and techniques can be directly adapted to various content review needs by adjusting the agent configurations, tools, and verification sources.\nSolution overview\nThe content review solution implements a multi-agent workflow pattern, where three specialized AI agents built with Strands Agents and deployed on Amazon Bedrock AgentCore work in a coordinated pipeline. Each agent receives the output from the previous agent, processes it according to its specialized function, and passes enriched information to the next agent in the sequence. This creates a progressive refinement process where:\n\nContent scanner agent analyzes raw content and extracts relevant information\nContent verification agent takes these extracted elements and validates them against authoritative sources\nRecommendation agent transforms verification findings into actionable content updates\n\nTechnical content maintenance requires multiple specialized agents because manually scanning, verifying, and updating documentation is inefficient and error prone. Each agent has a focused role – the scanner identifies time-sensitive elements, the verifier checks current accuracy, and the recommendation agent crafts precise updates. The system’s modular design, with clear interfaces and responsibilities, makes it easy to add new agents or expand capabilities as content complexity grows. To illustrate how this agent-based content review system works in practice, we walk through an implementation that reviews technical blog posts for accuracy. Tech companies frequently publish blog posts detailing new features, updates, and best practices. However, the rapid pace of innovation means some features become deprecated or updated, making it challenging to keep information current across hundreds or thousands of published posts. While we demonstrate this pattern with blog content, the architecture is content agnostic and supports any content type by configuring the agents with appropriate prompts, tools, and data sources.\nPractical example: Blog content review solution\nWe use three specialized agents that communicate sequentially to automatically review posts and identify outdated technical information. Users can trigger the system manually or schedule it to run periodically.\n\nFigure-1 Blog content review architecture\nThe workflow begins when a blog URL is provided to the blog scanner agent, which retrieves the content using Strands http_request tool and extracts key technical claims requiring verification. The verification agent then queries the AWS documentation MCP server to fetch the latest documentation and validate the technical claims against current documentation. Finally, the recommendation agent synthesizes the findings and generates a comprehensive review report with actionable recommendations for the blog team.\nThe code is open source and hosted on  GitHub .\nMulti-agent workflow\nContent scanner agent: Intelligent extraction for obsolescence detection\nThe content scanner agent serves as the entry point to the multi-agent workflow. It is responsible for identifying potentially obsolete technical information. This agent specifically targets elements that are likely to become outdated over time. The agent analyzes content and produces structured output that categorizes each technical element by type, location in the blog, and time-sensitivity. This structured format enables the verification agent to receive well-organized data it can efficiently process.\nContent verification agent: Evidence-based validation\nThe content verification agent receives the structured technical elements from the scanner agent and performs validation against authoritative sources. The verification agent uses the AWS documentation MCP server to access current technical documentation. For each technical element received from the scanner agent, it follows a systematic verification process guided by specific prompts that focus on objective, measurable criteria.\nThe agent is prompted to check for:\n\nVersion-specific information : Does the mentioned version number, API endpoint, or configuration parameter still exist?\nFeature availability : Is the described service feature still available in the specified regions or tiers?\nSyntax accuracy : Do code examples, CLI commands, or configuration snippets match current documentation?\nPrerequisite validity : Are the listed requirements, dependencies, or setup steps still accurate?\nPricing and limits : Do mentioned costs, quotas, or service limits align with current published information?\n\nFor each technical element received from the scanner agent, the agent performs the following steps:\n\nGenerates targeted search queries based on the element type and content\nQueries the documentation server for current information\nCompares the original claim against authoritative sources using the specific criteria above\nClassifies the verification result as CURRENT , PARTIALLY_OBSOLETE , or FULLY_OBSOLETE\nDocuments specific discrepancies with evidence\n\nExample verification in action:  When the scanner agent identifies the claim “Amazon Bedrock is available in us-east-1 and us-west-2 regions only,” the Verification Agent generates the search query “Amazon Bedrock available regions” and retrieves current regional availability from AWS documentation. Upon finding that Bedrock is now available in 8+ regions including eu-west-1 and ap-southeast-1, it classifies this as PARTIALLY_OBSOLETE with the evidence: “Original claim lists 2 regions, but current documentation shows availability in us-east-1, us-west-2, eu-west-1, ap-southeast-1, and 4 additional regions as of the verification date.”\nThe verification agent’s output maintains the element structure from the scanner agent while adding these verification details and evidence-based classifications.\nRecommendation agent: Actionable update generation\nThe recommendation agent represents the final stage in the multi-agent workflow, transforming verification findings into ready-to-implement content updates. This agent receives the verification results and generates specific recommendations that maintain the original content’s style while correcting technical inaccuracies.\nAdapting the multi-agent workflow pattern for your content review use cases\nThe multi-agent workflow pattern can be quickly adapted to any content review scenario without architectural changes. Whether reviewing product documentation, marketing materials, or regulatory compliance documents, the same three agent sequential workflow applies. The system prompts need to be modified for each agent to focus on domain specific elements and potentially swap out the tools or knowledge sources. For instance, while our blog review example uses an http_request tool to fetch the blog content and the AWS Documentation MCP Server for verification, a product catalog review system might use database connector tool to retrieve product information and query inventory management APIs for verification. Similarly, a compliance review system would adjust the scanner agent’s prompt to identify regulatory statements instead of technical claims, connect the verification agent to legal databases rather than technical documentation, and configure the recommendation agent to generate audit-ready reports instead of content updates. The core sequential steps extraction, verification, and recommendation remain constant across all these scenarios, providing a proven pattern that scales from technical blogs to any enterprise content type.We recommend the following changes to customize the solution for other content types.\n\nReplace the values of CONTENT_SCANNER_PROMPT , CONTENT_VERIFICATION_PROMPT , and RECOMMENDATION_PROMPT variables with your custom prompt instructions:\n\npython\nCONTENT_SCANNER_PROMPT = \"\"\"<replace with your prompt instructions>\"\"\"\nCONTENT_VERIFICATION_PROMPT = \"\"\"<replace with your prompt instructions>\"\"\"\nRECOMMENDATION_PROMPT = \"\"\"<replace with your prompt instructions>\"\"\"\n\nUpdate the official documentation MCP server for content verification agent:\n\npython\nproduct_db_mcp_client = MCPClient(\nlambda: stdio_client(StdioServerParameters(\ncommand=\"uvx\", args=[\"<replace with your official documentation MCP server>\"]\n))\n)\n\nAdd appropriate content access tools such as database_query_tool and cms_api_tool for the content scanner agent when http_request tool is insufficient:\n\npython\nscanner_agent = Agent(\nmodel=\"us.anthropic.claude-3-7-sonnet-20250219-v1:0\",\nsystem_prompt=CONTENT_SCANNER_PROMPT,\ntools=[database_query_tool, cms_api_tool] # Replace http_request\n)\n\nThese targeted modifications enable the same architectural pattern to handle any content type while maintaining the proven three-agent workflow structure, ensuring reliability and consistency across different content domains without requiring changes to the core orchestration logic.\nConclusion and next steps\nIn this post, we explained how to architect an AI agent powered content review system using Amazon Bedrock AgentCore and Strands Agents. We demonstrated the multi-agent workflow pattern where specialized agents work together to scan content, verify technical accuracy against authoritative sources, and generate actionable recommendations. Additionally, we discussed how to adapt this multi-agent pattern for different content types by modifying agent prompts, tools, and data sources while maintaining the same architectural framework.\nWe encourage you to test the sample code available on GitHub in your own account to gain first-hand experience with the solution. As next steps, consider starting with a pilot project on a subset of your content, customizing the agent prompts for your specific domain, and integrating appropriate verification sources for your use case. The modular nature of this architecture allows you to iteratively refine each agent’s capabilities as you expand the system to handle your organization’s full content review needs.\n\nAbout the authors\nSarath Krishnan is a Senior Gen AI/ML Specialist Solutions Architect at Amazon Web Services, where he helps enterprise customers design and deploy generative AI and machine learning solutions that deliver measurable business outcomes. He brings deep expertise in Generative AI, Machine Learning, and MLOps to build scalable, secure, and production-ready AI systems.\nSanthosh Kuriakose is an AI/ML Specialist Solutions Architect at Amazon Web Services, where he leverages his expertise in AI and ML to build technology solutions that deliver strategic business outcomes for his customers\nRavi Vijayan is a Customer Solutions Manager with Amazon Web Services. He brings expertise as a Developer, Tech Program Manager, and Client Partner, and is currently focused on helping customers fully realize the potential and benefits of migrating to the cloud and modernizing with Generative AI",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "Amazon AWS ML介绍了一个基于多代理工作流的内容审查解决方案，使用Amazon Bedrock AgentCore和开源SDK Strands Agents构建。该系统通过三个专门代理（内容扫描、验证和推荐）自动化扫描、验证和更新企业内容，解决手动审查的低效问题。研究表明，生成式AI可提升生产力30-50%，减少重复验证任务时间。解决方案适用于博客、产品文档等多种内容类型，开源在GitHub上，支持用户定制代理配置、工具和验证源，帮助企业提高内容准确性和效率，降低操作风险。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "Amazon Bedrock AgentCore",
+        "Strands Agents",
+        "multi-agent workflow",
+        "content review",
+        "AWS documentation MCP server"
+      ]
+    },
+    "analyzed_at": "2026-01-30T04:19:54.467814Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "6a15bb49ecb1445f",
+    "title": "Inside OpenAI’s in-house data agent",
+    "url": "https://openai.com/index/inside-our-in-house-data-agent",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-29T10:00:00Z",
+    "summary": "How OpenAI built an in-house AI data agent that uses GPT-5, Codex, and memory to reason over massive datasets and deliver reliable insights in minutes.",
+    "content": "How OpenAI built an in-house AI data agent that uses GPT-5, Codex, and memory to reason over massive datasets and deliver reliable insights in minutes.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI构建了一个内部的AI数据代理，该代理集成GPT-5和Codex大语言模型，并结合内存技术，以实现对大规模数据集的快速推理。它能在几分钟内生成可靠见解，显著提升数据处理效率和准确性。这一技术展示了OpenAI在AI模型整合方面的创新，为内部研发提供了高效工具，可能影响AI行业在智能数据分析应用的发展。关键功能包括利用先进自然语言处理和代码生成能力，优化复杂查询流程。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "GPT-5",
+        "Codex",
+        "AI data agent",
+        "memory"
+      ]
+    },
+    "analyzed_at": "2026-01-30T04:19:54.059154Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "db33a82befb3747a",
+    "title": "Taisei Corporation shapes the next generation of talent with ChatGPT",
+    "url": "https://openai.com/index/taisei",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-29T00:00:00Z",
+    "summary": "Taisei Corporation uses ChatGPT Enterprise to support HR-led talent development and scale generative AI across its global construction business.",
+    "content": "Taisei Corporation uses ChatGPT Enterprise to support HR-led talent development and scale generative AI across its global construction business.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Taisei Corporation（大成建设公司）使用ChatGPT Enterprise来支持其人力资源部门主导的人才发展计划，并在其全球建筑业务中扩展生成式人工智能的应用。这一举措的核心是借助AI技术优化人才培养流程，提升员工技能和业务效率。为什么重要：它展示了生成式AI在传统建筑行业中的实际应用潜力，有助于推动行业数字化转型，并为其他企业提供参考案例。有什么影响：可能激励更多建筑公司采用类似AI工具，加速AI技术在商业场景中的普及，从而提升整个行业的人才竞争力和创新水平。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "Taisei Corporation",
+        "ChatGPT Enterprise",
+        "generative AI",
+        "talent development",
+        "construction business"
+      ]
+    },
+    "analyzed_at": "2026-01-30T04:19:44.997699Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "6f26b8f0647ab644",
+    "title": "Retiring GPT-4o, GPT-4.1, GPT-4.1 mini, and OpenAI o4-mini in ChatGPT",
+    "url": "https://openai.com/index/retiring-gpt-4o-and-older-models",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-29T00:00:00Z",
+    "summary": "On February 13, 2026, alongside the previously announced retirement⁠ of GPT‑5 (Instant, Thinking, and Pro), we will retire GPT‑4o, GPT‑4.1, GPT‑4.1 mini, and OpenAI o4-mini from ChatGPT. In the API, there are no changes at this time.",
+    "content": "On February 13, 2026, alongside the previously announced retirement⁠ of GPT‑5 (Instant, Thinking, and Pro), we will retire GPT‑4o, GPT‑4.1, GPT‑4.1 mini, and OpenAI o4-mini from ChatGPT. In the API, there are no changes at this time.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布，将于2026年2月13日在ChatGPT中淘汰GPT-4o、GPT-4.1、GPT-4.1 mini和OpenAI o4-mini模型，这一措施与此前公布的GPT-5（Instant、Thinking和Pro版本）淘汰计划同步进行。此决策旨在推动大语言模型的技术更新，以引入更先进的AI功能，优化ChatGPT的用户体验和性能。尽管在ChatGPT中淘汰这些旧模型，但API服务目前保持不变，这确保了开发者生态的稳定，同时引导用户向新一代模型过渡。此举反映了OpenAI对产品生命周期的管理策略，以及AI行业快速迭代的趋势，可能影响用户使用习惯，但长期看有助于技术进步和服务提升。",
+      "category": "LLM",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "GPT-4o",
+        "GPT-4.1",
+        "ChatGPT",
+        "GPT-5"
+      ]
+    },
+    "analyzed_at": "2026-01-30T04:19:53.401736Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

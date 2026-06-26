@@ -1,0 +1,176 @@
+[
+  {
+    "id": "64f66092cc825c79",
+    "title": "Stargate Community",
+    "url": "https://openai.com/index/stargate-community",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-20T19:00:00Z",
+    "summary": "Stargate Community plans detail a community-first approach to AI infrastructure, using locally tailored plans shaped by community input, energy needs, and workforce priorities.",
+    "content": "Stargate Community plans detail a community-first approach to AI infrastructure, using locally tailored plans shaped by community input, energy needs, and workforce priorities.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 推出了 Stargate Community 计划，详细描述了一个以社区为先的 AI 基础设施方法。该计划通过根据社区输入、能源需求和劳动力优先级来定制本地化方案，旨在促进 AI 技术的民主化和可持续发展。关键点包括强调用户驱动的策略、优化资源利用，以及增强社区参与度。这一举措可能影响 AI 基础设施的部署模式，推动技术更贴近实际应用场景，并可能带动行业合作与创新，提升整体效率和适应性。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "Stargate Community",
+        "AI 基础设施",
+        "社区驱动",
+        "本地化方案"
+      ]
+    },
+    "analyzed_at": "2026-01-21T03:23:06.487244Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ab7bdc00c9c9801d",
+    "title": "Introducing multimodal retrieval for Amazon Bedrock Knowledge Bases",
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-multimodal-retrieval-for-amazon-bedrock-knowledge-bases/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-20T18:22:25Z",
+    "summary": "In this post, we'll guide you through building multimodal RAG applications. You'll learn how multimodal knowledge bases work, how to choose the right processing strategy based on your content type, and how to configure and implement multimodal retrieval using both the console and code examples.",
+    "content": "We are excited to announce the general availability of multimodal retrieval for Amazon Bedrock Knowledge Bases . This new capability adds native support for video and audio content, on top of text and images. With it you can build Retrieval Augmented Generation (RAG) applications that can search and retrieve information across text, images, audio, and video—all within a fully managed service.\nModern enterprises store valuable information in multiple formats. Product documentation includes diagrams and screenshots, training materials contain instructional videos, and customer insights are captured in recorded meetings. Until now, building artificial intelligence (AI) applications that could effectively search across these content types required complex custom infrastructure and significant engineering effort.\nPreviously, Bedrock Knowledge Bases used text-based embedding models for retrieval. While it supported text documents and images, images had to be processed using foundation models (FM) or Bedrock Data Automation to generate text descriptions—a text-first approach that lost visual context and prevented visual search capabilities. Video and audio required custom preprocessing external pipelines. Now, with multimodal embeddings, the retriever natively supports text, images, audio, and video within a single embedding model.\nWith multimodal retrieval in Bedrock Knowledge Bases, you can now ingest, index, and retrieve information from text, images, video, and audio using a single, unified workflow. Content is encoded using multimodal embeddings that preserve visual and audio context, enabling your applications to find relevant information across media types. You can even search using an image to find visually similar content or locate specific scenes in videos.\nIn this post, we’ll guide you through building multimodal RAG applications. You’ll learn how multimodal knowledge bases work, how to choose the right processing strategy based on your content type, and how to configure and implement multimodal retrieval using both the console and code examples.\nUnderstanding multimodal knowledge bases\nAmazon Bedrock Knowledge Bases automates the complete RAG workflow: ingesting content from your data sources, parsing and chunking it into searchable segments, converting chunks to vector embeddings, and storing them in a vector database. During retrieval, user queries are embedded and matched against stored vectors to find semantically similar content, which augments the prompt sent to your foundation model.\nWith multimodal retrieval, this workflow now handles images, video, and audio alongside text through two processing approaches. Amazon Nova Multimodal Embeddings encodes content natively into a unified vector space, for cross-modal retrieval where you can query with text and retrieve videos, or search using images to find visual content.\nAlternatively, Bedrock Data Automation converts multimedia into rich text descriptions and transcripts before embedding, providing high-accuracy retrieval over spoken content. Your choice depends on whether visual context or speech precision matters most for your use case.\n\nWe explore each of these approaches in this post.\nAmazon Nova Multimodal Embeddings\nAmazon Nova Multimodal Embeddings is the first unified embedding model that encodes text, documents, images, video, and audio into a single shared vector space. Content is processed natively without text conversion. The model supports up to 8,172 tokens for text and 30 seconds for video/audio segments, handles over 200 languages, and offers four embedding dimensions (with 3072-dimension as default, 1,024, 384, 256) to balance accuracy and efficiency. Bedrock Knowledge Bases segments video and audio automatically into configurable chunks (5-30 seconds), with each segment independently embedded.\n\nFor video content, Nova embeddings capture visual elements—scenes, objects, motion, and actions—as well as audio characteristics like music, sounds, and ambient noise. For videos where spoken dialogue is important to your use case, you can use Bedrock Data Automation to extract transcripts alongside visual descriptions. For standalone audio files, Nova processes acoustic features such as music, environmental sounds, and audio patterns. The cross-modal capability enables use cases such as describing a visual scene in text to retrieve matching videos, upload a reference image to find similar products, or locate specific actions in footage—all without pre-existing text descriptions.\nBest for: Product catalogs, visual search, manufacturing videos, sports footage, security cameras, and scenarios where visual content drives the use case.\nAmazon Bedrock Data Automation\nBedrock Data Automation takes a different approach by converting multimedia content into rich textual representations before embedding. For images, it generates detailed descriptions including objects, scenes, text within images, and spatial relationships. For video, it produces scene-by-scene summaries, identifies key visual elements, and extracts the on-screen text. For audio and video with speech, Bedrock Data Automation provides accurate transcriptions with timestamps and speaker identification, along with segment summaries that capture the key points discussed.\n\nOnce converted to text, this content is chunked and embedded using text embedding models like Amazon Titan Text Embeddings or Amazon Nova Multimodal Embeddings. This text-first approach enables highly accurate question-answering over spoken content—when users ask about specific statements made in a meeting or topics discussed in a podcast, the system searches through precise transcripts rather than audio embeddings. This makes it particularly valuable for compliance scenarios where you need exact quotes and verbatim records for audit trails, meeting analysis, customer support call mining, and use cases where you need to retrieve and verify specific spoken information.\nBest for: Meetings, webinars, interviews, podcasts, training videos, support calls, and scenarios requiring precise retrieval of specific statements or discussions.\nUse case scenario: Visual product search for e-commerce\nMultimodal knowledge bases can be used for applications ranging from enhanced customer experiences and employee training to maintenance operations and legal analysis. Traditional e-commerce search relies on text queries, requiring customers to articulate what they’re looking for with the right keywords. This breaks down when they’ve seen a product elsewhere, have a photo of something they like, or want to find items similar to what appears in a video. Now, customers can search your product catalog using text descriptions, upload an image of an item they’ve photographed, or reference a scene from a video to find matching products. The system retrieves visually similar items by comparing the embedded representation of their query—whether text, image, or video—against the multimodal embeddings of your product inventory. For this scenario, Amazon Nova Multimodal Embeddings is the ideal choice. Product discovery is fundamentally visual—customers care about colors, styles, shapes, and visual details. By encoding your product images and videos into the Nova unified vector space, the system matches based on visual similarity without relying on text descriptions that might miss subtle visual characteristics. While a complete recommendation system would incorporate customer preferences, purchase history, and inventory availability, retrieval from a multimodal knowledge base provides the foundational capability: finding visually relevant products regardless of how customers choose to search.\nConsole walkthrough\nIn the following section, we walk through the high-level steps to set up and test a multimodal knowledge base for our e-commerce product search example. We create a knowledge base containing smartphone product images and videos, then demonstrate how customers can search using text descriptions, uploaded images, or video references. The GitHub repository provides a guided notebook that you can follow to deploy this example in your account.\nPrerequisites\nBefore you get started, make sure that you have the following prerequisites:\n\nAn AWS Account with appropriate service access\nAn AWS Identity and Access Management (IAM) role with the appropriate permissions to access Amazon Bedrock and Amazon Simple Storage Service (Amazon S3)\n\nProvide the knowledge base details and data source type\nStart by opening the Amazon Bedrock console and creating a new knowledge base . Provide a descriptive name for your knowledge base and select your data source type—in this case, Amazon S3 where your product images and videos are stored.\n\nConfigure data source\nConnect your S3 bucket containing product images and videos. For the parsing strategy, select Amazon Bedrock default parser . Since we’re using Nova Multimodal Embeddings, the images and videos are processed natively and embedded directly into the unified vector space, preserving their visual characteristics without conversion to text.\n\nConfigure data storage and processing\nSelect Amazon Nova Multimodal Embeddings as your embedding model. This unified embedding model encodes both your product images and customer queries into the same vector space, enabling cross-modal retrieval where text queries can retrieve images and image queries can find visually similar products. For this example, we use Amazon S3 Vectors as the vector store (you could optionally use other available vector stores), which provides cost-effective and durable storage optimized for large-scale vector data sets while maintaining sub-second query performance. You also need to configure the multimodal storage destination by specifying an S3 location. Knowledge Bases uses this location to store extracted images and other media from your data source. When users query the knowledge base, relevant media is retrieved from this storage.\n\nReview and create\nReview your configuration settings including the knowledge base details, data source configuration, embedding model selection—we’re using Amazon Nova Multimodal Embeddings v1 with 3072 vector dimensions (higher dimensions provide richer representations; you can use lower dimensions like 1,024, 384, or 256 to optimize for storage and cost) —and vector store setup (Amazon S3 Vectors). Once everything looks correct, create your knowledge base.\nCreate an ingestion job\nOnce created, initiate the sync process to ingest your product catalog. The knowledge base processes each image and video, generates embeddings and stores them in the managed vector database. Monitor the sync status to confirm the documents are successfully indexed.\n\nTest the knowledge base using text as input in your prompt\nWith your knowledge base ready, test it using a text query in the console. Search with product descriptions like “A metallic phone cover” (or anything equivalent that could be relevant for your products media) to verify that text-based retrieval works correctly across your catalog.\n\nTest the knowledge base using a reference image and retrieve different modalities\nNow for the powerful part—visual search. Upload a reference image of a product you want to find. For example, imagine you saw a cell phone cover on another website and want to find similar items in your catalog. Simply upload the image without additional text prompt.\n\nThe multimodal knowledge base extracts visual features from your uploaded image and retrieves visually similar products from your catalog. As you can see in the results, the system returns phone covers with similar design patterns, colors, or visual characteristics. Notice the metadata associated with each chunk in the Source details panel. The x-amz-bedrock-kb-chunk-start-time-in-millis and x-amz-bedrock-kb-chunk-end-time-in-millis fields indicate the exact temporal location of this segment within the source video. When building applications programmatically, you can use these timestamps to extract and display the specific video segment that matched the query, enabling features like “jump to relevant moment” or clip generation directly from your source videos. This cross-modal capability transforms the shopping experience—customers no longer need to describe what they’re looking for with words; they can show you.\nTest the knowledge base using a reference image and retrieve different modalities using Bedrock Data Automation\nNow we look at what the results would look like if you configured Bedrock Data Automation parsing during the data source setup. In the following screenshot, notice the transcript section in the Source details panel.\n\nFor each retrieved video chunk, Bedrock Data Automation automatically generates a detailed text description—in this example, describing the smartphone’s metallic rose gold finish, studio lighting, and visual characteristics. This transcript appears directly in the test window alongside the video, providing rich textual context. You get both visual similarities matching from the multimodal embeddings and detailed product descriptions that can answer specific questions about features, colors, materials, and other attributes visible in the video.\nClean-up\nTo clean up your resources, complete the following steps, starting with deleting the knowledge base:\n\nOn the Amazon Bedrock console, choose Knowledge Bases\nSelect your Knowledge Base and note both the IAM service role name and S3 Vector index ARN\nChoose Delete and confirm\n\nTo delete the S3 Vector as a vector store, use the following AWS Command Line Interface (AWS CLI) commands:\n\naws s3vectors delete-index --vector-bucket-name YOUR_VECTOR_BUCKET_NAME --index-name YOUR_INDEX_NAME --region YOUR_REGION\naws s3vectors delete-vector-bucket --vector-bucket-name YOUR_VECTOR_BUCKET_NAME --region YOUR_REGION\n\nOn the IAM console, find the role noted earlier\nSelect and delete the role\n\nTo delete the sample dataset:\n\nOn the Amazon S3 console, find your S3 bucket\nSelect and delete the files you uploaded for this tutorial\n\nConclusion\nMultimodal retrieval for Amazon Bedrock Knowledge Bases removes the complexity of building RAG applications that span text, images, video, and audio. With native support for video and audio content, you can now build comprehensive knowledge bases that unlock insights from your enterprise data—not just text documents.\nThe choice between Amazon Nova Multimodal Embeddings and Bedrock Data Automation gives you flexibility to optimize for your specific content. The Nova unified vector space enables cross-modal retrieval for visual-driven use cases, while the Bedrock Data Automation text-first approach delivers precise transcription-based retrieval for speech-heavy content. Both approaches integrate seamlessly into the same fully managed workflow, alleviating the need for custom preprocessing pipelines.\nAvailability\nRegion availability is dependent on the features selected for multimodal support, please refer to the  documentation  for details.\nNext steps\nGet started with multimodal retrieval today:\n\nExplore the documentation : Review the Amazon Bedrock Knowledge Bases documentation  and  Amazon Nova User Guide for additional technical details.\nExperiment with code examples : Check out the Amazon Bedrock samples repository for hands-on notebooks demonstrating multimodal retrieval.\nLearn more about Nova : Read the Amazon Nova Multimodal Embeddings announcement for deeper technical insights.\n\nAbout the authors\nDani Mitchell is a Generative AI Specialist Solutions Architect at Amazon Web Services (AWS). He is focused on helping accelerate enterprises across the world on their generative AI journeys with Amazon Bedrock and Bedrock AgentCore.\nPallavi Nargund is a Principal Solutions Architect at AWS. She is a generative AI lead for US Greenfield and leads the AWS for Legal Tech team. She is passionate about women in technology and is a core member of Women in AI/ML at Amazon. She speaks at internal and external conferences such as AWS re:Invent, AWS Summits, and webinars. Pallavi holds a Bachelor’s of Engineering from the University of Pune, India. She lives in Edison, New Jersey, with her husband, two girls, and her two pups.\nJean-Pierre Dodel is a Principal Product Manager for Amazon Bedrock, Amazon Kendra, and Amazon Quick Index. He brings 15 years of Enterprise Search and AI/ML experience to the team, with prior work at Autonomy, HP, and search startups before joining Amazon 8 years ago. JP is currently focusing on innovations for multimodal RAG, agentic retrieval, and structured RAG.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "亚马逊AWS宣布其Amazon Bedrock知识库的多模态检索功能正式可用，新增对视频和音频内容的原生支持，结合原有文本和图像能力。这一功能使用户能够通过完全托管服务构建检索增强生成（RAG）应用程序，实现跨媒体类型的信息搜索和检索，解决了企业处理多格式数据时需定制基础设施的痛点。关键改进包括引入Amazon Nova Multimodal Embeddings统一嵌入模型，直接编码内容到共享向量空间，支持视觉搜索和跨模态检索；同时提供Bedrock Data Automation方法，将多媒体转换为文本描述以确保语音内容精确检索。该功能提升了应用开发效率，适用于电子商务产品搜索、会议分析等场景，降低技术门槛。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Amazon Bedrock Knowledge Bases",
+        "multimodal retrieval",
+        "Amazon Nova Multimodal Embeddings",
+        "Bedrock Data Automation",
+        "RAG"
+      ]
+    },
+    "analyzed_at": "2026-01-21T03:22:40.439693Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "bf4a9258178f57bd",
+    "title": "Multimodal reinforcement learning with agentic verifier for AI agents",
+    "url": "https://www.microsoft.com/en-us/research/blog/multimodal-reinforcement-learning-with-agentic-verifier-for-ai-agents/",
+    "source_name": "Microsoft Research",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-20T17:00:00Z",
+    "summary": "Argos improves multimodal RL by evaluating whether an agent’s reasoning aligns with what it observes over time. The approach reduces visual hallucinations and produces more reliable, data-efficient agents for real-world applications.\nThe post Multimodal reinforcement learning with agentic verifier for AI agents appeared first on Microsoft Research .",
+    "content": "At a glance\n\nToday’s multimodal AI systems can give answers that sound right but may not be grounded in what they actually observe over time, leading to unpredictable errors and safety risks in real-world settings.\n\nArgos is a verification framework for multimodal reinforcement learning that trains models by rewarding not just correct answers, but correct answers grounded in visual and temporal evidence, using automated verification rather than human labeling. It selects the appropriate specialized tools for each answer based on what needs to be verified. \n\nModels trained with Argos show stronger spatial reasoning, far fewer visual hallucinations, more stable learning dynamics, and better performance on robotics and real-world tasks while requiring fewer training samples.\n\nOver the past few years, AI systems have become much better at discerning images, generating language, and performing tasks within physical and virtual environments. Yet they still fail in ways that are hard to predict and even harder to fix. A robot might try to grasp a tool when the object is visibly blocked, or a visual assistant integrated into smart glasses might describe objects that aren’t actually present.\n\nThese errors often arise because today’s multimodal agents are trained to generate outputs that are plausible rather than grounded in the actual information they receive from their environment. As a result, a model’s output can seem correct while relying on incorrect information. As AI systems are increasingly used to navigate 3D spaces and make decisions in real-world settings, this gap can be a safety and reliability concern.\n\nTo tackle this challenge, we posed the question: How can we train AI agents to generate correct answers and take appropriate actions for the right reasons so that their behavior is reliable even as the environment or tasks change?\n\nArgos represents a novel answer to this challenge. It’s an agentic verification framework designed to improve the reliability of reinforcement learning in multimodal models. Reinforcement learning is a training method where AI models learn by receiving rewards for desired behaviors and penalties for undesired ones, gradually improving their performance through trial and error.\n\nRather than rewarding only correct behaviors, Argos evaluates how those behaviors were produced. It draws on a pool of larger, more capable teacher models and rule-based checks to verify two things: first, that the objects and events a model references actually exist in its input, and second, that the model’s reasoning aligns with what it observes. Argos rewards the model when both conditions are met. In practice, these rewards help curate high-quality training data and guide the model’s further training.\n\nHow Argos works\n\nArgos functions as a verification layer on top of an existing multimodal model. Given an image or video, a task or query, and information about the model’s reasoning and output, Argos identifies where the model indicates objects are located in the image, when it indicates events occur in a video, and what action or answer it produces.\n\nArgos then applies specialized tools tailored to the specific content to evaluate and score three aspects of the model’s output. It checks whether the answer is correct, whether referenced objects and events appear at the indicated locations and times, and whether the reasoning is consistent with the visual evidence and the answer (Figure 1).\n\nThese scores are combined using a gated aggregation function, a method that dynamically adjusts the importance of different scores. It emphasizes reasoning checks only when the final output is correct. This design prevents unreliable feedback from dominating training and produces a stable reward signal for reinforcement learning.\n\nFigure 1. Argos selects different specialized tools to verify and score the accuracy of referenced points and events in the agent’s reasoning.\n\nUsing Argos to curate data for supervised fine-tuning\n\nArgos also helps curate high-quality training data to provide the model with a strong foundation in grounded reasoning. Before the reinforcement learning stage begins, Argos uses a multi-stage process to generate data that is explicitly tied to visual locations and time intervals.\n\nIn the first stage, Argos identifies the objects, actions, and events that are relevant to a task and links them to specific locations in images or specific moments in videos. These references are overlaid on images and selected video frames. Next, a reasoning model generates step-by-step explanations that refer to these visual locations and time spans.\n\nFinally, Argos evaluates each generated example for accuracy and visual grounding, filtering out low-quality training data and retaining only data that is both correct and well-grounded in visual input. The resulting dataset is then used in an initial training phase, where the model learns to generate reasoning steps before producing its final output. This process is illustrated in Figure 2.\n\nFigure 2. Argos generates step-by-step reasoning grounded in image locations and video timestamps then filters out low-quality training data.\n\nEvaluation\n\nBuilding on this foundation in grounded reasoning, we further trained the model using reinforcement learning guided by Argos and evaluated its performance across a range of benchmarks. On spatial reasoning tasks, the Argos-trained model outperformed both the base model Qwen2.5-VL-7B and the stronger Video-R1 baseline across challenging 3D scenarios and multi-view tasks. Models trained with Argos also showed a substantial reduction of hallucinations compared with both standard chain-of-thought prompting and reinforcement learning baselines.\n\nFinally, we evaluated the model in robotics and other real-world task settings, focusing on high-level planning and fine-grained control. Models trained with Argos performed better on complex, multi-step tasks. Notably, these improvements were achieved using fewer training samples than existing approaches, highlighting the importance of reward design in producing more capable and data-efficient agents. Figure 3 illustrates some of these findings.\n\nFigure 3. Performance of Argos compared with baseline models on the task of visual hallucination detection (left) and embodied task planning and completion (right). \n\nHow Argos shapes reinforcement learning\n\nTo understand how Argos affects learning, we took the same vision-language model that had been trained on our curated dataset and fine-tuned it using reinforcement learning in two different ways. In one approach, Argos was an agentic verifier, checking the correctness of outputs and the quality of reasoning. In the other, the model received feedback only on whether its answers were correct.\n\nWe evaluated both versions on 1,500 samples from a new dataset and tracked their performance throughout the learning process (Figure 4). Although they started at similar levels, the model without Argos quickly got worse. Its accuracy steadily declined, and it increasingly gave answers that ignored what was in the videos. It learned to game the system by producing answers that seemed correct without grounding them in visual evidence.\n\nThe model trained with Argos showed the opposite pattern. Accuracy improved steadily, and the model became better at linking its reasoning to what appeared in the videos. This difference highlights the value of verification: when training rewards both correct outputs and sound reasoning based on visual and temporal evidence, models learn to be more reliable rather than simply finding shortcuts to high scores.\n\nFigure 4. Comparison of response accuracy changes with and without Argos across two model versions (left) and differences in visual grounding accuracy over training for both versions (right).\n\nPotential impact and looking forward\n\nThis research points toward a different way of building AI agents for real-world applications. Rather than fixing errors after they occur, it focuses on training agents to systematically anchor their reasoning in what they actually receive as input throughout the training process.\n\nThe potential applications span many domains. A visual assistant for a self-driving car that verifies what’s actually in an image is less likely to report phantom obstacles. A system that automates digital tasks and checks each action against what’s displayed on the screen is less likely to click the wrong button.\n\nAs AI systems move beyond research labs into homes, factories, and offices, reliable reasoning becomes essential for safety and trust. Argos represents an early example of verification systems that evolve alongside the AI models they supervise. Future verifiers could be tailored for specific fields like medical imaging, industrial simulations, and business analytics. As more advanced models and richer data sources become available, researchers can use them to improve these verification systems, providing even better guidance during training and further reducing hallucinations.\n\nWe hope that this research helps move the field toward AI systems that are both capable and interpretable: agents that can explain their decisions, point to the evidence behind them, and be trained to adhere to real-world requirements and values.\n\nOpens in a new tab The post Multimodal reinforcement learning with agentic verifier for AI agents appeared first on Microsoft Research .",
+    "weight": 0.9,
+    "fetch_type": "rss",
+    "company": "microsoft",
+    "light_analysis": {
+      "summary": "微软研究院推出Argos验证框架，一种针对多模态强化学习的代理验证系统，旨在解决AI代理在真实世界环境中因输出不基于实际观察而导致的不可预测错误和安全风险。Argos通过奖励基于视觉和时序证据的正确答案，并验证对象存在和推理一致性，使用更大的教师模型和基于规则的检查来改进训练过程。该框架采用门控聚合函数动态调整验证分数，并通过多阶段过程生成高质量训练数据，减少幻觉。评估显示，Argos训练的模型在空间推理、减少视觉幻觉、稳定学习动态方面表现更优，并在机器人任务中使用更少样本实现更好性能，推动自动驾驶、工业自动化等领域的可靠AI应用。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "Argos",
+        "Microsoft Research",
+        "multimodal reinforcement learning",
+        "agentic verifier",
+        "visual hallucinations"
+      ]
+    },
+    "analyzed_at": "2026-01-21T03:22:39.079261Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "b5479ebcde18607a",
+    "title": "Cisco and OpenAI redefine enterprise engineering with AI agents",
+    "url": "https://openai.com/index/cisco",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-20T11:00:00Z",
+    "summary": "Cisco and OpenAI redefine enterprise engineering with Codex, an AI software agent embedded in workflows to speed builds, automate defect fixes, and enable AI-native development.",
+    "content": "Cisco and OpenAI redefine enterprise engineering with Codex, an AI software agent embedded in workflows to speed builds, automate defect fixes, and enable AI-native development.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "思科与 OpenAI 合作，通过推出名为 Codex 的 AI 软件代理，重新定义企业工程流程。该代理嵌入工作流程中，旨在加速软件构建、自动化缺陷修复，并促进 AI 原生开发。这一举措结合了思科的企业工程专长和 OpenAI 的 AI 技术，以提升开发效率、减少错误，并推动企业软件向更智能化和自动化方向演进，可能对行业产生深远影响，改变传统开发模式。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "思科",
+        "OpenAI",
+        "Codex",
+        "AI 软件代理",
+        "企业工程"
+      ]
+    },
+    "analyzed_at": "2026-01-21T03:22:49.009452Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "89b0ac10d29b747d",
+    "title": "ServiceNow powers actionable enterprise AI with OpenAI",
+    "url": "https://openai.com/index/servicenow-powers-actionable-enterprise-ai-with-openai",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-20T05:45:00Z",
+    "summary": "ServiceNow expands access to OpenAI frontier models to power AI-driven enterprise workflows, summarization, search, and voice across the ServiceNow Platform.",
+    "content": "ServiceNow expands access to OpenAI frontier models to power AI-driven enterprise workflows, summarization, search, and voice across the ServiceNow Platform.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "ServiceNow扩展了对OpenAI前沿模型的访问，以驱动企业工作流程中的AI应用，包括摘要生成、搜索优化和语音交互。这一合作使ServiceNow平台能够整合先进的AI技术，帮助企业自动化任务、提高生产力和增强用户体验。通过利用OpenAI的模型，ServiceNow提供更智能的解决方案，支持企业数字化转型，这突出了企业AI领域的进展和ServiceNow在赋能企业智能化方面的重要作用。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "ServiceNow",
+        "OpenAI",
+        "OpenAI frontier models",
+        "ServiceNow Platform",
+        "AI-driven workflows"
+      ]
+    },
+    "analyzed_at": "2026-01-21T03:22:40.661315Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "5641131fd19fa6ae",
+    "title": "Our approach to age prediction",
+    "url": "https://openai.com/index/our-approach-to-age-prediction",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-20T00:00:00Z",
+    "summary": "ChatGPT is rolling out age prediction to estimate if accounts are under or over 18, applying safeguards for teens and refining accuracy over time.",
+    "content": "ChatGPT is rolling out age prediction to estimate if accounts are under or over 18, applying safeguards for teens and refining accuracy over time.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 宣布为 ChatGPT 引入年龄预测功能，用于评估账户是否属于18岁以下用户。此功能旨在实施青少年保护措施，提高平台安全性，防止未成年人接触不当内容。随着时间的推移，OpenAI 将精炼预测准确性，不断优化技术细节，以增强用户隐私和伦理合规。该更新是 ChatGPT 在内容安全方面的重要改进，反映了对人工智能产品社会责任的重视，可能影响年龄限制政策和行业标准。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "年龄预测",
+        "保护措施",
+        "准确性"
+      ]
+    },
+    "analyzed_at": "2026-01-21T03:22:46.135882Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

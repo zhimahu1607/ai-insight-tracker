@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-02",
+  "summary": "今日共收录 327 篇论文，3 条热点资讯。热门领域：cs.CV、cs.LG、cs.CL、cs.AI。热门关键词：无。",
+  "category_summaries": {},
+  "news_summary": "",
+  "stats": {
+    "total_papers": 327,
+    "papers_by_category": {
+      "cs.AI": 36,
+      "cs.CL": 61,
+      "cs.LG": 86,
+      "cs.CV": 144
+    },
+    "total_news": 3,
+    "news_by_category": {
+      "ai": 3
+    },
+    "top_keywords": []
+  },
+  "generated_at": "2026-04-02T04:07:11.848812"
+}

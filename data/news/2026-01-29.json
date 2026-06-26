@@ -1,0 +1,118 @@
+[
+  {
+    "id": "b962872038b81871",
+    "title": "The next chapter for AI in the EU",
+    "url": "https://openai.com/index/the-next-chapter-for-ai-in-the-eu",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-28T01:00:00Z",
+    "summary": "OpenAI launches the EU Economic Blueprint 2.0 with new data, partnerships, and initiatives to accelerate AI adoption, skills, and growth across Europe.",
+    "content": "OpenAI launches the EU Economic Blueprint 2.0 with new data, partnerships, and initiatives to accelerate AI adoption, skills, and growth across Europe.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了欧盟经济蓝图2.0，该版本包含新数据、合作伙伴关系和多项倡议，旨在加速人工智能在欧洲的采用、技能提升和经济增长。OpenAI作为人工智能技术的领先公司，通过此蓝图推动欧洲在AI领域的广泛采用，其重要性在于AI是当前全球技术发展的核心，欧洲加强AI应用有助于增强区域创新能力和经济竞争力。影响方面，蓝图的实施可能加速欧洲AI生态系统的完善，促进企业数字化转型，提高劳动力技能水平，从而为长期经济增长奠定基础，并应对未来技术挑战。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "EU Economic Blueprint 2.0",
+        "AI adoption",
+        "partnerships",
+        "Europe"
+      ]
+    },
+    "analyzed_at": "2026-01-29T04:05:24.431649Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "6a8d895b91c1509f",
+    "title": "EMEA Youth & Wellbeing Grant",
+    "url": "https://openai.com/index/emea-youth-and-wellbeing-grant",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-28T01:00:00Z",
+    "summary": "Apply for the EMEA Youth & Wellbeing Grant, a €500,000 program funding NGOs and researchers advancing youth safety and wellbeing in the age of AI.",
+    "content": "Apply for the EMEA Youth & Wellbeing Grant, a €500,000 program funding NGOs and researchers advancing youth safety and wellbeing in the age of AI.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布推出EMEA Youth & Wellbeing Grant，这是一个€500,000的资助计划，旨在资助非政府组织（NGO）和研究人员，在人工智能时代推进青年安全和福祉。该计划通过提供资金支持，帮助应对AI技术可能带来的挑战，如数据隐私、在线安全等问题，促进青年在AI发展中的福祉。此举反映了OpenAI在AI社会责任方面的努力，可能推动更多相关研究和项目，对行业和社会产生积极影响。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "EMEA Youth & Wellbeing Grant",
+        "AI",
+        "青年安全",
+        "福祉"
+      ]
+    },
+    "analyzed_at": "2026-01-29T04:04:28.662742Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ce43bcebacd25957",
+    "title": "Keeping your data safe when an AI agent clicks a link",
+    "url": "https://openai.com/index/ai-agent-link-safety",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-28T00:00:00Z",
+    "summary": "Learn how OpenAI protects user data when AI agents open links, preventing URL-based data exfiltration and prompt injection with built-in safeguards.",
+    "content": "Learn how OpenAI protects user data when AI agents open links, preventing URL-based data exfiltration and prompt injection with built-in safeguards.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI介绍了其AI代理在点击链接时如何保护用户数据的安全措施。通过内置安全防护机制，专门防止基于URL的数据泄露和提示注入攻击。这一举措对于AI系统的安全性至关重要，因为它解决了在AI代理与外部链接交互时可能出现的风险，确保用户隐私信息不会被恶意利用或不当泄露。这些安全措施有助于增强用户信任，提升AI代理在实际应用中的可靠性和数据保护能力。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "AI代理",
+        "数据泄露",
+        "提示注入",
+        "安全防护"
+      ]
+    },
+    "analyzed_at": "2026-01-29T04:04:31.239946Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "f3f47538cb058695",
+    "title": "Powering tax donations with AI powered personalized recommendations",
+    "url": "https://openai.com/index/trustbank",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-27T00:00:00Z",
+    "summary": "TRUSTBANK partnered with Recursive to build Choice AI using OpenAI models, delivering personalized, conversational recommendations that simplify Furusato Nozei gift discovery. A multi-agent system helps donors navigate thousands of options and find gifts that match their preferences.",
+    "content": "TRUSTBANK partnered with Recursive to build Choice AI using OpenAI models, delivering personalized, conversational recommendations that simplify Furusato Nozei gift discovery. A multi-agent system helps donors navigate thousands of options and find gifts that match their preferences.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "TRUSTBANK 与 Recursive 合作，利用 OpenAI 模型构建了名为 Choice AI 的系统。该系统通过个性化的对话式推荐，简化了 Furusato Nozei（故乡纳税）礼物的发现过程。采用多智能体系统帮助捐赠者浏览数千个选项，快速匹配个人偏好。这项应用将 AI 技术整合到税收捐赠领域，提高了捐赠效率和用户体验，展示了 AI 在个性化推荐和复杂决策辅助方面的潜力。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "TRUSTBANK",
+        "Recursive",
+        "Choice AI",
+        "OpenAI",
+        "多智能体系统"
+      ]
+    },
+    "analyzed_at": "2026-01-29T04:05:06.715926Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

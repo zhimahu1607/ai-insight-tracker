@@ -1,0 +1,29 @@
+{
+  "date": "2026-06-03",
+  "summary": "今日AI领域呈现两大主线：模型能力向通用生产力平台深化，以及行业垂直场景的落地加速。OpenAI推出全新Codex插件与站点，并发布《知识工作的下一时代》报告，标志着其从编程辅助工具向面向分析师、营销人员等角色的通用生产力平台转型，同时呼吁全球建立青少年AI安全国际机构，平衡创新与风险。Amazon AWS发布Nova系列技术更新：Nova Forge提供超参数优化指南，有效避免灾难性遗忘并提升领域定制性能；Nova 2 Lite通过Bedrock实现零样本物体检测，以极低成本拓展视觉AI边界。行业应用方面，Travelers基于OpenAI构建全天候AI索赔助手，Baz结合Amazon Bedrock与AgentCore将自动化代码审查缺陷减少50%，显著缩短合并周期。跨领域来看，API和云服务正在成为连接基础模型与业务场景的桥梁，而安全治理与性能优化同步推进，反映出AI产业正从“能用”走向“好用”与“可控”。",
+  "category_summaries": {},
+  "news_summary": "### 今日AI领域深度报告\n\n今日AI领域动态集中于产品升级与应用深化，OpenAI与Amazon AWS公布了多项关键进展。\n\n**模型与平台**方面，OpenAI发布了全新的Codex插件与站点，并发布《知识工作的下一时代》报告，推动其从编程辅助工具向面向分析师、营销人员等角色的通用生产力平台转型。Amazon AWS则发布了Amazon Nova系列的技术更新：Nova Forge提供了超参数优化指南，旨在避免灾难性遗忘并提升领域定制性能；Nova 2 Lite则通过Bedrock实现了零样本物体检测，以极低成本拓展了视觉AI的应用边界。\n\n**行业应用**方面，生成式AI在垂直场景的落地加速。Travelers利用OpenAI技术构建了AI驱动的索赔助手，实现全天候理赔支持与业务弹性扩展。Baz则结合Amazon Bedrock与AgentCore构建了Spec Review智能体，将自动化代码审查缺陷减少高达50%，并显著缩短合并周期。\n\n**安全与治理**方面，OpenAI呼吁全球加强青少年AI安全，提议建立国际机构以制定标准，平衡技术创新与风险管控。\n\n总结来看，AI正从基础模型能力向通用生产力工具和行业专用解决方案演进，同时安全治理成为全球共识。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "产品": 5,
+      "行业": 1,
+      "AI": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Codex",
+      "AI",
+      "Amazon Bedrock",
+      "Travelers",
+      "Claim Assistant",
+      "AI索赔",
+      "保险科技",
+      "插件",
+      "团队"
+    ]
+  },
+  "generated_at": "2026-06-03T06:32:43.178137"
+}

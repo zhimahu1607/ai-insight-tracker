@@ -1,0 +1,89 @@
+[
+  {
+    "id": "b06f54ac4981b8df",
+    "title": "Codex Security: now in research preview",
+    "url": "https://openai.com/index/codex-security-now-in-research-preview",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-06T10:00:00Z",
+    "summary": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
+    "content": "Codex Security is an AI application security agent that analyzes project context to detect, validate, and patch complex vulnerabilities with higher confidence and less noise.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布了Codex Security的研究预览，这是一个AI应用安全代理，能够分析项目上下文来检测、验证和修复复杂漏洞，并具有更高的置信度和更少的噪音。这标志着AI在应用安全领域的重要进展，有助于自动化漏洞管理、提高软件安全性和开发效率，同时减少误报，目前处于测试阶段，可能未来推动商业化应用。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Codex Security",
+        "AI应用安全",
+        "漏洞检测",
+        "项目上下文分析"
+      ]
+    },
+    "analyzed_at": "2026-03-07T03:32:03.170901Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "6267c23571162076",
+    "title": "How Descript enables multilingual video dubbing at scale",
+    "url": "https://openai.com/index/descript",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-06T10:00:00Z",
+    "summary": "Descript uses OpenAI models to scale multilingual video dubbing, optimizing translations for both meaning and timing so dubbed speech sounds natural across languages.",
+    "content": "Descript uses OpenAI models to scale multilingual video dubbing, optimizing translations for both meaning and timing so dubbed speech sounds natural across languages.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Descript 公司通过集成 OpenAI 的先进 AI 模型，成功开发了能够大规模处理多语言视频配音的系统。该技术不仅准确翻译内容，还优化语音的时序，确保配音在不同语言中保持自然的声音和节奏，有效解决了传统配音中翻译生硬和口型不匹配的挑战。这一创新显著提升了视频本地化的效率和效果，为用户提供更优质的观看体验。它突显了 AI 在自动化多媒体处理方面的能力，可能推动视频制作、教育和娱乐行业的数字化转型，并为其他企业利用 AI 模型解决实际问题提供了参考案例。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Descript",
+        "OpenAI",
+        "多语言视频配音",
+        "翻译优化",
+        "时序优化"
+      ]
+    },
+    "analyzed_at": "2026-03-07T03:32:21.825330Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "a816e227c8910d82",
+    "title": "How Balyasny Asset Management built an AI research engine for investing",
+    "url": "https://openai.com/index/balyasny-asset-management",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-03-06T07:00:00Z",
+    "summary": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
+    "content": "See how Balyasny built an AI research system with GPT-5.4, rigorous model evaluation, and agent workflows to transform investment analysis at scale.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Balyasny Asset Management 构建了一个基于 AI 的研究引擎，用于投资分析。该系统采用了 GPT-5.4 大语言模型、严格的模型评估流程和代理工作流程，旨在大规模转换投资研究过程。这一举措在金融领域展示了 AI 技术的实际应用，通过自动化处理提升研究效率和准确性，可能带来更快的决策速度和成本节约。关键信息点包括集成先进 AI 模型、实施评估机制以优化性能，以及利用工作流程自动化扩展分析规模。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "Balyasny Asset Management",
+        "GPT-5.4",
+        "AI research system",
+        "model evaluation",
+        "agent workflows"
+      ]
+    },
+    "analyzed_at": "2026-03-07T03:32:02.070458Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

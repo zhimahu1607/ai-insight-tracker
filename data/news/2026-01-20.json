@@ -1,0 +1,31 @@
+[
+  {
+    "id": "439c521becb06ce6",
+    "title": "AI for self empowerment",
+    "url": "https://openai.com/index/ai-for-self-empowerment",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-01-18T12:00:00Z",
+    "summary": "How AI can expand human agency by closing the capability overhang—helping people, businesses, and countries unlock real productivity, growth, and opportunity.",
+    "content": "How AI can expand human agency by closing the capability overhang—helping people, businesses, and countries unlock real productivity, growth, and opportunity.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 发布资讯，探讨人工智能（AI）如何通过弥补人类能力差距（capability overhang）来扩展人类代理（human agency），从而帮助个人、企业和国家解锁真正的生产力、增长和机会。资讯强调了 AI 作为赋能工具的重要性，能够增强人类能力，实现自我赋能，并可能在各领域带来广泛影响，如提升效率、推动经济发展和创造新机遇。核心信息是 AI 的积极社会角色，聚焦于其潜在应用而非具体技术细节。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "AI",
+        "OpenAI",
+        "human agency",
+        "capability overhang",
+        "productivity"
+      ]
+    },
+    "analyzed_at": "2026-01-20T03:18:24.677060Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
