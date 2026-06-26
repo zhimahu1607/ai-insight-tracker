@@ -49,10 +49,6 @@ __all__ = [
     "NewsFetcher",
     "load_news_sources",
     "fetch_news",
-    # ProcessedTracker
-    "ProcessedTracker",
-    "get_processed_tracker",
-    "reset_processed_tracker",
 ]
 
 
@@ -68,10 +64,6 @@ _EXPORTS: dict[str, str] = {
     "NewsFetcher": "src.data_fetchers.news",
     "load_news_sources": "src.data_fetchers.news",
     "fetch_news": "src.data_fetchers.news",
-    # ProcessedTracker
-    "ProcessedTracker": "src.data_fetchers.processed_tracker",
-    "get_processed_tracker": "src.data_fetchers.processed_tracker",
-    "reset_processed_tracker": "src.data_fetchers.processed_tracker",
 }
 
 

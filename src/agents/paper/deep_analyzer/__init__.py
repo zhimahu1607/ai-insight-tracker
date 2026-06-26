@@ -106,7 +106,7 @@ async def run_deep_analysis(
     fulltext_parse_status = "pending"
     paper_html_url = ""
 
-    # 获取论文全文（严格使用官方 arXiv HTML）
+    # 获取论文全文（使用 arXiv HTML）
     logger.info(f"开始获取和解析 arXiv HTML 全文: {paper_id}")
     from src.data_fetchers.arxiv.html_fulltext import (
         build_fulltext_summary_context,

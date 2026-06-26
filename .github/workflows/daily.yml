@@ -35,6 +35,15 @@ env:
   # 语言配置（可选）
   LANGUAGE: ${{ vars.LANGUAGE }}
 
+  # 论文质量信号配置（可选）
+  PAPER_QUALITY_ENABLED: ${{ vars.PAPER_QUALITY_ENABLED }}
+  PAPER_QUALITY_MIN_SCORE: ${{ vars.PAPER_QUALITY_MIN_SCORE }}
+  PAPER_QUALITY_CANDIDATE_MIN_SCORE: ${{ vars.PAPER_QUALITY_CANDIDATE_MIN_SCORE }}
+  PAPER_QUALITY_MAX_PER_CATEGORY: ${{ vars.PAPER_QUALITY_MAX_PER_CATEGORY }}
+  PAPER_QUALITY_MAX_TOTAL: ${{ vars.PAPER_QUALITY_MAX_TOTAL }}
+  OPENALEX_EMAIL: ${{ vars.OPENALEX_EMAIL }}
+  OPENREVIEW_VENUES: ${{ vars.OPENREVIEW_VENUES }}
+
 jobs:
   # ============================================================
   # Job 1: 数据获取与分析
@@ -87,6 +96,7 @@ jobs:
         shell: bash -el {0}
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: |
           python scripts/daily_crawl.py --task arxiv --skip-config-check
           exit_code=$?

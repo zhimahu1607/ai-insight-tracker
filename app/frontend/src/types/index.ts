@@ -12,6 +12,14 @@ export interface PaperLightAnalysis {
 
 export interface Paper {
   id: string; // arxiv id
+  source?: string;
+  external_ids?: {
+    arxiv?: string;
+    doi?: string;
+    semantic_scholar?: string;
+    openalex?: string;
+    openreview?: string;
+  };
   title: string;
   abstract: string;
   authors: string[];
@@ -20,7 +28,42 @@ export interface Paper {
   published: string;
   updated: string;
   pdf_url: string;
+  abs_url?: string;
   version: string;
+  quality_score?: number;
+  relevance_score?: number;
+  tracking_score?: number;
+  quality_confidence?: 'high' | 'medium' | 'low';
+  quality_reasons?: string[];
+  quality_signals?: {
+    sources?: string[];
+    semantic_scholar?: {
+      citation_count?: number;
+      influential_citation_count?: number;
+      venue?: string;
+    };
+    papers_with_code?: {
+      has_code?: boolean;
+      repositories?: Array<{
+        url: string;
+        stars?: number;
+        is_official?: boolean;
+      }>;
+    };
+    openalex?: {
+      cited_by_count?: number;
+      fwci?: number;
+      institutions?: string[];
+      source?: string;
+    };
+    openreview?: {
+      venue_id?: string;
+      decision?: string;
+      rating_avg?: number;
+      confidence_avg?: number;
+      review_count?: number;
+    };
+  };
 }
 
 export interface AnalyzedPaper extends Paper {

@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query';
-import { AnalysisStatus } from '@/types';
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -23,7 +22,7 @@ export const useDeepAnalysis = (paperId: string) => {
           const content = await res.text();
           return { status: 'completed', content };
         }
-      } catch (e) {
+      } catch {
         // ignore
       }
 
@@ -37,7 +36,7 @@ export const useDeepAnalysis = (paperId: string) => {
             return { status: 'processing' };
           }
         }
-      } catch (e) {
+      } catch {
         // ignore
       }
 

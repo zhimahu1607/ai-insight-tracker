@@ -1,41 +1,11 @@
-"""
-论文浅度分析器
+"""Paper light analyzer."""
 
-继承 BaseLightAnalyzer，实现论文特定的分析逻辑。
-"""
-
-from typing import Optional
-
-from src.llm import LLMClient
-from src.models import Paper, AnalyzedPaper, PaperLightAnalysis
 from src.agents.base_analyzer import BaseLightAnalyzer
+from src.models import AnalyzedPaper, Paper, PaperLightAnalysis
 
 
 class PaperLightAnalyzer(BaseLightAnalyzer[Paper, AnalyzedPaper, PaperLightAnalysis]):
-    """
-    论文浅度分析器
-
-    使用 LLM 对论文摘要进行结构化分析，支持异步批量处理。
-
-    Usage:
-        async with LLMClient() as client:
-            analyzer = PaperLightAnalyzer(client)
-            results = await analyzer.analyze_batch(papers)
-    """
-
-    def __init__(
-        self,
-        llm_client: LLMClient,
-        language: Optional[str] = None,
-    ):
-        """
-        初始化论文浅度分析器
-
-        Args:
-            llm_client: LLM 客户端实例
-            language: 输出语言，默认从配置系统读取
-        """
-        super().__init__(llm_client, language)
+    """Run structured light analysis for papers."""
 
     def _get_prompt_key(self) -> str:
         return "paper"
@@ -66,7 +36,7 @@ class PaperLightAnalyzer(BaseLightAnalyzer[Paper, AnalyzedPaper, PaperLightAnaly
         return item.id
 
     def _get_progress_desc(self) -> str:
-        return "论文分析"
+        return "paper analysis"
 
     def _get_progress_unit(self) -> str:
-        return "篇"
+        return "paper"

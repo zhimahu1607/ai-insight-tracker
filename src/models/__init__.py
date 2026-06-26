@@ -5,7 +5,18 @@
 """
 
 from .common import Tags, Keywords
-from .paper import Paper, PaperLightAnalysis, AnalyzedPaper
+from .paper import (
+    CodeRepositorySignal,
+    OpenAlexSignal,
+    OpenReviewSignal,
+    Paper,
+    PaperExternalIds,
+    PaperLightAnalysis,
+    PaperQualitySignals,
+    PapersWithCodeSignal,
+    SemanticScholarSignal,
+    AnalyzedPaper,
+)
 from .news import (
     FetchType,
     RSSSource,
@@ -21,8 +32,15 @@ __all__ = [
     "Tags",
     "Keywords",
     # 论文模型
+    "CodeRepositorySignal",
+    "OpenAlexSignal",
+    "OpenReviewSignal",
     "Paper",
+    "PaperExternalIds",
     "PaperLightAnalysis",
+    "PaperQualitySignals",
+    "PapersWithCodeSignal",
+    "SemanticScholarSignal",
     "AnalyzedPaper",
     # 热点模型
     "FetchType",

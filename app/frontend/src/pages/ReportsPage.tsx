@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { FileText, Newspaper, Calendar, TrendingUp, Hash, PieChart } from "lucide-react";
+import { FileText, Newspaper, TrendingUp, Hash, PieChart } from "lucide-react";
 
 export function ReportsPage() {
   const { data: fileList, isLoading: isFileListLoading } = useFileList();

@@ -47,6 +47,17 @@ ENV_MAPPING: dict[str, str] = {
     "LLM_MAX_RETRIES": "advanced.llm_max_retries",
     "NEWS_HOURS": "advanced.rss_hours",
     "RSS_MAX_CONCURRENT": "advanced.rss_max_concurrent",
+    # 论文质量信号配置
+    "PAPER_QUALITY_ENABLED": "paper_quality.enabled",
+    "PAPER_QUALITY_MIN_SCORE": "paper_quality.min_tracking_score",
+    "PAPER_QUALITY_CANDIDATE_MIN_SCORE": "paper_quality.candidate_min_score",
+    "PAPER_QUALITY_MAX_PER_CATEGORY": "paper_quality.max_papers_per_category",
+    "PAPER_QUALITY_MAX_TOTAL": "paper_quality.max_papers_total",
+    "PAPER_QUALITY_MAX_CONCURRENT": "paper_quality.max_concurrent",
+    "PAPER_QUALITY_TIMEOUT": "paper_quality.timeout",
+    "SEMANTIC_SCHOLAR_API_KEY": "paper_quality.semantic_scholar_api_key",
+    "OPENALEX_EMAIL": "paper_quality.openalex_email",
+    "OPENREVIEW_VENUES": "paper_quality.openreview_venues",
 }
 
 
@@ -124,8 +135,13 @@ def _convert_env_value(path: str, value: str) -> Any:
         转换后的值
     """
     # 列表类型
-    if path == "arxiv.categories":
+    if path in {"arxiv.categories", "paper_quality.openreview_venues"}:
         return _parse_categories(value)
+
+    # 布尔类型
+    bool_paths = {"paper_quality.enabled"}
+    if path in bool_paths:
+        return value.strip().lower() in {"1", "true", "yes", "on"}
 
     # 整数类型
     int_paths = {
@@ -145,12 +161,20 @@ def _convert_env_value(path: str, value: str) -> Any:
         "advanced.llm_max_retries",
         "advanced.rss_hours",
         "advanced.rss_max_concurrent",
+        "paper_quality.max_papers_per_category",
+        "paper_quality.max_papers_total",
+        "paper_quality.max_concurrent",
     }
     if path in int_paths:
         return int(value)
 
     # 浮点数类型
-    float_paths = {"arxiv.request_delay"}
+    float_paths = {
+        "arxiv.request_delay",
+        "paper_quality.min_tracking_score",
+        "paper_quality.candidate_min_score",
+        "paper_quality.timeout",
+    }
     if path in float_paths:
         return float(value)
 

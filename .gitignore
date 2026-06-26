@@ -121,16 +121,7 @@ temp/
 *.temp
 
 # ============================================================
-# Tests (Local Only - Not uploaded to GitHub)
+# Local-only test variants
 # ============================================================
 
-# Test directory
-tests/
-
-# Test dependencies
-requirements-dev.txt
-
-# Pytest configuration (if separate)
-pytest.ini
 pyproject.toml.test
-

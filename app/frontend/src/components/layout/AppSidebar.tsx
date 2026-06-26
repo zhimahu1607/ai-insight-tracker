@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Home, FileText, Newspaper, BarChart2 } from "lucide-react";
+import { FileText, Newspaper, BarChart2 } from "lucide-react";
 
 export function AppSidebar() {
   const location = useLocation();
@@ -43,4 +43,3 @@ export function AppSidebar() {
     </div>
   );
 }
-

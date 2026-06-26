@@ -1,47 +1,17 @@
-"""
-热点浅度分析器
+"""News light analyzer."""
 
-继承 BaseLightAnalyzer，实现热点资讯特定的分析逻辑。
-"""
-
-from typing import Optional
-
-from src.llm import LLMClient
-from src.models import NewsItem, AnalyzedNews, NewsLightAnalysis
 from src.agents.base_analyzer import BaseLightAnalyzer
+from src.models import AnalyzedNews, NewsItem, NewsLightAnalysis
 
 
 class NewsLightAnalyzer(BaseLightAnalyzer[NewsItem, AnalyzedNews, NewsLightAnalysis]):
-    """
-    热点浅度分析器
-
-    使用 LLM 对热点资讯进行结构化分析，支持异步批量处理。
-
-    Usage:
-        async with LLMClient() as client:
-            analyzer = NewsLightAnalyzer(client)
-            results = await analyzer.analyze_batch(news_items)
-    """
-
-    def __init__(
-        self,
-        llm_client: LLMClient,
-        language: Optional[str] = None,
-    ):
-        """
-        初始化热点浅度分析器
-
-        Args:
-            llm_client: LLM 客户端实例
-            language: 输出语言，默认从配置系统读取
-        """
-        super().__init__(llm_client, language)
+    """Run structured light analysis for news items."""
 
     def _get_prompt_key(self) -> str:
         return "news"
 
     def _build_user_content(self, item: NewsItem) -> str:
-        content = item.content or item.summary or "无内容"
+        content = item.content or item.summary or "No content"
         return self._user_prompt.format(
             title=item.title,
             source_name=item.source_name,
@@ -68,7 +38,7 @@ class NewsLightAnalyzer(BaseLightAnalyzer[NewsItem, AnalyzedNews, NewsLightAnaly
         return item.id
 
     def _get_progress_desc(self) -> str:
-        return "热点分析"
+        return "news analysis"
 
     def _get_progress_unit(self) -> str:
-        return "条"
+        return "item"

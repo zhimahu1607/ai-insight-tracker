@@ -131,17 +131,23 @@ class DailyReportGenerator:
 
         排序规则:
         1. 分析成功的在前
-        2. 按发布时间降序
+        2. 按追踪分降序
+        3. 按发布时间降序
         """
 
         def sort_key(paper: AnalyzedPaper) -> tuple:
             # 成功的排前面 (0 < 1，所以成功给 0)
             status_order = 0 if paper.analysis_status == "success" else 1
 
+            # 追踪分降序；无质量信号的放在已评分论文后面
+            tracking_score = (
+                -paper.tracking_score if paper.tracking_score is not None else 1
+            )
+
             # 发布时间降序
             pub_time = -paper.published.timestamp() if paper.published else 0
 
-            return (status_order, pub_time)
+            return (status_order, tracking_score, pub_time)
 
         return sorted(papers, key=sort_key)
 

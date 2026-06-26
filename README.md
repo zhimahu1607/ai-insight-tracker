@@ -104,6 +104,7 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 | `LLM_API_KEY` | LLM API Key（对应 LLM_PROVIDER） | ✅ |
 | `FEISHU_WEBHOOK_URL` | 飞书机器人 Webhook URL | ⚠️ 通知功能需要 |
 | `TAVILY_API_KEY` | Tavily 搜索 API Key | ⚠️ 深度分析需要 |
+| `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API Key | ⚠️ 论文质量信号可选 |
 
 #### 3. 配置 Variables
 
@@ -115,6 +116,13 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 | `LANGUAGE` | 输出语言 | `zh` |
 | `ARXIV_MAX_RESULTS` | arXiv 每页最大返回数（分页时为 page size） | `100` |
 | `ARXIV_MAX_PAGES` | arXiv 每分类最多分页次数（安全上限） | `20` |
+| `PAPER_QUALITY_ENABLED` | 是否启用外部论文质量信号 | `true` |
+| `PAPER_QUALITY_MIN_SCORE` | 进入浅度分析的最低追踪分 | `70` |
+| `PAPER_QUALITY_CANDIDATE_MIN_SCORE` | 保存候选论文的最低追踪分 | `50` |
+| `PAPER_QUALITY_MAX_PER_CATEGORY` | 每个主分类最多保留高分论文数 | `10` |
+| `PAPER_QUALITY_MAX_TOTAL` | 每日最多保留高分论文数 | `30` |
+| `OPENALEX_EMAIL` | OpenAlex polite pool 邮箱 | 空 |
+| `OPENREVIEW_VENUES` | OpenReview venue ID 列表，逗号分隔 | 空 |
 
 #### 4. 启用 GitHub Pages
 
@@ -154,6 +162,17 @@ config/settings.yaml (最高) > 环境变量 > 默认值 (最低)
 | Grok | `grok` | `https://api.x.ai/v1` |
 
 > **注意**: 统一使用 `LLM_API_KEY` 环境变量配置 API Key，需与 `LLM_PROVIDER` 对应。
+
+### 论文质量信号
+
+论文采集会在 arXiv 去重后、LLM 浅度分析前补充外部质量信号并打分：
+
+- `Semantic Scholar`: 引用数、高影响引用、venue、研究领域。
+- `Papers with Code`: 是否有代码、是否官方实现、仓库 stars。
+- `OpenAlex`: 机构、主题、FWCI、发表来源。
+- `OpenReview`: 可选 venue 的 accepted 论文和公开 review/decision 信号。
+
+默认策略为 fail-open：外部 API 不可用时不会清空日报；已有低分信号的论文会被挡在浅度分析前，以降低 LLM 成本和低质论文噪声。
 
 ### 新闻源
 
@@ -203,7 +222,6 @@ ai-insight-tracker/
 │   │   │   └── arxiv_html_fulltext.py # arXiv 官方 HTML 全文结构化数据模型
 │   │   │   └── html_fulltext.py  # arXiv 官方 HTML 全文获取与结构化解析
 │   │   ├── ids_tracker.py        # ID 追踪器（fetched/analyzed 两套文件，默认保留30天）
-│   │   ├── processed_tracker.py  # 兼容层（历史名称：ProcessedTracker，等价于 fetched_ids）
 │   │   ├── news/                 # 新闻源统一入口
 │   │   │   ├── fetcher.py        # 混合获取器 (RSS + Crawler)
 │   │   │   ├── rss_fetcher.py    # RSS 异步获取器
@@ -264,7 +282,7 @@ ai-insight-tracker/
 ├── app/frontend/                 # React 前端
 │   ├── src/
 │   │   ├── components/           # UI 组件
-│   │   │   ├── business/         # 业务组件 (PaperCard, NewsCard 等)
+│   │   │   ├── business/         # 业务组件 (PaperCard, NewsCard, DataGridList 等)
 │   │   │   ├── layout/           # 布局组件
 │   │   │   └── ui/               # 通用 UI 组件
 │   │   ├── pages/                # 页面组件
@@ -316,7 +334,8 @@ ai-insight-tracker/
 | 框架 | React 18 + TypeScript |
 | 构建 | Vite |
 | 样式 | TailwindCSS |
-| 状态管理 | Zustand |
+| 数据请求/缓存 | TanStack Query |
+| 长列表渲染 | React Virtuoso |
 
 ### 基础设施
 
@@ -353,13 +372,27 @@ Issue 必须满足：
 pip install -r requirements-dev.txt
 
 # 运行所有测试
-pytest tests/ -v
+python -m pytest
 
 # 运行特定模块测试
-pytest tests/unit/models/ -v
-pytest tests/unit/llm/ -v
-pytest tests/unit/agents/ -v
+python -m pytest tests/unit/models/ -v
+python -m pytest tests/unit/llm/ -v
+python -m pytest tests/unit/agents/ -v
 
 # 生成覆盖率报告
-pytest tests/ --cov=src --cov-report=html
+python -m pytest tests/ --cov=src --cov-report=html
 ```
+
+前端验证：
+
+```bash
+cd app/frontend
+npm run lint
+npm run build
+```
+
+## 兼容性说明
+
+- 历史兼容层 `ProcessedTracker`、`get_processed_tracker`、`reset_processed_tracker` 已删除；新代码统一使用 `IdsTracker`、`get_fetched_tracker`、`get_analyzed_tracker`。
+- `DailyReport` 已删除废弃的 highlight/success/rate 便捷方法；报告统计应读取 `DailyStats` 或直接处理 `papers` / `news` 列表。
+- 前端仍保留 `getPapers`、`getNews`、`getReport`、`getFileList` 对外入口，内部统一处理 `.json` 到 `.jsonl` 的读取回退。

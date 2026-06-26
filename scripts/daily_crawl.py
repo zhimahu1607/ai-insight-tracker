@@ -7,7 +7,8 @@
 
 Usage:
     python scripts/daily_crawl.py --task arxiv     # arXiv 获取
-    python scripts/daily_crawl.py --task rss       # RSS 获取
+    python scripts/daily_crawl.py --task news      # 新闻获取
+    python scripts/daily_crawl.py --task rss       # 新闻获取（兼容别名）
     python scripts/daily_crawl.py --task analyze   # 浅度分析
     python scripts/daily_crawl.py --task summary   # 生成日报
     python scripts/daily_crawl.py --task notify    # 发送通知
@@ -40,6 +41,11 @@ from src.data_fetchers.arxiv import AsyncArxivClient
 from src.data_fetchers.status import DedupStatus
 from src.data_fetchers.ids_tracker import get_analyzed_tracker, get_fetched_tracker
 from src.data_fetchers.news import NewsFetcher
+from src.data_fetchers.paper_quality import (
+    enrich_papers_with_quality,
+    filter_tracked_papers,
+)
+from src.data_fetchers.paper_sources import fetch_openreview_papers
 from src.agents.paper import PaperLightAnalyzer
 from src.agents.news import NewsLightAnalyzer
 from src.generators import DailyReportGenerator
@@ -187,6 +193,17 @@ def merge_news_by_id_keep_success(
     )
 
 
+def should_analyze_paper(paper: AnalyzedPaper) -> bool:
+    """质量信号启用时，只分析高分论文；无信号时 fail-open。"""
+    settings = get_settings()
+    quality = settings.paper_quality
+    if not quality.enabled:
+        return True
+    if paper.tracking_score is None:
+        return True
+    return paper.tracking_score >= quality.min_tracking_score
+
+
 async def task_arxiv() -> int:
     """
     任务：获取 arXiv 论文并去重
@@ -205,12 +222,13 @@ async def task_arxiv() -> int:
     categories = settings.arxiv.categories
     max_results = settings.arxiv.max_results
     max_pages = getattr(settings.arxiv, "max_pages", 20)
+    quality_config = settings.paper_quality
 
     logger.info(f"目标分类: {categories}")
     logger.info(f"每页最大结果数: {max_results}")
     logger.info(f"每分类最多分页次数: {max_pages}")
 
-    # 初始化 ProcessedTracker 并清理过期记录
+    # 初始化 ID tracker 并清理过期记录
     tracker = get_fetched_tracker(DATA_DIR / "fetched_ids.json")
     cleaned = tracker.cleanup()
     if cleaned > 0:
@@ -238,20 +256,53 @@ async def task_arxiv() -> int:
         f"新论文 {len(new_papers)} 篇"
     )
 
-    if not new_papers:
+    openreview_papers = await fetch_openreview_papers(
+        quality_config.openreview_venues,
+        primary_category=categories[0] if categories else "cs.AI",
+        timeout=quality_config.timeout,
+    )
+    new_openreview_papers = [p for p in openreview_papers if p.id not in fetched_ids]
+    if new_openreview_papers:
+        logger.info("OpenReview 新论文: %s 篇", len(new_openreview_papers))
+
+    all_new_papers: list[Paper] = new_papers + new_openreview_papers
+
+    if not all_new_papers:
+        return DedupStatus.NO_NEW_CONTENT
+
+    if quality_config.enabled:
+        all_new_papers = await enrich_papers_with_quality(all_new_papers, quality_config)
+        tracked_papers, rejected_papers = filter_tracked_papers(
+            all_new_papers,
+            min_score=quality_config.min_tracking_score,
+            candidate_min_score=quality_config.candidate_min_score,
+            max_per_category=quality_config.max_papers_per_category,
+            max_total=quality_config.max_papers_total,
+        )
+        logger.info(
+            "质量筛选完成: 保留 %s 篇, 过滤 %s 篇",
+            len(tracked_papers),
+            len(rejected_papers),
+        )
+    else:
+        tracked_papers = all_new_papers
+
+    if not tracked_papers:
+        tracker.mark_papers([p.id for p in all_new_papers])
+        logger.info("质量筛选后无论文需要保存")
         return DedupStatus.NO_NEW_CONTENT
 
     # 保存新论文（同日多次运行：按 id 合并追加，避免覆盖旧数据/已分析结果）
     today = get_today_date()
     file_path = PAPERS_DIR / f"{today}.json"
     existing = load_models_json(file_path, AnalyzedPaper)
-    merged = merge_papers_by_id_keep_success(existing, new_papers)
+    merged = merge_papers_by_id_keep_success(existing, tracked_papers)
     save_models_json(merged, file_path, log_label="论文")
 
     # 标记为已处理
-    tracker.mark_papers([p.id for p in new_papers])
+    tracker.mark_papers([p.id for p in all_new_papers])
 
-    logger.info(f"arXiv 任务完成: {len(new_papers)} 篇新论文")
+    logger.info(f"arXiv 任务完成: {len(tracked_papers)} 篇新论文进入追踪")
     return DedupStatus.HAS_NEW_CONTENT
 
 
@@ -324,7 +375,11 @@ async def task_analyze() -> tuple[list[AnalyzedPaper], list[AnalyzedNews]]:
     analyzed_paper_ids = analyzed_tracker.get_paper_ids()
     analyzed_news_ids = analyzed_tracker.get_news_ids()
 
-    papers_to_analyze = [p for p in existing_papers if p.id not in analyzed_paper_ids]
+    papers_to_analyze = [
+        p
+        for p in existing_papers
+        if p.id not in analyzed_paper_ids and should_analyze_paper(p)
+    ]
     news_to_analyze = [n for n in existing_news if n.id not in analyzed_news_ids]
 
     papers_skipped = len(existing_papers) - len(papers_to_analyze)
@@ -553,7 +608,7 @@ async def main() -> int:
     )
     parser.add_argument(
         "--task",
-        choices=["arxiv", "rss", "analyze", "summary", "notify", "update-file-list", "all"],
+        choices=["arxiv", "news", "rss", "analyze", "summary", "notify", "update-file-list", "all"],
         default="all",
         help="要执行的任务 (默认: all)",
     )
@@ -585,7 +640,7 @@ async def main() -> int:
             # 单任务模式下，无新论文/无论文也视为成功（不应被 CI 判定为失败）
             return 3 if status == DedupStatus.PROCESS_ERROR else 0
 
-        elif args.task == "rss":
+        elif args.task in {"news", "rss"}:
             await task_rss()
             return 0
 
@@ -616,4 +671,3 @@ async def main() -> int:
 if __name__ == "__main__":
     exit_code = asyncio.run(main())
     sys.exit(exit_code)
-

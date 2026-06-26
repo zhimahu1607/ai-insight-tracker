@@ -24,26 +24,6 @@ from .nodes import (
 logger = logging.getLogger(__name__)
 
 
-def should_continue_research(state: DeepAnalysisState) -> Literal["supervisor", "__end__"]:
-    """
-    判断是否继续研究迭代
-
-    Args:
-        state: 当前状态
-
-    Returns:
-        下一个节点或结束
-    """
-    iterations = state.get("research_iterations", 0)
-    max_iterations = state.get("max_iterations", 5)
-
-    if iterations >= max_iterations:
-        logger.info(f"达到最大研究迭代次数 ({max_iterations})，进入写作阶段")
-        return "__end__"
-
-    return "supervisor"
-
-
 def build_deep_analysis_graph() -> StateGraph:
     """
     构建深度分析工作流图

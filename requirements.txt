@@ -27,15 +27,12 @@ feedparser>=6.0.0,<7.0.0
 # LLM & AI (LangChain Unified)
 # ============================================================
 
-# LangChain Core - 使用 init_chat_model 统一多提供商访问
 langchain>=0.3.0,<0.4.0
 langchain-core>=0.3.0,<0.4.0
 
-# LangChain Provider Integrations (init_chat_model 自动选择)
 # - openai -> ChatOpenAI
 # - anthropic -> ChatAnthropic
 # - gemini/google -> ChatGoogleGenerativeAI
-# - 其他 OpenAI 兼容 -> ChatOpenAI + base_url
 langchain-openai>=0.2.0,<0.4.0
 langchain-anthropic>=0.2.0,<0.4.0
 langchain-google-genai>=1.0.0,<3.0.0

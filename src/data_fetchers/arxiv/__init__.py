@@ -67,7 +67,7 @@ async def fetch_arxiv_papers(
     Args:
         categories: 分类列表，None 时从配置读取
         hours: 获取最近多少小时的论文
-        dedup: 是否使用 ProcessedTracker 进行历史去重
+        dedup: 是否使用 fetched_ids.json 进行历史去重
 
     Returns:
         去重后的论文列表
@@ -115,4 +115,3 @@ async def fetch_arxiv_paper_by_id(paper_id: str) -> Optional[Paper]:
     """
     papers = await fetch_arxiv_papers_by_ids([paper_id])
     return papers[0] if papers else None
-

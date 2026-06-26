@@ -11,18 +11,37 @@ interface PaperCardProps {
 }
 
 export function PaperCard({ paper }: PaperCardProps) {
+  const trackingScore = paper.tracking_score ?? paper.quality_score;
+  const source = paper.source ?? "arxiv";
+  const canRequestDeepAnalysis = source === "arxiv" && !paper.id.startsWith("openreview:");
+  const paperUrl = paper.abs_url ?? `https://arxiv.org/abs/${paper.id}`;
+
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Card className="hover:shadow-md transition-shadow cursor-pointer h-full flex flex-col text-left">
           <CardHeader className="pb-3 space-y-2">
             <div className="flex justify-between items-start gap-2">
-              <Badge variant="secondary" className="font-mono text-xs">
-                {paper.primary_category}
-              </Badge>
-              <div onClick={(e) => e.stopPropagation()}>
-                <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} size="sm" className="h-7 text-xs px-2" />
+              <div className="flex flex-wrap gap-1">
+                <Badge variant="secondary" className="font-mono text-xs">
+                  {paper.primary_category}
+                </Badge>
+                {source !== "arxiv" && (
+                  <Badge variant="outline" className="text-xs">
+                    {source}
+                  </Badge>
+                )}
+                {trackingScore !== undefined && (
+                  <Badge variant="outline" className="text-xs">
+                    Score {trackingScore.toFixed(1)}
+                  </Badge>
+                )}
               </div>
+              {canRequestDeepAnalysis && (
+                <div onClick={(e) => e.stopPropagation()}>
+                  <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} size="sm" className="h-7 text-xs px-2" />
+                </div>
+              )}
             </div>
             <CardTitle className="text-lg leading-tight line-clamp-2">
               {paper.title}
@@ -40,13 +59,19 @@ export function PaperCard({ paper }: PaperCardProps) {
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
              <Badge>{paper.primary_category}</Badge>
+             {trackingScore !== undefined && (
+                <Badge variant="outline">Score {trackingScore.toFixed(1)}</Badge>
+             )}
+             {paper.quality_confidence && (
+                <Badge variant="secondary">Confidence {paper.quality_confidence}</Badge>
+             )}
              <span className="text-sm text-muted-foreground flex items-center">
                 <Calendar className="w-3 h-3 mr-1" />
                 {paper.published.split('T')[0]}
              </span>
-             <div className="ml-auto">
+             {canRequestDeepAnalysis && <div className="ml-auto">
                 <DeepAnalysisButton paperId={paper.id} paperTitle={paper.title} />
-             </div>
+             </div>}
           </div>
           <DialogTitle className="text-xl sm:text-2xl leading-tight">{paper.title}</DialogTitle>
           <DialogDescription className="text-base mt-2">
@@ -61,15 +86,28 @@ export function PaperCard({ paper }: PaperCardProps) {
           <div className="flex gap-2">
              <Button asChild size="sm" variant="outline">
                 <a href={paper.pdf_url} target="_blank" rel="noreferrer">
-                   <FileTextIcon className="w-4 h-4 mr-2" /> PDF
+                   <FileText className="w-4 h-4 mr-2" /> PDF
                 </a>
              </Button>
              <Button asChild size="sm" variant="outline">
-                <a href={`https://arxiv.org/abs/${paper.id}`} target="_blank" rel="noreferrer">
-                   <ExternalLink className="w-4 h-4 mr-2" /> arXiv
+                <a href={paperUrl} target="_blank" rel="noreferrer">
+                   <ExternalLink className="w-4 h-4 mr-2" /> Source
                 </a>
              </Button>
           </div>
+
+          {paper.quality_reasons && paper.quality_reasons.length > 0 && (
+             <div className="bg-muted/50 p-4 rounded-lg">
+                <h4 className="font-semibold mb-2">Quality Signals</h4>
+                <div className="flex flex-wrap gap-2">
+                  {paper.quality_reasons.map(reason => (
+                    <Badge key={reason} variant="secondary" className="text-xs">
+                      {reason}
+                    </Badge>
+                  ))}
+                </div>
+             </div>
+          )}
 
           {paper.light_analysis && (
              <div className="space-y-4">
@@ -142,28 +180,4 @@ export function PaperCard({ paper }: PaperCardProps) {
       </DialogContent>
     </Dialog>
   );
-}
-
-// Renamed locally to avoid conflict if I imported Lucide's FileText
-function FileTextIcon({ className }: { className?: string }) {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className={className}
-        >
-            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="16" x2="8" y1="13" y2="13" />
-            <line x1="16" x2="8" y1="17" y2="17" />
-            <line x1="10" x2="8" y1="9" y2="9" />
-        </svg>
-    )
 }

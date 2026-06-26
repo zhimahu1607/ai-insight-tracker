@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, FileSearch, ExternalLink, ScrollText } from "lucide-react";
+import { Loader2, FileSearch, ScrollText } from "lucide-react";
 import { useDeepAnalysis } from '@/hooks/queries/use-deep-analysis';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import Markdown from 'react-markdown';
@@ -55,7 +54,7 @@ export function DeepAnalysisButton({ paperId, paperTitle, className, size = "sm"
   const [isOpen, setIsOpen] = useState(false);
 
   // 构建 GitHub Issue URL
-  const handleCreateIssue = (e: React.MouseEvent) => {
+  const handleCreateIssue = (e: MouseEvent) => {
     e.stopPropagation(); // 防止冒泡触发父级点击
     
     const title = `[Analysis] ${paperId}: ${paperTitle}`;
@@ -66,7 +65,7 @@ export function DeepAnalysisButton({ paperId, paperTitle, className, size = "sm"
     window.open(url, '_blank');
   };
 
-  const handleOpenReport = (e: React.MouseEvent) => {
+  const handleOpenReport = (e: MouseEvent) => {
     e.stopPropagation();
     setIsOpen(true);
   };

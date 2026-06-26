@@ -7,6 +7,7 @@ Researcher Agent 节点
 """
 
 import logging
+from typing import Literal
 
 from langchain_core.messages import HumanMessage, SystemMessage
 

@@ -143,7 +143,7 @@ async def supervisor_node(state: DeepAnalysisState) -> dict:
             )
 
     # 调用 LLM
-    async with LLMClient(temperature=0.3) as llm_client:
+    async with LLMClient(temperature=1.0) as llm_client:
         langchain_llm = llm_client.get_langchain_client()
         llm_with_tools = langchain_llm.bind_tools(SUPERVISOR_TOOLS)
 
@@ -201,6 +201,26 @@ async def supervisor_tools_node(state: DeepAnalysisState) -> dict:
         "next_action": next_action,
         "current_research_topic": current_topic,
     }
+
+
+def enable_continue_research(state: DeepAnalysisState) -> bool:
+    """
+    判断是否继续研究迭代
+
+    Args:
+        state: 当前状态
+
+    Returns:
+        下一个节点或结束
+    """
+    iterations = state.get("research_iterations", 0)
+    max_iterations = state.get("max_iterations", 5)
+
+    if iterations >= max_iterations:
+        logger.info(f"达到最大研究迭代次数 ({max_iterations})，进入写作阶段")
+        return False
+
+    return True
 
 
 def route_supervisor_tools(state: DeepAnalysisState) -> Literal["researcher", "writer"]:

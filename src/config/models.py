@@ -84,6 +84,32 @@ class NewsFetcherConfig(BaseModel):
     headless: bool = Field(default=True, description="是否使用无头浏览器")
 
 
+class PaperQualityConfig(BaseModel):
+    """论文外部质量信号配置"""
+
+    enabled: bool = Field(default=True, description="是否启用外部质量信号")
+    min_tracking_score: float = Field(
+        default=70.0, description="进入浅度分析/日报的最低追踪分"
+    )
+    candidate_min_score: float = Field(
+        default=50.0, description="保存到候选池的最低追踪分"
+    )
+    max_papers_per_category: int = Field(
+        default=10, description="每个主分类最多保留的高分论文数"
+    )
+    max_papers_total: int = Field(default=30, description="每日最多保留的高分论文数")
+    max_concurrent: int = Field(default=5, description="外部质量信号最大并发数")
+    timeout: float = Field(default=20.0, description="外部 API 请求超时（秒）")
+    semantic_scholar_api_key: str = Field(
+        default="", description="Semantic Scholar API Key（可选）"
+    )
+    openalex_email: str = Field(default="", description="OpenAlex polite pool 邮箱（可选）")
+    openreview_venues: list[str] = Field(
+        default_factory=list,
+        description="要拉取的 OpenReview venue ID 列表，如 ICLR.cc/2026/Conference",
+    )
+
+
 class AdvancedConfig(BaseModel):
     """高级配置"""
 
@@ -103,6 +129,7 @@ class Settings(BaseModel):
     analysis: AnalysisConfig = Field(default_factory=AnalysisConfig)
     notification: NotificationConfig = Field(default_factory=NotificationConfig)
     news: NewsFetcherConfig = Field(default_factory=NewsFetcherConfig)
+    paper_quality: PaperQualityConfig = Field(default_factory=PaperQualityConfig)
     advanced: AdvancedConfig = Field(default_factory=AdvancedConfig)
 
     def validate_required(self) -> None:
