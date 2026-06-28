@@ -42,6 +42,14 @@ ENV_MAPPING: dict[str, str] = {
     "FEISHU_MAX_NEWS": "notification.max_news",
     "FEISHU_TIMEOUT": "notification.timeout",
     "FEISHU_MAX_RETRIES": "notification.max_retries",
+    # 新闻/GitHub Trending 配置
+    "GITHUB_TRENDING_ENABLED": "news.github_trending_enabled",
+    "GITHUB_TRENDING_SINCE": "news.github_trending_since",
+    "GITHUB_TRENDING_LANGUAGE": "news.github_trending_language",
+    "GITHUB_TRENDING_LIMIT": "news.github_trending_limit",
+    "GITHUB_TRENDING_MIN_STARS": "news.github_trending_min_stars",
+    "GITHUB_TRENDING_WEIGHT": "news.github_trending_weight",
+    "GITHUB_TRENDING_README_MAX_CHARS": "news.github_trending_readme_max_chars",
     # 高级配置
     "LLM_TIMEOUT": "advanced.llm_timeout",
     "LLM_MAX_RETRIES": "advanced.llm_max_retries",
@@ -139,7 +147,7 @@ def _convert_env_value(path: str, value: str) -> Any:
         return _parse_categories(value)
 
     # 布尔类型
-    bool_paths = {"paper_quality.enabled"}
+    bool_paths = {"paper_quality.enabled", "news.github_trending_enabled"}
     if path in bool_paths:
         return value.strip().lower() in {"1", "true", "yes", "on"}
 
@@ -164,6 +172,9 @@ def _convert_env_value(path: str, value: str) -> Any:
         "paper_quality.max_papers_per_category",
         "paper_quality.max_papers_total",
         "paper_quality.max_concurrent",
+        "news.github_trending_limit",
+        "news.github_trending_min_stars",
+        "news.github_trending_readme_max_chars",
     }
     if path in int_paths:
         return int(value)
@@ -174,6 +185,7 @@ def _convert_env_value(path: str, value: str) -> Any:
         "paper_quality.min_tracking_score",
         "paper_quality.candidate_min_score",
         "paper_quality.timeout",
+        "news.github_trending_weight",
     }
     if path in float_paths:
         return float(value)

@@ -82,6 +82,33 @@ class NewsFetcherConfig(BaseModel):
     )
     crawler_timeout: float = Field(default=60.0, description="页面加载超时（秒）")
     headless: bool = Field(default=True, description="是否使用无头浏览器")
+    github_trending_enabled: bool = Field(
+        default=True,
+        description="是否启用 GitHub Trending 抓取",
+    )
+    github_trending_since: str = Field(
+        default="weekly",
+        description="GitHub Trending 时间范围: daily/weekly/monthly",
+    )
+    github_trending_language: str = Field(
+        default="",
+        description="GitHub Trending 语言筛选，空字符串表示全站",
+    )
+    github_trending_limit: int = Field(default=25, description="GitHub Trending 最多保留数")
+    github_trending_min_stars: int = Field(
+        default=1000,
+        description="GitHub Trending 仓库最低 stars（严格大于该值）",
+    )
+    github_trending_weight: float = Field(
+        default=0.9,
+        ge=0.0,
+        le=1.0,
+        description="GitHub Trending 条目排序权重",
+    )
+    github_trending_readme_max_chars: int = Field(
+        default=8000,
+        description="送入 LLM 前保留的 README 最大字符数",
+    )
 
 
 class PaperQualityConfig(BaseModel):

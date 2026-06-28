@@ -192,6 +192,22 @@ class TestConvertEnvValue:
         assert result == "openai"
         assert isinstance(result, str)
 
+    def test_convert_github_trending_bool(self):
+        """转换 GitHub Trending 布尔配置"""
+        from src.config.loader import _convert_env_value
+
+        assert _convert_env_value("news.github_trending_enabled", "true") is True
+        assert _convert_env_value("news.github_trending_enabled", "0") is False
+
+    def test_convert_github_trending_numbers(self):
+        """转换 GitHub Trending 数值配置"""
+        from src.config.loader import _convert_env_value
+
+        assert _convert_env_value("news.github_trending_limit", "25") == 25
+        assert _convert_env_value("news.github_trending_min_stars", "1000") == 1000
+        assert _convert_env_value("news.github_trending_readme_max_chars", "8000") == 8000
+        assert _convert_env_value("news.github_trending_weight", "0.9") == 0.9
+
 
 class TestLoadYamlConfig:
     """_load_yaml_config 函数测试"""
@@ -255,6 +271,29 @@ class TestLoadEnvConfig:
             result = _load_env_config()
         
         assert result["arxiv"]["categories"] == ["cs.AI", "cs.CL"]
+
+    def test_load_github_trending_env(self):
+        """加载 GitHub Trending 环境变量"""
+        from src.config.loader import _load_env_config
+
+        with patch.dict(os.environ, {
+            "GITHUB_TRENDING_ENABLED": "true",
+            "GITHUB_TRENDING_SINCE": "weekly",
+            "GITHUB_TRENDING_LANGUAGE": "python",
+            "GITHUB_TRENDING_LIMIT": "25",
+            "GITHUB_TRENDING_MIN_STARS": "1000",
+            "GITHUB_TRENDING_WEIGHT": "0.9",
+            "GITHUB_TRENDING_README_MAX_CHARS": "8000",
+        }, clear=False):
+            result = _load_env_config()
+
+        assert result["news"]["github_trending_enabled"] is True
+        assert result["news"]["github_trending_since"] == "weekly"
+        assert result["news"]["github_trending_language"] == "python"
+        assert result["news"]["github_trending_limit"] == 25
+        assert result["news"]["github_trending_min_stars"] == 1000
+        assert result["news"]["github_trending_weight"] == 0.9
+        assert result["news"]["github_trending_readme_max_chars"] == 8000
     
     def test_no_env_variables(self):
         """无相关环境变量时返回空字典"""

@@ -10,10 +10,13 @@ import logging
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 
+from src.config import load_settings_without_validation
+from src.config.models import NewsFetcherConfig
 from src.models import NewsItem, NewsSource, FetchType, RSSSource
 from .rss_fetcher import AsyncRSSFetcher
 from src.data_fetchers.crawler import AsyncNewsCrawler
 from src.data_fetchers.ids_tracker import get_fetched_tracker
+from .github_trending import GitHubTrendingFetcher
 from .sources import load_news_sources
 
 logger = logging.getLogger(__name__)
@@ -53,6 +56,7 @@ class NewsFetcher:
             max_concurrent=crawler_max_concurrent,
             timeout=crawler_timeout,
         )
+        self._crawler_timeout = crawler_timeout
 
     async def fetch_all(
         self,
@@ -77,29 +81,41 @@ class NewsFetcher:
             return []
 
         enabled_sources = [s for s in sources if s.enabled]
+        settings = load_settings_without_validation()
+        news_config = settings.news
 
-        if not enabled_sources:
+        if not enabled_sources and not news_config.github_trending_enabled:
             logger.warning("没有启用的新闻源")
             return []
 
-        logger.info(f"开始获取 {len(enabled_sources)} 个新闻源")
+        logger.info(
+            "开始获取 %s 个新闻源%s",
+            len(enabled_sources),
+            " + GitHub Trending" if news_config.github_trending_enabled else "",
+        )
 
         # 分离 RSS 源和 Crawler 源
         rss_sources = [s for s in enabled_sources if s.fetch_type == FetchType.RSS]
         crawler_sources = [s for s in enabled_sources if s.fetch_type == FetchType.CRAWLER]
 
-        # 并发获取 RSS 和 Crawler
+        # 并发获取 RSS、Crawler 和 GitHub Trending
         rss_task = self._fetch_rss_sources(rss_sources)
         crawler_task = self._crawler.fetch_all(crawler_sources)
-
-        results = await asyncio.gather(
-            rss_task,
-            crawler_task,
-            return_exceptions=True,
+        github_trending_task = (
+            self._fetch_github_trending(news_config)
+            if news_config.github_trending_enabled
+            else None
         )
+
+        tasks = [rss_task, crawler_task]
+        if github_trending_task is not None:
+            tasks.append(github_trending_task)
+
+        results = await asyncio.gather(*tasks, return_exceptions=True)
 
         rss_items = results[0]
         crawler_items = results[1]
+        github_trending_items = results[2] if github_trending_task is not None else []
 
         # 处理结果
         all_items: list[NewsItem] = []
@@ -117,6 +133,13 @@ class NewsFetcher:
         else:
             all_items.extend(crawler_items)
             crawler_count = len(crawler_items)
+
+        if isinstance(github_trending_items, Exception):
+            logger.error(f"GitHub Trending 获取失败: {github_trending_items}")
+            github_trending_count = 0
+        else:
+            all_items.extend(github_trending_items)
+            github_trending_count = len(github_trending_items)
 
         # 时间过滤
         cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
@@ -154,6 +177,7 @@ class NewsFetcher:
         logger.info(
             f"获取完成: RSS {rss_count} 条, "
             f"Crawler {crawler_count} 条, "
+            f"GitHub Trending {github_trending_count} 条, "
             f"同批次去重后 {len(unique_items)} 条, "
             f"历史去重 {history_dedup_count} 条, "
             f"新内容 {len(sorted_items)} 条"
@@ -201,6 +225,22 @@ class NewsFetcher:
                 item.fetch_type = FetchType.RSS
 
         return items
+
+    async def _fetch_github_trending(
+        self,
+        config: NewsFetcherConfig,
+    ) -> list[NewsItem]:
+        fetcher = GitHubTrendingFetcher(
+            timeout=self._crawler_timeout,
+            readme_max_chars=config.github_trending_readme_max_chars,
+        )
+        return await fetcher.fetch(
+            since=config.github_trending_since,
+            language=config.github_trending_language,
+            limit=config.github_trending_limit,
+            min_stars=config.github_trending_min_stars,
+            weight=config.github_trending_weight,
+        )
 
     def _dedup_by_url(self, items: list[NewsItem]) -> list[NewsItem]:
         """基于 URL ID 去重"""

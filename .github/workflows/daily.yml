@@ -44,6 +44,15 @@ env:
   OPENALEX_EMAIL: ${{ vars.OPENALEX_EMAIL }}
   OPENREVIEW_VENUES: ${{ vars.OPENREVIEW_VENUES }}
 
+  # GitHub Trending 配置（可选）
+  GITHUB_TRENDING_ENABLED: ${{ vars.GITHUB_TRENDING_ENABLED }}
+  GITHUB_TRENDING_SINCE: ${{ vars.GITHUB_TRENDING_SINCE }}
+  GITHUB_TRENDING_LANGUAGE: ${{ vars.GITHUB_TRENDING_LANGUAGE }}
+  GITHUB_TRENDING_LIMIT: ${{ vars.GITHUB_TRENDING_LIMIT }}
+  GITHUB_TRENDING_MIN_STARS: ${{ vars.GITHUB_TRENDING_MIN_STARS }}
+  GITHUB_TRENDING_WEIGHT: ${{ vars.GITHUB_TRENDING_WEIGHT }}
+  GITHUB_TRENDING_README_MAX_CHARS: ${{ vars.GITHUB_TRENDING_README_MAX_CHARS }}
+
 jobs:
   # ============================================================
   # Job 1: 数据获取与分析
@@ -106,8 +115,8 @@ jobs:
           fi
           echo "✅ arXiv 任务完成（无论是否有新论文，后续步骤都会继续执行）"
 
-      # 6. 获取 RSS 热点（无论是否有新论文）
-      - name: Fetch RSS news
+      # 6. 获取热点（RSS/Crawler/GitHub Trending，无论是否有新论文）
+      - name: Fetch news and GitHub Trending
         shell: bash -el {0}
         run: |
           python scripts/daily_crawl.py --task rss --skip-config-check

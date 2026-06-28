@@ -9,8 +9,8 @@ AI Insight Tracker 是一个自动化的学术论文和 AI 技术热点追踪系
 | 功能 | 描述 |
 |------|------|
 | 📚 **论文追踪** | 通过 arXiv API 自动获取指定分类的最新论文 |
-| 🔥 **AI 新闻** | 从 AI 头部公司博客获取第一手资讯（OpenAI、Anthropic、DeepSeek、Google Research、DeepMind、Qwen 等） |
-| 🤖 **浅度分析** | LLM 自动生成结构化论文/新闻摘要 |
+| 🔥 **AI 新闻** | 从 AI 头部公司博客和 GitHub Trending 周榜获取第一手资讯与开源热点 |
+| 🤖 **浅度分析** | LLM 自动生成结构化论文/新闻摘要，并基于 GitHub 仓库 README 生成项目简介 |
 | 🔬 **深度分析** | Multi-Agent 系统对指定论文深入研究，支持论文全文分析 |
 | 📄 **全文分析** | 基于 arXiv 官方 HTML 全文获取与结构化解析，支持按章节/关键词查询并进行深度分析 |
 | 📊 **每日报告** | 生成学术日报，推送到飞书 |
@@ -25,7 +25,7 @@ AI Insight Tracker 是一个自动化的学术论文和 AI 技术热点追踪系
 │                                                                  │
 │  触发层     定时触发 (GitHub Actions)  │  Issue 触发 (深度分析) │
 │                      │                           │               │
-│  采集层     arXiv API  │  新闻获取 (RSS + Crawler)              │
+│  采集层     arXiv API  │  新闻获取 (RSS + Crawler + GitHub)     │
 │                      │                                           │
 │  分析层     浅度分析 (LangChain)  │  深度分析 (LangGraph)        │
 │                      │                                           │
@@ -78,7 +78,7 @@ python scripts/daily_crawl.py --task all
 
 # 或分步执行
 python scripts/daily_crawl.py --task arxiv     # arXiv 论文获取
-python scripts/daily_crawl.py --task news      # 新闻获取
+python scripts/daily_crawl.py --task news      # 新闻获取（RSS/Crawler/GitHub Trending）
 python scripts/daily_crawl.py --task analyze   # 浅度分析
 python scripts/daily_crawl.py --task summary   # 生成日报
 python scripts/daily_crawl.py --task notify    # 发送通知
@@ -123,6 +123,13 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 | `PAPER_QUALITY_MAX_TOTAL` | 每日最多保留高分论文数 | `30` |
 | `OPENALEX_EMAIL` | OpenAlex polite pool 邮箱 | 空 |
 | `OPENREVIEW_VENUES` | OpenReview venue ID 列表，逗号分隔 | 空 |
+| `GITHUB_TRENDING_ENABLED` | 是否启用 GitHub Trending 抓取 | `true` |
+| `GITHUB_TRENDING_SINCE` | GitHub Trending 时间范围 | `weekly` |
+| `GITHUB_TRENDING_LANGUAGE` | GitHub Trending 语言筛选，空值为全站 | 空 |
+| `GITHUB_TRENDING_LIMIT` | GitHub Trending 最多保留仓库数 | `25` |
+| `GITHUB_TRENDING_MIN_STARS` | GitHub Trending 最低 stars，需严格大于该值 | `1000` |
+| `GITHUB_TRENDING_WEIGHT` | GitHub Trending 排序权重 | `0.9` |
+| `GITHUB_TRENDING_README_MAX_CHARS` | README 送入 LLM 前的最大字符数 | `8000` |
 
 #### 4. 启用 GitHub Pages
 
@@ -176,7 +183,7 @@ config/settings.yaml (最高) > 环境变量 > 默认值 (最低)
 
 ### 新闻源
 
-项目支持从以下 AI 公司获取新闻：
+项目支持从以下 AI 公司和开源热点源获取新闻：
 
 | 公司 | 获取方式 | 状态 |
 |------|----------|------|
@@ -191,8 +198,10 @@ config/settings.yaml (最高) > 环境变量 > 默认值 (最低)
 | DeepMind | Crawler | ✅ |
 | Gemini | Crawler | ✅ |
 | Qwen (通义千问) | Crawler | ✅ |
+| GitHub Trending 周榜 | HTML + README | ✅ |
 
 > 说明：新闻条目新增 `content` 字段用于存储正文全文（清洗后的纯文本）。RSS 源优先从 `entry.content` 提取全文；Crawler 源会对每个源最新 10 条逐篇抓取详情页补全 `content`。
+> GitHub Trending 默认抓取周榜 Top 25，仅保留 stars > 1000 的仓库；首次入库后不重复生成普通热点，但会维护 `data/github_trending_repos.json` 记录 stars 快照，在 7 天内翻倍或达到首次 stars 的 10 倍时生成一次增长提醒。仓库介绍只基于 README 文本生成，不 clone 仓库、不读取源码。
 
 ## 📁 项目结构
 
@@ -223,7 +232,10 @@ ai-insight-tracker/
 │   │   │   └── html_fulltext.py  # arXiv 官方 HTML 全文获取与结构化解析
 │   │   ├── ids_tracker.py        # ID 追踪器（fetched/analyzed 两套文件，默认保留30天）
 │   │   ├── news/                 # 新闻源统一入口
-│   │   │   ├── fetcher.py        # 混合获取器 (RSS + Crawler)
+│   │   │   ├── fetcher.py        # 混合获取器 (RSS + Crawler + GitHub Trending)
+│   │   │   ├── github_trending.py # GitHub Trending 周榜抓取
+│   │   │   ├── github_trending_state.py # GitHub 仓库去重与 stars 提醒状态
+│   │   │   ├── github_readme.py  # GitHub README 获取与清洗
 │   │   │   ├── rss_fetcher.py    # RSS 异步获取器
 │   │   │   ├── rss_parser.py     # RSS 解析器
 │   │   │   └── sources.py        # 新闻源配置加载
@@ -277,6 +289,7 @@ ai-insight-tracker/
 ├── data/                         # 数据存储
 │   ├── papers/                   # 论文数据 (JSON)
 │   ├── news/                     # 热点数据 (JSON)
+│   ├── github_trending_repos.json # GitHub Trending 仓库状态
 │   ├── reports/                  # 日报数据 (JSON)
 │   └── analysis/deep/            # 深度分析结果 (Markdown)
 ├── app/frontend/                 # React 前端

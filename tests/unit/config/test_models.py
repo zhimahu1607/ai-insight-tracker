@@ -13,6 +13,7 @@ from src.config.models import (
     SearchConfig,
     AnalysisConfig,
     NotificationConfig,
+    NewsFetcherConfig,
     AdvancedConfig,
     Settings,
 )
@@ -97,6 +98,27 @@ class TestNotificationConfig:
         assert config.language == "zh"
         assert config.max_papers == 10
         assert config.max_news == 5
+
+
+class TestNewsFetcherConfig:
+    """NewsFetcherConfig 模型测试"""
+
+    def test_github_trending_defaults(self):
+        """GitHub Trending 默认配置"""
+        config = NewsFetcherConfig()
+
+        assert config.github_trending_enabled is True
+        assert config.github_trending_since == "weekly"
+        assert config.github_trending_language == ""
+        assert config.github_trending_limit == 25
+        assert config.github_trending_min_stars == 1000
+        assert config.github_trending_weight == 0.9
+        assert config.github_trending_readme_max_chars == 8000
+
+    def test_github_trending_weight_range(self):
+        """GitHub Trending 权重范围验证"""
+        with pytest.raises(ValidationError):
+            NewsFetcherConfig(github_trending_weight=1.1)
 
 
 class TestAdvancedConfig:

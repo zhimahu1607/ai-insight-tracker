@@ -18,6 +18,7 @@ from .models import (
     AnalysisConfig,
     ArxivConfig,
     LLMConfig,
+    NewsFetcherConfig,
     NotificationConfig,
     SearchConfig,
     Settings,
@@ -42,6 +43,7 @@ __all__ = [
     "ArxivConfig",
     "SearchConfig",
     "AnalysisConfig",
+    "NewsFetcherConfig",
     "NotificationConfig",
     "AdvancedConfig",
     # 配置加载
