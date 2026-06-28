@@ -47,7 +47,7 @@ def show_first_run_guide() -> None:
 
 [bold cyan]方式 3: 设置环境变量[/bold cyan]
   [green]export LLM_PROVIDER=deepseek[/green]
-  [green]export LLM_MODEL=deepseek-chat[/green]
+  [green]export LLM_MODEL=deepseek-v4-pro[/green]
   [green]export LLM_API_KEY=your-api-key[/green]
 
 配置完成后，重新运行程序即可。
@@ -90,7 +90,7 @@ def show_config_errors(errors: list[str]) -> None:
 
 2. 设置环境变量:
    [green]export LLM_PROVIDER=deepseek[/green]
-   [green]export LLM_MODEL=deepseek-chat[/green]
+   [green]export LLM_MODEL=deepseek-v4-pro[/green]
    [green]export LLM_API_KEY=your-api-key[/green]
 """
     console.print(Panel(message, title="❌ 配置错误", border_style="red"))

@@ -2,7 +2,7 @@
 Researcher Agent 节点
 
 负责执行具体的信息搜索和论文分析任务。
-使用自定义 ReAct 执行器，支持 DeepSeek reasoner 的 reasoning_content 字段。
+使用自定义 ReAct 执行器，支持 DeepSeek thinking 的 reasoning_content 字段。
 支持论文全文内容查询（当 arXiv HTML 全文解析成功时）。
 """
 
@@ -89,8 +89,8 @@ async def researcher_node(state: DeepAnalysisState) -> dict:
         async with LLMClient(temperature=0.3) as llm_client:
             langchain_llm = llm_client.get_langchain_client()
 
-            # 使用自定义 ReAct 执行器（支持 DeepSeek reasoner）
-            # 传递 api_key 和 model 以便检测是否使用 Reasoner 模式
+            # 使用自定义 ReAct 执行器（支持 DeepSeek thinking）
+            # 传递 api_key 和 model 以便检测是否需要直连适配
             result = await execute_react_agent(
                 llm=langchain_llm,
                 tools=tools,

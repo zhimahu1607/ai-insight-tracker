@@ -88,11 +88,11 @@ PROVIDER_CONFIGS: dict[str, ProviderConfig] = {
     ),
     "deepseek": ProviderConfig(
         provider=LLMProvider.DEEPSEEK,
-        base_url="https://api.deepseek.com/v1",
-        # DeepSeek: deepseek-chat 支持 function_calling，reasoner 不支持
+        base_url="https://api.deepseek.com",
+        # DeepSeek V4: deepseek-v4-pro / deepseek-v4-flash 支持 Tool Calls 和 JSON Output
         default_structured_method="function_calling",
         supports_json_schema=False,
-        supports_function_calling=True,  # 仅 deepseek-chat/coder
+        supports_function_calling=True,
         supports_json_mode=True,
     ),
     "qwen": ProviderConfig(

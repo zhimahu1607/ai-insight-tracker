@@ -649,8 +649,9 @@ async def main() -> int:
             return 0
 
         elif args.task == "summary":
-            result = await task_summary()
-            return 0 if result else 3
+            # 无当日数据时 task_summary 返回 None，视为正常跳过（与 CI 工作流一致）
+            await task_summary()
+            return 0
 
         elif args.task == "notify":
             success = await task_notify()

@@ -238,13 +238,13 @@ class TestLoadEnvConfig:
         
         with patch.dict(os.environ, {
             "LLM_PROVIDER": "deepseek",
-            "LLM_MODEL": "deepseek-chat",
+            "LLM_MODEL": "deepseek-v4-pro",
             "LLM_API_KEY": "test-key",
         }):
             result = _load_env_config()
         
         assert result["llm"]["provider"] == "deepseek"
-        assert result["llm"]["model"] == "deepseek-chat"
+        assert result["llm"]["model"] == "deepseek-v4-pro"
         assert result["llm"]["api_key"] == "test-key"
     
     def test_load_categories_env(self):
@@ -287,7 +287,7 @@ class TestLoadSettings:
         settings = load_settings(config_path=config_file)
         
         assert settings.llm.provider == "deepseek"
-        assert settings.llm.model == "deepseek-chat"
+        assert settings.llm.model == "deepseek-v4-pro"
     
     def test_load_without_validation(self, temp_config_dir):
         """加载但不验证"""

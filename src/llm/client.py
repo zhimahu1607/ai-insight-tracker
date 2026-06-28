@@ -167,7 +167,7 @@ class LLMClient:
             return init_chat_model(model_provider=model_provider, **common_kwargs)
 
         # OpenAI 兼容模式（OpenRouter, DeepSeek, Qwen 等）
-        # DeepSeek reasoner 需要特殊处理
+        # DeepSeek thinking 工具调用需要保留 reasoning_content
         if provider_lower == "deepseek":
             from .deepseek_reasoner import create_deepseek_client
 

@@ -111,7 +111,7 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 | Variable | 说明 | 默认值 |
 |----------|------|--------|
 | `LLM_PROVIDER` | LLM 提供商 | `deepseek` |
-| `LLM_MODEL` | LLM 模型 | `deepseek-chat` |
+| `LLM_MODEL` | LLM 模型 | `deepseek-v4-pro` |
 | `CATEGORIES` | arXiv 分类 | `cs.AI,cs.CL,cs.CV,cs.LG` |
 | `LANGUAGE` | 输出语言 | `zh` |
 | `ARXIV_MAX_RESULTS` | arXiv 每页最大返回数（分页时为 page size） | `100` |
@@ -152,7 +152,7 @@ config/settings.yaml (最高) > 环境变量 > 默认值 (最低)
 
 | 提供商 | LLM_PROVIDER 值 | API Base URL |
 |--------|-----------------|--------------|
-| DeepSeek | `deepseek` | `https://api.deepseek.com/v1` |
+| DeepSeek | `deepseek` | `https://api.deepseek.com` |
 | OpenAI | `openai` | `https://api.openai.com/v1` |
 | Anthropic | `anthropic` | `https://api.anthropic.com/v1` |
 | Qwen | `qwen` | `https://dashscope.aliyuncs.com/compatible-mode/v1` |
@@ -325,7 +325,7 @@ ai-insight-tracker/
 - **langchain-google-genai**: Google Gemini
 - **结构化输出**: `with_structured_output()` 自动选择最佳策略
   - 优先级: `json_schema` > `function_calling` > `json_mode`
-  - 自动检测模型能力，如 `deepseek-reasoner` 自动回退到 `json_mode`
+  - DeepSeek V4（如 `deepseek-v4-pro`）使用 `function_calling`，旧推理模型自动回退到 `json_mode`
 
 ### 前端
 

@@ -90,7 +90,7 @@ def mock_settings_dict() -> dict[str, Any]:
     return {
         "llm": {
             "provider": "deepseek",
-            "model": "deepseek-chat",
+            "model": "deepseek-v4-pro",
             "api_key": "test-api-key-12345",
         },
         "arxiv": {
@@ -350,7 +350,7 @@ def mock_llm_client():
         mock_instance.__aenter__ = AsyncMock(return_value=mock_instance)
         mock_instance.__aexit__ = AsyncMock(return_value=None)
         mock_instance.provider = "deepseek"
-        mock_instance.model = "deepseek-chat"
+        mock_instance.model = "deepseek-v4-pro"
         mock_class.return_value = mock_instance
         yield mock_instance
 

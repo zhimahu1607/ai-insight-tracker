@@ -1,19 +1,19 @@
 """
-DeepSeek Reasoner 工具调用适配器
+DeepSeek thinking 工具调用适配器
 
-DeepSeek reasoner 模型在工具调用时需要特殊处理 reasoning_content 字段。
-根据官方文档: https://api-docs.deepseek.com/zh-cn/guides/tool_calls
+DeepSeek V4 thinking 模型在工具调用时需要特殊处理 reasoning_content 字段。
+根据官方文档: https://api-docs.deepseek.com/guides/thinking_mode
 
 由于 LangChain 和 OpenAI SDK 不支持 reasoning_content 字段，
 本模块直接使用 httpx 调用 DeepSeek API。
 
-注意：deepseek-reasoner 的工具调用需要使用 beta 端点：
-https://api.deepseek.com/beta
+注意：DeepSeek V4 使用 OpenAI 兼容格式，base_url 为：
+https://api.deepseek.com
 """
 
 import json
 import logging
-from typing import Any, Optional, List, Sequence
+from typing import Any, Optional, Sequence
 
 import httpx
 from langchain_core.messages import (
@@ -28,19 +28,28 @@ from langchain_openai import ChatOpenAI
 
 logger = logging.getLogger(__name__)
 
-# DeepSeek Reasoner 工具调用专用 Beta 端点
-DEEPSEEK_BETA_BASE_URL = "https://api.deepseek.com/beta"
+# DeepSeek OpenAI 兼容 API Base URL
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"
+
+
+def is_deepseek_v4_model(model: str) -> bool:
+    """检查是否为 DeepSeek V4 模型"""
+    return "deepseek-v4" in model.lower()
 
 
 def is_deepseek_reasoner(model: str) -> bool:
-    """检查是否为 DeepSeek reasoner 模型"""
+    """检查是否需要保留 reasoning_content 的 DeepSeek 模型"""
     model_lower = model.lower()
-    return "reasoner" in model_lower or "r1" in model_lower
+    return (
+        is_deepseek_v4_model(model)
+        or "reasoner" in model_lower
+        or "r1" in model_lower
+    )
 
 
 class DeepSeekReasonerClient:
     """
-    DeepSeek Reasoner 直接 HTTP 客户端
+    DeepSeek thinking 直接 HTTP 客户端
 
     直接使用 httpx 调用 DeepSeek API，完全控制 reasoning_content 字段的处理。
     """
@@ -48,11 +57,12 @@ class DeepSeekReasonerClient:
     def __init__(
         self,
         api_key: str,
-        model: str = "deepseek-reasoner",
-        base_url: str = DEEPSEEK_BETA_BASE_URL,
+        model: str = "deepseek-v4-pro",
+        base_url: str = DEEPSEEK_BASE_URL,
         temperature: float = 0.7,
         max_tokens: Optional[int] = None,
         timeout: float = 300.0,
+        reasoning_effort: str = "high",
     ):
         self.api_key = api_key
         self.model = model
@@ -60,6 +70,7 @@ class DeepSeekReasonerClient:
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.timeout = timeout
+        self.reasoning_effort = reasoning_effort
 
     def _message_to_dict(self, msg: BaseMessage) -> dict[str, Any]:
         """将 LangChain 消息转换为 API 格式"""
@@ -76,7 +87,7 @@ class DeepSeekReasonerClient:
             else:
                 result["content"] = ""
 
-            # 添加 reasoning_content（DeepSeek Reasoner 必需）
+            # 工具调用场景必须把 reasoning_content 回传给 DeepSeek
             reasoning_content = msg.additional_kwargs.get("reasoning_content")
             if reasoning_content:
                 result["reasoning_content"] = reasoning_content
@@ -192,6 +203,10 @@ class DeepSeekReasonerClient:
             "temperature": self.temperature,
         }
 
+        if is_deepseek_v4_model(self.model):
+            request_body["thinking"] = {"type": "enabled"}
+            request_body["reasoning_effort"] = self.reasoning_effort
+
         if self.max_tokens:
             request_body["max_tokens"] = self.max_tokens
 
@@ -237,7 +252,7 @@ async def execute_deepseek_reasoner_agent(
     timeout: float = 300.0,
 ) -> dict[str, list[BaseMessage]]:
     """
-    执行 DeepSeek Reasoner ReAct Agent
+    执行 DeepSeek thinking ReAct Agent
 
     使用直接 HTTP 调用，确保 reasoning_content 被正确处理。
 
@@ -267,12 +282,12 @@ async def execute_deepseek_reasoner_agent(
     all_messages = list(messages)
 
     for iteration in range(max_iterations):
-        logger.debug(f"DeepSeek Reasoner 迭代 {iteration + 1}/{max_iterations}")
+        logger.debug(f"DeepSeek thinking 迭代 {iteration + 1}/{max_iterations}")
 
         try:
             response = await client.chat(all_messages, tools)
         except Exception as e:
-            logger.error(f"DeepSeek Reasoner 调用失败: {e}")
+            logger.error(f"DeepSeek thinking 调用失败: {e}")
             error_msg = AIMessage(content=f"调用失败: {e}")
             all_messages.append(error_msg)
             break
@@ -339,7 +354,7 @@ def create_deepseek_client(
     """
     创建 DeepSeek 客户端
 
-    注意：对于 reasoner 模型的工具调用，应使用 execute_deepseek_reasoner_agent 函数，
+    注意：对于 DeepSeek thinking 工具调用，应使用 execute_deepseek_reasoner_agent 函数，
     而不是这个返回的 LangChain 客户端。此客户端主要用于非工具调用场景。
 
     Args:
@@ -354,15 +369,13 @@ def create_deepseek_client(
     Returns:
         ChatOpenAI 实例
     """
-    # 对于 reasoner 模型，使用 beta 端点
-    if is_deepseek_reasoner(model):
-        actual_base_url = DEEPSEEK_BETA_BASE_URL
-        logger.info(
-            f"使用 DeepSeek Reasoner: {model}, 端点: {actual_base_url}"
-        )
-    else:
-        actual_base_url = base_url
-        logger.debug(f"使用 DeepSeek: {model}")
+    actual_base_url = base_url
+    logger.debug(f"使用 DeepSeek: {model}, 端点: {actual_base_url}")
+
+    deepseek_kwargs: dict[str, Any] = {}
+    if is_deepseek_v4_model(model):
+        deepseek_kwargs["extra_body"] = {"thinking": {"type": "enabled"}}
+        deepseek_kwargs["reasoning_effort"] = "high"
 
     return ChatOpenAI(
         model=model,
@@ -372,4 +385,5 @@ def create_deepseek_client(
         max_tokens=max_tokens,
         timeout=timeout,
         max_retries=max_retries,
+        **deepseek_kwargs,
     )

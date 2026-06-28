@@ -128,7 +128,7 @@ class TestSettings:
         settings = Settings(
             llm=LLMConfig(
                 provider="deepseek",
-                model="deepseek-chat",
+                model="deepseek-v4-pro",
                 api_key="test-key",
             )
         )
@@ -141,7 +141,7 @@ class TestSettings:
         settings = Settings(
             llm=LLMConfig(
                 provider="",
-                model="deepseek-chat",
+                model="deepseek-v4-pro",
                 api_key="test-key",
             )
         )
@@ -167,7 +167,7 @@ class TestSettings:
         settings = Settings(
             llm=LLMConfig(
                 provider="deepseek",
-                model="deepseek-chat",
+                model="deepseek-v4-pro",
                 api_key="",
             )
         )

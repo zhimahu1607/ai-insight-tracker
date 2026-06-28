@@ -1,8 +1,8 @@
 """
 ReAct Agent 执行器
 
-支持普通 LLM 和 DeepSeek Reasoner 的 ReAct Agent 执行。
-对于 DeepSeek Reasoner，使用直接 HTTP 调用以正确处理 reasoning_content 字段。
+支持普通 LLM 和 DeepSeek thinking 模型的 ReAct Agent 执行。
+对于 DeepSeek thinking 工具调用，使用直接 HTTP 调用以正确处理 reasoning_content 字段。
 """
 
 import json
@@ -34,29 +34,29 @@ async def execute_react_agent(
     tools: Sequence[BaseTool],
     messages: list[BaseMessage],
     max_iterations: int = MAX_TOOL_ITERATIONS,
-    # DeepSeek Reasoner 特定参数
+    # DeepSeek thinking 特定参数
     api_key: Optional[str] = None,
     model: Optional[str] = None,
 ) -> dict[str, list[BaseMessage]]:
     """
     执行 ReAct Agent
 
-    自动检测是否使用 DeepSeek Reasoner，并选择合适的执行方式。
+    自动检测是否使用 DeepSeek thinking 模型，并选择合适的执行方式。
 
     Args:
         llm: LangChain Chat 模型实例
         tools: 工具列表
         messages: 初始消息列表
         max_iterations: 最大工具调用迭代次数
-        api_key: DeepSeek API Key (用于 Reasoner 模式)
-        model: 模型名称 (用于检测 Reasoner 模式)
+        api_key: DeepSeek API Key (用于 thinking 模式)
+        model: 模型名称 (用于检测 thinking 模式)
 
     Returns:
         包含 "messages" 键的字典，值为完整的消息历史
     """
-    # 检查是否为 DeepSeek Reasoner
+    # 检查是否为 DeepSeek thinking 模型
     if model and is_deepseek_reasoner(model) and api_key:
-        logger.info("使用 DeepSeek Reasoner 直接 HTTP 模式")
+        logger.info("使用 DeepSeek thinking 直接 HTTP 模式")
         return await execute_deepseek_reasoner_agent(
             api_key=api_key,
             model=model,
@@ -78,7 +78,7 @@ async def _execute_standard_react(
     """
     标准 LangChain ReAct 执行
 
-    用于非 DeepSeek Reasoner 的模型。
+    用于非 DeepSeek thinking 的模型。
     """
     # 绑定工具到 LLM
     llm_with_tools = llm.bind_tools(tools)

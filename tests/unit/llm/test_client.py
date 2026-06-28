@@ -37,7 +37,7 @@ class TestLLMClientInit:
                 client = LLMClient()
         
         assert client.provider == "deepseek"
-        assert client.model == "deepseek-chat"
+        assert client.model == "deepseek-v4-pro"
     
     def test_init_with_params(self, mock_settings):
         """使用参数覆盖配置"""
@@ -85,7 +85,7 @@ class TestLLMClientProperties:
             with patch("langchain_openai.ChatOpenAI"):
                 client = LLMClient()
         
-        assert client.model == "deepseek-chat"
+        assert client.model == "deepseek-v4-pro"
     
     def test_api_key_masked(self, mock_settings):
         """API Key 脱敏显示"""

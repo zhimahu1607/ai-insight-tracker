@@ -21,7 +21,7 @@ import yaml
 
 # 各提供商的默认模型
 DEFAULT_MODELS = {
-    "deepseek": "deepseek-chat",
+    "deepseek": "deepseek-v4-pro",
     "openai": "gpt-4o-mini",
     "anthropic": "claude-3-5-sonnet-20241022",
     "qwen": "qwen-plus",

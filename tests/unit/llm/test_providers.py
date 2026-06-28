@@ -57,7 +57,7 @@ class TestProviderConfigs:
         config = PROVIDER_CONFIGS["deepseek"]
         
         assert config.provider == LLMProvider.DEEPSEEK
-        assert "deepseek.com" in config.base_url
+        assert config.base_url == "https://api.deepseek.com"
         # DeepSeek 支持 function_calling 和 json_mode
         assert config.supports_function_calling is True
         assert config.supports_json_mode is True
@@ -155,10 +155,10 @@ class TestGetStructuredOutputMethod:
         assert get_structured_output_method("anthropic", "claude-3-5-sonnet") == "function_calling"
         assert get_structured_output_method("anthropic", "claude-3-opus") == "function_calling"
     
-    def test_deepseek_chat_uses_function_calling(self):
-        """DeepSeek chat 模型使用 function_calling"""
-        assert get_structured_output_method("deepseek", "deepseek-chat") == "function_calling"
-        assert get_structured_output_method("deepseek", "deepseek-coder") == "function_calling"
+    def test_deepseek_v4_uses_function_calling(self):
+        """DeepSeek V4 模型使用 function_calling"""
+        assert get_structured_output_method("deepseek", "deepseek-v4-pro") == "function_calling"
+        assert get_structured_output_method("deepseek", "deepseek-v4-flash") == "function_calling"
     
     def test_deepseek_reasoner_uses_json_mode(self):
         """DeepSeek reasoner 模型使用 json_mode"""
