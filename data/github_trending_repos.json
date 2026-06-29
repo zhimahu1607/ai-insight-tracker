@@ -1,0 +1,246 @@
+{
+  "repositories": {
+    "alibaba/page-agent": {
+      "repo_id": "alibaba/page-agent",
+      "full_name": "alibaba/page-agent",
+      "url": "https://github.com/alibaba/page-agent",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 20518,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 20518,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "aws/agent-toolkit-for-aws": {
+      "repo_id": "aws/agent-toolkit-for-aws",
+      "full_name": "aws/agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 1555,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 1555,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "builderio/agent-native": {
+      "repo_id": "builderio/agent-native",
+      "full_name": "BuilderIO/agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 2946,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 2946,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "bytedance/deer-flow": {
+      "repo_id": "bytedance/deer-flow",
+      "full_name": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 75323,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 75323,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "calesthio/openmontage": {
+      "repo_id": "calesthio/openmontage",
+      "full_name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 27471,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 27471,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "deusdata/codebase-memory-mcp": {
+      "repo_id": "deusdata/codebase-memory-mcp",
+      "full_name": "DeusData/codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 20222,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 20222,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "google-labs-code/design.md": {
+      "repo_id": "google-labs-code/design.md",
+      "full_name": "google-labs-code/design.md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 22965,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 22965,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "interviewstreet/hiring-agent": {
+      "repo_id": "interviewstreet/hiring-agent",
+      "full_name": "interviewstreet/hiring-agent",
+      "url": "https://github.com/interviewstreet/hiring-agent",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 3265,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 3265,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "jamiepine/voicebox": {
+      "repo_id": "jamiepine/voicebox",
+      "full_name": "jamiepine/voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 35551,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 35551,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "jcodesmore/ai-website-cloner-template": {
+      "repo_id": "jcodesmore/ai-website-cloner-template",
+      "full_name": "JCodesMore/ai-website-cloner-template",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 23105,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 23105,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "koala73/worldmonitor": {
+      "repo_id": "koala73/worldmonitor",
+      "full_name": "koala73/worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 60746,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 60746,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "kunchenguid/no-mistakes": {
+      "repo_id": "kunchenguid/no-mistakes",
+      "full_name": "kunchenguid/no-mistakes",
+      "url": "https://github.com/kunchenguid/no-mistakes",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 4132,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 4132,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "mukul975/anthropic-cybersecurity-skills": {
+      "repo_id": "mukul975/anthropic-cybersecurity-skills",
+      "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 22776,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 22776,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "nanmicoder/mediacrawler": {
+      "repo_id": "nanmicoder/mediacrawler",
+      "full_name": "NanmiCoder/MediaCrawler",
+      "url": "https://github.com/NanmiCoder/MediaCrawler",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 54116,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 54116,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "palmier-io/palmier-pro": {
+      "repo_id": "palmier-io/palmier-pro",
+      "full_name": "palmier-io/palmier-pro",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 9352,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 9352,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "panniantong/agent-reach": {
+      "repo_id": "panniantong/agent-reach",
+      "full_name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 44816,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 44816,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "penpot/penpot": {
+      "repo_id": "penpot/penpot",
+      "full_name": "penpot/penpot",
+      "url": "https://github.com/penpot/penpot",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 54451,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 54451,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "simplex-chat/simplex-chat": {
+      "repo_id": "simplex-chat/simplex-chat",
+      "full_name": "simplex-chat/simplex-chat",
+      "url": "https://github.com/simplex-chat/simplex-chat",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 15421,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 15421,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "stablyai/orca": {
+      "repo_id": "stablyai/orca",
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 8754,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 8754,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "stirling-tools/stirling-pdf": {
+      "repo_id": "stirling-tools/stirling-pdf",
+      "full_name": "Stirling-Tools/Stirling-PDF",
+      "url": "https://github.com/Stirling-Tools/Stirling-PDF",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 85020,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 85020,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "topoteretes/cognee": {
+      "repo_id": "topoteretes/cognee",
+      "full_name": "topoteretes/cognee",
+      "url": "https://github.com/topoteretes/cognee",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 25054,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 25054,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "zhulinsen/daily_stock_analysis": {
+      "repo_id": "zhulinsen/daily_stock_analysis",
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "first_seen_stars": 51321,
+      "last_seen_at": "2026-06-29T06:13:07.279759+00:00",
+      "last_seen_stars": 51321,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    }
+  }
+}
