@@ -226,29 +226,26 @@ def filter_tracked_papers(
     papers: list[Paper],
     *,
     min_score: float,
-    candidate_min_score: float,
     max_per_category: int,
     max_total: int,
 ) -> tuple[list[Paper], list[Paper]]:
     """
     Split papers into kept/rejected candidates.
 
-    Papers with no score are kept as fail-open candidates. Scored papers below the
-    candidate threshold are rejected before expensive LLM analysis.
+    Only papers with an explicit tracking score at or above min_score are kept.
     """
     eligible: list[Paper] = []
     rejected: list[Paper] = []
 
     for paper in papers:
         score = paper.tracking_score
-        if score is None or score >= candidate_min_score:
+        if score is not None and score >= min_score:
             eligible.append(paper)
         else:
             rejected.append(paper)
 
     def sort_key(paper: Paper) -> tuple[float, float]:
-        score = paper.tracking_score if paper.tracking_score is not None else -1.0
-        return (-score, -paper.published.timestamp())
+        return (-(paper.tracking_score or 0.0), -paper.published.timestamp())
 
     eligible = sorted(eligible, key=sort_key)
     if max_total <= 0 and max_per_category <= 0:
@@ -257,25 +254,19 @@ def filter_tracked_papers(
     kept: list[Paper] = []
     counts_by_category: dict[str, int] = defaultdict(int)
     for paper in eligible:
-        score = paper.tracking_score
-        is_high_score = score is not None and score >= min_score
-        is_unknown = score is None
         category_count = counts_by_category[paper.primary_category]
 
-        if max_total > 0 and len([p for p in kept if p.tracking_score is not None]) >= max_total:
-            if not is_unknown:
-                rejected.append(paper)
-                continue
+        if max_total > 0 and len(kept) >= max_total:
+            rejected.append(paper)
+            continue
         if (
             max_per_category > 0
             and category_count >= max_per_category
-            and is_high_score
         ):
             rejected.append(paper)
             continue
 
         kept.append(paper)
-        if is_high_score:
-            counts_by_category[paper.primary_category] += 1
+        counts_by_category[paper.primary_category] += 1
 
     return kept, rejected

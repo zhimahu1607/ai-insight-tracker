@@ -58,7 +58,6 @@ ENV_MAPPING: dict[str, str] = {
     # 论文质量信号配置
     "PAPER_QUALITY_ENABLED": "paper_quality.enabled",
     "PAPER_QUALITY_MIN_SCORE": "paper_quality.min_tracking_score",
-    "PAPER_QUALITY_CANDIDATE_MIN_SCORE": "paper_quality.candidate_min_score",
     "PAPER_QUALITY_MAX_PER_CATEGORY": "paper_quality.max_papers_per_category",
     "PAPER_QUALITY_MAX_TOTAL": "paper_quality.max_papers_total",
     "PAPER_QUALITY_MAX_CONCURRENT": "paper_quality.max_concurrent",
@@ -183,7 +182,6 @@ def _convert_env_value(path: str, value: str) -> Any:
     float_paths = {
         "arxiv.request_delay",
         "paper_quality.min_tracking_score",
-        "paper_quality.candidate_min_score",
         "paper_quality.timeout",
         "news.github_trending_weight",
     }

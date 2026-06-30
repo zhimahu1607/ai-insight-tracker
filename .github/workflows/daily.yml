@@ -3,14 +3,14 @@
 # 定时获取 arXiv 论文和 RSS 热点，执行浅度分析，生成日报，发送通知，部署前端。
 #
 # 触发条件:
-#   - 定时: 每天 UTC 01:30 (北京时间 09:30)
+#   - 定时: 每天 UTC 16:00 (北京时间次日 00:00)
 #   - 手动: workflow_dispatch
 
 name: Daily Crawl & Deploy
 
 on:
   schedule:
-    - cron: "30 1 * * *"  # UTC 01:30 (北京时间 09:30)
+    - cron: "0 16 * * *"  # UTC 16:00 (北京时间次日 00:00)
   workflow_dispatch:       # 支持手动触发
     inputs:
       skip_notify:
@@ -38,7 +38,6 @@ env:
   # 论文质量信号配置（可选）
   PAPER_QUALITY_ENABLED: ${{ vars.PAPER_QUALITY_ENABLED }}
   PAPER_QUALITY_MIN_SCORE: ${{ vars.PAPER_QUALITY_MIN_SCORE }}
-  PAPER_QUALITY_CANDIDATE_MIN_SCORE: ${{ vars.PAPER_QUALITY_CANDIDATE_MIN_SCORE }}
   PAPER_QUALITY_MAX_PER_CATEGORY: ${{ vars.PAPER_QUALITY_MAX_PER_CATEGORY }}
   PAPER_QUALITY_MAX_TOTAL: ${{ vars.PAPER_QUALITY_MAX_TOTAL }}
   OPENALEX_EMAIL: ${{ vars.OPENALEX_EMAIL }}

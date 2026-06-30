@@ -117,8 +117,7 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 | `ARXIV_MAX_RESULTS` | arXiv 每页最大返回数（分页时为 page size） | `100` |
 | `ARXIV_MAX_PAGES` | arXiv 每分类最多分页次数（安全上限） | `20` |
 | `PAPER_QUALITY_ENABLED` | 是否启用外部论文质量信号 | `true` |
-| `PAPER_QUALITY_MIN_SCORE` | 进入浅度分析的最低追踪分 | `70` |
-| `PAPER_QUALITY_CANDIDATE_MIN_SCORE` | 保存候选论文的最低追踪分 | `50` |
+| `PAPER_QUALITY_MIN_SCORE` | 记录并进入浅度分析的最低追踪分 | `70` |
 | `PAPER_QUALITY_MAX_PER_CATEGORY` | 每个主分类最多保留高分论文数 | `10` |
 | `PAPER_QUALITY_MAX_TOTAL` | 每日最多保留高分论文数 | `30` |
 | `OPENALEX_EMAIL` | OpenAlex polite pool 邮箱 | 空 |
@@ -137,7 +136,7 @@ python scripts/daily_crawl.py --task notify    # 发送通知
 
 #### 5. 等待每日自动运行
 
-工作流每天 UTC 01:30（北京时间 09:30）自动执行，也可手动触发。
+工作流每天 UTC 16:00（北京时间次日 00:00）自动执行，也可手动触发；每日数据文件按北京时间日期归档。
 
 ## ⚙️ 配置说明
 
@@ -179,7 +178,7 @@ config/settings.yaml (最高) > 环境变量 > 默认值 (最低)
 - `OpenAlex`: 机构、主题、FWCI、发表来源。
 - `OpenReview`: 可选 venue 的 accepted 论文和公开 review/decision 信号。
 
-默认策略为 fail-open：外部 API 不可用时不会清空日报；已有低分信号的论文会被挡在浅度分析前，以降低 LLM 成本和低质论文噪声。
+默认采用严格门槛：只有获得 `tracking_score` 且分数不低于 `PAPER_QUALITY_MIN_SCORE` 的论文才会写入 `data/papers/` 并进入浅度分析。无质量分的论文不会记录到主数据，也不会写入已抓取去重记录，以便后续窗口内重试。
 
 ### 新闻源
 

@@ -118,9 +118,6 @@ class PaperQualityConfig(BaseModel):
     min_tracking_score: float = Field(
         default=70.0, description="进入浅度分析/日报的最低追踪分"
     )
-    candidate_min_score: float = Field(
-        default=50.0, description="保存到候选池的最低追踪分"
-    )
     max_papers_per_category: int = Field(
         default=10, description="每个主分类最多保留的高分论文数"
     )

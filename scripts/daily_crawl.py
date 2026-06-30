@@ -29,6 +29,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Optional, TypeVar
+from zoneinfo import ZoneInfo
 
 # 将项目根目录添加到 Python 路径
 project_root = Path(__file__).parent.parent
@@ -68,11 +69,17 @@ DATA_DIR = project_root / "data"
 PAPERS_DIR = DATA_DIR / "papers"
 NEWS_DIR = DATA_DIR / "news"
 REPORTS_DIR = DATA_DIR / "reports"
+BEIJING_TZ = ZoneInfo("Asia/Shanghai")
 
 
-def get_today_date() -> str:
-    """获取今天的日期字符串 YYYY-MM-DD"""
-    return datetime.now().strftime("%Y-%m-%d")
+def get_today_date(now: datetime | None = None) -> str:
+    """获取北京时间日期字符串 YYYY-MM-DD。"""
+    current = now or datetime.now(BEIJING_TZ)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=BEIJING_TZ)
+    else:
+        current = current.astimezone(BEIJING_TZ)
+    return current.strftime("%Y-%m-%d")
 
 TModel = TypeVar("TModel", bound=BaseModel)
 
@@ -194,13 +201,13 @@ def merge_news_by_id_keep_success(
 
 
 def should_analyze_paper(paper: AnalyzedPaper) -> bool:
-    """质量信号启用时，只分析高分论文；无信号时 fail-open。"""
+    """质量信号启用时，只分析达到严格门槛的论文。"""
     settings = get_settings()
     quality = settings.paper_quality
     if not quality.enabled:
-        return True
+        return False
     if paper.tracking_score is None:
-        return True
+        return False
     return paper.tracking_score >= quality.min_tracking_score
 
 
@@ -256,10 +263,14 @@ async def task_arxiv() -> int:
         f"新论文 {len(new_papers)} 篇"
     )
 
-    openreview_papers = await fetch_openreview_papers(
-        quality_config.openreview_venues,
-        primary_category=categories[0] if categories else "cs.AI",
-        timeout=quality_config.timeout,
+    openreview_papers = (
+        await fetch_openreview_papers(
+            quality_config.openreview_venues,
+            primary_category=categories[0] if categories else "cs.AI",
+            timeout=quality_config.timeout,
+        )
+        if quality_config.enabled
+        else []
     )
     new_openreview_papers = [p for p in openreview_papers if p.id not in fetched_ids]
     if new_openreview_papers:
@@ -272,23 +283,28 @@ async def task_arxiv() -> int:
 
     if quality_config.enabled:
         all_new_papers = await enrich_papers_with_quality(all_new_papers, quality_config)
-        tracked_papers, rejected_papers = filter_tracked_papers(
-            all_new_papers,
-            min_score=quality_config.min_tracking_score,
-            candidate_min_score=quality_config.candidate_min_score,
-            max_per_category=quality_config.max_papers_per_category,
-            max_total=quality_config.max_papers_total,
-        )
-        logger.info(
-            "质量筛选完成: 保留 %s 篇, 过滤 %s 篇",
-            len(tracked_papers),
-            len(rejected_papers),
-        )
     else:
-        tracked_papers = all_new_papers
+        logger.warning("论文质量检测已关闭；严格模式下未评分论文不会保存或分析")
+
+    tracked_papers, rejected_papers = filter_tracked_papers(
+        all_new_papers,
+        min_score=quality_config.min_tracking_score,
+        max_per_category=quality_config.max_papers_per_category,
+        max_total=quality_config.max_papers_total,
+    )
+    unscored_rejected = [p for p in rejected_papers if p.tracking_score is None]
+    logger.info(
+        "质量筛选完成: 保留 %s 篇, 过滤 %s 篇（无评分待重试 %s 篇）",
+        len(tracked_papers),
+        len(rejected_papers),
+        len(unscored_rejected),
+    )
+
+    markable_paper_ids = [p.id for p in all_new_papers if p.tracking_score is not None]
 
     if not tracked_papers:
-        tracker.mark_papers([p.id for p in all_new_papers])
+        if markable_paper_ids:
+            tracker.mark_papers(markable_paper_ids)
         logger.info("质量筛选后无论文需要保存")
         return DedupStatus.NO_NEW_CONTENT
 
@@ -299,8 +315,8 @@ async def task_arxiv() -> int:
     merged = merge_papers_by_id_keep_success(existing, tracked_papers)
     save_models_json(merged, file_path, log_label="论文")
 
-    # 标记为已处理
-    tracker.mark_papers([p.id for p in all_new_papers])
+    # 标记已有明确质量结论的论文；无评分论文保留给后续窗口重试。
+    tracker.mark_papers(markable_paper_ids)
 
     logger.info(f"arXiv 任务完成: {len(tracked_papers)} 篇新论文进入追踪")
     return DedupStatus.HAS_NEW_CONTENT

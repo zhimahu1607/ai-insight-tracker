@@ -208,6 +208,20 @@ class TestConvertEnvValue:
         assert _convert_env_value("news.github_trending_readme_max_chars", "8000") == 8000
         assert _convert_env_value("news.github_trending_weight", "0.9") == 0.9
 
+    def test_convert_paper_quality_values(self):
+        """转换论文质量配置"""
+        from src.config.loader import _convert_env_value
+
+        assert _convert_env_value("paper_quality.enabled", "true") is True
+        assert _convert_env_value("paper_quality.enabled", "0") is False
+        assert _convert_env_value("paper_quality.min_tracking_score", "72.5") == 72.5
+        assert _convert_env_value("paper_quality.max_papers_per_category", "8") == 8
+        assert _convert_env_value("paper_quality.max_papers_total", "20") == 20
+        assert _convert_env_value("paper_quality.openreview_venues", "ICLR.cc/2026/Conference, NeurIPS.cc/2026/Conference") == [
+            "ICLR.cc/2026/Conference",
+            "NeurIPS.cc/2026/Conference",
+        ]
+
 
 class TestLoadYamlConfig:
     """_load_yaml_config 函数测试"""
@@ -294,6 +308,42 @@ class TestLoadEnvConfig:
         assert result["news"]["github_trending_min_stars"] == 1000
         assert result["news"]["github_trending_weight"] == 0.9
         assert result["news"]["github_trending_readme_max_chars"] == 8000
+
+    def test_load_paper_quality_env(self):
+        """加载论文质量环境变量"""
+        from src.config.loader import _load_env_config
+
+        with patch.dict(os.environ, {
+            "PAPER_QUALITY_ENABLED": "true",
+            "PAPER_QUALITY_MIN_SCORE": "75",
+            "PAPER_QUALITY_MAX_PER_CATEGORY": "6",
+            "PAPER_QUALITY_MAX_TOTAL": "18",
+            "PAPER_QUALITY_MAX_CONCURRENT": "4",
+            "PAPER_QUALITY_TIMEOUT": "15.5",
+            "SEMANTIC_SCHOLAR_API_KEY": "test-semantic-key",
+            "OPENALEX_EMAIL": "owner@example.com",
+            "OPENREVIEW_VENUES": "ICLR.cc/2026/Conference",
+        }, clear=False):
+            result = _load_env_config()
+
+        assert result["paper_quality"]["enabled"] is True
+        assert result["paper_quality"]["min_tracking_score"] == 75.0
+        assert result["paper_quality"]["max_papers_per_category"] == 6
+        assert result["paper_quality"]["max_papers_total"] == 18
+        assert result["paper_quality"]["max_concurrent"] == 4
+        assert result["paper_quality"]["timeout"] == 15.5
+        assert result["paper_quality"]["semantic_scholar_api_key"] == "test-semantic-key"
+        assert result["paper_quality"]["openalex_email"] == "owner@example.com"
+        assert result["paper_quality"]["openreview_venues"] == ["ICLR.cc/2026/Conference"]
+
+    def test_legacy_candidate_min_score_env_is_ignored(self):
+        """候选池环境变量不再参与配置加载"""
+        from src.config.loader import _load_env_config
+
+        with patch.dict(os.environ, {"PAPER_QUALITY_CANDIDATE_MIN_SCORE": "50"}, clear=True):
+            result = _load_env_config()
+
+        assert result == {}
     
     def test_no_env_variables(self):
         """无相关环境变量时返回空字典"""

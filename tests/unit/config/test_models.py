@@ -14,6 +14,7 @@ from src.config.models import (
     AnalysisConfig,
     NotificationConfig,
     NewsFetcherConfig,
+    PaperQualityConfig,
     AdvancedConfig,
     Settings,
 )
@@ -119,6 +120,24 @@ class TestNewsFetcherConfig:
         """GitHub Trending 权重范围验证"""
         with pytest.raises(ValidationError):
             NewsFetcherConfig(github_trending_weight=1.1)
+
+
+class TestPaperQualityConfig:
+    """PaperQualityConfig 模型测试"""
+
+    def test_default_values(self):
+        """论文质量默认配置"""
+        config = PaperQualityConfig()
+
+        assert config.enabled is True
+        assert config.min_tracking_score == 70.0
+        assert config.max_papers_per_category == 10
+        assert config.max_papers_total == 30
+        assert config.max_concurrent == 5
+        assert config.timeout == 20.0
+        assert config.semantic_scholar_api_key == ""
+        assert config.openalex_email == ""
+        assert config.openreview_venues == []
 
 
 class TestAdvancedConfig:
