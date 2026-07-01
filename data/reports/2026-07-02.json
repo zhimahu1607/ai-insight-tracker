@@ -1,0 +1,31 @@
+{
+  "date": "2026-07-02",
+  "summary": "今日AI领域呈现多线并进的态势，学术界与工业界在模型迭代、基础设施创新与垂直应用落地三个层面形成共振。最值得关注的核心事件包括：Anthropic一日内发布两款模型——Claude Sonnet 5在Amazon Bedrock上线，以Sonnet的定价提供接近Opus的智能水平；同步推出的Claude Fable 5则强化了防护栏机制，触发时自动回退至旧版，兼顾能力与安全。微软研究院提出的SkillOpt方法将agent技能文件视为可训练参数，通过文本编辑与验证门控实现能力优化而无需更新模型权重，为Agent训练开辟了新范式。与此同时，亚马逊AWS围绕Bedrock构建了完整的基础设施生态：海马体记忆启发的HippoRAG框架、Model Profiler开源工具以及AgentCore记忆元数据过滤，共同降低了多跳推理与模型选型的门槛。这些技术突破迅速向应用场景转化，Inscribe利用Bedrock在90秒内完成文档欺诈检测，IBS Software通过蒸馏构建成本降至1/14的双语NER系统，Outpost VFX则借助P5实例将面部替换训练提速8倍。开源社区同样活跃，ai-berkshire将投资大师方法论与AI结合取得超额收益，Strix渗透测试工具与LingBot-Map 3D重建模型亦获高关注。整体来看，今日AI进展呈现出研究创新、基础设施成熟与行业效率提升的强耦合，模型的“性价比”与“安全性”成为厂商竞争的新焦点。",
+  "category_summaries": {},
+  "news_summary": "## 今日AI行业深度报告：模型发布、基础设施与应用生态齐头并进\n\n今日AI领域呈现多线并进态势，涵盖模型更新、基础设施优化与垂直应用落地。\n\n**一、LLM与模型动态**\n\nOpenAI发布数据显示ChatGPT全球采用率显著增长，用户使用频率与功能探索均有所提升。Anthropic则在同一日发布两款模型：Claude Sonnet 5在Amazon Bedrock上线，提供接近Opus的智能水平但保持Sonnet的价格与速度；另同步发布Claude Fable 5，配备更强防护栏以降低滥用风险，触发时自动回退至Opus 4.8。此外，OpenAI推出GeneBench-Pro基准测试，用于评估AI在基因组学与生命科学领域的性能。\n\n**二、基础设施与研究方法**\n\n微软研究院提出SkillOpt方法，将agent技能文件视为可训练参数，通过文本编辑与验证门控优化技能表现，无需更新模型权重。亚马逊AWS发布多项技术创新：HippoRAG框架受海马体记忆系统启发，结合Amazon Bedrock与Neptune实现多跳推理；推出Bedrock Model Profiler开源工具，简化模型选择流程；发布AgentCore Memory元数据过滤功能，提升检索精度的同时降低噪音干扰。\n\n**三、垂直应用与工具生态**\n\n在应用层面，Inscribe利用Amazon Bedrock构建代理AI系统，90秒内完成文档欺诈检测；IBS Software通过Bedrock蒸馏能力构建货运物流双语NER系统，F1达95%且成本降至原来的1/14；Outpost VFX采用AWS P5实例将面部替换模型训练提速8倍。开源生态方面，ai-berkshire框架将投资大师方法论与AI结合，年化收益大幅跑赢指数；Strix开源AI渗透测试工具、LingBot-Map流式3D重建模型等也获得高社区关注。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 23,
+    "news_by_category": {
+      "LLM": 3,
+      "AI": 7,
+      "其他": 1,
+      "开源": 6,
+      "产品": 6
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "OpenAI",
+      "AWS",
+      "基准测试",
+      "开源",
+      "Amazon SageMaker",
+      "Anthropic",
+      "ChatGPT",
+      "采用率",
+      "增长"
+    ]
+  },
+  "generated_at": "2026-07-01T18:06:31.866845"
+}
