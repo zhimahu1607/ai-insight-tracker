@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-07",
+  "summary": "今日AI领域整体呈现“开源效率工具与云平台合规基建”双向驱动格局。学术界无新论文发表，但工业界聚焦于代理（Agent）轻量化与边缘推理基础设施的实质性突破。核心亮点有三：一是开源社区涌现出显著提升代理效率的工具——`caveman`项目以“穴居人”压缩风格将编码代理输出tokens减少65%，而`chrome-devtools-mcp`基于MCP协议实现AI编码助手对Chrome的夺控，两者共同指向代理从“生成内容”向“压缩开销、操控环境”的进化方向。二是端侧语音智能加速落地：`FluidVoice`在macOS上实现本地化语音听写，Hugging Face开源的`speech-to-speech`流水线以低延迟和组件可替换性降低了语音代理门槛，标志着麦克风侧推理进入实用阶段。三是AWS云平台同步强化企业级合规与混线实验能力：MiniMax M2.5混合专家模型正式入驻Bedrock，专为代理原生任务设计并内置提示缓存；SageMaker HyperPod上的多轮强化学习框架与PII像素级遮挡管道（集成Nova多模态+ SAM 3）则分别优化了智能体决策安全与数据合规。值得关注的是，开源社区聚焦轻量与控制，而云平台专注模型接入与端到端治理——二者在代理落地的不同层面形成正反馈，推动AI应用从“能说会道”转向“可靠、低成本、可控”。",
+  "category_summaries": {},
+  "news_summary": "### 今日 AI 领域深度报告\n\n**核心动态**：开源社区与云平台双向发力，AI 代理效率工具与边缘推理基础设施成为焦点。\n\n**1. 开源生态：工具链与模型轻量化**\n- **AI 代理优化**：`JuliusBrussee/caveman` 提供“穴居人”压缩风格，可将编码代理输出 tokens 减少 65%，获 8.5 万星；`chrome-devtools-mcp` 基于 MCP 协议实现 AI 编码助手对 Chrome 的直接控制，星标超 4.6 万。\n- **麦克风端侧智能**：`FluidVoice` 推出本地化 macOS 语音听写，支持 Parakeet 等模型；Hugging Face 的 `speech-to-speech` 开源低延迟语音代理流水线，组件可替换。\n- **其他**：`exercises-dataset` (1 万+星) 提供多语言健身数据集；`immich` (10 万+星) 继续强化自托管照片管理。\n\n**2. AWS 云基础设施：模型部署与合规自动化**\n- **MiniMax 入驻 Bedrock**：支持 M2.5 混合专家模型（230B 总参、10B 活跃），专为代理原生任务设计，内置提示缓存，企业级安全合规。\n- **多轮强化学习框架**：SageMaker HyperPod 上运行，事件驱动架构优化智能体决策，成本约 $786-1180/小时。\n- **PII 红act 管道**：使用 Amazon Nova 多模态视觉 + SAM 3 + Textract，零微调实现图像中文本/视觉 PII 的像素级遮挡。\n- **MLflow 集成**：SageMaker AI 支持将基准测试与推理推荐结果自动流式传输至 MLflow，实现实时追踪与协作。\n\n**趋势观察**：AI 代理正从“能说”向“会压缩”、“可控制浏览器”演进；云厂商加速开放模型接入，同时强化端到端合规与实验管理能力。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 10,
+    "news_by_category": {
+      "开源": 6,
+      "产品": 3,
+      "AI": 1
+    },
+    "top_keywords": [
+      "GitHub Trending",
+      "开源",
+      "Amazon Nova",
+      "Exercises Dataset",
+      "fitness",
+      "multilingual",
+      "open data",
+      "FluidVoice",
+      "macOS",
+      "语音听写"
+    ]
+  },
+  "generated_at": "2026-07-06T18:18:01.500328"
+}
