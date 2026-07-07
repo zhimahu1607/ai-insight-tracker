@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-08",
+  "summary": "今日AI领域未收录新论文，产业界动向清晰指向“安全可控的工程化落地”这一核心命题。开源生态与云平台产品迭代成为两大主线。值得关注的亮点包括：其一，腾讯云开源的CubeSandbox项目，基于RustVMM与KVM技术提供毫秒级硬件隔离沙箱，直面不可信AI Agent代码执行的安全信任瓶颈；其二，AWS围绕Amazon QuickSight与Bedrock进行大规模更新——QuickSight推出多数据集关系与主题功能，构建统一语义层以赋能自然语言跨域分析，Bedrock则发布AgentCore harness与无服务器图像编辑代理，显著降低代理型应用声明式开发门槛，同时与Hugging Face深度链接集成，并利用基于反向直接偏好优化（rDPO）的选择性遗忘技术精细化控制Nova系列模型的合规审核。此外，微软.NET团队开源`dotnet/skills`仓库，通过标准化技能接口提升C#开发者与Copilot的协作效率；一个公开前沿模型系统提示的仓库则引发开发者对透明度的强烈共鸣。两线动态交汇于同一趋势：云厂商正通过平台集成（模型+计算+分析）和底层工程创新（沙箱、agent框架）解决从能力到信任的全链路落地难题。",
+  "category_summaries": {},
+  "news_summary": "### 今日 AI 领域深度报告：聚焦开源生态与云平台产品迭代\n\n今日 AI 领域动态主要集中于开源生态的繁荣与云平台产品体系的密集更新。\n\n**开源生态方面**，**腾讯云**开源的 CubeSandbox 项目引发关注，其基于 RustVMM 与 KVM 技术，为运行不可信 AI Agent 代码提供毫秒级、硬件级隔离的沙箱方案。与此同时，**微软** .NET 团队开源了 `dotnet/skills` 仓库，旨在通过标准化技能接口（遵循 agentskills.io 协议）提升 C# 与 .NET 开发者在 Copilot 等编码代理中的效率。此外，一个收集并公开 Claude、GPT 等前沿模型系统提示（System Prompts）的仓库（`asgeirtj/system_prompts_leaks`）因极高的透明度而与开发者产生强烈共鸣。\n\n**云平台产品层面**，**亚马逊 AWS** 进行了大规模集中更新，其核心围绕 **Amazon QuickSight** 和 **Amazon Bedrock** 两大产品线。QuickSight 推出了多项革新：包括“多数据集关系”功能支持运行时逻辑连接，以及“多数据集主题”功能，旨在构建统一语义层，赋能业务用户通过自然语言进行跨域分析。AWS 自身财务团队已通过 QuickSight 实现数百小时工作流程优化。另一焦点是 **Amazon Bedrock**，其发布了 AgentCore harness 和无服务器图像编辑代理方案，极大降低了构建代理型应用的声明式开发门槛。AWS 还宣布了与 Hugging Face 的一键深度链接集成，简化了从模型发现到 SageMaker Studio 部署的流程。此外，AWS 发布了基于反向直接偏好优化（rDPO）的模型选择性遗忘技术，用于精细化控制其 Nova 系列模型的合规内容审核，平衡了安全性与实用性。\n\n**产业趋势**：当前 AI 发展的核心矛盾正从模型能力转向“安全、可控的工程化落地”。**云厂商**正通过强大的平台集成能力，将模型（Nova）、计算（SageMaker）与分析（QuickSight）整合为一套完整的价值链，同时通过 Agent 框架和低级沙箱技术解决“信任”瓶颈。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 14,
+    "news_by_category": {
+      "开源": 3,
+      "产品": 10,
+      "AI": 1
+    },
+    "top_keywords": [
+      "Claude",
+      "Amazon Quick",
+      "Amazon QuickSight",
+      "最佳实践",
+      "Amazon Quick Sight",
+      "Amazon Bedrock AgentCore",
+      "Amazon SageMaker AI",
+      "CubeSandbox",
+      "AI Agent",
+      "沙箱"
+    ]
+  },
+  "generated_at": "2026-07-07T18:09:30.368266"
+}
