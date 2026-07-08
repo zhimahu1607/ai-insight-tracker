@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-09",
+  "summary": "今日AI领域聚焦于工业界深度应用与开源基础设施的加速成熟，学术界暂无重磅论文收录。整体风向显示，AI正从通用能力竞赛转向垂直行业的“原生集成”——金融机构与教育系统成为最新试验场，而开源生态则通过工具链的全面开放降低落地门槛。\n\n最值得关注的核心亮点有三：**一是金融行业迈入AI原生转型的关键一步**，三菱UFJ金融集团与澳大利亚支付公司AP+分别采用OpenAI的ChatGPT Enterprise及Codex，标志着支付与风控场景正式引入企业级AI，这不仅是效率提升，更是商业模式AI化的前奏。**二是开源基础设施迎来爆发式增长**，Meta开源了内部设计系统Astryx及视频分析工具claude-video，同时发布涵盖355个技能包的claude-skills库，GitHub上迅速走红，这反映出头部企业正将内部工具“公共品化”，为中小团队提供即插即用的能力底座。**三是AI在教育和药物研发领域的精准落地**，OpenAI携手Walton Family Foundation为K-12教师推出技能实训，AWS则基于GraphRAG将药物研发周期缩短87%，两者均体现了AI从“辅助”跃迁为“流程重塑者”的趋势。\n\n跨领域来看，今日动态共同指向一个信号：AI正在从技术验证期步入“行业基础设施”阶段。无论是金融的数据处理、教育的技能培训，还是药物的分子筛选，企业不再满足于单独调用大模型API，而是通过开源工具链（如claude-skills）或行业级解决方案（如GraphRAG）将AI深度嵌入核心业务流，生态协同取代单点创新成为新范式。",
+  "category_summaries": {},
+  "news_summary": "今日AI领域动态主要集中在**教育培训、金融应用、开源生态和基础设施创新**四大主题。\n\n在教育方面，**OpenAI** 与 Walton Family Foundation 合作推出 AI Skills Jams，为K-12教师提供实践技能培训。**Meta** 开源了内部使用多年的设计系统 Astryx，并开源了视频分析工具 claude-video 及包含355个技能包的 claude-skills 库，后者在GitHub上增长迅速。\n\n在金融行业，**三菱UFJ金融集团**与**澳大利亚支付公司AP+**宣布采用OpenAI的ChatGPT Enterprise和Codex，推动AI原生转型与支付效率提升。同时，**AWS** 发布了基于GraphRAG的药物研发解决方案，将研究周期缩短87%。\n\n在开源与基础设施领域，**微软研究院**推出可视化语言Flint，**AWS**则发布多项AI治理和邮件管理方案，并与Mistral AI合作构建电商MCP服务器。这些动态预示着AI正在深入行业核心流程，从培训到基础设施开源，生态持续成熟。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 14,
+    "news_by_category": {
+      "行业": 3,
+      "AI": 4,
+      "开源": 5,
+      "产品": 2
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "OpenAI",
+      "开源",
+      "ChatGPT Enterprise",
+      "Walton Family Foundation",
+      "K-12教育",
+      "AI技能培训",
+      "AI Skills Jams",
+      "GPT-Live",
+      "ChatGPT Voice"
+    ]
+  },
+  "generated_at": "2026-07-08T17:48:05.415323"
+}
