@@ -1,13 +1,24 @@
 {
   "repositories": {
+    "addyosmani/agent-skills": {
+      "repo_id": "addyosmani/agent-skills",
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "first_seen_stars": 76651,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 76651,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "alibaba/page-agent": {
       "repo_id": "alibaba/page-agent",
       "full_name": "alibaba/page-agent",
       "url": "https://github.com/alibaba/page-agent",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 20518,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 25448,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 25767,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -17,8 +28,8 @@
       "url": "https://github.com/alirezarezvani/claude-skills",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 21649,
-      "last_seen_at": "2026-07-08T17:47:33.106467+00:00",
-      "last_seen_stars": 21649,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 22035,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -61,8 +72,8 @@
       "url": "https://github.com/asgeirtj/system_prompts_leaks",
       "first_seen_at": "2026-07-07T18:08:58.030407+00:00",
       "first_seen_stars": 52722,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 54962,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 55723,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -83,8 +94,8 @@
       "url": "https://github.com/bradautomates/claude-video",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 5879,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 6548,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 7097,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -171,8 +182,8 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10160,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 14202,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 14896,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -182,8 +193,8 @@
       "url": "https://github.com/dotnet/skills",
       "first_seen_at": "2026-07-07T18:08:58.030407+00:00",
       "first_seen_stars": 4252,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 4471,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 4532,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -193,8 +204,8 @@
       "url": "https://github.com/facebook/astryx",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 7106,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 7425,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 7676,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -237,8 +248,8 @@
       "url": "https://github.com/huggingface/speech-to-speech",
       "first_seen_at": "2026-07-06T18:17:26.820294+00:00",
       "first_seen_stars": 5449,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 5810,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 5980,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -261,6 +272,17 @@
       "first_seen_stars": 3265,
       "last_seen_at": "2026-07-04T17:15:12.786689+00:00",
       "last_seen_stars": 4650,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "iofficeai/officecli": {
+      "repo_id": "iofficeai/officecli",
+      "full_name": "iOfficeAI/OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "first_seen_stars": 14281,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 14281,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -292,8 +314,8 @@
       "url": "https://github.com/JuliusBrussee/caveman",
       "first_seen_at": "2026-07-06T18:17:26.820294+00:00",
       "first_seen_stars": 85602,
-      "last_seen_at": "2026-07-08T17:47:33.106467+00:00",
-      "last_seen_stars": 86707,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 87664,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -391,8 +413,8 @@
       "url": "https://github.com/ogulcancelik/herdr",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10041,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 14725,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 15140,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -402,8 +424,8 @@
       "url": "https://github.com/openai/codex-plugin-cc",
       "first_seen_at": "2026-07-03T17:45:07.392915+00:00",
       "first_seen_stars": 23059,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 27116,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 27375,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -468,8 +490,8 @@
       "url": "https://github.com/ruvnet/RuView",
       "first_seen_at": "2026-07-09T18:05:11.598935+00:00",
       "first_seen_stars": 79600,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 79600,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 79837,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -501,8 +523,8 @@
       "url": "https://github.com/stablyai/orca",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 8754,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 14936,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 15847,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -545,8 +567,8 @@
       "url": "https://github.com/TencentCloud/CubeSandbox",
       "first_seen_at": "2026-07-07T18:08:58.030407+00:00",
       "first_seen_stars": 8340,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 9291,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 9556,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -561,14 +583,36 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tt-a1i/archify": {
+      "repo_id": "tt-a1i/archify",
+      "full_name": "tt-a1i/archify",
+      "url": "https://github.com/tt-a1i/archify",
+      "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "first_seen_stars": 3392,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 3392,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "usestrix/strix": {
       "repo_id": "usestrix/strix",
       "full_name": "usestrix/strix",
       "url": "https://github.com/usestrix/strix",
       "first_seen_at": "2026-07-01T18:05:53.748780+00:00",
       "first_seen_stars": 29291,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 39516,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 40009,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "wonderwhy-er/desktopcommandermcp": {
+      "repo_id": "wonderwhy-er/desktopcommandermcp",
+      "full_name": "wonderwhy-er/DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "first_seen_stars": 7077,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 7077,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -578,8 +622,8 @@
       "url": "https://github.com/xbtlin/ai-berkshire",
       "first_seen_at": "2026-07-01T18:05:53.748780+00:00",
       "first_seen_stars": 8084,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 12314,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 12617,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -589,8 +633,8 @@
       "url": "https://github.com/Zackriya-Solutions/meetily",
       "first_seen_at": "2026-07-05T17:22:16.265855+00:00",
       "first_seen_stars": 16396,
-      "last_seen_at": "2026-07-09T18:05:11.598935+00:00",
-      "last_seen_stars": 22119,
+      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
+      "last_seen_stars": 22555,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
