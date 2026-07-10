@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-11",
+  "summary": "今日AI领域核心主题为行业落地要素的集中爆发，标志着AI正从对话助手向企业级深度集成全速迈进，且学术界暂无关键论文发布。工业界呈现两大显著趋势。其一，跨行业的企业级集成加速，德国电信宣布借助OpenAI技术全面转型AI原生公司，覆盖客服与网络运营；同时OpenAI的GPT-5.6成为Microsoft 365 Copilot的首选模型，将强大AI能力注入Word、Excel等核心生产力组件，二者共同指向AI对大型企业流程的根本性重塑。其二，开源生态中AI代理工具链日趋成熟，成为今日另一大亮点。诸如Archify、OfficeCLI及DesktopCommanderMCP等项目获得数千星标，其中OfficeCLI作为首个专为AI代理设计的Office套件，配合星标超7.6万的agent-skills项目，显示出开发者正在构建可规范复用、与现有软件栈深度交互的工程技能库。基础设施层面，AWS通过SageMaker系列的诸多更新（如长上下文推理吞吐优化、无服务器微调）和Bedrock Agent Core支持的企业级语义层应用，为这些复杂工作流提供了低延迟、可落地的算力与架构支撑。未来，AI的竞争将不仅是模型能力的比拼，更是围绕企业级工具链、垂直场景迁移与开源生态整合的全面竞赛。",
+  "category_summaries": {},
+  "news_summary": "# AI 每日深度报告 (2025-MM-DD)\n\n## 一、行业合作与产品更新\n- **德国电信**宣布借助OpenAI技术全面转型AI原生电信公司，覆盖客服、网络运营等场景，标志传统运营商智能化关键一步。\n- **OpenAI**发布GPT-5.6成为**Microsoft 365 Copilot**首选模型，为Word/Excel等组件提供更强AI能力，深化微软与OpenAI在生产力工具的合作。\n\n## 二、开源生态亮点\n多个高星项目涌现：\n- **Archify**：基于自然语言自动生成架构图等图表，支持多格式导出。\n- **OfficeCLI**：首个专为AI代理设计的Office套件，可无头读写Word/Excel/PPT，一周获近5000星。\n- **DesktopCommanderMCP**：为Claude等AI助手提供终端控制、文件系统操作等能力，星标超7000。\n- **agent-skills**：提供24个生产级工程技能，适用于70+编码代理，星标超7.6万，反映AI辅助开发规范化需求。\n\n## 三、AWS基础设施与应用\nAWS发布多项更新：\n- **SageMaker AI** 推出NVIDIA Nemotron 3模型无服务器微调，支持SFT、RLVR等多种方案。\n- **Henry Schein One** 利用SageMaker AI构建牙科X光实时质量评分系统，延迟1.4秒，处理超1100万张图像。\n- **Stardog+Bedrock AgentCore** 构建语义层，将碎片化企业数据整合为知识图谱，实现可靠的自然语言查询。\n- **Amazon Quick Automate** 推出原生案例管理，支持状态跟踪、人工介入等，适用于agentic工作流。\n- **Unsloth+SageMaker** 部署量化模型，提供四种模式平衡成本与性能。\n- **KTern.AI** 基于Bedrock AgentCore构建SAP代理平台，减少项目时间45%，月省480工程小时。\n- **SageMaker HyperPod** 推出分离式预填充与解码（DPD），提升长上下文推理吞吐量最高35%。\n\n--- \n**趋势总结**：AI正从对话助手向企业级深度集成迈进，开源代理工具链、基础设施优化以及行业垂直场景落地成为今日核心看点。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 13,
+    "news_by_category": {
+      "行业": 2,
+      "产品": 4,
+      "开源": 4,
+      "AI": 3
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Amazon SageMaker AI",
+      "Amazon Bedrock AgentCore",
+      "Deutsche Telekom",
+      "AI转型",
+      "电信行业",
+      "客户服务",
+      "GPT-5.6",
+      "Microsoft 365 Copilot",
+      "Word"
+    ]
+  },
+  "generated_at": "2026-07-10T17:54:50.793404"
+}
