@@ -6,8 +6,19 @@
       "url": "https://github.com/abseil/abseil-cpp",
       "first_seen_at": "2026-07-11T17:07:16.621099+00:00",
       "first_seen_stars": 17689,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 17980,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 17994,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "actions/checkout": {
+      "repo_id": "actions/checkout",
+      "full_name": "actions/checkout",
+      "url": "https://github.com/actions/checkout",
+      "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "first_seen_stars": 8506,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 8506,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -63,6 +74,17 @@
       "first_seen_stars": 6321,
       "last_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "last_seen_stars": 6843,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "anthropics/claude-cookbooks": {
+      "repo_id": "anthropics/claude-cookbooks",
+      "full_name": "anthropics/claude-cookbooks",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "first_seen_stars": 48920,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 48920,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -165,6 +187,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "chriskohlhoff/asio": {
+      "repo_id": "chriskohlhoff/asio",
+      "full_name": "chriskohlhoff/asio",
+      "url": "https://github.com/chriskohlhoff/asio",
+      "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "first_seen_stars": 6172,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 6172,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "chromedevtools/chrome-devtools-mcp": {
       "repo_id": "chromedevtools/chrome-devtools-mcp",
       "full_name": "ChromeDevTools/chrome-devtools-mcp",
@@ -187,6 +220,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "davila7/claude-code-templates": {
+      "repo_id": "davila7/claude-code-templates",
+      "full_name": "davila7/claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "first_seen_stars": 29543,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 29543,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "deusdata/codebase-memory-mcp": {
       "repo_id": "deusdata/codebase-memory-mcp",
       "full_name": "DeusData/codebase-memory-mcp",
@@ -204,8 +248,8 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10160,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 17234,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 17654,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -248,8 +292,8 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "first_seen_at": "2026-07-11T17:07:16.621099+00:00",
       "first_seen_stars": 6970,
-      "last_seen_at": "2026-07-11T17:07:16.621099+00:00",
-      "last_seen_stars": 6970,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 7411,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -272,6 +316,17 @@
       "first_seen_stars": 10148,
       "last_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "last_seen_stars": 11008,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "hkuds/vibe-trading": {
+      "repo_id": "hkuds/vibe-trading",
+      "full_name": "HKUDS/Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "first_seen_stars": 23525,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 23525,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +369,8 @@
       "url": "https://github.com/iOfficeAI/OfficeCLI",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 14281,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 16622,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 17579,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -391,8 +446,8 @@
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 14671,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 22380,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 22873,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -446,8 +501,8 @@
       "url": "https://github.com/Nutlope/hallmark",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 5944,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 5944,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 7682,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -457,8 +512,8 @@
       "url": "https://github.com/ogulcancelik/herdr",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10041,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 16414,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 16742,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -468,8 +523,19 @@
       "url": "https://github.com/openai/codex-plugin-cc",
       "first_seen_at": "2026-07-03T17:45:07.392915+00:00",
       "first_seen_stars": 23059,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 28593,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 28786,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "opencut-app/opencut": {
+      "repo_id": "opencut-app/opencut",
+      "full_name": "OpenCut-app/OpenCut",
+      "url": "https://github.com/OpenCut-app/OpenCut",
+      "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "first_seen_stars": 70937,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 70937,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -479,8 +545,8 @@
       "url": "https://github.com/oven-sh/bun",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 94697,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 94697,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 94755,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -512,8 +578,8 @@
       "url": "https://github.com/pbakaus/impeccable",
       "first_seen_at": "2026-07-12T17:10:11.124967+00:00",
       "first_seen_stars": 45891,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 46642,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 46978,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -578,8 +644,8 @@
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 120546,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 120546,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 121720,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -600,8 +666,8 @@
       "url": "https://github.com/stablyai/orca",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 8754,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 18978,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 19735,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -644,8 +710,8 @@
       "url": "https://github.com/TencentCloud/CubeSandbox",
       "first_seen_at": "2026-07-07T18:08:58.030407+00:00",
       "first_seen_stars": 8340,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 10152,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 10272,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -677,8 +743,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 4479,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 5013,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -710,8 +776,8 @@
       "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 7077,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 8239,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 8309,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -732,8 +798,8 @@
       "url": "https://github.com/Zackriya-Solutions/meetily",
       "first_seen_at": "2026-07-05T17:22:16.265855+00:00",
       "first_seen_stars": 16396,
-      "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
-      "last_seen_stars": 24551,
+      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_stars": 24907,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
