@@ -6,8 +6,8 @@
       "url": "https://github.com/abseil/abseil-cpp",
       "first_seen_at": "2026-07-11T17:07:16.621099+00:00",
       "first_seen_stars": 17689,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 17994,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 18003,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -17,8 +17,8 @@
       "url": "https://github.com/actions/checkout",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 8506,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 8506,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 8523,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -193,7 +193,7 @@
       "url": "https://github.com/chriskohlhoff/asio",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 6172,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
       "last_seen_stars": 6172,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
@@ -226,8 +226,8 @@
       "url": "https://github.com/davila7/claude-code-templates",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 29543,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 29543,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 29608,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -248,8 +248,8 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10160,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 17654,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 17983,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -292,8 +292,8 @@
       "url": "https://github.com/google-labs-code/stitch-skills",
       "first_seen_at": "2026-07-11T17:07:16.621099+00:00",
       "first_seen_stars": 6970,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 7411,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 7531,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -319,14 +319,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "hkuds/deeptutor": {
+      "repo_id": "hkuds/deeptutor",
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "first_seen_stars": 26762,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 26762,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "hkuds/vibe-trading": {
       "repo_id": "hkuds/vibe-trading",
       "full_name": "HKUDS/Vibe-Trading",
       "url": "https://github.com/HKUDS/Vibe-Trading",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 23525,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 23525,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 24245,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -369,8 +380,8 @@
       "url": "https://github.com/iOfficeAI/OfficeCLI",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 14281,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 17579,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 18274,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -396,6 +407,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "jrouwe/joltphysics": {
+      "repo_id": "jrouwe/joltphysics",
+      "full_name": "jrouwe/JoltPhysics",
+      "url": "https://github.com/jrouwe/JoltPhysics",
+      "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "first_seen_stars": 10951,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 10951,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "juliusbrussee/caveman": {
       "repo_id": "juliusbrussee/caveman",
       "full_name": "JuliusBrussee/caveman",
@@ -404,6 +426,17 @@
       "first_seen_stars": 85602,
       "last_seen_at": "2026-07-12T17:10:11.124967+00:00",
       "last_seen_stars": 88440,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "kangarooking/cangjie-skill": {
+      "repo_id": "kangarooking/cangjie-skill",
+      "full_name": "kangarooking/cangjie-skill",
+      "url": "https://github.com/kangarooking/cangjie-skill",
+      "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "first_seen_stars": 3261,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 3261,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -501,8 +534,8 @@
       "url": "https://github.com/Nutlope/hallmark",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 5944,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 7682,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 10484,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -512,8 +545,8 @@
       "url": "https://github.com/ogulcancelik/herdr",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10041,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 16742,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 17109,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -523,8 +556,8 @@
       "url": "https://github.com/openai/codex-plugin-cc",
       "first_seen_at": "2026-07-03T17:45:07.392915+00:00",
       "first_seen_stars": 23059,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 28786,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 28943,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -534,8 +567,8 @@
       "url": "https://github.com/OpenCut-app/OpenCut",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 70937,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 70937,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 73743,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -545,8 +578,8 @@
       "url": "https://github.com/oven-sh/bun",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 94697,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 94755,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 94838,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -578,8 +611,8 @@
       "url": "https://github.com/pbakaus/impeccable",
       "first_seen_at": "2026-07-12T17:10:11.124967+00:00",
       "first_seen_stars": 45891,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 46978,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 47277,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -644,8 +677,8 @@
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 120546,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 121720,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 122643,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -666,8 +699,8 @@
       "url": "https://github.com/stablyai/orca",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 8754,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 19735,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 20486,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -776,8 +809,8 @@
       "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 7077,
-      "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
-      "last_seen_stars": 8309,
+      "last_seen_at": "2026-07-16T17:27:18.821490+00:00",
+      "last_seen_stars": 8395,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
