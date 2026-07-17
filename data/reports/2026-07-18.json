@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-18",
+  "summary": "**今日 AI 领域日报：Daily Summary**\n\n今日 AI 领域呈现鲜明转向——行业焦点从模型能力本身，迁移至平台化部署、工具链整合与价值量化评估。学术界无新论文收录，工业界则在基础设施与企业级应用上集中发力，加速推动生成式 AI 从实验走向生产。\n\n最值得关注的核心亮点有三。其一，xAI 的 Grok 4.3 模型正式登陆 Amazon Bedrock，支持百万 token 上下文、工具调用与可调节推理努力级别，这不仅是长文档与智能代理场景的成本优化突破，更标志着顶级模型与云平台深度绑定的新阶段。其二，Amazon Bedrock 推出全托管的 Managed Knowledge Base，内置数据源连接器与多模态 Agentic Retrieval，大幅降低企业构建生产级 RAG 管道的门槛，呼应了业界对“AI 落地基础设施”的迫切需求。其三，OpenAI 高管发布实用 AI 评分卡，以“有用工作/成本/可靠性/计算回报率”量化投资回报，反映出企业客户正从尝鲜转向审慎评估，推动行业建立统一效能标尺。\n\n值得关注的跨领域重叠在于：Smartsheet 基于 AWS Fargate 构建的远程 MCP 服务器已节省超 30 亿 token，而 Vercel Labs 发布的原生桌面 SDK 则用 Zig 语言赋能 AI 代理协作。这些实践共同昭示，工具链的标准化与平台层的托管化，正与评价体系的理性化形成合力，成为 AI 规模化落地的三大支点。",
+  "category_summaries": {},
+  "news_summary": "今日AI领域迎来多项重要进展，涵盖LLM、基础设施、开发工具与企业评估四大方向。\n\n**LLM方面**，xAI的Grok 4.3模型正式在Amazon Bedrock上线，支持100万token上下文窗口、工具调用及可配置推理努力级别，为长文档分析和智能代理提供高性价比选择。\n\n**基础设施与平台**层面，Amazon Bedrock推出完全托管的Managed Knowledge Base，通过内置数据源连接器和多模态检索能力（含Agentic Retrieval），大幅降低企业构建生产级RAG管道的复杂度。同时，Smartsheet基于AWS Fargate等构建的远程MCP服务器，已节省超30亿token，展示了企业级AI代理与工作管理平台整合的实践。Vercel Labs发布Native SDK（开源），用Zig语言实现原生桌面应用绘制，支持声明式开发和AI代理协作，为跨平台工具开发注入新活力。\n\n**产品与评估**方面，OpenAI CFO推出实用AI评分卡，以“有用工作/成本/可靠性/计算回报率”四大指标量化AI投资回报率。Amazon QuickSight自动为仪表板生成移动布局，无需手动配置即适配手机平板，提升数据访问效率。\n\n这些动态表明，行业正从模型本身转向平台化、工具化与评估体系构建，推动企业AI落地走向成熟。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 6,
+    "news_by_category": {
+      "AI": 2,
+      "开源": 1,
+      "产品": 2,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "OpenAI",
+      "AI scorecard",
+      "ROI",
+      "成本",
+      "可靠性",
+      "Vercel",
+      "Native SDK",
+      "Zig",
+      "Desktop App"
+    ]
+  },
+  "generated_at": "2026-07-17T17:19:46.040739"
+}
