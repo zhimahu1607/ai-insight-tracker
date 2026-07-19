@@ -88,6 +88,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "anthropics/cwc-workshops": {
+      "repo_id": "anthropics/cwc-workshops",
+      "full_name": "anthropics/cwc-workshops",
+      "url": "https://github.com/anthropics/cwc-workshops",
+      "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "first_seen_stars": 1745,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 1745,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "apache/maven": {
       "repo_id": "apache/maven",
       "full_name": "apache/maven",
@@ -264,6 +275,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "earendil-works/pi": {
+      "repo_id": "earendil-works/pi",
+      "full_name": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "first_seen_stars": 72694,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 72694,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "facebook/astryx": {
       "repo_id": "facebook/astryx",
       "full_name": "facebook/astryx",
@@ -336,8 +358,8 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
       "first_seen_stars": 26762,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 27610,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 27877,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -347,8 +369,8 @@
       "url": "https://github.com/HKUDS/Vibe-Trading",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 23525,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 24911,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 25220,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -369,8 +391,8 @@
       "url": "https://github.com/ibelick/ui-skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 4843,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 4843,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 5376,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -402,8 +424,8 @@
       "url": "https://github.com/iOfficeAI/OfficeCLI",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 14281,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 19204,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 19561,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -457,8 +479,8 @@
       "url": "https://github.com/kangarooking/cangjie-skill",
       "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
       "first_seen_stars": 3261,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 3639,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 3808,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -512,8 +534,8 @@
       "url": "https://github.com/mattpocock/skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 176355,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 176355,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 177273,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -567,8 +589,8 @@
       "url": "https://github.com/Nutlope/hallmark",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 5944,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 12702,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 13217,
       "double_alerted_at": "2026-07-18T17:06:21.238443+00:00",
       "ten_x_alerted_at": null
     },
@@ -589,8 +611,8 @@
       "url": "https://github.com/openai/codex",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 99349,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 99349,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 99623,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -611,8 +633,8 @@
       "url": "https://github.com/OpenCut-app/OpenCut",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 70937,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 75315,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 75739,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -622,8 +644,8 @@
       "url": "https://github.com/openinterpreter/openinterpreter",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 66622,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 66622,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 66795,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -732,8 +754,8 @@
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 120546,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 123920,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 124422,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -811,6 +833,17 @@
       "first_seen_stars": 8837,
       "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "last_seen_stars": 8837,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "tirth8205/code-review-graph": {
+      "repo_id": "tirth8205/code-review-graph",
+      "full_name": "tirth8205/code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "first_seen_stars": 20878,
+      "last_seen_at": "2026-07-19T17:08:06.178932+00:00",
+      "last_seen_stars": 20878,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
