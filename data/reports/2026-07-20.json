@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-20",
+  "summary": "今天的 AI 领域以工业界开源与开发工具创新为主旋律，学术侧无新论文收录，整体风向聚焦于通过代码智能和统一框架提升 LLM 应用的实用性与经济性。最值得关注的核心亮点有两项：一是开源项目 **code-review-graph**，它利用 Tree-sitter 构建本地优先的代码智能图，在代码审查场景中实现了中位数高达 82 倍的 token 压缩，能显著降低调用大模型的成本，且已支持 30 余种语言并可作为 GitHub Action 部署，星标迅速突破 2 万，代表了“代码理解即压缩”的新范式；二是 **Anthropic** 发布的 **cwc-workshops** 工作坊材料，通过 TypeScript 实战教程系统性讲授模型选择、多代理系统及评估驱动开发，直接面向开发者提供基于 Claude 的代理应用构建实践，表明主流厂商正加速从模型能力输出转向可落地的开发方法论。\n\n此外，**Pi Agent Harness** 以统一 LLM API 与 Agent 运行时为核心，强调多供应商支持和沙箱隔离，与 code-review-graph 共同反映了今日趋势：在降低 AI 调用成本和提升安全可控性的同时，推动 Agent 开发的标准化与可扩展性。跨领域来看，开源工具（代码智能、统一框架）与商业平台（Anthropic 工作坊）形成了互补——前者降低基础设施门槛，后者降低应用设计门槛，共同指向 LLM 产业化过程中对效率、安全与实用性的迫切追求。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 领域主要聚焦于开源工具与 LLM 应用开发实践。开源方面，**code-review-graph** 项目凭借其本地优先、基于 Tree-sitter 的代码智能图技术，在代码审查中实现高达 82 倍的 token 压缩（中位数），有效降低 AI 调用成本；该项目支持 30 余种语言，可作为 GitHub Action 运行，已获超 2 万星标。另一开源工具 **Pi Agent Harness** 提供统一 LLM API 与 Agent 运行时，支持多供应商模型、工具调用及沙箱隔离，以 TypeScript 编写，旨在推动安全、可扩展的 Agent 开发。\n\nLLM 应用层面，**Anthropic** 发布了 **cwc-workshops** 工作坊材料，涵盖模型选择、多代理系统、评估驱动开发等主题，通过 TypeScript 实战教程帮助开发者构建基于 Claude 的代理应用。整体来看，今日趋势强调通过代码智能与统一框架提升 AI 开发效率，同时注重安全性与本地化部署。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 3,
+    "news_by_category": {
+      "开源": 2,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "MCP",
+      "code-review-graph",
+      "Tree-sitter",
+      "代码审查",
+      "本地优先",
+      "Pi Agent Harness",
+      "统一LLM API",
+      "编码agent CLI",
+      "AI agent 工具包",
+      "TypeScript"
+    ]
+  },
+  "generated_at": "2026-07-19T17:08:33.458612"
+}
