@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-21",
+  "summary": "今日AI领域呈现从“能力突破”向“安全落地”与“工具深度”演进的明晰脉络。学术界暂无新论文动态，工业界则聚焦于模型部署的可靠性、Agent开发工具链的平民化，以及AI与企业级基础设施的深度融合。\n\n核心亮点有三：首先，OpenAI总结了长时间运行模型的安全实践经验，强调“迭代部署”与“防护措施”并举，这为自主系统从实验室走向生产环境提供了关键的工程参考，标志着行业对AI风险的认知正趋向务实。其次，开源社区中，MoonshotAI将Kimi CLI升级为“Kimi Code CLI”，使其从一个命令行工具进化为可集成IDE的代码辅助代理，周增693星，这反映了AI助手向轻量级、高实效性的开发工具演变的趋势。同时，“build-your-own-x”教程库斩获52.9万星，进一步强化了动手构建的开源学习文化。\n\n跨领域来看，企业级应用今日密集落地：AWS与NVIDIA合作构建基于Amazon Quick和NeMo Agent的供应链风险管理方案，Couchbase在Amazon Bedrock上采用多模型推理架构（含Claude Sonnet 4.5）以提升Capella iQ的稳定性，Tradeshift则将BI迁移至代理式AI工作区，实现查询提速30倍且成本降低40%。这些案例共同指向一个方向：AI的价值正快速从单一模型能力的展示，转向与现有云服务、数据库及业务流程的深度耦合，以实现安全、可控且高效的落地。",
+  "category_summaries": {},
+  "news_summary": "### 每日 AI 领域深度报告\n\n今日 AI 行业聚焦于模型安全实践、终端代理开发工具、以及企业级 AI 基础设施的升级。OpenAI 发布长时间运行模型的安全经验，强调迭代部署与防护措施，为自主系统设计提供参考。开源社区方面，MoonshotAI 将 Kimi CLI 升级为代码辅助代理（Kimi Code CLI），支持 Shell 命令与 IDE 集成，周增 693 星；此外，“build-your-own-x”教程库持续火爆，获 52.9 万星，推动动手学习文化。\n\n企业级产品与基础设施方面：AWS 为 DeepRacer 推出自定义 OS bootloader，延续设备在 ML 教育中的生命力；AWS 与 NVIDIA 合作，基于 Amazon Quick 和 NeMo Agent Toolkit 构建供应链风险管理解决方案，实现从仪表盘到建议的无缝衔接。Couchbase 在 Amazon Bedrock 上为 Capella iQ 采用多模型推理架构（含 Claude Sonnet 4.5），实现高可用与灵活切换。Tradeshift 则将 BI 迁移至 Amazon Quick 代理式 AI 工作区，查询提速 30 倍、TCO 降低 40%，内部采用率达 98%。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "AI": 2,
+      "开源": 2,
+      "产品": 3
+    },
+    "top_keywords": [
+      "MCP",
+      "Amazon Quick",
+      "OpenAI",
+      "安全",
+      "对齐",
+      "长时间运行模型",
+      "部署",
+      "MoonshotAI",
+      "Kimi Code CLI",
+      "终端AI代理"
+    ]
+  },
+  "generated_at": "2026-07-20T18:12:33.277426"
+}
