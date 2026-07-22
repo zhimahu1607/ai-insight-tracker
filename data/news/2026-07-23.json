@@ -1,0 +1,292 @@
+[
+  {
+    "id": "44d3387ea27fbd26",
+    "title": "MoonshotAI/kimi-code - GitHub Trending",
+    "url": "https://github.com/MoonshotAI/kimi-code",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-07-22T17:27:29.099839Z",
+    "summary": "Repository: MoonshotAI/kimi-code\nURL: https://github.com/MoonshotAI/kimi-code\nDescription: Kimi Code CLI — The Starting Point for Next-Gen Agents\nLanguage: TypeScript\nStars: 4547\nWeekly stars: 1352",
+    "content": "Repository: MoonshotAI/kimi-code\nURL: https://github.com/MoonshotAI/kimi-code\nDescription: Kimi Code CLI — The Starting Point for Next-Gen Agents\nLanguage: TypeScript\nStars: 4547\nWeekly stars: 1352\n\nREADME:\nKimi Code CLI\n\nDocumentation · Issues · 中文\n\nWhat is Kimi Code CLI\n\nKimi Code CLI is an AI coding agent that runs in your terminal — it can read and edit code, run shell commands, search files, fetch web pages, and choose the next step based on the feedback it receives. It works out of the box with Moonshot AI’s Kimi models and can also be configured to use other compatible providers.\n\nInstall\n\nInstall with the official script. No Node.js required.\n\nmacOS or Linux**:\n\nWindows (PowerShell)**:\n\nOn Windows, install Git for Windows before first launch because Kimi Code CLI uses the bundled Git Bash as its shell environment. If Git Bash is installed in a custom location, set KIMI_SHELL_PATH to the absolute path of bash.exe.\n\nThen, run it with a new shell session:\n\nFor npm install, upgrade, uninstall, see Getting Started.\n\nQuick Start\n\nOpen a project and start the interactive UI:\n\nOn first launch, run /login inside Kimi Code CLI and choose either Kimi Code OAuth or a Moonshot AI Open Platform API key. After login, try your first task:\n\nKey Features\n\nSingle-binary distribution.** Install with one command: no Node.js setup, PATH gymnastics, or global module conflicts.\nBlazing-fast startup.** The TUI is ready in milliseconds, so starting a session never feels heavy.\nPurpose-built TUI.** A carefully tuned interface, optimized end to end for long, focused agent sessions.\nVideo input.** Drop a screen recording or demo clip into the chat and let the agent watch what is hard to describe in words — turn a reference clip into a LUT, a long video into a short, a screen recording into working code, and more.\nAI-native MCP configuration.** Add, edit, and authenticate Model Context Protocol servers conversationally with /mcp-config, without hand-editing JSON.\nRich plugin ecosystem.** Install skills, MCP servers, and data sources from the marketplace or any GitHub repo, with each install's trust level surfaced up front.\nSubagents for focused, parallel work.** Dispatch built-in coder, explore, and plan subagents in isolated contexts while keeping the main conversation clean.\nLifecycle hooks.** Run local commands at key points to gate risky tool calls, audit decisions, trigger desktop notifications, or connect to your own automation.\nEditor & IDE integration (ACP).** Drive a Kimi Code CLI session straight from Zed, JetBrains, or any Agent Client Protocol client with kimi acp.\n\nUse it in your editor (ACP)\n\nKimi Code CLI speaks the Agent Client Protocol, so ACP-compatible editors and IDEs (Zed, JetBrains, …) can drive a session over stdio. Log in once, then point your editor at the kimi acp subcommand — no extra login needed.\n\nFor Zed, add this to ~/.config/zed/settings.json:\n\nThen open a new conversation in Zed's Agent panel. See Using in IDEs for JetBrains setup and troubleshooting, and the kimi acp reference for the full capability matrix.\n\nDocs\n\nGetting Started\nInteraction and approvals\nSessions\nUsing in IDEs (ACP)\nConfiguration\nCommand reference\n\nDevelop\n\nRequirements: Node.js ≥ 24.15.0, pnpm 10.33.0.\n\nSee CONTRIBUTING.md for the full contribution guide.\n\nCommunity\n\nIssues\nFor security vulnerabilities, see SECURITY.md.\n\nAcknowledgements\n\nOur TUI is built on top of pi-tui. We thank the authors of pi-tui for their valuable work.\n\nLicense\n\nReleased under the MIT License.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "MoonshotAI 发布了 Kimi Code CLI，一个基于终端的 AI 编码代理，支持代码编辑、命令执行、文件搜索、网页抓取和视频输入。它采用单二进制分发，启动快速，并集成了 MCP 配置和 ACP 协议，可与 Zed、JetBrains 等编辑器配合使用。项目开源（MIT 许可证），在 GitHub 上获得 4547 颗星，旨在通过 AI 提升编程效率。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "MoonshotAI",
+        "Kimi Code CLI",
+        "AI编码代理",
+        "终端",
+        "MCP"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:39.547439Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "97c77c913c657c42",
+    "title": "apache/ossie - GitHub Trending",
+    "url": "https://github.com/apache/ossie",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-07-22T17:27:29.099839Z",
+    "summary": "Repository: apache/ossie\nURL: https://github.com/apache/ossie\nDescription: Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data\nLanguage: Python\nStars: 1490\nWeekly stars: 801",
+    "content": "Repository: apache/ossie\nURL: https://github.com/apache/ossie\nDescription: Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data\nLanguage: Python\nStars: 1490\nWeekly stars: 801\n\nREADME:\n<!--\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements. See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership. The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied. See the License for the\nspecific language governing permissions and limitations\nunder the License.\n\nApache Ossie (incubating)\n\nApache Ossie is a collaborative, open-source effort dedicated to standardizing and streamlining semantic model exchange and utilization across the diverse array of tools and platforms within the data analytics, AI, and BI ecosystem. Our shared vision is to establish a common, vendor-agnostic semantic model specification, promoting unparalleled interoperability, efficiency, and collaboration among all participants. By providing a single, consistent source of truth, this vendor-agnostic standard ensures that your data's definitions and value remain consistent as they are interchanged between AI agents, BI platforms, and all other tools in your ecosystem, eliminating inconsistencies across your different tools.\n\nApache Ossie was formerly known as **Open Semantic Interchange (OSI)**.\n\nApache Ossie provides a single JSON- and YAML-based specification that any tool can read and write, addressing the semantic fragmentation common across today's data stack: the same KPI defined differently across tools, teams spending significant effort manually reconciling definitions, and AI agents producing unreliable outputs grounded in inconsistent business logic.\n\nWhat's in this repository\n\ncore-spec/ — The Ossie core specification (spec.md), the machine-readable schema (spec.yaml, osi-schema.json), and accompanying documentation.\nconverters/ — Reference converters that translate between Ossie and other semantic formats (e.g., dbt, GoodData, Polaris, Salesforce).\nexamples/ — Example semantic models, including a complete TPC-DS model.\nvalidation/ — Tooling for validating semantic models against the Ossie schema.\ndocs/ — Project documentation and overview.\n\nGet involved\n\nContribute:** See CONTRIBUTING.md for how to propose specification changes, contribute code, and participate in the community.\nRoadmap:** See ROADMAP.md for current working groups, future efforts, and planned enhancements informed by community discussion.\nDiscuss:** Join the conversation on GitHub Discussions and Issues.\nJoin the Slack community:** Chat directly with contributors on Slack.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "Apache Ossie（孵化中）是一个开源项目，致力于标准化分析、AI和BI平台间的语义元数据交换。它提供厂商中立的JSON/YAML规范，旨在解决数据栈中语义碎片化问题——同一KPI在不同工具中定义不同导致不一致。项目包含核心规范、参考转换器（支持dbt、GoodData等格式）、示例模型和验证工具。通过统一语义元数据，提升AI代理、BI平台等工具的互操作性和效率。该项目旨在成为语义数据的单一事实源，减少人工协调工作，并确保AI输出基于一致的业务逻辑。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Apache Ossie",
+        "语义元数据",
+        "标准",
+        "互操作性",
+        "JSON"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:38.213665Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "125010e3540e3897",
+    "title": "chenyme/grok2api - GitHub Trending",
+    "url": "https://github.com/chenyme/grok2api",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-07-22T17:27:29.099839Z",
+    "summary": "Repository: chenyme/grok2api\nURL: https://github.com/chenyme/grok2api\nDescription: Multi-account API gateway for Grok Build, Grok Web, and Grok Console\nLanguage: Go\nStars: 6555\nWeekly stars: 618",
+    "content": "Repository: chenyme/grok2api\nURL: https://github.com/chenyme/grok2api\nDescription: Multi-account API gateway for Grok Build, Grok Web, and Grok Console\nLanguage: Go\nStars: 6555\nWeekly stars: 618\n\nREADME:\nA multi-account API gateway for Grok Build, Grok Web, and Grok Console\n\nEnglish | 简体中文\n\n[!TIP]\nCheck out DEEIX-AI / DEEIX-Chat, a lightweight, integrated AI platform for model routing, chat, files, tools, billing, identity, and operations.\n\n[!NOTE]\nThis project is for technical research and learning purposes only. Please comply with Grok's official terms of use and local laws when using it; otherwise, you will be solely responsible for all consequences!\n\nSponsors\nWant to sponsor this project?\n\nThanks to Krill AI for sponsoring this project! Krill provides fast, stable official API access to GPT, Claude, Gemini, and a wide range of Chinese models, along with enterprise customization, invoicing, and dedicated 7×16-hour technical support. Its specially adapted WebSocket connection also delivers exceptionally fast time to first token. Krill offers this project an exclusive discount: register through this link and enter the coupon code “grok2api” when ordering to receive 23% off your first Codex package purchase.\nDEEIX-Chat is an open-source, self-hostable AI Chat platform for individuals, teams, and enterprises that need stable, long-term, unified access to multiple models. It brings models, conversations, files, tool calling, and administration together in one deployable and extensible system. Click here to start deploying.\nRight Code is an enterprise-grade AI Agent distribution platform that primarily provides stable access services for Claude Code, Codex, Gemini, and other models. It supports invoicing and dedicated one-to-one assistance for enterprises and teams. Thanks to Right Code for providing token support. Click here to register and get started.\n\nGrok2API is a Go-based Grok API gateway with a built-in React admin console. It organizes Grok Build OAuth, Grok Web SSO, and Grok Console SSO credentials into independent account pools, exposes OpenAI- and Anthropic-style APIs, and provides one place to manage model routes, client keys, quotas, media, audits, and egress proxies.\n\nHighlights\n\nThree Providers**: Build, Web, and Console keep credentials, quotas, health, cooldowns, concurrency, and model capabilities separate\nCompatible APIs**: Responses, Chat Completions, Anthropic Messages, Images, and asynchronous Videos\nModel routing**: remote discovery, static catalogs, source pinning, client permissions, and per-account capability filtering\nMulti-account scheduling**: priorities, quota gates, sticky sessions, concurrency leases, cooldowns, and bounded failover\nMulti-turn compatibility**: stored-response ownership, compaction, and optional server-side reasoning replay\nMedia pipeline**: image generation, image editing, video jobs, local archiving, and URL/Base64/SSE output\nAccount relationships**: Web-centered links to Build and Console can share a stable egress identity while runtime state stays independent\nRuntime infrastructure**: SQLite/PostgreSQL, Memory/Redis, and HTTP/SOCKS5/Resin egress\nAdmin console**: dashboard, accounts, model routes, client keys, image gallery, video library, request audits, runtime settings, and update checks\nOptional account auto-clean** (off by default): runtime settings can periodically hard-delete accounts already marked reauthRequired whose reauth_marked_at exceeds the configured minimum age. Cooldown-only and still-active permanent-refresh drain accounts are never selected. Accounts with active inference leases or queued/in-progress video jobs are skipped. A distributed maintenance lock prevents duplicate work across shared-runtime instances, and each tick has a bounded deletion budget. First scan waits one interval after enable and after process start; only actual policy changes reschedule the next tick.\n\nArchitecture\n\nRequests never mix account state across Providers:\n\n1. The HTTP layer handles authentication, request limits, and protocol detection.\n2. The model router resolves a public model name to a Provider-qualified internal route.\n3. The Provider Registry verifies that the selected source supports the requested protocol or media operation.\n4. The account selector chooses an eligible account from that Provider using capability, quota, stickiness, cooldown, and concurrency state.\n5. The matching Adapter performs upstream protocol conversion and forwarding.\n6. Audit, quota, billing, response ownership, and concurrency leases are finalized once at the end of the request.\n\nProvider boundaries\n\n| Provider | Authentication | Model catalog | Quota authority | Exposed capabilities |\n| :-- | :-- | :-- | :-- | :-- |\n| Grok Build | OAuth / Device OAuth | Discovered per account | Billing | Responses, Chat, Messages, Compact, stored responses, Video |\n| Grok Web | SSO | Built in and filtered by account tier | Upstream quota windows | Responses, Chat, Messages, Images, Image Edit, Video |\n| Grok Console | SSO | Built in | Local window | Stateless Responses, Chat, Messages |\n\nProviders are integrated through focused capability interfaces. Generic Gateway and HTTP Handler code does not construct private Provider requests. The dependency direction remains:\n\nTechnology stack\n\n| Layer | Technology |\n| :-- | :-- |\n| Backend | Go 1.26, Gin, GORM |\n| Frontend | React 19, TypeScript, Vite, Tailwind CSS, shadcn/ui |\n| Database | SQLite / PostgreSQL |\n| Runtime | Memory / Redis |\n\nRepository layout\n\nQuick start\n\nDocker Compose (recommended)\n\nOfficial GHCR images are published for both linux/amd64 and linux/arm64.\n\nGenerate secure secrets:\n\nWrite the generated values to config.yaml and replace the bootstrap password:\n\nStart the service:\n\nThe admin console is available at http://127.0.0.1:8000 by default.\n\nCompose mounts config.yaml read-only and stores the SQLite database and local media in the grok2api-data volume. The image already contains the frontend; no separate web deployment is required.\n\nCommon maintenance commands:\n\nRun from source\n\nTo run the frontend development server separately:\n\nThe frontend runs at http://127.0.0.1:5173 by default and proxies API requests to http://127.0.0.1:8000.\n\nFirst-time setup\n\n1. Sign in with the administrator created from bootstrapAdmin.\n2. Add a Build, Web, or Console account under **Upstream Accounts**.\n3. Wait for the initial quota and model-capability sync to complete.\n4. Review public model names, sources, and enabled routes under **Model Routes**.\n5. Create a g2a_ API key under **Client Keys**.\n6. Use that key to call /v1/*.\n\nAfter the administrator has been created, change its password and remove bootstrapAdmin from the configuration. Keep credentialEncryptionKey permanently: changing it makes existing encrypted credentials unreadable.\n\nMigrating accounts from the Python version\n\nThe **Grok Web SSO tokens** used by the Python version can be migrated, but its database or original pool JSON cannot be imported directly. Export **TXT (one token per line)** from the Python v2 admin page, or extract the raw SSO tokens from the old storage. Then open /accounts in the Go version, select **Grok Web**, and use **Connect account → Quick import SSO** or **Import account files**.\n\nThe Go Web importer accepts:\n\nTXT: one raw token per line; sso= and sso= ; ... are also accepted\nJSON: {\"provider\":\"grok_web\",\"accounts\":[{\"sso_token\":\"...\",\"name\":\"optional\",\"tier\":\"auto|basic|super|heavy\"}]}\n\nPython pool assignments, tags, status, quota, usage, cooldown, proxy, and Cloudflare metadata are not migrated. TXT imports use tier auto and resync upstream state. The Python version did not contain Grok Build OAuth credentials, so its pools cannot be imported under the **Grok Build** tab. Each import is limited to 1,000 files, 30 MiB total, and 10,000 accounts; wait for identity, quota, and model-capability synchronization after importing.\n\nModels and routing\n\nPublic model names are unqualified by default. Internally, Build/, Web/, and Console/ are used as stable route IDs. Qualified names remain available for explicitly selecting a source, but they are not shown as ordinary model names.\n\nBuild models are discover",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "chenyme/grok2api 是一个基于 Go 语言的多账户 API 网关项目，集成 Grok Build、Grok Web 和 Grok Console 三个服务。它提供 OpenAI 和 Anthropic 风格的 API，支持多账户调度、模型路由、媒体处理（图像、视频）、SQLite/PostgreSQL 存储，并包含一个 React 管理控制台。项目适用于技术研究，通过 Docker Compose 快速部署，实现多账户的配额管理、并发控制和故障转移。目前已获得 6555 颗星，周增长 618 星，表明社区关注度较高。",
+      "category": "开源",
+      "sentiment": "neutral",
+      "keywords": [
+        "Grok2API",
+        "API网关",
+        "多账户",
+        "Go",
+        "GitHub Trending"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:36.949562Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "b88a3a4b263fe858",
+    "title": "schollz/croc - GitHub Trending",
+    "url": "https://github.com/schollz/croc",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-07-22T17:27:29.099839Z",
+    "summary": "Repository: schollz/croc\nURL: https://github.com/schollz/croc\nDescription: Easily and securely send things from one computer to another 🐊 📦\nLanguage: Go\nStars: 37393\nWeekly stars: 998",
+    "content": "Repository: schollz/croc\nURL: https://github.com/schollz/croc\nDescription: Easily and securely send things from one computer to another 🐊 📦\nLanguage: Go\nStars: 37393\nWeekly stars: 998\n\nREADME:\nThis project’s future depends on community support. Become a sponsor today .\n\nAbout\n\ncroc is a tool that allows any two computers to simply and securely transfer files and folders. AFAIK, *croc* is the only CLI file-transfer tool that does **all** of the following:\n\nAllows **any two computers** to transfer data (using a relay)\nProvides **end-to-end encryption** (using PAKE)\nEnables easy **cross-platform** transfers (Windows, Linux, Mac)\nAllows **multiple file** transfers\nAllows **resuming transfers** that are interrupted\nNo need for local server or port-forwarding\nIPv6-first** with IPv4 fallback\nCan **use a proxy**, like Tor\n\nFor more information about croc, see my blog post or read a recent interview I did.\n\nInstall\n\nYou can download the latest release for your system, or install a release from the command-line:\n\nOn macOS\n\nUsing Homebrew:\n\nUsing MacPorts:\n\nOn Windows\n\nYou can install the latest release with Scoop, Chocolatey, or Winget:\n\nUsing nix-env\n\nYou can install the latest release with Nix:\n\nOn NixOS\n\nYou can add this to your configuration.nix:\n\nOn Alpine Linux\n\nFirst, install dependencies:\n\nOn Arch Linux\n\nInstall with pacman:\n\nOn Fedora\n\nInstall with dnf:\n\nOn Gentoo\n\nInstall with portage:\n\nOn Termux\n\nInstall with pkg:\n\nOn FreeBSD\n\nInstall with pkg:\n\nOn Linux, macOS, and Windows via Conda\n\nYou can install from conda-forge globally with pixi:\n\nOr install into a particular environment with conda:\n\nOn Linux, macOS via Docker\n\nAdd the following one-liner function to your ~/.profile (works with any POSIX-compliant shell):\n\nYou can also just paste it in the terminal for current session. On first run Docker will pull the image. croc via Docker will only work within the current directory and its subdirectories.\n\nBuild from Source\n\nIf you prefer, you can install Go and build from source (requires Go 1.22+):\n\nOn Android\n\nThere are two F-Droid apps available:\n\ncrocgui — original port (Go, basic UI)\ncroc-app — native Kotlin/Jetpack Compose client with a modern, mobile-first interface\n\nUsage\n\nTo send a file, simply do:\n\nThen, to receive the file (or folder) on another computer, run:\n\nThe code phrase is used to establish password-authenticated key agreement (PAKE) which generates a secret key for the sender and recipient to use for end-to-end encryption.\n\nCustomizations & Options\n\nUsing croc on Linux or macOS\n\nOn Linux and macOS, the sending and receiving process is slightly different to avoid leaking the secret via the process name. You will need to run croc with the secret as an environment variable. For example, to receive with the secret ***:\n\nFor single-user systems, the default behavior can be permanently enabled by running:\n\nCustom Code Phrase\n\nYou can send with your own code phrase (must be at least 6 characters):\n\nAllow Overwriting Without Prompt\n\nTo automatically overwrite files without prompting, use the --overwrite flag:\n\nExcluding Folders\n\nTo exclude folders from being sent, use the --exclude flag with comma-delimited exclusions:\n\nUse Pipes - stdin and stdout\n\nYou can pipe to croc:\n\nTo receive the file to stdout, you can use:\n\nSend Text\n\nTo send URLs or short text, use:\n\nSend Multiple Files\n\nYou can send multiple files directly by listing the files and/or folders:\n\nShow QR Code\n\nTo show QR code (for mobile devices), use:\n\nUse a Proxy\n\nYou can send files via a proxy by adding --socks5:\n\nChange Encryption Curve\n\nTo choose a different elliptic curve for encryption, use the --curve flag:\n\nChange Hash Algorithm\n\nFor faster hashing, use the imohash algorithm:\n\nClipboard Options\n\nBy default, the code phrase is copied to your clipboard. To disable this:\n\nTo copy the full command with the secret as an environment variable (useful on Linux/macOS):\n\nThis copies the full command like CROC_SECRET=\"code-phrase\" croc (including any relay/pass flags).\n\nQuiet Mode\n\nTo suppress all output (useful for scripts and automation):\n\nSelf-host Relay\n\nYou can run your own relay:\n\nBy default, it uses TCP ports 9009-9013. You can customize the ports (e.g., croc relay --ports 1111,1112), but at least **2** ports are required.\n\nTo send files using your relay:\n\nSelf-host Relay with Docker\n\nYou can also run a relay with Docker:\n\nTo send files using your custom relay:\n\nTo use custom ports, set CROC_PORTS (comma-separated) or CROC_PORT (base port):\n\nAcknowledgements\n\ncroc has evolved through many iterations, and I am thankful for the contributions! Special thanks to:\n\n@warner for the idea\n@tscholl2 for the encryption gists\n@skorokithakis for proxying two connections\n\nAnd many more!",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "croc 是一款用 Go 语言编写的命令行工具，支持任意两台计算机之间简单、安全地传输文件和文件夹。它提供端到端加密（基于 PAKE）、跨平台支持（Windows/Linux/Mac）、多文件传输、断点续传功能，无需本地服务器或端口转发，默认 IPv6 优先并支持 Tor 代理。该项目在 GitHub 上获得超过 3.7 万星标，社区活跃，适合需要快速安全传输文件的用户。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "croc",
+        "文件传输",
+        "端到端加密",
+        "CLI工具",
+        "Go语言"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:36.925769Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "9df73fa776f0ef85",
+    "title": "AI Teammates: how monday.com runs production AI agents on Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/ai-teammates-how-monday-com-runs-production-ai-agents-on-amazon-bedrock/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-22T15:54:28Z",
+    "summary": "AI Teammates are agentic AI on Amazon Bedrock, and few engineering organizations run them in production at the scale that monday.com does. Nine in ten Builders use AI coding tools every month, up from roughly half a year ago. Per-engineer PR throughput is up by more than half. Every figure in this post comes from monday’s own internal production data. In this post, we share the architecture behind those numbers, the retrofits that made it work in a decade-old code base, and the confidence-scored...",
+    "content": "AI Teammates are agentic AI on Amazon Bedrock , and few engineering organizations run them in production at the scale that monday.com does. Nine in ten Builders use AI coding tools every month, up from roughly half a year ago. Per-engineer PR throughput is up by more than half. Every figure in this post comes from monday’s own internal production data.\nIn this post, we share the architecture behind those numbers, the retrofits that made it work in a decade-old code base, and the confidence-scored merge play closing the gap to full autonomy.\nThis is not a greenfield\nmonday.com is a decade-old code base, millions of paying users, hundreds of microfrontends and microservices, hundreds of Builders (Engineers, PMs, Analysts, and Product designers). Every PR an agent opens goes into a system millions of users expect to keep working through the next deploy. Greenfield demos are straightforward. Running agents inside an enterprise SaaS with real on-call, customers, and compliance is the work.\nThree levels of AI engineering\nYou can frame the journey as three levels:\n\nL1, the assistant. Engineers use AI as a pair programmer. Cursor for the fast reflexive work, Claude Code for the heavy lifts. Adoption has nearly doubled year over year.\nL2, skills and sub-agents. Teams build reusable agents for repeated work, engineers in the driver’s seat. This is where most of monday runs today, and where per-developer PR throughput stepped up by more than half.\nL3, multi-agent. Fully agentic. Agents own delivery end-to-end while engineers orchestrate, taking tasks from boards, talking in Slack and monday, shipping code alongside humans.\n\nAgents are teammates, not jobs\nSphera is monday’s internal agent system. The first thing you see isn’t a job queue, it’s a Teams page: a mix of humans and agents, each with a profile, a manager, a scope, and a performance score. Atlas, the agent at the center of this post, is one of them: role: Software Engineer. Job: pick up tickets, write the PR, ship the feature. IDE: none. Same backlog as everyone else.\nThis isn’t decoration, it’s the schema. Every agent has a stable identity that flows through Slack, GitHub, and monday, so a human tags, assigns, code-reviews, or deactivates them like any other teammate. The agents that move the needle live on real teams, doing real work, accountable for the result.\n\nThe architecture\nHere is how the system fits together, from the inboxes an agent listens on to the AWS services that carry each event.\nThree inboxes, one agent\nA monday-built agent has three first-class inboxes: a Slack @mention , a monday item assignment, a GitHub PR review request. All three hit the same agent session, with the same memory and workspace on disk: three flavors of the same event, same queue, same path. We don’t run three agent systems. We run one.\nThe architecture in one diagram\n\nThe seven AWS services that we used are Amazon Simple Notification Service (Amazon SNS) , Amazon Simple Queue Service (Amazon SQS) , Amazon Elastic Kubernetes Service (Amazon EKS) , Amazon Relational Database Service (Amazon RDS) , Amazon ElastiCache , Amazon Elastic File System (Amazon EFS) , and Amazon Simple Storage Service (Amazon S3) . Alongside them, AWS Secrets Manager handles per-session secret management. Amazon Bedrock handles model calls, and monday-agent-sdk runs inside each agent runner pod.\nEvent path: From SNS to SQS to monday Builders CoWORK\nEvery external trigger lands in SNS, which fans out to per-team SQS queues by topic and routing key. The monday Builders CoWORK , a set of SQS consumers on EKS, pulls each message, resolves which agent owns it, and hands it to the right agent runner pod.\nPub/sub plus queue gives us four things we won’t give up: retries and dead-letter queues out of the box, back-pressure when Amazon Bedrock throttles, durable replay (we re-run the last day of events against a patched build before promoting), and concurrent fan-out. If the Claude Agent SDK ships something better at the runtime layer, we delete our version. The harness stays.\nmonday-agent-sdk: A thin wrapper, on purpose\nThe Claude Agent SDK is the runtime. We wrap it for three reasons:\n\nProvider neutrality at the call site. Agent LLM calls route into an Amazon Bedrock model endpoint.\nCold-start cost. Agent runners ship with a warm node_modules and plugin caches, so the first model call goes out in usually under a second.\nWe wanted our own harness. The runtime is becoming a commodity. The harness is where our opinions live: how an agent is evaluated, how plugins compose, how it talks to Slack, monday, and GitHub, how its output is reviewed against monday standards. We keep the runtime someone else’s problem and make the harness ours.\n\nState, memory, sessions\nAgents have at least three kinds of state. Putting all three in one store costs you money, latency, or correctness. The live state move to Amazon ElastiCache. Current task, run cursor, distributed lock, heartbeat, and the agent/human message log. Sub-millisecond reads, self-expiring keys. Amazon DynamoDB would work; ElastiCache is cheaper and faster for this shape of access. Sessions and memory get stored in Amazon Elastic File System. Each active session is a directory on a shared filesystem:\n/sessions/<session-id>/\n├── repos/ # checked-out workspace\n├── secrets.json # encrypted per-session secrets\n└── messages/ # chronological event log\n\n/agents/<agent-id>/\n├── MEMORY.md # cross-session memory\n└── diary/2026-04-21.md # per-day journal\nTwo reasons, not S3. First, the Claude Agent SDK and most plugins expect a real POSIX filesystem ( git , npm , file edits), which removes a whole class of “works in dev, breaks in worker” bugs. Second, when a run resumes on a different EKS pod, that pod mounts the same EFS path and picks up where it left off.\nAtlas’s daily diary is a real file. A redacted snippet:\n# diary/2026-04-21.md\n## In progress\n- ENG-3491: rate-limit headers: verify staging, then open PR\n- ENG-3502: dependency bump: blocked on Guardrails security-boundary\nrule, waiting on standard-owner review\n## What I learned last session\n- The accounts-api team files every new error code in the shared\nregistry BEFORE the PR opens. I did it in the same PR last time\nand got reverted. Filed the registry update first this time.\nThat file is how Atlas resumes work the next morning . He reads it, recalls that the accounts-api team wants the errors-registry update filed separately, and gets to work. Memory is a file on a disk that more than one pod can mount.\nDurable records go to S3. Final transcripts, snapshots, artifacts, and evals are keyed by session ID. EFS holds working memory; S3 is the audit trail.\nAmazon Bedrock as the model fabric\nAmazon Bedrock is more than a place to get tokens. It’s the service that lets us run hundreds of agents without losing track of cost, safety, or capacity. Most operational requirements for deploying agents at scale are already features in Amazon Bedrock:\n\nApplication Inference Profiles route every model call, so cost tracking and capacity planning stay in one place.\nOne audit trail for every model call: when security or a regulator asks what agents sent where in a window, we have one place to answer.\nCross-Region failover when an AWS Region throttles. Agent code doesn’t notice.\nAWS PrivateLink endpoints keep model traffic inside our virtual private cloud (VPC).\n\nRunning on EKS\nThe compute fleet is Amazon EKS, one pod per active agent session, mounting the agent’s EFS workspace. Crash isolation is per-session. Auto scaling is driven by KEDA on average active sessions across pods, measured using Datadog. We run a single worker image. Repos are cached on EFS and reused across sessions. No service mesh, no orchestrator-of-orchestrators. EKS, SQS, and the cache layer carry the load.\nFive retrofits that made it all work\nArchitecture is the floor. The following five retrofits are what made agents useful inside a decade-old code base. None are exotic. All were unobvious until we hit them:\nEvals before model upgrades\n“Looks fine” was the bar for Atlas’s early PRs. It broke once volume picked up. We added two eval layers: deterministic metrics (PRs merged, revert rate, zero-touch merge rate) per agent, and LLM-scored evals across five dimensions per PR: Intent & Decision, Execution & Artifact, Completeness & Usefulness, Instruction & Boundary, Efficiency. Both feed back into the harness. Across successive versions of Atlas we changed no model, no prompts, no human nudges, only the evals, and scores moved across every dimension.\nMemory is a file, not a vector store\nSession 1: Atlas built a feature. Session 2: he had no idea Session 1 had happened. We tried context-window stuffing and vector retrieval over past transcripts. Both worked badly. What worked: a per-agent MEMORY.md and a diary/YYYY-MM-DD.md written at session end, read at session start. Plain markdown, no embeddings, no recall scoring, no agentic-RAG ceremony.\nRemote sandbox before human review\nAtlas’s first dozen PRs passed local tests and broke in CI. A monday-scale code base has dependencies that only exist in real environments: feature flags, third-party services, real traffic. We gave Atlas a remote sandbox per session, and every PR auto-deploys to it. Tests, checks, and replayed production traffic run before he asks for human review: failure to fix to ship again, no human in the loop.\nPR Guardrails: Automated review against monday standards\nAtlas was shipping more, and human review became the bottleneck. We turned every monday engineering standard into an automated reviewer: metrics tagging, feature-flag hygiene, Datadog usage, security boundaries, database and microservice conventions, test quality, documentation. A subset are blocking. Each is wired to internal knowledge through monday’s MCP servers, so the reviewer sees the same context the standard-owner team would.\nEvery PR, agent- and human-authored alike, goes through Guardrails. At scale that means tens of thousands of PRs evaluated per month and hundreds of thousands of standard checks executed. Roughly one in five PRs fails at least one standard and gets bounced back, and human overrides run in the low single digits. The system manages the enforcement, not the human reviewer.\nBuilders CoWORK: monday boards as the shared state layer\nThe last failure mode was the most expensive: agents in silos opened PRs no team owned. We added the CoWORK workspace, the user-facing surface of the same monday Builders CoWORK that routes events. An agent’s tasks, status, blockers, and handoffs now live on the same monday board as the team’s, so accountability stopped being a system problem: monday already solved it for humans.\n\nAgents at work in a collaborative space\n\nAgents are co-workers you can ask to share information or perform tasks, like any teammate\nFrom one bottleneck to the next\nBy late Q1 2026 the bottleneck was no longer code generation but human review: Guardrails caught what humans used to catch, but every PR still waited on a human to approve. That wall was next.\nThe first of many: Morphex\nMorphex is monday’s first fully autonomous engineering agent, working within the same repo, CI pipeline, Guardrails, and revert protocols as every Builder. Nineteen of every twenty Morphex PRs merge automatically, not by skipping review but by passing every gate, and an approved PR ships to production with no human in the loop. It opens more PRs a month than most engineers, and a rejected PR fails for the same reasons any engineer’s does: flaky tests, ambiguous specs, unhandled edge cases.\nThat 19-in-20 rate is a floor, not a ceiling. The open question: what signal tells us, ahead of time, which PRs are safe to merge without a human.\nThe signal: A recent rigorous cut\nAcross our top PR-generating agents (no cherry-picking), the numbers break down cleanly: about three in ten PRs merged, roughly three-quarters of those with zero human edits, and a revert rate in the low single digits. Around a quarter of the PRs were caught and declined by Guardrails before reaching a human at all.\nThat last number matters most. Guardrails stopped a quarter of agent PRs because the system saw they weren’t ready, leaving a pre-filtered population of merges. A low-single-digit revert rate on that population is the signal that confidence-based auto-merge is workable.\nConfidence-scored automatic merging\nThe confidence score combines four signals available the moment the PR opens:\n\nDeterministic Guardrails outcome : every blocking standard must pass.\nPer-agent eval trajectory : recent eval-score window for this version of the agent.\nPer-(agent × repo × change-class) historical revert rate : near-zero reverts on dependency-bumps in a low-risk service is a different picture from a higher revert rate on monolith migrations.\nSandbox outcome : green from retrofit 3 is necessary, not sufficient.\n\nAbove the threshold, the PR merges automatically. Below it, it routes to a human with the specific failing signal called out. That’s the L2 to L3 transition: not removing humans, but removing humans from the cases where the system’s signal is strong enough that adding a human doesn’t improve the outcome. We’re driving one metric over the next two quarters: the fraction of merged agent PRs that ship without a human reviewer, holding revert rate flat or improving.\n\nAI engineering isn’t about creating perfect agents. It’s about building feedback loops that let imperfect agents be safely trusted while saving humans time.\n\nHonest close\nWhy we built it the monday way\nThe value isn’t the runtime, that’s only a harness around the Claude Agent SDK. It lives in everything we’ve wired around it, and that wiring is monday through and through:\n\nmonday boards as the shared state layer: every agent’s tasks, status, and handoffs live where the rest of the business already looks.\nmonday MCP servers as the substrate Guardrails and standards plug into.\nmonday’s auth and identity, so every agent has a real Slack, GitHub, and monday user under the same RBAC as any human.\nmonday’s deploy pipeline so agent code ships through the same CI/CD as every other Builder.\n\nAgents that share state, identity, and infrastructure with humans don’t need a separate governance layer. The existing one already applies. That makes the system auditable, reversible, and trustworthy by default, not by addition. A boilerplate system would have flattened all of that into someone else’s model.\nThree things we’d do differently\nEvals should have been in the system on day one, not month nine. The score lift Atlas got from them was the headline result. We over-invested in vector stores before realizing MEMORY.md on EFS was always the right answer. And the first CoWORK lived in a separate workspace that forced humans to context-switch to see what agents were doing. Moving it onto monday boards should have been the first decision, not a later correction.\nConclusion\nWe’re not open-sourcing monday-agent-sdk . The wrapper is small, and most of its value is the harness, which is monday-specific in ways that wouldn’t help anyone else. What we’re sharing is the architecture and the operational playbook, because the industry moves faster when the teams running production agents at scale are honest about what’s working.\nIf you’re building agents into your engineering teams, you’ll meet most of the same walls we have, and we’ve already crossed them. Talk to us: the monday AI Engineering team, or the Amazon Bedrock team, will be happy to share our insights.\nLearn more\n\nAmazon Bedrock marketing page.\nAmazon Bedrock service documentation page for the technical details behind the model calls described earlier in this post.\nAmazon Bedrock console to get started.\n\nAbout the authors\n\nClaudio Mazzoni\nClaudio is a Sr Specialist Solutions Architect on the Amazon Bedrock GTM team. Claudio excels at guiding customers through their Gen AI journey. Outside of work, Claudio enjoys spending time with family, working in his garden, and cooking Uruguayan food.\n\nOfek Dayan\nOfek is a Senior Software Engineer at monday.com, focused on building the Sphera AI Agents platform. He develops the infrastructure that enables AI agents to autonomously execute software development tasks and integrate seamlessly into monday.com’s builders teams.\n\nNetanel Abergel\nNetanel is a Director of Engineering at monday.com, where he leads AI Engineering and is building the foundation and operating model for AI-native teams. His team is transforming how software is built and operated through agentic development, AI developer platforms, CI/CD, release management, and systems architecture.\n\nMoran Zilberstein\nMoran is a Senior Solutions Architect at AWS with over 20 years of experience in coding and architecting business-critical applications. Moran works closely with ISVs, helping them fulfill their potential on AWS platforms. For the past year, she has been partnering with Monday.com on their generative AI journey. Outside of work, Moran enjoys baking and hiking.\n\nErez Drutin\nErez is a Solutions Architect at AWS with a decade of experience building and leading data-intensive and AI-powered systems. Erez works closely with ISVs, including Monday.com, helping them scale and adopt AI on AWS. Outside of work, Erez enjoys basketball and running.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "monday.com 分享了他们在 Amazon Bedrock 上运行生产级 AI 代理（称为 AI Teammates）的架构和经验。文章详细介绍了其内部 Sphera 代理系统，包括三个层级（L1 助手、L2 技能子代理、L3 多代理）和关键组件（如 Atlas 代理、monday-agent-sdk）。通过将代理集成到现有的 monday 平台（使用 Slack、GitHub、monday 看板作为输入源），并利用 AWS 服务（SNS、SQS、EKS、RDS、ElastiCache、EFS、S3）构建事件驱动架构，实现了大规模部署。重点改进包括：基于评分的自动合并（Morphex 项目达到 95% 自动合并率）、远程沙箱测试、PR 护栏（Guardrails）以及使用普通文件而非向量存储作为记忆。文章强调了反馈循环和评估体系的重要性，并分享了三个教训：评估应尽早引入、避免过度依赖向量存储、应将代理界面集成到现有工作流中。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "monday.com",
+        "Amazon Bedrock",
+        "AI Teammates",
+        "Sphera",
+        "Morphex"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:39.346499Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "4eb3751221ad853a",
+    "title": "Building AI infrastructure with the Effingham County community",
+    "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-22T13:00:00Z",
+    "summary": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+    "content": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布在佐治亚州埃芬汉县启动Project Camellia项目，专注于AI基础设施建设。该项目承诺采用负责任能源，进行社区投资，创造就业机会，并开放Codex访问权限，旨在推动AI技术落地并促进当地经济发展。这一举措反映了OpenAI在扩展AI基础设施的同时关注社会责任和区域合作。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "Project Camellia",
+        "Effingham County",
+        "AI基础设施",
+        "负责任能源"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:36.997809Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "1de8660326e5e2b6",
+    "title": "Advancing the next era of national science",
+    "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-22T12:00:00Z",
+    "summary": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+    "content": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布将与美国能源部及国家实验室合作，共同推进前沿AI在科学研究中的应用，旨在加速科学发现。此举体现了AI在推动国家科学发展中的关键作用，有望在能源、材料、生物等领域取得突破。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "美国能源部",
+        "国家实验室",
+        "前沿AI",
+        "科学发现"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:36.061571Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "1f5d786bd553f599",
+    "title": "Introducing OpenAI Presence",
+    "url": "https://openai.com/index/introducing-openai-presence",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-22T05:30:00Z",
+    "summary": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+    "content": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 推出名为 Presence 的企业级 AI 智能体平台，旨在帮助组织部署可信的语音和聊天智能体，用于客户服务和内部工作流。该平台强调企业级的信任和安全，支持常见的客户交互和内部流程自动化，旨在降低企业采用 AI 智能体的门槛。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "Presence",
+        "AI agent",
+        "企业平台",
+        "语音聊天"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:36.765744Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "07a59789a1f95f86",
+    "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+    "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-21T07:00:00Z",
+    "summary": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
+    "content": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI与Hugging Face联合披露了一起在AI模型评估过程中发生的安全事件，双方分享了早期调查结果。该事件展现了攻击者的高级网络能力，并为防御方提供了重要经验教训。此次合作强调了在AI快速发展背景下加强安全防护的紧迫性。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "Hugging Face",
+        "安全事件",
+        "模型评估",
+        "网络防御"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:37.113471Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "10666aebf14a4743",
+    "title": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC",
+    "url": "https://openai.com/index/david-velez-robin-vince-join-openai-boards",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-21T00:00:00Z",
+    "summary": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC, bringing global leadership in finance, technology, and governance.",
+    "content": "David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC, bringing global leadership in finance, technology, and governance.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布David Vélez和Robin Vince加入OpenAI基金会和OpenAI Group PBC的董事会。两人分别在金融、技术和治理领域拥有全球领导经验，此举旨在增强OpenAI在战略和治理方面的能力。David Vélez是Nubank的创始人兼CEO，Robin Vince是纽约梅隆银行CEO。他们的加入可能为OpenAI带来更稳健的治理结构和商业洞察。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "David Vélez",
+        "Robin Vince",
+        "董事会",
+        "治理"
+      ]
+    },
+    "analyzed_at": "2026-07-22T17:27:36.534164Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

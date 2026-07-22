@@ -6,8 +6,8 @@
       "url": "https://github.com/1jehuang/jcode",
       "first_seen_at": "2026-07-21T17:38:31.028112+00:00",
       "first_seen_stars": 10191,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 10191,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 10663,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -121,6 +121,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "apache/ossie": {
+      "repo_id": "apache/ossie",
+      "full_name": "apache/ossie",
+      "url": "https://github.com/apache/ossie",
+      "first_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "first_seen_stars": 1490,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 1490,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "argoproj/argo-cd": {
       "repo_id": "argoproj/argo-cd",
       "full_name": "argoproj/argo-cd",
@@ -209,6 +220,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "chenyme/grok2api": {
+      "repo_id": "chenyme/grok2api",
+      "full_name": "chenyme/grok2api",
+      "url": "https://github.com/chenyme/grok2api",
+      "first_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "first_seen_stars": 6555,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 6555,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "chriskohlhoff/asio": {
       "repo_id": "chriskohlhoff/asio",
       "full_name": "chriskohlhoff/asio",
@@ -292,8 +314,8 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10160,
-      "last_seen_at": "2026-07-17T17:19:20.184763+00:00",
-      "last_seen_stars": 18303,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 24807,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +336,8 @@
       "url": "https://github.com/earendil-works/pi",
       "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
       "first_seen_stars": 72694,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 74534,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 75422,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -391,8 +413,8 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
       "first_seen_stars": 26762,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 28804,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 29074,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -435,8 +457,8 @@
       "url": "https://github.com/ibelick/ui-skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 4843,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 5795,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 5961,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -468,8 +490,8 @@
       "url": "https://github.com/iOfficeAI/OfficeCLI",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 14281,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 20554,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 21001,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -534,8 +556,8 @@
       "url": "https://github.com/koala73/worldmonitor",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 60746,
-      "last_seen_at": "2026-06-30T05:41:36.847378+00:00",
-      "last_seen_stars": 60965,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 68302,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -578,8 +600,8 @@
       "url": "https://github.com/mattpocock/skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 176355,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 180170,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 181991,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -600,8 +622,19 @@
       "url": "https://github.com/MoonshotAI/kimi-cli",
       "first_seen_at": "2026-07-20T18:11:59.348774+00:00",
       "first_seen_stars": 10167,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 10471,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 10597,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "moonshotai/kimi-code": {
+      "repo_id": "moonshotai/kimi-code",
+      "full_name": "MoonshotAI/kimi-code",
+      "url": "https://github.com/MoonshotAI/kimi-code",
+      "first_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "first_seen_stars": 4547,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 4547,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -644,8 +677,8 @@
       "url": "https://github.com/Nutlope/hallmark",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 5944,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 14801,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 15472,
       "double_alerted_at": "2026-07-18T17:06:21.238443+00:00",
       "ten_x_alerted_at": null
     },
@@ -688,8 +721,8 @@
       "url": "https://github.com/OpenCut-app/OpenCut",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 70937,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 76887,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 77475,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -699,8 +732,8 @@
       "url": "https://github.com/openinterpreter/openinterpreter",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 66622,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 67027,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 67122,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -776,8 +809,8 @@
       "url": "https://github.com/Robbyant/lingbot-map",
       "first_seen_at": "2026-07-01T18:05:53.748780+00:00",
       "first_seen_stars": 9178,
-      "last_seen_at": "2026-07-07T18:08:58.030407+00:00",
-      "last_seen_stars": 10167,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 14864,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -803,14 +836,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "schollz/croc": {
+      "repo_id": "schollz/croc",
+      "full_name": "schollz/croc",
+      "url": "https://github.com/schollz/croc",
+      "first_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "first_seen_stars": 37393,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 37393,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "shubhamsaboo/awesome-llm-apps": {
       "repo_id": "shubhamsaboo/awesome-llm-apps",
       "full_name": "Shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 120546,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 125683,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 126203,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -897,8 +941,8 @@
       "url": "https://github.com/tirth8205/code-review-graph",
       "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
       "first_seen_stars": 20878,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 24382,
+      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
+      "last_seen_stars": 25182,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
