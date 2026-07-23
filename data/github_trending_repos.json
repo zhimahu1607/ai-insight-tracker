@@ -6,8 +6,8 @@
       "url": "https://github.com/1jehuang/jcode",
       "first_seen_at": "2026-07-21T17:38:31.028112+00:00",
       "first_seen_stars": 10191,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 10663,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 10948,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -41,6 +41,17 @@
       "first_seen_stars": 76651,
       "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "last_seen_stars": 76651,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "agegr/pi-web": {
+      "repo_id": "agegr/pi-web",
+      "full_name": "agegr/pi-web",
+      "url": "https://github.com/agegr/pi-web",
+      "first_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "first_seen_stars": 2303,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 2303,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -127,8 +138,8 @@
       "url": "https://github.com/apache/ossie",
       "first_seen_at": "2026-07-22T17:27:29.099839+00:00",
       "first_seen_stars": 1490,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 1490,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 1537,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -259,8 +270,8 @@
       "url": "https://github.com/codecrafters-io/build-your-own-x",
       "first_seen_at": "2026-07-20T18:11:59.348774+00:00",
       "first_seen_stars": 529369,
-      "last_seen_at": "2026-07-20T18:11:59.348774+00:00",
-      "last_seen_stars": 529369,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 530669,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +325,8 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10160,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 24807,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 26757,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -336,8 +347,8 @@
       "url": "https://github.com/earendil-works/pi",
       "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
       "first_seen_stars": 72694,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 75422,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 76199,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -413,8 +424,8 @@
       "url": "https://github.com/HKUDS/DeepTutor",
       "first_seen_at": "2026-07-16T17:27:18.821490+00:00",
       "first_seen_stars": 26762,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 29074,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 29333,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -457,8 +468,8 @@
       "url": "https://github.com/ibelick/ui-skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 4843,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 5961,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 6134,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -556,8 +567,8 @@
       "url": "https://github.com/koala73/worldmonitor",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 60746,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 68302,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 71125,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -569,6 +580,17 @@
       "first_seen_stars": 4132,
       "last_seen_at": "2026-07-03T17:45:07.392915+00:00",
       "last_seen_stars": 5047,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "kvcache-ai/ktransformers": {
+      "repo_id": "kvcache-ai/ktransformers",
+      "full_name": "kvcache-ai/ktransformers",
+      "url": "https://github.com/kvcache-ai/ktransformers",
+      "first_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "first_seen_stars": 18941,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 18941,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -622,8 +644,8 @@
       "url": "https://github.com/MoonshotAI/kimi-cli",
       "first_seen_at": "2026-07-20T18:11:59.348774+00:00",
       "first_seen_stars": 10167,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 10597,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 10680,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -633,8 +655,8 @@
       "url": "https://github.com/MoonshotAI/kimi-code",
       "first_seen_at": "2026-07-22T17:27:29.099839+00:00",
       "first_seen_stars": 4547,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 4547,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 4752,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -677,8 +699,8 @@
       "url": "https://github.com/Nutlope/hallmark",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 5944,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 15472,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 16119,
       "double_alerted_at": "2026-07-18T17:06:21.238443+00:00",
       "ten_x_alerted_at": null
     },
@@ -792,6 +814,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "prismml-eng/bonsai-demo": {
+      "repo_id": "prismml-eng/bonsai-demo",
+      "full_name": "PrismML-Eng/Bonsai-demo",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+      "first_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "first_seen_stars": 1965,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 1965,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "ripienaar/free-for-dev": {
       "repo_id": "ripienaar/free-for-dev",
       "full_name": "ripienaar/free-for-dev",
@@ -809,8 +842,8 @@
       "url": "https://github.com/Robbyant/lingbot-map",
       "first_seen_at": "2026-07-01T18:05:53.748780+00:00",
       "first_seen_stars": 9178,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 14864,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 15056,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -853,8 +886,8 @@
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 120546,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 126203,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 126832,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -941,8 +974,8 @@
       "url": "https://github.com/tirth8205/code-review-graph",
       "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
       "first_seen_stars": 20878,
-      "last_seen_at": "2026-07-22T17:27:29.099839+00:00",
-      "last_seen_stars": 25182,
+      "last_seen_at": "2026-07-23T17:40:13.110503+00:00",
+      "last_seen_stars": 25777,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
