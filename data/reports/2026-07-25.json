@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-25",
+  "summary": "今日共收录 0 篇论文，5 条热点资讯。热门领域：无。热门关键词：无。",
+  "category_summaries": {},
+  "news_summary": "",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 5,
+    "news_by_category": {
+      "opensource": 2,
+      "ai": 3
+    },
+    "top_keywords": []
+  },
+  "generated_at": "2026-07-24T17:49:41.506530"
+}
