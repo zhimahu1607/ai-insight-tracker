@@ -1,0 +1,30 @@
+{
+  "date": "2026-07-31",
+  "summary": "今日 AI 领域整体风向集中于模型效率提升与基础设施优化，工业界和学术界不约而同地将“更低成本、更高性能”作为核心突破点。最值得关注的两大亮点：一是 OpenAI 发布 GPT-5.6 系列（Sol、Terra、Luna），通过大幅降价、引入显式提示缓存和可调推理努力级别，使 ARC-AGI-3 得分提升三倍，代表了 API 层性价比的显著跃升；二是微软研究院的双重成果——Echoverse 利用进化环境训练计算机使用代理，将 9B 模型性能从 36.5% 提升至 67.1%，以及 EvoLib 让 LLM 从推理经验中自主提炼知识，超越传统检索式记忆，前者展示了智能体训练范式的突破，后者则指向模型固有的内化学习机制。此外，Moonshot AI 发布的 2.8 万亿参数 MoE 模型 Kimi K3 获得 AWS 的 B300 实例部署指南，Yahoo 则借 Amazon Bedrock 集成 Claude 将搜索关键词扩展率提升 600 倍，表明超大模型与商业落地的效率鸿沟正在被系统性填补。跨领域来看，从 OpenAI 的缓存机制到微软的知识自省，再到 Yahoo 的搜索优化，都在传递同一信号：通过算法与架构创新降低推理成本，正取代单纯堆参数成为行业主旋律，开源社区亦涌现 Harper（Rust 语法检查器）与 book-to-skill（书籍转技能）等实用工具，进一步丰富了生态。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 领域围绕模型效率提升与基础设施优化展开。OpenAI 发布 GPT-5.6 系列（Sol、Terra、Luna），通过降低定价及引入显式提示缓存、可调推理努力级别等 API 设置，显著提升性价比与性能，在 ARC-AGI-3 上得分提升三倍。Moonshot AI 发布 2.8 万亿参数 MoE 模型 Kimi K3，AWS 提供了其基于 B300 实例的详细部署指南。微软研究院推出两大成果：Echoverse 通过构建进化环境训练计算机使用代理，将 9B 模型性能从 36.5% 大幅提升至 67.1%；EvoLib 则让 LLM 从推理经验中自主提炼知识，实现对传统检索式记忆的超越。应用层面，Yahoo 利用 Amazon Bedrock 集成 Claude 模型，将搜索重定向关键词扩展率提升 600 倍。此外，多个高质量开源项目受到关注，包括 Rust 编写的隐私优先语法检查器 Harper、WebGPU 3D 建筑编辑器 pascalorg/editor、以及将书籍转为 Agent 技能的工具 book-to-skill。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 16,
+    "news_by_category": {
+      "产品": 5,
+      "AI": 3,
+      "LLM": 2,
+      "开源": 6
+    },
+    "top_keywords": [
+      "GPT-5.6",
+      "OpenAI",
+      "Amazon Bedrock",
+      "开源",
+      "Rust",
+      "定价",
+      "性能",
+      "企业AI",
+      "ARC-AGI-3",
+      "API设置"
+    ]
+  },
+  "generated_at": "2026-07-30T17:43:33.978426"
+}
