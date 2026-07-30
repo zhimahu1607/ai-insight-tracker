@@ -6,8 +6,8 @@
       "url": "https://github.com/1jehuang/jcode",
       "first_seen_at": "2026-07-21T17:38:31.028112+00:00",
       "first_seen_stars": 10191,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 13262,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 14093,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -61,8 +61,8 @@
       "url": "https://github.com/alibaba/open-code-review",
       "first_seen_at": "2026-07-29T17:23:28.692586+00:00",
       "first_seen_stars": 15848,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 15848,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 16499,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -176,6 +176,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "automattic/harper": {
+      "repo_id": "automattic/harper",
+      "full_name": "Automattic/harper",
+      "url": "https://github.com/Automattic/harper",
+      "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "first_seen_stars": 13966,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 13966,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "aws/agent-toolkit-for-aws": {
       "repo_id": "aws/agent-toolkit-for-aws",
       "full_name": "aws/agent-toolkit-for-aws",
@@ -193,8 +204,8 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "first_seen_at": "2026-07-27T17:49:45.982243+00:00",
       "first_seen_stars": 11229,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 13372,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 14101,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -204,8 +215,8 @@
       "url": "https://github.com/block/buzz",
       "first_seen_at": "2026-07-29T17:23:28.692586+00:00",
       "first_seen_stars": 16669,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 16669,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 18155,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -215,8 +226,8 @@
       "url": "https://github.com/bojieli/ai-agent-book",
       "first_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "first_seen_stars": 19033,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 26093,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 27296,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +325,8 @@
       "url": "https://github.com/citrolabs/ego-lite",
       "first_seen_at": "2026-07-29T17:23:28.692586+00:00",
       "first_seen_stars": 5926,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 5926,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 6414,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -347,8 +358,8 @@
       "url": "https://github.com/CoreBunch/Instatic",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 5493,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 6563,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 6738,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -402,8 +413,8 @@
       "url": "https://github.com/diegosouzapw/OmniRoute",
       "first_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "first_seen_stars": 10160,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 33908,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 34919,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -424,8 +435,8 @@
       "url": "https://github.com/earendil-works/pi",
       "first_seen_at": "2026-07-19T17:08:06.178932+00:00",
       "first_seen_stars": 72694,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 80257,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 80872,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -688,8 +699,8 @@
       "url": "https://github.com/koala73/worldmonitor",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 60746,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 76398,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 76891,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -754,8 +765,8 @@
       "url": "https://github.com/mattpocock/skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 176355,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 194284,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 195998,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -767,6 +778,17 @@
       "first_seen_stars": 8759,
       "last_seen_at": "2026-07-03T17:45:07.392915+00:00",
       "last_seen_stars": 9041,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "moeru-ai/airi": {
+      "repo_id": "moeru-ai/airi",
+      "full_name": "moeru-ai/airi",
+      "url": "https://github.com/moeru-ai/airi",
+      "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "first_seen_stars": 45819,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 45819,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -891,6 +913,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "opengeos/geolibre": {
+      "repo_id": "opengeos/geolibre",
+      "full_name": "opengeos/GeoLibre",
+      "url": "https://github.com/opengeos/GeoLibre",
+      "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "first_seen_stars": 4464,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 4464,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "openinterpreter/openinterpreter": {
       "repo_id": "openinterpreter/openinterpreter",
       "full_name": "openinterpreter/openinterpreter",
@@ -935,6 +968,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "pascalorg/editor": {
+      "repo_id": "pascalorg/editor",
+      "full_name": "pascalorg/editor",
+      "url": "https://github.com/pascalorg/editor",
+      "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "first_seen_stars": 19998,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 19998,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "pbakaus/impeccable": {
       "repo_id": "pbakaus/impeccable",
       "full_name": "pbakaus/impeccable",
@@ -963,8 +1007,8 @@
       "url": "https://github.com/pingdotgg/t3code",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 14981,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 15575,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 15832,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -985,8 +1029,8 @@
       "url": "https://github.com/Pumpkin-MC/Pumpkin",
       "first_seen_at": "2026-07-25T17:09:47.504851+00:00",
       "first_seen_stars": 9601,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 10351,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 10422,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1062,8 +1106,8 @@
       "url": "https://github.com/shiyu-coder/Kronos",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 34063,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 34945,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 35091,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1166,6 +1210,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tokio-rs/topcoat": {
+      "repo_id": "tokio-rs/topcoat",
+      "full_name": "tokio-rs/topcoat",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "first_seen_stars": 3916,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 3916,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "topoteretes/cognee": {
       "repo_id": "topoteretes/cognee",
       "full_name": "topoteretes/cognee",
@@ -1194,8 +1249,8 @@
       "url": "https://github.com/UditAkhourii/adhd",
       "first_seen_at": "2026-07-28T17:42:39.356604+00:00",
       "first_seen_stars": 2528,
-      "last_seen_at": "2026-07-29T17:23:28.692586+00:00",
-      "last_seen_stars": 2695,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 2835,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1218,6 +1273,17 @@
       "first_seen_stars": 6461,
       "last_seen_at": "2026-07-17T17:19:20.184763+00:00",
       "last_seen_stars": 6461,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "virgiliojr94/book-to-skill": {
+      "repo_id": "virgiliojr94/book-to-skill",
+      "full_name": "virgiliojr94/book-to-skill",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "first_seen_stars": 13596,
+      "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
+      "last_seen_stars": 13596,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
