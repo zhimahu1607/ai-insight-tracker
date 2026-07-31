@@ -1,0 +1,205 @@
+[
+  {
+    "id": "e2b8f86303a263b6",
+    "title": "Disrupting a Criminal Scam Operation",
+    "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-04T00:00:00Z",
+    "summary": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
+    "content": "OpenAI disrupted a Cambodia-based scam operation using ChatGPT to support investment, romance, gambling, and impersonation schemes.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布破坏了一个位于柬埔寨的诈骗团伙，该团伙利用ChatGPT辅助实施投资、恋爱、赌博和冒充等欺诈活动。这一行动展示了AI技术在网络安全领域的应用，同时也凸显了大型语言模型可能被滥用的风险。OpenAI的干预不仅打击了犯罪行为，也体现了企业主动防范AI技术被恶意使用的责任。该事件对行业具有警示意义，促使其他AI公司加强安全措施，并推动监管机构关注AI的潜在滥用问题。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT",
+        "诈骗",
+        "柬埔寨",
+        "安全"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:29.026601Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "104b57e9a4316877",
+    "title": "microsoft/VibeVoice - GitHub Trending",
+    "url": "https://github.com/microsoft/VibeVoice",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-07-31T17:48:21.112275Z",
+    "summary": "Repository: microsoft/VibeVoice\nURL: https://github.com/microsoft/VibeVoice\nDescription: Open-Source Frontier Voice AI\nLanguage: Python\nStars: 51687\nWeekly stars: 1213",
+    "content": "Repository: microsoft/VibeVoice\nURL: https://github.com/microsoft/VibeVoice\nDescription: Open-Source Frontier Voice AI\nLanguage: Python\nStars: 51687\nWeekly stars: 1213\n\nREADME:\n🎙️ VibeVoice: Open-Source Frontier Voice AI\n\n📰 News\n\n2026-07-23: ⚡ We released VibeVoice-ASR-BitNet , an edge CPU inference engine for VibeVoice-ASR. Through heterogeneous quantization (I8_S + I2_S), the model is compressed from 4.62 GB to 1.58 GB with real-time inference (RTF Code ] [ Models ] [ Report ]\n\n2026-03-12: 🚀 VibeVoice-ASR is now integrated into Azure AI Foundry Labs ! You can now explore and test our unified speech-to-text capabilities directly through Microsoft Foundry.\n\n2026-03-06: 🚀 VibeVoice ASR is now part of a Transformers release ! You can now use our speech recognition model directly through the Hugging Face Transformers library for seamless integration into your projects.\n\n2026-01-21: 📣 We open-sourced VibeVoice-ASR , a unified speech-to-text model designed to handle 60-minute long-form audio in a single pass, generating structured transcriptions containing Who (Speaker), When (Timestamps), and What (Content), with support for User-Customized Context. Try it in Playground.\n⭐️ VibeVoice-ASR is natively multilingual, supporting over 50 languages — check the supported languages for details.\n🔥 The VibeVoice-ASR finetuning code is now available!\n⚡️ **vLLM inference** is now supported for faster inference; see vllm-asr for more details.\n📑 VibeVoice-ASR Technique Report is available.\n\n2025-12-16: 📣 We added experimental speakers to VibeVoice‑Realtime‑0.5B for exploration, including multilingual voices in nine languages (DE, FR, IT, JP, KR, NL, PL, PT, ES) and 11 distinct English style voices. Try it. More speaker types will be added over time.\n\n2025-12-03: 📣 We open-sourced VibeVoice‑Realtime‑0.5B , a real‑time text‑to‑speech model that supports streaming text input and robust long-form speech generation. Try it on Colab.\n\n2025-09-05: VibeVoice is an open-source research framework intended to advance collaboration in the speech synthesis community. After release, we discovered instances where the tool was used in ways inconsistent with the stated intent. Since responsible use of AI is one of Microsoft’s guiding principles, we have removed the VibeVoice-TTS code from this repository.\n\n2025-08-25: 📣 We open-sourced VibeVoice-TTS , a long-form multi-speaker text-to-speech model that can synthesize speech up to 90 minutes long with up to 4 distinct speakers. — accepted as an Oral at ICLR 2026! 🔥\n\nOverview\n\nVibeVoice is a **family of open-source frontier voice AI models** that includes both Text-to-Speech (TTS) and Automatic Speech Recognition (ASR) models.\n\nA core innovation of VibeVoice is its use of continuous speech tokenizers (Acoustic and Semantic) operating at an ultra-low frame rate of **7.5 Hz**. These tokenizers efficiently preserve audio fidelity while significantly boosting computational efficiency for processing long sequences. VibeVoice employs a next-token diffusion framework, leveraging a Large Language Model (LLM) to understand textual context and dialogue flow, and a diffusion head to generate high-fidelity acoustic details.\n\nFor more information, demos, and examples, please visit our Project Page.\n\n| Model | Weight | Quick Try |\n|-------|--------------|---------|\n| VibeVoice-ASR-7B | HF Link | Playground |\n| VibeVoice-ASR-BitNet (CPU) | HF Link | VibeASR.cpp |\n| VibeVoice-TTS-1.5B | HF Link | Disabled |\n| VibeVoice-Realtime-0.5B | HF Link | Colab |\n\nModels\n\n1. 📖 VibeVoice-ASR - Long-form Speech Recognition\n\nVibeVoice-ASR** is a unified speech-to-text model designed to handle **60-minute long-form audio** in a single pass, generating structured transcriptions containing **Who (Speaker), When (Timestamps), and What (Content)**, with support for **Customized Hotwords**.\n\n🕒 60-minute Single-Pass Processing**:\nUnlike conventional ASR models that slice audio into short chunks (often losing global context), VibeVoice ASR accepts up to **60 minutes** of continuous audio input within 64K token length. This ensures consistent speaker tracking and semantic coherence across the entire hour.\n\n👤 Customized Hotwords**:\nUsers can provide customized hotwords (e.g., specific names, technical terms, or background info) to guide the recognition process, significantly improving accuracy on domain-specific content.\n\n📝 Rich Transcription (Who, When, What)**:\nThe model jointly performs ASR, diarization, and timestamping, producing a structured output that indicates *who* said *what* and *when*.\n\n📖 Documentation | 🤗 Hugging Face | 🎮 Playground | 🛠️ Finetuning | 📊 Paper\n\nhttps://github.com/user-attachments/assets/acde5602-dc17-4314-9e3b-c630bc84aefa\n\n2. 🎙️ VibeVoice-TTS - Long-form Multi-speaker TTS\n\nBest for**: Long-form conversational audio, podcasts, multi-speaker dialogues\n\n⏱️ 90-minute Long-form Generation**:\nSynthesizes conversational/single-speaker speech up to **90 minutes** in a single pass, maintaining speaker consistency and semantic coherence throughout.\n\n👥 Multi-speaker Support**:\nSupports up to **4 distinct speakers** in a single conversation, with natural turn-taking and speaker consistency across long dialogues.\n\n🎭 Expressive Speech**:\nGenerates expressive, natural-sounding speech that captures conversational dynamics and emotional nuances.\n\n🌐 Multi-lingual Support**:\nSupports English, Chinese and other languages.\n\n📖 Documentation | 🤗 Hugging Face | 📊 Paper\n\nEnglish**\n\nhttps://github.com/user-attachments/assets/0967027c-141e-4909-bec8-091558b1b784\n\nChinese**\n\nhttps://github.com/user-attachments/assets/322280b7-3093-4c67-86e3-10be4746c88f\n\nCross-Lingual**\n\nhttps://github.com/user-attachments/assets/838d8ad9-a201-4dde-bb45-8cd3f59ce722\n\nSpontaneous Singing**\n\nhttps://github.com/user-attachments/assets/6f27a8a5-0c60-4f57-87f3-7dea2e11c730\n\nLong Conversation with 4 people**\n\nhttps://github.com/user-attachments/assets/a357c4b6-9768-495c-a576-1618f6275727\n\n3. ⚡ VibeVoice-Streaming - Real-time Streaming TTS\n\nVibeVoice-Realtime is a **lightweight real‑time** text-to-speech model supporting **streaming text input** and **robust long-form speech generation**.\n\nParameter size: 0.5B (deployment-friendly)\nReal-time TTS (~300 milliseconds first audible latency)\nStreaming text input\nRobust long-form speech generation (~10 minutes)\n\n📖 Documentation | 🤗 Hugging Face | 🚀 Colab\n\nhttps://github.com/user-attachments/assets/0901d274-f6ae-46ef-a0fd-3c4fba4f76dc\n\nContributing\n\nPlease see CONTRIBUTING.md for detailed contribution guidelines.\n\n⚠️ Risks and Limitations\n\nWhile efforts have been made to optimize it through various techniques, it may still produce outputs that are unexpected, biased, or inaccurate. VibeVoice inherits any biases, errors, or omissions produced by its base model (specifically, Qwen2.5 1.5b in this release).\nPotential for Deepfakes and Disinformation: High-quality synthetic speech can be misused to create convincing fake audio content for impersonation, fraud, or spreading disinformation. Users must ensure transcripts are reliable, check content accuracy, and avoid using generated content in misleading ways. Users are expected to use the generated content and to deploy the models in a lawful manner, in full compliance with all applicable laws and regulations in the relevant jurisdictions. It is best practice to disclose the use of AI when sharing AI-generated content.\n\nWe do not recommend using VibeVoice in commercial or real-world applications without further testing and development. This model is intended for research and development purposes only. Please use responsibly.\n\nStar History",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "微软开源了 VibeVoice 前沿语音 AI 模型系列，包含多个模型：VibeVoice-ASR 支持长达 60 分钟的音频单次处理，输出带说话人、时间戳和内容的结构化转录，并支持自定义热词和多语言识别；VibeVoice-TTS 可合成长达 90 分钟的多说话人语音，支持最多 4 个说话人；VibeVoice-Realtime-0.5B 则提供约 300 毫秒首次声音延迟的实时流式语音合成。其核心技术是 7.5Hz 超低帧率的连续语音 tokenizer 和 next-token diffusion 框架，兼顾音频保真与计算效率。该开源项目已获 5 万余 star，推动了长语音处理和实时语音合成技术的发展，但可能存在深度伪造等滥用风险。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "VibeVoice",
+        "微软",
+        "语音识别",
+        "语音合成",
+        "开源AI"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:38.785076Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "876f538be7b2edc7",
+    "title": "Optimizing production agents with Amazon Bedrock AgentCore Observability",
+    "url": "https://aws.amazon.com/blogs/machine-learning/optimizing-production-agents-with-amazon-bedrock-agentcore-observability/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-31T15:33:11Z",
+    "summary": "As your AI agents move from prototype to production, the challenge shifts from getting them to work to keeping them fast and efficient. Learn how to use Amazon Bedrock AgentCore Observability and Amazon CloudWatch to find performance bottlenecks and diagnose memory issues in long-running agent sessions.",
+    "content": "As your AI agents move from prototype to production, the challenges shift from getting them to work to keeping them fast and efficient. In Part 1 of this series, we walked through debugging two common agent failures: infinite loops and tool invocation errors. Those scenarios dealt with agents that were broken. In this post, we tackle a different challenge: agents that work correctly but perform poorly. Slow response times and unbounded memory growth are the most common operational issues that surface after you resolve the initial debugging problems. They don’t trigger error alerts, but they erode user trust and increase costs over time.\nUsing AgentCore Observability , a capability of Amazon Bedrock AgentCore, and Amazon CloudWatch , you will learn how to identify performance bottlenecks across your agent’s execution path and diagnose memory issues in long-running sessions. You will also implement monitoring practices that catch degradation before users notice it. For additional information and best practices, review AgentCore Evaluations , a capability of Amazon Bedrock AgentCore, and AgentCore Insights .\nPrerequisites\nYou need an AWS account with Amazon Bedrock AgentCore access, CloudWatch Transaction Search enabled, and a deployed agent. See Part 1 for full setup details.\nScenario 3: Performance bottlenecks\nAgents experience performance bottlenecks when they work correctly but respond too slowly. You expect sub-second responses but experience multi-second delays. Agents complete tasks successfully, but the latency makes them impractical for interactive use cases. This scenario is particularly challenging because slow is subjective. What’s acceptable for a batch processing agent is unacceptable for a customer service chatbot. You must establish performance budgets for your specific use case, then systematically identify which components violate those budgets.\nSymptoms to watch for\nPerformance degradation often manifests gradually. Agents might start with acceptable 2-second response times, but as you add features, integrate more tools, or accumulate more memory, latency creeps to 5 seconds, then 10, then becomes unusable. P95 response times exceed your thresholds, users abandon sessions, but error rates stay low. The agent works correctly but responds too slowly.\n\nFigure 1 — Session details showing multiple traces with consistently high latency. The three invocations took 7.5-8.2 seconds (average span latency), demonstrating a systemic performance bottleneck rather than occasional slowness. This pattern indicates the agent’s architecture needs optimization.\nTo find bottlenecks, start by identifying high-latency requests. Query CloudWatch for agent invocations that exceed your performance budget:\n\nfields @timestamp, RequestId, Latency\n| filter Operation like /InvokeAgent/\n| filter Latency > 3000\n| sort Latency desc\n| limit 50\n\nThis query returns agent invocations that took longer than 3 seconds (adjust the threshold based on your requirements), sorted by latency. Pick a representative high-latency request and note its RequestId .\nNext, analyze the request timeline to understand where time is spent:\n\nfields @timestamp, Operation, Duration, SpanName\n| filter RequestId = \"<RequestId>\"\n| sort @timestamp asc\n\nThe query shows you the sequence of operations within the request and how long each took. Look for operations that consume disproportionate time. Common culprits include memory retrieval operations, tool invocations, token generation, and sequential operations that could run in parallel.\n\nFigure 2 — OpenTelemetry trace timeline showing 17 spans across three sequential execute_event_loop_cycle operations. The tools (customer_lookup, order_history) execute one after another rather than in parallel, with each cycle waiting for the previous one to complete. This sequential pattern compounds latency across each tool invocation.\nCheck memory retrieval latency specifically:\n\nfields @timestamp, MemoryRetrievalLatency, MemoryNamespace\n| filter RequestId = \"<RequestId>\"\n| stats avg(MemoryRetrievalLatency), max(MemoryRetrievalLatency) by MemoryNamespace\n\nMemory retrieval should complete in under 200 milliseconds, representing the point where users begin perceiving noticeable delays in interactive applications. Higher latency suggests inefficient memory organization.\nExamine tool invocation latency to identify slow integrations:\n\nfields @timestamp, ToolName, ToolLatency\n| filter RequestId = \"<RequestId>\"\n| sort ToolLatency desc\n\nThe query identifies which tools contribute most to overall latency. A single slow tool can bottleneck the entire agent workflow.\nRoot cause analysis\nPerformance bottlenecks typically stem from three root causes. Slow tool execution occurs when external tools take seconds to respond because of poor optimization, overload, or network issues. Latencies compound with sequential calls, so a 2-second tool called three times becomes a 6-second bottleneck. Excessive token generation is a factor because foundation models (FMs) produce tokens sequentially, meaning a 500-token response takes 5x longer than a 100-token one, impacting both latency and cost. Finally, sequential processing , performing independent operations one at a time instead of in parallel, increases both cost and compute times.\nThe fix\nFor slow tool execution, implement caching, connection pooling, and proper database indexing to reduce response times. Set timeout limits and consider faster tool alternatives. If a tool consistently lags, profile it independently. The issue might be network latency, cold starts, or resource contention rather than the tool’s logic itself.\nFor memory retrieval, replace single large namespaces with topic-specific partitions, such as preferences, history, and domain knowledge, to reduce search space. Summarize old conversations into compact entries rather than storing them verbatim, and set size limits per namespace, such as 100 preferences, 50 recent messages, or 500 domain facts.\nFor token generation, optimize prompts to encourage brief, direct answers of 2–3 sentences unless more detail is requested. Add explicit length constraints and monitor token usage with alerts for unexpectedly long responses.\nFor sequential processing, run independent tool calls in parallel. Sequential calls totaling 4.5s (2s + 1.5s + 1s) drop to only 2s when parallelized, often cutting latency by 50 percent or more with minimal effort. To verify your optimizations, re-run the latency query from the identifying bottlenecks section. Confirm that P95 response times now fall within your performance budget and that the trace timeline shows parallel execution where expected.\nScenario 4: Memory issues in long-running sessions\nAgents experience memory issues in long-running sessions when they maintain sessions where memory usage grows unbounded. Agents accumulate context, and eventually, agents hit token limits, lose important context, or exhaust available memory. Sessions fail unexpectedly, and you lose conversation state. This scenario is particularly problematic for agents that support extended workflows, such as customer service sessions, research assistants, or monitoring agents. Without proper memory management, these use cases become impractical.\nSymptoms to watch for\nWhen abnormally long agent sessions exist, token usage grows linearly with session duration. Memory retrieval latency increases over time as memory stores grow. Sessions terminate unexpectedly with out-of-memory errors or context window exceeded errors.\n\nFigure 3 — Session details for the memorygrowth_Agent showing 6 traces, 15.7K total tokens consumed, and an average trace latency of 3,757 ms within a single session. Token usage grows with each successive invocation, demonstrating unbounded context accumulation. In production sessions spanning hours, this pattern leads to context window exhaustion and unexpected session failures.\nTo identify long-running sessions with high memory usage:\n\nfields @timestamp, SessionId, SessionDuration, MemorySize, TokenUsage\n| filter SessionDuration > 3600\n| sort MemorySize desc\n| limit 20\n\nThe query returns sessions lasting longer than one hour (3600 seconds), sorted by memory size. Pick a session with unusually high memory usage and note its SessionId .\nExamine memory extraction patterns to verify consolidation is occurring:\n\nfields @timestamp, MemoryExtractionStatus, MemoryExtractionLatency, MemoriesExtracted\n| filter SessionId = \"<SessionId>\"\n| sort @timestamp asc\n\nFigure 4 — CloudWatch Logs Insights showing 209 memory-related log entries concentrated around 18:20. The spike in memory operations indicates the agent storing information without consolidation. Each invocation adds new memory entries (through add_conversation_note and add_user_context tools) without pruning or summarizing old data, demonstrating the unbounded growth pattern.\nMemory extraction should occur regularly throughout the session. If you see gaps where no extraction happens for extended periods, the agent isn’t consolidating memories properly.\nCheck for memory extraction failures:\n\nfields @timestamp, ErrorMessage, MemoryExtractionStatus\n| filter SessionId = \"<SessionId>\"\n| filter MemoryExtractionStatus = \"Failed\"\n\nFailed memory extraction stops agents from consolidating context, causing unbounded growth. Common failure reasons include token limits exceeded during summarization, invalid memory formats that can’t be processed, network timeouts when writing to memory storage, and permission errors that block memory updates.\nAnalyze memory namespace organization:\n\nfields @timestamp, MemoryNamespace, MemoryCount, MemorySize\n| filter SessionId = \"<SessionId>\"\n| stats sum(MemoryCount) as TotalMemories, sum(MemorySize) as TotalSize by MemoryNamespace\n| sort TotalSize desc\n\nMemories are distributed across namespaces. Poor namespace organization can lead to inefficient memory retrieval and consolidation. If you see a single namespace containing thousands of memories, that’s a red flag indicating your agent needs better memory organization .\nRoot cause analysis\nMemory issues typically stem from misconfigured settings, filter on inbuilt datetime metadata of the record. For a deeper understanding of how AgentCore memory works, see AgentCore memory .\nThe fix\nTo resolve memory issues, verify your memory strategies include a consolidation configuration so AgentCore memory merges and summarizes records over time rather than accumulating them indefinitely. Organize records using namespace templates in your strategy definitions to make sure retrieval stays scoped to relevant context. Set eventExpiryDuration to control how long raw events persist (between 7–365 days). For implementation details, see AgentCore memory implementation .\nProduction best practices\nHaving covered the four failure scenarios across both parts, we now turn to production best practices that stop these issues before they occur. The troubleshooting workflows we’ve covered help you respond when things go wrong, but a well-architected observability strategy helps you proactively catch issues. The integration of AgentCore with CloudWatch provides the foundation for this proactive approach, giving you real-time visibility into agent health and performance.\nTurn on comprehensive instrumentation for production agents, memory systems, and gateways. Configure CloudWatch logs, CloudWatch metrics, and OpenTelemetry traces.\nConfigure CloudWatch alarms for critical metrics. Set thresholds for error rates (5 percent), 95th percentile (P95) latency (3 seconds), and token usage per session. Don’t wait for users to report problems. Let CloudWatch alert you when metrics exceed acceptable thresholds.\nCreate operational dashboards. Build a primary dashboard showing total invocations (last 24 hours), error rate (current compared to baseline), P50/P95/P99 latency, token usage trends, and active sessions count. Create per-agent dashboards showing agent-specific invocation patterns, tool usage breakdown, memory consumption trends, error types distribution, and cost per session. Review these dashboards daily to spot trends before they become problems.\nInvest in observability infrastructure before you need it. Build monitoring into your development process from day one. Share dashboards with product managers and stakeholders so everyone understands agent performance. When someone diagnoses a tricky production issue, share the approach with the team to build institutional knowledge about common failure patterns.\nTo monitor tool accuracy at scale, you can use Amazon Bedrock AgentCore Evaluators to continuously and automatically assess agent behavior. Instead of manually reviewing traces after failures occur, Evaluators inspect agent sessions in real time, scoring them against predefined quality criteria. Amazon Bedrock AgentCore Insights (preview) builds off Evaluators and provides triage analysis. Insights can provide failure analysis, user intent extraction, and execution summary.\nCleaning up\nAfter testing the optimization techniques in this post, clean up resources to avoid unnecessary charges.\nFor CloudWatch resources, delete test CloudWatch dashboards created during debugging, remove CloudWatch alarms set up for testing purposes, and consider archiving or deleting old CloudWatch log groups if no longer needed.\nFor AgentCore resources, if you created test agents specifically for this tutorial, delete them through the AgentCore console . Remove any test memory namespaces created during memory optimization testing. Delete any temporary tool integrations used for performance testing.\nFor cost optimization, review your Amazon CloudWatch Logs retention settings and adjust based on your compliance requirements. Consider using CloudWatch Logs data protection to cut storage costs for older logs.\nTo delete CloudWatch log groups:\n\naws logs delete-log-group --log-group-name /aws/bedrock-agentcore/your-agent-name\n\nTo remove CloudWatch alarms:\n\naws cloudwatch delete-alarms --alarm-names your-alarm-name\n\nConclusion\nPerformance bottlenecks and memory issues represent the most common operational challenges for production agents beyond the debugging scenarios covered in Part 1. With systematic diagnosis using CloudWatch traces and metrics, you can identify whether latency stems from slow tools, inefficient memory retrieval, excessive token generation, or sequential processing. For long-running sessions, monitoring memory growth patterns and implementing consolidation strategies keeps agents stable over extended interactions.\nNext steps\nReady to put these techniques into practice? Start by turning on AgentCore Observability for your production agents if you haven’t already. This one-time setup provides the foundation for everything we’ve covered. Set up CloudWatch alarms for critical metrics. Create troubleshooting runbooks for your specific agents and workflows, documenting the queries you run, the thresholds that indicate problems, and the fixes you implement.\nPractice debugging in non-production environments. Deliberately introduce failures and practice diagnosing them using the workflows we’ve covered. Build muscle memory for troubleshooting before you need it in production. Share this knowledge with your team to help confirm everyone who operates your agents understands these debugging techniques and knows how to use the observability features of AgentCore.\nProduction agents often fail for preventable reasons. With the right observability tools, systematic troubleshooting approaches, and a culture that treats every issue as a chance to improve, you can catch problems early, resolve them quickly, and build agents that earn lasting trust.\nLearn more\nFor more information about AgentCore and observability features, visit the AgentCore documentation . To get started with AgentCore, visit the AgentCore console . For additional CloudWatch monitoring best practices, see the CloudWatch User Guide .\n\nAbout the authors\n\nJoshua Lacy\nJoshua is a Solutions Architect at AWS in the Commercial Sector, supporting ISV customers. He has a passion for helping builders integrate AI into production applications and designing architectures that scale securely across multi-tenant environments. He specializes in agentic AI, Amazon Bedrock AgentCore, and generative AI application development.\n\nJenny Shen\nJenny is a Solutions Architect at AWS in the Telecom, Media and Entertainment space. She has a passion for helping customers build production-ready systems and finding ways to simplify how teams operate their cloud workloads. She specializes in CloudOps and AI/ML transformations.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "本文介绍了如何利用Amazon Bedrock AgentCore Observability和Amazon CloudWatch优化生产环境中的AI代理性能。文章针对两类常见问题：性能瓶颈（响应缓慢）和长期会话中的内存问题（无界增长）。通过CloudWatch查询示例，展示了如何诊断高延迟请求、定位慢工具和内存检索问题，并提供了根本原因分析和修复建议，包括并行化工具调用、优化提示词、配置记忆整合策略等。文章强调主动可观测性和生产最佳实践，帮助开发者提前发现并解决问题，确保代理稳定高效运行。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "Amazon Bedrock AgentCore",
+        "CloudWatch",
+        "性能瓶颈",
+        "内存管理",
+        "可观测性"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:36.699613Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "5b3393f6cb74888d",
+    "title": "Advancing responsible AI across Europe",
+    "url": "https://openai.com/index/advancing-responsible-ai-across-europe",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-31T15:00:00Z",
+    "summary": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
+    "content": "OpenAI shares how its safety, security, transparency, and provenance practices support responsible AI governance in Europe. The work will continue as the EU AI Act advances.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布文章，阐述其在欧洲推动负责任人工智能的举措，重点涵盖安全、安保、透明度和内容来源等方面的实践。文章指出，这些工作将随着欧盟《人工智能法案》的推进而持续深化，旨在支持欧洲的AI治理框架。OpenAI强调其致力于与欧盟监管机构合作，确保AI技术发展符合伦理和法律要求，同时维护用户信任。该声明反映了AI行业在面临日益严格的监管环境下，主动展示合规与负责任态度的趋势。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "负责任AI",
+        "欧盟AI法案",
+        "AI治理",
+        "欧洲"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:29.846041Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ef7e135bdd5acf00",
+    "title": "Building abundant intelligence",
+    "url": "https://openai.com/index/building-abundant-intelligence",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-31T15:00:00Z",
+    "summary": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
+    "content": "A full-stack approach to making advanced AI more capable, more affordable, and more widely useful.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布题为“Building abundant intelligence”的文章，提出以全栈方法推进先进AI的发展，核心目标是让AI更强大、更实惠、更广泛有用。该战略强调从底层基础设施到应用层的协同优化，以提升AI能力、降低使用成本并扩大应用场景。此举有助于推动AI技术的商业化普及，降低行业使用门槛，对AI领域的未来发展具有积极影响。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "全栈方法",
+        "丰富智能",
+        "AI能力",
+        "成本降低"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:33.404042Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "dc984bc272936378",
+    "title": "Univé builds an AI-ready workforce",
+    "url": "https://openai.com/index/unive",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-31T07:00:00Z",
+    "summary": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
+    "content": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Univé公司利用ChatGPT Enterprise打造AI就绪的劳动力队伍，通过领导力支持、负责任治理和员工主导的创新相结合，实现了工作方式的规模化转型。该案例表明，企业成功采用生成式AI不仅依赖技术本身，更需组织层面的战略配合。Univé的做法为其他企业提供了可借鉴的路径，也展示了AI工具在提升生产力方面的实际价值。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "Univé",
+        "ChatGPT Enterprise",
+        "AI劳动力",
+        "企业转型",
+        "负责任治理"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:31.540003Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "4ff655ca49b9095f",
+    "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
+    "url": "https://openai.com/index/avatarin",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-07-30T00:00:00Z",
+    "summary": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
+    "content": "avatarin uses OpenAI’s GPT-Realtime to give Yamada Denki shoppers 24/7 multilingual support. In two weeks, 30,000 people used the agent and 92% of survey responses were positive.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "avatarin 利用 OpenAI 的 GPT-Realtime 技术，为日本山田电机（Yamada Denki）的购物者提供全天候多语言零售客服代理。该代理在两周内吸引了 3 万名用户使用，且调查反馈中 92% 为正面评价。这一案例展示了 GPT-Realtime 在实时语音交互和零售场景中的实际应用能力，能够显著提升客户支持效率与覆盖范围，同时验证了 AI 代理在商业环境中快速部署和获得用户认可的可能性。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "avatarin",
+        "GPT-Realtime",
+        "Yamada Denki",
+        "零售客服",
+        "多语言支持"
+      ]
+    },
+    "analyzed_at": "2026-07-31T17:48:30.955568Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
