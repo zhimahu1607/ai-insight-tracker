@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-02",
+  "summary": "今日 AI 领域呈现“理论深掘”与“工程落地”并行的双轮驱动格局。学术界方面，OpenAI 公布数学与理论计算机科学十项进展，聚焦几何、密码学与复杂性理论等长期难题，显示头部实验室在 Scaling Law 之外重拾基础科学探索的倾向。工业界最重磅事件集中于 Moonshot AI 发布 Kimi K3：以 2.8 万亿参数逼近 3 万亿级规模，成为开源 MoE 新标杆，其 KDA 架构与 Gated MLA 设计、百万 token 上下文及原生多模态能力均指向下一代推理效率。值得注意的是，该模型发布同日内，AWS 即推出基于 SageMaker HyperPod 的完整部署指南，借助 p6-b300 实例与 MXFP4 量化完成从开源权重到企业自托管的通路闭环，凸显“前沿开源模型+云厂商基建”已成为大模型落地的最短路径。另一条线索来自数据侧：AWS QuickSight 推出 Agentic Catalog Experience，以自然语言自动继承 Glue、Databricks 等元数据，将洞察构建周期从数周压缩至分钟级，标志着 Agent 正向上游数据治理层延伸。三者在今日形成闭环拼图——理论储备、模型能力与数据基建同步演进，开源生态内去中心化工具亦持续活跃，共同勾勒出 AI 从单点突破走向系统性基础设施化的当日风向。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 领域动态涵盖理论突破、开源生态与企业级产品三大主线。\n\n**理论前沿方面**，OpenAI 公布数学与理论计算机科学十项进展，聚焦几何、密码学、复杂性理论等长期开放问题，展示了其在基础科学领域的积累。\n\n**大模型与算力侧**，Moonshot AI 发布 Kimi K3，以 2.8 万亿参数成为首个逼近 3 万亿参数级的开源 MoE 模型，采用 KDA 与 Gated MLA 架构，支持百万 token 上下文与原生多模态。AWS 同步推出基于 SageMaker HyperPod 与 EKS 的部署指南，通过 p6-b300 实例和 MXFP4 量化，使企业可自托管该前沿模型。\n\n**企业数据产品方面**，AWS 推出 Amazon QuickSight 的 Agentic Catalog Experience，通过自然语言自动继承 Glue、Databricks Unity Catalog 等元数据，简化数据集与主题创建，将洞察构建从数周压缩至分钟级。\n\n**开源生态持续活跃**，bitchat 提供去中心化蓝牙+Nostr 双通道通信，GitHub 超 3.3 万星；微软 AI-for-Beginners 课程获 5.6 万星；OpenWork 作为 Claude Cowork 开源替代，周增超 2200 星。\n\n整体来看，模型开源化、企业级推理部署以及去中心化工具正在形成互补生态。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 6,
+    "news_by_category": {
+      "AI": 1,
+      "开源": 3,
+      "产品": 1,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "数学",
+      "理论计算机科学",
+      "密码学",
+      "复杂性理论",
+      "bitchat",
+      "蓝牙 Mesh",
+      "Nostr",
+      "去中心化",
+      "端到端加密"
+    ]
+  },
+  "generated_at": "2026-08-01T17:10:03.657698"
+}
