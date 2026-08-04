@@ -1,0 +1,147 @@
+[
+  {
+    "id": "944210fc377fc967",
+    "title": "Automated web insight extraction with Amazon Bedrock AgentCore",
+    "url": "https://aws.amazon.com/blogs/machine-learning/automated-web-insight-extraction-with-amazon-bedrock-agentcore/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-04T16:02:21Z",
+    "summary": "Extracting insights from dozens of websites by hand quickly becomes overwhelming. This post shows how to build an automated web insight extraction solution with Amazon Bedrock AgentCore Browser, Amazon Bedrock, Amazon OpenSearch Serverless, and AWS Lambda that monitors RSS feeds, renders pages reliably, and makes AI-extracted insights searchable.",
+    "content": "Extracting insights from dozens of websites often means manually checking each one, a process that quickly becomes overwhelming. Design teams need to track competitor products, marketing teams want to monitor content trends, and product managers need to stay on top of market intelligence. But doing this manually means someone has to visit sites, copy content, and organize information before real analysis can begin. Rule-based scrapers offer some automation, but they are tightly coupled to page structure. A site redesign or a migration to a JavaScript-rendered frontend can silently break the pipeline for days before the team notices.\nAmazon Bedrock AgentCore is a platform to build, connect, and optimize agents at scale, with any framework or model. The solution in this post uses the AgentCore Browser, a capability of Amazon Bedrock AgentCore. This fully managed browser service renders JavaScript-heavy pages reliably, so your pipeline is more resilient when websites change.\nThis post demonstrates how to deploy an automated insight extraction solution using Amazon Bedrock AgentCore Browser, Amazon Bedrock for AI-powered analysis, Amazon OpenSearch Serverless for semantic search, and AWS Lambda for orchestration. You build a system that monitors RSS feeds, retrieves web content using the AgentCore managed browser, extracts insights with AI, and makes everything searchable through a web interface.\nUse cases\nThis solution was built for design and product teams who need to track industry trends, but the architecture applies to broader scenarios:\n\nCompetitive intelligence : Track competitor blogs, product announcements, and press releases. The AI can identify new features, pricing changes, or strategic shifts.\nMarket research : Monitor industry news, analyst reports, and trade publications. Search for emerging trends or technologies relevant to your business.\nContent curation : Aggregate content from multiple sources and let the AI identify the most relevant pieces for your audience.\nCompliance monitoring : Watch regulatory websites and news sources for changes that might affect your business.\n\nWhat you will learn\nAt the end of this post, you will understand how the event-driven architecture separates content collection from AI processing, how the browser automation in Amazon Bedrock AgentCore handles JavaScript-heavy pages, and how vector embeddings in Amazon OpenSearch Serverless power semantic search across your collected insights. The complete implementation is available in this GitHub repository .\nIf you are new to the services used in this solution, the following resources provide foundational context:\n\nAmazon Bedrock AgentCore Browser\nAmazon OpenSearch Serverless developer guide\n\nSolution architecture\nThe architecture follows an event-driven pattern that separates content collection from processing. The following diagram illustrates the end-to-end system, organized into three functional layers.\n\nFigure 1 — Architecture diagram for the automated web insight extraction system\nHow the solution works\nRSS feed collection: An Amazon EventBridge schedule triggers an AWS Lambda function every 15 minutes to check configured RSS feeds for new articles and deduplicate against Amazon Simple Storage Service (Amazon S3).\nBrowser-based content retrieval: For each new article, the Lambda function opens a browser session through Amazon Bedrock AgentCore and connects to it using Playwright over the Chrome DevTools Protocol (CDP). Unlike standard HTTP requests, the remote browser renders the full page including JavaScript-heavy content, waits for dynamic elements to load, takes a screenshot, and downloads images. This is the step that makes the rest of the pipeline possible: without reliable page rendering, the AI extraction downstream would receive incomplete or broken content. The artifacts are uploaded to Amazon S3 in a structured format.\nEvent-driven processing: Amazon S3 upload events publish messages to an Amazon Simple Queue Service (Amazon SQS) queue, and a second Lambda function extracts clean text from the raw HTML.\nAI-powered insight extraction: Amazon Bedrock generates summaries, identifies themes and entities, extracts actionable insights, and creates vector embeddings from the cleaned content.\nIndexing and semantic search: The enriched results are indexed into Amazon OpenSearch Serverless, which supports both keyword and vector search.\nUser and API access: End users authenticate through Amazon Cognito and access a React-based frontend on Amazon Elastic Container Service (Amazon ECS) with AWS Fargate . For programmatic access, a Model Context Protocol (MCP) server on Amazon ECS with Fargate exposes the system through Amazon CloudFront . MCP is an open standard that lets AI assistants and tools connect to external data sources through a unified interface.\nSolution components\nThe following sections describe the main components of the solution.\nContent collection and browser automation\nThe RSS sync Lambda function does more than fetch feeds. It parses each RSS feed, filters for articles published within a configurable time window (24 hours by default), and deduplicates using a URL hash as a unique ID in Amazon S3. For new articles, the function opens a remote browser session through Amazon Bedrock AgentCore and connects via Playwright over CDP. This isn’t a headless browser running in Lambda. It is a managed browser service: AgentCore hosts the remote browser, and Playwright controls it through a WebSocket connection. The browser renders the full page, waits for JavaScript to load, and captures the complete rendered output. The function then extracts images from the page, downloads them, and uploads everything to Amazon S3 in a structured format:\ns3://bucket/\n└── example.com/\n└── abc123def456/ # URL hash\n├── article.html # Full HTML\n├── screenshot.png # Page screenshot\n├── metadata.json # Article metadata\n└── images/ # Captured images\n├── image1.jpg\n└── image2.jpg\nThe metadata.json file includes the original URL, title, timestamp, and references to downloaded assets. When the metadata file is uploaded to Amazon S3, it triggers the processing pipeline automatically.\nThis separation means content collection and AI processing scale independently. If you’re monitoring dozens of RSS feeds, the collection Lambda function handles them concurrently while the Amazon SQS queue with a dead-letter queue provides automatic retries for processing failures.\nAI-powered content analysis\nThe idea extraction Lambda function preprocesses HTML to reduce token consumption, a step that significantly improves the consistency of AI-generated output.\nWhen it receives a message from Amazon SQS, it pulls the HTML from Amazon S3 and runs it through a preprocessing step. Large HTML files (over 1 MB) get simplified using html-to-text to avoid token limits. Smaller files use Mozilla’s Readability library, which does a better job of extracting the main content and identifying the primary image.\nThe cleaned content then goes to Amazon Bedrock with a customizable prompt. You can use models supported by Amazon Bedrock. For model availability by AWS Region, refer to Supported models by AWS Region in Amazon Bedrock . The prompt asks the AI to extract:\n\nA concise summary.\nKey themes and topics.\nMain entities (people, companies, products).\nRelevant categories.\nActionable insights.\n\nThe Lambda function also generates vector embeddings for semantic search, so you can find related content even when the exact words don’t match. The function writes everything to Amazon OpenSearch Serverless: the original content, AI-extracted metadata, and the embedding vector. The index is configured for both keyword and vector search. A query like “what are emerging design trends” returns relevant results even if those exact words don’t appear in the source content.\nResponsible AI controls\nBecause this pipeline sends third-party web content to a foundation model and publishes the AI-generated output to your team, production deployments should include safeguards around the extraction step. Amazon Bedrock Guardrails lets you apply these controls without changing the extraction prompt:\n\nContent filtering blocks harmful or inappropriate material that may appear in scraped web pages before it reaches your searchable index.\nDenied topics and word filters keep the extracted insights within the scope your teams expect, which matters when source feeds are outside your control.\nContextual grounding checks validate that generated summaries and insights are grounded in the source article, reducing the risk of hallucinated claims being indexed as facts.\n\nBecause the pipeline ingests content from external websites, treat the scraped text as untrusted input: guardrails act as a control point between raw web content and the insights your organization consumes.\nWeb interface and programmatic access\nThe React-based frontend with Amazon Cognito authentication provides a search interface where teams can browse and explore insights. The MCP server provides an API layer for integration with other AI tools, supporting programmatic search and retrieval through Amazon CloudFront. MCP is an open standard that defines how AI assistants discover and call external tools, so other AI agents in your organization can query the insight database directly. Processing components run within an Amazon Virtual Private Cloud (Amazon VPC), with Amazon CloudWatch providing observability and AWS Identity and Access Management (IAM) enforcing least privilege access.\nLessons learned\nBuilding a real-world insight extraction pipeline involves more than wiring together managed services. A few architectural decisions had outsized impact on cost, reliability, and output quality, and are worth calling out explicitly.\n\nAgentCore Browser sessions are powerful but expensive. In our test, each Playwright render through Amazon Bedrock AgentCore takes 10–30 seconds and costs significantly more than a plain HTTP request. URL hashing for deduplication (checking Amazon S3 before triggering a new AgentCore session) is essential to keep costs manageable at scale. The tradeoff is worth it: AgentCore reliably captures pages that would break a standard scraper, which is the foundation the rest of the pipeline depends on.\nRaw HTML is a poor input for LLMs. Clean HTML before you send it to Amazon Bedrock to reduce token consumption and improve the consistency of AI-extracted output. This preprocessing step is not an optimization. It’s a prerequisite for reliable results.\nSemantic search broadens what you can find. A keyword search for “furniture trends” returns exact matches, while vector search surfaces conceptually related content regardless of terminology. For competitive intelligence or market research, embeddings are what make the search interface genuinely useful.\nSQS decoupling is what makes the pipeline reliable. Without it, a processing failure means the article is never analyzed. An Amazon SQS dead-letter queue between Amazon S3 and the extraction Lambda provides automatic retries, a small architectural change with significant reliability impact.\nAmazon OpenSearch Serverless has a real cost floor. The service requires minimum capacity units regardless of usage, which suits production workloads with consistent query volume. For lower-volume deployments, Amazon Relational Database Service (Amazon RDS) with pgvector supports the same vector search capabilities at a lower baseline cost and is worth considering as a starting point. See Amazon OpenSearch Serverless pricing details.\n\nClean up\nTo avoid ongoing charges, delete the resources you created.\n\nEmpty the Amazon S3 content bucket.\nRun cdk destroy from the project directory (or delete the stack in the AWS CloudFormation console).\n\nConclusion\nIn this post, you learned how to build an automated insight extraction solution that transforms manual web monitoring into a searchable, AI-enriched knowledge base. The event-driven architecture decouples content collection from processing, Amazon Bedrock AgentCore handles JavaScript-heavy websites, and Amazon OpenSearch Serverless with vector embeddings powers semantic search beyond keyword matching.\nThe complete source code, deployment guide, and configuration instructions are available in the GitHub repository .\n\nAbout the authors\n\nLouisa Liu\nLouisa is a Solutions Architect at AWS, where she works directly with customers ranging from startups to established businesses. She helps them understand their business needs and guides projects from early architecture decisions through to production, putting the latest cloud and AI technologies to work in simple, scalable architectures.\n\nJia Ting\nJia is a Senior Solutions Architect at AWS Prototyping and AI Customer Engineering (PACE), specializing in big data and agentic AI prototyping solutions across diverse industries, with deep experience in gaming and automotive sectors.\n\nMichelle Hong\nMichelle, PhD, works as a Web3 Industry Solutions Architect at Amazon Web Services, where she helps customers build innovative applications using a variety of AWS components. She demonstrates her expertise in machine learning, particularly in natural language processing and agentic AI, to develop data-driven solutions that optimize business processes and improve customer experiences.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "AWS 发布了一篇技术博客，介绍如何使用 Amazon Bedrock AgentCore Browser 构建自动化网页洞察提取系统。该系统通过事件驱动架构，定时从 RSS 源采集文章，利用 AgentCore 托管的浏览器渲染 JavaScript 密集型页面，结合 Amazon Bedrock 进行 AI 分析（生成摘要、主题、实体等），并通过 Amazon OpenSearch Serverless 实现语义搜索。方案适用于竞争情报、市场研究、内容策展和合规监控等场景，同时强调了成本控制、HTML 预处理和 SQS 解耦等实践经验。完整实现代码已在 GitHub 开源。",
+      "category": "产品",
+      "sentiment": "neutral",
+      "keywords": [
+        "Amazon Bedrock AgentCore",
+        "网页洞察提取",
+        "语义搜索",
+        "事件驱动架构",
+        "AI分析"
+      ]
+    },
+    "analyzed_at": "2026-08-04T17:58:11.580600Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "26f5b739d7f89d3c",
+    "title": "New ways to learn and teach with ChatGPT Work and Codex",
+    "url": "https://openai.com/index/learn-teach-chatgpt-work-codex",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-04T00:00:00Z",
+    "summary": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
+    "content": "Explore new education plugins for ChatGPT Work and Codex that help K–12 teachers, college educators, and students learn, teach, research, and build.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI推出了面向教育领域的新插件，适用于ChatGPT Work和Codex平台，旨在服务K-12教师、大学教育者及学生。这些插件提供了多种教学与学习辅助功能，涵盖课程设计、知识研究、作业辅导和项目构建等场景。通过集成ChatGPT的对话能力和Codex的编程支持，教育工作者可以更高效地备课、答疑和设计互动内容，学生则能获得个性化学习体验，并提升编程实践能力。此举标志着OpenAI进一步拓展教育科技市场，有望推动AI助教和智能学习工具的普及，但具体插件功能和适配细节尚未完全公开。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "ChatGPT Work",
+        "Codex",
+        "教育插件",
+        "K-12"
+      ]
+    },
+    "analyzed_at": "2026-08-04T17:58:09.592524Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "39d4fd006a363f68",
+    "title": "Apple is getting this wrong",
+    "url": "https://openai.com/index/apple-is-getting-this-wrong",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-03T22:00:00Z",
+    "summary": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
+    "content": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 针对苹果提起的诉讼公开发表回应，称该诉讼毫无根据，并澄清了关于其员工的不实指控，同时公布了相关消息记录以还原事实经过。该事件涉及两家科技巨头之间的法律纠纷，可能对行业合作关系产生一定影响。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "Apple",
+        "OpenAI",
+        "诉讼",
+        "员工指控",
+        "消息记录"
+      ]
+    },
+    "analyzed_at": "2026-08-04T17:58:10.854648Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "9be5bdf1245f9d9a",
+    "title": "How we built a realtime system for responsive voice AI in six months",
+    "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-03T07:00:00Z",
+    "summary": "GPT-Live enables continuous voice interaction with AI, using a turnless speech model and low-latency architecture for faster, more natural conversations.",
+    "content": "GPT-Live enables continuous voice interaction with AI, using a turnless speech model and low-latency architecture for faster, more natural conversations.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 撰文介绍了其构建实时语音 AI 系统 GPT-Live 的过程。该系统在六个月内开发完成，通过采用无轮次语音模型（turnless speech model）和低延迟架构，实现了连续自然的语音交互体验。与传统的轮次式对话不同，GPT-Live 允许用户和 AI 同时说话或打断，显著减少了响应延迟，使对话更接近人类自然交流。这一技术突破对于实时语音助手、电话客服、虚拟陪伴等应用场景具有重要意义，展示了未来人机交互从文本向实时语音演进的可能方向。",
+      "category": "AI",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "GPT-Live",
+        "实时语音",
+        "低延迟",
+        "无轮次模型"
+      ]
+    },
+    "analyzed_at": "2026-08-04T17:58:09.458507Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "97562427dce8643a",
+    "title": "Circles powers telco personalization with OpenAI technology",
+    "url": "https://openai.com/index/circles",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-03T00:00:00Z",
+    "summary": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
+    "content": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving development efficiency.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "Circles 公司利用 OpenAI 的 API 和 Codex 构建 AI 原生的电信体验，实现了显著的业务成果：每用户平均收入（ARPU）提升 22%，用户流失率降低 9%，同时提高了开发效率。这一案例展示了 OpenAI 技术在电信行业个性化服务中的应用潜力，通过智能化和自动化增强客户体验，为电信运营商提供了可行的数字化转型路径。该新闻源自 OpenAI 官方，属于 AI 技术推动垂直行业发展的典型示例。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "Circles",
+        "OpenAI API",
+        "Codex",
+        "电信行业",
+        "ARPU"
+      ]
+    },
+    "analyzed_at": "2026-08-04T17:58:15.870391Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
