@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-09",
+  "summary": "今日 AI 领域延续开源生态主导的态势。学术界暂无新论文收录，工业界动能集中于基础设施与工具链的开放演进。\n\n最值得关注的是 Google 开源 skills 仓库，将 Agent 能力解耦为标准插件，兼容 Claude Code 与 Codex 等框架，折射出行业竞争正从单模型能力转向“可组合代理生态”。这与 ComfyUI 的走强同频共振——后者以超 12 万星标验证了模块化创作管线的价值，将 Stable Diffusion、Flux、Wan 等模型纳入节点级控制，推动生成内容从实验走向工程化。\n\n隐私与系统性思维的长期主义同样显著。Invidious 作为无追踪 YouTube 前端，周增 1225 星登上 GitHub Trending；system-design-primer 则稳居 36 万星标。两者共同显示，开发者既看重大规模构建能力，也日益关注数据边界。\n\n跨领域观察，今日核心线索是“可控性”。无论 Google 对 Agent 的插拔式管理、ComfyUI 对生成流程的节点级治理，还是 Invidious 对追踪机制的规避，都指向同一趋势：行业正从追求单一能力跃升，转向全链路可治理化，这可能决定下一代 AI 基础设施的竞争格局。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 领域动态集中在开源生态，多个项目取得显著进展。\n\n**AI 代理与工具链**方面，**Google** 在 GitHub 开源 `skills` 仓库，提供面向 Google Cloud 等产品的 Agent Skills，支持通过插件集成至 Claude Code、Codex 等代理工具，旨在加速开发者构建和扩展 AI 代理能力，采用 Apache 2.0 许可证。\n\n**AI 内容创作**方面，**Comfy-Org** 持续完善其模块化创作引擎 **ComfyUI**，该工具提供基于图/节点的可视化界面，支持图像、视频、3D 及音频生成，原生适配 Stable Diffusion、Flux、Wan 等开源模型，当前已获超 12 万星标，聚焦于精细化的生产管线控制。\n\n**开源替代方案**方面，**Invidious** 项目在 GitHub Trending 表现活跃（周增 1225 星），其作为轻量级、无追踪的 YouTube 替代前端，支持订阅导入及自托管，体现了社区对隐私保护与用户自主权的持续关注。\n\n**基础设施与学习**方面，**donnemartin/system-design-primer** 依旧受到开发者青睐（36 万星标），为大规模系统设计与面试准备提供了结构化知识库。整体来看，今日动态以工具链开放和内容创作生态演进为主导。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 4,
+    "news_by_category": {
+      "开源": 4
+    },
+    "top_keywords": [
+      "开源",
+      "Invidious",
+      "YouTube",
+      "开源前端",
+      "Crystal",
+      "隐私保护",
+      "Google",
+      "Agent Skills",
+      "Google Cloud",
+      "GitHub"
+    ]
+  },
+  "generated_at": "2026-08-08T16:45:24.494062"
+}
