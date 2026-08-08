@@ -149,8 +149,8 @@
       "url": "https://github.com/antirez/ds4",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 20872,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 20872,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 20950,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -363,6 +363,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "comfy-org/comfyui": {
+      "repo_id": "comfy-org/comfyui",
+      "full_name": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "first_seen_stars": 124825,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 124825,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "composiohq/awesome-claude-skills": {
       "repo_id": "composiohq/awesome-claude-skills",
       "full_name": "ComposioHQ/awesome-claude-skills",
@@ -402,8 +413,8 @@
       "url": "https://github.com/DataExpert-io/data-engineer-handbook",
       "first_seen_at": "2026-08-05T17:50:03.009352+00:00",
       "first_seen_stars": 43064,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 43352,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 43443,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -457,8 +468,19 @@
       "url": "https://github.com/different-ai/openwork",
       "first_seen_at": "2026-08-01T17:09:26.891805+00:00",
       "first_seen_stars": 19876,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 21416,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 21551,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "donnemartin/system-design-primer": {
+      "repo_id": "donnemartin/system-design-primer",
+      "full_name": "donnemartin/system-design-primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "first_seen_stars": 362398,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 362398,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -501,8 +523,8 @@
       "url": "https://github.com/embabel/embabel-agent",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 4009,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 4009,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 4032,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -512,8 +534,8 @@
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
       "first_seen_at": "2026-08-05T17:50:03.009352+00:00",
       "first_seen_stars": 31460,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 32856,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 33075,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -558,6 +580,17 @@
       "first_seen_stars": 6970,
       "last_seen_at": "2026-07-17T17:19:20.184763+00:00",
       "last_seen_stars": 7595,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "google/skills": {
+      "repo_id": "google/skills",
+      "full_name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "first_seen_stars": 16560,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 16560,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -693,6 +726,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "iv-org/invidious": {
+      "repo_id": "iv-org/invidious",
+      "full_name": "iv-org/invidious",
+      "url": "https://github.com/iv-org/invidious",
+      "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "first_seen_stars": 22455,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 22455,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "jamiepine/voicebox": {
       "repo_id": "jamiepine/voicebox",
       "full_name": "jamiepine/voicebox",
@@ -820,8 +864,8 @@
       "url": "https://github.com/lyogavin/airllm",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 26739,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 29847,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 30089,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -864,8 +908,8 @@
       "url": "https://github.com/microsoft/AI-For-Beginners",
       "first_seen_at": "2026-08-01T17:09:26.891805+00:00",
       "first_seen_stars": 56524,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 63091,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 63497,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1348,8 +1392,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 17368,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 18093,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1414,8 +1458,8 @@
       "url": "https://github.com/unclebob/swarm-forge",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 1760,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 1760,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 1962,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1425,8 +1469,8 @@
       "url": "https://github.com/usekaneo/kaneo",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 7580,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 7580,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 7693,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1458,8 +1502,8 @@
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
       "first_seen_stars": 13596,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 18127,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 18747,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1513,8 +1557,8 @@
       "url": "https://github.com/zhaoxuya520/reverse-skill",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 15333,
-      "last_seen_at": "2026-08-07T17:00:37.391200+00:00",
-      "last_seen_stars": 20411,
+      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
+      "last_seen_stars": 21020,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
