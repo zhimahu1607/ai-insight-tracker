@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-10",
+  "summary": "今日 AI 领域的热点集中于工业界开源生态，学术界暂无重大论文发布。整体风向表明，行业正从模型层竞争转向工具链与基础设施层的深度整合，开发效率与 AI 原生应用成为当前重心。\n\n最值得关注的亮点有二。其一，Firecrawl 开源 PDF 检测与提取库 pdf-inspector，以 10-50 毫秒的极速分类与无需 OCR 的 Markdown 转换能力，为大规模文档流水线提供了高性能、低成本的解决方案，直击 RAG 与数据工程中的文档解析瓶颈。其二，LiveKit 的实时语音代理框架 Agents 与 code-graph-rag 共同代表了 AI 应用的范式演进——前者为语音交互提供从识别到生成的完整链路，后者则通过图数据库与语法分析为多语言代码库构建可查询的知识图谱。两者的共性在于将 AI 能力抽象为可复用的基础设施，大幅降低了复杂应用（尤其是多模态与代码智能体）的构建门槛。\n\n值得注意的跨领域联系在于：drawDB、authentik 等通用开发者工具与上述 AI 原生工具共同构成了完整的开发生态。AI 应用的落地已不再是单一模型的比拼，而是数据解析、身份管理、知识表示与实时交互等系统的协同优化。这一趋势预示未来竞争将更多体现在工程化能力与生态整合上。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 开源生态持续活跃，多个项目在 GitHub Trending 上表现突出，涵盖文档处理、身份管理、开发工具与 AI 应用框架。\n\n**文档处理与数据提取**方面，Firecrawl 开源了基于 Rust 的 PDF 检测与提取库 pdf-inspector，可在 10-50 毫秒内智能分类 PDF 类型，支持位置感知文本提取与表格检测，无需 OCR 即可将 PDF 转为高质量 Markdown，性能优于同类引擎，适合大规模文档流水线。\n\n**AI 应用框架**方面，LiveKit 发布实时语音 AI 代理框架 Agents，集成多种语音识别与大模型服务，支持 WebRTC 及电话集成，周增星标超千。code-graph-rag 则利用 Tree-sitter 与图数据库为多语言代码库构建知识图谱，支持自然语言查询与代码编辑，提供 MCP 服务器集成。\n\n**开发者工具**方面，drawDB 提供免费在线 ERD 编辑器与 SQL 生成器，无需账户即可使用。\n\n**基础设施**方面，authentik 作为自托管身份提供商，支持多协议 SSO，被视为商业 IdP 的替代方案，社区关注度持续走高。整体而言，今日动态以开发效率与 AI 原生工具为主。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 5,
+    "news_by_category": {
+      "开源": 5
+    },
+    "top_keywords": [
+      "pdf-inspector",
+      "Firecrawl",
+      "Rust",
+      "PDF分类",
+      "Markdown转换",
+      "authentik",
+      "开源身份提供商",
+      "SSO",
+      "SAML",
+      "OIDC"
+    ]
+  },
+  "generated_at": "2026-08-09T16:46:36.794835"
+}
