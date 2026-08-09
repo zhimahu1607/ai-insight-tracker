@@ -369,8 +369,8 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 124825,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 124825,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 125297,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -479,8 +479,8 @@
       "url": "https://github.com/donnemartin/system-design-primer",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 362398,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 362398,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 362644,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -492,6 +492,17 @@
       "first_seen_stars": 4252,
       "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "last_seen_stars": 4532,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "drawdb-io/drawdb": {
+      "repo_id": "drawdb-io/drawdb",
+      "full_name": "drawdb-io/drawdb",
+      "url": "https://github.com/drawdb-io/drawdb",
+      "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "first_seen_stars": 38567,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 38567,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -523,8 +534,8 @@
       "url": "https://github.com/embabel/embabel-agent",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 4009,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 4032,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 4054,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -534,8 +545,8 @@
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
       "first_seen_at": "2026-08-05T17:50:03.009352+00:00",
       "first_seen_stars": 31460,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 33075,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 33390,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -558,6 +569,28 @@
       "first_seen_stars": 7106,
       "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "last_seen_stars": 8927,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "firecrawl/pdf-inspector": {
+      "repo_id": "firecrawl/pdf-inspector",
+      "full_name": "firecrawl/pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "first_seen_stars": 13771,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 13771,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "goauthentik/authentik": {
+      "repo_id": "goauthentik/authentik",
+      "full_name": "goauthentik/authentik",
+      "url": "https://github.com/goauthentik/authentik",
+      "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "first_seen_stars": 24183,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 24183,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -589,8 +622,8 @@
       "url": "https://github.com/google/skills",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 16560,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 16560,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 17091,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -732,8 +765,8 @@
       "url": "https://github.com/iv-org/invidious",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 22455,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 22455,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 22524,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -847,6 +880,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "livekit/agents": {
+      "repo_id": "livekit/agents",
+      "full_name": "livekit/agents",
+      "url": "https://github.com/livekit/agents",
+      "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "first_seen_stars": 12791,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 12791,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "logto-io/logto": {
       "repo_id": "logto-io/logto",
       "full_name": "logto-io/logto",
@@ -864,8 +908,8 @@
       "url": "https://github.com/lyogavin/airllm",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 26739,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 30089,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 30320,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -908,8 +952,8 @@
       "url": "https://github.com/microsoft/AI-For-Beginners",
       "first_seen_at": "2026-08-01T17:09:26.891805+00:00",
       "first_seen_stars": 56524,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 63497,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 63927,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1392,8 +1436,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 18093,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 18634,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1458,8 +1502,8 @@
       "url": "https://github.com/unclebob/swarm-forge",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 1760,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 1962,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 2030,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1469,8 +1513,8 @@
       "url": "https://github.com/usekaneo/kaneo",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 7580,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 7693,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 7855,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1502,8 +1546,19 @@
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
       "first_seen_stars": 13596,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 18747,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 19304,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "vitali87/code-graph-rag": {
+      "repo_id": "vitali87/code-graph-rag",
+      "full_name": "vitali87/code-graph-rag",
+      "url": "https://github.com/vitali87/code-graph-rag",
+      "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "first_seen_stars": 2810,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 2810,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1557,8 +1612,8 @@
       "url": "https://github.com/zhaoxuya520/reverse-skill",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 15333,
-      "last_seen_at": "2026-08-08T16:44:42.741908+00:00",
-      "last_seen_stars": 21020,
+      "last_seen_at": "2026-08-09T16:46:06.578280+00:00",
+      "last_seen_stars": 22315,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },

@@ -1,0 +1,147 @@
+[
+  {
+    "id": "4ef520490da8df3b",
+    "title": "firecrawl/pdf-inspector - GitHub Trending",
+    "url": "https://github.com/firecrawl/pdf-inspector",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-09T16:46:06.578280Z",
+    "summary": "Repository: firecrawl/pdf-inspector\nURL: https://github.com/firecrawl/pdf-inspector\nDescription: Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.\nLanguage: Rust\nStars: 13771\nWeekly stars: 8846",
+    "content": "Repository: firecrawl/pdf-inspector\nURL: https://github.com/firecrawl/pdf-inspector\nDescription: Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.\nLanguage: Rust\nStars: 13771\nWeekly stars: 8846\n\nREADME:\npdf-inspector\n\nFast Rust library for PDF classification and text extraction. Detects whether a PDF is text-based or scanned, extracts text with position awareness, and converts to clean Markdown — all without OCR. Includes bindings for Python, Node.js, and browser WebAssembly.\n\nBuilt by Firecrawl to handle text-based PDFs locally in under 200ms, skipping expensive OCR services for the ~54% of PDFs that don't need them.\n\nFeatures\n\nSmart classification** — Detect TextBased, Scanned, ImageBased, or Mixed PDFs in ~10-50ms by sampling content streams. Returns a confidence score (0.0-1.0) and per-page OCR routing.\nText extraction** — Position-aware extraction with font info, X/Y coordinates, and automatic multi-column reading order.\nMarkdown conversion** — Headings (H1-H4 via font size ratios), bullet/numbered/letter lists, code blocks (monospace font detection), tables (rectangle-based and heuristic), bold/italic formatting, URL linking, and page breaks.\nTable detection** — Dual-mode: rectangle-based detection from PDF drawing ops, plus heuristic detection from text alignment. Handles financial tables, footnotes, and continuation tables across pages.\nCID font support** — ToUnicode CMap decoding for Type0/Identity-H fonts, UTF-16BE, UTF-8, and Latin-1 encodings.\nMulti-column layout** — Automatic detection of newspaper-style columns, sequential reading order, and RTL text support.\nEncoding issue detection** — Automatically flags broken font encodings so callers can fall back to OCR.\nSingle document load** — The document is parsed once and shared between detection and extraction, avoiding redundant I/O.\nBrowser WebAssembly** — Run the same Rust parser locally in browsers and Web Workers, with embedded CMaps and no server round trip.\nLightweight** — Pure Rust, no ML models, no external services. Single dependency on lopdf for PDF parsing.\n\nBenchmark\n\nEvaluated on the opendataloader-bench corpus (200 PDFs). Only local engines without model-based PDF parsing are shown; OCR was disabled. Scores are 0-1, higher is better.\n\n| Engine | Overall | Reading Order (NID) | Tables (TEDS) | Headings (MHS) | Speed (200 docs) |\n|---|---|---|---|---|---|\n| pdf-inspector | **0.875** | **0.915** | **0.814** | 0.788 | **0.470s** |\n| liteparse | 0.873 | 0.913 | 0.693 | **0.811** | 0.750s |\n| opendataloader | 0.831 | 0.902 | 0.489 | 0.739 | 2.569s |\n| pymupdf4llm | 0.735 | 0.886 | 0.401 | 0.424 | 17.117s |\n| markitdown | 0.589 | 0.844 | 0.273 | 0.000 | 16.165s |\n\nResults were refreshed on July 31, 2026, on an Apple M4 Pro. Engine versions were pdf-inspector 0.2.6, LiteParse 2.10.1, OpenDataLoader 2.2.1, PyMuPDF4LLM 0.2.0, and MarkItDown 0.1.5. Speed is the median of five alternating or rotating complete corpus runs after an excluded warm-up run, with each parser processing documents sequentially in a single process.\n\nThe complete parser configuration, per-document predictions, evaluator output, and generated charts are available in the reproducible results branch.\n\nBest fit:** Native-text PDFs where speed, reading order, and table structure matter. In this comparison, pdf-inspector delivered the higher overall, reading-order, and table scores, along with the fastest complete run. That makes it a strong local default for reports, research papers, financial documents, invoices, and legal PDFs that need clean, structured Markdown without adding OCR latency or infrastructure.\n\nUse the paired benchmark harness to compare two local builds against the exact same corpus and evaluator revision.\n\nQuick start\n\nPython\n\nFull API reference: docs/python.md\n\nNode.js\n\nFull API reference: napi/README.md\n\nBrowser WebAssembly\n\nFull API reference: wasm/README.md\n\nRust\n\nInstall from crates.io:\n\nOr add it manually:\n\nFull API reference: docs/rust-api.md\n\nCLI\n\nFrom a source checkout, use cargo run --bin pdf2md -- document.pdf or cargo run --bin detect-pdf -- document.pdf instead.\n\nArchitecture\n\nThe document is loaded **once** via load_document_from_path / load_document_from_mem and shared between the detection and extraction stages, so there's no redundant parsing.\n\nProject structure\n\nHow classification works\n\n1. Parse the xref table and page tree (no full object load)\n2. Select pages based on ScanStrategy (default: all pages with early exit)\n3. Look for Tj/TJ (text operators) and Do (image operators) in content streams\n4. Classify based on text operator presence across sampled pages\n\nThis detects 300+ page PDFs in milliseconds. The result includes pages_needing_ocr — a list of specific page numbers that lack text, enabling per-page OCR routing instead of all-or-nothing.\n\nScan strategies\n\n| Strategy | Behavior | Best for |\n|---|---|---|\n| EarlyExit (default) | Scan all pages, stop on first non-text page | Pipelines routing TextBased PDFs to fast extraction |\n| Full | Scan all pages, no early exit | Accurate Mixed vs Scanned classification |\n| Sample(n) | Sample n evenly distributed pages (first, last, middle) | Very large PDFs where speed matters more than precision |\n| Pages(vec) | Only scan specific 1-indexed page numbers | When the caller knows which pages to check |\n\nMarkdown output\n\nThe converter handles:\n\n| Element | How it's detected |\n|---|---|\n| Headings (H1-H4) | Font size tiers relative to body text, with 0.5pt clustering |\n| Bold/italic | Font name patterns (Bold, Italic, Oblique) |\n| Bullet lists | •, -, *, ○, ●, ◦ prefixes |\n| Numbered lists | 1., 1), (1) patterns |\n| Letter lists | a., a), (a) patterns |\n| Code blocks | Monospace fonts (Courier, Consolas, Monaco, Menlo, Fira Code, JetBrains Mono) and keyword detection |\n| Tables | Rectangle-based detection from PDF drawing ops + heuristic detection from text alignment |\n| Financial tables | Token splitting for consolidated numeric values |\n| Captions | \"Figure\", \"Table\", \"Source:\" prefix detection |\n| Sub/superscript | Font size and Y-offset relative to baseline |\n| URLs | Converted to Markdown links |\n| Hyphenation | Rejoins words broken across lines |\n| Page numbers | Filtered from output |\n| Drop caps | Large initial letters merged with following text |\n| Dot leaders | TOC-style dots collapsed to \" ... \" |\n\nUse case: smart PDF routing\n\npdf-inspector was built for pipelines that process PDFs at scale. Instead of sending every PDF through OCR:\n\nThis saves cost and latency for the majority of PDFs that are already text-based (reports, papers, invoices, legal docs).\n\nDebugging\n\nSee docs/debugging.md for RUST_LOG environment variable usage.\n\nLicense\n\nMIT",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "Firecrawl 开源了 pdf-inspector，一个基于 Rust 的快速 PDF 检测与文本提取库。该库能在 10-50 毫秒内智能分类 PDF 为文本型、扫描型、图像型或混合型，并返回置信度及逐页 OCR 路由建议，帮助跳过昂贵的 OCR 服务。它支持位置感知文本提取、多栏阅读顺序、表格检测、CID 字体解码，并能将 PDF 转换为高质量 Markdown，无需 OCR。基准测试显示，其综合性能优于 liteparse、opendataloader 等引擎，处理 200 个文档仅需 0.47 秒。项目提供 Python、Node.js、浏览器 WebAssembly 绑定，采用 MIT 许可，适合大规模 PDF 处理流水线。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "pdf-inspector",
+        "Firecrawl",
+        "Rust",
+        "PDF分类",
+        "Markdown转换"
+      ]
+    },
+    "analyzed_at": "2026-08-09T16:46:15.255738Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "9f192d1849d45b01",
+    "title": "goauthentik/authentik - GitHub Trending",
+    "url": "https://github.com/goauthentik/authentik",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-09T16:46:06.578280Z",
+    "summary": "Repository: goauthentik/authentik\nURL: https://github.com/goauthentik/authentik\nDescription: The authentication glue you need.\nLanguage: Python\nStars: 24183\nWeekly stars: 1334",
+    "content": "Repository: goauthentik/authentik\nURL: https://github.com/goauthentik/authentik\nDescription: The authentication glue you need.\nLanguage: Python\nStars: 24183\nWeekly stars: 1334\n\nREADME:\nWhat is authentik?\n\nauthentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters.\n\nOur enterprise offering is available for organizations to securely replace existing IdPs such as Okta, Auth0, Entra ID, and Ping Identity for robust, large-scale identity management.\n\nInstallation\n\nDocker Compose: recommended for small/test setups. See the documentation.\nKubernetes (Helm Chart): recommended for larger setups. See the documentation and the Helm chart repository.\nAWS CloudFormation: deploy on AWS using our official templates. See the documentation.\nDigitalOcean Marketplace: one-click deployment via the official Marketplace app. See the app listing.\n\nScreenshots\n\n| Light | Dark |\n| ----------------------------------------------------------- | ---------------------------------------------------------- |\n| | |\n| | |\n\nDevelopment and contributions\n\nSee the Developer Documentation for information about setting up local build environments, testing your contributions, and our contribution process.\n\nWhen you contribute documentation, either to accompany a code change or as a standalone contribution, please be sure to follow our documentation Style Guide.\n\nSecurity\n\nPlease see SECURITY.md.\n\nAdoption\n\nUsing authentik? We'd love to hear your story and feature your logo. Email us at hello@goauthentik.io or open a GitHub Issue/PR!\n\nLicense",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "authentik 是一个开源的身份提供商（IdP），专注于现代单点登录（SSO），支持 SAML、OAuth2/OIDC、LDAP、RADIUS 等多种协议。它专为自托管设计，既能适应小型实验室环境，也能支撑大规模生产集群。该项目还提供企业版，用于替代 Okta、Auth0、Entra ID 等商业 IdP 产品。部署方式灵活，支持 Docker Compose、Kubernetes（Helm）、AWS CloudFormation 及 DigitalOcean Marketplace。近期在 GitHub Trending 上表现活跃，周增星标 1334，总星标超过 24183，体现了社区对自托管身份管理方案的强烈关注。",
+      "category": "开源",
+      "sentiment": "neutral",
+      "keywords": [
+        "authentik",
+        "开源身份提供商",
+        "SSO",
+        "SAML",
+        "OIDC"
+      ]
+    },
+    "analyzed_at": "2026-08-09T16:46:16.944564Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "1ba9921a841424e3",
+    "title": "drawdb-io/drawdb - GitHub Trending",
+    "url": "https://github.com/drawdb-io/drawdb",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-09T16:46:06.578280Z",
+    "summary": "Repository: drawdb-io/drawdb\nURL: https://github.com/drawdb-io/drawdb\nDescription: Free, simple, and intuitive online database diagram editor and SQL generator.\nLanguage: JavaScript\nStars: 38567\nWeekly stars: 312",
+    "content": "Repository: drawdb-io/drawdb\nURL: https://github.com/drawdb-io/drawdb\nDescription: Free, simple, and intuitive online database diagram editor and SQL generator.\nLanguage: JavaScript\nStars: 38567\nWeekly stars: 312\n\nREADME:\nSpecial thanks to:\nNext-gen AI-powered intelligent terminal for all platforms\n\ndrawDB\n\nFree, simple, and intuitive database schema editor and SQL generator.\n\nDrawDB is a robust and user-friendly database entity relationship diagram (ERD) editor right in your browser. Build diagrams with a few clicks, export and import SQL scripts, generate migrations, customize your editor, and more without creating an account. See the full set of features on here.\n\nGetting Started\n\nLocal Development\n\nBuild\n\nDocker Build\n\nIf you want to enable sharing, set up the server and environment variables according to .env.sample. This is optional unless you need to share files.\n\nContributing\n\nPlease see CONTRIBUTING.md for guidelines on how to contribute to this project.\n\nSupport\nJoin discussions: Discord",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "drawDB是一个免费、简单且直观的在线数据库图表编辑器和SQL生成器，运行在浏览器中。它允许用户通过几次点击构建数据库实体关系图（ERD），支持导入和导出SQL脚本、生成迁移、自定义编辑器等功能，且无需创建账户。该项目使用JavaScript开发，在GitHub上已获得超过3.8万星标，每周新增约312星标，受到开发者社区的广泛关注。drawDB支持本地开发和Docker部署，并提供了可选的共享功能（需配置服务器和环境变量）。作为一个开源项目，drawDB为数据库设计提供了便捷的解决方案，适合需要快速可视化数据库结构并生成SQL脚本的开发者和团队。它的易用性和强大功能使其成为数据库设计工具中值得关注的选择。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "drawDB",
+        "数据库图表编辑器",
+        "SQL生成器",
+        "ERD",
+        "开源"
+      ]
+    },
+    "analyzed_at": "2026-08-09T16:46:18.635865Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "9df15693a325a4df",
+    "title": "vitali87/code-graph-rag - GitHub Trending",
+    "url": "https://github.com/vitali87/code-graph-rag",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-09T16:46:06.578280Z",
+    "summary": "Repository: vitali87/code-graph-rag\nURL: https://github.com/vitali87/code-graph-rag\nDescription: The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs\nLanguage: Python\nStars: 2810\nWeekly stars: 237",
+    "content": "Repository: vitali87/code-graph-rag\nURL: https://github.com/vitali87/code-graph-rag\nDescription: The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs\nLanguage: Python\nStars: 2810\nWeekly stars: 237\n\nREADME:\n/ tags, so we use a single light-mode . Restore the theme-aware block below when the GitHub account is reinstated:\n\ngitcgr: indexes from GitHub (shows \"not indexed\" while unavailable).\n<!--\n<!--\n\nCode-Graph-RAG\n\nCode-Graph-RAG parses a multi-language codebase with Tree-sitter, builds a knowledge graph of its structure in Memgraph, and lets you query, edit, and optimise that code in plain English. It works across a monorepo of mixed languages under one unified graph schema.\n\nLatest News 🔥\n\nRuby Support**: Ruby joins the graph through a new pluggable ast-grep tier that adds a language from a single YAML pattern file, emitting Module, Function, and Class nodes plus import edges without a hand-written parser.\nStructural Search & Replace**: Find and rewrite code by AST pattern with ast-grep, exposed as agent tools so you can match and transform structure across the whole codebase instead of relying on text or regex.\nData-Flow Tracing**: New FLOWS_TO taint edges follow values through assignments, function calls, and I/O sinks, with coverage across C#, Java, C, and Go.\n\nSee NEWS.md for the full history.\n\nWhat It Does\n\nPoint Code-Graph-RAG at a repository and it reads every source file, extracts functions, classes, methods, modules, and the relationships between them, and stores the result as an interconnected graph. Once the graph exists you can:\n\nAsk questions about the codebase in natural language and get answers grounded in the real structure.\nRetrieve the actual source of any function, class, or method by name or by intent.\nEdit code through the agent with AST-based surgical patching and a diff preview before anything changes.\nOptimise code against language best practices or your own coding standards.\nFind dead code by walking call and reference edges from entry points.\nSearch and rewrite structurally by AST pattern with ast-grep.\n\nHow It Works\n\nThe system has two components:\n\n1. **Multi-language parser.** A Tree-sitter based parser reads the codebase and ingests functions, classes, methods, modules, and their relationships into Memgraph under a single language-agnostic schema.\n2. **RAG system** (codebase_rag/). An interactive CLI that turns natural language into Cypher queries, retrieves matching code, and drives AI-powered editing and optimisation.\n\nSee the Architecture Overview and Graph Schema for the full picture.\n\nSupported Languages\n\nPython, TypeScript, TSX, JavaScript, Rust, Go, Java, C, C++, C#, PHP, Lua, and Dart are fully supported. Scala is in development, and Ruby has structural support (modules, functions, classes, and imports) through the pluggable ast-grep tier. See the Language Support matrix for per-language capabilities.\n\nInstallation\n\ncgr is published to PyPI. Install it system-wide with the treesitter-full (all languages) and semantic (vector search) extras:\n\nYou also need Docker (for Memgraph), cmake, and ripgrep. Full prerequisites, source installs, and environment setup are in the Installation guide.\n\nQuick Start\n\nRepeat the first command for each repository you want indexed; the graph is\nshared, and syncing one project leaves the others alone. To start over from an\nempty graph, add --clean — it deletes **every** project in the shared graph,\nnot just this one, and asks for confirmation first when other\nprojects would be destroyed.\n\nThe Quick Start guide walks through parsing, querying, and exporting in five minutes.\n\nMCP Server\n\nCode-Graph-RAG runs as an MCP server so Claude Code and other MCP clients can query and edit your codebase directly. See the MCP Server guide for setup.\n\nDocumentation\n\nGetting Started**\nInstallation\nQuick Start\nConfiguration\n\nUser Guide**\nCLI Reference\nInteractive Querying\nCode Optimisation\nDead Code Detection\nGraph Export\nReal-Time Updates\nMCP Server\n\nArchitecture**\nOverview\nGraph Schema\nLanguage Support\nData-Flow Edges\n\nPython SDK**\nOverview\nGraph Loader\nCypher Generator\nSemantic Search\n\nAdvanced**\nAdding Languages\nIgnore Patterns\nBuilding Binaries\nTroubleshooting\n\nEnterprise Services\n\nCode-Graph-RAG is open source and free to use. For organisations that need more, we offer **fully managed cloud-hosted solutions** and **on-premise deployments**:\n\nCloud-Hosted Deployment**: Managed cloud infrastructure for both the graph database and the AI agent connection. Zero infrastructure overhead, so we handle scaling, updates, and availability while your team focuses on building.\nOn-Premise & Air-Gapped Deployment**: Deploy Code-Graph-RAG entirely within your own environment, including air-gapped networks. Full data sovereignty for regulated industries and security-sensitive organisations.\n\nWe also offer custom development, integration consulting, technical support contracts, and team training.\n\nView plans & pricing at code-graph-rag.com**\n\nContributing\n\nPlease see CONTRIBUTING.md for contribution guidelines. Good first PRs come from the TODO issues.\n\nSupport\n\nFor issues or questions, check the Troubleshooting guide first, then open an issue.\n\nLicense\n\nMIT. See LICENSE.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "vitali87/code-graph-rag 是一个开源项目，旨在为多语言代码库提供终极 RAG（检索增强生成）解决方案。它利用 Tree-sitter 解析代码，将函数、类、方法等结构及关系存入 Memgraph 图数据库，构建统一的知识图谱。用户可以用自然语言查询、理解和编辑代码，支持结构搜索替换、数据流追踪等高级功能。该项目支持 Python、TypeScript、Rust、Go 等多种语言，并提供 MCP 服务器集成，使 Claude Code 等客户端可以直接操作代码库。近期获得 2810 颗星，周增 237 颗，体现了社区对其创新方法的认可。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Code-Graph-RAG",
+        "Tree-sitter",
+        "Memgraph",
+        "知识图谱",
+        "RAG"
+      ]
+    },
+    "analyzed_at": "2026-08-09T16:46:17.509405Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "a42982e762cc487e",
+    "title": "livekit/agents - GitHub Trending",
+    "url": "https://github.com/livekit/agents",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-09T16:46:06.578280Z",
+    "summary": "Repository: livekit/agents\nURL: https://github.com/livekit/agents\nDescription: A framework for building realtime voice AI agents 🤖🎙️📹\nLanguage: Python\nStars: 12791\nWeekly stars: 1170",
+    "content": "Repository: livekit/agents\nURL: https://github.com/livekit/agents\nDescription: A framework for building realtime voice AI agents 🤖🎙️📹\nLanguage: Python\nStars: 12791\nWeekly stars: 1170\n\nREADME:\nLooking for the JS/TS library? Check out AgentsJS\n\nWhat is Agents?\n\nThe Agent Framework is designed for building realtime, programmable participants\nthat run on servers. Use it to create conversational, multi-modal voice\nagents that can see, hear, and understand.\n\nFeatures\n\nFlexible integrations**: A comprehensive ecosystem to mix and match the right STT, LLM, TTS, and Realtime API to suit your use case.\nIntegrated job scheduling**: Built-in task scheduling and distribution with dispatch APIs to connect end users to agents.\nExtensive WebRTC clients**: Build client applications using LiveKit's open-source SDK ecosystem, supporting all major platforms.\nTelephony integration**: Works seamlessly with LiveKit's telephony stack, allowing your agent to make calls to or receive calls from phones.\nExchange data with clients**: Use RPCs and other Data APIs to seamlessly exchange data with clients.\nSemantic turn detection**: Uses a transformer model to detect when a user is done with their turn, helps to reduce interruptions.\nMCP support**: Native support for MCP. Integrate tools provided by MCP servers with one line of code.\nBuiltin test framework**: Write tests and use judges to ensure your agent is performing as expected.\nOpen-source**: Fully open-source, allowing you to run the entire stack on your own servers, including LiveKit server, one of the most widely used WebRTC media servers.\n\nInstallation\n\nTo install the core Agents library, along with plugins for popular model providers:\n\nDocs and guides\n\nDocumentation on the framework and how to use it can be found here\n\nBuilding with AI coding agents\n\nIf you're using an AI coding assistant to build with LiveKit Agents, we recommend the following setup for the best results:\n\n1. **Install the LiveKit Docs MCP server** — Gives your coding agent access to up-to-date LiveKit documentation, code search across LiveKit repositories, and working examples.\n\n2. **Install the LiveKit Agent Skill** — Provides your coding agent with architectural guidance and best practices for building voice AI applications, including workflow design, handoffs, tasks, and testing patterns.\n\nThe Agent Skill works best alongside the MCP server: the skill teaches your agent *how to approach* building with LiveKit, while the MCP server provides the *current API details* to implement it correctly.\n\nCore concepts\n\nAgent: An LLM-based application with defined instructions.\nAgentSession: A container for agents that manages interactions with end users.\nentrypoint: The starting point for an interactive session, similar to a request handler in a web server.\nAgentServer: The main process that coordinates job scheduling and launches agents for user sessions.\n\nUsage\n\nSimple voice agent\n\nYou'll need the following environment variables for this example:\n\nLIVEKIT_URL\nLIVEKIT_API_KEY\nLIVEKIT_API_SECRET\n\nMulti-agent handoff\n\nThis code snippet is abbreviated. For the full example, see multi_agent.py\n\nTesting\n\nAutomated tests are essential for building reliable agents, especially with the non-deterministic behavior of LLMs. LiveKit Agents include native test integration to help you create dependable agents.\n\nExamples\n\nFor more examples and detailed setup instructions, see the examples directory. For even more examples, see the python-agents-examples repository.\n\n🎙️ Starter Agent\nA starter agent optimized for voice conversations.\nCode\n🔄 Multi-user push to talk\nResponds to multiple users in the room via push-to-talk.\nCode\n\n🎵 Background audio\nBackground ambient and thinking audio to improve realism.\nCode\n🛠️ Dynamic tool creation\nCreating function tools dynamically.\nCode\n\n☎️ Outbound caller\nAgent that makes outbound phone calls\nCode\n📋 Structured output\nUsing structured output from LLM to guide TTS tone.\nCode\n\n🔌 MCP support\nUse tools from MCP servers\nCode\n💬 Text-only agent\nSkip voice altogether and use the same code for text-only integrations\nCode\n\n📝 Multi-user transcriber\nProduce transcriptions from all users in the room\nCode\n🎥 Video avatars\nAdd an AI avatar with Tavus, Bithuman, LemonSlice, and more\nCode\n\n🍽️ Restaurant ordering and reservations\nFull example of an agent that handles calls for a restaurant.\nCode\n👁️ Gemini Live vision\nFull example (including iOS app) of Gemini Live agent that can see.\nCode\n\nRunning your agent\n\nTesting in terminal\n\nRuns your agent in terminal mode, enabling local audio input and output for testing.\nThis mode doesn't require external servers or dependencies and is useful for quickly validating behavior.\n\nDeveloping with LiveKit clients\n\nStarts the agent server and enables hot reloading when files change. This mode allows each process to host multiple concurrent agents efficiently.\n\nThe agent connects to LiveKit Cloud or your self-hosted server. Set the following environment variables:\nLIVEKIT_URL\nLIVEKIT_API_KEY\nLIVEKIT_API_SECRET\n\nYou can connect using any LiveKit client SDK or telephony integration.\nTo get started quickly, try the Agents Playground.\n\nRunning for production\n\nRuns the agent with production-ready optimizations.\n\nLicense\n\nThe Agents framework is licensed under Apache-2.0. The LiveKit turn detection models are licensed under the LiveKit Model License.\n\nContributing\n\nThe Agents framework is under active development in a rapidly evolving field. We welcome and appreciate contributions of any kind, be it feedback, bugfixes, features, new plugins and tools, or better documentation. You can file issues under this repo, open a PR, or chat with us in the LiveKit community.\n\nDevelopment setup\n\nThis project uses uv for package management. To install dependencies for development:\n\nExamples\n\nThis project includes many examples in the examples directory. To run them, create the file examples/.env with credentials for LiveKit Server and any necessary model providers (see examples/.env.example), then run:\n\nFor more information, see the examples README.\n\nTests\n\nUnit tests are in the tests directory and can be run with:\n\nFormatting\n\nThis project uses ruff for formatting and linting:\n\nDocumentation\n\nTo generate docs locally with pdoc:\n\nLiveKit Ecosystem\nAgents SDKs Python · Node.js\nLiveKit SDKs Browser · Swift · Android · Flutter · React Native · Rust · Node.js · Python · Unity · Unity (WebGL) · ESP32 · C++\nStarter Apps Python Agent · TypeScript Agent · React App · SwiftUI App · Android App · Flutter App · React Native App · Web Embed\nUI Components React · Android Compose · SwiftUI · Flutter\nServer APIs Node.js · Golang · Ruby · Java/Kotlin · Python · Rust · PHP (community) · .NET (community)\nResources Docs · Docs MCP Server · CLI · LiveKit Cloud\nLiveKit Server OSS LiveKit server · Egress · Ingress · SIP\nCommunity Developer Community · Slack · X · YouTube",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "LiveKit Agents是一个用于构建实时语音AI代理的开源Python框架。它支持集成多种语音识别、语言模型和语音合成服务，提供任务调度、WebRTC客户端和电话集成等功能。该框架还具备语义轮次检测、MCP支持和内置测试框架，可部署在自有服务器上。在GitHub上获得超过1.2万颗星，本周新增1170颗，显示出社区的广泛关注。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "LiveKit Agents",
+        "实时语音AI",
+        "WebRTC",
+        "MCP",
+        "开源框架"
+      ]
+    },
+    "analyzed_at": "2026-08-09T16:46:18.973963Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
