@@ -352,6 +352,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "cloudflare/computer": {
+      "repo_id": "cloudflare/computer",
+      "full_name": "cloudflare/computer",
+      "url": "https://github.com/cloudflare/computer",
+      "first_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "first_seen_stars": 7549,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 7549,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "codecrafters-io/build-your-own-x": {
       "repo_id": "codecrafters-io/build-your-own-x",
       "full_name": "codecrafters-io/build-your-own-x",
@@ -369,8 +380,8 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 124825,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 126152,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 126769,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -501,8 +512,8 @@
       "url": "https://github.com/drawdb-io/drawdb",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 38567,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 38719,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 38832,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -545,8 +556,8 @@
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
       "first_seen_at": "2026-08-05T17:50:03.009352+00:00",
       "first_seen_stars": 31460,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 33673,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 33935,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -578,8 +589,8 @@
       "url": "https://github.com/firecrawl/pdf-inspector",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 13771,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 14287,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 14622,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -589,8 +600,8 @@
       "url": "https://github.com/goauthentik/authentik",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 24183,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 24482,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 24590,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -622,8 +633,8 @@
       "url": "https://github.com/google/skills",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 16560,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 17554,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 17741,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -699,8 +710,8 @@
       "url": "https://github.com/huangruiteng/loopx",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3900,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 3900,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 4118,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -880,6 +891,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "ladybirdbrowser/ladybird": {
+      "repo_id": "ladybirdbrowser/ladybird",
+      "full_name": "LadybirdBrowser/ladybird",
+      "url": "https://github.com/LadybirdBrowser/ladybird",
+      "first_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "first_seen_stars": 65376,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 65376,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "likec4/likec4": {
       "repo_id": "likec4/likec4",
       "full_name": "likec4/likec4",
@@ -919,8 +941,8 @@
       "url": "https://github.com/lyogavin/airllm",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 26739,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 30533,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 30729,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1348,8 +1370,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 3911,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 4710,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1458,8 +1480,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 19303,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 19796,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1524,8 +1546,8 @@
       "url": "https://github.com/unclebob/swarm-forge",
       "first_seen_at": "2026-08-07T17:00:37.391200+00:00",
       "first_seen_stars": 1760,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 2100,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 2153,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1568,8 +1590,8 @@
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
       "first_seen_stars": 13596,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 19880,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 20409,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1579,8 +1601,8 @@
       "url": "https://github.com/vitali87/code-graph-rag",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 2810,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 3435,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 3751,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1634,8 +1656,8 @@
       "url": "https://github.com/zhaoxuya520/reverse-skill",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 15333,
-      "last_seen_at": "2026-08-10T17:01:40.663664+00:00",
-      "last_seen_stars": 23227,
+      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
+      "last_seen_stars": 23859,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
