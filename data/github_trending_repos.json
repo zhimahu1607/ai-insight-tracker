@@ -11,6 +11,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "3b1b/manim": {
+      "repo_id": "3b1b/manim",
+      "full_name": "3b1b/manim",
+      "url": "https://github.com/3b1b/manim",
+      "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "first_seen_stars": 90748,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 90748,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "abseil/abseil-cpp": {
       "repo_id": "abseil/abseil-cpp",
       "full_name": "abseil/abseil-cpp",
@@ -39,8 +50,8 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 76651,
-      "last_seen_at": "2026-07-10T17:54:14.248464+00:00",
-      "last_seen_stars": 76651,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 86824,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -358,8 +369,8 @@
       "url": "https://github.com/cloudflare/computer",
       "first_seen_at": "2026-08-11T17:08:07.294633+00:00",
       "first_seen_stars": 7549,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 7549,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 7943,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -380,8 +391,8 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 124825,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 126769,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 127297,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -512,8 +523,8 @@
       "url": "https://github.com/drawdb-io/drawdb",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 38567,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 38832,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 39007,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -556,8 +567,8 @@
       "url": "https://github.com/esengine/DeepSeek-Reasonix",
       "first_seen_at": "2026-08-05T17:50:03.009352+00:00",
       "first_seen_stars": 31460,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 33935,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 34433,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -589,8 +600,8 @@
       "url": "https://github.com/firecrawl/pdf-inspector",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 13771,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 14622,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 15261,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -633,8 +644,8 @@
       "url": "https://github.com/google/skills",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 16560,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 17741,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 18033,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -710,8 +721,8 @@
       "url": "https://github.com/huangruiteng/loopx",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3900,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 4118,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 4579,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -897,8 +908,8 @@
       "url": "https://github.com/LadybirdBrowser/ladybird",
       "first_seen_at": "2026-08-11T17:08:07.294633+00:00",
       "first_seen_stars": 65376,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 65376,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 65529,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1276,6 +1287,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "primeintellect-ai/prime-agent": {
+      "repo_id": "primeintellect-ai/prime-agent",
+      "full_name": "PrimeIntellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "first_seen_stars": 15348,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 15348,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "prismml-eng/bonsai-demo": {
       "repo_id": "prismml-eng/bonsai-demo",
       "full_name": "PrismML-Eng/Bonsai-demo",
@@ -1370,8 +1392,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 4710,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 6344,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1463,6 +1485,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tapxworld/chinatextbook": {
+      "repo_id": "tapxworld/chinatextbook",
+      "full_name": "TapXWorld/ChinaTextbook",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "first_seen_stars": 79250,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 79250,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tencentcloud/cubesandbox": {
       "repo_id": "tencentcloud/cubesandbox",
       "full_name": "TencentCloud/CubeSandbox",
@@ -1480,8 +1513,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 19796,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 21128,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1590,8 +1623,8 @@
       "url": "https://github.com/virgiliojr94/book-to-skill",
       "first_seen_at": "2026-07-30T17:43:04.458272+00:00",
       "first_seen_stars": 13596,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 20409,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 21137,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1601,8 +1634,8 @@
       "url": "https://github.com/vitali87/code-graph-rag",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 2810,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 3751,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 4178,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1656,8 +1689,8 @@
       "url": "https://github.com/zhaoxuya520/reverse-skill",
       "first_seen_at": "2026-08-03T17:59:33.130184+00:00",
       "first_seen_stars": 15333,
-      "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
-      "last_seen_stars": 23859,
+      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
+      "last_seen_stars": 24831,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
