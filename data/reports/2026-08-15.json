@@ -1,0 +1,29 @@
+{
+  "date": "2026-08-15",
+  "summary": "今日AI领域整体呈现实用主义转向：学术侧无新论文收录，工业界动态高度聚焦于大模型应用落地、推理成本压缩与开源基础设施的务实推进。OpenAI发布GPT-5.6构建者指南，面向初创企业提供模型选择策略与新版Responses API，核心意图在于降低AI代理开发门槛；AWS则在Amazon Nova Forge中引入基于GRPO的自定义奖励函数设计与多轮RL训练，并通过SageMaker AI与Bedrock AgentCore的集成方案解决多智能体可观测性难题，显示强化学习与智能体编排正从实验走向工程化。\n\n开源生态同步响应“降本”诉求：NVIDIA-NeMo推出Rust编写的LLM路由代理Switchyard，支持多策略路由与协议转换，为开源模型替代商业模型提供弹性通道；Cactus Compute发布仅14MB的边缘端模型Needle 2，专攻工具调用场景。此外，celld简化分布式应用部署，holehe登上GitHub Trending，体现开发者对轻量基础设施和效率工具的持续偏好。\n\n跨领域观察，闭源API的模型选择策略与开源的模型路由代理本质殊途同归——都在解决“按需匹配推理资源”的问题；边缘端极致轻量化模型与路由层协同，进一步将推理成本从云端向终端分散。整体风向清晰：行业重心正从模型能力竞赛转向推理效率、部署灵活性与系统可观测性的综合优化，AI落地进入“精打细算”阶段。",
+  "category_summaries": {},
+  "news_summary": "今日AI领域动态聚焦于大模型应用落地与开源基础设施创新。\n\n**LLM与应用开发方面**，OpenAI发布GPT-5.6构建者指南，面向初创公司推出智能模型选择策略与新版Responses API，旨在降低AI代理开发成本。AWS同步发力强化学习，在Amazon Nova Forge中引入基于GRPO的自定义奖励函数设计方法，支持自带编排实现多轮RL训练。此外，AWS还展示了将SageMaker AI与Bedrock AgentCore集成的多智能体工作流方案，通过自定义OpenTelemetry跨度解决可观测性难题。\n\n**开源生态方面**，NVIDIA-NeMo发布Rust编写的Switchyard，作为开源LLM路由代理，支持多种路由策略与协议翻译，实现开源模型对商业模型的灵活替代。Cactus Compute推出45M参数边缘端模型Needle 2，体积仅14MB，专为工具调用场景设计。Deno Land发布自托管分布式Durable Objects守护进程celld，简化分布式应用部署。同时，开源情报工具holehe登上GitHub Trending，可批量检测邮箱在120余个网站的注册踪迹。\n\n整体来看，行业正呈现模型推理成本优化与边缘端部署并行推进的趋势。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "LLM": 2,
+      "开源": 4,
+      "AI": 1
+    },
+    "top_keywords": [
+      "Rust",
+      "GPT-5.6",
+      "OpenAI",
+      "AI代理",
+      "Responses API",
+      "模型选择",
+      "celld",
+      "Durable Objects",
+      "SQLite",
+      "自托管"
+    ]
+  },
+  "generated_at": "2026-08-14T17:03:50.654675"
+}
