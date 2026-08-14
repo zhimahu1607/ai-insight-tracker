@@ -17,8 +17,8 @@
       "url": "https://github.com/3b1b/manim",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 90748,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 90748,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 91097,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -50,8 +50,8 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 76651,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 86824,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 87207,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -308,6 +308,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "cactus-compute/needle": {
+      "repo_id": "cactus-compute/needle",
+      "full_name": "cactus-compute/needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "first_seen_stars": 5451,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 5451,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "calesthio/openmontage": {
       "repo_id": "calesthio/openmontage",
       "full_name": "calesthio/OpenMontage",
@@ -369,8 +380,8 @@
       "url": "https://github.com/cloudflare/computer",
       "first_seen_at": "2026-08-11T17:08:07.294633+00:00",
       "first_seen_stars": 7549,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 7943,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 8090,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -448,6 +459,17 @@
       "first_seen_stars": 29543,
       "last_seen_at": "2026-07-17T17:19:20.184763+00:00",
       "last_seen_stars": 29663,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "denoland/celld": {
+      "repo_id": "denoland/celld",
+      "full_name": "denoland/celld",
+      "url": "https://github.com/denoland/celld",
+      "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "first_seen_stars": 3517,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 3517,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -644,8 +666,8 @@
       "url": "https://github.com/google/skills",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 16560,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 18033,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 18158,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -721,8 +743,8 @@
       "url": "https://github.com/huangruiteng/loopx",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3900,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 4579,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 4684,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -908,8 +930,8 @@
       "url": "https://github.com/LadybirdBrowser/ladybird",
       "first_seen_at": "2026-08-11T17:08:07.294633+00:00",
       "first_seen_stars": 65376,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 65529,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 65606,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -987,6 +1009,17 @@
       "first_seen_stars": 8759,
       "last_seen_at": "2026-07-03T17:45:07.392915+00:00",
       "last_seen_stars": 9041,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "megadose/holehe": {
+      "repo_id": "megadose/holehe",
+      "full_name": "megadose/holehe",
+      "url": "https://github.com/megadose/holehe",
+      "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "first_seen_stars": 12727,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 12727,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1098,6 +1131,17 @@
       "last_seen_at": "2026-07-27T17:49:45.982243+00:00",
       "last_seen_stars": 18663,
       "double_alerted_at": "2026-07-18T17:06:21.238443+00:00",
+      "ten_x_alerted_at": null
+    },
+    "nvidia-nemo/switchyard": {
+      "repo_id": "nvidia-nemo/switchyard",
+      "full_name": "NVIDIA-NeMo/Switchyard",
+      "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+      "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "first_seen_stars": 1422,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 1422,
+      "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
     "oblien/openship": {
@@ -1282,8 +1326,8 @@
       "url": "https://github.com/pingdotgg/t3code",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 14981,
-      "last_seen_at": "2026-08-03T17:59:33.130184+00:00",
-      "last_seen_stars": 16464,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 18710,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1293,8 +1337,8 @@
       "url": "https://github.com/PrimeIntellect-ai/prime-agent",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 15348,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 15348,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 15846,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1392,8 +1436,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 6344,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 7395,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1491,8 +1535,8 @@
       "url": "https://github.com/TapXWorld/ChinaTextbook",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 79250,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 79250,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 79566,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1513,8 +1557,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 21128,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 21635,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1634,8 +1678,8 @@
       "url": "https://github.com/vitali87/code-graph-rag",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 2810,
-      "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
-      "last_seen_stars": 4178,
+      "last_seen_at": "2026-08-14T17:03:07.848791+00:00",
+      "last_seen_stars": 4275,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
