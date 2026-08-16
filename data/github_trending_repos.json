@@ -17,8 +17,8 @@
       "url": "https://github.com/3b1b/manim",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 90748,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 91204,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 91312,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -50,8 +50,8 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 76651,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 87431,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 87676,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -242,6 +242,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "basecamp/omarchy": {
+      "repo_id": "basecamp/omarchy",
+      "full_name": "basecamp/omarchy",
+      "url": "https://github.com/basecamp/omarchy",
+      "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "first_seen_stars": 25206,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 25206,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "block/buzz": {
       "repo_id": "block/buzz",
       "full_name": "block/buzz",
@@ -314,8 +325,8 @@
       "url": "https://github.com/cactus-compute/needle",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 5451,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 5936,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 6401,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -336,8 +347,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 18287,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 18287,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 19343,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -957,6 +968,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "lightricks/ltx-2": {
+      "repo_id": "lightricks/ltx-2",
+      "full_name": "Lightricks/LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "first_seen_stars": 9045,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 9045,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "likec4/likec4": {
       "repo_id": "likec4/likec4",
       "full_name": "likec4/likec4",
@@ -1007,8 +1029,8 @@
       "url": "https://github.com/macro-inc/macro",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 3222,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 3222,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 3357,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1051,8 +1073,8 @@
       "url": "https://github.com/megadose/holehe",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 12727,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 13027,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 13242,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1172,8 +1194,8 @@
       "url": "https://github.com/NVIDIA-NeMo/Switchyard",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 1422,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 1546,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 1651,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1293,8 +1315,8 @@
       "url": "https://github.com/paperclipai/paperclip",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 78249,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 78249,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 78437,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1381,8 +1403,8 @@
       "url": "https://github.com/PrimeIntellect-ai/prime-agent",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 15348,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 16190,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 16490,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1480,8 +1502,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 7836,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 8124,
       "double_alerted_at": "2026-08-15T16:33:42.948840+00:00",
       "ten_x_alerted_at": null
     },
@@ -1601,8 +1623,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 21893,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 22177,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1634,8 +1656,8 @@
       "url": "https://github.com/ToolJet/ToolJet",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 39388,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 39388,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 39844,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1680,6 +1702,17 @@
       "first_seen_stars": 1760,
       "last_seen_at": "2026-08-11T17:08:07.294633+00:00",
       "last_seen_stars": 2153,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "unslothai/unsloth": {
+      "repo_id": "unslothai/unsloth",
+      "full_name": "unslothai/unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "first_seen_stars": 72382,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 72382,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1733,8 +1766,8 @@
       "url": "https://github.com/vitali87/code-graph-rag",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 2810,
-      "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
-      "last_seen_stars": 4348,
+      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
+      "last_seen_stars": 4414,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
