@@ -1,0 +1,176 @@
+[
+  {
+    "id": "f252ba96214e1ce3",
+    "title": "lightningpixel/modly - GitHub Trending",
+    "url": "https://github.com/lightningpixel/modly",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-17T16:36:40.036288Z",
+    "summary": "Repository: lightningpixel/modly\nURL: https://github.com/lightningpixel/modly\nDescription: Desktop app to generate 3D models from images or prompt using local AI — runs entirely on your GPU\nLanguage: TypeScript\nStars: 6241\nWeekly stars: 1278",
+    "content": "Repository: lightningpixel/modly\nURL: https://github.com/lightningpixel/modly\nDescription: Desktop app to generate 3D models from images or prompt using local AI — runs entirely on your GPU\nLanguage: TypeScript\nStars: 6241\nWeekly stars: 1278\n\nREADME:\nModly\n\nLocal, open source, AI-powered image-to-3D mesh generation.**\nTurn any photo into a 3D model using open source AI models running entirely on your GPU.\nModly is a desktop application for Windows, Linux, and Apple Silicon macOS.\n\nCreated by Lightning Pixel\n\nDownload\n\nHead to the Releases page to download the latest installer for Windows, Linux, or Apple Silicon macOS.\n\nAlternatively, you can clone the repository and run the app directly without installing:\n\nGetting started\n\n1. Install JS dependencies\n\n2. Set up Python backend\n\n3. Run in development\n\n4. Test\n\nPlatform notes\n\nmacOS support targets Apple Silicon only.\nmacOS uses native window controls. Windows and Linux keep the existing custom controls.\nThe top bar includes a live RAM indicator sourced from the main process.\nWorkflow wiring is validated before run; invalid graphs stay in place and surface inline/toast warnings instead of dropping the current mesh view.\nPackage Apple Silicon macOS with npm run package:mac.\nImported meshes can be smoothed and decimated in-app; optimized results are written back into the workspace.\n\nExtension system\n\nModly supports external model and process extensions. Each extension is a GitHub repository containing a manifest.json plus the runtime entry files required by its type.\n\nOfficial extensions\n\n| Extension | Model | URL |\n|-----------|-------|-----|\n| modly-hunyuan3d-mini-extension | Hunyuan3D 2 Mini | https://github.com/lightningpixel/modly-hunyuan3d-mini-extension |\n| modly-hunyuan3d-mini-turbo-extension | Hunyuan3D 2 Mini Turbo | https://github.com/lightningpixel/modly-hunyuan3d-mini-turbo-extension |\n| modly-hunyuan3d-mini-fast-extension | Hunyuan3D 2 Mini Fast | https://github.com/lightningpixel/modly-hunyuan3d-mini-fast-extension |\n| modly-triposg-extension | TripoSG | https://github.com/lightningpixel/modly-triposg-extension |\n| modly-trellis2-gguf-extension | Trellis2 GGUF | https://github.com/lightningpixel/modly-trellis2-gguf-extension |\n\nHow to install an extension\n\n1.** Go to the **Models** page and click **Install from GitHub**.\n\n2.** Enter the HTTPS URL of the extension repository and confirm.\n\n3.** If the extension exposes model nodes, download the model or one of its variants. Process extensions are ready once installation and setup complete.\n\nWorkflows\nStart with a basic workflow first. For example, on the \"Workflows\" tab, try: Image -> Generate Mesh -> Add to Scene. Make sure there is a connection between each of the steps. Go to the \"Generate\" tab, make sure the workflow is selected, then click on \"Generate 3D Model\". Click on \"Settings/Logs/Errors\" to see any issues.\n\nModly CLI\n\nAgents and scripts can call a running Modly desktop app without using the UI via the stdlib-only CLI. The CLI is a thin helper over Modly's canonical automation concepts and keeps final machine-readable JSON on stdout:\n\nCanonical commands are health, model, workflow-run, capability, and process-run. The friendly generate command starts POST /workflow-runs/from-image, polls the returned run, exports the final mesh when requested, and includes recovery metadata such as workflow-run status ... and workflow-run cancel ... in the JSON response.\n\nCompatibility and helper surfaces are intentionally separated: legacy wraps old /generate/* job endpoints, dev serve-api / dev ensure-server start only the FastAPI backend and do not prove Electron/Desktop bridge readiness, and experimental comfy-image / experimental generate-from-workflow are external ComfyUI orchestration helpers rather than the canonical Modly agent contract. Hidden helper aliases such as status, export, and batch remain parseable for scripts, but they are not presented as canonical root commands.\n\nexperimental generate-from-workflow --workflow --output treats --output as the final artifact location. When the ComfyUI workflow produces a downloadable 3D asset, the CLI downloads it directly; image-only workflows remain a compatibility path through Modly image-to-3D generation.\n\nSee tools/modly-cli/SKILL.md for the agent workflow and output contract.\n\nCommunity\n\nJoin the Discord server to stay up to date with the latest news, report bugs, and share feedback.\n\nSponsors\n\nThanks to our early sponsors for believing in Modly and helping make local AI 3D generation more accessible.\n\nDrHepa\n&nbsp;&nbsp;\nbenjapenjamin\n&nbsp;&nbsp;\niammojogo-sudo\n\nLicense\n\nMIT License — see LICENSE for details.\n\nIf you fork this project and build your own app from it, you must credit the original project and its creator:**\n\nBased on Modly by Lightning Pixel\n\nThis is a requirement of the MIT license attribution clause. Please keep this credit visible in your app's UI or documentation.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "Modly 是一款由 Lightning Pixel 开发的开源桌面应用，支持 Windows、Linux 和 Apple Silicon macOS。它利用本地 AI 模型，完全在 GPU 上运行，可将普通照片或文本提示转换为 3D 模型。应用采用 TypeScript 编写，内置工作流编辑器，支持导入网格的平滑与减面优化，并提供了基于 GitHub 仓库的扩展系统，可接入 Hunyuan3D、TripoSG 等主流模型。此外，Modly 还提供无界面 CLI，便于脚本与 Agent 调用。该项目在 GitHub 上表现活跃，已获 6241 颗星，周增长超千颗，展现了社区对本地 AI 3D 生成工具的高度关注。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Modly",
+        "3D模型生成",
+        "本地AI",
+        "GPU",
+        "开源"
+      ]
+    },
+    "analyzed_at": "2026-08-17T16:36:48.548334Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "ea97e2f9b3078078",
+    "title": "anthropics/skills - GitHub Trending",
+    "url": "https://github.com/anthropics/skills",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-17T16:36:40.036288Z",
+    "summary": "Repository: anthropics/skills\nURL: https://github.com/anthropics/skills\nDescription: Public repository for Agent Skills\nLanguage: Python\nStars: 169910\nWeekly stars: 2698",
+    "content": "Repository: anthropics/skills\nURL: https://github.com/anthropics/skills\nDescription: Public repository for Agent Skills\nLanguage: Python\nStars: 169910\nWeekly stars: 2698\n\nREADME:\nNote:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see agentskills.io.\n\n[](https://skills.sh/anthropics/skills)\n\nSkills\nSkills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.\n\nFor more information, check out:\nWhat are skills?\nUsing skills in Claude\nHow to create custom skills\nEquipping agents for the real world with Agent Skills\n\nAbout This Repository\n\nThis repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.).\n\nEach skill is self-contained in its own folder with a SKILL.md file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to understand different patterns and approaches.\n\nMany skills in this repo are open source (Apache 2.0). We've also included the document creation & editing skills that power Claude's document capabilities under the hood in the skills/docx, skills/pdf, skills/pptx, and skills/xlsx subfolders. These are source-available, not open source, but we wanted to share these with developers as a reference for more complex skills that are actively used in a production AI application.\n\nDisclaimer\n\nThese skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.\n\nSkill Sets\n./skills: Skill examples for Creative & Design, Development & Technical, Enterprise & Communication, and Document Skills\n./spec: The Agent Skills specification\n./template: Skill template\n\nTry in Claude Code, Claude.ai, and the API\n\nClaude Code\nYou can register this repository as a Claude Code Plugin marketplace by running the following command in Claude Code:\n\nThen, to install a specific set of skills:\n1. Select Browse and install plugins\n2. Select anthropic-agent-skills\n3. Select document-skills or example-skills\n4. Select Install now\n\nAlternatively, directly install either Plugin via:\n\nAfter installing the plugin, you can use the skill by just mentioning it. For instance, if you install the document-skills plugin from the marketplace, you can ask Claude Code to do something like: \"Use the PDF skill to extract the form fields from path/to/some-file.pdf\"\n\nClaude.ai\n\nThese example skills are all already available to paid plans in Claude.ai.\n\nTo use any skill from this repository or upload custom skills, follow the instructions in Using skills in Claude.\n\nClaude API\n\nYou can use Anthropic's pre-built skills, and upload custom skills, via the Claude API. See the Skills API Quickstart for more.\n\nCreating a Basic Skill\n\nSkills are simple to create - just a folder with a SKILL.md file containing YAML frontmatter and instructions. You can use the **template-skill** in this repository as a starting point:\n\nThe frontmatter requires only two fields:\nname - A unique identifier for your skill (lowercase, hyphens for spaces)\ndescription - A complete description of what the skill does and when to use it\n\nThe markdown content below contains the instructions, examples, and guidelines that Claude will follow. For more details, see How to create custom skills.\n\nPartner Skills\n\nSkills are a great way to teach Claude how to get better at using specific pieces of software. As we see awesome example skills from partners, we may highlight some of them here:\n\nNotion** - Notion Skills for Claude",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "Anthropic 在 GitHub 上公开了 Agent Skills 的官方仓库 anthropics/skills，这是一个用于增强 Claude 在特定任务上能力的技能集合。仓库包含创意设计、技术开发、企业通信和文档处理等多种技能示例，每个技能以独立文件夹形式组织，内含 SKILL.md 指令文件。其中文档创建与编辑技能（docx、pdf、pptx、xlsx）以源可用形式开放，作为复杂技能的生产级参考。该仓库支持在 Claude Code、Claude.ai 和 Claude API 中使用，并提供了技能规范（spec）和模板，方便开发者创建自定义技能。此次发布展示了 Agent Skills 标准的实际应用，为开发者构建可复用的 AI 工作流提供了重要参考。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Anthropic",
+        "Claude",
+        "Agent Skills",
+        "GitHub",
+        "开源"
+      ]
+    },
+    "analyzed_at": "2026-08-17T16:36:50.520092Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "f1f9ba955fd736fd",
+    "title": "Build OpenClaw agents that transact with Amazon Bedrock AgentCore payments",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-openclaw-agents-that-transact-with-amazon-bedrock-agentcore-payments/",
+    "source_name": "Amazon AWS ML",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-17T16:19:56Z",
+    "summary": "Give an autonomous agent a wallet and spending guardrails so it can pay for paywalled APIs, MCP servers, and web content. This post connects OpenClaw to Amazon Bedrock AgentCore payments and the x402 protocol, using the aws-agents-pay plugin to make bounded, human-approved testnet payments.",
+    "content": "This post is a collaboration between AWS and the OpenClaw Foundation .\nAutonomous agents that browse the web, call APIs, and query Model Context Protocol (MCP) servers can encounter services that require an HTTP 402 Payment Required response to be settled before access continues. To use those services without pausing for a human at every transaction, an agent needs a payment path that operates within limits approved in advance. A safe design keeps wallet-provider credentials and the authority to create or expand payment sessions outside the model-facing runtime. The runtime can still initiate approved payments within those limits.\nAgentCore payments , a capability of Amazon Bedrock AgentCore , provides wallet integration, spending limits, and a consistent payment layer as agent payment protocols evolve. Protocols such as x402 and Machine Payments Protocol (MPP) support programmatic payment flows between agents and services. In this post, you connect OpenClaw to a wallet and bounded payment session that a human provisions through a trusted administrative path, then use the aws-agents-pay plugin for OpenClaw to initiate approved testnet payments.\nWhy agents need payment capabilities\nAutonomous agents can act across multiple steps and services without a human reviewing each action. A long-running research or workflow agent might encounter a paid API or content endpoint while no operator is present. A bounded payment layer lets the agent continue within recipient, asset, network, per-payment, cumulative budget, and expiry limits that a human sets in advance.\nSome APIs, content services, compute services, and MCP tools use pay-per-use pricing. Individual transactions can be less than one dollar or fractions of a cent. Minimum card-processing fees can make transactions at that scale cost-prohibitive, while stablecoin payments can support small amounts and near-real-time settlement. This makes HTTP-native protocols such as x402 suitable for programmatic, agent-initiated payments.\nImplementing this directly requires wallet-provider integration, protected credential handling, payment authorization, deterministic limits, and payment observability. You also need to account for a model that can be manipulated by untrusted input. The design does not prevent prompt injection. Instead, it assumes untrusted input can manipulate the model and bounds the runtime’s authority by recipient, asset, network, per-payment amount, session budget, and expiry.\nSolution overview\nAgentCore payments provides a consistent payment layer as agent payment protocols evolve. This OpenClaw integration demonstrates the pattern using x402 v2. It processes a merchant’s HTTP 402 challenge through a configured wallet provider and returns a signed authorization that the client uses to replay the request. AgentCore Identity, a capability of Amazon Bedrock AgentCore, stores wallet-provider credentials. AgentCore Observability, a capability of Amazon Bedrock AgentCore, can provide logs, metrics, and traces through Amazon CloudWatch and AWS X-Ray when telemetry delivery is configured.\nAgentCore payments supports a Coinbase wallet or a Stripe Privy wallet as the payment connection. Both provide an embedded stablecoin wallet. Subject to provider and geographic availability, you or your end users can fund the wallet through stablecoin or fiat using a debit card. Both providers use AgentCore Identity credential storage and per-session spending limits.\nThis walkthrough uses OpenClaw , an AI assistant that runs on your devices and connects models, tools, and messaging channels through a local Gateway. The OpenClaw Foundation maintains the project, and plugins extend what the assistant can do. The walkthrough separates human-run payment administration from the model-facing runtime. A human provisions the wallet, creates the payment session, approves recipients, and sets the budget in a trusted terminal. The aws-agents-pay plugin exposes two model-visible tools: get_payment_session_status , which checks the configured payment session, and get_paid_content , which requests an approved paid URL and completes the payment within the configured policy. The runtime can initiate a payment within the approved session, but it cannot create, extend, or replace a session.\n\nFigure 1: The demo shows a chat with an AI assistant named “Bob” in the OpenClaw gateway application. The user asks “What’s the weather in Seattle right now?” then Bob executes a test payment of 0.001 USDC on Base Sepolia for a paid weather API\nA typical payment flow is:\n\nThe agent calls get_payment_session_status to confirm that an operator-provisioned session is usable.\nThe agent calls get_paid_content for an approved URL. The plugin first performs a bounded network probe and receives an HTTP 402 response containing an x402 v2 challenge.\nAfter receiving the challenge, the plugin verifies that the challenge resource has the same origin and path as the requested URL. It then validates the network, asset, recipient, and amount against the operator’s policy before it calls ProcessPayment .\nFor a retry of the same payment request, the plugin reuses the same idempotency token rather than creating a second payment. Concurrent duplicate requests can still present a race, so avoid issuing the same payment concurrently.\nThe plugin waits until the signed authorization’s validAfter time, then replays the original request with the payment signature.\nWith returnBody enabled for this walkthrough, the plugin returns the paid response body, caps it at 10 KiB, and marks it as untrusted: true . The plugin does not return the signed payment proof to the model.\n\nThe current OpenClaw setup flow in the Agent Toolkit for AWS provides an example for Base Sepolia for testing and Base for production, and supports customization for other chains, including Ethereum, other EVM-compatible chains, and Solana.\nCollaboration with OpenClaw\nAWS has been collaborating with the OpenClaw Foundation on this integration, including support for community events like ClawCon , and worked directly with the Foundation’s engineering team to bring AgentCore payments into the plugin framework.\n\n“Payments are a natural extension of what plugins already do in OpenClaw: give an agent a new capability through a well-defined tool, not a special case bolted on afterward. We’re grateful for AWS’s support of the OpenClaw ecosystem, from events like ClawCon to working directly with our team on this integration. Agents now get a production-grade path to pay for what they use, while builders keep the same conversational setup they expect from any other OpenClaw plugin. We’re looking forward to going deeper with AWS AgentCore as agentic payments become a bigger part of how agents operate on their own.”\n\n— Patrick Erichsen, Member of Technical Staff, OpenClaw Foundation\nImplementation steps: Configure OpenClaw to make bounded payments\nThe following sections walk you through the prerequisites, provisioning the wallet and payment session outside the agent loop, configuring an explicit payment policy, and making a bounded payment.\nPrerequisites\nMake sure that you have the following prerequisites.\n\nOpenClaw version 2026.3.24 or later: npm install -g openclaw .\nNode.js and npm.\nAn AWS account with access to AgentCore payments.\nSeparate AWS Identity and Access Management (IAM) roles for administration and runtime, following the AgentCore payments IAM roles guide . The OpenClaw runtime role needs only the read operations required for status plus ProcessPayment . It must not have session-write permissions.\nCoinbase CDP or Stripe with Privy credentials, entered only in the interactive AgentCore CLI.\nA Base Sepolia x402 v2 endpoint that you control or have independently approved. You can use the Coinbase x402 Bazaar to discover candidate services, but verify the endpoint, recipient, network, asset, and price before adding them to the payment policy.\nThe merchant recipient address and USDC asset contract verified from merchant documentation or another known-good source, independently of the HTTP 402 response.\n\nDisclaimer: Security for this solution follows the AWS shared responsibility model . AWS is responsible for security of the cloud, while you’re responsible for security in the cloud. For this solution, your responsibilities include configuring IAM permissions, protecting wallet-provider credentials, and defining payment policies. Follow the AgentCore payments IAM roles guidance to separate administrative, management, agent execution, and service operations.\nThe following steps take you from installing the plugin to watching an agent pay for its first piece of paywalled content.\n1. Install the plugin from ClawHub\nBefore continuing, confirm that the @aws/aws-agents-pay package is available on ClawHub. Then install it:\n\nopenclaw plugins install clawhub:@aws/aws-agents-pay\n\nBash\n\nThe package name is @aws/aws-agents-pay , the installed plugin ID is aws-agents-pay , and the bundled skill name is agents-pay .\nTo inspect the bundled setup guidance, run:\n\nopenclaw skills info agents-pay\n\nBash\n\nInspect the installed plugin:\n\nopenclaw plugins inspect aws-agents-pay\n\nBash\n\nThe model-visible runtime must expose only get_payment_session_status and get_paid_content . Stop if a setup, session-creation, shell, or other model-visible tool appears. An unexpected tool can indicate a different, outdated, or modified package.\n2. Complete the human-supervised payment setup\nInstalling the plugin does not create the payment manager, connector, instrument, or payment session. Choose one of the following provisioning options. Both options use a trusted terminal under your AWS credentials, and session creation requires you to type approve at an interactive TTY.\nOption A – OpenClaw-assisted setup. Ask OpenClaw: Help me set up the agents-pay skill. OpenClaw can explain each step, but you must run the administrative commands and approve session creation yourself. OpenClaw guidance does not remove the interactive approval gate.\nOption B – Fully manual setup. Follow the OpenClaw setup guide directly, without involving OpenClaw.\nFor either option, follow the OpenClaw setup guide in a trusted, human-supervised terminal. The guide covers creating the AgentCore project, provisioning payment resources, running the setup wizard, and adding the generated configuration to OpenClaw. You must enter credentials and type approve yourself.\n3. Configure the plugin with an explicit policy\nReview the generated configuration before enabling the plugin. It must include the payment manager ARN, instrument ID, session ID, user ID, network, exact asset contract, approved recipients, and a positive per-payment ceiling.\nFor the sandbox walkthrough, use the payment policy in Step 3 of the companion code sample . It contains the Base Sepolia network, origin, recipient, USDC asset, payment limit, and returnBody setting that match the test endpoint used in the next step.\nThis sandbox endpoint is listed in the Coinbase x402 Bazaar, but this walkthrough calls a known URL directly. For a discovery-driven workflow, see the Tutorial with Coinbase Bazaar .\nFor a fixed merchant set, verify every address in allowedRecipients out of band using merchant documentation or another known-good source. Don’t approve a recipient only because it appeared in an HTTP 402 response. For broader discovery scenarios, set allowAnyRecipient: true to let the publisher select the beneficiary. This option trades recipient allowlisting for flexibility; origin, network, asset, per-payment, and session-budget controls still apply. For this walkthrough, keep networkPreferences on Base Sepolia ( eip155:84532 ) and use the exact Base Sepolia USDC contract selected by the setup wizard.\nmaxPaymentAmountAtomic limits one payment in the asset’s smallest unit. For a six-decimal USDC asset, 100000 represents 0.10 USDC. The payment session budget separately limits cumulative spend until the session expires or is exhausted. For this walkthrough, set returnBody to true so the agent can use the paid response. The plugin caps the response at 10 KiB and marks it as untrusted: true . Publisher-controlled content can contain prompt-injection instructions, so leave returnBody unset or set it to false when the agent only needs response metadata and a digest. This setting doesn’t expose the signed payment proof.\nWallet-provider secrets do not belong in the OpenClaw configuration. Treat the payment session ID, resource identifiers, recipient policy, and other configuration values as sensitive operational data because they describe and authorize the runtime’s payment path.\nRestart the gateway after saving ~/.openclaw/openclaw.json :\n\nopenclaw gateway restart\n\nBash\n\nIf you use the protected ~/.x402/config.json path instead of inline plugin configuration, the plugin checks ownership and permissions on the directory and file and refuses to load an unsafe configuration.\n4. Check session status and pay for content\nAsk your OpenClaw agent to check whether the configured session is usable:\n\nWhat's the status of my payment session?\n\nPlain text\n\nIf the session is unavailable, expired, or exhausted, stop. Use the trusted administrative path to review the situation and create a replacement session. The model-facing runtime cannot create or expand its own budget.\nThe companion sample pins its payment policy to the Base Sepolia endpoint used in this walkthrough. Ask the agent to fetch it:\n\nFetch https://sandbox.node4all.com/v1/x402-test\n\nPlain text\n\nThe plugin performs a bounded probe, validates the returned challenge against the operator’s policy, calls AgentCore payments, waits until the signed authorization is valid, and replays the request. With returnBody enabled for this walkthrough, the tool returns the paid response body with content_returned: true , caps it at 10 KiB, and marks it as untrusted: true . It does not return the signed payment proof.\nTreat merchant responses and all retrieved content as untrusted. This design doesn’t prevent prompt injection. It assumes the model can be manipulated and bounds payment authority through IAM separation, approved recipients and assets, a per-payment ceiling, a cumulative session budget, and an expiry. Enable returnBody only when the agent needs the paid response, and treat that response as data rather than instructions.\nAsk for session status again:\n\nWhat's my payment session status now?\n\nPlain text\n\nConfirm that the reported remaining budget reflects the payment.\nClean up\nRemove the plugin from OpenClaw and restart the gateway:\n\nopenclaw plugins uninstall aws-agents-pay\nopenclaw gateway restart\n\nBash\n\nUse the same trusted administrative path to remove the payment resources on AWS. Don’t expose infrastructure deletion or session creation to the model-facing runtime, and keep the runtime IAM role without those permissions.\nConclusion\nWith AgentCore payments, an agent can access paywalled APIs, pay-per-use data feeds, and metered MCP tools within limits a human sets in advance. AgentCore payments handles wallet integration, spending limits, and payment orchestration. In this OpenClaw pattern, the human keeps wallet-provider credentials and authority over recipients, assets, per-payment limits, cumulative session budget, and expiry outside the model-facing runtime. The agent can initiate payments only within those approved bounds.\nInstall the aws-agents-pay plugin from ClawHub , then follow the OpenClaw agent with AgentCore payments sample to provision the payment resources and complete an end-to-end x402 payment.\nResources\n\nClawHub plugin: aws-agents-pay .\nCode sample: OpenClaw agent with AgentCore payments .\nAmazon Bedrock AgentCore payments developer guide .\nx402 protocol specification .\nAWS shared responsibility model .\nAgentCore payments IAM roles guidance .\nCode sample: OpenClaw on AWS .\n\nAcknowledgements\nWe’d like to thank Madhu Samitha Vangara and Isaac Lin , Solutions Architects at AWS, for their contributions to this solution.\n\nAbout the authors\n\nPatrick Erichsen\nPatrick is a Member of Technical Staff at the OpenClaw Foundation. Previously he was a founding engineer at Continue (YC W23), where he worked on coding agents. He’s interested in using AI as a tool to expand human creativity.\n\nDaniel Wirjo\nDaniel is a Solutions Architect at AWS, focused on AI startups. As a former startup CTO, he enjoys collaborating with founders and engineering leaders to drive growth and innovation on AWS. Outside of work, Daniel enjoys taking walks with a coffee in hand, appreciating nature, and learning new ideas.\n\nPeter Jiang\nPeter is a Senior Software Developer at AWS, based in Seattle, WA. He is a core member of the engineering team behind the Amazon Bedrock AgentCore payments initiative, which enables AI agents with payments capability. With over 8 years of experience in the financial and payments industry, Peter has launched multiple greenfield projects spanning banking, crypto, and agentic systems. Previously, he worked on ultra-low latency trading systems at Susquehanna International Group.\n\nChethan Shriyan\nChethan is a Principal Product Manager, Technical at AWS, based in Seattle, WA. He brings nearly 13 years of experience in product and business management, including over 7 years at Amazon. He is passionate about building and delivering technology products that create meaningful impact in customers’ lives.",
+    "weight": 0.85,
+    "fetch_type": "rss",
+    "company": "amazon",
+    "light_analysis": {
+      "summary": "AWS与OpenClaw基金会合作，推出aws-agents-pay插件，使OpenClaw代理能通过Amazon Bedrock AgentCore payments自动支付HTTP 402要求的付费内容。该方案采用x402协议和稳定币，支持钱包集成、支出限额和会话预算，将钱包凭证和授权权限隔离在模型运行时之外，防止提示注入滥用。代理可在预设限额内调用get_paid_content完成支付，支持Base Sepolia测试网等。合作强化了代理自主支付能力，为付费API和MCP工具提供安全支付路径。",
+      "category": "产品",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenClaw",
+        "Amazon Bedrock AgentCore",
+        "x402",
+        "代理支付",
+        "稳定币"
+      ]
+    },
+    "analyzed_at": "2026-08-17T16:36:49.193580Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "699d10e1c74c5175",
+    "title": "The Defender’s Window",
+    "url": "https://openai.com/index/the-defenders-window",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-17T05:30:00Z",
+    "summary": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
+    "content": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI发布文章《The Defender's Window》，探讨AI如何重塑网络安全格局。文章指出，AI既为攻击者提供了新的攻击手段，也为防御者带来了更强的防护能力。OpenAI正在加强自身防御体系，并呼吁安全团队积极应对这一变革。文中强调，在AI驱动的安全对抗中，防御者需要利用AI技术来提升威胁检测、响应速度和自动化水平，以缩小攻击者的优势窗口。该文章为安全团队提供了当前可采取的行动建议，旨在帮助组织在AI时代构建更具韧性的安全防线。",
+      "category": "AI",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "网络安全",
+        "AI防御",
+        "安全团队",
+        "威胁检测"
+      ]
+    },
+    "analyzed_at": "2026-08-17T16:36:47.767252Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "a7860c437a7c7d1d",
+    "title": "OpenAI joins PORTS-Pike project",
+    "url": "https://openai.com/index/openai-joins-ports-pike-project",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-17T05:00:00Z",
+    "summary": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
+    "content": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布加入PORTS-Pike项目，扩大社区投资，支持俄亥俄州南部数千个就业岗位。此举体现了OpenAI在推动地区经济发展和社区建设方面的承诺，通过参与该基础设施项目，将助力当地产业升级和就业增长。",
+      "category": "行业",
+      "sentiment": "positive",
+      "keywords": [
+        "OpenAI",
+        "PORTS-Pike项目",
+        "社区投资",
+        "俄亥俄州",
+        "就业"
+      ]
+    },
+    "analyzed_at": "2026-08-17T16:36:46.878642Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "e5221d6f877fb7da",
+    "title": "New policy ideas for the Intelligence Age",
+    "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-17T03:15:00Z",
+    "summary": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
+    "content": "OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 宣布资助 14 个独立项目，探索面向智能时代的新 AI 政策想法，旨在扩大经济机会并增强社会韧性。该举措反映了 OpenAI 在推动 AI 技术发展的同时，积极关注政策与社会影响，试图通过多元视角为智能时代的治理和公平发展提供思路。这些项目涉及政策研究、经济影响评估和社会适应策略等领域，体现了行业头部机构对负责任 AI 发展的投入。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "OpenAI",
+        "AI政策",
+        "经济机会",
+        "社会韧性",
+        "智能时代"
+      ]
+    },
+    "analyzed_at": "2026-08-17T16:36:47.666264Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

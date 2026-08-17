@@ -17,8 +17,8 @@
       "url": "https://github.com/3b1b/manim",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 90748,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 91312,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 91462,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -50,8 +50,8 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 76651,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 87676,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 87979,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -154,6 +154,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "anthropics/skills": {
+      "repo_id": "anthropics/skills",
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "first_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "first_seen_stars": 169910,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 169910,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "antirez/ds4": {
       "repo_id": "antirez/ds4",
       "full_name": "antirez/ds4",
@@ -248,8 +259,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 25206,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 25902,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -325,8 +336,8 @@
       "url": "https://github.com/cactus-compute/needle",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 5451,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 6401,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 7043,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -347,8 +358,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 18287,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 19343,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 20350,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -968,6 +979,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "lightningpixel/modly": {
+      "repo_id": "lightningpixel/modly",
+      "full_name": "lightningpixel/modly",
+      "url": "https://github.com/lightningpixel/modly",
+      "first_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "first_seen_stars": 6241,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 6241,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "lightricks/ltx-2": {
       "repo_id": "lightricks/ltx-2",
       "full_name": "Lightricks/LTX-2",
@@ -1029,8 +1051,8 @@
       "url": "https://github.com/macro-inc/macro",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 3222,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 3357,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 3508,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1073,8 +1095,8 @@
       "url": "https://github.com/megadose/holehe",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 12727,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 13242,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 13399,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1403,8 +1425,8 @@
       "url": "https://github.com/PrimeIntellect-ai/prime-agent",
       "first_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "first_seen_stars": 15348,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 16490,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 16828,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1502,8 +1524,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 8124,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 8438,
       "double_alerted_at": "2026-08-15T16:33:42.948840+00:00",
       "ten_x_alerted_at": null
     },
@@ -1623,8 +1645,8 @@
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "first_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "first_seen_stars": 8837,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 22177,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 22553,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1711,8 +1733,8 @@
       "url": "https://github.com/unslothai/unsloth",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 72382,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 72382,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 73079,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1766,8 +1788,8 @@
       "url": "https://github.com/vitali87/code-graph-rag",
       "first_seen_at": "2026-08-09T16:46:06.578280+00:00",
       "first_seen_stars": 2810,
-      "last_seen_at": "2026-08-16T16:34:13.995723+00:00",
-      "last_seen_stars": 4414,
+      "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
+      "last_seen_stars": 4497,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
