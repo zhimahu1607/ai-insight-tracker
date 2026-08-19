@@ -72,8 +72,8 @@
       "url": "https://github.com/AlexsJones/llmfit",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 32651,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 32651,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 32931,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -270,8 +270,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 26283,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 26709,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -347,8 +347,8 @@
       "url": "https://github.com/cactus-compute/needle",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 5451,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 7407,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 7745,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -369,8 +369,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 18287,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 21492,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 23022,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -426,6 +426,17 @@
       "first_seen_stars": 7549,
       "last_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "last_seen_stars": 8217,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "codebuffai/freebuff": {
+      "repo_id": "codebuffai/freebuff",
+      "full_name": "CodebuffAI/freebuff",
+      "url": "https://github.com/CodebuffAI/freebuff",
+      "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "first_seen_stars": 10036,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 10036,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -737,6 +748,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "harry0703/moneyprinterturbo": {
+      "repo_id": "harry0703/moneyprinterturbo",
+      "full_name": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "first_seen_stars": 110124,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 110124,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "harvard-edge/cs249r_book": {
       "repo_id": "harvard-edge/cs249r_book",
       "full_name": "harvard-edge/cs249r_book",
@@ -924,6 +946,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "jundot/omlx": {
+      "repo_id": "jundot/omlx",
+      "full_name": "jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "first_seen_stars": 19735,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 19735,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "kangarooking/cangjie-skill": {
       "repo_id": "kangarooking/cangjie-skill",
       "full_name": "kangarooking/cangjie-skill",
@@ -996,8 +1029,8 @@
       "url": "https://github.com/lightningpixel/modly",
       "first_seen_at": "2026-08-17T16:36:40.036288+00:00",
       "first_seen_stars": 6241,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 6606,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 6848,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1062,8 +1095,8 @@
       "url": "https://github.com/macro-inc/macro",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 3222,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 3633,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 3749,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1106,8 +1139,8 @@
       "url": "https://github.com/megadose/holehe",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 12727,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 13558,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 13694,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1458,8 +1491,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 464087,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 464087,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 465641,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1546,8 +1579,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 8913,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 9441,
       "double_alerted_at": "2026-08-15T16:33:42.948840+00:00",
       "ten_x_alerted_at": null
     },
@@ -1634,8 +1667,8 @@
       "url": "https://github.com/superradcompany/microsandbox",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 7628,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 7628,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 7760,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1766,8 +1799,8 @@
       "url": "https://github.com/unslothai/unsloth",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 72382,
-      "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
-      "last_seen_stars": 73516,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 73778,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1823,6 +1856,17 @@
       "first_seen_stars": 2810,
       "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "last_seen_stars": 4604,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "volcengine/openviking": {
+      "repo_id": "volcengine/openviking",
+      "full_name": "volcengine/OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "first_seen_stars": 29988,
+      "last_seen_at": "2026-08-19T16:39:37.830272+00:00",
+      "last_seen_stars": 29988,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
