@@ -83,8 +83,8 @@
       "url": "https://github.com/AlexsJones/llmfit",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 32651,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 33411,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 33525,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -226,8 +226,8 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 11468,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 12640,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 13594,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -292,8 +292,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 27240,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 28058,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -391,8 +391,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 18287,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 24852,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 25342,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -495,6 +495,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "cordiverse/cordis": {
+      "repo_id": "cordiverse/cordis",
+      "full_name": "cordiverse/cordis",
+      "url": "https://github.com/cordiverse/cordis",
+      "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "first_seen_stars": 7075,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 7075,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "corebunch/instatic": {
       "repo_id": "corebunch/instatic",
       "full_name": "CoreBunch/Instatic",
@@ -514,6 +525,17 @@
       "first_seen_stars": 6630,
       "last_seen_at": "2026-07-04T17:15:12.786689+00:00",
       "last_seen_stars": 6696,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "cursor/plugins": {
+      "repo_id": "cursor/plugins",
+      "full_name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "first_seen_stars": 4582,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 4582,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -660,6 +682,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "eneskirca/nodeterm": {
+      "repo_id": "eneskirca/nodeterm",
+      "full_name": "eneskirca/nodeterm",
+      "url": "https://github.com/eneskirca/nodeterm",
+      "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "first_seen_stars": 1028,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 1028,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "esengine/deepseek-reasonix": {
       "repo_id": "esengine/deepseek-reasonix",
       "full_name": "esengine/DeepSeek-Reasonix",
@@ -776,8 +809,8 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 110124,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 113674,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 114514,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -974,8 +1007,8 @@
       "url": "https://github.com/jundot/omlx",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 19735,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 20198,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 20308,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1205,8 +1238,8 @@
       "url": "https://github.com/modular/modular",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 27699,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 28532,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 28793,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1293,8 +1326,8 @@
       "url": "https://github.com/NVIDIA-NeMo/Switchyard",
       "first_seen_at": "2026-08-14T17:03:07.848791+00:00",
       "first_seen_stars": 1422,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 2033,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 2187,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1524,8 +1557,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 464087,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 467801,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 468434,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1612,8 +1645,8 @@
       "url": "https://github.com/semantica-agi/semantica",
       "first_seen_at": "2026-08-10T17:01:40.663664+00:00",
       "first_seen_stars": 3911,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 10029,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 10225,
       "double_alerted_at": "2026-08-15T16:33:42.948840+00:00",
       "ten_x_alerted_at": null
     },
@@ -1898,8 +1931,8 @@
       "url": "https://github.com/volcengine/OpenViking",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 29988,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 31518,
+      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
+      "last_seen_stars": 31944,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
