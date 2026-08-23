@@ -72,8 +72,8 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 3461,
-      "last_seen_at": "2026-08-21T16:42:43.348446+00:00",
-      "last_seen_stars": 3894,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 4194,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -198,6 +198,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "apache/maka": {
+      "repo_id": "apache/maka",
+      "full_name": "apache/maka",
+      "url": "https://github.com/apache/maka",
+      "first_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "first_seen_stars": 2241,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 2241,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "apache/maven": {
       "repo_id": "apache/maven",
       "full_name": "apache/maven",
@@ -226,8 +237,8 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 11468,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 13594,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 14616,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -292,8 +303,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 28058,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 28816,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -501,8 +512,8 @@
       "url": "https://github.com/cordiverse/cordis",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 7075,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 7075,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 7211,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -534,8 +545,8 @@
       "url": "https://github.com/cursor/plugins",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 4582,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 4582,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 4778,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -809,8 +820,8 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 110124,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 114514,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 115142,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1007,8 +1018,8 @@
       "url": "https://github.com/jundot/omlx",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 19735,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 20308,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 20420,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1238,8 +1249,8 @@
       "url": "https://github.com/modular/modular",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 27699,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 28793,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 28934,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1557,8 +1568,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 464087,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 468434,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 469026,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1931,8 +1942,8 @@
       "url": "https://github.com/volcengine/OpenViking",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 29988,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 31944,
+      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
+      "last_seen_stars": 32380,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
