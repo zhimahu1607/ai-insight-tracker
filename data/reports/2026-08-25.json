@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-25",
+  "summary": "# Daily Summary\n\n今日 AI 领域学术侧无新论文收录，工业界动态沿开源生态、代理基础设施与业务应用三条主线展开。整体风向已从模型能力的单点竞争，转向围绕模型构建可信、可互操作的应用生态。\n\n最值得关注的核心亮点有二。其一，开源安全治理加速：Anthropic 发布 Claude 插件社区市场镜像仓库，以安全审查为门槛规范工具分发与发现；腾讯朱雀实验室开放 AI-Infra-Guard 全栈红队平台，漏洞库扩容至 2000+ CVE 规则，Agent 与 MCP 安全进入体系化自检阶段。其二，代理互操作标准化启动：AWS 推出 Agent Registry 预览版与开放规范 ARD，以类 DNS 机制实现跨多云代理资源的联邦发现，为多代理协作奠定基础设施底座。\n\n业务应用侧，AWS 同步落地两项实践：基于 Claude Haiku 4.5 的餐厅语音订餐 Agent 完成全流程语音交互，以及面向生物医学的 AI 元数据语义修正系统，后者强调人在回路验证，兼顾自动化与可靠性。\n\n跨领域信号在于：Anthropic 的插件仓库、AWS 的 ARD 与腾讯的红队平台均指向同一趋势——AI 生态正从模型层竞争转向平台层建设，安全审查与标准化协议正成为新的竞争锚点，而业务落地则验证了这些底层能力向真实场景渗透的可行性。",
+  "category_summaries": {},
+  "news_summary": "## AI 行业动态总结\n\n本日 AI 领域动态聚焦于**开源生态、基础设施与业务应用**三大方向。\n\n**开源生态与安全**方面，Anthropic 发布 Claude 插件社区市场镜像仓库，为 Claude Code 和 Cowork 提供经过安全审查的社区插件，简化分发与发现流程。腾讯朱雀实验室则开源 AI-Infra-Guard 全栈 AI 红队平台，覆盖 Agent、MCP、越狱评估等安全自检能力，漏洞库已扩展至 2000+ CVE 规则。\n\n**代理基础设施**方面，AWS 推出 Agent Registry 预览版及社区驱动的开放规范 Agentic Resource Discovery (ARD)，基于 Apache 2.0 许可，旨在实现跨多云环境的代理资源联邦发现，类似 DNS 的机制让目录互操作成为可能。\n\n**业务应用**方面，AWS 发布两项方案：一是基于 Amazon Connect 的餐厅电话 AI 接待员，由 Claude Haiku 4.5 驱动的 Agent 完成语音订餐全流程；二是面向生物医学等科研领域的 AI 元数据修正系统，利用 Bedrock 上的 LLM 实现语义对齐和自动修正，并支持人在回路验证。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 5,
+    "news_by_category": {
+      "开源": 2,
+      "产品": 3
+    },
+    "top_keywords": [
+      "MCP",
+      "Claude插件",
+      "Claude Cowork",
+      "Claude Code",
+      "Anthropic",
+      "插件市场",
+      "腾讯",
+      "AI-Infra-Guard",
+      "AI红队",
+      "漏洞扫描"
+    ]
+  },
+  "generated_at": "2026-08-24T16:48:36.333115"
+}

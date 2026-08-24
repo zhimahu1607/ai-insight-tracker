@@ -72,8 +72,8 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 3461,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 4194,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 4345,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -165,6 +165,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "anthropics/claude-plugins-community": {
+      "repo_id": "anthropics/claude-plugins-community",
+      "full_name": "anthropics/claude-plugins-community",
+      "url": "https://github.com/anthropics/claude-plugins-community",
+      "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "first_seen_stars": 1260,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 1260,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "anthropics/cwc-workshops": {
       "repo_id": "anthropics/cwc-workshops",
       "full_name": "anthropics/cwc-workshops",
@@ -204,8 +215,8 @@
       "url": "https://github.com/apache/maka",
       "first_seen_at": "2026-08-23T16:35:19.500888+00:00",
       "first_seen_stars": 2241,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 2241,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 2767,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -237,8 +248,8 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 11468,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 14616,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 15655,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -303,8 +314,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 28816,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 29871,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -512,8 +523,8 @@
       "url": "https://github.com/cordiverse/cordis",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 7075,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 7211,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 7384,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -545,8 +556,8 @@
       "url": "https://github.com/cursor/plugins",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 4582,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 4778,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 4914,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -699,8 +710,8 @@
       "url": "https://github.com/eneskirca/nodeterm",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 1028,
-      "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
-      "last_seen_stars": 1028,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 1156,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -820,8 +831,8 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 110124,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 115142,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 115831,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1018,8 +1029,8 @@
       "url": "https://github.com/jundot/omlx",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 19735,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 20420,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 20518,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1249,8 +1260,8 @@
       "url": "https://github.com/modular/modular",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 27699,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 28934,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 29050,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1568,8 +1579,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 464087,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 469026,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 469713,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1771,6 +1782,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tencent/ai-infra-guard": {
+      "repo_id": "tencent/ai-infra-guard",
+      "full_name": "Tencent/AI-Infra-Guard",
+      "url": "https://github.com/Tencent/AI-Infra-Guard",
+      "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "first_seen_stars": 5731,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 5731,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tencentcloud/cubesandbox": {
       "repo_id": "tencentcloud/cubesandbox",
       "full_name": "TencentCloud/CubeSandbox",
@@ -1942,8 +1964,8 @@
       "url": "https://github.com/volcengine/OpenViking",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 29988,
-      "last_seen_at": "2026-08-23T16:35:19.500888+00:00",
-      "last_seen_stars": 32380,
+      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
+      "last_seen_stars": 32882,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
