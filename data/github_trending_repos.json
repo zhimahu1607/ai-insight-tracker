@@ -171,8 +171,8 @@
       "url": "https://github.com/anthropics/claude-plugins-community",
       "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
       "first_seen_stars": 1260,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 1260,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 1625,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -215,8 +215,8 @@
       "url": "https://github.com/apache/maka",
       "first_seen_at": "2026-08-23T16:35:19.500888+00:00",
       "first_seen_stars": 2241,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 2767,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 3214,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -248,8 +248,8 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 11468,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 15655,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 16320,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +314,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 29871,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 30966,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -710,8 +710,8 @@
       "url": "https://github.com/eneskirca/nodeterm",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 1028,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 1156,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 1231,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -756,6 +756,17 @@
       "first_seen_stars": 13771,
       "last_seen_at": "2026-08-13T17:04:37.052674+00:00",
       "last_seen_stars": 15261,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "freestylefly/awesome-gpt-image-2": {
+      "repo_id": "freestylefly/awesome-gpt-image-2",
+      "full_name": "freestylefly/awesome-gpt-image-2",
+      "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+      "first_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "first_seen_stars": 17234,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 17234,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -831,8 +842,8 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 110124,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 115831,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 116338,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1029,8 +1040,8 @@
       "url": "https://github.com/jundot/omlx",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 19735,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 20518,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 20618,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1260,8 +1271,8 @@
       "url": "https://github.com/modular/modular",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 27699,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 29050,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 29128,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1381,8 +1392,8 @@
       "url": "https://github.com/openai/codex",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 99349,
-      "last_seen_at": "2026-07-21T17:38:31.028112+00:00",
-      "last_seen_stars": 100352,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 117951,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1551,6 +1562,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "posthog/posthog": {
+      "repo_id": "posthog/posthog",
+      "full_name": "PostHog/posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "first_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "first_seen_stars": 39131,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 39131,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "primeintellect-ai/prime-agent": {
       "repo_id": "primeintellect-ai/prime-agent",
       "full_name": "PrimeIntellect-ai/prime-agent",
@@ -1579,8 +1601,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 464087,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 469713,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 470319,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1788,8 +1810,8 @@
       "url": "https://github.com/Tencent/AI-Infra-Guard",
       "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
       "first_seen_stars": 5731,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 5731,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 5856,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1964,8 +1986,8 @@
       "url": "https://github.com/volcengine/OpenViking",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 29988,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 32882,
+      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
+      "last_seen_stars": 33217,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
