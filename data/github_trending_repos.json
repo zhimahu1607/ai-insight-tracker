@@ -72,8 +72,8 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 3461,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 4345,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 4803,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -171,8 +171,8 @@
       "url": "https://github.com/anthropics/claude-plugins-community",
       "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
       "first_seen_stars": 1260,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 1625,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 2105,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -215,8 +215,8 @@
       "url": "https://github.com/apache/maka",
       "first_seen_at": "2026-08-23T16:35:19.500888+00:00",
       "first_seen_stars": 2241,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 3214,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 3570,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -248,8 +248,8 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 11468,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 16320,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 16774,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +314,8 @@
       "url": "https://github.com/basecamp/omarchy",
       "first_seen_at": "2026-08-16T16:34:13.995723+00:00",
       "first_seen_stars": 25206,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 30966,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 31829,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -338,6 +338,17 @@
       "first_seen_stars": 19033,
       "last_seen_at": "2026-07-30T17:43:04.458272+00:00",
       "last_seen_stars": 27296,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "bookorbit/bookorbit": {
+      "repo_id": "bookorbit/bookorbit",
+      "full_name": "bookorbit/bookorbit",
+      "url": "https://github.com/bookorbit/bookorbit",
+      "first_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "first_seen_stars": 3232,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 3232,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -415,6 +426,17 @@
       "first_seen_stars": 18287,
       "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "last_seen_stars": 25342,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "chaitanyagiri/munder-difflin": {
+      "repo_id": "chaitanyagiri/munder-difflin",
+      "full_name": "chaitanyagiri/munder-difflin",
+      "url": "https://github.com/chaitanyagiri/munder-difflin",
+      "first_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "first_seen_stars": 4739,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 4739,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -556,8 +578,8 @@
       "url": "https://github.com/cursor/plugins",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 4582,
-      "last_seen_at": "2026-08-24T16:47:56.379275+00:00",
-      "last_seen_stars": 4914,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 5352,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -765,8 +787,8 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "first_seen_at": "2026-08-25T16:47:34.156573+00:00",
       "first_seen_stars": 17234,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 17234,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 21020,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -842,8 +864,8 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 110124,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 116338,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 116824,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1271,8 +1293,8 @@
       "url": "https://github.com/modular/modular",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 27699,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 29128,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 29205,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1392,8 +1414,8 @@
       "url": "https://github.com/openai/codex",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 99349,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 117951,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 118712,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1568,8 +1590,8 @@
       "url": "https://github.com/PostHog/posthog",
       "first_seen_at": "2026-08-25T16:47:34.156573+00:00",
       "first_seen_stars": 39131,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 39131,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 39225,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1601,8 +1623,8 @@
       "url": "https://github.com/public-apis/public-apis",
       "first_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "first_seen_stars": 464087,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 470319,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 470888,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1804,6 +1826,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tashfeenahmed/freellmapi": {
+      "repo_id": "tashfeenahmed/freellmapi",
+      "full_name": "tashfeenahmed/freellmapi",
+      "url": "https://github.com/tashfeenahmed/freellmapi",
+      "first_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "first_seen_stars": 20573,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 20573,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tencent/ai-infra-guard": {
       "repo_id": "tencent/ai-infra-guard",
       "full_name": "Tencent/AI-Infra-Guard",
@@ -1986,8 +2019,8 @@
       "url": "https://github.com/volcengine/OpenViking",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 29988,
-      "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
-      "last_seen_stars": 33217,
+      "last_seen_at": "2026-08-26T16:53:13.146587+00:00",
+      "last_seen_stars": 33512,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
