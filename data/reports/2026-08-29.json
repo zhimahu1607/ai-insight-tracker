@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-29",
+  "summary": "今日AI领域呈现学术平稳、产业进取的格局：论文方面暂无重要收录，工业界则围绕大模型生态扩张与云基础设施升级双线推进。最值得关注的是Anthropic在开源插件生态上的密集发力——其官方插件目录星标数突破3.5万，社区仓库一周内翻倍增长，叠加VoltAgent整理的千余项Agent Skills合集，标志着竞争焦点正从模型权重转向工具与集成层的生态构建。与此同时，云厂商加速将AI能力嵌入生产级场景：AWS以Chronos-2时间序列模型助迪卡侬将区域预测误差最高降低15个百分点，并将部署周期从6个月压缩至2-3个月；Salesforce则借SageMaker Inference Components实现多可用区高可用，兼顾合规与8倍成本优化。跨领域观察，模型厂商与云巨头的策略正形成有趣互补——前者通过插件生态抢占开发者心智，后者以可量化的业务收益证明AI落地的经济性。OpenAI在泰国推出面向健康与教育领域的初创加速器，则提示东南亚正成为AI应用层的新兴试验场。整体而言，行业正从“模型能力竞赛”转向“生态与落地能力竞赛”，可扩展性和生产级可靠性成为衡量AI价值的新标尺。",
+  "category_summaries": {},
+  "news_summary": "今日AI领域动态围绕大模型生态扩张与云基础设施升级展开。开源方面，Anthropic密集发力Claude插件生态：`claude-plugins-community`仓库星标一周翻倍，官方插件目录`claude-plugins-official`获超3.5万星标，配合VoltAgent整理的千余项Agent Skills合集，共同构建起从代码助手到工具集成的开发者生态。行业层面，OpenAI与泰国高等教育、科研与创新部合作推出八周加速器，扶持健康、教育领域10家本土AI初创公司，深化东南亚布局。云服务与基础设施方面，AWS为SageMaker Feature Store新增批量写入与记录发现API，提升数据吞吐与合规管理能力；同时发布两项企业实践：迪卡侬基于时间序列基础模型Chronos-2将区域预测误差最多降低15个百分点、部署周期由6个月缩至2-3个月；Salesforce则利用SageMaker Inference Components实现多可用区高可用，兼顾合规与8倍成本优化。整体来看，模型厂商正加速构建可扩展的插件生态，而云巨头则在下沉到生产级AI落地场景。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "行业": 1,
+      "开源": 3,
+      "产品": 2,
+      "AI": 1
+    },
+    "top_keywords": [
+      "Claude Code",
+      "Anthropic",
+      "OpenAI",
+      "泰国",
+      "MHESI",
+      "AI初创加速器",
+      "健康与教育",
+      "Claude",
+      "Claude Cowork",
+      "插件市场"
+    ]
+  },
+  "generated_at": "2026-08-29T00:32:13.240266"
+}
