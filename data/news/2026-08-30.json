@@ -1,0 +1,60 @@
+[
+  {
+    "id": "4f6e2626f0da4965",
+    "title": "omacom/omarchy - GitHub Trending",
+    "url": "https://github.com/omacom/omarchy",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-08-29T19:22:06.561045Z",
+    "summary": "Repository: omacom/omarchy\nURL: https://github.com/omacom/omarchy\nDescription: Beautiful, Modern & Opinionated Linux\nLanguage: Shell\nStars: 34611\nWeekly stars: 5942",
+    "content": "Repository: omacom/omarchy\nURL: https://github.com/omacom/omarchy\nDescription: Beautiful, Modern & Opinionated Linux\nLanguage: Shell\nStars: 34611\nWeekly stars: 5942\n\nREADME:\nOmarchy\n\nOmarchy is a beautiful, modern & opinionated Linux distribution by DHH.\n\nRead more at omarchy.org.\n\nThe Omarchy Manual\n\nThe manual lives in manual/, which is its authoritative source. It's\nmirrored to learn.omacom.io, where\nits screenshots are also hosted.\n\nWelcome to Omarchy!\n\nThe Basics**\n\nGetting Started\nComing From Mac or Windows\nNavigation\nThe top bar\nThemes\nHotkeys\nUnified Clipboard & History\nReminders\nNotices\nText Extraction & Dictation\nScreenshots & Recording\nToggles, idle & screensaver\nOmarchy CLI\n\nThe Applications**\n\nTerminal\nNeovim\nAI\nDevelopment Tools\nShell Tools\nShell Functions\nTUIs\nGUIs\nBrowsers\nCommercial apps/services\nWeb Apps\nGaming\nFilling out PDFs\nWindows VM\nOther Packages\n\nConfiguration**\n\nUpdates\nDotfiles\nShell plugins\nMonitors\nKeyboard, Mouse, Trackpad\nNetworking\nSystem sleep\nHardware authentication\nFonts\nBackgrounds\nPrompt\nBranding\nCommon tweaks\nMaking your own theme\n\nThe Rest**\n\nMac support\nTroubleshooting\nFAQ\nSystem snapshots\nSecurity\nOmarchy on...\nDual Boot Install\nUnattended Installs\n\nLicense\n\nOmarchy is released under the MIT License.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "Omarchy 是 DHH 发布的一款美观、现代且高度自定义的 Linux 发行版，基于 Shell 构建，采用 MIT 许可证。其官方手册作为权威文档，详细涵盖系统基础、应用配置、系统调优等内容，并镜像至 learn.omacom.io。该项目在 GitHub 上迅速获得关注，star 数已超 3.4 万，周增近 6 千，反映出开发者社区对个性化、开箱即用的 Linux 体验的强烈兴趣。Omarchy 强调统一剪贴板、文本提取、主题定制等现代化功能，适合追求高效工作流和美观界面的用户。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Omarchy",
+        "Linux发行版",
+        "DHH",
+        "MIT许可证",
+        "GitHub Trending"
+      ]
+    },
+    "analyzed_at": "2026-08-29T19:22:13.484061Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "57a3b900535e942d",
+    "title": "Our decision on Cursor following its acquisition by SpaceX",
+    "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-08-28T06:00:00Z",
+    "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+    "content": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI宣布，由于Cursor被SpaceX收购，决定终止向Cursor提供OpenAI模型的合同。这意味着Cursor将不再使用OpenAI的模型技术，未来可能转向其他模型或自研方案。这一决定源于收购后的战略调整，对Cursor用户及AI编程工具市场可能产生一定影响。",
+      "category": "行业",
+      "sentiment": "neutral",
+      "keywords": [
+        "Cursor",
+        "SpaceX",
+        "OpenAI",
+        "收购",
+        "合同终止"
+      ]
+    },
+    "analyzed_at": "2026-08-29T19:22:14.675873Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
