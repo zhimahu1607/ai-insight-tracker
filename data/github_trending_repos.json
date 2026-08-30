@@ -22,6 +22,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "abi/screenshot-to-code": {
+      "repo_id": "abi/screenshot-to-code",
+      "full_name": "abi/screenshot-to-code",
+      "url": "https://github.com/abi/screenshot-to-code",
+      "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "first_seen_stars": 76341,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 76341,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "abseil/abseil-cpp": {
       "repo_id": "abseil/abseil-cpp",
       "full_name": "abseil/abseil-cpp",
@@ -127,8 +138,8 @@
       "url": "https://github.com/Alishahryar1/free-claude-code",
       "first_seen_at": "2026-08-28T00:50:14.315494+00:00",
       "first_seen_stars": 50856,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 51383,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 51867,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -182,8 +193,8 @@
       "url": "https://github.com/anthropics/claude-plugins-community",
       "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
       "first_seen_stars": 1260,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 2704,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 2850,
       "double_alerted_at": "2026-08-29T00:31:41.677378+00:00",
       "ten_x_alerted_at": null
     },
@@ -193,8 +204,8 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "first_seen_at": "2026-08-29T00:31:41.677378+00:00",
       "first_seen_stars": 35028,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 35325,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 35591,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -237,8 +248,8 @@
       "url": "https://github.com/apache/maka",
       "first_seen_at": "2026-08-23T16:35:19.500888+00:00",
       "first_seen_stars": 2241,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 4028,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 4169,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -270,8 +281,8 @@
       "url": "https://github.com/AprilNEA/OpenLogi",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 11468,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 17598,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 17856,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -561,6 +572,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "conardli/garden-skills": {
+      "repo_id": "conardli/garden-skills",
+      "full_name": "ConardLi/garden-skills",
+      "url": "https://github.com/ConardLi/garden-skills",
+      "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "first_seen_stars": 11752,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 11752,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "cordiverse/cordis": {
       "repo_id": "cordiverse/cordis",
       "full_name": "cordiverse/cordis",
@@ -600,8 +622,8 @@
       "url": "https://github.com/cursor/plugins",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 4582,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 6135,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 6257,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -809,8 +831,8 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "first_seen_at": "2026-08-25T16:47:34.156573+00:00",
       "first_seen_stars": 17234,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 25012,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 25588,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -855,6 +877,17 @@
       "first_seen_stars": 6970,
       "last_seen_at": "2026-07-17T17:19:20.184763+00:00",
       "last_seen_stars": 7595,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "google/googletest": {
+      "repo_id": "google/googletest",
+      "full_name": "google/googletest",
+      "url": "https://github.com/google/googletest",
+      "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "first_seen_stars": 39377,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 39377,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1089,6 +1122,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "k-dense-ai/scientific-agent-skills": {
+      "repo_id": "k-dense-ai/scientific-agent-skills",
+      "full_name": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "first_seen_stars": 38951,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 38951,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "kangarooking/cangjie-skill": {
       "repo_id": "kangarooking/cangjie-skill",
       "full_name": "kangarooking/cangjie-skill",
@@ -1238,8 +1282,8 @@
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 14671,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 38017,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 38422,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1436,8 +1480,8 @@
       "url": "https://github.com/omacom/omarchy",
       "first_seen_at": "2026-08-29T19:22:06.561045+00:00",
       "first_seen_stars": 34611,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 34611,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 35384,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1447,8 +1491,8 @@
       "url": "https://github.com/openai/codex",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 99349,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 119783,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 120060,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1700,8 +1744,8 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "first_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "first_seen_stars": 43106,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 50937,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 51230,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1887,8 +1931,8 @@
       "url": "https://github.com/tashfeenahmed/freellmapi",
       "first_seen_at": "2026-08-26T16:53:13.146587+00:00",
       "first_seen_stars": 20573,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 22162,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 22643,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1925,14 +1969,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "thu-maic/openmaic": {
+      "repo_id": "thu-maic/openmaic",
+      "full_name": "THU-MAIC/OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "first_seen_stars": 23642,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 23642,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tinyhumansai/openhuman": {
       "repo_id": "tinyhumansai/openhuman",
       "full_name": "tinyhumansai/openhuman",
       "url": "https://github.com/tinyhumansai/openhuman",
       "first_seen_at": "2026-08-28T00:50:14.315494+00:00",
       "first_seen_stars": 38545,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 38829,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 38981,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1986,10 +2041,10 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-08-29T19:22:06.561045+00:00",
-      "last_seen_stars": 30574,
+      "last_seen_at": "2026-08-30T19:16:26.342456+00:00",
+      "last_seen_stars": 34007,
       "double_alerted_at": null,
-      "ten_x_alerted_at": null
+      "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
     "uditakhourii/adhd": {
       "repo_id": "uditakhourii/adhd",
