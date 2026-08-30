@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-31",
+  "summary": "今日 AI 领域整体风向清晰：学术论文收录暂歇，工业界则围绕 AI 编码代理与 Agent 生态持续发力，竞争正从单一模型能力转向工具链与生态建设。\n\n最值得关注的亮点是 Agent Skills 标准的加速落地。K-Dense AI 推出 163 个覆盖生物信息学、材料科学的科学技能，集成超 100 个数据库，已服务 19 万科学家；ConardLi 的 garden-skills 则聚焦工程场景，提供网页演示与图像生成等生产级技能。两者均兼容 Cursor、Claude Code 等开放标准平台，标志着可复用技能库正成为降低 AI 应用门槛的关键路径。\n\n跨领域联系同样清晰：archify 与 screenshot-to-code 分别从架构可视化与前端生成两个维度强化软件开发闭环；OpenMAIC 以多智能体协作生成沉浸式课程，与 Agent Skills 形成理念呼应；而 GoogleTest 的持续更新则提醒我们，Agent 应用爆发之下，底层工程质量保障仍是刚需。",
+  "category_summaries": {},
+  "news_summary": "## 今日 AI 领域要闻总结\n\n今日 GitHub Trending 显示，AI 编码代理与 Agent 生态成为绝对热点。\n\n**Agent Skills 标准化浪潮涌现。** K-Dense AI 发布 Scientific Agent Skills，提供 163 个覆盖生物信息学、材料科学等领域的科学技能，集成超 100 个科学数据库，已被 19 万科学家使用。ConardLi 推出的 garden-skills 则聚焦工程场景，提供网页演示、设计工程、图像生成等生产级技能。两者均兼容 Cursor、Claude Code 等支持开放 Agent Skills 标准的平台，反映出可复用技能库正成为降低 AI 应用门槛的关键路径。\n\n**AI 编码与可视化工具持续升温。** tt-a1i/archify 的 star 数达基线 10 倍，可将代码库转化为可验证的架构图；abi/screenshot-to-code 凭借截图生成前端代码的能力保持高热度，周增 1680 星。\n\n**AI 教育应用创新。** THU-MAIC 发布 OpenMAIC v1.0.0，通过多智能体协作将任意主题一键生成沉浸式课程，支持多种 LLM 接入。\n\n此外，Google 的 GoogleTest 1.18.0 作为 C++ 测试基础设施持续获得关注，提醒我们 Agent 应用爆发的同时，底层工程质量保障仍是刚需。\n\n总体来看，行业正从单一模型能力竞争转向工具链生态建设，Agent Skills 标准化叙事正在形成。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 6,
+    "news_by_category": {
+      "AI": 1,
+      "开源": 5
+    },
+    "top_keywords": [
+      "Agent Skills",
+      "Archify",
+      "Agent Skill",
+      "JSON IR",
+      "HTML/SVG",
+      "图表生成",
+      "Scientific Agent Skills",
+      "K-Dense",
+      "AI Scientist",
+      "科学数据库"
+    ]
+  },
+  "generated_at": "2026-08-30T19:17:03.326801"
+}
