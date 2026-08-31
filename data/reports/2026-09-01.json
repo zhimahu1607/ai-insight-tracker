@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-01",
+  "summary": "今日AI领域呈现商业化提速与基础设施深化的双线格局。学术端暂无重要论文收录，行业动态主导风向。\n\n三大核心亮点值得关注。其一，OpenAI宣布ChatGPT Ads年化收入运行率突破10亿美元，验证了广告与免费AI服务结合的商业模式，为行业开辟新的变现路径。其二，AWS获Forrester Wave AI基础设施领导者评级，自研芯片与NVIDIA双轨策略获认可，同时Agent Registry正式可用，叠加两项基于Bedrock知识库的企业级检索与多租户问答方案，显示云厂商正从算力供给向代理治理与企业RAG应用纵深扩展。其三，微软研究院联合华盛顿大学发布GigaPath-Flash与GigaTIME-Flash病理学基础模型，以知识蒸馏大幅降低计算成本，Apache 2.0协议开源，推动领域专用模型走向普惠化。\n\n开源侧同样活跃：hister提供隐私友好的本地全文搜索，经MCP协议接入AI助手；heretic则提供无需后训练即可调整模型对齐机制的自动化方案，社区已发布超5000个模型。这些动态与商业巨头布局形成呼应——无论广告变现、云基建扩张还是开源工具爆发，均指向同一趋势：AI能力正从封闭集中交付走向分层化、生态化供给。",
+  "category_summaries": {},
+  "news_summary": "## AI 行业要闻总结（2025年12月）\n\n**商业化动态**：OpenAI 宣布 ChatGPT Ads 业务年化收入运行率突破 10 亿美元，验证了广告支持型 AI 免费服务的商业可行性，并计划全球扩展。\n\n**基础设施与云服务**：AWS 获得 Forrester Wave AI 基础设施方案领导者评级，其自研芯片与 NVIDIA 双轨策略获认可。同时，AWS Agent Registry 正式可用，提供多代理资源治理与发现能力；另有两项基于 Bedrock 托管知识库的解决方案发布，分别聚焦企业级 agentic 检索的可观测部署与多租户文档问答的权限隔离。\n\n**开源与工具**：开源项目 hister 提供隐私友好的本地全文搜索服务，支持 MCP 协议接入 AI 助手；heretic 则实现了无需后训练即可移除语言模型审查的自动化方案，社区已发布超 5000 个模型。\n\n**AI 模型**：微软研究院联合华盛顿大学等发布 GigaPath-Flash 与 GigaTIME-Flash 病理学基础模型，通过知识蒸馏大幅降低计算成本，以 Apache 2.0 协议开源，旨在推动群体规模癌症研究。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 8,
+    "news_by_category": {
+      "产品": 4,
+      "开源": 2,
+      "AI": 1,
+      "行业": 1
+    },
+    "top_keywords": [
+      "开源",
+      "AgentCore",
+      "Amazon Bedrock",
+      "Agentic Retrieval",
+      "OpenAI",
+      "ChatGPT Ads",
+      "10亿美元",
+      "年化收入",
+      "AI可及性",
+      "Hister"
+    ]
+  },
+  "generated_at": "2026-08-31T21:25:53.058743"
+}
