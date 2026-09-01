@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-02",
+  "summary": "今日 AI 领域学术界无重大论文发布，产业动态构成主旋律，整体风向指向智能代理（Agent）的工程化落地与受监管行业的合规渗透。\n\n核心亮点有二。其一，Anthropic Claude Fable 5.1 登陆 AWS Bedrock，代理编码与科学研究能力显著增强；叠加 GitHub 上 MCP 服务器精选列表（9.3 万星）与跨会话记忆工具 claude-mem（9 万星）的走红，代理互操作性与持久化记忆正从实验走向生产级标准。其二，AI 加速进入高合规门槛领域——OpenAI 宣布 ChatGPT 可安全连接电子健康记录辅助临床决策，并公开支持加州青少年 AI 安全法案 SB 1119，显示头部厂商主动构建医疗数据与未成年保护议题上的信任边界。\n\n跨领域联系值得关注：AWS 生态中 Jamf 的 Bedrock 实时支出管控、ZS 的合规 ML 平台、t54 的代理微支付信任层，与 MCP 开源热潮相互呼应——业界正系统性解决代理从单点演示到规模化运营的信任与治理难题。日本 Polimill 利用 GPT 和 Codex 构建市政知识检索基础设施，亦印证 AI 原生工作流正向公共部门延伸，企业落地与开源治理在同一节奏中加速共振。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 领域动态聚焦模型发布、开源生态与企业落地。\n\n**模型与产品**：Anthropic Claude Fable 5.1 登陆 AWS Bedrock，代理编码与科学研究能力显著提升；OpenAI 宣布 ChatGPT 可安全连接电子健康记录等医疗数据，辅助临床决策。\n\n**开源生态**：MCP 服务器精选列表（9.3 万星）与跨会话记忆工具 claude-mem（9 万星）在 GitHub 走红，推动 AI 代理互操作性与持久化。\n\n**行业与治理**：OpenAI 公开支持加州青少年 AI 安全法案 SB 1119；发布 AI 原生公司（Basis、Clay、Exa Labs）将工作流转化为运营能力的实践；日本 Polimill 利用 GPT 和 Codex 打造公共 AI 基础设施，服务市政知识检索。\n\n**企业应用**：AWS 生态多点开花——Atos 通过竞赛培训 400 名工程师掌握智能体开发；Jamf 构建 Bedrock 实时支出管控系统；ZS 基于 SageMaker 搭建受监管行业合规 ML 平台；t54 为代理微支付建立信任层，处理超 2000 万笔交易。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 14,
+    "news_by_category": {
+      "AI": 2,
+      "产品": 5,
+      "行业": 5,
+      "开源": 2
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "OpenAI",
+      "MCP",
+      "Amazon Quick",
+      "AI代理",
+      "AI原生公司",
+      "Basis",
+      "Clay",
+      "Exa Labs",
+      "ChatGPT"
+    ]
+  },
+  "generated_at": "2026-09-01T19:21:37.817131"
+}
