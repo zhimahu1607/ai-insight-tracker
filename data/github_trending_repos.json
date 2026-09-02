@@ -28,8 +28,8 @@
       "url": "https://github.com/abi/screenshot-to-code",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 76341,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 76950,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 77172,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -193,8 +193,8 @@
       "url": "https://github.com/anthropics/claude-plugins-community",
       "first_seen_at": "2026-08-24T16:47:56.379275+00:00",
       "first_seen_stars": 1260,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 3146,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 3259,
       "double_alerted_at": "2026-08-29T00:31:41.677378+00:00",
       "ten_x_alerted_at": null
     },
@@ -363,6 +363,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "bilawalsidhu/gods-eye-view": {
+      "repo_id": "bilawalsidhu/gods-eye-view",
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "first_seen_stars": 15932,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 15932,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "block/buzz": {
       "repo_id": "block/buzz",
       "full_name": "block/buzz",
@@ -457,8 +468,8 @@
       "url": "https://github.com/calesthio/OpenMontage",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 27471,
-      "last_seen_at": "2026-07-05T17:22:16.265855+00:00",
-      "last_seen_stars": 33531,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 55629,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -561,6 +572,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "colinhacks/zod": {
+      "repo_id": "colinhacks/zod",
+      "full_name": "colinhacks/zod",
+      "url": "https://github.com/colinhacks/zod",
+      "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "first_seen_stars": 43768,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 43768,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "comfy-org/comfyui": {
       "repo_id": "comfy-org/comfyui",
       "full_name": "Comfy-Org/ComfyUI",
@@ -633,8 +655,8 @@
       "url": "https://github.com/cursor/plugins",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 4582,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 6500,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 6636,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -809,8 +831,8 @@
       "url": "https://github.com/every-app/open-seo",
       "first_seen_at": "2026-07-25T17:09:47.504851+00:00",
       "first_seen_stars": 7873,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 16092,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 16353,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -842,8 +864,8 @@
       "url": "https://github.com/freestylefly/awesome-gpt-image-2",
       "first_seen_at": "2026-08-25T16:47:34.156573+00:00",
       "first_seen_stars": 17234,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 26915,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 27331,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -891,14 +913,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "google-research/timesfm": {
+      "repo_id": "google-research/timesfm",
+      "full_name": "google-research/timesfm",
+      "url": "https://github.com/google-research/timesfm",
+      "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "first_seen_stars": 29490,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 29490,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "google/googletest": {
       "repo_id": "google/googletest",
       "full_name": "google/googletest",
       "url": "https://github.com/google/googletest",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 39377,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 39431,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 39468,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1100,6 +1133,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "jingyaogong/minimind": {
+      "repo_id": "jingyaogong/minimind",
+      "full_name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "first_seen_stars": 57726,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 57726,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "jrouwe/joltphysics": {
       "repo_id": "jrouwe/joltphysics",
       "full_name": "jrouwe/JoltPhysics",
@@ -1139,8 +1183,8 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 38951,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 41435,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 42060,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1293,8 +1337,8 @@
       "url": "https://github.com/MadsLorentzen/ai-job-search",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 14671,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 39718,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 40231,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1491,8 +1535,8 @@
       "url": "https://github.com/omacom/omarchy",
       "first_seen_at": "2026-08-29T19:22:06.561045+00:00",
       "first_seen_stars": 34611,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 36722,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 37264,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1568,8 +1612,8 @@
       "url": "https://github.com/p-e-w/heretic",
       "first_seen_at": "2026-08-31T21:25:15.115989+00:00",
       "first_seen_stars": 29591,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 29972,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 30148,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1744,8 +1788,8 @@
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "first_seen_at": "2026-09-01T19:21:00.086816+00:00",
       "first_seen_stars": 93688,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 93688,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 93841,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1777,8 +1821,8 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "first_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "first_seen_stars": 43106,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 51802,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 52050,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1964,8 +2008,8 @@
       "url": "https://github.com/tashfeenahmed/freellmapi",
       "first_seen_at": "2026-08-26T16:53:13.146587+00:00",
       "first_seen_stars": 20573,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 23557,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 23851,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2019,8 +2063,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 23642,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 29290,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 30444,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2085,8 +2129,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-01T19:21:00.086816+00:00",
-      "last_seen_stars": 41577,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 43619,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
@@ -2241,6 +2285,17 @@
       "first_seen_stars": 16396,
       "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "last_seen_stars": 24907,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "zedeus/nitter": {
+      "repo_id": "zedeus/nitter",
+      "full_name": "zedeus/nitter",
+      "url": "https://github.com/zedeus/nitter",
+      "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "first_seen_stars": 14071,
+      "last_seen_at": "2026-09-02T19:20:57.794520+00:00",
+      "last_seen_stars": 14071,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
