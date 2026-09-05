@@ -28,8 +28,8 @@
       "url": "https://github.com/abi/screenshot-to-code",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 76341,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 77644,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 77849,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -63,6 +63,17 @@
       "first_seen_stars": 76651,
       "last_seen_at": "2026-08-17T16:36:40.036288+00:00",
       "last_seen_stars": 87979,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "affaan-m/ecc": {
+      "repo_id": "affaan-m/ecc",
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "first_seen_stars": 249532,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 249532,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -369,8 +380,8 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 15932,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 17385,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 17912,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -495,6 +506,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "checkstyle/checkstyle": {
+      "repo_id": "checkstyle/checkstyle",
+      "full_name": "checkstyle/checkstyle",
+      "url": "https://github.com/checkstyle/checkstyle",
+      "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "first_seen_stars": 9538,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 9538,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "chenyme/grok2api": {
       "repo_id": "chenyme/grok2api",
       "full_name": "chenyme/grok2api",
@@ -523,8 +545,8 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "first_seen_at": "2026-07-06T18:17:26.820294+00:00",
       "first_seen_stars": 46048,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 50913,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 51031,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -688,8 +710,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 16018,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 17570,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 18788,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -842,8 +864,8 @@
       "url": "https://github.com/every-app/open-seo",
       "first_seen_at": "2026-07-25T17:09:47.504851+00:00",
       "first_seen_stars": 7873,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 16964,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 17224,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -875,8 +897,8 @@
       "url": "https://github.com/fmtlib/fmt",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 24964,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 25437,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 25555,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -897,8 +919,8 @@
       "url": "https://github.com/Gitlawb/openclaude",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 32286,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 32542,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 32686,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -952,8 +974,8 @@
       "url": "https://github.com/google-research/timesfm",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 29490,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 30983,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 31248,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -996,8 +1018,8 @@
       "url": "https://github.com/handsomestWei/patent-disclosure-skill",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 7191,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 7359,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 7461,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1194,8 +1216,8 @@
       "url": "https://github.com/jingyaogong/minimind",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 57726,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 58476,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 58736,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1238,8 +1260,8 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 38951,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 42591,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 42897,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1315,8 +1337,8 @@
       "url": "https://github.com/Lakr233/vphone-cli",
       "first_seen_at": "2026-09-04T18:57:16.281784+00:00",
       "first_seen_stars": 10441,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 10441,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 10730,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1408,14 +1430,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "magnitudedev/magnitude": {
+      "repo_id": "magnitudedev/magnitude",
+      "full_name": "magnitudedev/magnitude",
+      "url": "https://github.com/magnitudedev/magnitude",
+      "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "first_seen_stars": 3054,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 3054,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "majd/ipatool": {
       "repo_id": "majd/ipatool",
       "full_name": "majd/ipatool",
       "url": "https://github.com/majd/ipatool",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 10789,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 10850,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 10905,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1711,8 +1744,8 @@
       "url": "https://github.com/p-e-w/heretic",
       "first_seen_at": "2026-08-31T21:25:15.115989+00:00",
       "first_seen_stars": 29591,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 30429,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 30560,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1887,8 +1920,8 @@
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "first_seen_at": "2026-09-01T19:21:00.086816+00:00",
       "first_seen_stars": 93688,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 94128,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 94291,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2079,6 +2112,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tailscale/tailcat": {
+      "repo_id": "tailscale/tailcat",
+      "full_name": "tailscale/tailcat",
+      "url": "https://github.com/tailscale/tailcat",
+      "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "first_seen_stars": 6340,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 6340,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tailwindlabs/tailwindcss": {
       "repo_id": "tailwindlabs/tailwindcss",
       "full_name": "tailwindlabs/tailwindcss",
@@ -2162,8 +2206,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 23642,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 31426,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 31858,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2228,8 +2272,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 47764,
+      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
+      "last_seen_stars": 49178,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
