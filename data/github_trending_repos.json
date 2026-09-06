@@ -72,8 +72,8 @@
       "url": "https://github.com/affaan-m/ECC",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 249532,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 249532,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 250915,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -545,8 +545,8 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "first_seen_at": "2026-07-06T18:17:26.820294+00:00",
       "first_seen_stars": 46048,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 51031,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 51141,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -600,8 +600,8 @@
       "url": "https://github.com/colinhacks/zod",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 43768,
-      "last_seen_at": "2026-09-04T18:57:16.281784+00:00",
-      "last_seen_stars": 43831,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 43855,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -710,8 +710,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 16018,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 18788,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 19666,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -756,6 +756,17 @@
       "first_seen_stars": 10160,
       "last_seen_at": "2026-08-02T17:09:28.215206+00:00",
       "last_seen_stars": 37634,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "dietrichgebert/ponytail": {
+      "repo_id": "dietrichgebert/ponytail",
+      "full_name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "first_seen_stars": 129027,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 129027,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -864,8 +875,8 @@
       "url": "https://github.com/every-app/open-seo",
       "first_seen_at": "2026-07-25T17:09:47.504851+00:00",
       "first_seen_stars": 7873,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 17224,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 17440,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -897,8 +908,8 @@
       "url": "https://github.com/fmtlib/fmt",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 24964,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 25555,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 25615,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -919,8 +930,8 @@
       "url": "https://github.com/Gitlawb/openclaude",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 32286,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 32686,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 32808,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -974,8 +985,8 @@
       "url": "https://github.com/google-research/timesfm",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 29490,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 31248,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 31553,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1018,8 +1029,8 @@
       "url": "https://github.com/handsomestWei/patent-disclosure-skill",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 7191,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 7461,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 7741,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1133,6 +1144,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "imbad0202/academic-research-skills": {
+      "repo_id": "imbad0202/academic-research-skills",
+      "full_name": "Imbad0202/academic-research-skills",
+      "url": "https://github.com/Imbad0202/academic-research-skills",
+      "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "first_seen_stars": 46547,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 46547,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "immich-app/immich": {
       "repo_id": "immich-app/immich",
       "full_name": "immich-app/immich",
@@ -1216,8 +1238,8 @@
       "url": "https://github.com/jingyaogong/minimind",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 57726,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 58736,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 59096,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1260,8 +1282,8 @@
       "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 38951,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 42897,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 43243,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1337,8 +1359,8 @@
       "url": "https://github.com/Lakr233/vphone-cli",
       "first_seen_at": "2026-09-04T18:57:16.281784+00:00",
       "first_seen_stars": 10441,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 10730,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 10912,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1436,8 +1458,8 @@
       "url": "https://github.com/magnitudedev/magnitude",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 3054,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 3054,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 3579,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1447,8 +1469,8 @@
       "url": "https://github.com/majd/ipatool",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 10789,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 10905,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 10949,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1859,6 +1881,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "pollen-robotics/microduck_rl": {
+      "repo_id": "pollen-robotics/microduck_rl",
+      "full_name": "pollen-robotics/microduck_rl",
+      "url": "https://github.com/pollen-robotics/microduck_rl",
+      "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "first_seen_stars": 1807,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 1807,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "posthog/posthog": {
       "repo_id": "posthog/posthog",
       "full_name": "PostHog/posthog",
@@ -1920,8 +1953,8 @@
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "first_seen_at": "2026-09-01T19:21:00.086816+00:00",
       "first_seen_stars": 93688,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 94291,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 94446,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2118,8 +2151,8 @@
       "url": "https://github.com/tailscale/tailcat",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 6340,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 6340,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 6504,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2206,8 +2239,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 23642,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 31858,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 32332,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2272,8 +2305,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 49178,
+      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
+      "last_seen_stars": 50542,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
