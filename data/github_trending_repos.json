@@ -66,14 +66,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "advaitpaliwal/feynman": {
+      "repo_id": "advaitpaliwal/feynman",
+      "full_name": "advaitpaliwal/feynman",
+      "url": "https://github.com/advaitpaliwal/feynman",
+      "first_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "first_seen_stars": 8991,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 8991,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "affaan-m/ecc": {
       "repo_id": "affaan-m/ecc",
       "full_name": "affaan-m/ECC",
       "url": "https://github.com/affaan-m/ECC",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 249532,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 250915,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 252637,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -600,8 +611,8 @@
       "url": "https://github.com/colinhacks/zod",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 43768,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 43855,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 43885,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -710,8 +721,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 16018,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 19666,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 20526,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -765,8 +776,8 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 129027,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 129027,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 130785,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -875,8 +886,8 @@
       "url": "https://github.com/every-app/open-seo",
       "first_seen_at": "2026-07-25T17:09:47.504851+00:00",
       "first_seen_stars": 7873,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 17440,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 17690,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -908,8 +919,8 @@
       "url": "https://github.com/fmtlib/fmt",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 24964,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 25615,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 25647,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -930,8 +941,8 @@
       "url": "https://github.com/Gitlawb/openclaude",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 32286,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 32808,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 32924,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -985,8 +996,8 @@
       "url": "https://github.com/google-research/timesfm",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 29490,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 31553,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 31821,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1029,8 +1040,8 @@
       "url": "https://github.com/handsomestWei/patent-disclosure-skill",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 7191,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 7741,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 8400,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1150,8 +1161,8 @@
       "url": "https://github.com/Imbad0202/academic-research-skills",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 46547,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 46547,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 46796,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1238,8 +1249,8 @@
       "url": "https://github.com/jingyaogong/minimind",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 57726,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 59096,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 59452,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1458,8 +1469,8 @@
       "url": "https://github.com/magnitudedev/magnitude",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 3054,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 3579,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 4002,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1887,8 +1898,8 @@
       "url": "https://github.com/pollen-robotics/microduck_rl",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 1807,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 1807,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 1894,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1977,6 +1988,17 @@
       "first_seen_stars": 9178,
       "last_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "last_seen_stars": 15250,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "roboflow/rf-detr": {
+      "repo_id": "roboflow/rf-detr",
+      "full_name": "roboflow/rf-detr",
+      "url": "https://github.com/roboflow/rf-detr",
+      "first_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "first_seen_stars": 9364,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 9364,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2151,8 +2173,8 @@
       "url": "https://github.com/tailscale/tailcat",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 6340,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 6504,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 6695,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2239,8 +2261,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 23642,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 32332,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 32999,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2305,8 +2327,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 50542,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 52584,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
@@ -2494,6 +2516,17 @@
       "first_seen_stars": 51321,
       "last_seen_at": "2026-07-05T17:22:16.265855+00:00",
       "last_seen_stars": 54650,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "zubair-trabzada/geo-seo-claude": {
+      "repo_id": "zubair-trabzada/geo-seo-claude",
+      "full_name": "zubair-trabzada/geo-seo-claude",
+      "url": "https://github.com/zubair-trabzada/geo-seo-claude",
+      "first_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "first_seen_stars": 10379,
+      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
+      "last_seen_stars": 10379,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     }
