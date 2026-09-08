@@ -83,8 +83,8 @@
       "url": "https://github.com/affaan-m/ECC",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 249532,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 252637,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 254080,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -391,8 +391,19 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 15932,
-      "last_seen_at": "2026-09-05T18:07:14.209153+00:00",
-      "last_seen_stars": 17912,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 19248,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "blader/humanizer": {
+      "repo_id": "blader/humanizer",
+      "full_name": "blader/humanizer",
+      "url": "https://github.com/blader/humanizer",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 45344,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 45344,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -556,8 +567,8 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "first_seen_at": "2026-07-06T18:17:26.820294+00:00",
       "first_seen_stars": 46048,
-      "last_seen_at": "2026-09-06T18:13:05.536941+00:00",
-      "last_seen_stars": 51141,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 51357,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -671,6 +682,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "coreyhaines31/marketingskills": {
+      "repo_id": "coreyhaines31/marketingskills",
+      "full_name": "coreyhaines31/marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 48693,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 48693,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "craft-ai-agents/craft-agents-oss": {
       "repo_id": "craft-ai-agents/craft-agents-oss",
       "full_name": "craft-ai-agents/craft-agents-oss",
@@ -776,8 +798,8 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 129027,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 130785,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 132029,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -886,8 +908,8 @@
       "url": "https://github.com/every-app/open-seo",
       "first_seen_at": "2026-07-25T17:09:47.504851+00:00",
       "first_seen_stars": 7873,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 17690,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 17886,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -899,6 +921,17 @@
       "first_seen_stars": 7106,
       "last_seen_at": "2026-07-14T17:23:20.325757+00:00",
       "last_seen_stars": 8927,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "facebook/zstd": {
+      "repo_id": "facebook/zstd",
+      "full_name": "facebook/zstd",
+      "url": "https://github.com/facebook/zstd",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 27748,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 27748,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -919,8 +952,8 @@
       "url": "https://github.com/fmtlib/fmt",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 24964,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 25647,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 25677,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -996,8 +1029,8 @@
       "url": "https://github.com/google-research/timesfm",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 29490,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 31821,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 31983,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1075,6 +1108,17 @@
       "first_seen_stars": 10148,
       "last_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "last_seen_stars": 11008,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "heygen-com/hyperframes": {
+      "repo_id": "heygen-com/hyperframes",
+      "full_name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 47607,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 47607,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1161,8 +1205,8 @@
       "url": "https://github.com/Imbad0202/academic-research-skills",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 46547,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 46796,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 47023,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1419,6 +1463,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "llvm/llvm-project": {
+      "repo_id": "llvm/llvm-project",
+      "full_name": "llvm/llvm-project",
+      "url": "https://github.com/llvm/llvm-project",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 40340,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 40340,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "logto-io/logto": {
       "repo_id": "logto-io/logto",
       "full_name": "logto-io/logto",
@@ -1502,8 +1557,8 @@
       "url": "https://github.com/mattpocock/skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 176355,
-      "last_seen_at": "2026-07-31T17:48:21.112275+00:00",
-      "last_seen_stars": 197571,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 256852,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1559,6 +1614,17 @@
       "first_seen_stars": 51687,
       "last_seen_at": "2026-08-01T17:09:26.891805+00:00",
       "last_seen_stars": 51775,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "mksglu/context-mode": {
+      "repo_id": "mksglu/context-mode",
+      "full_name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 21321,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 21321,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1639,6 +1705,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "nousresearch/hermes-agent": {
+      "repo_id": "nousresearch/hermes-agent",
+      "full_name": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 243387,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 243387,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "nutlope/hallmark": {
       "repo_id": "nutlope/hallmark",
       "full_name": "Nutlope/hallmark",
@@ -1658,6 +1735,17 @@
       "first_seen_stars": 1422,
       "last_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "last_seen_stars": 2187,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "nvm-sh/nvm": {
+      "repo_id": "nvm-sh/nvm",
+      "full_name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 95032,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 95032,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1713,6 +1801,17 @@
       "first_seen_stars": 23059,
       "last_seen_at": "2026-07-17T17:19:20.184763+00:00",
       "last_seen_stars": 29062,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "openai/skills": {
+      "repo_id": "openai/skills",
+      "full_name": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 26432,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 26432,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2010,6 +2109,17 @@
       "first_seen_stars": 43106,
       "last_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "last_seen_stars": 52254,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "ruvnet/ruflo": {
+      "repo_id": "ruvnet/ruflo",
+      "full_name": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "first_seen_stars": 71641,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 71641,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2327,8 +2437,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 52584,
+      "last_seen_at": "2026-09-08T19:23:38.459579+00:00",
+      "last_seen_stars": 54502,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
