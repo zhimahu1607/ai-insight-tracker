@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-11",
+  "summary": "今日AI学术侧无论文收录，工业界动态则明确指向模型产品化与企业落地加速，竞争重心从模型能力本身转向垂直行业适配、智能体治理、数据接入与合规部署。\n\n最值得关注的是OpenAI的产品矩阵扩张：面向工作场景的GPT-6 Astra发布，配套ChatGPT Work数据智能体、金融服务版ChatGPT与API全双工语音GPT-Live-1，并与GSA合作降低政府机构使用门槛，以\"模型+行业套件+渠道\"抢占企业入口。AWS则从平台与治理侧回应，Amazon Quick桌面版全面可用，同时推出AEM多轮智能体评估、模型无关PII检测与Quick Automate工作流，围绕Bedrock与AgentCore补齐可观测性、隐私与自动化能力。二者形成互补：一个做前端场景纵深，一个做后端平台与合规护栏。\n\n模型与开源侧，阿里开源Qwen3.8-2.4T-A95B并支持SageMaker HyperPod部署，Pathway类脑BDH架构在ARC-AGI-1上刷新成本-精度表现，微软MarkItDown、OpenCode亦受关注，显示推理效率与架构创新仍是差异化变量。跨领域看，Codex/ChatGPT被用于抗菌分子发现，说明企业智能体正由通用办公向科研发现延伸；而评估、PII检测等治理工具同步涌现，反映规模化落地的前提已从\"能力可用\"转为\"可信可控\"。对决策者而言，选型重点应从基准分数转向数据接入、合规与运维成本。",
+  "category_summaries": {},
+  "news_summary": "今日AI动态集中于模型产品化与企业落地。OpenAI发布面向工作场景的GPT-6 Astra，推出ChatGPT Work数据智能体、金融服务版ChatGPT及API全双工语音GPT-Live-1，并与GSA合作降低政府机构使用门槛；其Codex/ChatGPT还被用于抗菌分子发现。AWS方面，Amazon Quick桌面版全面可用，并发布AEM多轮智能体评估、模型无关PII检测和Quick Automate工作流，持续强化Bedrock与AgentCore的企业能力。开源侧，微软MarkItDown、OpenCode受到关注。模型与基础设施上，阿里开源Qwen3.8-2.4T-A95B并支持SageMaker HyperPod部署；Pathway类脑BDH架构在ARC-AGI-1上刷新成本-精度表现。整体看，竞争正转向垂直行业、智能体治理、数据接入与合规部署。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 17,
+    "news_by_category": {
+      "AI": 5,
+      "产品": 6,
+      "行业": 2,
+      "LLM": 2,
+      "开源": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "AWS",
+      "ChatGPT",
+      "GPT-6 Astra",
+      "开源",
+      "Amazon Bedrock",
+      "Codex",
+      "抗菌分子",
+      "耐药性感染",
+      "AI 药物发现"
+    ]
+  },
+  "generated_at": "2026-09-10T19:05:17.470071"
+}
