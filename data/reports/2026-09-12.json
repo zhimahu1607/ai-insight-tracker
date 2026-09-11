@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-12",
+  "summary": "今日 AI 领域无新论文收录，产业动态集中于基础设施、智能体平台与开源生态，\"能力扩张倒逼工程化\"是主线。\n\n核心亮点在规模化与延迟优化两端。OpenAI 披露 Habitat 存储系统支撑逾 10 亿 ChatGPT 用户、峰值每秒 2200 万请求，给出超大规模推理的工程基线；AWS 以 SageMaker 前缀感知路由将长上下文 P50 首 token 延迟最高降低 77%，并用 HyperPod 模型缓存缓解冷启动。这表明推理效率正取代模型规模成为竞争焦点。\n\n智能体平台同步升温。OpenAI 发布托管式 Agents API，由 Codex harness 承担云端编排、长会话与工具调用；AWS 以 AgentCore Evaluations 与 DevOps Agent 实现质量与基础设施双层监控，并演示交互式 MCP Apps。托管化与可观测性并进，意味着智能体正从演示走向可运维的生产系统。\n\n二者内在相关：延迟优化与长会话设计同源，都需在长上下文中维持稳定成本，AWS 提出的\"每个正确结果成本\"选型标准把两者统一到同一经济性框架。开源侧腾讯 WeKnora 以 RAG 与 ReAct 智能体获约 2.2 万 Star，印证需求热度。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中在基础设施、智能体平台与开源生态。基础设施方面，OpenAI 披露 Habitat 存储系统支撑超10亿 ChatGPT 用户，峰值每秒2200万请求；AWS 推出 SageMaker 前缀感知路由，长上下文 P50 首 token 延迟最高降77%，并推出 HyperPod 模型缓存以缓解大模型冷启动；Bedrock 上线 TwelveLabs Marengo 3.0，支持视频图像自然语言检索。\n\n智能体方面，OpenAI 发布托管式 Agents API，由 Codex harness 支撑云端智能体编排、长会话与工具调用；AWS 以 AgentCore Evaluations 与 DevOps Agent 实现质量与基础设施双层级监控，并演示交互式 MCP Apps；其 benchmarks-openai 主张以“每个正确结果成本”选型。\n\n开源方面，腾讯 WeKnora 以 RAG、ReAct 智能体和 Wiki 模式获约2.2万 Star；HumanLayer 与 jakubkrehel 的技能集分别聚焦 Claude Code 工作流与 AI 界面设计。总体看，托管平台、推理效率与智能体工程化是主线。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 11,
+    "news_by_category": {
+      "AI": 3,
+      "产品": 5,
+      "开源": 3
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Amazon Bedrock",
+      "Claude Code",
+      "RAG",
+      "AWS",
+      "Habitat",
+      "ChatGPT",
+      "分布式存储",
+      "基础设施",
+      "Agents API"
+    ]
+  },
+  "generated_at": "2026-09-11T19:07:28.336822"
+}
