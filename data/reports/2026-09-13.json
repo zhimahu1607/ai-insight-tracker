@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-13",
+  "summary": "今日无学术论文收录，工业界动向集中于大模型自主执行与编码智能体。最值得关注的是同一前沿模型 GPT-6 Astra 在两条路径上的落地：Perplexity 将其用于端到端系统任务，涵盖撰写沟通、修改软件与监控生产系统，且对模型输出的检查频率大幅降低，显示企业对其自主工作流的信任实质提升；Cognition 则以之强化 AI 软件工程师 Devin 的自测能力，使代码可自行验证运行，推动\"写完即测\"的自动化工程闭环。开源侧，obra/superpowers 提出面向编码智能体的方法论，用可组合技能触发需求澄清、计划生成、子代理并行与两阶段审查，兼容十余种工具。\n\n三者的共性在于验证责任的转移：人工审查正被模型自检与流程化审查替代，模型从辅助工具变为业务系统运维与交付链路的执行主体。潜在风险与竞争焦点也随之转向可靠性、可观测性与流程规范，开源方法论正试图在这一层面补位。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中于大模型自主执行与编码智能体。据 OpenAI，Perplexity 正将 GPT-6 Astra 用于端到端系统任务，包括撰写沟通、修改软件和监控生产系统；其对模型检查频率大幅降低，显示企业对其自主工作流信任提升，或推动大模型从辅助工具转向业务系统运维核心。Cognition 则用 GPT-6 Astra 增强 AI 软件工程师 Devin 的自测能力，使其验证自身代码可运行，减少人工代码审查、加快交付，指向“写完即测”的自动化软件工程。开源侧，GitHub Trending 项目 obra/superpowers 提出面向编码智能体的方法论：以可组合技能自动触发需求澄清、计划生成、子代理并行开发及两阶段审查，并推行 TDD/YAGNI/DRY，支持 Claude Code、Codex、Cursor 等十余种工具，由 Prime Radiant 提供商业支持。整体看，前沿模型正加速渗透企业运维与软件工程全流程。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 3,
+    "news_by_category": {
+      "LLM": 2,
+      "开源": 1
+    },
+    "top_keywords": [
+      "GPT-6 Astra",
+      "OpenAI",
+      "Perplexity",
+      "端到端系统",
+      "生产系统",
+      "Devin",
+      "Cognition",
+      "AI 软件测试",
+      "superpowers",
+      "coding agent"
+    ]
+  },
+  "generated_at": "2026-09-12T18:27:08.029974"
+}

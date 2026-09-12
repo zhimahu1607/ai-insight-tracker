@@ -1,0 +1,89 @@
+[
+  {
+    "id": "ea5b193337825470",
+    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+    "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-09-14T00:00:00Z",
+    "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+    "content": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 宣布，Perplexity 正在使用 GPT-6 Astra 处理端到端系统任务，包括撰写沟通内容、修改软件以及监控生产系统。相比早期模型，Perplexity 对 Astra 的检查频率大幅降低，表明其对该模型自主执行复杂工作流的信任度提升。若这一模式可行，将推动大模型从辅助工具转向可独立运维业务系统的核心组件，并可能影响企业级 AI 部署方式与运维自动化。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "Perplexity",
+        "GPT-6 Astra",
+        "OpenAI",
+        "端到端系统",
+        "生产系统"
+      ]
+    },
+    "analyzed_at": "2026-09-12T18:26:50.464094Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "c3257d531a3c4d89",
+    "title": "obra/superpowers - GitHub Trending",
+    "url": "https://github.com/obra/superpowers",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-09-12T18:26:40.700949Z",
+    "summary": "Repository: obra/superpowers\nURL: https://github.com/obra/superpowers\nDescription: An agentic skills framework & software development methodology that works.\nLanguage: Shell\nStars: 285721\nWeekly stars: 3829",
+    "content": "Repository: obra/superpowers\nURL: https://github.com/obra/superpowers\nDescription: An agentic skills framework & software development methodology that works.\nLanguage: Shell\nStars: 285721\nWeekly stars: 3829\n\nREADME:\nSuperpowers\n\nSuperpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.\n\nTable of Contents\n\nHow it works\nCommercial Services\nGetting Started\nClaude Code\nAntigravity\nCodex App\nCodex CLI\nCursor\nDevin CLI\nFactory Droid\nGemini CLI\nGitHub Copilot CLI\nGrok Build CLI\nKimi Code\nOpenCode\nPi\nHermes Agent\nThe Basic Workflow\nCommunity\nWhat's Inside\nPhilosophy\nContributing\nUpdating\nLicense\nVisual companion telemetry\n\nHow it works\n\nIt starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do.\n\nOnce it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest.\n\nAfter you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY.\n\nNext up, once you say \"go\", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together.\n\nThere's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers.\n\nCommercial Services\n\nIf you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hesitate to drop us a line at sales@primeradiant.com.\n\nInstallation\n\nInstallation differs by harness. If you use more than one, install Superpowers separately for each one.\n\nClaude Code\n\nSuperpowers is available via the official Claude plugin marketplace\n\nOfficial Marketplace\n\nInstall the plugin from Anthropic's official marketplace:\n\nSuperpowers Marketplace\n\nThe Superpowers marketplace provides Superpowers and some other related plugins for Claude Code.\n\nRegister the marketplace:\n\nInstall the plugin from this marketplace:\n\nAntigravity\n\nInstall Superpowers as a plugin from this repository:\n\nAntigravity runs the plugin's session-start hook, so Superpowers is active from\nthe first message. Reinstall with the same command to update.\n\nCodex App\n\nSuperpowers is available via the official Codex plugin marketplace.\n\nIn the Codex app, click on Plugins in the sidebar.\nYou should see Superpowers in the Coding section.\nClick the + next to Superpowers and follow the prompts.\n\nCodex CLI\n\nSuperpowers is available via the official Codex plugin marketplace.\n\nOpen the plugin search interface:\n\nSearch for Superpowers:\n\nSelect Install Plugin.\n\nCursor\n\nIn Cursor Agent chat, install from marketplace:\n\nOr search for \"superpowers\" in the plugin marketplace.\n\nDevin CLI\n\nInstall the plugin from this repository:\n\nUpdate to the latest version with:\n\nFactory Droid\n\nRegister the marketplace:\n\nInstall the plugin:\n\nGemini CLI\n\nInstall the extension:\n\nUpdate later:\n\nGitHub Copilot CLI\n\nRegister the marketplace:\n\nInstall the plugin:\n\nGrok Build CLI\n\nSuperpowers is available via the official Grok plugin marketplace.\n\nInstall the plugin from xAI's official marketplace:\n\nOr open the marketplace in the TUI, search for Superpowers, and install it:\n\nKimi Code\n\nSuperpowers is available in Kimi Code's plugin marketplace.\n\nOpen Kimi Code's plugin manager:\n\nGo to Marketplace > Superpowers and install it.\n\nOr install directly from this repository:\n\nDetailed docs: docs/README.kimi.md\n\nOpenCode\n\nOpenCode uses its own plugin install; install Superpowers separately even if you\nalready use it in another harness.\n\nTell OpenCode:\n\nDetailed docs: docs/README.opencode.md\n\nPi\n\nInstall Superpowers as a Pi package from this repository:\n\nFor local development, run Pi with this checkout loaded as a temporary package:\n\nThe Pi package loads the Superpowers skills and a small extension that injects the using-superpowers bootstrap at session startup and again after compaction. Pi has native skills, so no compatibility Skill tool is required. Subagent and task-list tools remain optional Pi companion packages.\n\nHermes Agent\n\nInstall Superpowers as a Hermes plugin from this repository:\n\nRestart any active Hermes sessions after installing. Note: Hermes has no\npost-compaction hook, so a very long session that compacts over its first\nturn loses the bootstrap — start a fresh session if skills stop triggering.\n\nThe Basic Workflow\n\n1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document.\n\n2. **using-git-worktrees** - Activates after design approval. Creates isolated workspace on new branch, runs project setup, verifies clean test baseline.\n\n3. **writing-plans** - Activates with approved design. Breaks work into bite-sized tasks (2-5 minutes each). Every task has exact file paths, complete code, verification steps.\n\n4. **subagent-driven-development** or **executing-plans** - Activates with plan. Dispatches fresh subagent per task with two-stage review (spec compliance, then code quality), or executes in batches with human checkpoints.\n\n5. **test-driven-development** - Activates during implementation. Enforces RED-GREEN-REFACTOR: write failing test, watch it fail, write minimal code, watch it pass, commit. Deletes code written before tests.\n\n6. **requesting-code-review** - Activates between tasks. Reviews against plan, reports issues by severity. Critical issues block progress.\n\n7. **finishing-a-development-branch** - Activates when tasks complete. Verifies tests, presents options (merge/PR/keep/discard), cleans up worktree.\n\nThe agent checks for relevant skills before any task.** Mandatory workflows, not suggestions.\n\nCommunity\n\nSuperpowers is built by Jesse Vincent and the rest of the folks at Prime Radiant.\n\nDiscord**: Join us for community support, questions, and sharing what you're building with Superpowers\nIssues**: https://github.com/obra/superpowers/issues\nRelease announcements**: Sign up to get notified about new versions\n\nWhat's Inside\n\nSkills Library\n\nTesting**\ntest-driven-development** - RED-GREEN-REFACTOR cycle (includes testing anti-patterns reference)\n\nDebugging**\nsystematic-debugging** - 4-phase root cause process (includes root-cause-tracing, defense-in-depth, condition-based-waiting techniques)\nverification-before-completion** - Ensure it's actually fixed\n\nCollaboration**\nbrainstorming** - Socratic design refinement\nwriting-plans** - Detailed implementation plans\nexecuting-plans** - Batch execution with checkpoints\ndispatching-parallel-agents** - Concurrent subagent workflows\nrequesting-code-review** - Pre-review checklist\nreceiving-code-review** - Responding to feedback\nusing-git-worktrees** - Parallel development branches\nfinishing-a-development-branch** - Merge/PR decision workflow\nsubagent-driven-development** - Fast iteration with two-stage review (spec compliance, then code quality)\n\nMeta**\nwriting-skills** - Create new skills following best practices (includes testing methodology)\nusing-superpowers** - Introduction to the skills system\n\nPhilosophy\n\nTest-Driven Development** - Write tests first, always\nSystematic over ad-hoc** - Process over guessing\nComplexity reduction** - Simplicity as primary goal\nEvidence over claims** - Verify before declaring success\n\nRead the original release announcement.\n\nContributing\n\nThe general contribution process for Superpowers is below. Keep in mind that we don't generally accept contributions of new skills and that any updates to skills must work across all of the coding agents we supp",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "obra/superpowers 是一个面向编码智能体（coding agent）的软件开发方法论框架，基于一组可组合的「技能（skills）」构建，可自动触发。其核心流程从需求澄清开始：智能体先通过提问梳理规格与设计、分块呈现给用户确认，再生成细粒度实施计划，随后启动子智能体驱动的开发流程，让多个 agent 按任务并行工作并接受两阶段审查（规格符合性、代码质量）。框架强制推行红/绿 TDD、YAGNI、DRY 等实践，并覆盖头脑风暴、git worktree 隔离、写计划、执行计划、代码审查、分支收尾等环节。项目以 Shell 编写，支持 Claude Code、Codex、Cursor、Gemini CLI、Copilot CLI 等十余种智能体工具，提供官方插件市场安装方式，并由 Prime Radiant 提供商业支持。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "superpowers",
+        "coding agent",
+        "TDD",
+        "skills framework",
+        "Prime Radiant"
+      ]
+    },
+    "analyzed_at": "2026-09-12T18:26:50.276696Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "bb3fa770c5976f2e",
+    "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+    "url": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "source_name": "OpenAI",
+    "source_category": "ai",
+    "language": "en",
+    "published": "2026-09-11T16:00:00Z",
+    "summary": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+    "content": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+    "weight": 1.0,
+    "fetch_type": "rss",
+    "company": "openai",
+    "light_analysis": {
+      "summary": "OpenAI 发布信息称，Cognition 借助 GPT‑6 Astra 提升了其 AI 软件工程师 Devin 的自我测试能力，使 Devin 能够对自己编写的软件进行测试并验证其可运行性。该能力的目标是减少工程师在代码审查环节的投入，从而加快交付节奏。此次更新将前沿大模型能力与 AI 编程代理的自验证流程结合，指向自动化软件工程中「写完即测、测完即交付」的方向，反映出 AI 编程工具正从代码生成向端到端质量保障延伸，对开发者工作流和代码审查模式可能带来影响。",
+      "category": "LLM",
+      "sentiment": "positive",
+      "keywords": [
+        "GPT-6 Astra",
+        "Devin",
+        "Cognition",
+        "OpenAI",
+        "AI 软件测试"
+      ]
+    },
+    "analyzed_at": "2026-09-12T18:26:49.256089Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
