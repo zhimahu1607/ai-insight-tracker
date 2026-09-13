@@ -83,8 +83,8 @@
       "url": "https://github.com/affaan-m/ECC",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 249532,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 256943,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 257617,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -380,8 +380,8 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "first_seen_at": "2026-07-27T17:49:45.982243+00:00",
       "first_seen_stars": 11229,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 43213,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 44118,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -402,8 +402,8 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 15932,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 29253,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 31505,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -413,8 +413,8 @@
       "url": "https://github.com/blader/humanizer",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 45344,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 47255,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 47594,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -523,8 +523,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 18287,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 38788,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 39129,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -578,8 +578,8 @@
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
       "first_seen_at": "2026-07-06T18:17:26.820294+00:00",
       "first_seen_stars": 46048,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 51744,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 51820,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -699,8 +699,8 @@
       "url": "https://github.com/coreyhaines31/marketingskills",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 48693,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 49779,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 49950,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -809,8 +809,8 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 129027,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 136470,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 137188,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -875,8 +875,8 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 10460,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 15423,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 15558,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -976,6 +976,17 @@
       "first_seen_stars": 17234,
       "last_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "last_seen_stars": 27718,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "github/spec-kit": {
+      "repo_id": "github/spec-kit",
+      "full_name": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "first_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "first_seen_stars": 136294,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 136294,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1128,8 +1139,8 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 47607,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 49175,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 49468,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1194,8 +1205,8 @@
       "url": "https://github.com/humanlayer/skills",
       "first_seen_at": "2026-09-11T19:06:58.830198+00:00",
       "first_seen_stars": 3753,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 3888,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 3977,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1408,6 +1419,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "kunchenguid/firstmate": {
+      "repo_id": "kunchenguid/firstmate",
+      "full_name": "kunchenguid/firstmate",
+      "url": "https://github.com/kunchenguid/firstmate",
+      "first_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "first_seen_stars": 5677,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 5677,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "kunchenguid/no-mistakes": {
       "repo_id": "kunchenguid/no-mistakes",
       "full_name": "kunchenguid/no-mistakes",
@@ -1606,6 +1628,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "max-sixty/worktrunk": {
+      "repo_id": "max-sixty/worktrunk",
+      "full_name": "max-sixty/worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "first_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "first_seen_stars": 7475,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 7475,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "megadose/holehe": {
       "repo_id": "megadose/holehe",
       "full_name": "megadose/holehe",
@@ -1634,8 +1667,8 @@
       "url": "https://github.com/microsoft/markitdown",
       "first_seen_at": "2026-09-10T19:04:50.852426+00:00",
       "first_seen_stars": 182399,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 183147,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 183526,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1667,8 +1700,8 @@
       "url": "https://github.com/mksglu/context-mode",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 21321,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 22325,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 22588,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1810,8 +1843,8 @@
       "url": "https://github.com/obra/superpowers",
       "first_seen_at": "2026-09-12T18:26:40.700949+00:00",
       "first_seen_stars": 285721,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 285721,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 286121,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1865,8 +1898,8 @@
       "url": "https://github.com/openai/plugins",
       "first_seen_at": "2026-09-09T19:13:29.618134+00:00",
       "first_seen_stars": 6135,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 6517,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 6599,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1876,8 +1909,8 @@
       "url": "https://github.com/openai/skills",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 26432,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 26995,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 27075,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2052,8 +2085,8 @@
       "url": "https://github.com/petergyang/no-ai-slop",
       "first_seen_at": "2026-09-09T19:13:29.618134+00:00",
       "first_seen_stars": 7780,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 8594,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 9095,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2415,8 +2448,8 @@
       "url": "https://github.com/Tencent/WeKnora",
       "first_seen_at": "2026-09-11T19:06:58.830198+00:00",
       "first_seen_stars": 22315,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 22626,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 22828,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2459,8 +2492,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 23642,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 36134,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 36431,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2525,8 +2558,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-12T18:26:40.700949+00:00",
-      "last_seen_stars": 59461,
+      "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
+      "last_seen_stars": 60554,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },
