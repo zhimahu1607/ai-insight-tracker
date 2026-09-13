@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-14",
+  "summary": "今日 AI 学术侧无新论文，工业界开源动态则聚焦编码代理的工程化编排。当代理可长时间无人值守运行，管理并发、工作目录与协作流程成为关键，三个 GitHub 项目从基础设施与方法论两个层面回应。Worktrunk 以 Rust 编写，将 Git worktree 操作简化为与分支同级，通过 wt 命令为 Claude Code、Codex 等提供独立工作目录，并支持 hook 自动化与缓存共享。firstmate 以 Shell 编写，提出“agent distro”，由主代理监督多个子代理，每个任务独占 worktree，最终交付 PR 或报告。GitHub 官方发布的 spec-kit 1.0.0 则推行规格驱动开发，主张规格说明应从一次性脚手架变为可执行产物，兼容 30 多种代理。整体看，代理协作正从单点工具走向标准化编排层。跨领域联系在于：worktree 隔离解决运行环境冲突，规格驱动解决意图传递与验收标准，二者互补，有望支撑更可靠的无人值守代理流水线。学术论文缺席或表明当前创新重心正转向工程实践与工具链治理。",
+  "category_summaries": {},
+  "news_summary": "## 今日 AI 开源动态：编码代理走向工程化编排\n\n今日 GitHub Trending 显示，AI 开源生态的焦点正转向「编码代理的工程化编排」，三个项目从不同层面回应同一痛点：当代理可长时间无人值守运行，如何管理其并发、工作目录与协作流程。\n\n**基础设施层面**，Rust 编写的 Worktrunk（约 7500 星）把 Git worktree 操作简化到与分支同级，以 `wt switch/list/merge/remove` 为 Claude Code、Codex 等代理提供独立工作目录，并支持 hook 自动化、构建缓存共享与切换后直接启动代理。Shell 编写的 firstmate（约 5677 星，周增 763）则提出「agent distro」概念，由主代理派生并监督多个子代理，每个任务独占 worktree，最终交付 PR 或调研报告。\n\n**方法论层面**，GitHub 官方发布 spec-kit 1.0.0，推行规格驱动开发，主张规格说明应从一次性脚手架变为可执行产物，兼容 30 多种编码代理。\n\n整体来看，代理协作正从单点工具走向标准化的编排层。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 3,
+    "news_by_category": {
+      "开源": 3
+    },
+    "top_keywords": [
+      "Worktrunk",
+      "Git worktree",
+      "AI Agent",
+      "CLI",
+      "Rust",
+      "spec-kit",
+      "Spec-Driven Development",
+      "GitHub",
+      "AI 编码代理",
+      "开源工具包"
+    ]
+  },
+  "generated_at": "2026-09-13T18:53:45.409176"
+}
