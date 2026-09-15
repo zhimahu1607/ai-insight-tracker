@@ -83,8 +83,8 @@
       "url": "https://github.com/affaan-m/ECC",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 249532,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 258303,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 259135,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -127,8 +127,8 @@
       "url": "https://github.com/alibaba/open-code-review",
       "first_seen_at": "2026-07-29T17:23:28.692586+00:00",
       "first_seen_stars": 15848,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 25396,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 28132,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -380,8 +380,8 @@
       "url": "https://github.com/ayghri/i-have-adhd",
       "first_seen_at": "2026-07-27T17:49:45.982243+00:00",
       "first_seen_stars": 11229,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 45304,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 46145,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -402,8 +402,8 @@
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "first_seen_at": "2026-09-02T19:20:57.794520+00:00",
       "first_seen_stars": 15932,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 33383,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 34607,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -413,8 +413,8 @@
       "url": "https://github.com/blader/humanizer",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 45344,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 48087,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 48503,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -759,6 +759,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "decolua/9router": {
+      "repo_id": "decolua/9router",
+      "full_name": "decolua/9router",
+      "url": "https://github.com/decolua/9router",
+      "first_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "first_seen_stars": 28876,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 28876,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "denoland/celld": {
       "repo_id": "denoland/celld",
       "full_name": "denoland/celld",
@@ -809,8 +820,8 @@
       "url": "https://github.com/DietrichGebert/ponytail",
       "first_seen_at": "2026-09-06T18:13:05.536941+00:00",
       "first_seen_stars": 129027,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 138287,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 139258,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -875,8 +886,8 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 10460,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 15755,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 15881,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -985,8 +996,8 @@
       "url": "https://github.com/github/spec-kit",
       "first_seen_at": "2026-09-13T18:53:21.613250+00:00",
       "first_seen_stars": 136294,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 136762,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 137018,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1139,8 +1150,8 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 47607,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 49969,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 50342,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1372,6 +1383,17 @@
       "first_seen_stars": 19735,
       "last_seen_at": "2026-08-25T16:47:34.156573+00:00",
       "last_seen_stars": 20618,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "justvugg/colibri": {
+      "repo_id": "justvugg/colibri",
+      "full_name": "JustVugg/colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "first_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "first_seen_stars": 33548,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 33548,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1634,8 +1656,8 @@
       "url": "https://github.com/max-sixty/worktrunk",
       "first_seen_at": "2026-09-13T18:53:21.613250+00:00",
       "first_seen_stars": 7475,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 7639,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 7763,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1667,8 +1689,8 @@
       "url": "https://github.com/microsoft/markitdown",
       "first_seen_at": "2026-09-10T19:04:50.852426+00:00",
       "first_seen_stars": 182399,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 183958,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 184342,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1700,8 +1722,8 @@
       "url": "https://github.com/mksglu/context-mode",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 21321,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 22823,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 23046,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1843,8 +1865,8 @@
       "url": "https://github.com/obra/superpowers",
       "first_seen_at": "2026-09-12T18:26:40.700949+00:00",
       "first_seen_stars": 285721,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 286618,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 287096,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1898,8 +1920,8 @@
       "url": "https://github.com/openai/plugins",
       "first_seen_at": "2026-09-09T19:13:29.618134+00:00",
       "first_seen_stars": 6135,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 6696,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 6773,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1909,8 +1931,8 @@
       "url": "https://github.com/openai/skills",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 26432,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 27179,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 27269,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2085,8 +2107,8 @@
       "url": "https://github.com/petergyang/no-ai-slop",
       "first_seen_at": "2026-09-09T19:13:29.618134+00:00",
       "first_seen_stars": 7780,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 9491,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 9823,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2431,6 +2453,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tauricresearch/tradingagents": {
+      "repo_id": "tauricresearch/tradingagents",
+      "full_name": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "first_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "first_seen_stars": 106606,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 106606,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tencent/ai-infra-guard": {
       "repo_id": "tencent/ai-infra-guard",
       "full_name": "Tencent/AI-Infra-Guard",
@@ -2448,8 +2481,8 @@
       "url": "https://github.com/Tencent/WeKnora",
       "first_seen_at": "2026-09-11T19:06:58.830198+00:00",
       "first_seen_stars": 22315,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 23182,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 24012,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2492,8 +2525,8 @@
       "url": "https://github.com/THU-MAIC/OpenMAIC",
       "first_seen_at": "2026-08-30T19:16:26.342456+00:00",
       "first_seen_stars": 23642,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 36786,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 37079,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2558,8 +2591,8 @@
       "url": "https://github.com/tt-a1i/archify",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 3392,
-      "last_seen_at": "2026-09-14T20:16:10.126792+00:00",
-      "last_seen_stars": 62045,
+      "last_seen_at": "2026-09-15T19:39:20.765914+00:00",
+      "last_seen_stars": 63359,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
     },

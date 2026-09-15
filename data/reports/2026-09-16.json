@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-16",
+  "summary": "**今日 AI 动态：学术沉寂，工业界聚焦推理降本与智能体治理**\n\n今日学术侧暂无新论文收录，工业界则延续\"降本\"与\"落地\"两条主线，且二者正加速交汇。\n\n最值得关注的是超大模型推理的硬件约束正被系统工程手段突破。开源项目 colibri 以纯 C 实现 VRAM/RAM/NVMe 分层内存，将 744B 至 2.8T 参数 MoE 模型中约 1.9 万个路由专家置于磁盘按需流式加载，使超大规模模型在有限显存下具备可行性。云侧的成本优化同样激进：AWS Bedrock 提示缓存复用静态上下文，输入 token 成本最高下降 90%。二者路径不同却指向同一指标——单位 token 成本已成为基础设施竞争的核心，无论自建还是托管。\n\n与此同时，智能体正从演示走向受治理的生产系统。AgentCore 新增 Consent portal 托管终端用户 OAuth 授权，其 Code Interpreter 已支撑 Abnormal AI 日均数十亿封邮件的安全检测；SageMaker 则以实例偏好列表按优先级自动调度，缓解 GPU 容量紧张，并给出基于 Qwen3-8B 的 SFT+GRPO 标签定制方案，SFT 后得分由 0.354 升至 0.683。\n\n跨领域看，TradingAgents 的多智能体辩论与 9router 的三级降级路由，本质上都是\"以编排换取效果与成本\"，与云平台以缓存、调度替代算力扩张的思路同源。竞争焦点正从模型能力转向系统工程效率。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 动态：开源推理引擎与云侧智能体基础设施并行推进**\n\n**开源生态**方面，纯 C 推理引擎 colibri（约 3.35 万星）以 VRAM/RAM/NVMe 分层内存运行 744B 至 2.8T 参数的 MoE 模型，将约 1.9 万路由专家置于磁盘按需流式加载，支持 GLM、DeepSeek V4、Kimi K3 等九个模型家族。TradingAgents（10.6 万星）用多智能体辩论驱动交易研究，9router 则以三级降级路由与 token 压缩降低编程 CLI 成本。\n\n**云平台**方面，AWS 集中更新 Bedrock 与 SageMaker：Bedrock 提示缓存复用静态上下文，输入 token 成本最高降低 90%；AgentCore 新增 Consent portal 托管终端用户 OAuth 授权，并以 Code Interpreter 支撑 Abnormal AI 日均数十亿封邮件的智能体安全检测。SageMaker 推出实例偏好列表，按最多 5 种实例优先级自动调度以缓解 GPU 容量紧张，同时给出基于 Qwen3-8B 的 SFT+GRPO 产品标签定制方案，SFT 后得分由 0.354 升至 0.683。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 8,
+    "news_by_category": {
+      "开源": 3,
+      "产品": 3,
+      "LLM": 1,
+      "AI": 1
+    },
+    "top_keywords": [
+      "LLM",
+      "Amazon Bedrock AgentCore",
+      "Colibrì",
+      "MoE",
+      "推理引擎",
+      "纯C",
+      "分层内存",
+      "TradingAgents",
+      "多智能体",
+      "金融交易"
+    ]
+  },
+  "generated_at": "2026-09-15T19:39:47.481738"
+}
