@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-17",
+  "summary": "今日学术侧无新论文收录，工业界动态显示竞争焦点正从模型能力本身，向用户教育、商业变现、企业治理与开源生态扩散。\n\n最值得关注的是 OpenAI 的双线动作：与 AARP 合作在美 10 城培训 1000 名老年人使用 ChatGPT，同时推出含赞助智能体的 AI 广告体验，并与 HubSpot、Shopify 集成，在订阅外开辟广告路径。配套的 ChatGPT Work 与 Codex 新增分析能力，助企业管理层量化 AI 使用与业务价值；这与员工自发拓展 AI 工作方式的经济研究观察呼应——落地正由自上而下部署转向自下而上扩散，治理与度量随之成为刚需。\n\n云侧同样围绕企业化：AWS 与 NVIDIA 将 NVRx 集成至 EKS 上的 PyTorch FSDP，异步检查点使训练效率超 99%；Bedrock AgentCore 上线提示词优化器，BDA 实现无服务器 PII 脱敏、蓝图提取精确率 97%，并开源覆盖 38 项医疗健康技能的 HCLS Agent Skills。开源侧 LibreChat 以多模型自托管受关注，Home Assistant 延续本地隐私路线，共同指向：企业对数据主权与可控性的诉求，正使自托管与智能体技能生态成为模型之外的新竞争面。",
+  "category_summaries": {},
+  "news_summary": "今日AI动态集中于普及、变现与企业化。OpenAI与AARP合作，将在美国10城为1000名老年人提供ChatGPT实操培训；同时推出AI广告体验，含赞助智能体，并与HubSpot、Shopify集成，开辟订阅外广告路径。ChatGPT Work与Codex新增分析能力，助企业量化AI使用与业务价值；经济研究则关注员工自发拓展AI工作方式。AWS方面，与NVIDIA将NVRx集成至EKS上的PyTorch FSDP，异步检查点使训练效率超99%；Bedrock AgentCore推出提示词优化器；BDA方案实现无服务器PII脱敏，蓝图提取精确率达97%；并开源覆盖38项医疗健康技能的HCLS Agent Skills。开源侧，LibreChat以多模型自托管获关注，Home Assistant延续本地隐私控制路线。整体看，AI竞争正从模型能力延伸至用户教育、广告变现、企业治理与开源智能体生态。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 10,
+    "news_by_category": {
+      "行业": 2,
+      "产品": 3,
+      "开源": 4,
+      "AI": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "开源",
+      "AARP",
+      "ChatGPT",
+      "老年人",
+      "AI教育",
+      "AI广告",
+      "Sponsored Agents",
+      "HubSpot",
+      "Shopify"
+    ]
+  },
+  "generated_at": "2026-09-16T19:31:05.300525"
+}
