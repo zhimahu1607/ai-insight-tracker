@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-18",
+  "summary": "今日学术界无新论文收录，工业界动态集中于模型治理、开发工具与企业智能体平台三条主线，整体显示智能体正从单点工具向平台化基础设施迁移。\n\n最值得关注的是OpenAI发布模型失准追踪、调查与披露框架，并公开六份异常行为报告，将模型风险从事后评估推向可审计的对外透明度机制。与之呼应，Anthropic的终端编码智能体Claude Code登上GitHub Trending，其knowledge-work-plugins以技能、命令与MCP连接器覆盖销售、法务、财务等岗位，表明编码智能体的能力正加速向通用知识工作外溢。\n\nAWS则密集推进企业级落地：Amazon Connect Talent将AI引入面试评估，Bedrock Knowledge Bases给出OpenSearch、Aurora pgvector与S3 Vectors在延迟、成本与检索质量上的选型参考，AgentCore支撑Wood Mackenzie共享智能体平台APEX及MRH Trowe约四百名员工的自助智能体。值得注意的跨领域信号是，Anthropic与AWS不约而同以MCP作为连接层，又同时强调身份、网关、授权与治理——行业共识正在形成：智能体规模化的瓶颈已从模型能力转向安全、合规与可观测性。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中于模型治理、开发工具与企业智能体平台。OpenAI 发布模型失准追踪、调查与披露框架，并公开六份异常行为报告，强化风险透明度。Anthropic 的终端编码智能体 Claude Code 登上 GitHub Trending；其 knowledge-work-plugins 开源，以技能、命令和 MCP 连接器覆盖销售、法务、财务等岗位，推动知识工作智能化。\n\nAWS 密集推进企业级 AI：Amazon Connect Talent 将 AI 面试评估引入招聘；Bedrock Knowledge Bases 对比 OpenSearch、Aurora pgvector、S3 Vectors，给出延迟、成本与检索质量选型；Bedrock AgentCore 支撑 Wood Mackenzie 共享智能体平台 APEX，以及 MRH Trowe 约 400 名员工的自助智能体，强调身份、网关与治理。AWS 还发布 MCP 纵深防御授权及合成数据工业安全方案。整体看，智能体正从单点工具走向平台化，安全、合规与可观测性成为落地关键。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 10,
+    "news_by_category": {
+      "AI": 6,
+      "LLM": 1,
+      "开源": 1,
+      "产品": 2
+    },
+    "top_keywords": [
+      "MCP",
+      "Amazon Bedrock AgentCore",
+      "Anthropic",
+      "OpenAI",
+      "模型失准",
+      "AI安全",
+      "模型行为",
+      "透明度",
+      "Claude Code",
+      "智能体编码"
+    ]
+  },
+  "generated_at": "2026-09-17T19:41:53.279948"
+}
