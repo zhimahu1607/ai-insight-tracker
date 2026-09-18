@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-19",
+  "summary": "今日学术界无新论文收录，工业界动态则清晰地指向两条相互咬合的线索：垂直行业的深度落地，以及推理与智能体基础设施的持续硬化。\n\n最值得关注的亮点有三。其一，OpenAI 与律所 Cooley 共建 GO Public 平台，将模型嵌入 IPO 文件与流程审查，并配套推出 Astra for Law，覆盖领域模型、可定制工作流、数据接入与机密管控——这标志着大模型正从通用问答迁移到知识密集型、高合规要求的生产流程。其二，Moonshot AI 的 Kimi K3 上线 Amazon Bedrock，以 2.8 万亿参数成为首个该量级开源模型，支持原生视觉与 100 万 token 上下文，扩展效率较 K2 提升约 2.5 倍，为长文档、多模态审查类任务提供了容量基础。其三，AWS 侧动作密集：AgentCore runtime V2 将 P75 冷启动稳定在约 2 秒，SageMaker HyperPod Inference Gateway 使首 token 延迟 P99 最多下降 98%，并与 Hugging Face 联合开源六个 agent skills，降低编码代理部署模型的工程门槛。\n\n两条线索的交汇点在于：法律等场景的价值兑现，依赖长上下文与视觉理解；而这类任务往往以多智能体、多轮工具调用形式运行，若无冷启动与首 token 延迟的数量级改善，单位经济性难以成立。换言之，基础设施的毫秒级优化，正在决定垂直应用能否规模化交付。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中于垂直行业落地与推理基础设施两条主线。\n\n**应用层**：OpenAI 与律所 Cooley 合作构建 GO Public 平台，将 AI 引入 IPO 文件与流程审查，并推出法律行业方案 Astra for Law，覆盖领域模型、可定制工作流、数据接入与机密管控，显示大模型正从通用问答转向知识密集型工作流。\n\n**模型层**：Moonshot AI 的 Kimi K3 上线 Amazon Bedrock，为首个 2.8 万亿参数开源模型，支持原生视觉与 100 万 token 上下文，扩展效率较 K2 提升约 2.5 倍。\n\n**基础设施层**：AWS 更新 AgentCore runtime V2，P75 冷启动稳定在约 2 秒；发布 SageMaker HyperPod Inference Gateway，首 token 延迟 P99 最多降低 98%；并与 Hugging Face 联合开源六个 agent skills，帮助编码代理正确部署模型至 SageMaker。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "产品": 4,
+      "LLM": 1,
+      "AI": 1,
+      "开源": 1
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "AWS",
+      "AI Agent",
+      "Cooley",
+      "ChatGPT Work",
+      "GO Public",
+      "IPO",
+      "法律服务",
+      "OpenAI",
+      "Astra for Law"
+    ]
+  },
+  "generated_at": "2026-09-18T18:59:43.113204"
+}
