@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-21",
+  "summary": "今日学术界无新论文收录，AI 动态集中于开源开发者工具与云原生基础设施两个层面。最值得关注的是编码智能体项目 Cline 登上 GitHub Trending：它以 SDK、IDE 扩展与 CLI 三种形态提供自主编码能力，可跨文件协调修改、读取 linter 与编译错误并自动修复、直接执行终端命令。其 Plan/Act 双模式与人机审批机制用于控制风险，而明确不绑定单一模型供应商、兼容 Anthropic、OpenAI、Google、Ollama 等，并支持 MCP 与多智能体协作，则显示模型中立与可编排正成为编码智能体的差异化竞争点——智能体层的竞争焦点已从模型能力转向工作流与生态。基础设施侧，基于 eBPF 的 Cilium 本周新增约 356 星。两者分属应用与底座，却共享同一取向：可观测与策略控制正被下沉为通用能力。今日未见头部厂商重大产品发布或融资事件。",
+  "category_summaries": {},
+  "news_summary": "## AI 领域日报\n\n**AI 编程智能体工具链持续演进**\n\n开源项目 Cline 登上 GitHub Trending，该项目以 SDK、IDE 扩展与 CLI 多种形态提供自主编码能力，可在终端、VS Code 与 JetBrains 系列 IDE 中运行。其技术特点包括跨文件协调代码修改、监控 linter 与编译器错误并自动修复、直接执行终端命令并观察输出。Cline 采用 Plan/Act 双模式与人机协同审批机制，通过 .clinerules 定义项目规则，且不绑定单一模型供应商，兼容 Anthropic、OpenAI、Google、OpenRouter、Ollama 等，并支持 MCP 服务器与多智能体协作。这反映出编码智能体正从单一插件向平台化、可编排的方向发展，模型中立性成为差异化竞争点。\n\n**云原生基础设施侧**\n\nCilium 作为基于 eBPF 的网络、安全与可观测性项目本周新增约 356 星，星标总数约 2.5 万，为 Kubernetes 提供扁平三层网络与 L3–L7 身份级策略，并可替代 kube-proxy。\n\n总体来看，今日动态集中于开发者工具与底层基础设施的开源生态，未见头部厂商的重大产品发布或融资事件。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 2,
+    "news_by_category": {
+      "开源": 2
+    },
+    "top_keywords": [
+      "Cline",
+      "AI 编码智能体",
+      "开源",
+      "MCP",
+      "TypeScript",
+      "Cilium",
+      "eBPF",
+      "Kubernetes",
+      "云原生网络",
+      "网络策略"
+    ]
+  },
+  "generated_at": "2026-09-20T18:41:23.411010"
+}
