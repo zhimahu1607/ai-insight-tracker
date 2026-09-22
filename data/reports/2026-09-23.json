@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-23",
+  "summary": "今日 AI 领域学术侧暂无论文收录，工业界的信号则集中在模型迭代与企业级智能体落地上。模型层面，OpenAI 发布 GPT-6 Sol 与 Luna，分别针对复杂推理编码与高并发低成本场景，并同步提出前沿模型第三方评估原则；Anthropic 的 Claude Opus 5.5 登陆 AWS，主打智能体编程与成本下降，并开源覆盖投行、股票研究、KYC 的金融参考智能体库。两家厂商在同一窗口既推能力上限、又谈评估与安全分类，说明竞争焦点正从单纯刷分转向\"能力—成本—可审计\"的三角平衡。\n\n开源与基础设施侧，腾讯云开源 Octop 多智能体助手与 BrowserSkill 浏览器复用工具；AWS 则以 Strands Evals 提供技能评估、以 Bedrock AgentCore 支撑 Reactiv 的移动电商配置、Trane 的 HVAC 诊断与 Tata Elxsi 的工业安全检测。值得关注的是，模型厂商的垂直智能体库与云厂商的评估工具形成互补：前者沉淀业务语义与流程知识，后者提供可度量的交付标准，二者恰好补上企业级 Agent 从演示走向生产的两处缺口——可评估性与可复用性。当基础模型能力逐渐趋同，评估框架与行业知识资产或将成为下一阶段的核心壁垒。",
+  "category_summaries": {},
+  "news_summary": "今日焦点集中在模型发布与企业级智能体落地。OpenAI 推出 GPT-6 Sol 与 Luna，分别面向复杂推理、编码和高并发低成本任务，并已在 Amazon Bedrock 可用；同时发布前沿模型第三方评估原则。Anthropic 的 Claude Opus 5.5 上线 AWS，强调智能体编程、成本下降与安全分类器，其金融行业参考智能体库也已开源，覆盖投行、股票研究、KYC 等流程。\n\n开源侧，腾讯云开源自托管多智能体助手 Octop 与浏览器复用工具 BrowserSkill；GitHub 趋势中 LinkedIn 技能包、OpenStock 行情平台受关注。基础设施与行业应用方面，AWS 推出 Strands Evals 技能评估、SageMaker 并发扫描，并以 Bedrock AgentCore 支撑 Reactiv、Trane、Tata Elxsi 等案例，将移动电商配置、HVAC 诊断和工业安全检测显著提速，显示企业级 Agent 正加速走向生产环境。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 15,
+    "news_by_category": {
+      "LLM": 2,
+      "行业": 1,
+      "开源": 4,
+      "AI": 6,
+      "产品": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Amazon Bedrock AgentCore",
+      "多智能体",
+      "Anthropic",
+      "AI Agent",
+      "Amazon Bedrock",
+      "MCP",
+      "GPT-6",
+      "Sol",
+      "Luna"
+    ]
+  },
+  "generated_at": "2026-09-22T19:42:29.558558"
+}

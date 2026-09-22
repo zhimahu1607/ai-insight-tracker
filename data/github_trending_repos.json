@@ -61,8 +61,8 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "first_seen_at": "2026-07-10T17:54:14.248464+00:00",
       "first_seen_stars": 76651,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 98092,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 98415,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -83,8 +83,8 @@
       "url": "https://github.com/affaan-m/ECC",
       "first_seen_at": "2026-09-05T18:07:14.209153+00:00",
       "first_seen_stars": 249532,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 264652,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 265291,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -127,8 +127,8 @@
       "url": "https://github.com/alibaba/open-code-review",
       "first_seen_at": "2026-07-29T17:23:28.692586+00:00",
       "first_seen_stars": 15848,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 39120,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 39681,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -215,8 +215,8 @@
       "url": "https://github.com/anthropics/claude-code",
       "first_seen_at": "2026-09-17T19:41:28.108054+00:00",
       "first_seen_stars": 145799,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 147450,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 147636,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -264,14 +264,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "anthropics/financial-services": {
+      "repo_id": "anthropics/financial-services",
+      "full_name": "anthropics/financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "first_seen_stars": 36240,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 36240,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "anthropics/knowledge-work-plugins": {
       "repo_id": "anthropics/knowledge-work-plugins",
       "full_name": "anthropics/knowledge-work-plugins",
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "first_seen_at": "2026-09-17T19:41:28.108054+00:00",
       "first_seen_stars": 24508,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 25342,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 25422,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -611,8 +622,8 @@
       "url": "https://github.com/cilium/cilium",
       "first_seen_at": "2026-09-20T18:41:01.039525+00:00",
       "first_seen_stars": 25378,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 25422,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 25454,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -633,8 +644,8 @@
       "url": "https://github.com/cline/cline",
       "first_seen_at": "2026-09-20T18:41:01.039525+00:00",
       "first_seen_stars": 68876,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 68962,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 69063,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -655,8 +666,8 @@
       "url": "https://github.com/cloudflare/quiche",
       "first_seen_at": "2026-09-21T20:23:16.671044+00:00",
       "first_seen_stars": 12305,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 12305,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 12484,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -666,8 +677,8 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "first_seen_at": "2026-09-21T20:23:16.671044+00:00",
       "first_seen_stars": 18872,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 18872,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 20013,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -798,8 +809,8 @@
       "url": "https://github.com/danny-avila/LibreChat",
       "first_seen_at": "2026-09-16T19:30:32.365611+00:00",
       "first_seen_stars": 44127,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 44572,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 44655,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1271,8 +1282,8 @@
       "url": "https://github.com/home-assistant/core",
       "first_seen_at": "2026-09-16T19:30:32.365611+00:00",
       "first_seen_stars": 90558,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 90963,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 91051,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1491,8 +1502,8 @@
       "url": "https://github.com/JustVugg/colibri",
       "first_seen_at": "2026-09-15T19:39:20.765914+00:00",
       "first_seen_stars": 33548,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 36814,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 37103,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1991,6 +2002,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "open-dev-society/openstock": {
+      "repo_id": "open-dev-society/openstock",
+      "full_name": "Open-Dev-Society/OpenStock",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "first_seen_stars": 18311,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 18311,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "openai/codex": {
       "repo_id": "openai/codex",
       "full_name": "openai/codex",
@@ -2118,8 +2140,8 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 44816,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 84318,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 84750,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2420,6 +2442,17 @@
       "double_alerted_at": "2026-08-15T16:33:42.948840+00:00",
       "ten_x_alerted_at": null
     },
+    "sergebulaev/linkedin-skills": {
+      "repo_id": "sergebulaev/linkedin-skills",
+      "full_name": "sergebulaev/linkedin-skills",
+      "url": "https://github.com/sergebulaev/linkedin-skills",
+      "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "first_seen_stars": 3238,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 3238,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "shiyu-coder/kronos": {
       "repo_id": "shiyu-coder/kronos",
       "full_name": "shiyu-coder/Kronos",
@@ -2459,8 +2492,8 @@
       "url": "https://github.com/stablyai/orca",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 8754,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 74576,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 75461,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2503,8 +2536,8 @@
       "url": "https://github.com/supabase/supabase",
       "first_seen_at": "2026-09-19T18:33:27.643520+00:00",
       "first_seen_stars": 110299,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 110512,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 110617,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2585,14 +2618,25 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "tencent/browserskill": {
+      "repo_id": "tencent/browserskill",
+      "full_name": "Tencent/BrowserSkill",
+      "url": "https://github.com/Tencent/BrowserSkill",
+      "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "first_seen_stars": 6580,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 6580,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tencent/weknora": {
       "repo_id": "tencent/weknora",
       "full_name": "Tencent/WeKnora",
       "url": "https://github.com/Tencent/WeKnora",
       "first_seen_at": "2026-09-11T19:06:58.830198+00:00",
       "first_seen_stars": 22315,
-      "last_seen_at": "2026-09-21T20:23:16.671044+00:00",
-      "last_seen_stars": 28449,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 28902,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2604,6 +2648,17 @@
       "first_seen_stars": 8340,
       "last_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "last_seen_stars": 10272,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "tencentcloud/octop": {
+      "repo_id": "tencentcloud/octop",
+      "full_name": "TencentCloud/Octop",
+      "url": "https://github.com/TencentCloud/Octop",
+      "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "first_seen_stars": 4614,
+      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
+      "last_seen_stars": 4614,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
