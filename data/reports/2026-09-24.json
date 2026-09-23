@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-24",
+  "summary": "今日学术界暂无论文收录，动态几乎全部由工业界的商业化与生态扩张驱动。OpenAI 集中披露 GPT-5.6、GPT-6 及 GPT-6 Astra 的落地案例：invideo 调色效率提升三倍，Ringg 客服智能体自主解决 65% 来电、成本下降约九成，Harvey 与 Parallel 在法律草稿与研究场景同步提效；GPT-6 提示缓存新增显式断点与诊断，直指开发者延迟与成本。这组信息共同指向一个判断——模型竞争的重心，已从通用能力展示转向推理经济性与工作流渗透率。\n\n生态与基础设施层面同样密集。OpenAI Academy 迎来两周年，Daybreak 扩展至乌克兰民用网络防御，并与 Grab 在东南亚培训三万合作伙伴，形成从教育、公共安全到区域商业的普及链路；开源侧，PyTorch、规范驱动开发框架 OpenSpec 与工具调用代理 treg 登上 GitHub Trending；微软研究提出将机器人推理卸载至边缘或云端，AWS 则展示基于 Bedrock/MCP 的 HEMA 内部助手、Agentic 视频智能方案，以及结合开放权重模型的 OpenCode 编码智能体。\n\n跨领域联系清晰可见：工具调用代理、提示缓存与推理卸载，本质上都是围绕上下文与算力的成本结构优化；而客服、法律、视频、编码等案例的共性，是智能体在受限场景中承担完整任务闭环，而非单点辅助。后续观察重点在于，这些落地案例能否沉淀为可复用的平台能力，以及开源代理框架与云端智能体服务之间的分工将如何演进。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中于模型商业化与生态扩张。OpenAI 集中披露 GPT-6/GPT-6 Astra/GPT-5.6 落地案例：invideo 调色效率提升 3 倍，Ringg 客服智能体可自主解决 65% 来电、成本降约 90%，Harvey 法律草稿与 Parallel 研究亦显著提效；GPT-6 提示缓存新增显式断点与诊断，降低开发者延迟和成本。行业层面，OpenAI Academy 迎来两周年，Daybreak 扩至乌克兰民用网络防御，并与 Grab 在东南亚培训 3 万名合作伙伴。\n\n开源与基础设施方面，PyTorch、规范驱动开发框架 OpenSpec、工具调用代理 treg 登上 GitHub Trending；微软研究提出机器人推理可卸载至边缘/云端；AWS 则展示 HEMA 基于 Bedrock/MCP 的内部 AI 助手、Agentic 视频智能方案，以及 OpenCode 结合开放权重模型的编码智能体。整体看，大模型厂商正借垂直案例、教育合作与云平台工具加速 AI 普及和商业落地。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 15,
+    "news_by_category": {
+      "行业": 3,
+      "LLM": 5,
+      "开源": 3,
+      "AI": 3,
+      "产品": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "GPT-6 Astra",
+      "MCP",
+      "Amazon Bedrock",
+      "OpenAI Academy",
+      "AI 教育",
+      "技能普及",
+      "社区",
+      "Daybreak",
+      "乌克兰"
+    ]
+  },
+  "generated_at": "2026-09-23T19:38:19.152291"
+}
