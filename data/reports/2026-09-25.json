@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-25",
+  "summary": "今日AI学术侧暂无新论文，工业界风向集中在治理、变现与企业集成。最值得注意的是治理层级跃升：Sam Altman在联合国安理会就AI安全与人类控制权发言，OpenAI同日发布MentalHealthBench，前沿模型治理正从行业自律转向全球安全框架，并延伸至心理健康等高敏感对话评估。商业化同步提速，ChatGPT Ads覆盖60余国，Airbnb接入GPT-6 Astra用于代码排查与系统设计，显示前沿模型加速进入广告与企业软件工程。企业级与开源生态亦在咬合：AWS WhisperX、Bedrock AgentCore Gateway及基于Nova Lite的工单分类，把语音、代理与MCP封装为可落地组件；Hindsight以仿生记忆刷新长时检索SOTA，补足开源侧记忆能力。跨领域看，治理与商业化正相互前置，模型越深入企业流程，安全评估与可审计架构越成为落地前提。",
+  "category_summaries": {},
+  "news_summary": "**AI治理与安全**：OpenAI CEO Sam Altman在联合国安理会就AI安全与人类控制权发言，将前沿AI治理提升至全球安全议题；OpenAI同期发布MentalHealthBench，评估模型在心理健康对话中的有用性与安全性。\n\n**商业化与产品**：ChatGPT Ads扩展至东南亚及台湾，覆盖60余国；Airbnb扩大接入GPT-6 Astra等前沿模型，用于代码排查与系统设计，显示前沿模型加速进入企业软件工程流程。\n\n**企业级落地**：AWS推出WhisperX容器，实现词级时间戳与说话人分离转写；Bedrock AgentCore Gateway结合MCP构建多账户代理架构；Aderant基于Amazon Nova Lite的工单分类系统路由准确率约96%，月成本低于30美元。\n\n**开源生态**：LibreChat（4.4万星）新增Agents API与Trace Viewer等能力；vectorize-io的Hindsight以仿生记忆结构完成长时记忆检索SOTA。\n\n总体看，治理、变现与企业集成三条线并行推进。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 9,
+    "news_by_category": {
+      "行业": 1,
+      "AI": 3,
+      "产品": 2,
+      "LLM": 1,
+      "开源": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "MCP",
+      "AI安全",
+      "Sam Altman",
+      "联合国安理会",
+      "国际合作",
+      "MentalHealthBench",
+      "心理健康",
+      "基准测试",
+      "ChatGPT Ads"
+    ]
+  },
+  "generated_at": "2026-09-24T19:57:28.320528"
+}
