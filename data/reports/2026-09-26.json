@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-26",
+  "summary": "今日学术界无新论文收录，工业界动态则高度聚焦于企业级基础设施与智能体落地的“最后一公里”。整体风向可概括为：训练与推理的效率工程成为竞争焦点，模型能力正被快速封装为可规模化的生产系统。\n\n最值得关注的亮点有三。AWS 在 EKS 上以 EFA 结合 DeepEP 扩展 MoE 强化学习，rollout 吞吐提升 40%；配合 SageMaker HyperPod 与 SkyRL，Qwen3-VL-8B 在视觉迷宫任务上的解决率从 43.75% 跃升至 96.875%，并借 Qumulo 打通跨区域训练——这表明强化学习后训练的扩展性瓶颈正被系统性拆解。与此同时，NarrateAI 基于 Bedrock 支撑 4000 余名高管的实时问答，数值准确率约 99%、评估延迟下降 86.8%，显示高可靠实时企业问答已具工程可行性。OpenAI 披露 Proaction 借助 Codex 等工具将销售业绩提升 60%，并与 HKUDS 的 CLI-Anything 获约 5 万 Star 相呼应，软件正加速迈向 Agent-Native。\n\n跨领域联系在于：底层的吞吐与延迟优化，直接决定上层实时语音克隆（Qwen3-TTS）、自助分析（Datacor × Quick Sight）乃至销售自动化能否落地。基础设施效率已成为企业 AI 价值兑现的先决条件，而开源 ERP（Odoo）等长周期系统则构成下一批改造对象。",
+  "category_summaries": {},
+  "news_summary": "本期 AI 动态集中于企业级基础设施与落地。AWS 连发多项方案：EKS 上以 EFA+DeepEP 扩展 MoE 强化学习，rollout 吞吐提升 40%；SageMaker HyperPod 结合 SkyRL 将 Qwen3-VL-8B 视觉迷宫解决率从 43.75% 提至 96.875%，并与 Qumulo 实现跨区训练。生产应用侧，NarrateAI 在 Bedrock 支持 4000+ 高管实时问答，数值准确率约 99%，评估延迟降 86.8%；Qwen3-TTS 可部署实时语音克隆；Datacor 用 Quick Sight 自助分析租赁数据，覆盖 50+ 客户。OpenAI 案例显示 Proaction 借 Codex 等提升销售 60%。开源侧，HKUDS 的 CLI-Anything 获约 5 万 Star，推动软件 Agent-Native；Odoo 开源 ERP 持续受关注。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 9,
+    "news_by_category": {
+      "产品": 3,
+      "开源": 2,
+      "LLM": 3,
+      "AI": 1
+    },
+    "top_keywords": [
+      "Codex",
+      "OpenAI",
+      "Proaction",
+      "GPT-6 Astra",
+      "车队管理",
+      "CLI-Anything",
+      "CLI-Hub",
+      "AI Agent",
+      "HKUDS",
+      "Agent-Native"
+    ]
+  },
+  "generated_at": "2026-09-25T19:59:02.920332"
+}
