@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-27",
+  "summary": "今日学术界暂无新论文收录，工业界热度则集中在 Agent 基础设施与开源生态，形成鲜明对照。\n\n最值得关注的是 GitHub Trending 上的 Univer：这一 TypeScript Office SDK 本周新增约 3,928 星，累计逾 1.9 万星，并明确以“面向 AI Agent 的 Office 运行环境”为定位。它在统一运行时中提供电子表格、文档、演示、画布与关系表能力，核心包括 Canvas 渲染、公式引擎、插件化架构与浏览器/Node.js 通用 Facade API，其 Headless 模式更允许 Agent 在服务端程序化操作文档，而非仅依赖截图或文本接口。配套的 Univer Workspace 示例则演示了人与 Agent 在同一文档中协作、审阅与合并草稿的流程。\n\n跨领域看，这释放出一个信号：Agent 竞争的焦点正从模型推理能力转向可执行环境与工具层。确定性的公式引擎与渲染层，恰好为概率性的大模型提供可验证的落点；办公软件的可编程化与 Agent 原生改造，或将成为继代码编辑器之后的下一个入口争夺战场。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态聚焦开源与 Agent 基础设施。GitHub Trending 上，dream-num 的 Univer 周增约 3,928 星，累计 19,117 星。Univer 是 TypeScript Office SDK，定位为“面向 AI Agent 的 Office 运行环境”，在统一运行时中提供电子表格、文档、演示、画布、关系表及后续 PDF 能力。其核心包括 Canvas 渲染、公式引擎、插件化架构、浏览器与 Node.js 通用 Facade API，并支持 Headless 模式用于服务端和 Agent 自动化。项目还通过 Univer Workspace 等开源示例，展示人与 AI Agent 在同一文档中协作、审阅与合并草稿。整体看，办公软件正加速向可编程、Agent 原生方向演进。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 1,
+    "news_by_category": {
+      "开源": 1
+    },
+    "top_keywords": [
+      "Univer",
+      "Office SDK",
+      "AI Agent",
+      "插件化架构",
+      "TypeScript"
+    ]
+  },
+  "generated_at": "2026-09-26T19:10:54.020813"
+}
