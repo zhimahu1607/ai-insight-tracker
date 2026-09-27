@@ -1,0 +1,60 @@
+[
+  {
+    "id": "b58db5c0a7c76bd1",
+    "title": "vercel/next.js - GitHub Trending",
+    "url": "https://github.com/vercel/next.js",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-09-27T19:43:05.415697Z",
+    "summary": "Repository: vercel/next.js\nURL: https://github.com/vercel/next.js\nDescription: The React Framework\nLanguage: JavaScript\nStars: 142786\nWeekly stars: 280",
+    "content": "Repository: vercel/next.js\nURL: https://github.com/vercel/next.js\nDescription: The React Framework\nLanguage: JavaScript\nStars: 142786\nWeekly stars: 280\n\nREADME:\nNext.js\n\nGetting Started\n\nUsed by some of the world's largest companies, Next.js enables you to create full-stack web applications by extending the latest React features, and integrating powerful Rust-based JavaScript tooling for the fastest builds.\n\nVisit our Learn Next.js course to get started with Next.js.\nVisit the Next.js Showcase to see more sites built with Next.js.\n\nDocumentation\n\nVisit https://nextjs.org/docs to view the full documentation.\n\nCommunity\n\nThe Next.js community can be found on GitHub Discussions where you can ask questions, voice ideas, and share your projects with other people.\n\nTo chat with other community members, you can join the Next.js Discord server.\n\nDo note that our Code of Conduct applies to all Next.js community channels. Users are **highly encouraged** to read and adhere to it to avoid repercussions.\n\nContributing\n\nContributions to Next.js are welcome and highly appreciated. However, before you jump right into it, we would like you to review our Contribution Guidelines to make sure you have a smooth experience contributing to Next.js.\n\nGood First Issues:\n\nWe have a list of **good first issues** that contain bugs that have a relatively limited scope. This is a great place for newcomers and beginners alike to get started, gain experience, and get familiar with our contribution process.\n\nSecurity\n\nIf you believe you have found a security vulnerability in Next.js, we encourage you to **_responsibly disclose this and NOT open a public issue_**.\n\nTo participate in our Open Source Software Bug Bounty program, please email responsible.disclosure@vercel.com. We will add you to the program and provide further instructions for submitting your report.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "GitHub Trending 显示，Vercel 维护的开源 React 框架 Next.js 受到关注。仓库描述称其用于构建全栈 Web 应用，通过扩展最新 React 特性并集成基于 Rust 的 JavaScript 工具链来提升构建速度，已被全球部分大型企业采用。项目提供完整文档、GitHub Discussions、Discord 社区及贡献指南，并设有安全漏洞负责任披露和开源漏洞赏金计划。当前星标约 14.28 万，本周新增 280 星，适合需要 React 全栈开发、快速构建和活跃社区支持的团队与开发者关注。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Next.js",
+        "Vercel",
+        "React",
+        "全栈Web应用",
+        "Rust工具链"
+      ]
+    },
+    "analyzed_at": "2026-09-27T19:43:13.892375Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "80727f8df044ed80",
+    "title": "FxEmbed/FxEmbed - GitHub Trending",
+    "url": "https://github.com/FxEmbed/FxEmbed",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-09-27T19:43:05.415697Z",
+    "summary": "Repository: FxEmbed/FxEmbed\nURL: https://github.com/FxEmbed/FxEmbed\nDescription: Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others\nLanguage: TypeScript\nStars: 5495\nWeekly stars: 417",
+    "content": "Repository: FxEmbed/FxEmbed\nURL: https://github.com/FxEmbed/FxEmbed\nDescription: Fix X/Twitter and Bluesky embeds! Use multiple images, videos, polls, translations and more on Discord, Telegram and others\nLanguage: TypeScript\nStars: 5495\nWeekly stars: 417\n\nREADME:\nFxEmbed\n\nHome of FxTwitter, FixupX, and FxBluesky\n\nEmbed videos, polls, quotes, translations, & more on Discord, Telegram, and others!\n\n[build]: https://github.com/FxEmbed/FxEmbed/actions/workflows/build.yml\n[tests]: https://github.com/FxEmbed/FxEmbed/actions/workflows/tests.yml\n[license]: https://github.com/FxEmbed/FxEmbed/blob/main/LICENSE.md\n[status]: https://status.fxtwitter.com\n[crowdin]: https://crowdin.com/project/fxtwitter\n\ntwitter.com: Add fx before your twitter.com link\n\nx.com: Add fixup before your x.com link\n\nbsky.app: Add fx before your bsky.app link\n\nDocumentation\n\nAPI Reference\n\nSelf-Hosting Guide\n\nDocker\n\nFxEmbed is a Cloudflare Worker, so the Docker image runs the local Workers runtime through Wrangler rather than starting a plain Node.js server. The image uses node:24-bookworm-slim because Wrangler's workerd binary is glibc-linked and does not run reliably on Alpine/musl.\n\nBefore building, copy and edit the local configuration files if you need custom domains, branding, or credentials:\n\nBuild and run with Docker Compose:\n\nThe worker listens on http://localhost:8787. Because FxEmbed routes by the Host header, test a specific realm like this:\n\nYou can also open http://localhost:8787/ without a Host header to see the local realm prefixes.\n\nEnvironment variables from .env are bundled during the Docker build, so rebuild the image after changing domain lists or other build-time configuration:\n\nRuntime secrets such as CREDENTIAL_KEY and EXCEPTION_DISCORD_WEBHOOK can be supplied through your shell or Compose .env file. Stop the service with:\n\nLicensed under the permissive MIT license. Feel free to send a pull request!**\n\nStar History\n\nBugs or issues?\n\nFeel free to open an issue\n\nAdditional Credits\n\nMosaic Multi-image combiner by Antonio32A and improved by Syfaro, Deer Spangle, and dangered wolf\n\nEveryone else who has contributed to the main project!\n\nDisclaimer\n\nTwitter, Tweet, and X are trademarks of X Corp. This project is not affiliated in any way with X Corp or Twitter.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "FxEmbed 是一个托管在 GitHub Trending 上的 TypeScript 开源项目，主要解决 X/Twitter 与 Bluesky 链接在 Discord、Telegram 等平台嵌入显示不完整的问题。用户只需在链接前添加 fx 或 fixup 前缀，即可在聊天中展示多条图片、视频、投票、引用和翻译等富媒体内容。它是 FxTwitter、FixupX 和 FxBluesky 的官方仓库，采用 Cloudflare Worker 架构，并提供 Docker 自托管方案，镜像基于 node:24-bookworm-slim，以兼容 Wrangler 的 workerd 运行时。项目使用 MIT 许可，当前约 5495 Star，本周新增约 417。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "FxEmbed",
+        "X/Twitter",
+        "Bluesky",
+        "Cloudflare Worker",
+        "TypeScript"
+      ]
+    },
+    "analyzed_at": "2026-09-27T19:43:12.664878Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
