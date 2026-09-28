@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-29",
+  "summary": "今日 AI 领域学术侧暂无新论文收录，工业界则密集推进模型分层、基础设施标准化与生态合作。最值得关注的是模型竞争转向按任务难度分配能力：AWS Bedrock 上线 Claude Sonnet 5.5，定位路径明确的执行类任务，将需谨慎判断的工作留给 Opus 5.5；OpenAI 披露 GPT-6 Astra 在 Basis 的 50 工作表税务工作簿中速度翻倍、意图理解更准。二者共同指向成本与可靠性优先的工程逻辑。基础设施层面，AWS 连续发布 vLLM-Omni 在 SageMaker AI 的部署实践，覆盖 Qwen3-TTS 实时语音及 FLUX.2、Wan2.1-VACE 图像视频生成，统一为 OpenAI 兼容 API，并推出代理式合成监控与 Textract 跨账户管理，表明代理与多模态能力正走向可运维。生态方面，OpenAI 扩大与 Lenfest Institute 合作，微软研究院亚洲新加坡实验室成立一年。跨领域联系在于：模型自检与代理式监控形成闭环，基础设施标准化降低垂直应用门槛，公共部门与区域人才投入将反哺下一轮落地。总体看，AI 竞争已进入以成本、可靠性与生态协同为核心的工业化阶段。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 领域动态总结**\n\n**模型与产品**\nAWS 在 Bedrock 上线 Anthropic 的 Claude Sonnet 5.5，主打编码与知识工作的成本与速度优化，并支持需求自检与文档生成，官方建议将其用于路径明确的执行类任务，将需谨慎判断的工作交给 Opus 5.5。OpenAI 公布案例显示，GPT-6 Astra 在会计自动化公司 Basis 的 50 工作表税务工作簿任务中，处理速度达到上一代的两倍，意图理解也更准确。\n\n**基础设施与工程**\nAWS 连续发布 vLLM-Omni 在 SageMaker AI 上的部署实践，覆盖实时语音（Qwen3-TTS）以及图像与视频生成（FLUX.2、Wan2.1-VACE），通过同一 DLC 镜像提供实时与异步端点，并统一为 OpenAI 兼容 API。此外，AWS 介绍了基于 Nova Act 与 Bedrock AgentCore 的代理式合成监控方案，以及跨账户自动化管理 Textract 适配器生命周期的基础设施实践。\n\n**生态与行业合作**\nOpenAI 扩大与 Lenfest Institute 的合作，提供 500 万美元资金及同额软件额度与工程支持，并启动 Codex Originals 用户案例征集。微软研究院亚洲在新加坡的东南亚首个实验室成立一周年，聚焦新一代模型与智能体、领域 AI 应用及人才培养，并与新加坡政府及 NUS、NTU 展开合作。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 9,
+    "news_by_category": {
+      "行业": 2,
+      "产品": 3,
+      "LLM": 2,
+      "AI": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "AWS",
+      "vLLM-Omni",
+      "Lenfest Institute",
+      "Lenfest AI Collaborative",
+      "资金支持",
+      "工程支持",
+      "Codex",
+      "Codex Originals",
+      "开发者社区"
+    ]
+  },
+  "generated_at": "2026-09-28T21:48:50.103864"
+}
