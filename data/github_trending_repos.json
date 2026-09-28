@@ -105,8 +105,8 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 3461,
-      "last_seen_at": "2026-09-24T19:56:37.853048+00:00",
-      "last_seen_stars": 8326,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 8555,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -270,8 +270,8 @@
       "url": "https://github.com/anthropics/financial-services",
       "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
       "first_seen_stars": 36240,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 37835,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 38038,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -666,8 +666,8 @@
       "url": "https://github.com/cloudflare/quiche",
       "first_seen_at": "2026-09-21T20:23:16.671044+00:00",
       "first_seen_stars": 12305,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 12648,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 12687,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -677,8 +677,8 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "first_seen_at": "2026-09-21T20:23:16.671044+00:00",
       "first_seen_stars": 18872,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 22286,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 22700,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -831,8 +831,8 @@
       "url": "https://github.com/davila7/claude-code-templates",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 29543,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 31984,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 32071,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -842,8 +842,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 16018,
-      "last_seen_at": "2026-09-07T19:50:19.600585+00:00",
-      "last_seen_stars": 20526,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 43708,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -990,6 +990,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "elastic/elasticsearch": {
+      "repo_id": "elastic/elasticsearch",
+      "full_name": "elastic/elasticsearch",
+      "url": "https://github.com/elastic/elasticsearch",
+      "first_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "first_seen_stars": 78044,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 78044,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "embabel/embabel-agent": {
       "repo_id": "embabel/embabel-agent",
       "full_name": "embabel/embabel-agent",
@@ -1106,8 +1117,8 @@
       "url": "https://github.com/FxEmbed/FxEmbed",
       "first_seen_at": "2026-09-27T19:43:05.415697+00:00",
       "first_seen_stars": 5495,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 5495,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 5547,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1282,8 +1293,8 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "first_seen_at": "2026-09-25T19:58:32.481623+00:00",
       "first_seen_stars": 50523,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 50724,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 50877,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2217,8 +2228,8 @@
       "url": "https://github.com/paperclipai/paperclip",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 78249,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 89395,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 92600,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2393,8 +2404,8 @@
       "url": "https://github.com/pytorch/pytorch",
       "first_seen_at": "2026-09-23T19:37:50.223439+00:00",
       "first_seen_stars": 103203,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 103415,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 103463,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2437,8 +2448,8 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "first_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "first_seen_stars": 43106,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 59105,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 60329,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2569,8 +2580,8 @@
       "url": "https://github.com/stablyai/orca",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 8754,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 79453,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 80636,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2723,8 +2734,8 @@
       "url": "https://github.com/Tencent/WeKnora",
       "first_seen_at": "2026-09-11T19:06:58.830198+00:00",
       "first_seen_stars": 22315,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 30566,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 30927,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2745,8 +2756,8 @@
       "url": "https://github.com/TencentCloud/Octop",
       "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
       "first_seen_stars": 4614,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 5246,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 5503,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2838,6 +2849,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "trycua/cua": {
+      "repo_id": "trycua/cua",
+      "full_name": "trycua/cua",
+      "url": "https://github.com/trycua/cua",
+      "first_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "first_seen_stars": 26845,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 26845,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "tt-a1i/archify": {
       "repo_id": "tt-a1i/archify",
       "full_name": "tt-a1i/archify",
@@ -2921,8 +2943,8 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "first_seen_at": "2026-09-24T19:56:37.853048+00:00",
       "first_seen_stars": 27646,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 36943,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 40842,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2943,8 +2965,8 @@
       "url": "https://github.com/vercel/next.js",
       "first_seen_at": "2026-09-27T19:43:05.415697+00:00",
       "first_seen_stars": 142786,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 142786,
+      "last_seen_at": "2026-09-28T21:48:19.784640+00:00",
+      "last_seen_stars": 142852,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
