@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-30",
+  "summary": "今日学术界暂缓，无新论文收录；工业界则集中释放信号。OpenAI在DevDay 2026推出二十余项更新，GPT-6 Astra与低价版GPT-6.1 Sol形成\"旗舰+走量\"双轨：Sol以约五分之一单价提供接近旗舰能力，已登陆Amazon Bedrock；xAI的Grok 4.7同步上架，具备50万token上下文与可调推理强度。模型能力的商品化进一步加速，竞争重心正从参数规模转向单位token性价比与分发渠道。\n\n最值得关注的三点：主动型助手dots将智能体从被动响应推向持续后台工作；微软研究院与Broad Institute合作的生物AI系统Quine，用于加速胰腺癌化合物筛选，显示基础模型正深入科研发现环节；OpenAI发布前沿训练安全案例指南，并就澳大利亚政府网站相关事件致歉，安全治理与商业扩张并行推进。\n\n跨领域看，AWS的Amazon Quick提示工程指南与合同智能平台方案、Condé Nast基于Bedrock的多模态视频发现系统（检索时间下降99.2%），指向同一逻辑：底层模型趋同后，价值正向垂直工作流与检索效率迁移，云平台则成为多厂商模型的聚合出口。",
+  "category_summaries": {},
+  "news_summary": "今日AI动态聚焦模型迭代、开发者生态与行业落地。OpenAI在DevDay 2026发布超20项更新，包括GPT-6 Astra、低价版GPT-6.1 Sol及主动型助手dots，并发布前沿训练安全案例指南，同时就澳大利亚政府网站事件致歉。GPT-6.1 Sol以Astra约五分之一token单价提供接近旗舰能力，已登陆Amazon Bedrock；xAI Grok 4.7亦上线Bedrock，具备50万token上下文和可调推理强度。微软研究院推出生物AI系统Quine，与Broad Institute合作加速胰腺癌化合物筛选。AWS发布Amazon Quick提示工程指南与合同智能平台方案；Condé Nast基于Bedrock构建多模态视频发现系统，检索时间降99.2%。大模型API价格竞争、智能体专业工作流与安全治理成为焦点。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 12,
+    "news_by_category": {
+      "产品": 3,
+      "LLM": 3,
+      "AI": 5,
+      "行业": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Amazon Bedrock",
+      "Amazon Quick",
+      "Codex",
+      "GPT-6.1 Sol",
+      "提示工程",
+      "CRISPE",
+      "DevDay 2026",
+      "GPT-6 Astra",
+      "ChatGPT"
+    ]
+  },
+  "generated_at": "2026-09-29T20:40:03.871227"
+}
