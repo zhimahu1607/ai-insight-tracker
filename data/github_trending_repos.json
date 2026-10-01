@@ -99,6 +99,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "agent-substrate/substrate": {
+      "repo_id": "agent-substrate/substrate",
+      "full_name": "agent-substrate/substrate",
+      "url": "https://github.com/agent-substrate/substrate",
+      "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "first_seen_stars": 4090,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 4090,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "akitaonrails/ai-memory": {
       "repo_id": "akitaonrails/ai-memory",
       "full_name": "akitaonrails/ai-memory",
@@ -149,8 +160,8 @@
       "url": "https://github.com/alirezarezvani/claude-skills",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 21649,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 27034,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 27162,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -226,8 +237,8 @@
       "url": "https://github.com/anthropics/claude-code-action",
       "first_seen_at": "2026-09-30T20:44:30.784991+00:00",
       "first_seen_stars": 9271,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 9271,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 9317,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -281,8 +292,8 @@
       "url": "https://github.com/anthropics/financial-services",
       "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
       "first_seen_stars": 36240,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 38351,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 38463,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -842,8 +853,8 @@
       "url": "https://github.com/davila7/claude-code-templates",
       "first_seen_at": "2026-07-15T17:25:53.413321+00:00",
       "first_seen_stars": 29543,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 32228,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 32268,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -853,8 +864,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 16018,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 50251,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 51294,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -974,8 +985,8 @@
       "url": "https://github.com/dream-num/univer",
       "first_seen_at": "2026-09-26T19:10:33.218585+00:00",
       "first_seen_stars": 19117,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 22158,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 22230,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1100,6 +1111,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "flutter/flutter": {
+      "repo_id": "flutter/flutter",
+      "full_name": "flutter/flutter",
+      "url": "https://github.com/flutter/flutter",
+      "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "first_seen_stars": 179195,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 179195,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "fmtlib/fmt": {
       "repo_id": "fmtlib/fmt",
       "full_name": "fmtlib/fmt",
@@ -1128,8 +1150,8 @@
       "url": "https://github.com/FxEmbed/FxEmbed",
       "first_seen_at": "2026-09-27T19:43:05.415697+00:00",
       "first_seen_stars": 5495,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 5604,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 5628,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1304,8 +1326,8 @@
       "url": "https://github.com/HKUDS/CLI-Anything",
       "first_seen_at": "2026-09-25T19:58:32.481623+00:00",
       "first_seen_stars": 50523,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 51116,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 51211,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2239,8 +2261,8 @@
       "url": "https://github.com/paperclipai/paperclip",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 78249,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 95244,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 95777,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2272,8 +2294,8 @@
       "url": "https://github.com/pbakaus/impeccable",
       "first_seen_at": "2026-07-12T17:10:11.124967+00:00",
       "first_seen_stars": 45891,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 72957,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 73578,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2459,8 +2481,8 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "first_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "first_seen_stars": 43106,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 62095,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 62384,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2767,8 +2789,8 @@
       "url": "https://github.com/TencentCloud/Octop",
       "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
       "first_seen_stars": 4614,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 6062,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 6226,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2802,6 +2824,17 @@
       "first_seen_stars": 23642,
       "last_seen_at": "2026-09-16T19:30:32.365611+00:00",
       "last_seen_stars": 37371,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "tile-ai/tilelang": {
+      "repo_id": "tile-ai/tilelang",
+      "full_name": "tile-ai/tilelang",
+      "url": "https://github.com/tile-ai/tilelang",
+      "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "first_seen_stars": 8068,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 8068,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2954,8 +2987,8 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "first_seen_at": "2026-09-24T19:56:37.853048+00:00",
       "first_seen_stars": 27646,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 43865,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 44255,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2976,8 +3009,8 @@
       "url": "https://github.com/vercel/next.js",
       "first_seen_at": "2026-09-27T19:43:05.415697+00:00",
       "first_seen_stars": 142786,
-      "last_seen_at": "2026-09-30T20:44:30.784991+00:00",
-      "last_seen_stars": 142941,
+      "last_seen_at": "2026-10-01T20:58:25.407908+00:00",
+      "last_seen_stars": 142983,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
