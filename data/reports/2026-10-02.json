@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-02",
+  "summary": "今日共收录 0 篇论文，12 条热点资讯。热门领域：无。热门关键词：无。",
+  "category_summaries": {},
+  "news_summary": "",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 12,
+    "news_by_category": {
+      "ai": 9,
+      "opensource": 3
+    },
+    "top_keywords": []
+  },
+  "generated_at": "2026-10-01T21:22:43.780152"
+}
