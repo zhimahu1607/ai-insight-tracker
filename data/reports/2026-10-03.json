@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-03",
+  "summary": "今日学术侧无论文收录，工业界动态则指向同一方向：竞争重心正从能力展示转向工程化落地与可管控的生产部署。\n\nOpenAI 发布 GPT-6 系列选型与落地指南，覆盖选型、推理强度调优、提示词与工具编排，实质是为团队提供从试验到生产的标准作业流程。企业侧同步出现量化案例：Chatham Financial 用 Codex 与 GPT-5.6 将交易验证从 30 分钟压至 4 分钟，The Den 用 ChatGPT Work 把资助申请撰写从 3 天缩到 2 小时，AI 已切入合规与行政文书等高摩擦环节。基础设施层亦在补位：Google 开源声明式智能体编排运行时 AX，AWS 推出由规则引擎判定、模型仅负责翻译的合规扫描模式，并以多轮强化学习微调搜索代理，BrowseComp-Plus nDCG@10 提升 23.7%。\n\n跨领域的信号是：确定性与概率性正走向分工——编排、合规判定与审计交还规则与声明式描述，模型专注语义理解与生成。这既解释了企业案例为何见效快，也预示下一阶段竞争将围绕可治理的智能体基础设施展开。",
+  "category_summaries": {},
+  "news_summary": "今日动态集中在模型工程化与企业落地两条主线。\n\n**模型侧**：OpenAI 发布 GPT-6 系列选型与落地指南，覆盖模型选择、推理强度调优、提示词与技能设计、工具编排四个环节，推动团队从试验走向生产。\n\n**应用侧**：OpenAI 披露两则案例——Chatham Financial 用 Codex 与 GPT-5.6 将交易验证从 30 分钟压至 4 分钟内；社交俱乐部 The Den 用 ChatGPT Work 每周节省 10–15 小时，资助申请材料撰写由 3 天缩至 2 小时，显示 AI 正切入行政与合规文书流程。\n\n**基础设施与开源侧**：Google 开源声明式智能体编排运行时 AX（Go 编写，约 1.29 万 star），提供 Task、Workspace、Model 三个原语，面向集群级 agent 负载。AWS 密集发布方案：以规则引擎判定、模型仅负责翻译的 Adjudicated Query 合规扫描模式；AgentCore 为 Claude Desktop 提供安全联网搜索；SageMaker 多轮强化学习微调搜索代理，BrowseComp-Plus nDCG@10 提升 23.7%。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 9,
+    "news_by_category": {
+      "LLM": 1,
+      "产品": 4,
+      "开源": 2,
+      "AI": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "MCP",
+      "Amazon Bedrock AgentCore",
+      "GPT-6",
+      "推理强度",
+      "提示词工程",
+      "生产部署",
+      "Codex",
+      "GPT-5.6",
+      "Chatham Financial"
+    ]
+  },
+  "generated_at": "2026-10-02T20:37:55.885370"
+}
