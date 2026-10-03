@@ -1,0 +1,89 @@
+[
+  {
+    "id": "400163d7e89d8aac",
+    "title": "Effect-TS/effect - GitHub Trending",
+    "url": "https://github.com/Effect-TS/effect",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-10-03T19:09:56.949757Z",
+    "summary": "Repository: Effect-TS/effect\nURL: https://github.com/Effect-TS/effect\nDescription: Build production-ready applications in TypeScript\nLanguage: TypeScript\nStars: 16762\nWeekly stars: 466",
+    "content": "Repository: Effect-TS/effect\nURL: https://github.com/Effect-TS/effect\nDescription: Build production-ready applications in TypeScript\nLanguage: TypeScript\nStars: 16762\nWeekly stars: 466\n\nREADME:\nEffect\n\nEffect is a library for building robust, maintainable, type-safe, and production grade applications in TypeScript. It helps you handle the hard problems at scale: typed errors, dependency injection, structured concurrency, scheduling, tracing, and unified schema validation.\n\nEffect 4.x is a long-term support (LTS) release.** If you are upgrading from Effect 3.x, follow the migration guide.\n\nInstallation\n\nRequirements\n\nTypeScript 5.9 or newer.** TypeScript 7 is recommended for the best performance and compatibility with Effect's TypeScript tooling.\nNode.js 18 or newer** is the general minimum for running Effect on Node.js. Some integration packages require newer runtimes; for example, @effect/sql-sqlite-node requires Node.js 22.16 or newer.\nStrict type-checking:** the strict flag must be enabled in your tsconfig.json.\n\nLinks\n\nWebsite: documentation, guides, and news\nDiscord: ask questions, share what you're building, and talk to the core team\nCommunity: meetups and events, or bring Effect to your own\nIssues: bug reports and feature requests\nJobs: companies hiring Effect developers\nFollow us on X, Bluesky, and LinkedIn\n\nLet's talk\n\nWhether your team is considering Effect, rolling it out, or already running it in production, we'd love to hear from you: what you're building, what works, and what you need from Effect next.\n\nTalk to the maintainers.** Introduce your team on Discord or email contact@effectful.co. We're happy to connect privately on Slack or Discord for feedback and help with adoption.\nProduction support.** We're exploring how to better support teams running Effect in production. If your organization has specific support needs, let's discuss them.\nAdoption help.** Our adoption partners offer implementation, consulting, team extension, training, and commercial support.\n\nFeedback from teams using and evaluating Effect directly shapes what we stabilize and build next.\n\nLong-term support\n\nTeams depend on Effect for systems they expect to run for years. Effect 4.x is a long-term support (LTS) release with the following guarantees:\n\nAt least three years of support, including bug and security fixes.\nBug fixes for one year after the next major version is released.\nSecurity fixes for two years after the next major version is released.\n\nStable APIs reserve breaking changes for major releases. APIs marked unstable may change in minor releases, and experimental APIs may change in patch releases.\n\nEffect v3\n\nThe Effect v3 source code is available on the v3 branch, which is also where issues and pull requests meant for Effect v3 should be targeted. To upgrade, see the migration guide.\n\nPackages\n\nThis monorepo contains the core effect package alongside integration packages that extend it. All packages listed below are released together with synchronized versions.\n\n| Package | Description | API Reference |\n| --------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------ |\n| effect | The core package | docs |\n| @effect/platform-browser | Platform services for the browser | docs |\n| @effect/platform-bun | Platform services for Bun | docs |\n| @effect/platform-deno | Platform services for Deno | docs |\n| @effect/platform-node | Platform services for Node.js | docs |\n| @effect/platform-node-shared | Shared services for Node.js-compatible runtimes | docs |\n| @effect/sql-clickhouse | SQL client for ClickHouse | docs |\n| @effect/sql-d1 | SQL client for Cloudflare D1 | docs |\n| @effect/sql-libsql | SQL client for libSQL | docs |\n| @effect/sql-mssql | SQL client for Microsoft SQL Server | docs |\n| @effect/sql-mysql2 | SQL client for MySQL | docs |\n| @effect/sql-pg | SQL client for PostgreSQL | docs |\n| @effect/sql-pglite | SQL client for PGlite | docs |\n| @effect/sql-sqlite-bun | SQL client for SQLite via bun:sqlite | docs |\n| @effect/sql-sqlite-do | SQL client for Cloudflare Durable Objects SQLite | docs |\n| @effect/sql-sqlite-node | SQL client for SQLite via node:sqlite | docs |\n| @effect/sql-sqlite-react-native | SQL client for SQLite in React Native | docs |\n| @effect/sql-sqlite-wasm | SQL client for SQLite compiled to WebAssembly | docs |\n| @effect/ai-anthropic | Anthropic provider for the Effect AI modules | docs |\n| @effect/ai-openai | OpenAI provider for the Effect AI modules | docs |\n| @effect/ai-cloudflare | Cloudflare decision provider for the Effect AI modules | docs |\n| @effect/ai-typesafe | TypeSafe decision provider for the Effect AI modules | docs |\n| @effect/ai-openai-compat | OpenAI-compatible API provider for the Effect AI modules | docs |\n| @effect/ai-openrouter | OpenRouter provider for the Effect AI modules | docs |\n| @effect/atom-react | React bindings for Effect Atom | docs |\n| @effect/atom-solid | SolidJS bindings for Effect Atom | docs |\n| @effect/atom-vue | Vue bindings for Effect Atom | docs |\n| @effect/opentelemetry | OpenTelemetry integration | docs |\n| @effect/vitest | Helpers for testing with Vitest | docs |\n| @effect/docgen | Documentation generator for Effect projects | docs |\n| @effect/doctest | Runs JSDoc examples as Vitest tests | docs |\n| @effect/openapi-generator | Generate Effect code from OpenAPI specifications | docs |\n\nLicense\n\nMIT",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "GitHub Trending 显示，Effect-TS/effect 仓库受到关注，当前约 1.67 万星、周增 466 星。该项目是用于 TypeScript 的生产级应用开发库，提供类型化错误、依赖注入、结构化并发、调度、追踪和统一 Schema 校验等能力，帮助处理大规模应用中的复杂问题。README 指出 Effect 4.x 为长期支持版本，承诺至少三年支持，并包含覆盖 Node.js、Bun、Deno、浏览器、多种 SQL 及 AI 提供商的集成包。它适合需要高可靠性与类型安全的 TypeScript 后端和全栈项目。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Effect-TS",
+        "TypeScript",
+        "类型安全",
+        "Effect 4.x",
+        "长期支持"
+      ]
+    },
+    "analyzed_at": "2026-10-03T19:10:05.508247Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "5b83cb78c6cf034d",
+    "title": "longbridge/gpui-kit - GitHub Trending",
+    "url": "https://github.com/longbridge/gpui-kit",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-10-03T19:09:56.949757Z",
+    "summary": "Repository: longbridge/gpui-kit\nURL: https://github.com/longbridge/gpui-kit\nDescription: Rust GUI components for building fantastic cross-platform desktop application by using GPUI.\nLanguage: Rust\nStars: 15806\nWeekly stars: 877",
+    "content": "Repository: longbridge/gpui-kit\nURL: https://github.com/longbridge/gpui-kit\nDescription: Rust GUI components for building fantastic cross-platform desktop application by using GPUI.\nLanguage: Rust\nStars: 15806\nWeekly stars: 877\n\nREADME:\nGPUI Kit\n\nEnglish | 简体中文\n\nBuild fantastic, high-performance desktop apps with Rust and GPUI.\n\nGPUI Kit is a comprehensive Rust desktop application framework. It combines a\nproduction-ready UI system with application-grade data, layout, and editing\ncapabilities, all built on a reusable foundation of behavior, state, and\ninfrastructure. GPUI Kit ships 75+ documented components and primitives,\nWebAssembly support, AccessKit accessibility, UI integration testing, and an\noptional JavaScript extension runtime.\n\nDocumentation:\n\ngpui-kit pins the matching GPUI release and re-exports GPUI, base, component,\nand assets, so a Rust application lists a single dependency. JavaScript extension\nhosts add gpui-shell separately; gpui-component-shell supplies the styled catalog.\n\nSee the executable application recipe and AI-assisted development acceptance checks for a tested starting point and verification commands.\n\nFeatures\n\n75+ Components and Primitives**: Forms, navigation, overlays, data display, editing, feedback, and layout, with polished interactions and productive defaults.\nProduction Ready**: Used to build Longbridge Pro from day one and continuously refined in a publicly shipped commercial desktop application.\nWebAssembly**: Run applications and the same component showcases on the web with wasm32-unknown-unknown.\nAccessibility**: AccessKit roles, names, states, relationships, and actions are built into the interaction layer and covered by tests.\nUI Integration Testing**: Render real components in headless windows, drive pointer and keyboard input, and assert state, focus, layout, and accessibility.\nNative Feel**: Modern controls inspired by macOS and Windows, backed by semantic themes and multiple sizes.\n120 FPS**: GPU-accelerated interfaces that remain smooth under load.\nData Tables**: Virtual scrolling, fixed and resizable columns, sorting, and cell selection across hundreds of thousands of rows.\nVirtual Lists**: Render only the visible range, including lists whose items have different sizes.\nCode Editor**: Stable performance at 200K lines with Tree-sitter highlighting and LSP diagnostics, completion, and hover.\nDock Layout**: Resizable panels, draggable tabs, nested splits, and edge docks — all serializable.\nRich Content**: Native Markdown and HTML rendering, syntax highlighting, and built-in charts.\nDesign Freedom**: Use the complete visual system or build your own on the behavior and infrastructure in gpui-base.\nJavaScript Extensions**: gpui-shell lets a shipped Rust host load panels and business logic as scripts, with every capability granted explicitly.\nCross Platform**: Ship one Rust codebase to macOS, Windows, and Linux.\n\nFramework Architecture\n\nThree layers. One ecosystem.\n\nUse gpui-component to keep the application coherent with one complete visual\nand interaction system. Use gpui-base when your product needs to create and\nown that system itself. Use gpui-shell when the application should be\nextensible in JavaScript after it ships.\n\n| **gpui-component** | **gpui-base** | **gpui-shell** |\n| -------------------------------- | --------------------------------------------- | ------------------------------------------ |\n| Complete, styled components | Unstyled behavior and infrastructure | JavaScript runtime hosted by Rust |\n| Productive defaults with theming | Full control over structure and visual design | Capabilities granted one at a time |\n| Best for building applications | Best for building design systems | Best for plugins and scripted applications |\n\nBehavior belongs to the foundation. Presentation belongs to the application.**\n\nUse **gpui-component** when you want polished controls ready to ship. Build on\ngpui-base** when your application should own its component source, layout,\nstyling, and motion while reusing difficult interaction behavior. Add\ngpui-shell** when contributors should extend the product without a fork or\na release.\n\nThe layering follows the same separation that makes the\nshadcn ecosystem flexible:\n\n| GPUI Kit ecosystem | Web ecosystem |\n| ------------------------------------ | ------------------------------- |\n| GPUI | HTML + Tailwind CSS |\n| gpui-base | Base UI |\n| gpui-component | shadcn's styled component layer |\n\nExplore the architecture →\n\nShowcase\n\nGPUI Kit has powered Longbridge Pro\nfrom day one. The framework is extracted from the demands of a publicly shipped\ncommercial desktop application rather than designed in isolation.\n\nGPUI provides the rendering foundation. Longbridge provides the production foundation.**\n\nUsage\n\ngpui-kit always brings in GPUI and gpui-base; gpui-component and the\ndefault icon set are on by default. Turn default\nfeatures off to keep only the layers you use. The gpui-component features (inspector, decimal,\ntree-sitter, and each tree-sitter- ) are available under the same\nnames.\n\nBasic Example\n\ngpui_kit::open_window is the application window entry point and always mounts a Base Root. Component initialization registers styled window facilities; Cargo features do not select a different root type.\n\nIcons\n\nThe default assets feature bundles the Lucide icon set\nas gpui-kit-assets; pass it to the application with\ngpui_kit::application().with_assets(gpui_kit::assets::Assets). To ship your\nown icons instead, leave that feature out and name the SVG files as defined in\nIconName.\n\nSkills for AI Coding Agents\n\nInstall the GPUI Kit skills for your AI coding agent (Cursor, Claude Code, Gemini CLI, Codex, etc.):\n\n| Skill | Description |\n| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |\n| gpui-kit | Setup, component catalog, usage patterns, GPUI mechanics (elements, entities, async, focus, actions, tests), and the Coding Guides. |\n| gpui-kit-design-guides | The Design Guides: layout, spacing, hierarchy, interaction states, overlays, and interface copy. |\n\nDevelopment\n\nDesktop Gallery (Story)\n\nThe story crate is a gallery application that showcases all available components. Run it with:\n\nExamples\n\nSome larger examples reuse the story gallery components and run as standalone packages:\n\nThe examples directory also contains standalone examples, each focused on a single feature. Each example is a separate crate, run them with cargo run -p :\n\nCheck out CONTRIBUTING.md for more details.\n\nCompare to others\n\nSee the comparison with Iced, egui and Qt 6 on the site.\n\nLicense\n\nSoftware source and documentation code examples: Apache-2.0.\n\nDocumentation prose and original illustrations in the Docs, Base, Component, and Shell sections (including Chinese translations) for which GPUI Kit holds licensing rights are also offered under CC BY 4.0. When copying or adapting that material, credit **GPUI Kit**, link to the source page and CC BY 4.0 license, and indicate changes. Existing Apache-2.0 permissions remain; earlier revisions retain their prior terms, and third-party contributions keep their own licenses unless separately authorized. Using facts or ideas without copying protected expression does not require attribution under CC BY 4.0.\n\nBuilt on GPUI, the UI framework from Zed Industries, also Apache-2.0. The gpui-pre-* crates are snapshots of it, published with Zed's license and notices intact.\nUI design based on shadcn/ui, some from Reui.\nIcons from Lucide.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "longbridge/gpui-kit 是长桥（Longbridge）开源的 Rust 桌面应用框架，基于 Zed Industries 的 GPUI 渲染层构建，已用于其商业桌面应用 Longbridge Pro。框架提供 75+ 文档化组件与原语，覆盖表单、数据表格、虚拟列表、代码编辑器、Dock 布局及 Markdown/HTML 渲染，并支持 WebAssembly、AccessKit 无障碍与 UI 集成测试，还可加载 JavaScript 扩展。整体分为 gpui-component、gpui-base、gpui-shell 三层，分别对应成品组件库、自建设计系统与脚本扩展能力，一套代码即可跨 macOS、Windows、Linux 发布。仓库现有约 1.58 万 stars，本周新增 877。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "GPUI Kit",
+        "Rust",
+        "跨平台桌面应用",
+        "开源框架",
+        "Longbridge"
+      ]
+    },
+    "analyzed_at": "2026-10-03T19:10:05.630295Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "313f5b1e67ddc488",
+    "title": "HunxByts/GhostTrack - GitHub Trending",
+    "url": "https://github.com/HunxByts/GhostTrack",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-10-03T19:09:56.949757Z",
+    "summary": "Repository: HunxByts/GhostTrack\nURL: https://github.com/HunxByts/GhostTrack\nDescription: Useful tool to track location or mobile number\nLanguage: Python\nStars: 16813\nWeekly stars: 1536",
+    "content": "Repository: HunxByts/GhostTrack\nURL: https://github.com/HunxByts/GhostTrack\nDescription: Useful tool to track location or mobile number\nLanguage: Python\nStars: 16813\nWeekly stars: 1536\n\nREADME:\nGhostTrack\nUseful tool to track location or mobile number, so this tool can be called osint or also information gathering\n\nNew update :\n\nInstalation on Linux (deb)\n\nInstalation on Termux\n\nUsage Tool\n\nDisplay on the menu\n\non the IP Track menu, you can combo with the seeker tool to get the target IP\n:zap: Install Seeker :\nGet Seeker\n\nDisplay on the menu\n\non this menu you can search for information from the target phone number\n\nDisplay on the menu\n\non this menu you can search for information from the target username on social media\n\n:zap: Author :\nHunxByts",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "GitHub Trending 项目 HunxByts/GhostTrack 是用 Python 编写的开源情报（OSINT）工具，README 称其可用于追踪位置或手机号码，并定位为信息收集工具。近期更新包括支持 Linux（deb）和 Termux 安装。菜单功能涵盖 IP 追踪（可结合 Seeker 获取目标 IP）、手机号码信息查询和社交媒体用户名信息搜索。该项目已获约 1.68 万 Stars，周增 1536，反映开源 OSINT/信息收集工具受关注。",
+      "category": "开源",
+      "sentiment": "neutral",
+      "keywords": [
+        "GhostTrack",
+        "OSINT",
+        "Python",
+        "位置追踪",
+        "信息收集"
+      ]
+    },
+    "analyzed_at": "2026-10-03T19:10:06.141662Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

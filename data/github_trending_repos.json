@@ -160,8 +160,8 @@
       "url": "https://github.com/alirezarezvani/claude-skills",
       "first_seen_at": "2026-07-08T17:47:33.106467+00:00",
       "first_seen_stars": 21649,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 27276,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 27454,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -864,8 +864,8 @@
       "url": "https://github.com/debpalash/VoiceStudio",
       "first_seen_at": "2026-09-03T19:15:18.017629+00:00",
       "first_seen_stars": 16018,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 51808,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 52461,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1012,6 +1012,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "effect-ts/effect": {
+      "repo_id": "effect-ts/effect",
+      "full_name": "Effect-TS/effect",
+      "url": "https://github.com/Effect-TS/effect",
+      "first_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "first_seen_stars": 16762,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 16762,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "elastic/elasticsearch": {
       "repo_id": "elastic/elasticsearch",
       "full_name": "elastic/elasticsearch",
@@ -1117,8 +1128,8 @@
       "url": "https://github.com/flutter/flutter",
       "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
       "first_seen_stars": 179195,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 179248,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 179297,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1293,8 +1304,8 @@
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "first_seen_at": "2026-08-19T16:39:37.830272+00:00",
       "first_seen_stars": 110124,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 128068,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 128230,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1326,8 +1337,8 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 47607,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 55818,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 56246,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1427,6 +1438,17 @@
       "first_seen_stars": 3753,
       "last_seen_at": "2026-09-13T18:53:21.613250+00:00",
       "last_seen_stars": 3977,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "hunxbyts/ghosttrack": {
+      "repo_id": "hunxbyts/ghosttrack",
+      "full_name": "HunxByts/GhostTrack",
+      "url": "https://github.com/HunxByts/GhostTrack",
+      "first_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "first_seen_stars": 16813,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 16813,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1779,6 +1801,17 @@
       "first_seen_stars": 13590,
       "last_seen_at": "2026-07-05T17:22:16.265855+00:00",
       "last_seen_stars": 13795,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "longbridge/gpui-kit": {
+      "repo_id": "longbridge/gpui-kit",
+      "full_name": "longbridge/gpui-kit",
+      "url": "https://github.com/longbridge/gpui-kit",
+      "first_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "first_seen_stars": 15806,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 15806,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2250,8 +2283,8 @@
       "url": "https://github.com/pablostanley/yoinks",
       "first_seen_at": "2026-10-02T20:37:27.432079+00:00",
       "first_seen_stars": 3425,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 3425,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 3784,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2272,8 +2305,8 @@
       "url": "https://github.com/Panniantong/Agent-Reach",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 44816,
-      "last_seen_at": "2026-09-22T19:42:05.155250+00:00",
-      "last_seen_stars": 84750,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 89640,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2283,8 +2316,8 @@
       "url": "https://github.com/paperclipai/paperclip",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 78249,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 96227,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 96665,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2316,8 +2349,8 @@
       "url": "https://github.com/pbakaus/impeccable",
       "first_seen_at": "2026-07-12T17:10:11.124967+00:00",
       "first_seen_stars": 45891,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 74212,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 75067,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2459,8 +2492,8 @@
       "url": "https://github.com/pytorch/pytorch",
       "first_seen_at": "2026-09-23T19:37:50.223439+00:00",
       "first_seen_stars": 103203,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 103621,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 103667,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2503,8 +2536,8 @@
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "first_seen_at": "2026-07-24T17:49:34.386089+00:00",
       "first_seen_stars": 43106,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 62665,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 63029,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2811,8 +2844,8 @@
       "url": "https://github.com/TencentCloud/Octop",
       "first_seen_at": "2026-09-22T19:42:05.155250+00:00",
       "first_seen_stars": 4614,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 6371,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 6554,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2855,8 +2888,8 @@
       "url": "https://github.com/tile-ai/tilelang",
       "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
       "first_seen_stars": 8068,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 8235,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 8283,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -3009,8 +3042,8 @@
       "url": "https://github.com/vectorize-io/hindsight",
       "first_seen_at": "2026-09-24T19:56:37.853048+00:00",
       "first_seen_stars": 27646,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 44631,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 45011,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -3031,8 +3064,8 @@
       "url": "https://github.com/vercel/next.js",
       "first_seen_at": "2026-09-27T19:43:05.415697+00:00",
       "first_seen_stars": 142786,
-      "last_seen_at": "2026-10-02T20:37:27.432079+00:00",
-      "last_seen_stars": 142997,
+      "last_seen_at": "2026-10-03T19:09:56.949757+00:00",
+      "last_seen_stars": 143064,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
