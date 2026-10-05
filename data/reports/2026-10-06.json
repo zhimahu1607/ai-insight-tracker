@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-06",
+  "summary": "今日学术侧无新论文收录，工业界则沿生成式 AI 商业化与企业级合规基建两条主线并行推进。\n\nOpenAI 的动向最具信号意义：ChatGPT 引入全新视觉广告格式，并同步扩展归因与效果衡量工具，意味着其收入结构正从单一订阅向广告变现延伸；同时发布面向欧盟文本溯源规则的水印方案，检测权限优先向研究人员开放，试图在监管透明度与防滥用之间取得平衡。变现提速与合规义务收紧，正在同一产品内同时发生。\n\nAWS 则把重心放在企业级落地：Claude Opus 5.5 与 Sonnet 5.5 经 Amazon Bedrock 上线 GovCloud，Sonnet 5 持有 FedRAMP Class D 及 DoD IL4/IL5 认证；同时补齐 SageMaker 推理优化智能体、Bedrock 知识库多跳检索与 Trace 流式输出、AgentCore 多智能体可解释性评估，以及 Amazon Quick 的跨账户迁移与角色降级，覆盖智能体从开发、评估到生产治理的全链路。\n\n开源侧，Cloudflare 开源内部 AI 生产力环境 Cloudflare OS，其沙盒 Gadgets 与 Gatekeepers 权限审批框架，与云厂商的治理能力形成呼应。整体来看，竞争焦点正从模型能力本身，转向可审计、可衡量、可合规部署的生产级基础设施。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 动态聚焦生成式 AI 商业化与企业级合规基建两条主线。**\n\n**OpenAI** 双线推进：ChatGPT 引入全新视觉广告格式，同步扩展归因与效果衡量工具，标志其从订阅制向广告变现延伸；同时发布欧盟文本溯源规则下的水印方案，检测权限优先开放给研究人员，以平衡监管透明度与防滥用。\n\n**AWS** 密集发布企业级能力：Anthropic 的 Claude Opus 5.5 与 Sonnet 5.5 上线 GovCloud，经 Amazon Bedrock 调用并集成 Claude Code，Sonnet 5 持 FedRAMP Class D 及 DoD IL4/IL5 认证；同时推出 SageMaker 推理优化智能体技能、Bedrock 知识库智能体检索（支持多跳问题拆解与 Trace 流式输出）、AgentCore 多智能体可解释性评估，以及 Amazon Quick 跨账户资源迁移与角色降级方案，覆盖智能体开发、评估到生产治理全链路。\n\n**开源侧**，Cloudflare 开源内部 AI 生产力环境 Cloudflare OS，提供沙盒 Gadgets 与 Gatekeepers 权限审批框架；TUIOS、Caddy 等工具持续上榜。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 11,
+    "news_by_category": {
+      "行业": 1,
+      "产品": 5,
+      "开源": 3,
+      "LLM": 1,
+      "AI": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "编码智能体",
+      "Go",
+      "开源",
+      "Amazon Bedrock",
+      "MCP",
+      "Amazon Quick",
+      "Amazon Bedrock AgentCore",
+      "文本水印",
+      "欧盟法规"
+    ]
+  },
+  "generated_at": "2026-10-05T22:31:16.327134"
+}
