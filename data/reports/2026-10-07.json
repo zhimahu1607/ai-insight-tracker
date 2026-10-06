@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-07",
+  "summary": "今日学术侧无新论文收录，工业界的动作却集中指向同一方向：智能体正从通用对话走向企业工作流的深度嵌入。OpenAI 与 Atlassian 扩大合作，将前沿模型接入 Jira、Confluence 沉淀的企业知识，并与 Ironclad 联合训练合同工作流代理，\"computer use\" 在专业场景的落地路径逐渐清晰。\n\n基础设施同步跟进：智谱 GLM 5.3（7530 亿参数 MoE）上线 Amazon Bedrock，主打编码与长周期智能体任务，内部编码基准较上代提升 50%；AWS 密集发布 AgentCore 方案，并把 HyperPod 集群开发环境集成至 SageMaker Studio，降低 GPU 集群使用门槛。跨领域联系已然显现——能力供给、工作流入口与算力体验正在合流，而风险侧同时被强调：AWS 解读 ISO/IEC 42005:2025，推动 AI 影响评估纳入企业风控；微软研究院指出多轮对话与长周期任务的错误会累积，人工核查不可省略。开源亮点是 VectifyAI 的无向量 RAG 引擎 PageIndex，在 FinanceBench 达 98.7% 准确率，以树状索引推理检索替代向量方案。",
+  "category_summaries": {},
+  "news_summary": "# 今日 AI 领域总结\n\n**企业合作与智能体落地**：OpenAI 与 Atlassian 扩大合作，将前沿模型接入 Jira、Confluence 沉淀的企业知识，推动 AI 从通用对话向工作流嵌入演进；同时与 Ironclad 联合训练合同工作流 AI 代理，推进\"computer use\"在专业场景的落地。\n\n**模型与平台**：智谱 GLM 5.3（7530 亿参数 MoE）上线 Amazon Bedrock，主打编码与长周期智能体任务，内部编码基准较上一代提升 50%。AWS 密集发布 AgentCore 相关方案，包括基于 OpenClaw 的上下文感知助手、语音旅行助手，并将 HyperPod 集群开发环境集成至 SageMaker Studio，降低 GPU 集群使用门槛。\n\n**治理与研究**：AWS 解读 ISO/IEC 42005:2025，推动 AI 影响评估纳入企业风险体系；微软研究院指出模型在多轮对话与长周期任务中错误会累积，建议保留人工核查。\n\n**开源趋势**：VectifyAI 的无向量 RAG 引擎 PageIndex 在 FinanceBench 达 98.7% 准确率，采用树状索引推理检索，成为当日亮点。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 13,
+    "news_by_category": {
+      "行业": 2,
+      "AI": 5,
+      "开源": 4,
+      "产品": 1,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Amazon Bedrock AgentCore",
+      "Atlassian",
+      "企业知识",
+      "合作伙伴",
+      "前沿模型",
+      "Ironclad",
+      "AI 代理",
+      "computer use",
+      "合同工作流"
+    ]
+  },
+  "generated_at": "2026-10-06T20:54:32.657019"
+}
