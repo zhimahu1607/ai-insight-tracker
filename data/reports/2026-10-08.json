@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-08",
+  "summary": "今日 arXiv 无新论文收录，学术侧沉寂，工业界的动作却相当密集，信号明确：竞争焦点正从能力展示转向成本、可靠性与分发入口。\n\nOpenAI 全球上线 GPT-6 与 Intelligent UI，并为 ChatGPT 青少年版加入大学规划、闪卡与测验；AWS 在 Bedrock 上线 Claude Haiku 5.5，成本较上代下降约 75%；微软亚洲研究院开源轻量 Agentic RL 框架 Agent Lightning，SWE-bench Verified 提升 14.6 个百分点。三者共同压低供给端的单位成本与训练门槛。\n\n企业侧同样活跃：AWS 推出 RAG 实时 ACL、智能体价值模型与 DevOps 自动修复，Qlik、Cornerstone 与 Jump Trading 分别切入企业问答、数据库运维与量化研究，Radisson 则把酒店预订嵌入 ChatGPT 插件。\n\n更值得注意的是，OpenAI 公开数学开放问题的 Lean 形式化成果，与工程侧的智能体可靠性建设正在合流——可验证推理既是模型能力上限的突破口，也是智能体赢得企业信任的前提。当成本骤降、框架开源、入口插件化，竞争已转向谁能把智能体真正跑进生产流程。",
+  "category_summaries": {},
+  "news_summary": "今日AI动态聚焦模型升级、企业智能体与教育消费场景。OpenAI全球上线GPT-6及Intelligent UI，并为ChatGPT青少年版增加大学规划、闪卡与测验，组建青少年AI委员会。AWS在Bedrock上线Claude Haiku 5.5，成本较上代降约75%；微软亚洲研究院开源轻量Agentic RL框架Agent Lightning，SWE-bench Verified提升14.6个百分点。企业侧，AWS发布RAG实时ACL、智能体价值模型与DevOps自动修复方案；Qlik、Cornerstone OnDemand、Jump Trading展示企业问答、数据库运维和量化研究应用。Radisson将酒店预订嵌入ChatGPT插件。OpenAI还公开数学开放问题Lean形式化成果，推进推理研究。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 13,
+    "news_by_category": {
+      "产品": 3,
+      "LLM": 2,
+      "行业": 2,
+      "AI": 6
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "OpenAI",
+      "ChatGPT",
+      "企业AI",
+      "ChatGPT for Teens",
+      "College Planner",
+      "AI 教育",
+      "青少年 AI 委员会",
+      "Radisson Hotel Group",
+      "Accenture"
+    ]
+  },
+  "generated_at": "2026-10-07T21:12:57.794055"
+}
