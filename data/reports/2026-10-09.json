@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-09",
+  "summary": "今日学术界暂无新论文收录，工业界风向则从模型能力竞赛转向企业流程改造、智能体基础设施与安全治理。最值得关注的是企业级 AI 进入规模化流程重构：Oracle 借 ChatGPT Work 与 Codex 将招聘、工程和运营知识转为可复用工作流，把数天任务压缩至分钟，Pollo AI 也用多模态模型贯通创意到视频广告的营销管线，价值正从问答转向可编排生产。与此同时，智能体经济基础设施成形，AWS Bedrock AgentCore payments 托管 x402、钱包、限额与 USDC 结算，让按次推理付费只需少量代码，SageMaker HyperPod 则以隔离和成本分摊支持多团队共享 GPU，使智能体可计量、可审计。在安全侧，OpenAI 瓦解两起 AI 驱动的“虚假前台”影响力行动，表明安全治理须与规模化同步。跨领域看，流程、支付与算力治理正汇合为同一命题：让智能体在可控边界内持续创造可核算价值。开源侧，Epic Games 发布 RAD Debugger，AnyPS5 因 PS5 移植 PC 热度翻倍。整体看，企业 AI 正走向规模化流程改造与可审计的智能体经济。",
+  "category_summaries": {},
+  "news_summary": "今日要闻显示，AI 正从模型能力竞争转向企业流程改造、智能体基础设施与安全治理。企业应用上，OpenAI 案例称 Oracle 用 ChatGPT Work 与 Codex 将招聘、工程和运营知识转为可复用工作流，把数天任务压缩至分钟；Pollo AI 则用多模态模型打通创意到图像、视频广告的营销管线。基础设施与商业上，AWS 推出 Bedrock AgentCore payments，托管 x402、钱包、限额与 USDC 链上结算，Incarna/BlockRun 以少量代码实现按次推理付费；SageMaker HyperPod 提供多团队 GPU 共享的隔离、配额和成本分摊。安全方面，OpenAI 瓦解两起 AI 驱动的“虚假前台”影响力行动。开源方面，Epic Games 发布 RAD Debugger，AnyPS5 因 PS5 游戏移植 PC 而热度翻倍。整体看，企业级 AI 正走向规模化流程改造与可审计的智能体经济。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "行业": 2,
+      "产品": 3,
+      "开源": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Oracle",
+      "ChatGPT",
+      "Codex",
+      "企业工作流",
+      "Pollo AI",
+      "GPT-6 Astra",
+      "GPT-Image-2.5",
+      "视频广告生成",
+      "AI滥用"
+    ]
+  },
+  "generated_at": "2026-10-08T21:15:24.725353"
+}
