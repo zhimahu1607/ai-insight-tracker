@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-10",
+  "summary": "今日AI学术侧暂无新论文收录，产业侧明显转向企业级Agent的规模化落地与成本治理。OpenAI密集发布客户案例：Sophos将威胁调查时间缩短96%，52%的MDR流程自动化；Asana浏览器代理实现成本降76倍、速度升5倍，但模型版本表述前后不一，需核实；LegalOn按任务调度Astra、Sol、Luna并管控预算，使Codex日成本降约65%。云与工具层同步跟进，AWS更新Bedrock、AgentCore与Strands，Bedrock Managed Agents由OpenAI驱动进入预览，支持IAM/CloudTrail并接入Claude、Kimi、Grok等；Postman Agent Mode面向4000万开发者，强调工具筛选、上下文管理、schema查询与PII脱敏。\n\n跨领域看，竞争焦点正从单一模型能力转向多模型调度、成本控制与人机协同。模型版本差异直接影响成本与效果，选型评测将成Agent生产化的关键基础设施；可观测性、权限审计与预算约束，正与模型能力同等重要。学术侧空窗也提示，工业需求已跑在公开研究之前。",
+  "category_summaries": {},
+  "news_summary": "今日AI动态聚焦企业级应用的成本优化与Agent生产化。OpenAI连发客户案例：Sophos借Daybreak将威胁调查时间缩短96%，52%的MDR流程自动化；Asana浏览器代理测试实现成本降76倍、速度升5倍（标题与正文模型版本表述不一，需核实）；LegalOn按任务匹配Astra、Sol、Luna并管控预算，使Codex日成本降约65%。云侧，AWS更新Bedrock、AgentCore与Strands，Bedrock Managed Agents由OpenAI驱动进入预览，支持IAM/CloudTrail，并接入Claude、Kimi、Grok等模型；Postman面向4000万开发者的Agent Mode运行于Bedrock，强调工具动态筛选、上下文管理、schema查询及PII脱敏。整体看，竞争焦点正从模型能力转向多模型调度、成本控制与人机协同的规模化落地。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 5,
+    "news_by_category": {
+      "产品": 3,
+      "LLM": 1,
+      "AI": 1
+    },
+    "top_keywords": [
+      "Codex",
+      "成本优化",
+      "OpenAI",
+      "Amazon Bedrock",
+      "AI Agent",
+      "OpenAI Daybreak",
+      "Sophos",
+      "MDR",
+      "网络安全",
+      "威胁调查"
+    ]
+  },
+  "generated_at": "2026-10-09T20:46:08.957350"
+}
