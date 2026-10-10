@@ -1,0 +1,31 @@
+[
+  {
+    "id": "98a3e22b8bffae75",
+    "title": "tester-army/e2e - GitHub Trending",
+    "url": "https://github.com/tester-army/e2e",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-10-10T19:58:53.547056Z",
+    "summary": "Repository: tester-army/e2e\nURL: https://github.com/tester-army/e2e\nDescription: Next generation e2e testing framework for web and mobile apps.\nLanguage: TypeScript\nStars: 8674\nWeekly stars: 6566",
+    "content": "Repository: tester-army/e2e\nURL: https://github.com/tester-army/e2e\nDescription: Next generation e2e testing framework for web and mobile apps.\nLanguage: TypeScript\nStars: 8674\nWeekly stars: 6566\n\nREADME:\ne2e\n\ne2e is an end-to-end testing framework for web and mobile apps. Describe a goal in natural language and an agent drives the app to reach it. Check the result with locators and assertions in the same test.\n\nAn agent step that a later assertion verifies records its actions, and the\nnext run replays them with no model calls until the app changes. Tests\nwithout agent steps need no model. Bring your own subscription, API key, or\nlocal model.\n\nQuick start\n\ninit asks for an engine, web or mobile, and a model provider, then writes a\nconfig and an example test. The\nquickstart covers the rest.\n\nTo see a finished setup in your stack, open\nexamples/:\nVite, Next.js, Astro, Expo, SwiftUI, Jetpack Compose, Kotlin Multiplatform,\nand Flutter, each a standalone project with a passing suite.\n\nPackages\n\n| Package | What it does |\n| --- | --- |\n| e2e | The SDK, runner, and CLI. |\n| @e2e-dev/web | Browser engine: Chromium, Firefox, and WebKit through Playwright. |\n| @e2e-dev/mobile | iOS and Android engine: simulators and emulators through agent-device. |\n| @e2e-dev/github | Reporter that posts results as a pull request comment. |\n| @e2e-dev/kernel | Kernel hosted browsers for the web engine. |\n| @e2e-dev/eas | EAS Simulators hosted iOS simulators and Android emulators for the mobile engine. |\n| @e2e-dev/smol | smol machines browsers for the web engine: by default, each attempt branches a warm Chromium microVM. |\n| @e2e-dev/decision | Decision-model executors for bounded semantic actions and assertions. |\n\nDocumentation\n\ne2e.tester.army/docs. The e2e package ships\nevery page, so coding agents can read them offline in node_modules/e2e/docs.\n\nContributing\n\nSee CONTRIBUTING.md. Questions go to\nDiscord.\n\nSecurity\n\nPlease don't open public issues for security vulnerabilities. Follow\nSECURITY.md and report them to\nsecurity@tester.army.\n\nTelemetry\n\nThe CLI sends anonymous usage data, such as which commands and engines run and\nwhere runs fail, but no test content, app content, or credentials. Opt out with\nnpx e2e telemetry disable or E2E_TELEMETRY_DISABLED=1.\nTelemetry lists every field.\n\nStatus\n\n[!NOTE]\ne2e is in active development on the way to 1.0. APIs and config can still\nchange between minor releases.\n\nMade by TesterArmy\n\ne2e is built by TesterArmy,\nthe agentic testing platform that runs natural language tests on web and mobile\napps, on every pull request or on a schedule.\n\nApache-2.0.",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "TesterArmy 开源端到端测试框架 e2e，用户以自然语言描述测试目标，由 AI Agent 驱动 Web 与移动应用完成操作，并用定位器与断言校验结果。其亮点是 Agent 步骤会被记录，后续运行直接回放而不调用模型，直至应用变化；无 Agent 步骤的测试无需模型，支持自带订阅、API Key 或本地模型。项目以 TypeScript 编写，提供基于 Playwright 的浏览器引擎与 iOS/Android 模拟器引擎，示例覆盖 Vite、Next.js、Expo 等，采用 Apache-2.0 协议。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "e2e 测试",
+        "自然语言测试",
+        "AI Agent",
+        "Playwright",
+        "TypeScript"
+      ]
+    },
+    "analyzed_at": "2026-10-10T19:59:04.393780Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]

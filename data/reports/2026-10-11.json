@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "summary": "今日学术侧暂无新论文收录，动态集中于工业界的开源与开发者工具。最值得关注的亮点是 TesterArmy 在 GitHub 开源的端到端测试框架 e2e：开发者以自然语言描述测试目标，AI Agent 驱动 Web 与移动应用完成操作，并通过定位器与断言校验结果。其真正的创新不在“用 Agent 做测试”，而在于引入步骤记录与回放机制——Agent 的执行轨迹被持久化，后续运行直接回放脚本，不再调用模型，仅在应用发生变化时重新触发 Agent；完全不含 Agent 步骤的测试则完全不消耗模型。这一设计实质上把大模型从高频执行路径中剥离，只在“探索与生成”阶段使用，从而显著压低了 AI 测试的推理成本，也更贴近 CI/CD 对确定性与速度的刚性要求。配合对自带订阅、API Key 及本地模型的支持，以及 Apache-2.0 协议与 Playwright、iOS/Android 模拟器引擎（TypeScript 实现，示例覆盖 Vite、Next.js、Expo），该项目已具备进入真实工程流水线的条件。从更宏观的视角看，这延续了近期开源生态的一条清晰脉络：Agent 正从演示型应用下沉为软件基础设施的一部分，而与之配套的成本控制范式——录制复用、缓存推理、按需调用——正在成为工具设计的一等公民。当学术侧相对沉寂时，工业界正通过这类工程化取舍，回答“Agent 如何在生产环境里可持续运行”这一更务实的问题。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 开源与开发者工具动态：GitHub Trending 出现 TesterArmy 开源的端到端测试框架 e2e。用户以自然语言描述测试目标，由 AI Agent 驱动 Web 与移动应用操作，并通过定位器与断言校验结果。亮点是 Agent 步骤被记录，后续运行直接回放，不调用模型，直至应用变化；无 Agent 步骤的测试无需模型，支持自带订阅、API Key 或本地模型。项目以 TypeScript 编写，提供基于 Playwright 的浏览器引擎与 iOS/Android 模拟器引擎，示例覆盖 Vite、Next.js、Expo 等，采用 Apache-2.0 协议。该工具降低了 AI 驱动测试的模型成本，体现 Agent 在软件测试基础设施中的落地。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 1,
+    "news_by_category": {
+      "开源": 1
+    },
+    "top_keywords": [
+      "e2e 测试",
+      "自然语言测试",
+      "AI Agent",
+      "Playwright",
+      "TypeScript"
+    ]
+  },
+  "generated_at": "2026-10-10T19:59:14.327187"
+}
