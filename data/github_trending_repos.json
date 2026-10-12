@@ -512,8 +512,8 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "first_seen_at": "2026-10-06T20:54:11.806396+00:00",
       "first_seen_stars": 6220,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 29516,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 32760,
       "double_alerted_at": "2026-10-08T21:14:51.182117+00:00",
       "ten_x_alerted_at": null
     },
@@ -875,8 +875,8 @@
       "url": "https://github.com/cursor/plugins",
       "first_seen_at": "2026-08-22T16:33:32.229991+00:00",
       "first_seen_stars": 4582,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 10878,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 11066,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1062,8 +1062,8 @@
       "url": "https://github.com/DuarteSantos8/openGym",
       "first_seen_at": "2026-10-06T20:54:11.806396+00:00",
       "first_seen_stars": 5536,
-      "last_seen_at": "2026-10-10T19:58:53.547056+00:00",
-      "last_seen_stars": 9145,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 10447,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1084,8 +1084,8 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 10460,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 19215,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 19621,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1216,8 +1216,8 @@
       "url": "https://github.com/flutter/flutter",
       "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
       "first_seen_stars": 179195,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 179777,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 179951,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1436,8 +1436,8 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 47607,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 60845,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 61777,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1986,8 +1986,8 @@
       "url": "https://github.com/mattpocock/skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 176355,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 286017,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 287878,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2123,6 +2123,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "morluto/rea": {
+      "repo_id": "morluto/rea",
+      "full_name": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "first_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "first_seen_stars": 153990,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 153990,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "msitarzewski/agency-agents": {
       "repo_id": "msitarzewski/agency-agents",
       "full_name": "msitarzewski/agency-agents",
@@ -2151,8 +2162,8 @@
       "url": "https://github.com/mvschwarz/openrig",
       "first_seen_at": "2026-10-04T19:29:49.023035+00:00",
       "first_seen_stars": 4924,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 6931,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 7233,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2987,8 +2998,8 @@
       "url": "https://github.com/tester-army/e2e",
       "first_seen_at": "2026-10-10T19:58:53.547056+00:00",
       "first_seen_stars": 8674,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 8977,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 9534,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2998,8 +3009,8 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "first_seen_at": "2026-09-01T19:21:00.086816+00:00",
       "first_seen_stars": 92880,
-      "last_seen_at": "2026-10-11T20:09:37.157904+00:00",
-      "last_seen_stars": 99676,
+      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
+      "last_seen_stars": 100069,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
