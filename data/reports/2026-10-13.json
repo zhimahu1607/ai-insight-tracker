@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-13",
+  "summary": "# 今日 AI 日报 · Daily Summary\n\n今日学术界相对沉寂，无论文收录；工业界则密集推进推理基础设施、应用评估与智能体工具链，呈现能力下沉、成本优化与生态补全并行之势。\n\n最值得关注的是 AWS 的三项基础设施更新。Amazon Bedrock 将 GPT-6 系列（Sol、Luna、Astra）的跨区域推理扩展至泰国、马来西亚、新加坡、印尼及台湾，支持文本图像输入与工具调用；SageMaker AI 基于 llama.cpp 的部署方案使 Qwen3.5-4B 在 GPU 上 p50 延迟降至 0.352 秒，较 CPU 快约 4.9 倍；Ray LLM 容器则支持 EKS 上跨双 GPU 节点实现预填充与解码分离，将高级推理架构推向通用云服务。\n\n应用侧，微软 StudentSim 用去标识化学习记录训练个性化 AI 学生模拟器，从行为保真度与指导响应度评测辅导系统，在象棋、二语写作与数学三领域优于 GPT-5.4 等基线。\n\n开源侧，MCP 逆向工具 rea 支持智能体本地分析原生二进制、Electron 与 .NET 程序。这与基础设施门槛下降形成呼应：智能体普及之际，行为审计需求同步上升，安全研究正成为 agent 生态中不可忽视的一环。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 领域动态集中在基础设施部署、应用研究与开源工具三方面。\n\n**基础设施与云服务**：AWS 发布三项更新。Amazon Bedrock 面向泰国、马来西亚、新加坡、印尼及台湾开放 GPT-6 系列（Sol、Luna、Astra）的全球跨区域推理，支持文本图像输入与工具调用；SageMaker AI 推出基于 llama.cpp 的决策模型部署方案，Qwen3.5-4B 在 GPU 上 p50 延迟 0.352 秒，较 CPU 快约 4.9 倍；此外发布 Ray LLM Deep Learning Container，支持在 EKS 上跨双 GPU 节点实现预填充与解码分离推理，预置 vLLM 与 NIXL+EFA 网络栈。\n\n**应用与研究**：微软研究院推出 StudentSim，利用去标识化学习记录训练个性化 AI 学生模拟器，从行为保真度与指导响应度评测辅导系统，在象棋、英语二语写作和数学三领域均优于 GPT-5.4 等基线。\n\n**开源工具**：GitHub 项目 morluto/rea 提供 TypeScript 编写的 MCP 逆向工程工具，可让 AI agent 在本地分析原生二进制、Electron 及 .NET 程序，适用于安全研究与竞品分析。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 5,
+    "news_by_category": {
+      "开源": 1,
+      "AI": 2,
+      "产品": 1,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "morluto/rea",
+      "MCP",
+      "逆向工程",
+      "AI Agent",
+      "二进制分析",
+      "StudentSim",
+      "微软研究院",
+      "AI 辅导",
+      "学生模拟器",
+      "StudentSimEval"
+    ]
+  },
+  "generated_at": "2026-10-12T22:52:19.452347"
+}
