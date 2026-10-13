@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-14",
+  "summary": "今日学术界暂无新论文收录，工业界动态则高度收敛于一条主线：智能体正从演示品转为可计费、可运维的生产系统。\n\n最值得关注的是智能体支付基础设施的落地。AWS 与 Anchor Browser 推出基于 x402 协议的智能体支付方案并上架 AWS Marketplace，Bedrock AgentCore 负责钱包、限额与结算，Bedrock 托管授权则简化跨账户私有定价。这意味着智能体首次具备原生支付与结算能力，商业闭环的关键一环被补上。产品侧，Higgsfield 借助 OpenAI GPT-6 Astra 将 AI 视频从 1 分钟延长至 10 分钟以上，并以 GPT-Image-2.5、GPT-Live 改善画质与语音的电影化体验，长时程内容生成进入实用区间。企业落地方面，Orca Security 的自然语言安全查询成本下降 90%、延迟约 15 秒；ShipStation 用 AgentCore 搭建的 Slack IT 服务台三个月处理 1,935 条消息，好评率 96%。\n\n跨领域联系颇为清晰：长视频生成与长时程智能体同源，均受上下文长度与单位成本约束。Bedrock 上线 SpaceXAI Grok 4.7（500K 上下文、面向长时程智能体），SageMaker AI 联合 vLLM 开源 MoE 内核优化在 H200 上提升吞吐并降低首 token 延迟，恰好为上述应用提供底层支撑。\"能力—成本—结算\"的链条正在成形，下一阶段的竞争焦点或将从模型分数转向单位经济性。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中在视频生成、智能体商业化与企业落地、模型基础设施。\n\n产品侧，Higgsfield 借 OpenAI GPT-6 Astra 将 AI 视频从 1 分钟延至 10 分钟以上，并用 GPT-Image-2.5、GPT-Live 提升画质与语音电影体验。AWS 与 Anchor Browser 推出基于 x402 的智能体支付方案，已在 AWS Marketplace 上架，Bedrock AgentCore 完成钱包、限额与结算；Bedrock 托管授权简化跨账户私有定价。\n\n企业应用侧，Orca Security 基于 Bedrock 的自然语言安全查询成本降 90%、延迟约 15 秒；ShipStation 用 AgentCore 搭建 Slack IT 服务台，三月内处理 1,935 条消息，好评率 96%。\n\n模型与基础设施侧，Bedrock 上线 SpaceXAI Grok 4.7，支持 500K 上下文与长时程智能体；SageMaker AI 联合 vLLM 开源 MoE 内核优化，在 H200 上提升吞吐并降低首 token 延迟。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "产品": 3,
+      "AI": 2,
+      "LLM": 2
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "Higgsfield",
+      "AI视频生成",
+      "GPT-6 Astra",
+      "GPT-Image-2.5",
+      "GPT-Live",
+      "Anchor Browser",
+      "AgentCore payments",
+      "x402",
+      "AI Agent"
+    ]
+  },
+  "generated_at": "2026-10-13T21:09:58.419879"
+}
