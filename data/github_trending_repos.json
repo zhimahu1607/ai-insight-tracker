@@ -512,8 +512,8 @@
       "url": "https://github.com/boykopovar/AnyPS5",
       "first_seen_at": "2026-10-06T20:54:11.806396+00:00",
       "first_seen_stars": 6220,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 35008,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 36908,
       "double_alerted_at": "2026-10-08T21:14:51.182117+00:00",
       "ten_x_alerted_at": null
     },
@@ -611,8 +611,8 @@
       "url": "https://github.com/cathrynlavery/diagram-design",
       "first_seen_at": "2026-08-15T16:33:42.948840+00:00",
       "first_seen_stars": 18287,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 53946,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 55236,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1084,8 +1084,8 @@
       "url": "https://github.com/earthtojake/text-to-cad",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 10460,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 19942,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 20303,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1139,8 +1139,8 @@
       "url": "https://github.com/EpicGames/raddebugger",
       "first_seen_at": "2026-10-08T21:14:51.182117+00:00",
       "first_seen_stars": 8084,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 8477,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 8526,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1216,8 +1216,8 @@
       "url": "https://github.com/flutter/flutter",
       "first_seen_at": "2026-10-01T20:58:25.407908+00:00",
       "first_seen_stars": 179195,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 180090,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 180148,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1436,8 +1436,8 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 47607,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 62650,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 63584,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1986,8 +1986,8 @@
       "url": "https://github.com/mattpocock/skills",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 176355,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 289474,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 291014,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2129,8 +2129,8 @@
       "url": "https://github.com/morluto/rea",
       "first_seen_at": "2026-10-12T22:51:45.065120+00:00",
       "first_seen_stars": 153990,
-      "last_seen_at": "2026-10-12T22:51:45.065120+00:00",
-      "last_seen_stars": 153990,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 237858,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2175,6 +2175,17 @@
       "first_seen_stars": 54116,
       "last_seen_at": "2026-07-02T17:59:22.199241+00:00",
       "last_seen_stars": 55040,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "nationalsecurityagency/ghidra": {
+      "repo_id": "nationalsecurityagency/ghidra",
+      "full_name": "NationalSecurityAgency/ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "first_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "first_seen_stars": 87272,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 87272,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2998,8 +3009,8 @@
       "url": "https://github.com/tester-army/e2e",
       "first_seen_at": "2026-10-10T19:58:53.547056+00:00",
       "first_seen_stars": 8674,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 10050,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 10448,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -3009,8 +3020,8 @@
       "url": "https://github.com/thedotmack/claude-mem",
       "first_seen_at": "2026-09-01T19:21:00.086816+00:00",
       "first_seen_stars": 92880,
-      "last_seen_at": "2026-10-13T21:09:20.367589+00:00",
-      "last_seen_stars": 100402,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 100725,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -3112,6 +3123,17 @@
       "last_seen_stars": 63359,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-08-30T19:16:26.342456+00:00"
+    },
+    "twostraws/swiftui-agent-skill": {
+      "repo_id": "twostraws/swiftui-agent-skill",
+      "full_name": "twostraws/SwiftUI-Agent-Skill",
+      "url": "https://github.com/twostraws/SwiftUI-Agent-Skill",
+      "first_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "first_seen_stars": 5944,
+      "last_seen_at": "2026-10-14T20:08:21.711430+00:00",
+      "last_seen_stars": 5944,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
     },
     "uditakhourii/adhd": {
       "repo_id": "uditakhourii/adhd",

@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-15",
+  "summary": "今日学术界暂无新论文收录，风向主要来自工业界。智能体正从单点编码助手转向企业生产环境中的长时程、多体协作系统，评价重心由\"能否完成\"转向\"能否持续可靠运行\"。\n\n最值得关注的有两个层面。一是能力边界快速拓宽：OpenAI 披露的案例中，Amp 借 GPT-6 Astra 等模型把能力从编码延伸至通用工作流，SentinelOne 的 Daybreak 将恶意软件分析从数周压缩至数小时，Third Moment Research 更调度一万个智能体连续运行逾 36 小时，验证了长时程编排与自我提升的可行性。二是平台化封装加速：AWS 以 Bedrock AgentCore 与 SageMaker JumpStart 为支点，推出文档处理、演示生成与云安全修复编排方案，Tamnoon 的 Tami 称 90 天内减少逾九成关键暴露，显示云厂商正把智能体做成可采购的企业能力。开发者侧，Ghidra 与 SwiftUI Pro 热度攀升，后者以 Agent Skills 格式为 Claude Code、Codex 提供领域指导，暗示\"技能包\"或成能力复用新接口。\n\n跨领域看，安全与文档流水线已共享同一套编排范式。值得注意的是，欧盟企业采用率虽升却仍多停留浅层——规模化与深度化之间的落差，将是下一阶段的竞争焦点。",
+  "category_summaries": {},
+  "news_summary": "# 今日 AI 领域总结\n\n**智能体加速走向企业生产环境。** OpenAI 集中发布多个案例：编程工具 Amp 借助 GPT-6 Astra、Ultrafast 等模型将智能体能力从编码拓展至通用工作流；SentinelOne 用 Daybreak 将恶意软件分析从数周压缩至数小时；Third Moment Research 调度 1 万个智能体持续运行超 36 小时，展现长时程编排与自我提升能力。OpenAI 另指出欧盟企业智能体 AI 采用率持续上升，但仍多处于浅层应用。\n\n**云厂商竞逐企业级智能体。** AWS 密集发布方案：基于 Bedrock AgentCore 的八智能体文档处理系统、自动化生成 PowerPoint 的编排系统，以及 Tamnoon 的云安全修复编排器 Tami（称 90 天内减少逾 90% 关键暴露）；SageMaker JumpStart 则强化模型部署与评估流程。\n\n**开源与安全工具活跃。** NSA 的逆向工程框架 Ghidra 周增近 5000 星；SwiftUI Pro 以 Agent Skills 格式为 Claude Code、Codex 等提供 SwiftUI 编写指导，已获约 5900 星。\n\n整体看，智能体正从单点编码任务向文档、安全、演示等业务场景规模化渗透。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 10,
+    "news_by_category": {
+      "产品": 3,
+      "LLM": 1,
+      "行业": 1,
+      "开源": 2,
+      "AI": 3
+    },
+    "top_keywords": [
+      "OpenAI",
+      "AI Agent",
+      "GPT-6 Astra",
+      "Amazon Bedrock AgentCore",
+      "AWS",
+      "Amp",
+      "Sign in with ChatGPT",
+      "SentinelOne",
+      "OpenAI Daybreak",
+      "恶意软件分析"
+    ]
+  },
+  "generated_at": "2026-10-14T20:08:47.860897"
+}
