@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-16",
+  "summary": "**今日 AI 日报 · Daily Summary**\n\n今日无论文收录，工业界动态却高度同向：Agent 正从能力演示转入生产部署，竞争焦点由模型本身转向上下文效率、可验证安全与自主性治理。\n\n核心亮点集中在两条主线。其一是上下文的经济性：billion-context 以 TypeScript 插件压缩 Agent 上下文，宣称在 100K 窗口下节省约 5 倍 Token，并兼容 Claude、Codex、Gemini；Meta 的 Muse Spark Open 则以 MoE 816B 总参数、42B 激活、1M 上下文上架 SageMaker JumpStart，面向长程 agentic 编码。一压一扩，说明长上下文能力与单位 Token 成本已成同一问题的两面。其二是可验证与可控：微软 Magnetar 推出基于零知识证明的通用 zkVM，可证明 Rust/Go/C 的 RISC-V 执行，验证约 12ms、较最快方案快 10—39 倍，主打抗量子且无需可信设置；AWS 的 Trust in Depth 以 Scope/Know/Bound/Observe 四步管理 Agent 自主性，并配套 Bedrock AgentCore；Block 则基于 OpenAI 构建安全体系，用于加速威胁调查与补丁生成，但效果细节仍有限。\n\n教育侧，OpenAI 为 AI for Educators 新增巴西葡萄牙语，并借 Study Mode 推广主动、分步学习，本地化与教学法同步落地。\n\n整体而言，学术侧今日静默，工业界正围绕 Agent 的\"记忆、边界与信任\"补课；zkVM 的可验证执行与 AgentCore 的权限约束，在工程上很可能收敛为同一套治理栈。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中于教育、企业安全、Agent 基础设施与模型部署。OpenAI 为 AI for Educators 新增巴西葡萄牙语，并借 Study Mode 推广主动、分步学习，加速教育场景本地化；Block 基于 OpenAI 构建 AI 安全体系，用于加速威胁调查与补丁生成，但效果细节仍有限。\n\n开源与底层设施方面，billion-context 以 TypeScript 插件压缩 Agent 上下文，宣称在 100K 窗口下省约 5 倍 Token，兼容 Claude、Codex、Gemini 等。微软 Magnetar 推出基于零知识证明的通用 zkVM，可证明 Rust/Go/C 的 RISC-V 执行，验证约 12ms，较最快方案快 10—39 倍，强调抗量子且无需可信设置。AWS 提出 Trust in Depth，以 Scope/Know/Bound/Observe 管理 Agent 自主性，配套 Bedrock AgentCore 等。Meta Muse Spark Open 上架 SageMaker JumpStart，采用 MoE 816B 总参数、42B 激活、1M 上下文，面向长程 agentic 编码。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 6,
+    "news_by_category": {
+      "产品": 1,
+      "AI": 2,
+      "开源": 1,
+      "其他": 1,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "AI Agent",
+      "AI for Educators",
+      "Study Mode",
+      "巴西葡萄牙语",
+      "教育",
+      "Block",
+      "AI安全",
+      "威胁调查",
+      "自动补丁"
+    ]
+  },
+  "generated_at": "2026-10-15T19:50:08.625411"
+}
