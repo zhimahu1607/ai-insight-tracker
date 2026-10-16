@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-17",
+  "summary": "今日学术界无新论文收录，工业界动态集中于模型开放、Agent 产品化与垂直应用。核心亮点是 Reflection AI 发布开放权重模型 Beam：501B 总参数、23B 激活，支持 100 万 token 上下文，面向智能体编程，已在 Hugging Face 开放，并通过 AWS SageMaker/HyperPod 部署。该模型延续开放权重向长上下文与 Agent 场景倾斜的趋势，降低企业部署门槛。\n\nOpenAI 则推进科研与法律落地：GPT-Rosalind 学术计划向生命科学实验室提供赞助访问和工具；Agreement Analyzer 用于合同审查。其 Stack Overflow for Agents 数据显示，ChatGPT 插件注册量增至三倍，agent 创建量最高提升 10 倍，开发由 Codex 加速，表明 Agent 分发从开发者工具向专业工作流延伸。\n\n开源生态中，Rust 开发的 AI 图像/视频创作 IDE ArtCraft 登上 GitHub Trending，集成 62 个模型目录，star 约 3 万。跨领域看，开放权重提供能力基座，Agent 平台负责分发与编排，垂直工具完成场景闭环。前沿模型进入科研、法律和开发者工作流的速度加快，竞争焦点转向 Agent 分发、开放权重与垂直工具。",
+  "category_summaries": {},
+  "news_summary": "今日 AI 动态集中在模型开放、Agent 产品化与垂直应用。LLM 与科研方面，OpenAI 推出 GPT-Rosalind 学术计划，向生命科学实验室提供赞助访问和工具；Reflection AI 发布开放权重模型 Beam，501B 总参数、23B 激活，支持 100 万 token 上下文，面向智能体编程，已在 Hugging Face 开放，并通过 AWS SageMaker/HyperPod 部署。\n\n产品与商业方面，OpenAI 披露 Stack Overflow for Agents 借助 ChatGPT 插件注册量增至三倍、agent 创建量最高提升 10 倍，开发由 Codex 加速；其与 Sullivan & Cromwell 合作的 Agreement Analyzer 用于合同审查。开源生态中，ArtCraft 登上 GitHub Trending，作为 Rust 开发的 AI 图像/视频创作 IDE，集成 62 个模型目录，star 约 3 万。\n\n整体看，前沿模型正加速进入科研、法律和开发者工作流，Agent 分发、开放权重与垂直工具成为竞争焦点。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 5,
+    "news_by_category": {
+      "产品": 2,
+      "LLM": 2,
+      "开源": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Stack Overflow for Agents",
+      "ChatGPT 插件",
+      "Codex",
+      "AI Agent",
+      "用户增长",
+      "GPT-Rosalind",
+      "学术研究",
+      "生命科学",
+      "Rosalind Academic Plan"
+    ]
+  },
+  "generated_at": "2026-10-16T19:40:38.722683"
+}
