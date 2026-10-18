@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-19",
+  "summary": "今日学术界无新论文收录，节奏平静；工业界的注意力则集中在 Agent 工具链的基础设施层。GitHub 上逆向工程 MCP 工具 morluto/rea 一周内 Star 数近乎翻倍至约 32 万（数据真实性仍待核验），成为最值得关注的信号。\n\n其意义不在项目本身，而在于它标记了 Agent 能力边界的移动：从“生成代码”转向“理解并验证既有系统”。二进制、协议与固件分析这类过去依赖专家经验的高门槛工作，正被封装为 Agent 可调用的标准接口。这与 MCP 逐步成为工具接入事实标准的趋势互为因果：标准化降低了垂直工具的接入成本，垂直工具的涌入又反过来强化了标准地位。\n\n值得注意的是，该项目强调本地执行与结论可追溯，直指逆向工程的安全合规敏感性。这提示了一个跨领域的共同课题：当 Agent 获得对封闭系统的解析能力时，可信性与审计链路将与能力本身同等重要。学术界的缺位或许也说明，Agent 安全与验证方法的研究仍落后于工程实践。",
+  "category_summaries": {},
+  "news_summary": "**开源与 Agent 工具生态**\n\nGitHub Trending 数据显示，开源项目 morluto/rea 七日内 Star 数翻倍，当前约 31.97 万、周增约 23.99 万。该增速在开源项目中极为罕见，其数据真实性仍需第三方核验。\n\nREA 是面向 AI Agent 的逆向工程 MCP 工具，用 TypeScript 编写，可分析原生二进制、JavaScript/Electron 应用、.NET 程序、Android APK、网站及固件等目标；分析在本地执行，返回结果附带证据与限制说明。用户可通过 `npx rea-agents setup` 接入 Claude Code、OpenAI Codex、Cursor 等 Agent 客户端，也支持 CLI 独立运行。\n\n从行业角度看，这一项目反映两点趋势：其一，Agent 能力正从“生成代码”向“理解并验证既有系统”延伸，二进制与协议层分析成为新的工具需求；其二，MCP 作为 Agent 与外部工具之间的接入标准，正被更多垂直工具采用。项目强调本地执行与结论可追溯，也回应了逆向工程在安全合规上的敏感性问题。Anthropic、OpenAI、Cursor 等 Agent 生态方仍是此类工具的主要分发渠道。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 1,
+    "news_by_category": {
+      "开源": 1
+    },
+    "top_keywords": [
+      "REA",
+      "逆向工程",
+      "MCP",
+      "AI Agent",
+      "TypeScript"
+    ]
+  },
+  "generated_at": "2026-10-18T18:35:02.196522"
+}
