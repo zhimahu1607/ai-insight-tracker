@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-21",
+  "summary": "今日学术侧无论文收录，工业界动态集中于两条主线：模型能力向高价值存量场景补强，企业级 Agent 基础设施从“能跑”走向“可管”。\n\n核心亮点有三。OpenAI 公布低资源编程语言评测工作，覆盖 COBOL 迁移与 SQLite 等场景，直指金融、政企遗留系统改造这一长期难以自动化的领域；同期收购 Orchestra Bio，将能力延伸至生物制药研发，显示其正从通用对话切入垂直科研流程。AWS 侧，Bedrock 为全部 Anthropic Claude 模型提供约束解码驱动的结构化输出与严格工具调用，并将 GPT-5.6/6 系列跨区域推理扩展至加拿大区域，模型可选性与输出可控性同步提升。Agent Registry 正式可用，并联合 Keyfactor 推出基于 X.509 PKI 的代理身份方案，直接填补 MCP 认证缺口。\n\n跨领域联系清晰：结构化输出保障单次调用的确定性，注册表与 PKI 身份保障多 Agent 协作的可追溯性，而 Eon、Denodo、AtScale 等围绕 MCP 网关与语义层构建的行级安全与身份传播，把数据治理接入 Agent 访问路径——三者共同构成企业落地的信任底座。落地侧，加盟商借助 ChatGPT 将现金对账耗时降低 94%，收益已可量化；Android skills 仓库单周新增 1233 stars，反映开发者对 Agent 工具规范的关注升温。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 动态：模型能力补强与企业级 Agent 基础设施并行推进。**\n\n**模型与能力**：OpenAI 公布低资源编程语言评测工作，覆盖 COBOL 迁移、SQLite 等场景，指向遗留系统改造需求；并收购 Orchestra Bio，将能力延伸至生物制药研发。AWS 侧，Bedrock 为全部 Anthropic Claude 模型提供约束解码的结构化输出与严格工具调用，Bedrock 亦支持 GPT-5.6/6 系列在加拿大区域的跨区域推理。\n\n**基础设施与治理**：AWS 推出正式可用的 Agent Registry，支持运行时工具发现；联合 Keyfactor 发布基于 X.509 PKI 的代理身份方案，弥补 MCP 认证缺口。Eon、Smartsheet、Denodo、AtScale、Strategy Mosaic 分别围绕 MCP 网关与语义层，构建受治理的 Agent 数据访问路径，强调身份传播与行级安全。\n\n**落地与开源**：OpenAI 客户案例显示，加盟商借助 ChatGPT 将现金对账耗时降低 94%；SageMaker Studio 简化注册流程以降低入门门槛；Android 团队 skills 仓库本周新增 1233 stars。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 19,
+    "news_by_category": {
+      "产品": 9,
+      "行业": 1,
+      "LLM": 2,
+      "开源": 1,
+      "其他": 1,
+      "AI": 5
+    },
+    "top_keywords": [
+      "MCP",
+      "Amazon Bedrock AgentCore",
+      "AWS",
+      "OpenAI",
+      "Amazon Bedrock",
+      "语义层",
+      "ChatGPT",
+      "AI Agent",
+      "Amazon Quick",
+      "Hugging Face"
+    ]
+  },
+  "generated_at": "2026-10-20T19:58:23.914689"
+}
