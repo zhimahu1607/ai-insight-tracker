@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-22",
+  "summary": "今日学术侧暂无论文收录，工业界动态则围绕智能体编排与商业化分发两条主线展开。OpenAI 深化企业渗透：AT&T 内部法务案例显示生成式 AI 已进入合规等知识密集型职能；ChatGPT 广告覆盖 26 国、广告主逾 10 万，并披露由 LLM 驱动的广告技术栈，强调广告与回答严格隔离；模型及 Codex 工作流接入 Google Cloud Model Garden 与 Marketplace，反映前沿厂商正借云渠道争夺企业入口。AWS 以 torchtitan 在 Trainium2 上训练 Qwen3、并部署 i14 Laplace 3B 线性注意力模型，从算力与架构侧提供支撑。\n\n更值得关注的是“人类主导、并行智能体”这一范式的跨领域扩散：微软研究院借此证明悬置 31 年的 KLS 猜想，OpenAI 联合 PerturbAI、Scripps 用分布式智能体分析脑细胞数据，GitHub 上 orca 让多个 CLI 编码代理在独立 worktree 并行运行、agents 项目以 Markdown 统一跨工具配置并获 4.1 万 Star，OpenAI 的「Patch the Planet」漏洞协调计划亦循此逻辑。智能体的竞争重心正从单点能力转向可协调的并行结构，而云分发渠道与安全治理构成其规模化落地的两侧约束。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 行业动态**\n\n**OpenAI 企业化与商业化加速**：OpenAI 发布 AT&T 内部法务案例，显示生成式 AI 正深入法务、合规等知识密集型职能；ChatGPT 广告扩展至 26 国、广告主超 10 万，并披露由 LLM 驱动的广告技术栈，强调广告与回答严格分离；模型及 Codex 工作流将接入 Google Cloud Model Garden 与 Marketplace，反映前沿模型厂商正借云平台争夺企业分发渠道。\n\n**智能体工具生态活跃**：GitHub Trending 上，wshobson/agents 以 Markdown 为统一源跨 Claude Code、Codex、Cursor 等生成配置，获 4.1 万 Star；stablyai/orca 支持多 CLI 编码代理在独立 worktree 并行运行，周增 8 千余星。\n\n**AI for Science 与安全治理**：微软研究院张新智等证明 31 年历史的 KLS 猜想，采用人类主导、AI 并行探索百余条路径的智能体式流程；OpenAI 联合 PerturbAI、Scripps 用分布式智能体分析脑细胞数据，并推出「Patch the Planet」漏洞协调计划及前沿 AI 治理政策蓝图。\n\n**基础设施**：AWS 展示在 Trainium2 上用 torchtitan 训练 Qwen3，及 i14 Laplace 3B 线性注意力模型训练部署。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 14,
+    "news_by_category": {
+      "行业": 3,
+      "产品": 4,
+      "开源": 3,
+      "AI": 3,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "商业化",
+      "AT&T",
+      "LegalEdge",
+      "法律科技",
+      "企业AI",
+      "ChatGPT Ads",
+      "广告变现",
+      "对话式广告",
+      "Google Cloud"
+    ]
+  },
+  "generated_at": "2026-10-21T20:05:40.155947"
+}
