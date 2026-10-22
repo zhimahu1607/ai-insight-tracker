@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-23",
+  "summary": "今日学术界无新论文收录，工业界动向集中于企业侧渗透与智能体基础设施两条主线。最值得关注的是 OpenAI 的双线推进：以 Decisions API 切入低延迟实时决策场景，同时借 Uber 三万员工部署 ChatGPT Work 完成迄今最大规模企业级落地，并通过统一分发合作伙伴的安全标准收紧生态治理，其角色正从模型供应商转向企业平台与规则制定者。AWS 则继续上移抽象层级：SageMaker 训练会话 API 把训练循环留在本地、分布式执行与容错交给云端并按 token 计费；Polly 新增 14 种语音，Kokoro-82M 将首字节延迟压至 157ms。智能体同步从演示转入运维，Deep Insight、AAIF 与 Strands Agents 分别覆盖多智能体编排、付费 API 规避与故障分诊，Rescale 的人机分类一致率由 44% 升至 68%。跨领域的共同逻辑是闭环与降本：Cloudflare 以 Codex 串联漏洞发现、修复与人工审核，与 AWS 的 token 计费、80% 流量绕开付费 API 同构——把模型嵌入既有工作流，再以可度量成本与人工复核作为落地前提。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 动态：OpenAI 拓展企业侧，AWS 深入基础设施与智能体**\n\n**OpenAI 企业化与生态治理**：OpenAI 推广面向应用开发者的 Decisions API，主打低延迟、低成本的实时决策能力，但技术细节尚未披露；Uber 将在全公司 3 万名员工中部署 ChatGPT Work，成为企业级 ChatGPT 产品最大规模落地之一。Cloudflare 将 Daybreak 接入漏洞发现与修复流程，并以 Codex 提升代码质量，形成“发现—修复—人工审核”闭环。此外，OpenAI 发文说明前向部署工程（FDE）职能，并通过统一分发合作伙伴的安全标准收紧合规要求。\n\n**AWS 模型定制与语音栈升级**：SageMaker AI 推出训练会话 API，开发者可在本地编写训练循环，由云端托管 GPU、分布式执行与故障恢复，按 token 计费并兼容 OpenAI 接口；Amazon Polly 生成式引擎无缝升级，新增 14 种语音并扩展至 57 种语音；Kokoro-82M 流式 TTS 将首音频字节时间由 329ms 降至 157ms。IskayPet 基于 Bedrock Managed Knowledge Bases 构建多语言知识助手，检索耗时下降约 95%。\n\n**智能体落地**：AWS 开源多智能体系统 Deep Insight，并发布自适应智能体框架 AAIF，混合部署下约 80% 流量可规避付费 API；Rescale 借助 Strands Agents 在五天内构建故障分诊 Agent，与人工分类一致率从 44% 提升至 68%。微软研究院则推出 Flint-interactive，以高层语义事件降低交互式可视化生成成本。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 17,
+    "news_by_category": {
+      "产品": 9,
+      "行业": 2,
+      "AI": 6
+    },
+    "top_keywords": [
+      "OpenAI",
+      "AWS",
+      "Amazon Bedrock",
+      "Amazon SageMaker AI",
+      "合规",
+      "文本转语音",
+      "强化学习",
+      "Amazon Quick",
+      "Kokoro-82M",
+      "Strands Agents"
+    ]
+  },
+  "generated_at": "2026-10-22T19:57:31.134350"
+}
