@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-24",
+  "summary": "今日 AI 领域无论文收录，工业界动向密集，主线清晰：竞争重心正由模型能力转向规模化基础设施、训练安全治理与企业流程集成。\n\n最值得关注的是 OpenAI 连发的三则披露：Habitat 存储系统支撑 10 亿 ChatGPT 用户，凭借多租户架构、全球缓存与 Cosmos DB 将读取速度提升 12 倍；前沿模型训练环境采用封闭网络与物理隔离，并在高算力场景常态化开展红队演练；同时与波兰国家研究院 NASK 合作，标志其欧洲安全布局从企业自律转向与主权机构的制度化协作。三者共同说明，头部厂商正把工程可靠性与安全边界当作与模型能力同等重要的资产来披露。\n\nAWS 则集中展示企业级 Agent 落地：SageMaker AI 以 GRPO 更新 LoRA，将 gpt-oss-20b 在 Wordle 环境解题率由 61% 提至 84%；Bayer Crop Science 基于 Bedrock AgentCore 路由 22 个领域智能体，约 80% 问题无需工程师介入，故障诊断从 1 小时压缩至 10 分钟内；Smartsheet 上线 MCP Server，开放 40 余项工具供 AI 读写项目数据。\n\n跨领域的线索是“控制权”上移：Smartsheet 的开放接口与登上 GitHub Trending 的自托管 Agent 项目 Rakazo 互为表里——前者扩大可接入面，后者强调用户对模型、数据与运行环境的完全掌控；这与 OpenAI 以物理隔离和主权机构合作划界，实为同一议题在接口层、部署层与治理层的三种表达。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 行业观察**\n\n**基础设施与安全治理**：OpenAI 连发三文——披露支撑 10 亿 ChatGPT 用户的在线存储系统 Habitat 工程实践（多租户架构、全球缓存与 Cosmos DB，读取速度提升 12 倍）；说明前沿模型训练环境采用封闭网络与物理隔离，并在高算力场景开展红队演练；同时与波兰国家研究院 NASK 合作推进 AI 安全研究，标志其欧洲安全布局从企业自律转向与主权机构制度化协作。\n\n**企业级 Agent 落地**：AWS 成为主要推动方。SageMaker AI 多轮强化学习方案以 GRPO 更新 LoRA，在 Wordle 环境将 gpt-oss-20b 解题率从 61% 提升至 84%；Bayer Crop Science 基于 Bedrock AgentCore 构建多智能体决策引擎，路由 22 个领域智能体，约 80% 问题无需工程师介入，故障诊断由 1 小时压缩至 10 分钟内；Smartsheet 上线 MCP Server，开放 40 余项工具供 AI 读写项目管理数据。配套还有 SageMaker 端点扩缩容的 CDK 构造与 Quick Sight 的 GeoJSON 点线图层能力。\n\n**开源生态**：自托管 AI Agent 项目 Rakazo 登上 GitHub Trending，支持自带模型凭据与多种沙箱，强调用户对模型、数据和运行环境的完全掌控，反映托管型助手之外的开源替代需求正在上升。\n\n整体看，竞争焦点正从模型能力转向规模化基础设施、训练安全与企业流程集成。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 9,
+    "news_by_category": {
+      "LLM": 1,
+      "AI": 2,
+      "行业": 1,
+      "开源": 2,
+      "产品": 3
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Amazon Bedrock AgentCore",
+      "ChatGPT",
+      "Habitat",
+      "Azure Cosmos DB",
+      "全球缓存",
+      "前沿模型",
+      "训练环境安全",
+      "红队测试",
+      "离线隔离"
+    ]
+  },
+  "generated_at": "2026-10-23T19:55:15.893584"
+}
