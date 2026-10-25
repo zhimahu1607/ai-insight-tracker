@@ -1,0 +1,60 @@
+[
+  {
+    "id": "6caed060135fb093",
+    "title": "vllm-project/vllm - GitHub Trending",
+    "url": "https://github.com/vllm-project/vllm",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-10-25T18:52:45.164211Z",
+    "summary": "Repository: vllm-project/vllm\nURL: https://github.com/vllm-project/vllm\nDescription: A high-throughput and memory-efficient inference and serving engine for LLMs\nLanguage: Python\nStars: 95468\nWeekly stars: 1371",
+    "content": "Repository: vllm-project/vllm\nURL: https://github.com/vllm-project/vllm\nDescription: A high-throughput and memory-efficient inference and serving engine for LLMs\nLanguage: Python\nStars: 95468\nWeekly stars: 1371\n\nREADME:\nEasy, fast, and cheap LLM serving for everyone\n\n| Documentation | Blog | Paper | Twitter/X | User Forum | Developer Slack |\n\n🔥 We have built a vLLM website to help you get started with vLLM. Please visit vllm.ai to learn more.\nFor events, please visit vllm.ai/events to join us.\n\nAbout\n\nvLLM is a fast and easy-to-use library for LLM inference and serving.\n\nOriginally developed in the Sky Computing Lab at UC Berkeley, vLLM has grown into one of the most active open-source AI projects built and maintained by a diverse community of many dozens of academic institutions and companies from over 2000 contributors.\n\nvLLM is fast with:\n\nState-of-the-art serving throughput\nEfficient management of attention key and value memory with **PagedAttention**\nContinuous batching of incoming requests, chunked prefill, prefix caching\nFast and flexible model execution with piecewise and full CUDA/HIP graphs\nQuantization: FP8, MXFP8/MXFP4, NVFP4, INT8, INT4, GPTQ/AWQ, GGUF, compressed-tensors, ModelOpt, TorchAO, and more\nOptimized attention kernels including FlashAttention, FlashInfer, TRTLLM-GEN, FlashMLA, and Triton\nOptimized GEMM/MoE kernels for various precisions using CUTLASS, TRTLLM-GEN, CuTeDSL\nSpeculative decoding including n-gram, suffix, EAGLE, DFlash\nAutomatic kernel generation and graph-level transformations using torch.compile\nDisaggregated prefill, decode, and encode\n\nvLLM is flexible and easy to use with:\n\nSeamless integration with popular Hugging Face models\nHigh-throughput serving with various decoding algorithms, including *parallel sampling*, *beam search*, and more\nTensor, pipeline, data, expert, and context parallelism for distributed inference\nStreaming outputs\nGeneration of structured outputs using xgrammar or guidance\nTool calling and reasoning parsers\nOpenAI-compatible API server, plus Anthropic Messages API and gRPC support\nEfficient multi-LoRA support for dense and MoE layers\nSupport for NVIDIA GPUs, AMD GPUs, Intel GPUs, and x86/ARM/PowerPC CPUs. Additionally, diverse hardware plugins such as Google TPUs, Intel Gaudi, IBM Spyre, Huawei Ascend, Rebellions NPU, Apple Silicon, MetaX GPU, and more.\n\nvLLM seamlessly supports 200+ model architectures on Hugging Face, including:\n\nDecoder-only LLMs (e.g., Llama, Qwen, Gemma)\nMixture-of-Expert LLMs (e.g., Mixtral, DeepSeek-V3, Qwen-MoE, GPT-OSS)\nHybrid attention and state-space models (e.g., Mamba, Qwen3.5)\nMulti-modal models (e.g., LLaVA, Qwen-VL, Pixtral)\nEmbedding and retrieval models (e.g., E5-Mistral, GTE, ColBERT)\nReward and classification models (e.g., Qwen-Math)\n\nFind the full list of supported models here.\n\nGetting Started\n\nInstall vLLM with uv (recommended) or pip:\n\nOr build from source for development.\n\nVisit our documentation to learn more.\n\nInstallation\nQuickstart\nList of Supported Models\n\nContributing\n\nWe welcome and value any contributions and collaborations.\nPlease check out Contributing to vLLM for how to get involved.\n\nCitation\n\nIf you use vLLM for your research, please cite our paper:\n\nContact Us\n\nFor technical questions and feature requests, please use GitHub Issues\nFor discussing with fellow users, please use the vLLM Forum\nFor coordinating contributions and development, please use Slack\nFor security disclosures, please use GitHub's Security Advisories feature\nFor collaborations and partnerships, please contact us at collaboration@vllm.ai\n\nMedia Kit\n\nIf you wish to use vLLM's logo, please refer to our media kit repo",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "vLLM 是源自 UC Berkeley 的开源 LLM 推理与服务引擎，GitHub 约 9.5 万 star，本周新增约 1371 star。项目以高吞吐、内存高效为特点，用 PagedAttention 管理注意力 KV 缓存，并结合连续批处理、分块预填充、前缀缓存与 FP8/INT4/GPTQ 等量化方案提升性能，同时支持投机解码、多 LoRA 以及张量、流水线、专家、上下文并行等分布式推理，并提供 OpenAI 兼容 API 服务。它兼容 Hugging Face 上 200 多种模型架构，覆盖 NVIDIA、AMD、Intel GPU 及多种硬件插件，适用于低成本、高吞吐的 LLM 部署场景。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "vLLM",
+        "PagedAttention",
+        "LLM 推理",
+        "推理引擎",
+        "开源"
+      ]
+    },
+    "analyzed_at": "2026-10-25T18:52:54.826715Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  },
+  {
+    "id": "39ec5846ae4b9617",
+    "title": "multica-ai/andrej-karpathy-skills - GitHub Trending",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "source_name": "GitHub Trending",
+    "source_category": "opensource",
+    "language": "en",
+    "published": "2026-10-25T18:52:45.164211Z",
+    "summary": "Repository: multica-ai/andrej-karpathy-skills\nURL: https://github.com/multica-ai/andrej-karpathy-skills\nDescription: A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.\nLanguage: Unknown\nStars: 223729\nWeekly stars: 2981",
+    "content": "Repository: multica-ai/andrej-karpathy-skills\nURL: https://github.com/multica-ai/andrej-karpathy-skills\nDescription: A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.\nLanguage: Unknown\nStars: 223729\nWeekly stars: 2981\n\nREADME:\nKarpathy-Inspired Claude Code Guidelines\n\nCheck out my new project Multica — an open-source platform for running and managing coding agents with reusable skills.\nFollow me on X: https://x.com/jiayuan_jy\n\nA single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.\n\nEnglish | 简体中文\n\nThe Problems\n\nFrom Andrej's post:\n\n\"The models make wrong assumptions on your behalf and just run along with them without checking. They don't manage their confusion, don't seek clarifications, don't surface inconsistencies, don't present tradeoffs, don't push back when they should.\"\n\n\"They really like to overcomplicate code and APIs, bloat abstractions, don't clean up dead code... implement a bloated construction over 1000 lines when 100 would do.\"\n\n\"They still sometimes change/remove comments and code they don't sufficiently understand as side effects, even if orthogonal to the task.\"\n\nThe Solution\n\nFour principles in one file that directly address these issues:\n\n| Principle | Addresses |\n|-----------|-----------|\n| **Think Before Coding** | Wrong assumptions, hidden confusion, missing tradeoffs |\n| **Simplicity First** | Overcomplication, bloated abstractions |\n| **Surgical Changes** | Orthogonal edits, touching code you shouldn't |\n| **Goal-Driven Execution** | Leverage through tests-first, verifiable success criteria |\n\nThe Four Principles in Detail\n\n1. Think Before Coding\n\nDon't assume. Don't hide confusion. Surface tradeoffs.**\n\nLLMs often pick an interpretation silently and run with it. This principle forces explicit reasoning:\n\nState assumptions explicitly** — If uncertain, ask rather than guess\nPresent multiple interpretations** — Don't pick silently when ambiguity exists\nPush back when warranted** — If a simpler approach exists, say so\nStop when confused** — Name what's unclear and ask for clarification\n\n2. Simplicity First\n\nMinimum code that solves the problem. Nothing speculative.**\n\nCombat the tendency toward overengineering:\n\nNo features beyond what was asked\nNo abstractions for single-use code\nNo \"flexibility\" or \"configurability\" that wasn't requested\nNo error handling for impossible scenarios\nIf 200 lines could be 50, rewrite it\n\nThe test:** Would a senior engineer say this is overcomplicated? If yes, simplify.\n\n3. Surgical Changes\n\nTouch only what you must. Clean up only your own mess.**\n\nWhen editing existing code:\n\nDon't \"improve\" adjacent code, comments, or formatting\nDon't refactor things that aren't broken\nMatch existing style, even if you'd do it differently\nIf you notice unrelated dead code, mention it — don't delete it\n\nWhen your changes create orphans:\n\nRemove imports/variables/functions that YOUR changes made unused\nDon't remove pre-existing dead code unless asked\n\nThe test:** Every changed line should trace directly to the user's request.\n\n4. Goal-Driven Execution\n\nDefine success criteria. Loop until verified.**\n\nTransform imperative tasks into verifiable goals:\n\n| Instead of... | Transform to... |\n|--------------|-----------------|\n| \"Add validation\" | \"Write tests for invalid inputs, then make them pass\" |\n| \"Fix the bug\" | \"Write a test that reproduces it, then make it pass\" |\n| \"Refactor X\" | \"Ensure tests pass before and after\" |\n\nFor multi-step tasks, state a brief plan:\n\nStrong success criteria let the LLM loop independently. Weak criteria (\"make it work\") require constant clarification.\n\nInstall\n\nOption A: Claude Code Plugin (recommended)**\n\nFrom within Claude Code, first add the marketplace:\n\nThen install the plugin:\n\nThis installs the guidelines as a Claude Code plugin, making the skill available across all your projects.\n\nOption B: CLAUDE.md (per-project)**\n\nNew project:\n\nExisting project (append):\n\nUsing with Cursor\n\nThis repository includes a committed Cursor project rule (.cursor/rules/karpathy-guidelines.mdc) so the same guidelines apply when you open the project in Cursor. See **CURSOR.md** for setup, using the rule in other projects, and how this relates to Claude Code.\n\nKey Insight\n\nFrom Andrej:\n\n\"LLMs are exceptionally good at looping until they meet specific goals... Don't tell it what to do, give it success criteria and watch it go.\"\n\nThe \"Goal-Driven Execution\" principle captures this: transform imperative instructions into declarative goals with verification loops.\n\nHow to Know It's Working\n\nThese guidelines are working if you see:\n\nFewer unnecessary changes in diffs** — Only requested changes appear\nFewer rewrites due to overcomplication** — Code is simple the first time\nClarifying questions come before implementation** — Not after mistakes\nClean, minimal PRs** — No drive-by refactoring or \"improvements\"\n\nCustomization\n\nThese guidelines are designed to be merged with project-specific instructions. Add them to your existing CLAUDE.md or create a new one.\n\nFor project-specific rules, add sections like:\n\nTradeoff Note\n\nThese guidelines bias toward **caution over speed**. For trivial tasks (simple typo fixes, obvious one-liners), use judgment — not every change needs the full rigor.\n\nThe goal is reducing costly mistakes on non-trivial work, not slowing down simple tasks.\n\nLicense\n\nMIT",
+    "weight": 0.9,
+    "fetch_type": "crawler",
+    "company": "github",
+    "light_analysis": {
+      "summary": "GitHub Trending 上出现仓库 multica-ai/andrej-karpathy-skills，核心只是一个 CLAUDE.md 文件，依据 Andrej Karpathy 对 LLM 编码常见问题的观察，提炼出四条约束 Claude Code 行为的准则：编码前先思考（显式声明假设、暴露歧义、给出取舍方案）、简单优先（只写解决问题的最小代码，不做超前抽象）、按需局部改动（只修改与任务直接相关的代码，不顺手重构）、目标驱动执行（把指令转成可验证的成功标准，用测试循环自我校验）。项目提供 Claude Code 插件与按项目 CLAUDE.md 两种安装方式，并附带 Cursor 规则文件，采用 MIT 许可。仓库已获约 22 万 star、周增近 3000，反映开发者对 AI 编程助手输出质量的普遍关注。",
+      "category": "开源",
+      "sentiment": "positive",
+      "keywords": [
+        "Claude Code",
+        "CLAUDE.md",
+        "Andrej Karpathy",
+        "AI 编程助手",
+        "提示工程"
+      ]
+    },
+    "analyzed_at": "2026-10-25T18:52:54.884809Z",
+    "analysis_status": "success",
+    "analysis_error": null
+  }
+]
