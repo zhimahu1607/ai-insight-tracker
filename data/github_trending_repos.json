@@ -116,8 +116,8 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "first_seen_at": "2026-08-20T16:43:00.240989+00:00",
       "first_seen_stars": 3461,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 12988,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 13474,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -215,8 +215,8 @@
       "url": "https://github.com/android/skills",
       "first_seen_at": "2026-10-20T19:57:55.157530+00:00",
       "first_seen_stars": 9039,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 9389,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 9701,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -226,8 +226,8 @@
       "url": "https://github.com/anomalyco/opencode",
       "first_seen_at": "2026-09-10T19:04:50.852426+00:00",
       "first_seen_stars": 206407,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 220559,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 221431,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -281,8 +281,8 @@
       "url": "https://github.com/anthropics/claude-plugins-official",
       "first_seen_at": "2026-08-29T00:31:41.677378+00:00",
       "first_seen_stars": 35028,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 44091,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 44516,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -314,8 +314,8 @@
       "url": "https://github.com/anthropics/knowledge-work-plugins",
       "first_seen_at": "2026-09-17T19:41:28.108054+00:00",
       "first_seen_stars": 24508,
-      "last_seen_at": "2026-09-27T19:43:05.415697+00:00",
-      "last_seen_stars": 25740,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 32931,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -754,8 +754,8 @@
       "url": "https://github.com/cloudflare/security-audit-skill",
       "first_seen_at": "2026-09-21T20:23:16.671044+00:00",
       "first_seen_stars": 18872,
-      "last_seen_at": "2026-09-29T20:39:33.852504+00:00",
-      "last_seen_stars": 23121,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 46475,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -798,8 +798,8 @@
       "url": "https://github.com/Comfy-Org/ComfyUI",
       "first_seen_at": "2026-08-08T16:44:42.741908+00:00",
       "first_seen_stars": 124825,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 142309,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 142886,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1403,8 +1403,8 @@
       "url": "https://github.com/Graphify-Labs/graphify",
       "first_seen_at": "2026-07-18T17:06:21.238443+00:00",
       "first_seen_stars": 90767,
-      "last_seen_at": "2026-07-18T17:06:21.238443+00:00",
-      "last_seen_stars": 90767,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 135010,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -1458,8 +1458,8 @@
       "url": "https://github.com/heygen-com/hyperframes",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 47607,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 70675,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 72027,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2178,6 +2178,17 @@
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
+    "multica-ai/andrej-karpathy-skills": {
+      "repo_id": "multica-ai/andrej-karpathy-skills",
+      "full_name": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "first_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "first_seen_stars": 223729,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 223729,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
     "mvschwarz/openrig": {
       "repo_id": "mvschwarz/openrig",
       "full_name": "mvschwarz/openrig",
@@ -2569,8 +2580,8 @@
       "url": "https://github.com/pingdotgg/t3code",
       "first_seen_at": "2026-07-26T17:11:31.819009+00:00",
       "first_seen_stars": 14981,
-      "last_seen_at": "2026-10-10T19:58:53.547056+00:00",
-      "last_seen_stars": 26784,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 30041,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2723,8 +2734,8 @@
       "url": "https://github.com/ruvnet/ruflo",
       "first_seen_at": "2026-09-08T19:23:38.459579+00:00",
       "first_seen_stars": 71641,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 78730,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 79237,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },
@@ -2844,8 +2855,8 @@
       "url": "https://github.com/stablyai/orca",
       "first_seen_at": "2026-06-29T06:13:07.279759+00:00",
       "first_seen_stars": 8754,
-      "last_seen_at": "2026-10-23T19:54:47.739093+00:00",
-      "last_seen_stars": 103666,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 105617,
       "double_alerted_at": null,
       "ten_x_alerted_at": "2026-10-21T20:05:12.311016+00:00"
     },
@@ -3308,6 +3319,17 @@
       "first_seen_stars": 2810,
       "last_seen_at": "2026-08-18T16:40:06.995337+00:00",
       "last_seen_stars": 4604,
+      "double_alerted_at": null,
+      "ten_x_alerted_at": null
+    },
+    "vllm-project/vllm": {
+      "repo_id": "vllm-project/vllm",
+      "full_name": "vllm-project/vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "first_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "first_seen_stars": 95468,
+      "last_seen_at": "2026-10-25T18:52:45.164211+00:00",
+      "last_seen_stars": 95468,
       "double_alerted_at": null,
       "ten_x_alerted_at": null
     },

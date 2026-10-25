@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-26",
+  "summary": "**今日概览**\n\n今日学术界暂无新论文收录，行业注意力几乎完全集中于开源工程实践。推理侧，vLLM 本周 GitHub 新增约 1371 star、总数逼近 9.5 万；凭 PagedAttention 管理 KV 缓存，配合连续批处理、分块预填充、前缀缓存与多种量化方案，并叠加投机解码、多 LoRA 与张量、流水线、专家、上下文并行，它已成为低成本高吞吐 LLM 部署的事实标准。生成侧，仅由一个 CLAUDE.md 文件构成的 andrej-karpathy-skills 周增近 3000 star、总数约 22 万；其内核为四条针对 LLM 编码缺陷的行为准则：显式声明假设与取舍、最小代码优先、局部按需改动、以可验证目标驱动测试循环。\n\n两项趋势看似分属不同层面，实则指向同一判断：开发者对工程效率与输出可控性的关切，已超过对模型参数规模的追逐。值得留意的是，后者以近乎零的代码体量获得更高关注度，说明规则与最佳实践正成为 Claude Code、Cursor 等工具生态的实际竞争焦点；其传播成本远低于基础设施，但影响面更广。当底层模型能力趋于同质，可复用的约束、流程与验证机制，或许比单纯的性能指标更具差异化价值。",
+  "category_summaries": {},
+  "news_summary": "**2026年X月X日 AI 领域日报**\n\n**开源基础设施：推理引擎持续升温**\nvLLM 本周在 GitHub Trending 上新增约 1371 star，总 star 数约 9.5 万。该引擎源自 UC Berkeley，采用 PagedAttention 管理 KV 缓存，并配合连续批处理、分块预填充、前缀缓存与 FP8/INT4/GPTQ 量化，同时支持投机解码、多 LoRA 及张量、流水线、专家、上下文并行等分布式推理；它提供 OpenAI 兼容 API，兼容 Hugging Face 上 200 余种模型架构与 NVIDIA、AMD、Intel 等多种硬件，已成为低成本高吞吐 LLM 部署的事实标准之一。\n\n**AI 编程：从模型能力转向行为约束**\n另一个引发关注的仓库 multica-ai/andrej-karpathy-skills 仅由一个 CLAUDE.md 文件构成，依据 Andrej Karpathy 对 LLM 编码缺陷的观察，提炼出四条准则：编码前显式声明假设与取舍、最小代码优先、局部按需改动、以可验证目标驱动测试循环。它提供 Claude Code 插件、项目级 CLAUDE.md 及 Cursor 规则三种接入方式，采用 MIT 许可，star 数约 22 万、周增近 3000。\n\n**观察**：两项趋势共同指向同一方向：推理侧的工程效率，以及生成侧的输出可控性，正在成为比模型参数规模更受开发者关注的议题。Anthropic 的 Claude Code、Cursor 等工具生态也因此成为规则与最佳实践的承载层。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 2,
+    "news_by_category": {
+      "开源": 2
+    },
+    "top_keywords": [
+      "vLLM",
+      "PagedAttention",
+      "LLM 推理",
+      "推理引擎",
+      "开源",
+      "Claude Code",
+      "CLAUDE.md",
+      "Andrej Karpathy",
+      "AI 编程助手",
+      "提示工程"
+    ]
+  },
+  "generated_at": "2026-10-25T18:53:07.160236"
+}
