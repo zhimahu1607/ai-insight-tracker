@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-28",
+  "summary": "今日AI领域呈现出明显的“工程化落地”转向：学术界暂无论文收录，行业动态则集中于企业工作流嵌入、评估可靠性与成本效率三条主线。\n\n最值得关注的亮点有三。OpenAI与Oracle扩大合作，将Oracle企业应用及AI Agent接入ChatGPT；同时Check Point、CodeRabbit、Greptile基于OpenAI模型，把AI延伸至漏洞研究、代码安全审计与工作流测试，模型厂商正从“提供能力”转为“嵌入企业系统”。评估方法论亦受到重视：Property Finder以人工基准纠正自动评估偏差，在Bedrock切换Llama 4后实现F1提升47%、成本下降86%，说明“评测—选型—降本”已形成闭环。小模型的垂直化路径同样得到验证，Exowatt用SageMaker微调Qwen3，在特定任务上超越前沿模型且成本显著降低；AWS的SOCI索引镜像最高提速46倍，为此类实践提供了底座。\n\n跨领域来看，OpenAI与学术社区共享Kakeya猜想的计算结果，与工业界对可验证评估的诉求形成呼应：可信度正逐步取代单纯的能力指标，成为模型进入生产环境的前置条件。竞争焦点已从模型规模转向流程深度与单位成本。",
+  "category_summaries": {},
+  "news_summary": "今日AI动态集中于企业工作流与模型工程化。OpenAI扩大与Oracle合作，将Oracle企业应用及AI Agent接入ChatGPT；Check Point、CodeRabbit、Greptile借助OpenAI模型，将AI延伸至漏洞研究、代码安全审计与工作流测试。Anima用GPT-6与GPT-Live使诊所电话等待时间降低75%。OpenAI还与学术社区共享Kakeya猜想等计算结果，强调可验证协作。基础设施侧，AWS为SageMaker推出SOCI索引镜像，最高提速46倍；Property Finder通过人工基准纠正评估偏差，在Bedrock切换Llama 4后F1提升47%、成本降低86%；Exowatt用SageMaker微调Qwen3小模型，在垂直任务上超越前沿模型且成本显著降低。FastAPI登上GitHub趋势。整体看，行业竞争焦点正转向企业流程嵌入、评估可靠性与成本效率。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 11,
+    "news_by_category": {
+      "行业": 1,
+      "产品": 3,
+      "AI": 2,
+      "LLM": 4,
+      "开源": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Oracle",
+      "ChatGPT",
+      "AI Agent",
+      "企业合作",
+      "OpenAI Daybreak",
+      "Check Point",
+      "漏洞研究",
+      "网络安全",
+      "威胁情报"
+    ]
+  },
+  "generated_at": "2026-10-27T20:36:06.072287"
+}
