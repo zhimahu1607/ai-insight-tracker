@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "summary": "今日学术界暂无新论文收录，产业界的信号却高度集中于同一方向：AI 竞争正从模型能力转向企业工作流嵌入与规模化治理。最值得关注的是 OpenAI 与 ServiceNow 的双向整合——模型与智能体接入 ServiceNow 平台，企业工作流能力反向嵌入 ChatGPT 与 Codex，实质是争夺企业级智能体入口；OpenAI 同期提出 AI 可充当工具、协作同事与协调中介三种角色，暗示落地过程将重塑组织权责分配。垂直场景已出现规模化证据：Legora 构建法律代理式操作系统，Retell 以 GPT-6 Astra 支撑每月一亿次通话、人均年化营收约 160 万美元，说明价值密度取决于工作流嵌入深度而非参数规模。\n\n基础设施与工具层同步作出回应。AWS 发布 Bedrock AgentCore 联邦式运营架构，将中央治理与业务自治分离，并以 Ray Train 官方容器配合 EFA 提供 EKS 多节点训练，强调“配置而非重建镜像”；开源项目 Taste Skill 依靠浏览器自检提升生成前端质量、星标逾十万，Nova Act QA Studio 增加多团队权限与健康评分。二者指向同一底层需求：智能体进入生产环境后，权限边界、质量可测与部署可复现构成新的工程门槛，治理架构、评测评分与开发自检正在整合为统一的“可控性”技术体系。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 行业综述**\n\n**企业级 AI 与工作流整合**成为主线。OpenAI 与 ServiceNow 扩大合作，将模型和智能体接入 ServiceNow 平台，同时把企业工作流能力反接至 ChatGPT 与 Codex；这一举措表明 AI 厂商正在争夺企业级智能体入口。OpenAI 同期发布观点文章《The future of the firm》，提出 AI 可作为工具、协作同事或组织协调中介三种角色，提示 AI 落地可能重塑权责分配。垂直场景方面，Legora 基于 OpenAI 模型构建法律代理式操作系统；语音平台 Retell 以 GPT-6 Astra 支撑每月 1 亿次通话，人均年化营收约 160 万美元，显示语音智能体已进入规模化商用阶段。\n\n**基础设施侧**，AWS 发布 Bedrock AgentCore 企业级智能体平台参考架构，采用联邦式运营模型，将中央治理与业务自治分离；同时推出基于 Ray Train 官方容器与 EFA 的 EKS 多节点分布式训练方案，强调“配置而非重建镜像”。\n\n**开发工具**方面，开源项目 Taste Skill 通过艺术方向与浏览器自检改善 AI 生成前端质量，GitHub 星标超 10 万；AWS Nova Act QA Studio 新增多团队权限与健康评分能力。整体看，行业正从模型能力竞争转向工作流嵌入、规模化治理与工程化效率。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 8,
+    "news_by_category": {
+      "行业": 2,
+      "LLM": 1,
+      "产品": 2,
+      "开源": 1,
+      "AI": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "ChatGPT",
+      "Codex",
+      "AWS",
+      "ServiceNow",
+      "企业工作流",
+      "智能体",
+      "AI组织架构",
+      "人机协作",
+      "企业变革"
+    ]
+  },
+  "generated_at": "2026-10-28T20:57:27.298928"
+}
