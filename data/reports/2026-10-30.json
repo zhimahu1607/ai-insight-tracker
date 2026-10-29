@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-30",
+  "summary": "**今日 AI 日报 Executive Summary**\n\n今日学术界暂无论文收录，工业界动态则集中指向同一命题：智能体要从演示走向生产，已经取决于模型之外的配套体系。最值得关注的是治理层面的进展。OpenAI 更新 Model Spec，以五项核心价值规范模型判断，并要求其尊重用户的自主性；同时，OpenAI 披露了针对前沿模型失准的分层监控机制，把多层监测与响应流程衔接起来，使运行时行为监管成为安全体系的常规组成部分。\n\n基础设施侧同样围绕可用性推进：NVIDIA Nemotron 3.5 Super VL 以 120B MoE、每 token 激活 12B、上下文 1M 的规格上架 AWS，并开放权重与后训练配方；AWS Batch 为 SageMaker Training 引入配额管理，支持预留、借还与跨团队抢占，直接针对 GPU 利用率不足的问题。\n\n企业落地已出现可量化收益：MoEngage 借 AgentCore Gateway 将约 400 个私有 REST API 转为受权限控制的智能体工具，新接入从数天缩至数小时，估计节省约六个月工程量；Epsilon 与 Ropes & Gray 则分别在 UI 测试与交易尽职调查中采用人机分工模式。\n\n跨领域看，权限控制、对齐监测、算力调度与代码理解构成智能体工业化的四类“非模型能力”。微软研究院 ForkPilot 降低最高 59% 算力需求，而 CABRA 指出理解陌生代码库仍是编程智能体的主要瓶颈，效率红利与能力短板并存。这表明竞争重心正由模型规模转向工程与治理基础设施。",
+  "category_summaries": {},
+  "news_summary": "**AI 日报：对齐治理、算力调度与企业智能体落地**\n\n**安全与对齐**：OpenAI 更新 Model Spec，提出五项核心价值，引导模型形成健全判断并尊重人的自主性；同时披露前沿模型失准的分层监控机制，将多层监测与响应流程衔接。随着模型更多以自主智能体形态部署，对齐监测与运行时行为监管正成为头部实验室安全体系的关键环节。\n\n**模型与基础设施**：NVIDIA Nemotron 3.5 Super VL 上架 AWS，为 120B 参数 MoE 多模态模型（每 token 激活 12B、上下文最高 1M），开放权重与后训练配方，可在 EKS 与 SageMaker HyperPod 上以 Dynamo、vLLM 部署。AWS Batch 为 SageMaker Training 作业新增配额管理，支持 RESERVE、LEND、LEND_AND_BORROW 策略与跨团队抢占，提升 GPU 利用率。\n\n**企业应用**：MoEngage 借 AgentCore Gateway 将约 400 个私有 REST API 转为受权限控制的智能体工具，新 API 接入从数天缩至数小时，估计节省约六个月工程量。Epsilon 基于 Nova Act 构建意图驱动 UI 测试，编写速度提升 4-6 倍。Ropes & Gray 将模型用于交易尽职调查，由 AI 分组摘要、律师复核担责。AWS 另发布用 Kiro 构建 PHP 到 Java 迁移引擎的方法论。\n\n**研究**：微软研究院第 97 期披露，ForkPilot 降低最高 59% 算力需求，CABRA 指出理解陌生代码库仍是编程智能体主要瓶颈。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 11,
+    "news_by_category": {
+      "AI": 5,
+      "行业": 1,
+      "开源": 1,
+      "产品": 3,
+      "LLM": 1
+    },
+    "top_keywords": [
+      "OpenAI",
+      "Model Spec",
+      "AI对齐",
+      "模型行为",
+      "核心价值",
+      "模型对齐",
+      "前沿模型",
+      "智能体安全",
+      "分层监控",
+      "Ropes & Gray"
+    ]
+  },
+  "generated_at": "2026-10-29T21:00:29.316643"
+}
