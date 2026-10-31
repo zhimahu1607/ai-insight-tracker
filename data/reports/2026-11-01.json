@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-01",
+  "summary": "今日学术侧无论文收录，工业界动态集中于合规博弈、开源生态与云端工程化三条主线。\n\n最值得关注的是 OpenAI 发布《Fair use benefits everyone》，援引创作者、学者、无障碍倡导者与法律专家的陈述，重申合理使用原则支撑模型训练。这并非单纯公关回应，而是对训练数据规则的正面定义——结果将直接影响中小开发者获取语料的成本，并左右开源与闭源模型的能力差距。\n\n开源侧，AstrBot 以约 4.5 万 Star 登上 GitHub Trending。其价值不在模型能力，而在将 QQ、微信、飞书、Slack 等 IM 渠道与 OpenAI、Anthropic、Gemini、DeepSeek、Ollama 等后端统一为可生产部署的 Agent 平台，配合知识库、MCP 与沙箱，承担了“最后一公里”的集成层角色。\n\n云端同样体现工程化收口：AWS 一面推出面向 FinOps 的 Bedrock 五阶段成本治理手册，强调 IAM 主体级归因与提示缓存等默认优化；一面为 AgentCore runtime 增加 Session endpoints，以 microVM 隔离和带鉴权预览 URL，把编码智能体的“生成—审阅—修改”循环压缩至秒级。\n\n三条线索的共同指向是：竞争重心正从模型能力本身，转向成本可控、合规可辩与集成可用的工程与制度层面。",
+  "category_summaries": {},
+  "news_summary": "**今日 AI 动态概览：政策博弈、开源生态与云上工程化**\n\n**政策与法律**：OpenAI 发布《Fair use benefits everyone》，援引创作者、学者、无障碍倡导者及法律专家的法庭陈述书，论证合理使用原则支撑 AI 训练并惠及内容生态。这体现其与版权方在训练数据合规上的博弈仍在持续，结果可能影响行业数据获取规则。\n\n**开源生态**：AstrBot 登上 GitHub Trending，作为一体化 Agent 聊天机器人平台，兼容 QQ、微信、飞书、Slack 等 IM 渠道及 OpenAI、Anthropic、Gemini、DeepSeek、Ollama 等模型，内置知识库、MCP、插件与 Agent 沙箱，约 4.5 万 Star，面向生产级 IM 场景。\n\n**云与开发工具**：AWS 围绕 Amazon Bedrock 连发两项更新。其一为面向 FinOps 与平台团队的五阶段成本治理手册，强调 IAM 主体级成本归因、分层预算管控与提示缓存等默认项优化；其二为 AgentCore runtime 新增 Session endpoints，通过 microVM 隔离与带鉴权预览 URL，使编码智能体的 Web 应用改动即时可见，缩短“生成—审阅—修改”循环。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 4,
+    "news_by_category": {
+      "行业": 1,
+      "开源": 1,
+      "产品": 2
+    },
+    "top_keywords": [
+      "OpenAI",
+      "合理使用",
+      "AI训练",
+      "版权",
+      "法律简报",
+      "AstrBot",
+      "AI Agent",
+      "聊天机器人",
+      "多平台",
+      "开源"
+    ]
+  },
+  "generated_at": "2026-10-31T19:52:34.296068"
+}
