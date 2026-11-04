@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-05",
+  "summary": "今日学术界没有新论文收录，工业界则集中做“整合落地”：一边通过并购补全产品链，一边推动智能体进入可审计的生产系统。\n\n最值得关注的是 OpenAI 收购 Pierre Computer Company（金额与团队规模未披露），意在补强 Codex 在代码构建、理解与审查全流程中的工具能力，延续 AI 编程以收购换时间的路径。竞争焦点正由模型能力转向工程链路是否完整。\n\n另一条主线是 AWS 在智能体工程化能力上的推进：AgentCore Evaluations 用小决策模型对“是否合规”等范围明确的问题输出校准概率，并与 LLM-as-judge 级联评估以降本；Smart Approvals 由独立分类器放行常规操作、拦截敏感与付款类动作；四层上下文工程使脚本与系统提示的占用分别下降约 95% 与 97%。落地案例的回报具体：Indegene 将单数据集规则定义从 30 小时压缩至 4 小时；U Mobile 的 8 个专家智能体经 A2A 协议协作，使关键类别工单量最多下降 84.5%。\n\n横向看，不同系统正形成同一逻辑：能力按场景与风险分层授权；在模型侧表现为 GovCloud 合规边界内的分层调用，在系统侧表现为审批与评估的分级。智能体的瓶颈已不在生成，而在可验证的成本与责任边界。",
+  "category_summaries": {},
+  "news_summary": "**行业与并购**：OpenAI 宣布收购 Pierre Computer Company（未披露金额与团队规模），意在扩展编程智能体 Codex 在代码构建、理解与审查全流程的工具能力，延续 AI 编程赛道以并购补齐产品链的趋势。同时，其网络安全方案 Daybreak Red 在 AWS GovCloud（US-East）上线，获批客户可通过 Bedrock 调用 GPT-5.6 Cyber，显示前沿模型正按场景与合规边界分层授权。\n\n**Agent 工程化落地**：AWS 集中发布多项企业级能力。AgentCore Evaluations 引入决策模型（Jev、Strands Decider 2B），对“是否合规”等窄问题输出校准概率，与 LLM-as-judge 组成级联评估以降低成本；Amazon Quick 的 Smart Approvals 由独立分类器自动放行常规操作、拦截敏感数据与付款类高风险动作；官方另给出四层上下文工程方法，使脚本内容与系统提示占用分别下降约 95% 和 97%。\n\n**客户案例**：Indegene 基于 Bedrock 与 AgentCore 构建生命科学数据质量智能体，单数据集规则定义由约 30 小时降至 4 小时，准确率 80–90%；马来西亚 U Mobile 的 AiDaH 平台以 8 个专家智能体经 A2A 协议协作，关键类别工单量最高下降 84.5%。",
+  "stats": {
+    "total_papers": 0,
+    "papers_by_category": {},
+    "total_news": 7,
+    "news_by_category": {
+      "行业": 1,
+      "产品": 3,
+      "AI": 3
+    },
+    "top_keywords": [
+      "Amazon Bedrock",
+      "OpenAI",
+      "Codex",
+      "收购",
+      "代码审查",
+      "AI编程",
+      "Daybreak Red",
+      "GPT-5.6 Cyber",
+      "AWS GovCloud",
+      "Amazon Bedrock AgentCore Evaluations"
+    ]
+  },
+  "generated_at": "2026-11-04T21:48:28.311874"
+}
